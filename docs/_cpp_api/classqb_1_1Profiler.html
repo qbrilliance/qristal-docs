@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class Profiler &mdash; Quantum SDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class QbNoiseModel" href="classqb_1_1QbNoiseModel.html" />
+    <link rel="prev" title="Template Class Pass" href="classqb_1_1Pass.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Quantum SDK
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Quantum SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class Profiler</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classqb_1_1Profiler.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-profiler">
+<span id="exhale-class-classqb-1-1profiler"></span><h1>Class Profiler<a class="headerlink" href="#class-profiler" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_profiler.hpp.html#file-core-include-qb-core-profiler-hpp"><span class="std std-ref">File profiler.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8ProfilerE">
+<span id="_CPPv3N2qb8ProfilerE"></span><span id="_CPPv2N2qb8ProfilerE"></span><span id="qb::Profiler"></span><span class="target" id="classqb_1_1Profiler"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Profiler</span></span></span><a class="headerlink" href="#_CPPv4N2qb8ProfilerE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler8ProfilerENSt6stringEKiKdKdKdKdKdKb">
+<span id="_CPPv3N2qb8Profiler8ProfilerENSt6stringEKiKdKdKdKdKdKb"></span><span id="_CPPv2N2qb8Profiler8ProfilerENSt6stringEKiKdKdKdKdKdKb"></span><span id="qb::Profiler::Profiler__ss.iC.doubleC.doubleC.doubleC.doubleC.doubleC.bC"></span><span class="target" id="classqb_1_1Profiler_1a397a77bb6e8eaf7ae31bff7011b69287"></span><span class="sig-name descname"><span class="n"><span class="pre">Profiler</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target_circuit</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n_qubits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_1q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_2q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_initialisation_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">30</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_readout_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pc_send_to_control_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">debug</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler8ProfilerENSt6stringEKiKdKdKdKdKdKb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor (from an OpenQASM string) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>target_circuit</strong> – </p></li>
+<li><p><strong>n_qubits</strong> – </p></li>
+<li><p><strong>gate_1q_time_ms</strong> – </p></li>
+<li><p><strong>gate_2q_time_ms</strong> – </p></li>
+<li><p><strong>q_initialisation_time_ms</strong> – </p></li>
+<li><p><strong>q_readout_time_ms</strong> – </p></li>
+<li><p><strong>pc_send_to_control_time_ms</strong> – </p></li>
+<li><p><strong>debug</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler8ProfilerERNSt10shared_ptrIN4xacc20CompositeInstructionEEEKiKdKdKdKdKdKb">
+<span id="_CPPv3N2qb8Profiler8ProfilerERNSt10shared_ptrIN4xacc20CompositeInstructionEEEKiKdKdKdKdKdKb"></span><span id="_CPPv2N2qb8Profiler8ProfilerERNSt10shared_ptrIN4xacc20CompositeInstructionEEEKiKdKdKdKdKdKb"></span><span id="qb::Profiler::Profiler__std::shared_ptr:xacc::CompositeInstruction:R.iC.doubleC.doubleC.doubleC.doubleC.doubleC.bC"></span><span class="target" id="classqb_1_1Profiler_1a95863a2f0b1420c2afb8f953fde544a4"></span><span class="sig-name descname"><span class="n"><span class="pre">Profiler</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n_qubits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_1q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_2q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_initialisation_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">30</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_readout_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pc_send_to_control_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">debug</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler8ProfilerERNSt10shared_ptrIN4xacc20CompositeInstructionEEEKiKdKdKdKdKdKb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor (from a XACC IR) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>f</strong> – </p></li>
+<li><p><strong>n_qubits</strong> – </p></li>
+<li><p><strong>gate_1q_time_ms</strong> – </p></li>
+<li><p><strong>gate_2q_time_ms</strong> – </p></li>
+<li><p><strong>q_initialisation_time_ms</strong> – </p></li>
+<li><p><strong>q_readout_time_ms</strong> – </p></li>
+<li><p><strong>pc_send_to_control_time_ms</strong> – </p></li>
+<li><p><strong>debug</strong> – </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler48get_total_initialisation_maxgate_readout_time_msEKdKi">
+<span id="_CPPv3N2qb8Profiler48get_total_initialisation_maxgate_readout_time_msEKdKi"></span><span id="_CPPv2N2qb8Profiler48get_total_initialisation_maxgate_readout_time_msEKdKi"></span><span id="qb::Profiler::get_total_initialisation_maxgate_readout_time_ms__doubleC.iC"></span><span class="target" id="classqb_1_1Profiler_1ae1b92d55d9ce5661c5555fa65887db40"></span><span class="n"><span class="pre">ND</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_total_initialisation_maxgate_readout_time_ms</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">simulation_total_time</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">shots</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler48get_total_initialisation_maxgate_readout_time_msEKdKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the total time (i.e., init + gate + readout) for all qubits. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>simulation_total_time</strong> – </p></li>
+<li><p><strong>shots</strong> – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler23get_count_1q_gates_on_qEv">
+<span id="_CPPv3N2qb8Profiler23get_count_1q_gates_on_qEv"></span><span id="_CPPv2N2qb8Profiler23get_count_1q_gates_on_qEv"></span><span id="qb::Profiler::get_count_1q_gates_on_q"></span><span class="target" id="classqb_1_1Profiler_1a92370e025efb356195a2dc1c004020e7"></span><span class="n"><span class="pre">NN</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_1q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_1q_gates_on_qEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the count of one-qubit gates for all qubits. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler23get_count_2q_gates_on_qEv">
+<span id="_CPPv3N2qb8Profiler23get_count_2q_gates_on_qEv"></span><span id="_CPPv2N2qb8Profiler23get_count_2q_gates_on_qEv"></span><span id="qb::Profiler::get_count_2q_gates_on_q"></span><span class="target" id="classqb_1_1Profiler_1af3872087ed9f905af2497341b0fe7f11"></span><span class="n"><span class="pre">NN</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_2q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_2q_gates_on_qEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the count of two-qubit gates for all qubits. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler23get_count_1q_gates_on_qEKi">
+<span id="_CPPv3N2qb8Profiler23get_count_1q_gates_on_qEKi"></span><span id="_CPPv2N2qb8Profiler23get_count_1q_gates_on_qEKi"></span><span id="qb::Profiler::get_count_1q_gates_on_q__iC"></span><span class="target" id="classqb_1_1Profiler_1a944061e56d4e48722e2966a3d40d9652"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_1q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iq</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_1q_gates_on_qEKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the count of one-qubit gates on a qubit line. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>iq</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler23get_count_2q_gates_on_qEKi">
+<span id="_CPPv3N2qb8Profiler23get_count_2q_gates_on_qEKi"></span><span id="_CPPv2N2qb8Profiler23get_count_2q_gates_on_qEKi"></span><span id="qb::Profiler::get_count_2q_gates_on_q__iC"></span><span class="target" id="classqb_1_1Profiler_1a26b16d645c23af8cdd1e0695e95cb673"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_2q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iq</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_2q_gates_on_qEKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the count of two-qubit gates on a qubit line Note: a two-qubit gate will be accounted for on both of its qubit operands. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>iq</strong> – </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler18get_largestdepth_qEv">
+<span id="_CPPv3N2qb8Profiler18get_largestdepth_qEv"></span><span id="_CPPv2N2qb8Profiler18get_largestdepth_qEv"></span><span id="qb::Profiler::get_largestdepth_q"></span><span class="target" id="classqb_1_1Profiler_1aeb47af8a6fa855920a24d5688b9250ba"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_largestdepth_q</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler18get_largestdepth_qEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get Id of the qubit having the most number of gates (largest depth) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler14KEY_TOTAL_TIMEE">
+<span id="_CPPv3N2qb8Profiler14KEY_TOTAL_TIMEE"></span><span id="_CPPv2N2qb8Profiler14KEY_TOTAL_TIMEE"></span><span id="qb::Profiler::KEY_TOTAL_TIME__iC"></span><span class="target" id="classqb_1_1Profiler_1a41a13743ae2d76591b1cdc4689c333f4"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEY_TOTAL_TIME</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler14KEY_TOTAL_TIMEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Index key for total time. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler23KEY_INITIALISATION_TIMEE">
+<span id="_CPPv3N2qb8Profiler23KEY_INITIALISATION_TIMEE"></span><span id="_CPPv2N2qb8Profiler23KEY_INITIALISATION_TIMEE"></span><span id="qb::Profiler::KEY_INITIALISATION_TIME__iC"></span><span class="target" id="classqb_1_1Profiler_1a61ce9b13e5c4151d0001c4351dad4e56"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEY_INITIALISATION_TIME</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler23KEY_INITIALISATION_TIMEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Index key for initialisation time. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler23KEY_MAX_DEPTH_GATE_TIMEE">
+<span id="_CPPv3N2qb8Profiler23KEY_MAX_DEPTH_GATE_TIMEE"></span><span id="_CPPv2N2qb8Profiler23KEY_MAX_DEPTH_GATE_TIMEE"></span><span id="qb::Profiler::KEY_MAX_DEPTH_GATE_TIME__iC"></span><span class="target" id="classqb_1_1Profiler_1ad1cc352824c0bbb8449d187ca13d66fd"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEY_MAX_DEPTH_GATE_TIME</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler23KEY_MAX_DEPTH_GATE_TIMEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Index key for total gate time on the qubit having the max gate depth. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler16KEY_READOUT_TIMEE">
+<span id="_CPPv3N2qb8Profiler16KEY_READOUT_TIMEE"></span><span id="_CPPv2N2qb8Profiler16KEY_READOUT_TIMEE"></span><span id="qb::Profiler::KEY_READOUT_TIME__iC"></span><span class="target" id="classqb_1_1Profiler_1a509da103838ed775779effa59f40e629"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEY_READOUT_TIME</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler16KEY_READOUT_TIMEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Index key for readout time. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler25KEY_SIMULATION_TOTAL_TIMEE">
+<span id="_CPPv3N2qb8Profiler25KEY_SIMULATION_TOTAL_TIMEE"></span><span id="_CPPv2N2qb8Profiler25KEY_SIMULATION_TOTAL_TIMEE"></span><span id="qb::Profiler::KEY_SIMULATION_TOTAL_TIME__iC"></span><span class="target" id="classqb_1_1Profiler_1a6330ef27e323dd1989b501943c507573"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEY_SIMULATION_TOTAL_TIME</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler25KEY_SIMULATION_TOTAL_TIMEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Index key for circuit simulation time. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler27KEY_PC_SEND_TO_CONTROL_TIMEE">
+<span id="_CPPv3N2qb8Profiler27KEY_PC_SEND_TO_CONTROL_TIMEE"></span><span id="_CPPv2N2qb8Profiler27KEY_PC_SEND_TO_CONTROL_TIMEE"></span><span id="qb::Profiler::KEY_PC_SEND_TO_CONTROL_TIME__iC"></span><span class="target" id="classqb_1_1Profiler_1a1a42a0cd91dd3cad1e6adc896a7eb20b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">KEY_PC_SEND_TO_CONTROL_TIME</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">5</span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler27KEY_PC_SEND_TO_CONTROL_TIMEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Index key for communication overhead time. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler15placed_circuit_E">
+<span id="_CPPv3N2qb8Profiler15placed_circuit_E"></span><span id="_CPPv2N2qb8Profiler15placed_circuit_E"></span><span id="qb::Profiler::placed_circuit___std::shared_ptr:xacc::CompositeInstruction:"></span><span class="target" id="classqb_1_1Profiler_1a061c38281b54fb4f2e8f2c828beec82b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">placed_circuit_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler15placed_circuit_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>IR representation of the circuit for profiling. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler3runEv">
+<span id="_CPPv3N2qb8Profiler3runEv"></span><span id="_CPPv2N2qb8Profiler3runEv"></span><span id="qb::Profiler::run"></span><span class="target" id="classqb_1_1Profiler_1a1b98263486bdbd8b4bd9261aeb576d63"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler3runEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Run the profiler (automatically called during <a class="reference internal" href="#classqb_1_1Profiler"><span class="std std-ref">Profiler</span></a> construction) </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler20count_1q_gates_on_q_E">
+<span id="_CPPv3N2qb8Profiler20count_1q_gates_on_q_E"></span><span id="_CPPv2N2qb8Profiler20count_1q_gates_on_q_E"></span><span id="qb::Profiler::count_1q_gates_on_q___std::unordered_map:i.i:"></span><span class="target" id="classqb_1_1Profiler_1a693f7b5f6be5035e55da7c6872d9ab84"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">count_1q_gates_on_q_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler20count_1q_gates_on_q_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Map from qubit index to single-qubit gates on that qubit wire. Note that the qubit index can be non-contiguous due to placement, e.g., a 2-qubit circuit may happen to use qubit indices 20 and 100 due to placement. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler20count_2q_gates_on_q_E">
+<span id="_CPPv3N2qb8Profiler20count_2q_gates_on_q_E"></span><span id="_CPPv2N2qb8Profiler20count_2q_gates_on_q_E"></span><span id="qb::Profiler::count_2q_gates_on_q___std::unordered_map:i.i:"></span><span class="target" id="classqb_1_1Profiler_1a4e61dd83bf34e8fe7699d5dfb93c7a80"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">count_2q_gates_on_q_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler20count_2q_gates_on_q_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Map from qubit index to two-qubit gates on that qubit wire. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler15largestdepth_q_E">
+<span id="_CPPv3N2qb8Profiler15largestdepth_q_E"></span><span id="_CPPv2N2qb8Profiler15largestdepth_q_E"></span><span id="qb::Profiler::largestdepth_q___i"></span><span class="target" id="classqb_1_1Profiler_1a78c696084c4fce2d573242ddfb59821c"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">largestdepth_q_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler15largestdepth_q_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Qubit that has the largest gate depth (total of 1 qubit- and 2 qubit-gates). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler9n_qubits_E">
+<span id="_CPPv3N2qb8Profiler9n_qubits_E"></span><span id="_CPPv2N2qb8Profiler9n_qubits_E"></span><span id="qb::Profiler::n_qubits___s"></span><span class="target" id="classqb_1_1Profiler_1ae8a22088ec07b9fc7baaf6eae64926a1"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">n_qubits_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler9n_qubits_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of qubits in the circuit. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler16gate_1q_time_ms_E">
+<span id="_CPPv3N2qb8Profiler16gate_1q_time_ms_E"></span><span id="_CPPv2N2qb8Profiler16gate_1q_time_ms_E"></span><span id="qb::Profiler::gate_1q_time_ms___double"></span><span class="target" id="classqb_1_1Profiler_1af6c7b839f2248f56f189749f464316bd"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gate_1q_time_ms_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler16gate_1q_time_ms_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Single-qubit gate time (in milliseconds) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler16gate_2q_time_ms_E">
+<span id="_CPPv3N2qb8Profiler16gate_2q_time_ms_E"></span><span id="_CPPv2N2qb8Profiler16gate_2q_time_ms_E"></span><span id="qb::Profiler::gate_2q_time_ms___double"></span><span class="target" id="classqb_1_1Profiler_1a9f134a0518265be58f061027d8d46825"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gate_2q_time_ms_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler16gate_2q_time_ms_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Two-qubit gate time (in milliseconds) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler25q_initialisation_time_ms_E">
+<span id="_CPPv3N2qb8Profiler25q_initialisation_time_ms_E"></span><span id="_CPPv2N2qb8Profiler25q_initialisation_time_ms_E"></span><span id="qb::Profiler::q_initialisation_time_ms___double"></span><span class="target" id="classqb_1_1Profiler_1a78624aa55a7b3022f0ebbc89b7f614a7"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">q_initialisation_time_ms_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler25q_initialisation_time_ms_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Circuit initialization time before gate execution (in milliseconds) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler18q_readout_time_ms_E">
+<span id="_CPPv3N2qb8Profiler18q_readout_time_ms_E"></span><span id="_CPPv2N2qb8Profiler18q_readout_time_ms_E"></span><span id="qb::Profiler::q_readout_time_ms___double"></span><span class="target" id="classqb_1_1Profiler_1a1e398be465fcb4531125beaf5ae11aa4"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">q_readout_time_ms_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler18q_readout_time_ms_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Qubit readout/measurement time (in milliseconds) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler27pc_send_to_control_time_ms_E">
+<span id="_CPPv3N2qb8Profiler27pc_send_to_control_time_ms_E"></span><span id="_CPPv2N2qb8Profiler27pc_send_to_control_time_ms_E"></span><span id="qb::Profiler::pc_send_to_control_time_ms___double"></span><span class="target" id="classqb_1_1Profiler_1af5e4d7ab179147bcae224bff8dcca14f"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pc_send_to_control_time_ms_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler27pc_send_to_control_time_ms_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Classical communication overhead w.r.t. remote QPU execution (in milliseconds) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb8Profiler6debug_E">
+<span id="_CPPv3N2qb8Profiler6debug_E"></span><span id="_CPPv2N2qb8Profiler6debug_E"></span><span id="qb::Profiler::debug___b"></span><span class="target" id="classqb_1_1Profiler_1a54a01596259dbc473ce45749080400a4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug_</span></span></span><a class="headerlink" href="#_CPPv4N2qb8Profiler6debug_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Debugging flag. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqb_1_1Pass.html" class="btn btn-neutral float-left" title="Template Class Pass" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqb_1_1QbNoiseModel.html" class="btn btn-neutral float-right" title="Class QbNoiseModel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

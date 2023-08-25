@@ -1,0 +1,72 @@
+
+.. _file_core_include_qb_core_passes_base_pass.hpp:
+
+File base_pass.hpp
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qb_core_passes>` (``core/include/qb/core/passes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qb/core/passes/base_pass.hpp``)
+----------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``memory``
+
+- ``string``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_core_include_qb_core_session.hpp`
+
+- :ref:`file_core_include_qb_core_passes_noise_aware_placement_pass.hpp`
+
+- :ref:`file_core_include_qb_core_passes_swap_placement_pass.hpp`
+
+- :ref:`file_core_include_qb_core_passes_circuit_opt_passes.hpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qb`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqb_1_1Pass`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_base__pass_8hpp_1adcd098d6fda3736000880814eb19bb93`
+
+- :ref:`exhale_typedef_base__pass_8hpp_1afdf0fd4ed922467da30328daefaf15d7`
+

@@ -16,13 +16,15 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Struct NoiseProperties::ReadoutError" href="structqb_1_1NoiseProperties_1_1ReadoutError.html" />
-    <link rel="prev" title="Namespace xacc" href="namespace_xacc.html" /> 
+    <link rel="next" title="Struct pair_hash" href="structqb_1_1pair__hash.html" />
+    <link rel="prev" title="Struct noise_aware_placement_config" href="structqb_1_1noise__aware__placement__config.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -64,20 +66,36 @@
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Struct NoiseProperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html">Struct NoiseProperties::ReadoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1session_1_1run__i__j__config.html">Struct session::run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
@@ -120,15 +138,6 @@
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_noise_model_noise_properties.hpp.html#file-core-include-qb-core-noise-model-noise-properties-hpp"><span class="std std-ref">File noise_properties.hpp</span></a></p></li>
 </ul>
-<section id="nested-relationships">
-<h2>Nested Relationships<a class="headerlink" href="#nested-relationships" title="Permalink to this headline"></a></h2>
-<section id="nested-types">
-<h3>Nested Types<a class="headerlink" href="#nested-types" title="Permalink to this headline"></a></h3>
-<ul class="simple">
-<li><p><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html#exhale-struct-structqb-1-1noiseproperties-1-1readouterror"><span class="std std-ref">Struct NoiseProperties::ReadoutError</span></a></p></li>
-</ul>
-</section>
-</section>
 <section id="struct-documentation">
 <h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline"></a></h2>
 <dl class="cpp struct">
@@ -169,11 +178,11 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb15NoiseProperties14readout_errorsE">
-<span id="_CPPv3N2qb15NoiseProperties14readout_errorsE"></span><span id="_CPPv2N2qb15NoiseProperties14readout_errorsE"></span><span id="qb::NoiseProperties::readout_errors__std::unordered_map:s.ReadoutError:"></span><span class="target" id="structqb_1_1NoiseProperties_1a2fe3de9f366219915dbc3b67d92244d8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html#_CPPv4N2qb15NoiseProperties12ReadoutErrorE" title="qb::NoiseProperties::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readout_errors</span></span></span><a class="headerlink" href="#_CPPv4N2qb15NoiseProperties14readout_errorsE" title="Permalink to this definition"></a><br /></dt>
-<dd><p><strong>readout_errors</strong> is the <strong>classical readout error (off-diagonal elements of the confusion matrix)</strong>. For a qubit register, with individual qubits zero-indexed by i, <code class="docutils literal notranslate"><span class="pre">readout_errors</span></code> is a map from qubit[i] -&gt; qb::NoiseProperties::ReadoutError[i]. Unit: none (quantities are probabilities). </p>
+<span id="_CPPv3N2qb15NoiseProperties14readout_errorsE"></span><span id="_CPPv2N2qb15NoiseProperties14readout_errorsE"></span><span id="qb::NoiseProperties::readout_errors__std::unordered_map:s.ReadoutError:"></span><span class="target" id="structqb_1_1NoiseProperties_1a2fe3de9f366219915dbc3b67d92244d8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1ReadoutError.html#_CPPv4N2qb12ReadoutErrorE" title="qb::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readout_errors</span></span></span><a class="headerlink" href="#_CPPv4N2qb15NoiseProperties14readout_errorsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p><strong>readout_errors</strong> is the <strong>classical readout error (off-diagonal elements of the confusion matrix)</strong>. For a qubit register, with individual qubits zero-indexed by i, <code class="docutils literal notranslate"><span class="pre">readout_errors</span></code> is a map from qubit[i] -&gt; <a class="reference internal" href="structqb_1_1ReadoutError.html#structqb_1_1ReadoutError"><span class="std std-ref">qb::ReadoutError</span></a>[i]. Unit: none (quantities are probabilities). </p>
 <p><div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// C++ code example: 2 qubits with p(0|1) = p(1|0) = 0.05, 2 qubits with p(0|1) = 0.1 and p(1|0) = 0.08</span>
 <span class="n">qb</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span><span class="w"></span>
-<span class="n">qb</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="o">::</span><span class="n">ReadoutError</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">;</span><span class="w"></span>
+<span class="n">qb</span><span class="o">::</span><span class="n">ReadoutError</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">;</span><span class="w"></span>
 <span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
 <span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
 <span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.10</span><span class="p">;</span><span class="w"></span>
@@ -237,8 +246,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="namespace_xacc.html" class="btn btn-neutral float-left" title="Namespace xacc" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="structqb_1_1NoiseProperties_1_1ReadoutError.html" class="btn btn-neutral float-right" title="Struct NoiseProperties::ReadoutError" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structqb_1_1noise__aware__placement__config.html" class="btn btn-neutral float-left" title="Struct noise_aware_placement_config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structqb_1_1pair__hash.html" class="btn btn-neutral float-right" title="Struct pair_hash" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

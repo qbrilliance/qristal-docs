@@ -21,9 +21,7 @@ The C++ example programs are _also_ built and properly linked automatically when
 
 A description of the available gates and the syntax used to implement them in Python is given in the [Quantum Computing](https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html) section.
 
-##  Notes on specific examples ##
-
-### Python ###
+## Python ##
 
 `demo1.py`
 
@@ -261,6 +259,22 @@ _noise_: true
 
 A version of `quickstart.py` with noise.
 
+`noise_model_user_defined.py`
+
+_qubits_: 2
+_gate depth_: 6
+_noise_: true
+
+A version of `noise_model.py` demonstrating the use of a user-defined noise model.
+
+`noise_model_user_defined_qb_gateset.py`
+
+_qubits_: 2
+_gate depth_: 6
+_noise_: true
+
+A version of `noise_model_user_defined.py` demonstrating the use of a user-defined noise model in a different basis gate set.
+
 `pfd.py`
 
 _qubits_: 12  
@@ -350,22 +364,63 @@ A simple example that prints out circuit topology and connectedness.
 
 `vqee_example_1.py`
 
-_qubits_: 4  
-_gate depth_: 83  
-_noise_: false  
+_qubits_: 4
+_gate depth_: 1 for H2_explicit and 7 for H1_HEA
+_noise_: false
 
-Demonstrates the use of Qristal's built-in VQE routines. This example may take some time to run.
+Demonstrates the access and run of predefined examples in Qristal's built-in VQE routines.
 
 `vqee_example_2.py`
 
-_qubits_: 4  
-_gate depth_: 83  
-_noise_: false  
+_qubits_: 4
+_gate depth_: 8
+_noise_: false
 
-Demonstrates the use and performance of different backends for Qristal's built-in VQE routines. This example may take some time to run.
+Demonstrates manual problem setup and use and performance of different backends for Qristal's built-in VQE routines. This example may take some time to run.
+
+`vqee_example_3.py`
+
+_qubits_: 4
+_gate depth_: 83
+_noise_: false
+
+Demonstrates how to inject python code into our c++ libs. Shows inclusion of external python chemistry package pyscf into Qristal's built-in VQE routines.
+
+`vqee_example_4.py`
+
+_qubits_: 4
+_gate depth_: 1
+_noise_: false
+
+Demonstrates selection of a different classical optimization algorithm (Nelder-Mead), along with extra options to constrain the parameters and terminate the optimization.
 
 
-### C++ ###
+`vqee_example_5.py`
+
+_qubits_: 4
+_gate depth_: 1
+_noise_: false
+
+Similar to `vqee_example_4` except the classical algorithm used here is ADAM.
+
+`simple_placement.py`
+
+A simple example demonstrating circuit placement based on backend topology.
+
+`noise_aware_placement.py`
+
+A simple example demonstrating noise-aware circuit placement by setting up a toy hardware configuration.
+
+`noise_aware_placement_noise_model.py`
+
+A simple example demonstrating noise-aware circuit placement by setting up a toy noise model.
+
+`noise_aware_placement_aws_rigetti.py`
+
+An example demonstrating integrated noise-aware placement during circuit execution on a hardware backend (e.g., Rigetti devices on AWS).
+Valid AWS credentials are required to run the example. 
+
+## C++ ##
 
 `demo1`
 
@@ -397,7 +452,8 @@ A command-line interface to Qristal.  A simple invocation after compiling the CL
 ```
 ./qbsdkcli -q2 --random=2
 ```
-which will run a random circuit on 2 qubits, with gate depth of 2. Further details can be found <a href="cli.html">here</a> if viewing the html docs (or in <a href="cpp/qbsdkcli/README.md">examples/cpp/qbsdkcli/README.md</a> if viewing this document as markdown).
+which will run a random circuit on 2 qubits, with gate depth of 2. Further details can be found <a href="cli.html">here</a>.  
+%Special note only for markdown readers: see <a href="cpp/qbsdkcli/README.md">examples/cpp/qbsdkcli/README.md</a> instead for further details.
 
 `noise_model`
 
@@ -407,6 +463,14 @@ _noise_: true
 
 A C++ implementation of `noise_model.py`.
 
+`noise_model_user_defined`
+
+_qubits_: 2
+_gate depth_: 6
+_noise_: true
+
+A C++ implementation of `noise_model_user_defined.py`.
+
 `vqee`
 
 _qubits_: 4  
@@ -415,10 +479,61 @@ _noise_: false
 
 Demonstrates the use of Qristal's built-in VQE routines. Can be built with MPI support and parallelization over Pauli terms.
 
+`vqeeCalculator`
 
-### C++ with CUDA Quantum ###
+`vqeeCalculator` is a C++ compiled executable that enables command-line access to the functionality in `vqee`.
+
+```{toctree}
+vqeeCalculator.md
+```
+
+%Special note only for markdown readers: For in-depth documentation of the `vqeeCalculator`, see <a href="cpp/vqeeCalculator/README.md">examples/cpp/vqeeCalculator/README.md</a>.
+
+`noise_aware_placement_simple`
+
+A simple example demonstrates noise-aware circuit placement by setting up a toy hardware configuration.
+
+A C++ implementation of `noise_aware_placement.py`.
+
+`noise_aware_placement_aws`
+
+An example demonstrates integrated noise-aware placement during circuit execution on hardware backend (e.g., Rigetti devices on AWS).
+Valid AWS credentials are required to run the example. 
+
+A C++ implementation of `noise_aware_placement_aws_rigetti.py`.
+
+`circuit_optimization/circuit_optimizer.py`
+
+An example demonstrating the pattern-based circuit optimization pass. 
+
+`circuit_optimization/remove_redundant_gates.py`
+
+An example demonstrating the redundant gate removal circuit optimization pass. 
+
+`circuit_optimization/two_qubit_squash.py`
+
+An example demonstrating the two-qubit gate synthesis (squash) circuit optimization pass. 
+
+`circuit_optimization/simplify_initial_conditions.py`
+
+An example demonstrating the contextual circuit optimization pass, which optimizes the circuit based on the knowledge of its initial state. 
+
+`circuit_optimization/session_integration.py`
+
+An example demonstrating setting up a pipeline of circuit optimization passes when using Qristal.
+
+`cudaq_qft.py`
+
+Running QFT circuit constructed by the Qristal circuit builder on a CUDA Quantum simulator backend. Required CUDA Quantum support.
+
+
+## C++ with CUDA Quantum ##
 
 A number of additional examples are only installed when Qristal is built with CUDA Quantum support.  None of these examples has noise enabled.
+
+`cudaq_qft`
+
+Running QFT circuit constructed by the Qristal circuit builder on a CUDA Quantum simulator backend.
 
 `benchmark1_cudaq`
 
@@ -436,15 +551,14 @@ Determination of the deuteron's ground state energy using VQE with the Cobyla op
 
 Determination of the ground state of a chain of four hydrogen atoms, using VQE with the L-BFGS optimiser.
 
-`cudaq_vqe_cobyla`
+`cudaq_vqe_lbfgs`
 
 Determination of the deuteron's ground state energy using VQE with the L-BFGS optimiser.
 
 
-### Further notes for beta testers ###
+## Works in progress ##
 
-This folder is to some extent a work in progress.  The examples listed above are the ones that have been fully tested and made consistent with the public version of the code.  The others listed below do not presently run or still need additional testing. This is a known issue, and thus not worth reporting as a new bug.
-
+Examples in the `wip` folder are works in progress.  These either do not presently run or still need additional testing.  This is a known issue, and thus not worth reporting as a new bug.
 
 `aws_braket`
 
@@ -458,14 +572,6 @@ These need work on the aws_s3 argument.  You should be able to get the first two
 
   - `verbatim.py`  
   A circuit run on Rigetti hardware using the AWS `verbatim` option.
-
-`q_chemistry`
-
-  - `vqe_calculator.py`
-  Implementation in Python of a generic VQE calculator for quantum chemistry. Requires `openfermionpyscf` (can be installed with pip).  Parses successfully with Python, but a tested example that uses the class has yet to be developed.
-
-  - `external_potential.py`
-  An add-in class for `vqe_calculator.py` allowing for the specification of an external potential arising from a point charge.
 
 `lambda_accelerator`
 

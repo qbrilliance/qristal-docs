@@ -6,16 +6,6 @@ Struct NoiseProperties
 - Defined in :ref:`file_core_include_qb_core_noise_model_noise_properties.hpp`
 
 
-Nested Relationships
---------------------
-
-
-Nested Types
-************
-
-- :ref:`exhale_struct_structqb_1_1NoiseProperties_1_1ReadoutError`
-
-
 Struct Documentation
 --------------------
 

@@ -11,3 +11,18 @@ Namespace xacc
 
 
 
+
+Detailed Description
+--------------------
+
+Copyright Quantum Brilliance 
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_xacc__quantum`

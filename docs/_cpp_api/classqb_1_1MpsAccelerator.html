@@ -16,13 +16,15 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class NoiseModel" href="classqb_1_1NoiseModel.html" />
-    <link rel="prev" title="Class CirqQsim" href="classqb_1_1CirqQsim.html" /> 
+    <link rel="next" title="Class noise_aware_placement_pass" href="classqb_1_1noise__aware__placement__pass.html" />
+    <link rel="prev" title="Class cudaq_sim_pool" href="classqb_1_1cudaq__sim__pool.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -64,20 +66,36 @@
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html">Struct NoiseProperties::ReadoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1session_1_1run__i__j__config.html">Struct session::run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
@@ -243,6 +261,42 @@
 </dd></dl>
 
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14MpsAccelerator11apply_noiseENSt10shared_ptrIN4xacc11InstructionEEER13MPSStateSpaceRKN2qb8internal14nv_noise_modelE">
+<span id="_CPPv3N2qb14MpsAccelerator11apply_noiseENSt10shared_ptrIN4xacc11InstructionEEER13MPSStateSpaceRKN2qb8internal14nv_noise_modelE"></span><span id="_CPPv2N2qb14MpsAccelerator11apply_noiseENSt10shared_ptrIN4xacc11InstructionEEER13MPSStateSpaceRKN2qb8internal14nv_noise_modelE"></span><span id="qb::MpsAccelerator::apply_noise__std::shared_ptr:xacc::Instruction:.MPSStateSpaceR.qb::internal::nv_noise_modelCR"></span><span class="target" id="classqb_1_1MpsAccelerator_1aa927b95594ad2960e592cbce95674564"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">apply_noise</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">inst</span></span>, <span class="n"><span class="pre">MPSStateSpace</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">qb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">internal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nv_noise_model</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">noise_model</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb14MpsAccelerator11apply_noiseENSt10shared_ptrIN4xacc11InstructionEEER13MPSStateSpaceRKN2qb8internal14nv_noise_modelE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Apply noise channels on a qubit’s state. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>inst</strong> – List of instruction, i.e. quantum circuit, to execute </p></li>
+<li><p><strong>state</strong> – Qubit state </p></li>
+<li><p><strong>noise_model</strong> – List of noise channels </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14MpsAccelerator7m_shotsE">
+<span id="_CPPv3N2qb14MpsAccelerator7m_shotsE"></span><span id="_CPPv2N2qb14MpsAccelerator7m_shotsE"></span><span id="qb::MpsAccelerator::m_shots__i"></span><span class="target" id="classqb_1_1MpsAccelerator_1a501ba69964d6313c29cddf5255df62cf"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_shots</span></span></span><a class="headerlink" href="#_CPPv4N2qb14MpsAccelerator7m_shotsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14MpsAccelerator13m_noise_modelE">
+<span id="_CPPv3N2qb14MpsAccelerator13m_noise_modelE"></span><span id="_CPPv2N2qb14MpsAccelerator13m_noise_modelE"></span><span id="qb::MpsAccelerator::m_noise_model__NoiseModelP"></span><span class="target" id="classqb_1_1MpsAccelerator_1a2410558d3506b29f7d62dbfebf56bbcb"></span><a class="reference internal" href="classqb_1_1NoiseModel.html#_CPPv4N2qb10NoiseModelE" title="qb::NoiseModel"><span class="n"><span class="pre">NoiseModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">m_noise_model</span></span></span><a class="headerlink" href="#_CPPv4N2qb14MpsAccelerator13m_noise_modelE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14MpsAccelerator10m_num_gpusE">
+<span id="_CPPv3N2qb14MpsAccelerator10m_num_gpusE"></span><span id="_CPPv2N2qb14MpsAccelerator10m_num_gpusE"></span><span id="qb::MpsAccelerator::m_num_gpus__i"></span><span class="target" id="classqb_1_1MpsAccelerator_1a23566eb3c583df629b2d9277f3181411"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_num_gpus</span></span></span><a class="headerlink" href="#_CPPv4N2qb14MpsAccelerator10m_num_gpusE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
 </dd></dl>
 
 </section>
@@ -252,8 +306,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classqb_1_1CirqQsim.html" class="btn btn-neutral float-left" title="Class CirqQsim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classqb_1_1NoiseModel.html" class="btn btn-neutral float-right" title="Class NoiseModel" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classqb_1_1cudaq__sim__pool.html" class="btn btn-neutral float-left" title="Class cudaq_sim_pool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqb_1_1noise__aware__placement__pass.html" class="btn btn-neutral float-right" title="Class noise_aware_placement_pass" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

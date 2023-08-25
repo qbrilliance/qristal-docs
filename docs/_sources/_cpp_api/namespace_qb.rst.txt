@@ -26,30 +26,75 @@ Classes
 -------
 
 
+- :ref:`exhale_struct_structqb_1_1noise__aware__placement__config`
+
 - :ref:`exhale_struct_structqb_1_1NoiseProperties`
 
-- :ref:`exhale_struct_structqb_1_1NoiseProperties_1_1ReadoutError`
+- :ref:`exhale_struct_structqb_1_1pair__hash`
 
-- :ref:`exhale_struct_structqb_1_1session_1_1run__i__j__config`
+- :ref:`exhale_struct_structqb_1_1ReadoutError`
+
+- :ref:`exhale_struct_structqb_1_1run__i__j__config`
 
 - :ref:`exhale_class_classqb_1_1CircuitBuilder`
 
 - :ref:`exhale_class_classqb_1_1CirqQsim`
 
+- :ref:`exhale_class_classqb_1_1cudaq__ir__converter`
+
+- :ref:`exhale_class_classqb_1_1cudaq__sim__pool`
+
 - :ref:`exhale_class_classqb_1_1MpsAccelerator`
 
+- :ref:`exhale_class_classqb_1_1noise__aware__placement__pass`
+
 - :ref:`exhale_class_classqb_1_1NoiseModel`
+
+- :ref:`exhale_class_classqb_1_1optimization__pass`
+
+- :ref:`exhale_class_classqb_1_1Pass`
+
+- :ref:`exhale_class_classqb_1_1Profiler`
 
 - :ref:`exhale_class_classqb_1_1QbNoiseModel`
 
 - :ref:`exhale_class_classqb_1_1session`
 
+- :ref:`exhale_class_classqb_1_1swap__placement__pass`
+
 - :ref:`exhale_class_classqb_1_1thread__pool`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_session_8hpp_1a02db9735a9c041d02e48753b9ff50d01`
 
 
 Functions
 ---------
 
+
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0`
+
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316`
+
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501`
+
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7`
+
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a`
+
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d`
+
+- :ref:`exhale_function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f`
+
+- :ref:`exhale_function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c`
+
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62`
+
+- :ref:`exhale_function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4`
 
 - :ref:`exhale_function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de`
 
@@ -58,6 +103,10 @@ Typedefs
 --------
 
 
+- :ref:`exhale_typedef_base__pass_8hpp_1adcd098d6fda3736000880814eb19bb93`
+
 - :ref:`exhale_typedef_circuit__builder_8hpp_1a66837bd6714ea13c9cc10c9f54b48728`
+
+- :ref:`exhale_typedef_base__pass_8hpp_1afdf0fd4ed922467da30328daefaf15d7`
 
 - :ref:`exhale_typedef_circuit__builder_8hpp_1a3a836b4117e2cd67fc1980ad99cb2443`

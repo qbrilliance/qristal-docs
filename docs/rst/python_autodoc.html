@@ -16,8 +16,12 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -52,8 +56,8 @@
 <li class="toctree-l1"><a class="reference internal" href="quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -61,6 +65,12 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Python API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#the-session-class">The session class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#the-circuit-class">The Circuit class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#noise-modelling">Noise Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#placement">Placement</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#noise-aware-placement">Noise-aware placement</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#swap-based-placement">Swap-based placement</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -279,6 +289,24 @@ Must begin with the prefix: “amazon-braket-”</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="core.session.circuit_optimization">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">circuit_optimization</span></span><a class="headerlink" href="#core.session.circuit_optimization" title="Permalink to this definition"></a></dt>
+<dd><p>circuit_optimization:</p>
+<p>List of circuit optimization passes.</p>
+<p>circuit_optimizations:</p>
+<p>A 1d-array (list) version of circuit_optimization.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.circuit_optimizations">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">circuit_optimizations</span></span><a class="headerlink" href="#core.session.circuit_optimizations" title="Permalink to this definition"></a></dt>
+<dd><p>circuit_optimization:</p>
+<p>List of circuit optimization passes.</p>
+<p>circuit_optimizations:</p>
+<p>A 1d-array (list) version of circuit_optimization.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="core.session.debug">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#core.session.debug" title="Permalink to this definition"></a></dt>
 <dd><p>debug:</p>
@@ -483,17 +511,21 @@ Must begin with the prefix: “amazon-braket-”</p>
 <dt class="sig sig-object py" id="core.session.noise_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise_model</span></span><a class="headerlink" href="#core.session.noise_model" title="Permalink to this definition"></a></dt>
 <dd><p>noise_model:</p>
-<p>Valid settings: “default” | “qb-nm1” | “qb-nm2” | “qb-qdk1”</p>
+<p>Set the noise model to be used in subsequent simulations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Requires setting: noise = True (to have effect)</p>
 </aside>
-<p>Default: “default”</p>
-<p>“default”: Simple depolarizing noise model on all qubits (builtin)</p>
-<p>These two options require the QB emulator module (addons):</p>
+<p>The default (built in) model is a simple depolarizing noise model on all qubits.</p>
+<p>Users may make their own instances of the NoiseModel class (or make an instance of the
+default and modify it), and then assign that model to this property.  See examples/python/noise_model*.py.</p>
+<p>If the Qristal Emulator is installed, the following additional models are available and
+can be accessed by specifying the relevant model name as a string passed to the constructor
+of the NoiseModel class:</p>
 <p>“qb-nm1” : 4x4 NV centres in x-y grid, 3 qubits per NV centre</p>
 <p>“qb-nm2” : 8x8 NV centres in x-y grid, 1 qubit per NV centre, nearest x and nearest y connectivity</p>
-<p>“qb-qdk1” : 1 NV centre with 2 qubits</p>
+<p>“qb-qdk1” : 1 NV centre with 2 qubits, fidelities tuned to match deployed device</p>
+<p>“qb-dqc2” : 1 NV centre with 2 qubits, fidelities tuned to match lab-based device</p>
 <p>noise_models:</p>
 <p>A 1d-array (list) version of noise_model.</p>
 </dd></dl>
@@ -502,17 +534,21 @@ Must begin with the prefix: “amazon-braket-”</p>
 <dt class="sig sig-object py" id="core.session.noise_models">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise_models</span></span><a class="headerlink" href="#core.session.noise_models" title="Permalink to this definition"></a></dt>
 <dd><p>noise_model:</p>
-<p>Valid settings: “default” | “qb-nm1” | “qb-nm2” | “qb-qdk1”</p>
+<p>Set the noise model to be used in subsequent simulations.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Requires setting: noise = True (to have effect)</p>
 </aside>
-<p>Default: “default”</p>
-<p>“default”: Simple depolarizing noise model on all qubits (builtin)</p>
-<p>These two options require the QB emulator module (addons):</p>
+<p>The default (built in) model is a simple depolarizing noise model on all qubits.</p>
+<p>Users may make their own instances of the NoiseModel class (or make an instance of the
+default and modify it), and then assign that model to this property.  See examples/python/noise_model*.py.</p>
+<p>If the Qristal Emulator is installed, the following additional models are available and
+can be accessed by specifying the relevant model name as a string passed to the constructor
+of the NoiseModel class:</p>
 <p>“qb-nm1” : 4x4 NV centres in x-y grid, 3 qubits per NV centre</p>
 <p>“qb-nm2” : 8x8 NV centres in x-y grid, 1 qubit per NV centre, nearest x and nearest y connectivity</p>
-<p>“qb-qdk1” : 1 NV centre with 2 qubits</p>
+<p>“qb-qdk1” : 1 NV centre with 2 qubits, fidelities tuned to match deployed device</p>
+<p>“qb-dqc2” : 1 NV centre with 2 qubits, fidelities tuned to match lab-based device</p>
 <p>noise_models:</p>
 <p>A 1d-array (list) version of noise_model.</p>
 </dd></dl>
@@ -877,11 +913,11 @@ Must begin with the prefix: “amazon-braket-”</p>
 <dt class="sig sig-object py" id="core.session.placement">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">placement</span></span><a class="headerlink" href="#core.session.placement" title="Permalink to this definition"></a></dt>
 <dd><p>placement:</p>
-<p>Valid settings: “swap-shortest-path” | “tket”</p>
+<p>Valid settings: “swap-shortest-path” | “noise-aware”</p>
 <p>Setting the method to map from logical qubits to the physical qubits of the device that will be used to carry them. The single setting applies globally to all infiles and all instrings.
 Default: “swap-shortest-path”</p>
 <p>placements:</p>
-<p>Valid settings: [[“swap-shortest-path” | “tket”, …], [“swap-shortest-path” | “tket”, …]]</p>
+<p>Valid settings: [[“swap-shortest-path” | “noise-aware”, …], [“swap-shortest-path” | “noise-aware”, …]]</p>
 <p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
 </dd></dl>
 
@@ -889,11 +925,11 @@ Default: “swap-shortest-path”</p>
 <dt class="sig sig-object py" id="core.session.placements">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">placements</span></span><a class="headerlink" href="#core.session.placements" title="Permalink to this definition"></a></dt>
 <dd><p>placement:</p>
-<p>Valid settings: “swap-shortest-path” | “tket”</p>
+<p>Valid settings: “swap-shortest-path” | “noise-aware”</p>
 <p>Setting the method to map from logical qubits to the physical qubits of the device that will be used to carry them. The single setting applies globally to all infiles and all instrings.
 Default: “swap-shortest-path”</p>
 <p>placements:</p>
-<p>Valid settings: [[“swap-shortest-path” | “tket”, …], [“swap-shortest-path” | “tket”, …]]</p>
+<p>Valid settings: [[“swap-shortest-path” | “noise-aware”, …], [“swap-shortest-path” | “noise-aware”, …]]</p>
 <p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
 </dd></dl>
 
@@ -2103,6 +2139,435 @@ the state_prep circuit A.</p>
 
 </dd></dl>
 
+</section>
+<section id="noise-modelling">
+<h2>Noise Modelling<a class="headerlink" href="#noise-modelling" title="Permalink to this headline"></a></h2>
+<p>QB Qristal allows an end-user to implement noise models in Python.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.NoiseModel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">NoiseModel</span></span><a class="headerlink" href="#core.NoiseModel" title="Permalink to this definition"></a></dt>
+<dd><p>Noise model class allowing specification of noise parameters and connectivity for each gate.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.NoiseModel.QubitConnectivity">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">QubitConnectivity</span></span><a class="headerlink" href="#core.NoiseModel.QubitConnectivity" title="Permalink to this definition"></a></dt>
+<dd><p>Type of qubit connectivity</p>
+<p>Members:</p>
+<blockquote>
+<div><p>AllToAll</p>
+<p>Custom</p>
+</div></blockquote>
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseModel.QubitConnectivity.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#core.NoiseModel.QubitConnectivity.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.NoiseModel.add_gate_error">
+<span class="sig-name descname"><span class="pre">add_gate_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.NoiseModel.add_gate_error" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>add_gate_error(self: core.NoiseModel, arg0: List[core.KrausOperator], arg1: str, arg2: core.N) -&gt; None</p>
+<blockquote>
+<div><p>Add a gate error channel for a gate operation</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><em>noise_channel</em> Noise channel to be associated with the gate [List(KraussOperator)]</p></li>
+<li><p><em>gate_name</em> Name of the gates [String]</p></li>
+<li><p><em>qubits</em> Qubit indices of the gate. [qb.core.N]</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>add_gate_error(self: core.NoiseModel, arg0: List[core.KrausOperator], arg1: str, arg2: list) -&gt; None</p>
+<blockquote>
+<div><p>Overload of add_gate_error that takes <em>qubits</em> directly as List(Integer).</p>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.NoiseModel.add_qubit_connectivity">
+<span class="sig-name descname"><span class="pre">add_qubit_connectivity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.NoiseModel" title="core.NoiseModel"><span class="pre">core.NoiseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.NoiseModel.add_qubit_connectivity" title="Permalink to this definition"></a></dt>
+<dd><p>Add a connected qubit pair to the topology model</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><em>q1</em> First qubit index [Integer]</p></li>
+<li><p><em>q2</em> Second qubit index [Integer]</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseModel.connectivity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">connectivity</span></span><a class="headerlink" href="#core.NoiseModel.connectivity" title="Permalink to this definition"></a></dt>
+<dd><p>Get connectivity as a list of connected qubit pairs</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseModel.name">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">name</span></span><a class="headerlink" href="#core.NoiseModel.name" title="Permalink to this definition"></a></dt>
+<dd><p>The colloquial name of the noise model</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseModel.qobj_basis_gates">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qobj_basis_gates</span></span><a class="headerlink" href="#core.NoiseModel.qobj_basis_gates" title="Permalink to this definition"></a></dt>
+<dd><p>The list of basis gates that the AER QObj will be referring to.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseModel.qobj_compiler">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qobj_compiler</span></span><a class="headerlink" href="#core.NoiseModel.qobj_compiler" title="Permalink to this definition"></a></dt>
+<dd><p>‘xacc-qobj’ | ‘qristal-qobj’.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>The name of the QObj compiler to use with the AER simulator. Valid options</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.NoiseModel.set_qubit_readout_error">
+<span class="sig-name descname"><span class="pre">set_qubit_readout_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.NoiseModel" title="core.NoiseModel"><span class="pre">core.NoiseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.ReadoutError" title="core.ReadoutError"><span class="pre">core.ReadoutError</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.NoiseModel.set_qubit_readout_error" title="Permalink to this definition"></a></dt>
+<dd><p>Set the qubit readout error</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><em>qubitIdx</em> Qubit to set [Integer]</p></li>
+<li><p><em>ro_error</em> Readout error [ReadoutError]</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.NoiseModel.to_json">
+<span class="sig-name descname"><span class="pre">to_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.NoiseModel" title="core.NoiseModel"><span class="pre">core.NoiseModel</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#core.NoiseModel.to_json" title="Permalink to this definition"></a></dt>
+<dd><p>Convert noise model to json string</p>
+</dd></dl>
+
+</dd></dl>
+
+<p>This <cite>NoiseModel</cite> can be constructed from the quantum device <cite>NoiseProperties</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.NoiseProperties">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">NoiseProperties</span></span><a class="headerlink" href="#core.NoiseProperties" title="Permalink to this definition"></a></dt>
+<dd><dl class="simple">
+<dt>Use NoiseProperties to accept user input parameters for custom noise models.  There are 3 types of inputs used for constructing a custom noise model:</dt><dd><ul class="simple">
+<li><p>Qubit topology</p></li>
+<li><p>Time duration of quantum gate operations</p></li>
+<li><p>Parameters for quantum noise channels and classical errors</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseProperties.gate_pauli_errors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gate_pauli_errors</span></span><a class="headerlink" href="#core.NoiseProperties.gate_pauli_errors" title="Permalink to this definition"></a></dt>
+<dd><p><cite>gate_pauli_errors</cite> is the parameter for gate error derived from randomized benchmarking of a quantum gate operation that is applied at a target set of qubits.</p>
+<p>Unit: none (range: [0.0, 1.0])</p>
+<p>Code example: 4 qubits: “u3” single-qubit gate, uniform gate error parameter = 0.03 (3%); “cx” between neighboring qubits (on a line), gate error parameter = 0.1 (10%):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="n">num_qubits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.03</span><span class="w"></span>
+<span class="w">  </span><span class="cp"># Qubits on a line:</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">num_qubits</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="w"></span>
+
+<span class="cp"># Print out the gate error map:</span>
+<span class="n">print</span><span class="p">(</span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseProperties.gate_time_us">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gate_time_us</span></span><a class="headerlink" href="#core.NoiseProperties.gate_time_us" title="Permalink to this definition"></a></dt>
+<dd><p><cite>gate_time_us</cite> is the duration for a quantum gate operation when applied at a target set of qubits.</p>
+<p>Unit: microseconds</p>
+<p>Code example: 4 qubits: “u3” single-qubit gate, uniform duration of 5.2us; “cx” between neighboring qubits (on a line), uniform duration of 20us:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
+<span class="n">num_qubits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.2</span><span class="w"></span>
+<span class="w">  </span><span class="cp"># Qubits on a line:</span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">num_qubits</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20.0</span><span class="w"></span>
+
+<span class="cp"># Print out the gate time map:</span>
+<span class="n">print</span><span class="p">(</span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">)</span><span class="w"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseProperties.qubit_topology">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qubit_topology</span></span><a class="headerlink" href="#core.NoiseProperties.qubit_topology" title="Permalink to this definition"></a></dt>
+<dd><p><cite>qubit_topology</cite> is a graph comprised of directed edges {control qubit, target qubit} with control qubit as the source of the edge -&gt; target qubit as the destination of the edge.</p>
+<p>Code example: “cx” symmetrical two-qubit gate with 4 qubits in the topology below:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Topology</span>
+<span class="cp">#    q0 &lt;--cx--&gt; q1</span>
+<span class="cp">#     ^           ^</span>
+<span class="cp">#     |           |</span>
+<span class="cp">#     cx          cx</span>
+<span class="cp">#     |           |</span>
+<span class="cp">#     v           v</span>
+<span class="cp">#    q3 &lt;--cx--&gt; q2</span>
+<span class="cp"># Initialize an empty NoiseProperties</span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">qubit_topology</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]]</span><span class="w"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseProperties.readout_errors">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">readout_errors</span></span><a class="headerlink" href="#core.NoiseProperties.readout_errors" title="Permalink to this definition"></a></dt>
+<dd><p><cite>readout_errors</cite> is the <em>classical readout error</em> (off-diagonal elements of the confusion matrix).</p>
+<p>For a qubit register, with individual qubits zero-indexed by i, <cite>readout_errors</cite> is a map from qubit[i] -&gt; <cite>ReadoutError[i]</cite>.</p>
+<p>Unit: none (quantities are probabilities).</p>
+<p>Code example: 4-qubit device: 2 qubits (Q0 and Q1) with p(0|1) = p(1|0) = 0.05,
+2 qubits (Q2 and Q3) with p(0|1) = 0.1 and p(1|0) = 0.08:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnpro_balanced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReadoutError</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="w"></span>
+<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="w"></span>
+<span class="n">t_qbnpro_asym</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReadoutError</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.10</span><span class="w"></span>
+<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.08</span><span class="w"></span>
+<span class="cp"># Q0 and Q1 readout errors</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="w"></span>
+<span class="cp"># Q2 and Q3 readout errors</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="w"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseProperties.t1_us">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">t1_us</span></span><a class="headerlink" href="#core.NoiseProperties.t1_us" title="Permalink to this definition"></a></dt>
+<dd><p><span class="math notranslate nohighlight">\(T_1\)</span> is the <em>qubit relaxation time</em>.</p>
+<p>For a qubit register, with individual qubits zero-indexed by <cite>i</cite>; <cite>t1_us</cite> is a map from qubit[i] -&gt; T1[i].</p>
+<p>Unit: microseconds</p>
+<p>Code example: 4 qubits all with T1 = 1.5us:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="cp"># Set T1 of qubits (all with 1.5 us)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">t1_us</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">1.5</span><span class="w"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.NoiseProperties.t2_us">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">t2_us</span></span><a class="headerlink" href="#core.NoiseProperties.t2_us" title="Permalink to this definition"></a></dt>
+<dd><p><span class="math notranslate nohighlight">\(T_2\)</span> is the <em>qubit dephasing time</em>.</p>
+<p>For a qubit register, with individual qubits zero-indexed by <cite>i</cite>; <cite>t2_us</cite> is a map from qubit[i] -&gt; T2[i].</p>
+<p>Unit: microseconds</p>
+<p>Code example: 4 qubits all with T2 = 0.15us:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="cp"># Set T2 of qubits (all with 0.15 us)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">t2_us</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">0.15</span><span class="w"></span>
+</pre></div>
+</div>
+</dd></dl>
+
+</dd></dl>
+
+<p>Additionally, users can use these builtin classes to construct commonly-used noise channels when building the <cite>NoiseModel</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.AmplitudeDampingChannel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">AmplitudeDampingChannel</span></span><a class="headerlink" href="#core.AmplitudeDampingChannel" title="Permalink to this definition"></a></dt>
+<dd><p>Amplitude damping channel factory</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.AmplitudeDampingChannel.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.AmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.PhaseDampingChannel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">PhaseDampingChannel</span></span><a class="headerlink" href="#core.PhaseDampingChannel" title="Permalink to this definition"></a></dt>
+<dd><p>Phase damping channel factory</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.PhaseDampingChannel.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.PhaseDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.DepolarizingChannel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">DepolarizingChannel</span></span><a class="headerlink" href="#core.DepolarizingChannel" title="Permalink to this definition"></a></dt>
+<dd><p>Depolarizing channel factory</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.DepolarizingChannel.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.DepolarizingChannel.Create" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>Create(self: int, arg0: float) -&gt; List[core.KrausOperator]</p>
+<blockquote>
+<div><p>Create single-qubit depolarizing channel (balanced/symmetric)</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><em>q</em> Qubit index</p></li>
+<li><p><em>p</em> Total depolarizing probability</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>Create(self: int, arg0: int, arg1: float) -&gt; List[core.KrausOperator]</p>
+<blockquote>
+<div><p>Create two-qubit depolarizing channel (balanced/symmetric)</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><em>q1</em> First qubit</p></li>
+<li><p><em>q2</em> Second qubit</p></li>
+<li><p><em>p</em> Total depolarizing probability</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.GeneralizedPhaseAmplitudeDampingChannel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">GeneralizedPhaseAmplitudeDampingChannel</span></span><a class="headerlink" href="#core.GeneralizedPhaseAmplitudeDampingChannel" title="Permalink to this definition"></a></dt>
+<dd><p>Generalized Single-qubit combined phase and amplitude damping quantum error channel</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.GeneralizedPhaseAmplitudeDampingChannel.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.GeneralizedPhaseAmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<dd><p>Create a generalized amplitude and phase damping channel</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><em>q</em> Qubit</p></li>
+<li><p><em>excited_state_population</em> Excited state population</p></li>
+<li><p><em>param_amp</em> Amplitude damping parameter</p></li>
+<li><p><em>param_phase</em> Phase damping parameter</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.GeneralizedAmplitudeDampingChannel">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">GeneralizedAmplitudeDampingChannel</span></span><a class="headerlink" href="#core.GeneralizedAmplitudeDampingChannel" title="Permalink to this definition"></a></dt>
+<dd><p>Generalized amplitude damping quantum error channel</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.GeneralizedAmplitudeDampingChannel.Create">
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.GeneralizedAmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<dd><p>Create a generalized amplitude damping channel</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><em>q</em> Qubit</p></li>
+<li><p><em>excited_state_population</em> Excited state population</p></li>
+<li><p><em>param_amp</em> Amplitude damping parameter</p></li>
+</ul>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="core.ReadoutError">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">ReadoutError</span></span><a class="headerlink" href="#core.ReadoutError" title="Permalink to this definition"></a></dt>
+<dd><p>Probabilities of reading out a value for a qubit that does not reflect its true state.</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="core.ReadoutError.p_01">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p_01</span></span><a class="headerlink" href="#core.ReadoutError.p_01" title="Permalink to this definition"></a></dt>
+<dd><p>Classical probability of detecting 0 whereas the true state was <span class="math notranslate nohighlight">\(|1\rangle\)</span></p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.ReadoutError.p_10">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">p_10</span></span><a class="headerlink" href="#core.ReadoutError.p_10" title="Permalink to this definition"></a></dt>
+<dd><p>Classical probability of detecting 1 whereas the true state was <span class="math notranslate nohighlight">\(|0\rangle\)</span></p>
+</dd></dl>
+
+</dd></dl>
+
+<p>In case no builtin noise channels are available for your use case, a fully-customized noise channel can be constructed in terms of instances of the <cite>KrausOperator</cite> class.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.KrausOperator">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">KrausOperator</span></span><a class="headerlink" href="#core.KrausOperator" title="Permalink to this definition"></a></dt>
+<dd><dl class="py property">
+<dt class="sig sig-object py" id="core.KrausOperator.matrix">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">matrix</span></span><a class="headerlink" href="#core.KrausOperator.matrix" title="Permalink to this definition"></a></dt>
+<dd><p>Kraus matrix</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.KrausOperator.qubits">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qubits</span></span><a class="headerlink" href="#core.KrausOperator.qubits" title="Permalink to this definition"></a></dt>
+<dd><p>Qubits that this Kraus operator acts on.</p>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="placement">
+<h2>Placement<a class="headerlink" href="#placement" title="Permalink to this headline"></a></h2>
+<p>Qristal contains placement methods to perform mapping from program (logical) qubits to device (physical) qubits satisfying qubit connectivity constraints.</p>
+<section id="noise-aware-placement">
+<h3>Noise-aware placement<a class="headerlink" href="#noise-aware-placement" title="Permalink to this headline"></a></h3>
+<p>The <cite>noise_aware_placement_pass</cite> takes into account gate error rates and readout errors to find the best placement map.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.noise_aware_placement_pass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">noise_aware_placement_pass</span></span><a class="headerlink" href="#core.noise_aware_placement_pass" title="Permalink to this definition"></a></dt>
+<dd><p>The noise_aware_placement_pass class uses device connectivity, gate errors (1-q and 2-q) and readout errors to find the best placement map.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.noise_aware_placement_pass.apply">
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.noise_aware_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qb::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.noise_aware_placement_pass.apply" title="Permalink to this definition"></a></dt>
+<dd><p>Apply noise-aware placement on the input circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>circuit</strong> – Circuit to be placed (map qubit indices and inject SWAP gates as necessary)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<p>Device configuration for the noise-aware placement is defined by <cite>noise_aware_placement_config</cite>.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.noise_aware_placement_config">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">noise_aware_placement_config</span></span><a class="headerlink" href="#core.noise_aware_placement_config" title="Permalink to this definition"></a></dt>
+<dd><p>The noise_aware_placement_config class encapsulates generic backend information required by the noise-aware placement pass.</p>
+</dd></dl>
+
+</section>
+<section id="swap-based-placement">
+<h3>Swap-based placement<a class="headerlink" href="#swap-based-placement" title="Permalink to this headline"></a></h3>
+<p>The <cite>swap_placement_pass</cite> performs circuit placement by swapping qubits (along the shortest possible path) when there are gates between uncoupled qubits.</p>
+<dl class="py class">
+<dt class="sig sig-object py" id="core.swap_placement_pass">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">swap_placement_pass</span></span><a class="headerlink" href="#core.swap_placement_pass" title="Permalink to this definition"></a></dt>
+<dd><p>Circuit placement pass based on injection of SWAP gates to satisfy device connectivity topology.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="core.swap_placement_pass.apply">
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.swap_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qb::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.swap_placement_pass.apply" title="Permalink to this definition"></a></dt>
+<dd><p>Apply SWAP-based placement on the input circuit.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>circuit</strong> – Circuit to be placed (map qubit indices and inject SWAP gates as necessary)</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
 </section>
 </section>
 

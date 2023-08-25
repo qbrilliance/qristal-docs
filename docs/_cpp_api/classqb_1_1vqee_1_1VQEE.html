@@ -16,13 +16,15 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Enum DefaultAnsatzes" href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" />
-    <link rel="prev" title="Class thread_pool" href="classqb_1_1thread__pool.html" /> 
+    <link rel="next" title="Class VqeOpt" href="classqb_1_1vqee_1_1VqeOpt.html" />
+    <link rel="prev" title="Class NLO" href="classqb_1_1vqee_1_1NLO.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -64,20 +66,36 @@
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html">Struct NoiseProperties::ReadoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1session_1_1run__i__j__config.html">Struct session::run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
@@ -140,6 +158,100 @@
 <dd></dd></dl>
 
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2qb4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi">
+<span id="_CPPv3NK2qb4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi"></span><span id="_CPPv2NK2qb4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi"></span><span id="qb::vqee::VQEE::splitPauli__std::shared_ptr:xacc::quantum::PauliOperator:R.iC"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1a7a8bbfa764882b4da7b992e79c08e821"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PauliOperator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">splitPauli</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PauliOperator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_pauli</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nTermsPerSplit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2qb4vqee4VQEE14getAcceleratorERKNSt6stringE">
+<span id="_CPPv3NK2qb4vqee4VQEE14getAcceleratorERKNSt6stringE"></span><span id="_CPPv2NK2qb4vqee4VQEE14getAcceleratorERKNSt6stringE"></span><span id="qb::vqee::VQEE::getAccelerator__ssCRC"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1a974f06b84853b3c9f05c3e648885696d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAccelerator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">accName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb4vqee4VQEE14getAcceleratorERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2qb4vqee4VQEE9getAnsatzEv">
+<span id="_CPPv3NK2qb4vqee4VQEE9getAnsatzEv"></span><span id="_CPPv2NK2qb4vqee4VQEE9getAnsatzEv"></span><span id="qb::vqee::VQEE::getAnsatzC"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1a71b0b285aab86209c704d16e3b20370a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnsatz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb4vqee4VQEE9getAnsatzEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee4VQEE13getObservableEv">
+<span id="_CPPv3N2qb4vqee4VQEE13getObservableEv"></span><span id="_CPPv2N2qb4vqee4VQEE13getObservableEv"></span><span id="qb::vqee::VQEE::getObservable"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1aadc6611412786724c3ee8c356b77f1dd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Observable</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getObservable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee4VQEE13getObservableEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee4VQEE20getOptimumIterationEEv">
+<span id="_CPPv3N2qb4vqee4VQEE20getOptimumIterationEEv"></span><span id="_CPPv2N2qb4vqee4VQEE20getOptimumIterationEEv"></span><span id="qb::vqee::VQEE::getOptimumIterationE"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1a3840c733496cea5ba8aa02ed1714795d"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getOptimumIterationE</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee4VQEE20getOptimumIterationEEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Subroutines for visualising VQE convergence. </p>
+<p>Locate the iteration that produced the optimum theta</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Index that matches the optimum iteration found by XACC </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee4VQEE22generateThetaEnergyVisEKNSt6stringEK6size_tKiKiKi">
+<span id="_CPPv3N2qb4vqee4VQEE22generateThetaEnergyVisEKNSt6stringEK6size_tKiKiKi"></span><span id="_CPPv2N2qb4vqee4VQEE22generateThetaEnergyVisEKNSt6stringEK6size_tKiKiKi"></span><span id="qb::vqee::VQEE::generateThetaEnergyVis__ssC.sC.iC.iC.iC"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1a114fdcb65da72d3044ecaa49dbafb02e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generateThetaEnergyVis</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_title</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_start_elem</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_scale</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_width</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_precision</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee4VQEE22generateThetaEnergyVisEKNSt6stringEK6size_tKiKiKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a text-art bar graph for energy and each element of theta. The resultant visualisation is stored in params_.vis. The iteration corresponding to the optimum is marked ‘**’. </p>
+<p>Colour markings: Red - indicates the optimum iteration identified by XACC Green - indicates an iteration with the same energy of the optimum energy</p>
+<p>Example output:</p>
+<p>Iteration 96 Energy |################# -0.95 Theta Element 0 |####################### 0.33*pi Element 1 |##################### 0.19*pi Element 2 |################### -0.12*pi Element 3 |######################### 0.55*pi Iteration 97 Energy **|################ -0.98 Theta Element 0 **|####################### 0.3*pi Element 1 **|##################### 0.19*pi Element 2 **|#################### -0.059*pi Element 3 **|######################### 0.5*pi Iteration 98 Energy |################# -0.97 Theta Element 0 |###################### 0.29*pi Element 1 |##################### 0.14*pi Element 2 |#################### 0.061*pi Element 3 |######################### 0.55*pi</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_title</strong> – A string to be used as a title before the text-art output </p></li>
+<li><p><strong>in_start_elem</strong> – Index for the starting element within theta for which the next in_elem_n elements will be visualised </p></li>
+<li><p><strong>in_scale</strong> – A scaling factor to adjust the size of the visual bar output </p></li>
+<li><p><strong>in_width</strong> – The size of a blank separator between bar labels and bars </p></li>
+<li><p><strong>in_precision</strong> – The precision for printing a value at the right extremity of a bar </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee4VQEE17generateEnergyVisEKNSt6vectorIdEEKNSt6stringEKiKiKiKi">
+<span id="_CPPv3N2qb4vqee4VQEE17generateEnergyVisEKNSt6vectorIdEEKNSt6stringEKiKiKiKi"></span><span id="_CPPv2N2qb4vqee4VQEE17generateEnergyVisEKNSt6vectorIdEEKNSt6stringEKiKiKiKi"></span><span id="qb::vqee::VQEE::generateEnergyVis__std::vector:double:C.ssC.iC.iC.iC.iC"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1aaca774f6791cfb09e83ea34832d058d8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generateEnergyVis</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_val</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_title</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_stride</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_scale</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_width</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_precision</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee4VQEE17generateEnergyVisEKNSt6vectorIdEEKNSt6stringEKiKiKiKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create a text-art bar graph for energy. The resultant visualisation is stored in params_.vis. The iteration corresponding to the optimum is marked ‘**’. Values are displayed at the right extremity of each bar. The scaling of bars is based on the energy at the first iteration, and rescales as soon as the size of a bar in any iteration is zero. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_val</strong> – An array with consecutive iterations separated by in_stride elements </p></li>
+<li><p><strong>in_title</strong> – A string to be used as a title before the text-art output </p></li>
+<li><p><strong>in_stride</strong> – The stride separating consecutive iterations </p></li>
+<li><p><strong>in_scale</strong> – A scaling factor to adjust the size of the visual bar output </p></li>
+<li><p><strong>in_width</strong> – The size of a blank separator between bar labels and bars </p></li>
+<li><p><strong>in_precision</strong> – The precision for printing a value at the right extremity of a bar</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>String representation of energy convergence trace </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee4VQEE7isRoot_E">
+<span id="_CPPv3N2qb4vqee4VQEE7isRoot_E"></span><span id="_CPPv2N2qb4vqee4VQEE7isRoot_E"></span><span id="qb::vqee::VQEE::isRoot___bC"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1a6d2cb98d508f1244522a9065100e81cd"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isRoot_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="n"><span class="pre">GetRank</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">==</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee4VQEE7isRoot_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee4VQEE11isParallel_E">
+<span id="_CPPv3N2qb4vqee4VQEE11isParallel_E"></span><span id="_CPPv2N2qb4vqee4VQEE11isParallel_E"></span><span id="qb::vqee::VQEE::isParallel___bC"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1a3baab95978837f27a6fa8dea7832111c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isParallel_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="n"><span class="pre">GetSize</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="w"> </span><span class="o"><span class="pre">&gt;</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee4VQEE11isParallel_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee4VQEE7params_E">
+<span id="_CPPv3N2qb4vqee4VQEE7params_E"></span><span id="_CPPv2N2qb4vqee4VQEE7params_E"></span><span id="qb::vqee::VQEE::params___ParamsR"></span><span class="target" id="classqb_1_1vqee_1_1VQEE_1ae0daf159f80702f1bff622d403f69433"></span><a class="reference internal" href="structqb_1_1vqee_1_1Params.html#_CPPv4N2qb4vqee6ParamsE" title="qb::vqee::Params"><span class="n"><span class="pre">Params</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">params_</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee4VQEE7params_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
 </dd></dl>
 
 </section>
@@ -149,8 +261,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classqb_1_1thread__pool.html" class="btn btn-neutral float-left" title="Class thread_pool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" class="btn btn-neutral float-right" title="Enum DefaultAnsatzes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classqb_1_1vqee_1_1NLO.html" class="btn btn-neutral float-left" title="Class NLO" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqb_1_1vqee_1_1VqeOpt.html" class="btn btn-neutral float-right" title="Class VqeOpt" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

@@ -16,6 +16,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -122,6 +124,12 @@
 <tr class="row-odd"><td><p><strong>Readout error p(1|0)</strong></p></td>
 <td><p>0.01</p></td>
 </tr>
+<tr class="row-even"><td><p><strong>QObj generator</strong></p></td>
+<td><p>“xacc-qobj”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Basis gate set</strong></p></td>
+<td><p>u1, u2, u3, cx</p></td>
+</tr>
 </tbody>
 </table>
 <p>This model is applicable to:</p>
@@ -141,6 +149,21 @@
 </section>
 <section id="qb-nm1">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-nm1</span></code><a class="headerlink" href="#qb-nm1" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model name</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-nm1</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>QObj generator</strong></p></td>
+<td><p>“qristal-qobj”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Basis gate set</strong></p></td>
+<td><p>rx, ry, cz</p></td>
+</tr>
+</tbody>
+</table>
 <p>This model is applicable to:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
@@ -157,6 +180,21 @@
 </section>
 <section id="qb-nm2">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-nm2</span></code><a class="headerlink" href="#qb-nm2" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model name</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-nm2</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>QObj generator</strong></p></td>
+<td><p>“qristal-qobj”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Basis gate set</strong></p></td>
+<td><p>rx, ry, cz</p></td>
+</tr>
+</tbody>
+</table>
 <p>This model is applicable to:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
@@ -173,6 +211,52 @@
 </section>
 <section id="qb-qdk1">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-qdk1</span></code><a class="headerlink" href="#qb-qdk1" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model name</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-qdk1</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>QObj generator</strong></p></td>
+<td><p>“qristal-qobj”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Basis gate set</strong></p></td>
+<td><p>rx, ry, cz</p></td>
+</tr>
+</tbody>
+</table>
+<p>This model is applicable to:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Commercial emulator releases: 2023 onwards</p></li>
+</ul>
+<p>Availability on simulators:</p>
+<ul class="contains-task-list simple">
+<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> aer</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qsim</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> tnqvm</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> sparse-sim</p></li>
+<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qpp</p></li>
+</ul>
+</section>
+<section id="qb-dqc2">
+<h3><code class="docutils literal notranslate"><span class="pre">qb-dqc2</span></code><a class="headerlink" href="#qb-dqc2" title="Permalink to this headline"></a></h3>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Model name</p></th>
+<th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-dqc2</span></code></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>QObj generator</strong></p></td>
+<td><p>“qristal-qobj”</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Basis gate set</strong></p></td>
+<td><p>rx, ry, cz</p></td>
+</tr>
+</tbody>
+</table>
 <p>This model is applicable to:</p>
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>

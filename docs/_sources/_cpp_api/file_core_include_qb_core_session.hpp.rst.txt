@@ -25,17 +25,13 @@ Includes
 --------
 
 
-- ``qb/core/QuantumBrillianceAccelerator.hpp``
-
-- ``qb/core/QuantumBrillianceRemoteAccelerator.hpp``
-
 - ``qb/core/async_executor.hpp``
 
 - ``qb/core/cmake_variables.hpp``
 
-- ``qb/core/pretranspiler.hpp``
+- ``qb/core/noise_model/noise_model.hpp`` (:ref:`file_core_include_qb_core_noise_model_noise_model.hpp`)
 
-- ``qb/core/profiler.hpp``
+- ``qb/core/passes/base_pass.hpp`` (:ref:`file_core_include_qb_core_passes_base_pass.hpp`)
 
 - ``qb/core/remote_async_accelerator.hpp``
 
@@ -52,12 +48,23 @@ Namespaces
 
 - :ref:`namespace_qb`
 
+- :ref:`namespace_xacc`
+
+- :ref:`namespace_xacc__quantum`
+
 
 Classes
 -------
 
 
-- :ref:`exhale_struct_structqb_1_1session_1_1run__i__j__config`
+- :ref:`exhale_struct_structqb_1_1run__i__j__config`
 
 - :ref:`exhale_class_classqb_1_1session`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_session_8hpp_1a02db9735a9c041d02e48753b9ff50d01`
 

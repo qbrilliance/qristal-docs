@@ -1,0 +1,14 @@
+.. _exhale_function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f:
+
+Function qb::create_swap_placement_pass(const std::vector<std::pair<int, int>>&)
+================================================================================
+
+- Defined in :ref:`file_core_include_qb_core_passes_swap_placement_pass.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qb::create_swap_placement_pass(const std::vector<std::pair<int, int>>&)
+   :project: My Project

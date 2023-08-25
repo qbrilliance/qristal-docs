@@ -16,13 +16,15 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Namespace qb::qml" href="namespace_qb__qml.html" />
-    <link rel="prev" title="C++ API" href="library_root.html" /> 
+    <link rel="prev" title="Namespace nvqir" href="namespace_nvqir.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -63,10 +65,12 @@
 <li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="namespace_nvqir.html">Namespace nvqir</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Namespace qb</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespace_qb__qml.html">Namespace qb::qml</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespace_qb__vqee.html">Namespace qb::vqee</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespace_xacc.html">Namespace xacc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="namespace_xacc__quantum.html">Namespace xacc::quantum</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
@@ -112,8 +116,9 @@
 <ul class="simple">
 <li><p><a class="reference internal" href="#namespaces" id="id2">Namespaces</a></p></li>
 <li><p><a class="reference internal" href="#classes" id="id3">Classes</a></p></li>
-<li><p><a class="reference internal" href="#functions" id="id4">Functions</a></p></li>
-<li><p><a class="reference internal" href="#typedefs" id="id5">Typedefs</a></p></li>
+<li><p><a class="reference internal" href="#enums" id="id4">Enums</a></p></li>
+<li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p></li>
+<li><p><a class="reference internal" href="#typedefs" id="id6">Typedefs</a></p></li>
 </ul>
 </nav>
 <section id="namespaces">
@@ -126,28 +131,55 @@
 <section id="classes">
 <h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
 <ul class="simple">
+<li><p><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html#exhale-struct-structqb-1-1noise-aware-placement-config"><span class="std std-ref">Struct noise_aware_placement_config</span></a></p></li>
 <li><p><a class="reference internal" href="structqb_1_1NoiseProperties.html#exhale-struct-structqb-1-1noiseproperties"><span class="std std-ref">Struct NoiseProperties</span></a></p></li>
-<li><p><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html#exhale-struct-structqb-1-1noiseproperties-1-1readouterror"><span class="std std-ref">Struct NoiseProperties::ReadoutError</span></a></p></li>
-<li><p><a class="reference internal" href="structqb_1_1session_1_1run__i__j__config.html#exhale-struct-structqb-1-1session-1-1run-i-j-config"><span class="std std-ref">Struct session::run_i_j_config</span></a></p></li>
+<li><p><a class="reference internal" href="structqb_1_1pair__hash.html#exhale-struct-structqb-1-1pair-hash"><span class="std std-ref">Struct pair_hash</span></a></p></li>
+<li><p><a class="reference internal" href="structqb_1_1ReadoutError.html#exhale-struct-structqb-1-1readouterror"><span class="std std-ref">Struct ReadoutError</span></a></p></li>
+<li><p><a class="reference internal" href="structqb_1_1run__i__j__config.html#exhale-struct-structqb-1-1run-i-j-config"><span class="std std-ref">Struct run_i_j_config</span></a></p></li>
 <li><p><a class="reference internal" href="classqb_1_1CircuitBuilder.html#exhale-class-classqb-1-1circuitbuilder"><span class="std std-ref">Class CircuitBuilder</span></a></p></li>
 <li><p><a class="reference internal" href="classqb_1_1CirqQsim.html#exhale-class-classqb-1-1cirqqsim"><span class="std std-ref">Class CirqQsim</span></a></p></li>
+<li><p><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html#exhale-class-classqb-1-1cudaq-ir-converter"><span class="std std-ref">Class cudaq_ir_converter</span></a></p></li>
+<li><p><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html#exhale-class-classqb-1-1cudaq-sim-pool"><span class="std std-ref">Class cudaq_sim_pool</span></a></p></li>
 <li><p><a class="reference internal" href="classqb_1_1MpsAccelerator.html#exhale-class-classqb-1-1mpsaccelerator"><span class="std std-ref">Class MpsAccelerator</span></a></p></li>
+<li><p><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html#exhale-class-classqb-1-1noise-aware-placement-pass"><span class="std std-ref">Class noise_aware_placement_pass</span></a></p></li>
 <li><p><a class="reference internal" href="classqb_1_1NoiseModel.html#exhale-class-classqb-1-1noisemodel"><span class="std std-ref">Class NoiseModel</span></a></p></li>
+<li><p><a class="reference internal" href="classqb_1_1optimization__pass.html#exhale-class-classqb-1-1optimization-pass"><span class="std std-ref">Class optimization_pass</span></a></p></li>
+<li><p><a class="reference internal" href="classqb_1_1Pass.html#exhale-class-classqb-1-1pass"><span class="std std-ref">Template Class Pass</span></a></p></li>
+<li><p><a class="reference internal" href="classqb_1_1Profiler.html#exhale-class-classqb-1-1profiler"><span class="std std-ref">Class Profiler</span></a></p></li>
 <li><p><a class="reference internal" href="classqb_1_1QbNoiseModel.html#exhale-class-classqb-1-1qbnoisemodel"><span class="std std-ref">Class QbNoiseModel</span></a></p></li>
 <li><p><a class="reference internal" href="classqb_1_1session.html#exhale-class-classqb-1-1session"><span class="std std-ref">Class session</span></a></p></li>
+<li><p><a class="reference internal" href="classqb_1_1swap__placement__pass.html#exhale-class-classqb-1-1swap-placement-pass"><span class="std std-ref">Class swap_placement_pass</span></a></p></li>
 <li><p><a class="reference internal" href="classqb_1_1thread__pool.html#exhale-class-classqb-1-1thread-pool"><span class="std std-ref">Class thread_pool</span></a></p></li>
+</ul>
+</section>
+<section id="enums">
+<h2>Enums<a class="headerlink" href="#enums" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="enum_session_8hpp_1a02db9735a9c041d02e48753b9ff50d01.html#exhale-enum-session-8hpp-1a02db9735a9c041d02e48753b9ff50d01"><span class="std std-ref">Enum source_string_type</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
 <h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
 <ul class="simple">
+<li><p><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0.html#exhale-function-circuit-opt-passes-8hpp-1a545cbab3923a87c01ccdd570ae61f1c0"><span class="std std-ref">Function qb::create_circuit_optimizer_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html#exhale-function-circuit-opt-passes-8hpp-1a67c82445d4266309992147612188b316"><span class="std std-ref">Function qb::create_initial_state_simplify_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html#exhale-function-noise-aware-placement-pass-8hpp-1a050b831511155dd81b55dc918aa07501"><span class="std std-ref">Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7.html#exhale-function-noise-aware-placement-pass-8hpp-1ae8555b21703b2f6b3c8fd70083df5bc7"><span class="std std-ref">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a.html#exhale-function-circuit-opt-passes-8hpp-1a245093d381459ac07ab613f29611388a"><span class="std std-ref">Function qb::create_peephole_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d.html#exhale-function-circuit-opt-passes-8hpp-1a827e7f2b8a54343ab73941613181c79d"><span class="std std-ref">Function qb::create_remove_redundancies_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f.html#exhale-function-swap-placement-pass-8hpp-1a8ad72ff84c5b33c59c8316501fa2747f"><span class="std std-ref">Function qb::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c.html#exhale-function-swap-placement-pass-8hpp-1a25e7d9770e70951b279c25dbc1b7029c"><span class="std std-ref">Function qb::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62.html#exhale-function-circuit-opt-passes-8hpp-1a0299b0d8c2002e6003a022546ae25f62"><span class="std std-ref">Function qb::create_two_qubit_squash_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4.html#exhale-function-sim-pool-8hpp-1ac7cb3588bc9ab7f005b569244e09a0b4"><span class="std std-ref">Function qb::load_cudaq_backend</span></a></p></li>
 <li><p><a class="reference internal" href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html#exhale-function-circuit-builder-8hpp-1a7a90a73049f9676b6c3308498506b8de"><span class="std std-ref">Function qb::uniqueBitsQD</span></a></p></li>
 </ul>
 </section>
 <section id="typedefs">
 <h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline"></a></h2>
 <ul class="simple">
+<li><p><a class="reference internal" href="typedef_base__pass_8hpp_1adcd098d6fda3736000880814eb19bb93.html#exhale-typedef-base-pass-8hpp-1adcd098d6fda3736000880814eb19bb93"><span class="std std-ref">Typedef qb::CircuitPass</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_circuit__builder_8hpp_1a66837bd6714ea13c9cc10c9f54b48728.html#exhale-typedef-circuit-builder-8hpp-1a66837bd6714ea13c9cc10c9f54b48728"><span class="std std-ref">Typedef qb::OracleFuncCType</span></a></p></li>
+<li><p><a class="reference internal" href="typedef_base__pass_8hpp_1afdf0fd4ed922467da30328daefaf15d7.html#exhale-typedef-base-pass-8hpp-1afdf0fd4ed922467da30328daefaf15d7"><span class="std std-ref">Typedef qb::Passes</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_circuit__builder_8hpp_1a3a836b4117e2cd67fc1980ad99cb2443.html#exhale-typedef-circuit-builder-8hpp-1a3a836b4117e2cd67fc1980ad99cb2443"><span class="std std-ref">Typedef qb::StatePrepFuncCType</span></a></p></li>
 </ul>
 </section>
@@ -157,7 +189,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="library_root.html" class="btn btn-neutral float-left" title="C++ API" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="namespace_nvqir.html" class="btn btn-neutral float-left" title="Namespace nvqir" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="namespace_qb__qml.html" class="btn btn-neutral float-right" title="Namespace qb::qml" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

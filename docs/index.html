@@ -16,6 +16,8 @@
         <script src="_static/jquery.js"></script>
         <script src="_static/underscore.js"></script>
         <script src="_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="_static/js/qb_ga.js"></script>
         <script src="_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="_static/js/theme.js"></script>
@@ -52,8 +54,8 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -114,12 +116,31 @@
 <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="rst/getting_started.html">Getting started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#using-qristal">Using Qristal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#development-guide">Development guide</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#using-qristal">Using Qristal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#quickstart">Quickstart</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#development-guide">Development guide</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#installation">Installation</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#contributing">Contributing</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rst/examples.html">Examples</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/examples.html#notes-on-specific-examples">Notes on specific examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/examples.html#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/examples.html#c">C++</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqeeCalculator.html">In depth: <code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqeeCalculator.html#compiling">Compiling</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqeeCalculator.html#limitations">Limitations</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqeeCalculator.html#json-input-and-output">JSON input and output</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/examples.html#c-with-cuda-quantum">C++ with CUDA Quantum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/examples.html#works-in-progress">Works in progress</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rst/cli.html">Command-line interface</a></li>
@@ -128,8 +149,19 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html">Noise models</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#summary-of-built-in-noise-models">Summary of built-in noise models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#examples-showing-the-use-of-a-built-in-noise-model">Examples showing the use of a built-in noise model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#summary-of-built-in-noise-models">Summary of built-in noise models</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#default"><code class="docutils literal notranslate"><span class="pre">default</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#qb-nm1"><code class="docutils literal notranslate"><span class="pre">qb-nm1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#qb-nm2"><code class="docutils literal notranslate"><span class="pre">qb-nm2</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#qb-qdk1"><code class="docutils literal notranslate"><span class="pre">qb-qdk1</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#qb-dqc2"><code class="docutils literal notranslate"><span class="pre">qb-dqc2</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#examples-showing-the-use-of-a-built-in-noise-model">Examples showing the use of a built-in noise model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#c">C++</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#python">Python</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html#user-defined-noise-models">User defined noise models</a><ul>
@@ -137,15 +169,52 @@
 <li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#noise-channels">Noise channels</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#example">Example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#python-api">Python API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#python-api">Python API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#importing-the-module">Importing the module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#setting-up-the-parameters-for-vqe">Setting up the parameters for VQE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#setting-up-the-optimization-algorithm">Setting up the optimization algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#stochastic-gradient-algorithms">Stochastic gradient algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqe.html#adam-adaptive-momentum-estimator"><strong>ADAM [Adaptive Momentum estimator]</strong></a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rst/vqe.html#general-information">General information</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#quantum-kernels-in-qristal">Quantum kernels in Qristal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#gradient-based-algorithms">Gradient-based algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqe.html#l-bfgs"><strong>L-BFGS</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#gradient-free-algorithms">Gradient-free algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqe.html#nelder-mead"><strong>Nelder-Mead</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#triggering-the-vqe-execution">Triggering the VQE execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#accessing-the-results">Accessing the results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#viewing-the-convergence-trace">Viewing the convergence trace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#attributes-related-to-the-convergence-trace">Attributes related to the convergence trace</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#c-api">C++ API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#general-vqe-information">General VQE information</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#quantum-kernels-in-qristal">Quantum kernels in Qristal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#hamiltonian">Hamiltonian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#ansatze">Ansätze</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqe.html#theta">theta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqe.html#user-defined-ansatz">User defined ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/vqe.html#built-in-ansatze">Built in ansätze</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#convention-of-mapping-spin-orbitals-onto-qubits">Convention of mapping spin orbitals onto qubits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/vqe.html#molecular-geometries-in-qristal">Molecular geometries in Qristal</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#how-to-make-function-calls-for-a-python-level-optimizer">How to make function calls for a Python-level optimizer?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/qml.html">Quantum Machine Learning (QML)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#defining-a-variational-quantum-circuit">Defining a variational quantum circuit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#using-qmlexecutor-to-assign-values-to-parameters">Using QMLExecutor to assign values to parameters</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#converting-the-parametrized-quantum-circuit-to-a-neural-network-layer">Converting the parametrized quantum circuit to a neural network layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#references">References</a></li>
 </ul>
 </li>
 </ul>
@@ -162,6 +231,8 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/python_autodoc.html">Python API</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="rst/python_autodoc.html#the-session-class">The session class</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rst/python_autodoc.html#the-circuit-class">The Circuit class</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/python_autodoc.html#noise-modelling">Noise Modelling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/python_autodoc.html#placement">Placement</a></li>
 </ul>
 </li>
 </ul>

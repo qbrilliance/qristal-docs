@@ -19,7 +19,19 @@ Classes
 
 - :ref:`exhale_struct_structqb_1_1vqee_1_1Params`
 
+- :ref:`exhale_struct_structqb_1_1vqee_1_1vqe__iteration__data`
+
+- :ref:`exhale_class_classqb_1_1vqee_1_1AdamMLP`
+
+- :ref:`exhale_class_classqb_1_1vqee_1_1LbfgsNLO`
+
+- :ref:`exhale_class_classqb_1_1vqee_1_1NelderMeadNLO`
+
+- :ref:`exhale_class_classqb_1_1vqee_1_1NLO`
+
 - :ref:`exhale_class_classqb_1_1vqee_1_1VQEE`
+
+- :ref:`exhale_class_classqb_1_1vqee_1_1VqeOpt`
 
 
 Enums

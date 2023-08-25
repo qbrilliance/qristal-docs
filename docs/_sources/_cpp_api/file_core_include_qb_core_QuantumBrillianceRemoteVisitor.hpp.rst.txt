@@ -1,0 +1,59 @@
+
+.. _file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp:
+
+File QuantumBrillianceRemoteVisitor.hpp
+=======================================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qb_core>` (``core/include/qb/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qb/core/QuantumBrillianceRemoteVisitor.hpp``)
+------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``AllGateVisitor.hpp``
+
+- ``CommonGates.hpp``
+
+- ``memory``
+
+- ``nlohmann/json.hpp``
+
+- ``sstream``
+
+- ``xacc.hpp``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_xacc`
+
+- :ref:`namespace_xacc__quantum`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor`
+

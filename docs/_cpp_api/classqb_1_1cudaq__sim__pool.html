@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class cudaq_sim_pool &mdash; Quantum SDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class MpsAccelerator" href="classqb_1_1MpsAccelerator.html" />
+    <link rel="prev" title="Class cudaq_ir_converter" href="classqb_1_1cudaq__ir__converter.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Quantum SDK
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Quantum SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class cudaq_sim_pool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classqb_1_1cudaq__sim__pool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-cudaq-sim-pool">
+<span id="exhale-class-classqb-1-1cudaq-sim-pool"></span><h1>Class cudaq_sim_pool<a class="headerlink" href="#class-cudaq-sim-pool" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#file-core-include-qb-core-cudaq-sim-pool-hpp"><span class="std std-ref">File sim_pool.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_poolE">
+<span id="_CPPv3N2qb14cudaq_sim_poolE"></span><span id="_CPPv2N2qb14cudaq_sim_poolE"></span><span id="qb::cudaq_sim_pool"></span><span class="target" id="classqb_1_1cudaq__sim__pool"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cudaq_sim_pool</span></span></span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_poolE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Singleton util class holding/caching references to CUDAQ backend simulator instances. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2qb14cudaq_sim_pool20available_simulatorsEv">
+<span id="_CPPv3NK2qb14cudaq_sim_pool20available_simulatorsEv"></span><span id="_CPPv2NK2qb14cudaq_sim_pool20available_simulatorsEv"></span><span id="qb::cudaq_sim_pool::available_simulatorsC"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1a5717ef3cb724934db57fbc9afdaa40de"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">available_simulators</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb14cudaq_sim_pool20available_simulatorsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the names of the available CUDAQ simulators. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool13set_simulatorERKNSt6stringE">
+<span id="_CPPv3N2qb14cudaq_sim_pool13set_simulatorERKNSt6stringE"></span><span id="_CPPv2N2qb14cudaq_sim_pool13set_simulatorERKNSt6stringE"></span><span id="qb::cudaq_sim_pool::set_simulator__ssCR"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1ad0a4c5e3df5b6193e90f9da979c9ed25"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_simulator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool13set_simulatorERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets the ‘active’ CUDAQ simulator backend. This will throw if this is not a valid name (i.e., one of <code class="docutils literal notranslate"><span class="pre">available_simulators</span></code>) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool18init_cudaq_runtimeEv">
+<span id="_CPPv3N2qb14cudaq_sim_pool18init_cudaq_runtimeEv"></span><span id="_CPPv2N2qb14cudaq_sim_pool18init_cudaq_runtimeEv"></span><span id="qb::cudaq_sim_pool::init_cudaq_runtime"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1a941c2526a8763f3543a1a2ce943c7c68"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init_cudaq_runtime</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool18init_cudaq_runtimeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Manual init the CUDAQ runtime by loading its core libs with RTLD_GLOBAL. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool12get_instanceEv">
+<span id="_CPPv3N2qb14cudaq_sim_pool12get_instanceEv"></span><span id="_CPPv2N2qb14cudaq_sim_pool12get_instanceEv"></span><span id="qb::cudaq_sim_pool::get_instance"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1af6b5191dd4f820ce3ccd39fab639cc14"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2qb14cudaq_sim_poolE" title="qb::cudaq_sim_pool"><span class="n"><span class="pre">cudaq_sim_pool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_instance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool12get_instanceEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Getter for the instance; makes this class a threadsafe singleton. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool14cudaq_sim_poolEv">
+<span id="_CPPv3N2qb14cudaq_sim_pool14cudaq_sim_poolEv"></span><span id="_CPPv2N2qb14cudaq_sim_pool14cudaq_sim_poolEv"></span><span id="qb::cudaq_sim_pool::cudaq_sim_pool"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1ab9c8a325081e0175be199f2281fae1c4"></span><span class="sig-name descname"><span class="n"><span class="pre">cudaq_sim_pool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool14cudaq_sim_poolEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_poolD0Ev">
+<span id="_CPPv3N2qb14cudaq_sim_poolD0Ev"></span><span id="_CPPv2N2qb14cudaq_sim_poolD0Ev"></span><span id="qb::cudaq_sim_pool::~cudaq_sim_pool"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1abae8f00c23704dac620505fc1f76d230"></span><span class="sig-name descname"><span class="n"><span class="pre">~cudaq_sim_pool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_poolD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool15sim_name_to_libE">
+<span id="_CPPv3N2qb14cudaq_sim_pool15sim_name_to_libE"></span><span id="_CPPv2N2qb14cudaq_sim_pool15sim_name_to_libE"></span><span id="qb::cudaq_sim_pool::sim_name_to_lib__std::unordered_map:ss.ss:"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1a09a809c61abbb671f45e972e997b9d2f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sim_name_to_lib</span></span></span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool15sim_name_to_libE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Simulator name to lib path. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool19sim_name_to_sim_ptrE">
+<span id="_CPPv3N2qb14cudaq_sim_pool19sim_name_to_sim_ptrE"></span><span id="_CPPv2N2qb14cudaq_sim_pool19sim_name_to_sim_ptrE"></span><span id="qb::cudaq_sim_pool::sim_name_to_sim_ptr__std::unordered_map:ss.nvqir::CircuitSimulatorP:"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1a780c5fd2efa4b1b191020fd56da71256"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">nvqir</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CircuitSimulator</span></span><span class="p"><span class="pre">*</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sim_name_to_sim_ptr</span></span></span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool19sim_name_to_sim_ptrE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Simulator instance pool (lazily populated) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool10active_simE">
+<span id="_CPPv3N2qb14cudaq_sim_pool10active_simE"></span><span id="_CPPv2N2qb14cudaq_sim_pool10active_simE"></span><span id="qb::cudaq_sim_pool::active_sim__ss"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1aa5088ed7e069524aacd6ff0886fc6720"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">active_sim</span></span></span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool10active_simE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Name of the active simulator in the CUDAQ runtime. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool14nvqir_lib_pathE">
+<span id="_CPPv3N2qb14cudaq_sim_pool14nvqir_lib_pathE"></span><span id="_CPPv2N2qb14cudaq_sim_pool14nvqir_lib_pathE"></span><span id="qb::cudaq_sim_pool::nvqir_lib_path__ss"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1a5035159d75cafcd65049981cff9a68c0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nvqir_lib_path</span></span></span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool14nvqir_lib_pathE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Path to the nvqir (i.e., libnvqir.so) lib (core CUDAQ QIR runtime implementation) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool17platform_lib_pathE">
+<span id="_CPPv3N2qb14cudaq_sim_pool17platform_lib_pathE"></span><span id="_CPPv2N2qb14cudaq_sim_pool17platform_lib_pathE"></span><span id="qb::cudaq_sim_pool::platform_lib_path__ss"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1aaa74d3da2623619885f0e0c91922f4e0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">platform_lib_path</span></span></span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool17platform_lib_pathE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Path to the CUDAQ platform lib (i.e., libcudaq-platform-default.so) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb14cudaq_sim_pool17cudaq_rt_lib_pathE">
+<span id="_CPPv3N2qb14cudaq_sim_pool17cudaq_rt_lib_pathE"></span><span id="_CPPv2N2qb14cudaq_sim_pool17cudaq_rt_lib_pathE"></span><span id="qb::cudaq_sim_pool::cudaq_rt_lib_path__ss"></span><span class="target" id="classqb_1_1cudaq__sim__pool_1ab3dda45dbc815cdca4626afc28851f5e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cudaq_rt_lib_path</span></span></span><a class="headerlink" href="#_CPPv4N2qb14cudaq_sim_pool17cudaq_rt_lib_pathE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Path to the CUDAQ lib (libcudaq.so) </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqb_1_1cudaq__ir__converter.html" class="btn btn-neutral float-left" title="Class cudaq_ir_converter" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqb_1_1MpsAccelerator.html" class="btn btn-neutral float-right" title="Class MpsAccelerator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

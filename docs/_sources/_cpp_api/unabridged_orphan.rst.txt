@@ -31,6 +31,11 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_core_include_qb_core_cudaq.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_core_include_qb_core_noise_model.rst
 
 .. toctree::
@@ -47,6 +52,11 @@ Directories
    :maxdepth: 5
 
    dir_core_include_qb_core_optimization_vqee.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_core_include_qb_core_passes.rst
 
 .. toctree::
    :maxdepth: 5
@@ -90,6 +100,11 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_core_include_qb_core_passes_base_pass.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_core_include_qb_core_optimization_vqee_case_generator.hpp.rst
 
 .. toctree::
@@ -100,12 +115,32 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_core_include_qb_core_passes_circuit_opt_passes.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_emulator_include_qb_emulator_emulator.hpp.rst
 
 .. toctree::
    :maxdepth: 5
 
+   file_core_include_qb_core_cudaq_ir_converter.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_emulator_include_qb_emulator_nv_sim_mps_accelerator.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_core_include_qb_core_passes_noise_aware_placement_config.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -116,6 +151,11 @@ Files
    :maxdepth: 5
 
    file_core_include_qb_core_noise_model_noise_properties.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_core_include_qb_core_profiler.hpp.rst
 
 .. toctree::
    :maxdepth: 5
@@ -135,7 +175,27 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_core_include_qb_core_noise_model_readout_error.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_core_include_qb_core_session.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_core_include_qb_core_cudaq_sim_pool.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_core_include_qb_core_passes_swap_placement_pass.hpp.rst
 
 .. toctree::
    :maxdepth: 5

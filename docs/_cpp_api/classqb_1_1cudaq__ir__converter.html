@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class cudaq_ir_converter &mdash; Quantum SDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class cudaq_sim_pool" href="classqb_1_1cudaq__sim__pool.html" />
+    <link rel="prev" title="Class CirqQsim" href="classqb_1_1CirqQsim.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Quantum SDK
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Quantum SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class cudaq_ir_converter</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classqb_1_1cudaq__ir__converter.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-cudaq-ir-converter">
+<span id="exhale-class-classqb-1-1cudaq-ir-converter"></span><h1>Class cudaq_ir_converter<a class="headerlink" href="#class-cudaq-ir-converter" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_cudaq_ir_converter.hpp.html#file-core-include-qb-core-cudaq-ir-converter-hpp"><span class="std std-ref">File ir_converter.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">xacc::quantum::AllGateVisitor</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converterE">
+<span id="_CPPv3N2qb18cudaq_ir_converterE"></span><span id="_CPPv2N2qb18cudaq_ir_converterE"></span><span id="qb::cudaq_ir_converter"></span><span class="target" id="classqb_1_1cudaq__ir__converter"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cudaq_ir_converter</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AllGateVisitor</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converterE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Utility class to perform XACC IR -&gt; CUDAQ Quake IR (MLIR-based) conversion. This is performed by implementing an <code class="docutils literal notranslate"><span class="pre">AllGateVisitor</span></code> and constructing the corresponding Quake IR node using CUDAQ’s kernel_builder utility. This can also handle (classical) argument conversion (parameterized quantum circuit). Notes: (1) XACC IR (CompositeInstruction) only accepts a single kernel argument of type: double or std::vector&lt;double&gt;. Quake IR (MLIR) can accepts a much wider range of types and not limit the number of arguments. (2) The argument evaluation is XACC IR is very rudimentary. (based on the C++ Mathematical Expression Parsing And Evaluation Library, <a class="reference external" href="https://github.com/ArashPartow/exprtk">https://github.com/ArashPartow/exprtk</a>) Hence, we need to do a ‘hacky’ conversion into QUAKE IR only supporting scaling (by multiplication) an argument in a rotation angle. e.g., Ry(0.1234*theta, q[0]), where theta is a parameterized angle bound to argument ‘theta’. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter18cudaq_ir_converterENSt10shared_ptrIN4xacc20CompositeInstructionEEE">
+<span id="_CPPv3N2qb18cudaq_ir_converter18cudaq_ir_converterENSt10shared_ptrIN4xacc20CompositeInstructionEEE"></span><span id="_CPPv2N2qb18cudaq_ir_converter18cudaq_ir_converterENSt10shared_ptrIN4xacc20CompositeInstructionEEE"></span><span id="qb::cudaq_ir_converter::cudaq_ir_converter__std::shared_ptr:xacc::CompositeInstruction:"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a3905547955df1bef1d575a2a8c9d5e33"></span><span class="sig-name descname"><span class="n"><span class="pre">cudaq_ir_converter</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">xacc_ir</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter18cudaq_ir_converterENSt10shared_ptrIN4xacc20CompositeInstructionEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+<p>Taking the root XACC IR node of a kernel and construct the corresponding CUDAQ <a class="reference external" href="https://nvidia.github.io/cuda-quantum/latest/api/languages/cpp_api.html#kernel-builder">kernel_builder</a> by visiting all the child nodes. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>xacc_ir</strong> – Input XACC IR </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter17get_cudaq_builderEv">
+<span id="_CPPv3N2qb18cudaq_ir_converter17get_cudaq_builderEv"></span><span id="_CPPv2N2qb18cudaq_ir_converter17get_cudaq_builderEv"></span><span id="qb::cudaq_ir_converter::get_cudaq_builder"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1acd2b56f26fe96df52d23b7ef7442a856"></span><span class="n"><span class="pre">cudaq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">kernel_builder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_cudaq_builder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter17get_cudaq_builderEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get a reference to the constructed CUDAQ <code class="docutils literal notranslate"><span class="pre">kernel_builder</span></code>, e.g., to feed it to CUDAQ runtime (execution/vqe, etc.) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>CUDAQ <code class="docutils literal notranslate"><span class="pre">kernel_builder</span></code> </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum8HadamardE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum8HadamardE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum8HadamardE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::HadamardR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a1c93b1deba086319c6b1f72843dade27"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Hadamard</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">h</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum8HadamardE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Hadamard gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1XE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum1XE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum1XE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::XR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a8fe3314e19a2bc5ae7ddbd3fc6039cfc"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">X</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">x</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1XE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli X gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1YE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum1YE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum1YE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::YR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a0c922336058ce94092faf8bd97289cdd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Y</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">y</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1YE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli Y gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1ZE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum1ZE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum1ZE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::ZR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1ab147d94d76bb9555e1ac56585fccf420"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Z</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">z</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1ZE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli Z gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1SE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum1SE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum1SE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::SR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1ac7a922a261f6dddd1091b74d3cd03941"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">S</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">s</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1SE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>S gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum3SdgE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum3SdgE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum3SdgE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::SdgR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a58dcf94faf673b963215f7a560ce3696"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Sdg</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sdg</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum3SdgE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Inverse S gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1TE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum1TE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum1TE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::TR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1aadec643651c11e10ad6f562053506800"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">T</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">t</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1TE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>T gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum3TdgE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum3TdgE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum3TdgE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::TdgR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a4dc3afacfb09f0be1697ea23e8b59105"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Tdg</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">tdg</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum3TdgE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Inverse T gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum4CNOTE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum4CNOTE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum4CNOTE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::CNOTR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1adfb96fad3b073b65813a27a604f0811b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CNOT</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cnot</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum4CNOTE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled NOT gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CZE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CZE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CZE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::CZR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1ad3826af6daa8437515fb49498c579481"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CZ</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cz</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CZE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled Z gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CHE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CHE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CHE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::CHR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a8cbf6929e56479c142f291a0f5ceefb9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CH</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ch</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CHE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled Hadamard gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RxE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RxE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RxE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::RxR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a24f1e3492024394e3e8e1ba51f83ad7f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Rx</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rx</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RxE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about x axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RyE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RyE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RyE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::RyR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1abb40dccbf2881583b23eeb0c39fe2a53"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Ry</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ry</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RyE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about y axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RzE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RzE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RzE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::RzR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a3b765de1d34dca07546017c085cbb3c7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Rz</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rz</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2RzE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about z axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum6CPhaseE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum6CPhaseE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum6CPhaseE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::CPhaseR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1ad5aa0c34b7a82edf926460c4b4a7d012"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CPhase</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cphase</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum6CPhaseE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled phase (aka u1) gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum4SwapE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum4SwapE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum4SwapE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::SwapR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a9678a748fb0abc6d325d3a9bad0e8181"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Swap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">swap</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum4SwapE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Swap gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum5iSwapE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum5iSwapE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum5iSwapE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::iSwapR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1aba0c6c16be19143d622e927f3ecbbf8b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">iSwap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">iswap</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum5iSwapE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>iSwap gate </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CYE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CYE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CYE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::CYR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1aa327b08faeb45fe95ca7a2ebadee361b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CY</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">cy</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2CYE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled Y gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum3CRZE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum3CRZE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum3CRZE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::CRZR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a9560cea6945b6ece73469cd10f8ced72"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CRZ</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">crz</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum3CRZE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled Rz gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2U1E">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum2U1E"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum2U1E"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::U1R"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a367d65be8df54c38cab0be2b5a8e6ee8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">U1</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">u1</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum2U1E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>U1 gate (equivalent to Rz up to a global phase) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1UE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum1UE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum1UE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::UR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a2c1c27c99401141e629a739572b320c5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">U</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">u3</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum1UE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>U3 gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum5ResetE">
+<span id="_CPPv3N2qb18cudaq_ir_converter5visitERN4xacc7quantum5ResetE"></span><span id="_CPPv2N2qb18cudaq_ir_converter5visitERN4xacc7quantum5ResetE"></span><span id="qb::cudaq_ir_converter::visit__xacc::quantum::ResetR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a593e7377ee605bf6e3518876747d25d3"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Reset</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">reset</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter5visitERN4xacc7quantum5ResetE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Reset gate. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter25get_mul_factor_expressionERKNSt6stringE">
+<span id="_CPPv3N2qb18cudaq_ir_converter25get_mul_factor_expressionERKNSt6stringE"></span><span id="_CPPv2N2qb18cudaq_ir_converter25get_mul_factor_expressionERKNSt6stringE"></span><span id="qb::cudaq_ir_converter::get_mul_factor_expression__ssCR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a0ca35ab67cea0b6b1fb222bb65f2b4d6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_mul_factor_expression</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">expr_str</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter25get_mul_factor_expressionERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Helper to parse expression of type &lt;constant&gt; * &lt;var_name&gt; This can handle the no explicit constant multiplication in the expression (constant = 1.0) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>expr_str</strong> – Input expression string </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>&lt;constant&gt; and &lt;var_name&gt; pair </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter29instruction_variable_to_quakeERKN4xacc20InstructionParameterE">
+<span id="_CPPv3N2qb18cudaq_ir_converter29instruction_variable_to_quakeERKN4xacc20InstructionParameterE"></span><span id="_CPPv2N2qb18cudaq_ir_converter29instruction_variable_to_quakeERKN4xacc20InstructionParameterE"></span><span id="qb::cudaq_ir_converter::instruction_variable_to_quake__xacc::InstructionParameterCR"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1ac9aa265bca039b38a25f1ccb6f792638"></span><span class="n"><span class="pre">cudaq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">QuakeValue</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">instruction_variable_to_quake</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">InstructionParameter</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">xacc_var</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter29instruction_variable_to_quakeERKN4xacc20InstructionParameterE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Helper to convert an instruction variable to a QuakeValue, aka, a CUDAQ kernel variable. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter15m_cudaq_builderE">
+<span id="_CPPv3N2qb18cudaq_ir_converter15m_cudaq_builderE"></span><span id="_CPPv2N2qb18cudaq_ir_converter15m_cudaq_builderE"></span><span id="qb::cudaq_ir_converter::m_cudaq_builder__cudaq::kernel_builder:std::vector:double::"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a92a27f181a2d3fbf266149f093e8a241"></span><span class="n"><span class="pre">cudaq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">kernel_builder</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_cudaq_builder</span></span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter15m_cudaq_builderE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Underlying CUDAQ <code class="docutils literal notranslate"><span class="pre">kernel_builder</span></code>. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter12m_cudaq_qregE">
+<span id="_CPPv3N2qb18cudaq_ir_converter12m_cudaq_qregE"></span><span id="_CPPv2N2qb18cudaq_ir_converter12m_cudaq_qregE"></span><span id="qb::cudaq_ir_converter::m_cudaq_qreg__cudaq::QuakeValue"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a64ddd41b8a71b90525b73bc927f6cabe"></span><span class="n"><span class="pre">cudaq</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">QuakeValue</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_cudaq_qreg</span></span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter12m_cudaq_qregE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Qubit register in Quake IR. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter11m_var_namesE">
+<span id="_CPPv3N2qb18cudaq_ir_converter11m_var_namesE"></span><span id="_CPPv2N2qb18cudaq_ir_converter11m_var_namesE"></span><span id="qb::cudaq_ir_converter::m_var_names__std::vector:ss:"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1ac7acd55a0c1782216af5774150e71120"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_var_names</span></span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter11m_var_namesE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>List of argument names in the XACC IR. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb18cudaq_ir_converter14m_parsing_utilE">
+<span id="_CPPv3N2qb18cudaq_ir_converter14m_parsing_utilE"></span><span id="_CPPv2N2qb18cudaq_ir_converter14m_parsing_utilE"></span><span id="qb::cudaq_ir_converter::m_parsing_util__std::shared_ptr:xacc::ExpressionParsingUtil:"></span><span class="target" id="classqb_1_1cudaq__ir__converter_1a68701f5e55b300357df6a5cb5899c336"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">ExpressionParsingUtil</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_parsing_util</span></span></span><a class="headerlink" href="#_CPPv4N2qb18cudaq_ir_converter14m_parsing_utilE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>XACC expression parsing utility to handle string-based rotation angles (parameterized). </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqb_1_1CirqQsim.html" class="btn btn-neutral float-left" title="Class CirqQsim" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqb_1_1cudaq__sim__pool.html" class="btn btn-neutral float-right" title="Class cudaq_sim_pool" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

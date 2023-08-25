@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class VqeOpt &mdash; Quantum SDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class QuantumBrillianceRemoteVisitor" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html" />
+    <link rel="prev" title="Class VQEE" href="classqb_1_1vqee_1_1VQEE.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Quantum SDK
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Quantum SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class VqeOpt</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classqb_1_1vqee_1_1VqeOpt.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-vqeopt">
+<span id="exhale-class-classqb-1-1vqee-1-1vqeopt"></span><h1>Class VqeOpt<a class="headerlink" href="#class-vqeopt" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_optimization_vqee_case_generator.hpp.html#file-core-include-qb-core-optimization-vqee-case-generator-hpp"><span class="std std-ref">File case_generator.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="derived-types">
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qb::vqee::AdamMLP</span></code> (<a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html#exhale-class-classqb-1-1vqee-1-1adammlp"><span class="std std-ref">Class AdamMLP</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qb::vqee::NLO</span></code> (<a class="reference internal" href="classqb_1_1vqee_1_1NLO.html#exhale-class-classqb-1-1vqee-1-1nlo"><span class="std std-ref">Class NLO</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOptE">
+<span id="_CPPv3N2qb4vqee6VqeOptE"></span><span id="_CPPv2N2qb4vqee6VqeOptE"></span><span id="qb::vqee::VqeOpt"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VqeOpt</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOptE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Selection of classical optimisation algorithms and associated hyperparameters. Override <a class="reference internal" href="#classqb_1_1vqee_1_1VqeOpt_1adfb2bd5ed6b44156dc3bb319ead6dee8"><span class="std std-ref">get()</span></a> in a derived class and provide a definition that validates the relevant hyperparameters there. </p>
+<p>Additional hyperparameters ie “extra options” should be stored in the YAML::Node member [m_node_] </p>
+<p>Subclassed by <a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html#classqb_1_1vqee_1_1AdamMLP"><span class="std std-ref">qb::vqee::AdamMLP</span></a>, <a class="reference internal" href="classqb_1_1vqee_1_1NLO.html#classqb_1_1vqee_1_1NLO"><span class="std std-ref">qb::vqee::NLO</span></a></p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt6VqeOptEv">
+<span id="_CPPv3N2qb4vqee6VqeOpt6VqeOptEv"></span><span id="_CPPv2N2qb4vqee6VqeOpt6VqeOptEv"></span><span id="qb::vqee::VqeOpt::VqeOpt"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1ac51c024c13dd5e5b1bbf388be486190b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VqeOpt</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt6VqeOptEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Default constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringE">
+<span id="_CPPv3N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringE"></span><span id="_CPPv2N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringE"></span><span id="qb::vqee::VqeOpt::VqeOpt__ssCR.ssCR"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a8b0d8e5e3a09186a16228c5f93a7ba62"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VqeOpt</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_provider</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_algorithm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor for the most common use case. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringERKNSt6vectorIdEEKiKdRKN4YAML4NodeE">
+<span id="_CPPv3N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringERKNSt6vectorIdEEKiKdRKN4YAML4NodeE"></span><span id="_CPPv2N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringERKNSt6vectorIdEEKiKdRKN4YAML4NodeE"></span><span id="qb::vqee::VqeOpt::VqeOpt__ssCR.ssCR.std::vector:double:CR.iC.doubleC.YAML::NodeCR"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1ac66dcd07188eace010723e6edaf33054"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VqeOpt</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_provider</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_algorithm</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_initial_parameters</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_maxeval</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_ftol</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">YAML</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_node</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt6VqeOptERKNSt6stringERKNSt6stringERKNSt6vectorIdEEKiKdRKN4YAML4NodeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor for initialisation of all data members. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt3getEv">
+<span id="_CPPv3N2qb4vqee6VqeOpt3getEv"></span><span id="_CPPv2N2qb4vqee6VqeOpt3getEv"></span><span id="qb::vqee::VqeOpt::get"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1adfb2bd5ed6b44156dc3bb319ead6dee8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Optimizer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt3getEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Getters. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN2qb4vqee6VqeOpt17pass_yaml_to_xaccEvRKN4YAML4NodeERKNSt3setINSt6stringEEERKNSt3mapINSt6stringENSt6stringEEERN4xacc16HeterogeneousMapEb">
+<span id="_CPPv3I0EN2qb4vqee6VqeOpt17pass_yaml_to_xaccERKN4YAML4NodeERKNSt3setINSt6stringEEERKNSt3mapINSt6stringENSt6stringEEERN4xacc16HeterogeneousMapEb"></span><span id="_CPPv2I0EN2qb4vqee6VqeOpt17pass_yaml_to_xaccERKN4YAML4NodeERKNSt3setINSt6stringEEERKNSt3mapINSt6stringENSt6stringEEERN4xacc16HeterogeneousMapEb"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a7cfcf822a96cf91ba5d11e7f426a75d2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pass_yaml_to_xacc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">YAML</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">node</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">keys</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">yaml_to_xacc_keys</span></span>, <span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_xoptions</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">debug</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN2qb4vqee6VqeOpt17pass_yaml_to_xaccEvRKN4YAML4NodeERKNSt3setINSt6stringEEERKNSt3mapINSt6stringENSt6stringEEERN4xacc16HeterogeneousMapEb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Helper template for converting YAML to XACC options</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>node</strong> – YAML formatted string of extra options </p></li>
+<li><p><strong>keys</strong> – std::set of key names expected in the YAML that all have a corresponding value of type T </p></li>
+<li><p><strong>yaml_to_xacc_keys</strong> – Lookup from keys in YAML to keys recognised by XACC </p></li>
+<li><p><strong>in_xoptions</strong> – Resulting XACC options </p></li>
+<li><p><strong>debug</strong> – Debug flag </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt11m_provider_E">
+<span id="_CPPv3N2qb4vqee6VqeOpt11m_provider_E"></span><span id="_CPPv2N2qb4vqee6VqeOpt11m_provider_E"></span><span id="qb::vqee::VqeOpt::m_provider___ss"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a7ff438e1c89ad4c5865b289216a4de92"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_provider_</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt11m_provider_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Name for the C++ optimisation library. These libraries supply a collection of algorithms through a consistent interface. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt12m_algorithm_E">
+<span id="_CPPv3N2qb4vqee6VqeOpt12m_algorithm_E"></span><span id="_CPPv2N2qb4vqee6VqeOpt12m_algorithm_E"></span><span id="qb::vqee::VqeOpt::m_algorithm___ss"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a2bb759a4ef502d3df77033e4e49dfa7f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_algorithm_</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt12m_algorithm_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Name for an algorithm that performs optimisation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt21m_initial_parameters_E">
+<span id="_CPPv3N2qb4vqee6VqeOpt21m_initial_parameters_E"></span><span id="_CPPv2N2qb4vqee6VqeOpt21m_initial_parameters_E"></span><span id="qb::vqee::VqeOpt::m_initial_parameters___std::vector:double:"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a4d0e7e932fa650823ecd656c133f5d4f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_initial_parameters_</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt21m_initial_parameters_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initial values for theta (the parameters that will be varied to find the optimum) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt10m_maxeval_E">
+<span id="_CPPv3N2qb4vqee6VqeOpt10m_maxeval_E"></span><span id="_CPPv2N2qb4vqee6VqeOpt10m_maxeval_E"></span><span id="qb::vqee::VqeOpt::m_maxeval___i"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1adc0f9c15158609cc92eaa942dc96bde9"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_maxeval_</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt10m_maxeval_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Max number of iterations. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt7m_ftol_E">
+<span id="_CPPv3N2qb4vqee6VqeOpt7m_ftol_E"></span><span id="_CPPv2N2qb4vqee6VqeOpt7m_ftol_E"></span><span id="qb::vqee::VqeOpt::m_ftol___double"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a61d0d5d43aa841486696e78ac1817666"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_ftol_</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt7m_ftol_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Function tolerance. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt7m_node_E">
+<span id="_CPPv3N2qb4vqee6VqeOpt7m_node_E"></span><span id="_CPPv2N2qb4vqee6VqeOpt7m_node_E"></span><span id="qb::vqee::VqeOpt::m_node___YAML::Node"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1ac226d83d41602266ce6ae7dc23a0b226"></span><span class="n"><span class="pre">YAML</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_node_</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt7m_node_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Extra options to supply as configuration information to the optimiser. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqb_1_1vqee_1_1VQEE.html" class="btn btn-neutral float-left" title="Class VQEE" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html" class="btn btn-neutral float-right" title="Class QuantumBrillianceRemoteVisitor" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

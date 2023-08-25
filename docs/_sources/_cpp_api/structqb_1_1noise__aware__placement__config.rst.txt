@@ -1,0 +1,17 @@
+.. _exhale_struct_structqb_1_1noise__aware__placement__config:
+
+Struct noise_aware_placement_config
+===================================
+
+- Defined in :ref:`file_core_include_qb_core_passes_noise_aware_placement_config.hpp`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: qb::noise_aware_placement_config
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -16,6 +16,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -51,8 +53,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -123,6 +125,14 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qb_core_cudaq.html">Directory cudaq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qb_core_cudaq.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="dir_core_include_qb_core_noise_model.html">Directory noise_model</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dir_core_include_qb_core_noise_model.html#files">Files</a></li>
 </ul>
@@ -149,6 +159,14 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="dir_core_include_qb_core_optimization_vqee.html">Directory vqee</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="dir_core_include_qb_core_optimization_vqee.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qb_core_passes.html">Directory passes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qb_core_passes.html#files">Files</a></li>
 </ul>
 </li>
 </ul>
@@ -215,6 +233,19 @@
 <h2>Files<a class="headerlink" href="#files" title="Permalink to this headline"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_passes_base_pass.hpp.html">File base_pass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_base_pass.hpp.html#definition-core-include-qb-core-passes-base-pass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/passes/base_pass.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_base_pass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_base_pass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_base_pass.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_base_pass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_base_pass.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_optimization_vqee_case_generator.hpp.html">File case_generator.hpp</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_optimization_vqee_case_generator.hpp.html#definition-core-include-qb-core-optimization-vqee-case-generator-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/optimization/vqee/case_generator.hpp</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_optimization_vqee_case_generator.hpp.html#includes">Includes</a></li>
@@ -243,10 +274,33 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html">File circuit_opt_passes.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#definition-core-include-qb-core-passes-circuit-opt-passes-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/passes/circuit_opt_passes.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="file_emulator_include_qb_emulator_emulator.hpp.html">File emulator.hpp</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qb_emulator_emulator.hpp.html#definition-emulator-include-qb-emulator-emulator-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qb/emulator/emulator.hpp</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qb_emulator_emulator.hpp.html#namespaces">Namespaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qb_emulator_emulator.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_cudaq_ir_converter.hpp.html">File ir_converter.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_ir_converter.hpp.html#definition-core-include-qb-core-cudaq-ir-converter-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/cudaq/ir_converter.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_ir_converter.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_ir_converter.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_ir_converter.hpp.html#classes">Classes</a></li>
 </ul>
 </li>
 </ul>
@@ -258,6 +312,30 @@
 <li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qb_emulator_nv_sim_mps_accelerator.hpp.html#includes">Includes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qb_emulator_nv_sim_mps_accelerator.hpp.html#namespaces">Namespaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qb_emulator_nv_sim_mps_accelerator.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html">File noise_aware_placement_config.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html#definition-core-include-qb-core-passes-noise-aware-placement-config-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/passes/noise_aware_placement_config.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html">File noise_aware_placement_pass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#definition-core-include-qb-core-passes-noise-aware-placement-pass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/passes/noise_aware_placement_pass.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#functions">Functions</a></li>
 </ul>
 </li>
 </ul>
@@ -282,6 +360,17 @@
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_noise_model_noise_properties.hpp.html#included-by">Included By</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_noise_model_noise_properties.hpp.html#namespaces">Namespaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_noise_model_noise_properties.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_profiler.hpp.html">File profiler.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_profiler.hpp.html#definition-core-include-qb-core-profiler-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/profiler.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_profiler.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_profiler.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_profiler.hpp.html#classes">Classes</a></li>
 </ul>
 </li>
 </ul>
@@ -322,11 +411,58 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.html">File QuantumBrillianceRemoteVisitor.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.html#definition-core-include-qb-core-quantumbrillianceremotevisitor-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/QuantumBrillianceRemoteVisitor.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_noise_model_readout_error.hpp.html">File readout_error.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_noise_model_readout_error.hpp.html#definition-core-include-qb-core-noise-model-readout-error-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/noise_model/readout_error.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_noise_model_readout_error.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_noise_model_readout_error.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_noise_model_readout_error.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_session.hpp.html">File session.hpp</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_session.hpp.html#definition-core-include-qb-core-session-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/session.hpp</span></code>)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_session.hpp.html#includes">Includes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_session.hpp.html#namespaces">Namespaces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_session.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_session.hpp.html#enums">Enums</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_cudaq_sim_pool.hpp.html">File sim_pool.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#definition-core-include-qb-core-cudaq-sim-pool-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/cudaq/sim_pool.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html">File swap_placement_pass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html#definition-core-include-qb-core-passes-swap-placement-pass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qb/core/passes/swap_placement_pass.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html#functions">Functions</a></li>
 </ul>
 </li>
 </ul>

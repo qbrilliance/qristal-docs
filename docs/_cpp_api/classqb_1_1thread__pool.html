@@ -16,13 +16,15 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class VQEE" href="classqb_1_1vqee_1_1VQEE.html" />
-    <link rel="prev" title="Class session" href="classqb_1_1session.html" /> 
+    <link rel="next" title="Class AdamMLP" href="classqb_1_1vqee_1_1AdamMLP.html" />
+    <link rel="prev" title="Class swap_placement_pass" href="classqb_1_1swap__placement__pass.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -64,20 +66,36 @@
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html">Struct NoiseProperties::ReadoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1session_1_1run__i__j__config.html">Struct session::run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
@@ -192,6 +210,86 @@
 </dd></dl>
 
 </div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool11thread_poolEv">
+<span id="_CPPv3N2qb11thread_pool11thread_poolEv"></span><span id="_CPPv2N2qb11thread_pool11thread_poolEv"></span><span id="qb::thread_pool::thread_pool"></span><span class="target" id="classqb_1_1thread__pool_1a3fbcad09c7f75b86cd2d54ce97fdd918"></span><span class="sig-name descname"><span class="n"><span class="pre">thread_pool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb11thread_pool11thread_poolEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_poolD0Ev">
+<span id="_CPPv3N2qb11thread_poolD0Ev"></span><span id="_CPPv2N2qb11thread_poolD0Ev"></span><span id="qb::thread_pool::~thread_pool"></span><span class="target" id="classqb_1_1thread__pool_1a3130c4f71ad503d13e0c307c82fa4bfe"></span><span class="sig-name descname"><span class="n"><span class="pre">~thread_pool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb11thread_poolD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool17initialise_threadEv">
+<span id="_CPPv3N2qb11thread_pool17initialise_threadEv"></span><span id="_CPPv2N2qb11thread_pool17initialise_threadEv"></span><span id="qb::thread_pool::initialise_thread"></span><span class="target" id="classqb_1_1thread__pool_1a4a534455b4a10eeaf4d106b748c2156c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">thread</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialise_thread</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb11thread_pool17initialise_threadEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialise a thread-future pair. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool4loopENSt10shared_ptrIbEE">
+<span id="_CPPv3N2qb11thread_pool4loopENSt10shared_ptrIbEE"></span><span id="_CPPv2N2qb11thread_pool4loopENSt10shared_ptrIbEE"></span><span id="qb::thread_pool::loop__std::shared_ptr:b:"></span><span class="target" id="classqb_1_1thread__pool_1ab56f6bd1dc9bae11bc7d57a538a3202e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb11thread_pool4loopENSt10shared_ptrIbEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Work collector. Each thread runs this indefinitely until the pool is destroyed. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool11num_threadsE">
+<span id="_CPPv3N2qb11thread_pool11num_threadsE"></span><span id="_CPPv2N2qb11thread_pool11num_threadsE"></span><span id="qb::thread_pool::num_threads__i"></span><span class="target" id="classqb_1_1thread__pool_1a585c302212fb9dc789556d4a30f0a94b"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_threads</span></span></span><a class="headerlink" href="#_CPPv4N2qb11thread_pool11num_threadsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of threads to be maintained in the pool. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool18num_active_threadsE">
+<span id="_CPPv3N2qb11thread_pool18num_active_threadsE"></span><span id="_CPPv2N2qb11thread_pool18num_active_threadsE"></span><span id="qb::thread_pool::num_active_threads__i"></span><span class="target" id="classqb_1_1thread__pool_1a5cf16950f79c5d1bd35f957571fd2b8f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_active_threads</span></span></span><a class="headerlink" href="#_CPPv4N2qb11thread_pool18num_active_threadsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of active threads in the pool. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool7threadsE">
+<span id="_CPPv3N2qb11thread_pool7threadsE"></span><span id="_CPPv2N2qb11thread_pool7threadsE"></span><span id="qb::thread_pool::threads__std::vector:std::pair:std::thread.std::shared_ptr:b:::"></span><span class="target" id="classqb_1_1thread__pool_1a1d064ab3360803ca7eace0129a4f9109"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">thread</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">threads</span></span></span><a class="headerlink" href="#_CPPv4N2qb11thread_pool7threadsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A vector of threads for running tasks, paired with flags indicating if they have exited their loop. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool5queueE">
+<span id="_CPPv3N2qb11thread_pool5queueE"></span><span id="_CPPv2N2qb11thread_pool5queueE"></span><span class="target" id="classqb_1_1thread__pool_1a5f575e569c88f90d3cb63ccf50a0cdec"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">queue</span></span></span><a class="headerlink" href="#_CPPv4N2qb11thread_pool5queueE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A queue of tasks waiting to be run by threads. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool7queue_mE">
+<span id="_CPPv3N2qb11thread_pool7queue_mE"></span><span id="_CPPv2N2qb11thread_pool7queue_mE"></span><span id="qb::thread_pool::queue_m__std::mutex"></span><span class="target" id="classqb_1_1thread__pool_1ac90bcc2354918b5db027180c48219728"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">queue_m</span></span></span><a class="headerlink" href="#_CPPv4N2qb11thread_pool7queue_mE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Thread lockers for the queue and the shutdown flag. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool9threads_mE">
+<span id="_CPPv3N2qb11thread_pool9threads_mE"></span><span id="_CPPv2N2qb11thread_pool9threads_mE"></span><span id="qb::thread_pool::threads_m__std::mutex"></span><span class="target" id="classqb_1_1thread__pool_1acd0244c6580eb6ab528f38338dae0a6b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">threads_m</span></span></span><a class="headerlink" href="#_CPPv4N2qb11thread_pool9threads_mE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool13shutting_downE">
+<span id="_CPPv3N2qb11thread_pool13shutting_downE"></span><span id="_CPPv2N2qb11thread_pool13shutting_downE"></span><span id="qb::thread_pool::shutting_down__std::atomic:b:"></span><span class="target" id="classqb_1_1thread__pool_1ac3ba85815e074c19314bf1171e30d2ff"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">atomic</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shutting_down</span></span></span><a class="headerlink" href="#_CPPv4N2qb11thread_pool13shutting_downE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Flag indicating that the pool is being destroyed. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-functions">Private Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb11thread_pool12get_instanceEv">
+<span id="_CPPv3N2qb11thread_pool12get_instanceEv"></span><span id="_CPPv2N2qb11thread_pool12get_instanceEv"></span><span id="qb::thread_pool::get_instance"></span><span class="target" id="classqb_1_1thread__pool_1ac1f30df3807aad596ded225c1bcbbc5d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2qb11thread_poolE" title="qb::thread_pool"><span class="n"><span class="pre">thread_pool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_instance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb11thread_pool12get_instanceEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Getter for the instance; makes this class a threadsafe singleton. </p>
+</dd></dl>
+
+</div>
 </dd></dl>
 
 </section>
@@ -201,8 +299,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="classqb_1_1session.html" class="btn btn-neutral float-left" title="Class session" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classqb_1_1vqee_1_1VQEE.html" class="btn btn-neutral float-right" title="Class VQEE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classqb_1_1swap__placement__pass.html" class="btn btn-neutral float-left" title="Class swap_placement_pass" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqb_1_1vqee_1_1AdamMLP.html" class="btn btn-neutral float-right" title="Class AdamMLP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

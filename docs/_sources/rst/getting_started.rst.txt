@@ -11,7 +11,7 @@ Using Qristal
 Development guide
 -----------------
 
-Qristal can either be run `directly from the provided Docker image <https://gitlab.com/qbau/software-and-apps/public/QBSDK/-/blob/main/README.md#docker>`_, or `installed from source <https://gitlab.com/qbau/software-and-apps/public/QBSDK>`_.  This section provides instructions for working with the source.
+Qristal can either be run `directly from the provided Docker image <https://gitlab.com/qbau/software-and-apps/public/QBSDK/-/blob/main/README.md#docker>`_, or `installed from source <https://gitlab.com/qbau/software-and-apps/public/QBSDK>`_.  This section provides instructions for working with the source. If using Windows Subsystem for Linux 2, ensure you have Docker Desktop installed **on Windows** and not under your Linux distribution, as it allows Docker to use `WSL2 as a backend <https://docs.docker.com/desktop/windows/wsl/>`_. 
 
 Dependencies
 ^^^^^^^^^^^^
@@ -67,6 +67,7 @@ Installation
 The ``-DINSTALL_MISSING=ON`` flag ensures that all missing dependencies (if any) will be downloaded and installed automatically.  To automatically download and install only C++ dependencies, instead set ``-DINSTALL_MISSING=CXX``.  To download and install only Python module dependencies, use ``-DINSTALL_MISSING=PYTHON``.
 
 .. note:: The :ref:`required dependencies <required_deps>` **must** be installed on your system. ``-DINSTALL_MISSING=ON`` will not handle those mandatory dependencies.
+.. note:: MPI is enabled by adding the option ``-DENABLE_MPI=ON`` to the ``cmake`` command.
 
 2. Manual Installation of :ref:`additional dependencies <auto_install_deps>` (**Advanced**)
 

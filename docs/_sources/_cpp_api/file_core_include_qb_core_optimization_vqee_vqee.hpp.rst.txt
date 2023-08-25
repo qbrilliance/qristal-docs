@@ -41,6 +41,8 @@ Includes
 
 - ``future``
 
+- ``iomanip``
+
 - ``memory``
 
 - ``numeric``

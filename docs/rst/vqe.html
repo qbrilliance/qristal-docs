@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Variational Quantum Eigensolver (VQE) in Qristal &mdash; Quantum SDK  documentation</title>
+  <title>Variational Quantum Eigensolver (VQE) &mdash; Quantum SDK  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -16,6 +16,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -23,7 +25,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="C++ API" href="../_cpp_api/library_root.html" />
+    <link rel="next" title="Quantum Machine Learning (QML)" href="qml.html" />
     <link rel="prev" title="Noise models" href="noise_models.html" /> 
 </head>
 
@@ -55,19 +57,33 @@
 <li class="toctree-l1"><a class="reference internal" href="quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Variational Quantum Eigensolver (VQE) in Qristal</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variational Quantum Eigensolver (VQE)</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#python-api">Python API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#importing-the-module">Importing the module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#setting-up-the-parameters-for-vqe">Setting up the parameters for VQE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-optimization-algorithm">Setting up the optimization algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stochastic-gradient-algorithms">Stochastic gradient algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adam-adaptive-momentum-estimator"><strong>ADAM [Adaptive Momentum estimator]</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-based-algorithms">Gradient-based algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#l-bfgs"><strong>L-BFGS</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-free-algorithms">Gradient-free algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nelder-mead"><strong>Nelder-Mead</strong></a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#triggering-the-vqe-execution">Triggering the VQE execution</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#accessing-the-results">Accessing the results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-the-convergence-trace">Viewing the convergence trace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attributes-related-to-the-convergence-trace">Attributes related to the convergence trace</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="#general-information">General information</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#quantum-kernels-in-qristal">Quantum kernels in Qristal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#c-api">C++ API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-vqe-information">General VQE information</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quantum-kernels-in-qristal">Quantum kernels in Qristal</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#hamiltonian">Hamiltonian</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#ansatze">Ansätze</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#theta">theta</a></li>
@@ -79,10 +95,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#molecular-geometries-in-qristal">Molecular geometries in Qristal</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#c-api">C++ API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#how-to-make-function-calls-for-a-python-level-optimizer">How to make function calls for a Python-level optimizer?</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -104,7 +120,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Variational Quantum Eigensolver (VQE) in Qristal</li>
+      <li class="breadcrumb-item active">Variational Quantum Eigensolver (VQE)</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/rst/vqe.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -114,8 +130,8 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section class="tex2jax_ignore mathjax_ignore" id="variational-quantum-eigensolver-vqe-in-qristal">
-<h1>Variational Quantum Eigensolver (VQE) in Qristal<a class="headerlink" href="#variational-quantum-eigensolver-vqe-in-qristal" title="Permalink to this headline"></a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="variational-quantum-eigensolver-vqe">
+<h1>Variational Quantum Eigensolver (VQE)<a class="headerlink" href="#variational-quantum-eigensolver-vqe" title="Permalink to this headline"></a></h1>
 <section id="example">
 <h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
 <p>The code below shows how the Qristal interface for VQE (<code class="docutils literal notranslate"><span class="pre">vqee</span></code>) is called.</p>
@@ -269,7 +285,7 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">optimalParameters</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.optimalParameters</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">24*[0.11]</span></code></p></td>
-<td><p>A vector of initial values for <br />ansatz parameters. <br />The length must match the <br />number of ansatz parameters</p></td>
+<td><p>A vector of initial values for <br />ansatz parameters. <br />The length must match the <br />number of ansatz parameters.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nShots</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.nShots</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">128</span></code></p></td>
@@ -281,18 +297,136 @@
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isDeterministic</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.isDeterministic</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
-<td><p>When set to <code class="docutils literal notranslate"><span class="pre">True</span></code>,<br /> the expectation values are <br />calculated using linear <br />algebra operations.  <br /><br />When set to <code class="docutils literal notranslate"><span class="pre">False</span></code> the <br />expectation values are <br />calculated from stochastic <br />samples of size <code class="docutils literal notranslate"><span class="pre">nShots</span></code>.</p></td>
+<td><p>When <br /><code class="docutils literal notranslate"><span class="pre">acceleratorName</span> <span class="pre">=</span> <span class="pre">'qpp'</span></code> <br />and <br /><code class="docutils literal notranslate"><span class="pre">isDeterministic</span> <span class="pre">=</span> <span class="pre">True</span></code>,<br /> the expectation values are <br />calculated using linear <br />algebra operations.  <br /><br />When <br /><code class="docutils literal notranslate"><span class="pre">isDeterministic</span> <span class="pre">=</span> <span class="pre">False</span></code> <br />the expectation values are <br />calculated from stochastic <br />samples of size <code class="docutils literal notranslate"><span class="pre">nShots</span></code>.</p></td>
 </tr>
-<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">tolerance</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">enableVis</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.enableVis</span> <span class="pre">=</span> <span class="pre">True</span></code></p></td>
+<td><p>Enable the convergence trace output. <br /><br />  These will be available in <br /> <code class="docutils literal notranslate"><span class="pre">tvqep.energyVis</span></code> (for energy) <br />and <br /> <code class="docutils literal notranslate"><span class="pre">tvqep.thetaVis</span></code> (for ansatz parameters).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tolerance</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.tolerance</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">1e-6</span></code></p></td>
 <td><p>Sets the function tolerance <br />that is used by the optimizer.</p></td>
 </tr>
-<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">acceleratorName</span></code></p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">acceleratorName</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.acceleratorName</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">'qpp'</span></code></p></td>
 <td><p>Selects the back-end that <br />will  perform quantum circuit <br />execution.</p></td>
 </tr>
 </tbody>
 </table>
+</section>
+<section id="setting-up-the-optimization-algorithm">
+<h3>Setting up the optimization algorithm<a class="headerlink" href="#setting-up-the-optimization-algorithm" title="Permalink to this headline"></a></h3>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">cobyla</span></code> (gradient-free) algorithm will be used.  Alternative algorithms for driving the optimization can be used, along with extra options that are specific to individual algorithms.  The setup for each algorithm is discussed in the next sections.</p>
+<p><strong>Note</strong>: These previously described attributes also apply to all algorithms below:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tolerance</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optimalParameters</span></code></p></li>
+</ul>
+</section>
+<section id="stochastic-gradient-algorithms">
+<h3>Stochastic gradient algorithms<a class="headerlink" href="#stochastic-gradient-algorithms" title="Permalink to this headline"></a></h3>
+<section id="adam-adaptive-momentum-estimator">
+<h4><strong>ADAM [Adaptive Momentum estimator]</strong><a class="headerlink" href="#adam-adaptive-momentum-estimator" title="Permalink to this headline"></a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.algorithm</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"> <span class="pre">&quot;adam&quot;</span></code></p></td>
+<td><p>Selects the <br /> ADAM algorithm from <br /> the mlpack C++ library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;stepsize:</span> <span class="pre">0.5&quot;</span></code></p></td>
+<td><p>Step size for each <br />iteration.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;beta1:</span> <span class="pre">0.7&quot;</span></code></p></td>
+<td><p>Exponential decay rate for<br /> the first moment estimates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;beta2:</span> <span class="pre">0.999&quot;</span></code></p></td>
+<td><p>Exponential decay rate for <br /> the weighted infinity-norm estimates.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;eps:</span> <span class="pre">1.0e-8&quot;</span></code></p></td>
+<td><p>Mean-squared gradient initial value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;momentum:</span> <span class="pre">0.05&quot;</span></code></p></td>
+<td><p>Momentum</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;exactobjective:</span> <span class="pre">false&quot;</span></code></p></td>
+<td><p>ADAM exact objective</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">extraOptions</span></code> is a YAML string field, so you can for example have all options specified with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;{stepsize:</span> <span class="pre">0.1,</span> <span class="pre">beta1:</span> <span class="pre">0.67,</span> <span class="pre">beta2:</span> <span class="pre">0.9,</span> <span class="pre">momentum:</span> <span class="pre">0.11,</span> <span class="pre">exactobjective:</span> <span class="pre">true}&quot;</span></code></p>
+</section>
+</section>
+<section id="gradient-based-algorithms">
+<h3>Gradient-based algorithms<a class="headerlink" href="#gradient-based-algorithms" title="Permalink to this headline"></a></h3>
+<section id="l-bfgs">
+<h4><strong>L-BFGS</strong><a class="headerlink" href="#l-bfgs" title="Permalink to this headline"></a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.algorithm</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"> <span class="pre">&quot;l-bfgs&quot;</span></code></p></td>
+<td><p>Selects the <br /> L-BFGS algorithm from <br /> the nlopt C++ library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p></p></td>
+<td><p>Identical to those for <a class="reference internal" href="#nelder-mead"><span class="std std-doc">Nelder-Mead</span></a> below.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="gradient-free-algorithms">
+<h3>Gradient-free algorithms<a class="headerlink" href="#gradient-free-algorithms" title="Permalink to this headline"></a></h3>
+<section id="nelder-mead">
+<h4><strong>Nelder-Mead</strong><a class="headerlink" href="#nelder-mead" title="Permalink to this headline"></a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.algorithm</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"> <span class="pre">&quot;nelder-mead&quot;</span></code></p></td>
+<td><p>Selects the <br /> Nelder-Mead algorithm from <br /> the nlopt C++ library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;stopval:</span> <span class="pre">-1.05&quot;</span></code></p></td>
+<td><p>Exits the optimization <br />as soon as the <strong>energy <br />is below this threshold value</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;lowerbounds:</span> <span class="pre">[-0.01,</span> <span class="pre">-0.01,</span> <span class="pre">-0.01]&quot;</span></code></p></td>
+<td><p>Imposes  <strong>lower-bounds</strong> <br />on the value of <code class="docutils literal notranslate"><span class="pre">theta</span></code>. <br /><br />The number of elements <br />in the list must <br /> equal the number of <br />elements in <code class="docutils literal notranslate"><span class="pre">theta</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;upperbounds:</span> <span class="pre">[0.1,</span> <span class="pre">0.1,</span> <span class="pre">0.1]&quot;</span></code></p></td>
+<td><p>Imposes  <strong>upper-bounds</strong> <br />on the value of <code class="docutils literal notranslate"><span class="pre">theta</span></code>. <br /><br />The number of elements <br />in the list must <br /> equal the number of <br />elements in <code class="docutils literal notranslate"><span class="pre">theta</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">extraOptions</span></code> is a YAML string field, so you can for example have all options specified with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;{lowerbounds:</span> <span class="pre">[-0.01,</span> <span class="pre">-0.01,</span> <span class="pre">-0.01],</span> <span class="pre">upperbounds:</span> <span class="pre">[0.1,</span> <span class="pre">0.1,</span> <span class="pre">0.1],</span> <span class="pre">stopval:</span> <span class="pre">-1.05}&quot;</span></code></p>
+</section>
 </section>
 <section id="triggering-the-vqe-execution">
 <h3>Triggering the VQE execution<a class="headerlink" href="#triggering-the-vqe-execution" title="Permalink to this headline"></a></h3>
@@ -320,18 +454,112 @@
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.optimalParameters</span></code></p></td>
 <td><p>The values for <a class="reference internal" href="#theta"><span class="std std-doc">theta</span></a> corresponding to <br />the minimum energy that VQE <br />has found within <code class="docutils literal notranslate"><span class="pre">maxIters</span></code> iterations.</p></td>
 </tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iterationData[&lt;index&gt;].energy</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.iterationData[8].energy</span></code></p></td>
+<td><p>The energy at iteration <code class="docutils literal notranslate"><span class="pre">&lt;index&gt;</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">iterationData[&lt;index&gt;].params</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.iterationData[8].params</span></code></p></td>
+<td><p>The list of ansatz parameter <br />values at iteration <code class="docutils literal notranslate"><span class="pre">&lt;index&gt;</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="viewing-the-convergence-trace">
+<h3>Viewing the convergence trace<a class="headerlink" href="#viewing-the-convergence-trace" title="Permalink to this headline"></a></h3>
+<p><strong>Note</strong>: set <code class="docutils literal notranslate"><span class="pre">enableVis</span> <span class="pre">=</span> <span class="pre">True</span></code> prior to calling <code class="docutils literal notranslate"><span class="pre">run()</span></code> in order to generate the trace.</p>
+<p>This is available via the <code class="docutils literal notranslate"><span class="pre">vis</span></code> attribute.  The iteration that gave the reported optimum is marked with: <code class="docutils literal notranslate"><span class="pre">**|</span></code>.</p>
+<p>Color codes:</p>
+<ul class="simple">
+<li><p>Red - indicates the optimum iteration</p></li>
+<li><p>Green - indicates an iteration with the same energy as the optimum iteration</p></li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Iteration 96
+Energy         |################# -0.95
+Theta
+       Element 0      |####################### 0.33*pi
+       Element 1      |##################### 0.19*pi
+       Element 2      |################### -0.12*pi
+       Element 3      |######################### 0.55*pi
+Iteration 97
+Energy       **|################ -0.98
+Theta
+       Element 0    **|####################### 0.3*pi
+       Element 1    **|##################### 0.19*pi
+       Element 2    **|#################### -0.059*pi
+       Element 3    **|######################### 0.5*pi
+Iteration 98
+Energy         |################# -0.97
+Theta
+       Element 0      |###################### 0.29*pi
+       Element 1      |##################### 0.14*pi
+       Element 2      |#################### 0.061*pi
+       Element 3      |######################### 0.55*pi
+Iteration 99
+Energy         |################ -0.98
+Theta
+       Element 0      |###################### 0.3*pi
+       Element 1      |##################### 0.19*pi
+       Element 2      |#################### -0.071*pi
+       Element 3      |######################## 0.49*pi
+Iteration 100
+Energy         |################# -0.97
+Theta
+       Element 0      |####################### 0.34*pi
+       Element 1      |##################### 0.15*pi
+       Element 2      |#################### -0.048*pi
+       Element 3      |########################## 0.62*pi
+</pre></div>
+</div>
+</section>
+<section id="attributes-related-to-the-convergence-trace">
+<h3>Attributes related to the convergence trace<a class="headerlink" href="#attributes-related-to-the-convergence-trace" title="Permalink to this headline"></a></h3>
+<p>Use these attributes to set the amount of information that appears in the convergence trace:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Defaults</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">showTheta</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.showTheta</span> <span class="pre">=</span> <span class="pre">False</span></code></p></td>
+<td><p>When set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, <br />the elements of <code class="docutils literal notranslate"><span class="pre">theta</span></code> will <br />be displayed in the <br />convergence trace.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">limitThetaN</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.limitThetaN</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td><p>Limits the number of <br />elements of <code class="docutils literal notranslate"><span class="pre">theta</span></code> appearing <br />in the trace to this value. <br />If set to 0, this <br />option is ignored.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tail</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.tail</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td><p>Output only the last <br />n=tail iterations. <br />If set to 0, this <br />option is ignored.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plain</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.plain</span> <span class="pre">=</span> <span class="pre">False</span></code></p></td>
+<td><p>Setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code> removes <br />color coding from the output.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">blocked</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.blocked</span> <span class="pre">=</span> <span class="pre">False</span></code></p></td>
+<td><p>Setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code> outputs <br />the trace with all elements <br />of <code class="docutils literal notranslate"><span class="pre">theta</span></code> for any given iteration <br />contained in a single block.</p></td>
+</tr>
 </tbody>
 </table>
 </section>
 </section>
+<section id="c-api">
+<h2>C++ API<a class="headerlink" href="#c-api" title="Permalink to this headline"></a></h2>
+<p><a href="../_cpp_api/classqb_1_1vqee_1_1VQEE.html">See the class documentation.</a></p>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="general-information">
-<h1>General information<a class="headerlink" href="#general-information" title="Permalink to this headline"></a></h1>
+<section id="general-vqe-information">
+<h2>General VQE information<a class="headerlink" href="#general-vqe-information" title="Permalink to this headline"></a></h2>
 <p>VQE is classified as a <strong>quantum-classical (hybrid) algorithm</strong>. It uses a <strong>classical optimizer</strong> to minimize a <strong>quantum kernel</strong> based objective function. The objective function is usually determined by multiple measurements at each iteration.</p>
 <p>VQE finds the <strong>ground state energy</strong> of a physical system characterized by its <strong>Hamiltonian</strong> <span class="math notranslate nohighlight">\(H\)</span> which is Hermitian. See [<a class="reference external" href="https://arxiv.org/abs/1304.3061">Peruzzo et al. 2013</a>, <a class="reference external" href="https://arxiv.org/abs/1512.06860">O’Malley et al. 2015</a>] for details.</p>
 <section id="quantum-kernels-in-qristal">
-<h2>Quantum kernels in Qristal<a class="headerlink" href="#quantum-kernels-in-qristal" title="Permalink to this headline"></a></h2>
+<h3>Quantum kernels in Qristal<a class="headerlink" href="#quantum-kernels-in-qristal" title="Permalink to this headline"></a></h3>
 <p>In this section, the components that make up a quantum kernel are described in more detail.</p>
+</section>
 <section id="hamiltonian">
 <h3>Hamiltonian<a class="headerlink" href="#hamiltonian" title="Permalink to this headline"></a></h3>
 <p>While the user provides a Hamiltonian that has been transformed from their problem/system of interest, special attention is needed on the resulting format of the Hamiltonian so that it is valid as an input to Qristal.  In particular:</p>
@@ -439,10 +667,6 @@ Do <strong>not</strong> change the first two lines:</p>
 <p>By default, Qristal uses the <a class="reference external" href="https://en.wikipedia.org/wiki/STO-nG_basis_sets">sto-3g</a> basis set and the Jordan-Wigner fermion-to-qubit mapping.</p>
 </section>
 </section>
-<section id="c-api">
-<h2>C++ API<a class="headerlink" href="#c-api" title="Permalink to this headline"></a></h2>
-<p><a href="../_cpp_api/classqb_1_1vqee_1_1VQEE.html">See the class documentation.</a></p>
-</section>
 <section id="how-to-make-function-calls-for-a-python-level-optimizer">
 <h2>How to make function calls for a Python-level optimizer?<a class="headerlink" href="#how-to-make-function-calls-for-a-python-level-optimizer" title="Permalink to this headline"></a></h2>
 <p>In order to use the optimization algorithms in <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> or <code class="docutils literal notranslate"><span class="pre">skquant.opt</span></code>  for VQE, it is necessary to provide a function that accepts the parameter values at the current iteration and returns the energy.  The function below provides this.  Note: it accepts an input (<code class="docutils literal notranslate"><span class="pre">theta</span></code>) that is a NumPy array:</p>
@@ -485,7 +709,7 @@ Do <strong>not</strong> change the first two lines:</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="noise_models.html" class="btn btn-neutral float-left" title="Noise models" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../_cpp_api/library_root.html" class="btn btn-neutral float-right" title="C++ API" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="qml.html" class="btn btn-neutral float-right" title="Quantum Machine Learning (QML)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

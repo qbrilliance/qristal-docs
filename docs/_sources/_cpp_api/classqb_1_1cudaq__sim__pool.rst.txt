@@ -1,0 +1,17 @@
+.. _exhale_class_classqb_1_1cudaq__sim__pool:
+
+Class cudaq_sim_pool
+====================
+
+- Defined in :ref:`file_core_include_qb_core_cudaq_sim_pool.hpp`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: qb::cudaq_sim_pool
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

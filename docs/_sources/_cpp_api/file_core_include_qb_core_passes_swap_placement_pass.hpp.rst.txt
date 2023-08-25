@@ -1,0 +1,62 @@
+
+.. _file_core_include_qb_core_passes_swap_placement_pass.hpp:
+
+File swap_placement_pass.hpp
+============================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qb_core_passes>` (``core/include/qb/core/passes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qb/core/passes/swap_placement_pass.hpp``)
+--------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``base_pass.hpp`` (:ref:`file_core_include_qb_core_passes_base_pass.hpp`)
+
+- ``memory``
+
+- ``vector``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qb`
+
+- :ref:`namespace_xacc`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqb_1_1swap__placement__pass`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f`
+
+- :ref:`exhale_function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c`
+

@@ -15,14 +15,18 @@ Directory core
 Subdirectories
 --------------
 
+- :ref:`dir_core_include_qb_core_cudaq`
 - :ref:`dir_core_include_qb_core_noise_model`
 - :ref:`dir_core_include_qb_core_optimization`
+- :ref:`dir_core_include_qb_core_passes`
 
 
 Files
 -----
 
 - :ref:`file_core_include_qb_core_circuit_builder.hpp`
+- :ref:`file_core_include_qb_core_profiler.hpp`
+- :ref:`file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp`
 - :ref:`file_core_include_qb_core_session.hpp`
 - :ref:`file_core_include_qb_core_thread_pool.hpp`
 

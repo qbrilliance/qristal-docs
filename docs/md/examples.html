@@ -16,6 +16,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -104,10 +106,8 @@
 </div>
 <p>The C++ example programs are <em>also</em> built and properly linked automatically when running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> in the build folder of the core and SDK projects, but the resulting binaries are <em>not</em> installed.  They simply appear in the main project build folder, and can be executed directly from there.</p>
 <p>A description of the available gates and the syntax used to implement them in Python is given in the <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html">Quantum Computing</a> section.</p>
-<section id="notes-on-specific-examples">
-<h2>Notes on specific examples<a class="headerlink" href="#notes-on-specific-examples" title="Permalink to this headline"></a></h2>
 <section id="python">
-<h3>Python<a class="headerlink" href="#python" title="Permalink to this headline"></a></h3>
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">demo1.py</span></code></p>
 <p><em>qubits</em>: 2<br />
 <em>gate depth</em>: 3<br />
@@ -252,6 +252,16 @@
 <em>gate depth</em>: 6
 <em>noise</em>: true</p>
 <p>A version of <code class="docutils literal notranslate"><span class="pre">quickstart.py</span></code> with noise.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_user_defined.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of a user-defined noise model.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_user_defined_qb_gateset.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model_user_defined.py</span></code> demonstrating the use of a user-defined noise model in a different basis gate set.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pfd.py</span></code></p>
 <p><em>qubits</em>: 12<br />
 <em>gate depth</em>: 4690<br />
@@ -305,18 +315,42 @@
 <p><code class="docutils literal notranslate"><span class="pre">topology.py</span></code></p>
 <p>A simple example that prints out circuit topology and connectedness.</p>
 <p><code class="docutils literal notranslate"><span class="pre">vqee_example_1.py</span></code></p>
-<p><em>qubits</em>: 4<br />
-<em>gate depth</em>: 83<br />
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 1 for H2_explicit and 7 for H1_HEA
 <em>noise</em>: false</p>
-<p>Demonstrates the use of Qristal’s built-in VQE routines. This example may take some time to run.</p>
+<p>Demonstrates the access and run of predefined examples in Qristal’s built-in VQE routines.</p>
 <p><code class="docutils literal notranslate"><span class="pre">vqee_example_2.py</span></code></p>
-<p><em>qubits</em>: 4<br />
-<em>gate depth</em>: 83<br />
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 8
 <em>noise</em>: false</p>
-<p>Demonstrates the use and performance of different backends for Qristal’s built-in VQE routines. This example may take some time to run.</p>
+<p>Demonstrates manual problem setup and use and performance of different backends for Qristal’s built-in VQE routines. This example may take some time to run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_3.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 83
+<em>noise</em>: false</p>
+<p>Demonstrates how to inject python code into our c++ libs. Shows inclusion of external python chemistry package pyscf into Qristal’s built-in VQE routines.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_4.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Demonstrates selection of a different classical optimization algorithm (Nelder-Mead), along with extra options to constrain the parameters and terminate the optimization.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_5.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">vqee_example_4</span></code> except the classical algorithm used here is ADAM.</p>
+<p><code class="docutils literal notranslate"><span class="pre">simple_placement.py</span></code></p>
+<p>A simple example demonstrating circuit placement based on backend topology.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement.py</span></code></p>
+<p>A simple example demonstrating noise-aware circuit placement by setting up a toy hardware configuration.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_noise_model.py</span></code></p>
+<p>A simple example demonstrating noise-aware circuit placement by setting up a toy noise model.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_aws_rigetti.py</span></code></p>
+<p>An example demonstrating integrated noise-aware placement during circuit execution on a hardware backend (e.g., Rigetti devices on AWS).
+Valid AWS credentials are required to run the example.</p>
 </section>
 <section id="c">
-<h3>C++<a class="headerlink" href="#c" title="Permalink to this headline"></a></h3>
+<h2>C++<a class="headerlink" href="#c" title="Permalink to this headline"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">demo1</span></code></p>
 <p><em>qubits</em>: 2<br />
 <em>gate depth</em>: 3<br />
@@ -337,21 +371,59 @@
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="p">.</span><span class="o">/</span><span class="n">qbsdkcli</span><span class="w"> </span><span class="o">-</span><span class="n">q2</span><span class="w"> </span><span class="o">--</span><span class="n">random</span><span class="o">=</span><span class="mi">2</span><span class="w"></span>
 </pre></div>
 </div>
-<p>which will run a random circuit on 2 qubits, with gate depth of 2. Further details can be found <a href="cli.html">here</a> if viewing the html docs (or in <a href="cpp/qbsdkcli/README.md">examples/cpp/qbsdkcli/README.md</a> if viewing this document as markdown).</p>
+<p>which will run a random circuit on 2 qubits, with gate depth of 2. Further details can be found <a href="cli.html">here</a>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">noise_model</span></code></p>
 <p><em>qubits</em>: 2
 <em>gate depth</em>: 6
 <em>noise</em>: true</p>
 <p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_user_defined</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_user_defined.py</span></code>.</p>
 <p><code class="docutils literal notranslate"><span class="pre">vqee</span></code></p>
 <p><em>qubits</em>: 4<br />
 <em>gate depth</em>: 83<br />
 <em>noise</em>: false</p>
 <p>Demonstrates the use of Qristal’s built-in VQE routines. Can be built with MPI support and parallelization over Pauli terms.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code> is a C++ compiled executable that enables command-line access to the functionality in <code class="docutils literal notranslate"><span class="pre">vqee</span></code>.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vqeeCalculator.html">In depth: <code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vqeeCalculator.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vqeeCalculator.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vqeeCalculator.html#json-input-and-output">JSON input and output</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_simple</span></code></p>
+<p>A simple example demonstrates noise-aware circuit placement by setting up a toy hardware configuration.</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_aware_placement.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_aws</span></code></p>
+<p>An example demonstrates integrated noise-aware placement during circuit execution on hardware backend (e.g., Rigetti devices on AWS).
+Valid AWS credentials are required to run the example.</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_aware_placement_aws_rigetti.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/circuit_optimizer.py</span></code></p>
+<p>An example demonstrating the pattern-based circuit optimization pass.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/remove_redundant_gates.py</span></code></p>
+<p>An example demonstrating the redundant gate removal circuit optimization pass.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/two_qubit_squash.py</span></code></p>
+<p>An example demonstrating the two-qubit gate synthesis (squash) circuit optimization pass.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/simplify_initial_conditions.py</span></code></p>
+<p>An example demonstrating the contextual circuit optimization pass, which optimizes the circuit based on the knowledge of its initial state.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/session_integration.py</span></code></p>
+<p>An example demonstrating setting up a pipeline of circuit optimization passes when using Qristal.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_qft.py</span></code></p>
+<p>Running QFT circuit constructed by the Qristal circuit builder on a CUDA Quantum simulator backend. Required CUDA Quantum support.</p>
 </section>
 <section id="c-with-cuda-quantum">
-<h3>C++ with CUDA Quantum<a class="headerlink" href="#c-with-cuda-quantum" title="Permalink to this headline"></a></h3>
+<h2>C++ with CUDA Quantum<a class="headerlink" href="#c-with-cuda-quantum" title="Permalink to this headline"></a></h2>
 <p>A number of additional examples are only installed when Qristal is built with CUDA Quantum support.  None of these examples has noise enabled.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_qft</span></code></p>
+<p>Running QFT circuit constructed by the Qristal circuit builder on a CUDA Quantum simulator backend.</p>
 <p><code class="docutils literal notranslate"><span class="pre">benchmark1_cudaq</span></code></p>
 <p>A 20 qubit GHZ state designed for benchmarking performance of CUDA Quantum and QASM. This is the CUDAQ version.</p>
 <p><code class="docutils literal notranslate"><span class="pre">benchmark1_qasm</span></code></p>
@@ -360,12 +432,12 @@
 <p>Determination of the deuteron’s ground state energy using VQE with the Cobyla optimiser.</p>
 <p><code class="docutils literal notranslate"><span class="pre">cudaq_vqe_hydrogens</span></code></p>
 <p>Determination of the ground state of a chain of four hydrogen atoms, using VQE with the L-BFGS optimiser.</p>
-<p><code class="docutils literal notranslate"><span class="pre">cudaq_vqe_cobyla</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_vqe_lbfgs</span></code></p>
 <p>Determination of the deuteron’s ground state energy using VQE with the L-BFGS optimiser.</p>
 </section>
-<section id="further-notes-for-beta-testers">
-<h3>Further notes for beta testers<a class="headerlink" href="#further-notes-for-beta-testers" title="Permalink to this headline"></a></h3>
-<p>This folder is to some extent a work in progress.  The examples listed above are the ones that have been fully tested and made consistent with the public version of the code.  The others listed below do not presently run or still need additional testing. This is a known issue, and thus not worth reporting as a new bug.</p>
+<section id="works-in-progress">
+<h2>Works in progress<a class="headerlink" href="#works-in-progress" title="Permalink to this headline"></a></h2>
+<p>Examples in the <code class="docutils literal notranslate"><span class="pre">wip</span></code> folder are works in progress.  These either do not presently run or still need additional testing.  This is a known issue, and thus not worth reporting as a new bug.</p>
 <p><code class="docutils literal notranslate"><span class="pre">aws_braket</span></code></p>
 <p>These need work on the aws_s3 argument.  You should be able to get the first two to run by just setting <code class="docutils literal notranslate"><span class="pre">s.aws_s3</span></code> to the name of an s3 bucket that you personally have access to (you need to have run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">configure</span></code>, set up the bucket, etc).</p>
 <ul class="simple">
@@ -375,13 +447,6 @@ An example of circuit offload to AWS Braket, and an explicit test of the decay o
 A Fourier transform performed on an AWS simulator.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbatim.py</span></code><br />
 A circuit run on Rigetti hardware using the AWS <code class="docutils literal notranslate"><span class="pre">verbatim</span></code> option.</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">q_chemistry</span></code></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">vqe_calculator.py</span></code>
-Implementation in Python of a generic VQE calculator for quantum chemistry. Requires <code class="docutils literal notranslate"><span class="pre">openfermionpyscf</span></code> (can be installed with pip).  Parses successfully with Python, but a tested example that uses the class has yet to be developed.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">external_potential.py</span></code>
-An add-in class for <code class="docutils literal notranslate"><span class="pre">vqe_calculator.py</span></code> allowing for the specification of an external potential arising from a point charge.</p></li>
 </ul>
 <p><code class="docutils literal notranslate"><span class="pre">lambda_accelerator</span></code></p>
 <p>Further examples using a remote accelerator.</p>
@@ -400,7 +465,6 @@ Example using the variational quantum eigensolver, a UCCSD ansatz and the AER si
 <li><p><code class="docutils literal notranslate"><span class="pre">h6_vqe_uccsd_aer</span></code><br />
 Example using the variational quantum eigensolver, a UCCSD ansatz and the AER simulator to obtain the ground state energy of H6.</p></li>
 </ul>
-</section>
 </section>
 </section>
 

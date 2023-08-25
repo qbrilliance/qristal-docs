@@ -1,0 +1,14 @@
+.. _exhale_typedef_base__pass_8hpp_1afdf0fd4ed922467da30328daefaf15d7:
+
+Typedef qb::Passes
+==================
+
+- Defined in :ref:`file_core_include_qb_core_passes_base_pass.hpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: qb::Passes
+   :project: My Project

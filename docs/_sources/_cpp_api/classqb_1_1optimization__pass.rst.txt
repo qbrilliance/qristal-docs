@@ -1,0 +1,26 @@
+.. _exhale_class_classqb_1_1optimization__pass:
+
+Class optimization_pass
+=======================
+
+- Defined in :ref:`file_core_include_qb_core_passes_circuit_opt_passes.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public qb::Pass< CircuitBuilder >`` (:ref:`exhale_class_classqb_1_1Pass`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: qb::optimization_pass
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

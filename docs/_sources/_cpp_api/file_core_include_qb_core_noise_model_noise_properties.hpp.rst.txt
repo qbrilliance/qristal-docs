@@ -27,6 +27,8 @@ Includes
 
 - ``map``
 
+- ``qb/core/noise_model/readout_error.hpp`` (:ref:`file_core_include_qb_core_noise_model_readout_error.hpp`)
+
 - ``unordered_map``
 
 - ``vector``
@@ -54,6 +56,4 @@ Classes
 
 
 - :ref:`exhale_struct_structqb_1_1NoiseProperties`
-
-- :ref:`exhale_struct_structqb_1_1NoiseProperties_1_1ReadoutError`
 

@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class QuantumBrillianceRemoteVisitor &mdash; Quantum SDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Enum DefaultAnsatzes" href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" />
+    <link rel="prev" title="Class VqeOpt" href="classqb_1_1vqee_1_1VqeOpt.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Quantum SDK
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class QuantumBrillianceRemoteVisitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Quantum SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class QuantumBrillianceRemoteVisitor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-quantumbrillianceremotevisitor">
+<span id="exhale-class-classxacc-1-1quantum-1-1quantumbrillianceremotevisitor"></span><h1>Class QuantumBrillianceRemoteVisitor<a class="headerlink" href="#class-quantumbrillianceremotevisitor" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.html#file-core-include-qb-core-quantumbrillianceremotevisitor-hpp"><span class="std std-ref">File QuantumBrillianceRemoteVisitor.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">xacc::quantum::AllGateVisitor</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitorE">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitorE"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitorE"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QuantumBrillianceRemoteVisitor</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AllGateVisitor</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitorE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-visitor-functions-for-gates-and-measurement.">Visitor functions for gates and measurement.</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Identity">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Identity"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Identity"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__IdentityR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a0b4af83f117acde1730954d67aeffd86"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Identity</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Identity" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Identity (no-op) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rx">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rx"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rx"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__RxR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1afbb971dfac9f7d7a427979b049f5c383"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Rx</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rx" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about x axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Ry">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Ry"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Ry"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__RyR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a317ba2c0c15bdc2088415c569cc704be"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Ry</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Ry" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about y axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2CZ">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2CZ"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2CZ"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__CZR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a0c95b9cf9a02d37fa172970ca6d51312"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CZ</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2CZ" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled Z gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rz">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rz"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rz"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__RzR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1aff3c69c54b61335f2791d04ae187ecb7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Rz</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER2Rz" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about z axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Hadamard">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Hadamard"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Hadamard"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__HadamardR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a528a255f4b6272cdf2431a5819370cf2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Hadamard</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER8Hadamard" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Hadamard gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4CNOT">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4CNOT"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4CNOT"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__CNOTR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a48a59e98c889faf45bac5c9a0d61c6b7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CNOT</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4CNOT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled NOT gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1S">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1S"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1S"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__SR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a64fe80f2d4adfed0de41b8e90b6a0141"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1S" title="Permalink to this definition"></a><br /></dt>
+<dd><p>S gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Sdg">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Sdg"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Sdg"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__SdgR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a3cd83623957b5898fd41a2680f8ae0ca"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Sdg</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Sdg" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Inverse S gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1T">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1T"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1T"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__TR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a770c7f49968a34c0a323ca9cf1045281"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1T" title="Permalink to this definition"></a><br /></dt>
+<dd><p>T gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Tdg">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Tdg"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Tdg"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__TdgR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a05ef6ebf442f582b25e0dbfe1af32c17"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Tdg</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER3Tdg" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Inverse T gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1X">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1X"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1X"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__XR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a684774edc46347206b39eae9c5f39d46"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1X" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli X gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Y">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Y"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Y"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__YR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a4dbf0389b7bffbcdcc6f7955804ce39c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Y</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Y" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli Y gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Z">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Z"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Z"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__ZR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a4479b00fdec67a80f3cca59aad96a295"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Z</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1Z" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli Z date. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER6CPhase">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER6CPhase"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER6CPhase"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__CPhaseR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a157f0f88b0c4bda3df90220d23f986d1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CPhase</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER6CPhase" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled phase gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4Swap">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4Swap"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4Swap"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__SwapR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a0aeab17f677190769ee85c9eacc4f137"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Swap</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER4Swap" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Swap the values of two qubits. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1U">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1U"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1U"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__UR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a4fc61cdc050efae79e51bb5a8d1ce37d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">U</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER1U" title="Permalink to this definition"></a><br /></dt>
+<dd><p>General 1-qubit unitary. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER7Measure">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER7Measure"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER7Measure"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::visit__MeasureR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a2faa74a80c2cc3ccf2ae42be6a25cb68"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Measure</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor5visitER7Measure" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Measure a single qubit. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor30QuantumBrillianceRemoteVisitorEKiKb">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor30QuantumBrillianceRemoteVisitorEKiKb"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor30QuantumBrillianceRemoteVisitorEKiKb"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::QuantumBrillianceRemoteVisitor__iC.bC"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1afbd0f760fdd5db5534e8eb654907203b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QuantumBrillianceRemoteVisitor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nQubits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cut_angles</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor30QuantumBrillianceRemoteVisitorEKiKb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitorD0Ev">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitorD0Ev"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitorD0Ev"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::~QuantumBrillianceRemoteVisitor"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a62d984f3cb2f6dafed1c8d9fabc275a9"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~QuantumBrillianceRemoteVisitor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitorD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4xacc7quantum30QuantumBrillianceRemoteVisitor4nameEv">
+<span id="_CPPv3NK4xacc7quantum30QuantumBrillianceRemoteVisitor4nameEv"></span><span id="_CPPv2NK4xacc7quantum30QuantumBrillianceRemoteVisitor4nameEv"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::nameC"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a4bd5e25961c4d11be9c0a79d254a9440"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum30QuantumBrillianceRemoteVisitor4nameEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return name of the visitor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4xacc7quantum30QuantumBrillianceRemoteVisitor11descriptionEv">
+<span id="_CPPv3NK4xacc7quantum30QuantumBrillianceRemoteVisitor11descriptionEv"></span><span id="_CPPv2NK4xacc7quantum30QuantumBrillianceRemoteVisitor11descriptionEv"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::descriptionC"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a416ce10f87dd5ac2f347a99eaa6a5030"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum30QuantumBrillianceRemoteVisitor11descriptionEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return description of the visitor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor4normERKd">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor4normERKd"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor4normERKd"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::norm__doubleCR"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a7edc53ee31b77fd70025f1673b4b3792"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">norm</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor4normERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Normalise angles to the interval (-pi,pi]. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor13getXasmStringEv">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor13getXasmStringEv"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor13getXasmStringEv"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::getXasmString"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1ae5de2db21495c967f4b247420dd451cd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getXasmString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor13getXasmStringEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return the finished qpu OpenQasm kernel. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4xacc7quantum30QuantumBrillianceRemoteVisitor15getTranspiledIREv">
+<span id="_CPPv3NK4xacc7quantum30QuantumBrillianceRemoteVisitor15getTranspiledIREv"></span><span id="_CPPv2NK4xacc7quantum30QuantumBrillianceRemoteVisitor15getTranspiledIREv"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::getTranspiledIRC"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a4853f6693470243bef8185b0b669c636"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTranspiledIR</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum30QuantumBrillianceRemoteVisitor15getTranspiledIREv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieved the IR tree in the basis gate set. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor8nQubits_E">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor8nQubits_E"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor8nQubits_E"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::nQubits___i"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a88ca7e6b38b9c2a27ba1e675f969dabc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nQubits_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor8nQubits_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of qubits. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor20classicalBitCounter_E">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor20classicalBitCounter_E"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor20classicalBitCounter_E"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::classicalBitCounter___unsigned-i"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1aba100f09cb8d2ded5526935b95060277"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">classicalBitCounter_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor20classicalBitCounter_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of classical bit registers to which measurements have been assigned. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor25qubitToClassicalBitIndex_E">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor25qubitToClassicalBitIndex_E"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor25qubitToClassicalBitIndex_E"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::qubitToClassicalBitIndex___std::map:unsigned-i.unsigned-i:"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a5cb4ce71b3a4680ad47154389bd4c896"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qubitToClassicalBitIndex_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor25qubitToClassicalBitIndex_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Map from qubit indices to assigned classical readout bit indices. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor9sequence_E">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor9sequence_E"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor9sequence_E"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::sequence___nlohmann::json"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a57703bcdbd9d5925c599be097464608e"></span><span class="n"><span class="pre">nlohmann</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">json</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sequence_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor9sequence_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>JSON for sequence of gates (XASM format) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor2piE">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor2piE"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor2piE"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::pi__doubleC"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a0791278620cb5bae0dbfae3188796222"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pi</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">constants</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pi</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor2piE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>No point reinventing the circle is there? </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor24restrict_angles_to_pmpi_E">
+<span id="_CPPv3N4xacc7quantum30QuantumBrillianceRemoteVisitor24restrict_angles_to_pmpi_E"></span><span id="_CPPv2N4xacc7quantum30QuantumBrillianceRemoteVisitor24restrict_angles_to_pmpi_E"></span><span id="xacc::quantum::QuantumBrillianceRemoteVisitor::restrict_angles_to_pmpi___b"></span><span class="target" id="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor_1a86363098304fd84b332813ebafb71d8b"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">restrict_angles_to_pmpi_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum30QuantumBrillianceRemoteVisitor24restrict_angles_to_pmpi_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Restrict native gate rotation angles to (-pi,pi]. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqb_1_1vqee_1_1VqeOpt.html" class="btn btn-neutral float-left" title="Class VqeOpt" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" class="btn btn-neutral float-right" title="Enum DefaultAnsatzes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

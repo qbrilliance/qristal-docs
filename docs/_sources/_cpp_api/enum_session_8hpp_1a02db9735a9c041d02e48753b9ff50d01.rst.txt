@@ -1,0 +1,14 @@
+.. _exhale_enum_session_8hpp_1a02db9735a9c041d02e48753b9ff50d01:
+
+Enum source_string_type
+=======================
+
+- Defined in :ref:`file_core_include_qb_core_session.hpp`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: qb::source_string_type
+   :project: My Project

@@ -1,0 +1,66 @@
+
+.. _file_core_include_qb_core_passes_noise_aware_placement_pass.hpp:
+
+File noise_aware_placement_pass.hpp
+===================================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qb_core_passes>` (``core/include/qb/core/passes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qb/core/passes/noise_aware_placement_pass.hpp``)
+---------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``base_pass.hpp`` (:ref:`file_core_include_qb_core_passes_base_pass.hpp`)
+
+- ``memory``
+
+- ``noise_aware_placement_config.hpp`` (:ref:`file_core_include_qb_core_passes_noise_aware_placement_config.hpp`)
+
+- ``optional``
+
+- ``unordered_map``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qb`
+
+- :ref:`namespace_xacc`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqb_1_1noise__aware__placement__pass`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501`
+
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7`
+

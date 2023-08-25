@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Function get_emulator_noise_model &mdash; Quantum SDK  documentation</title>
+  <title>Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;) &mdash; Quantum SDK  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -16,13 +16,15 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Function qb::uniqueBitsQD" href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html" />
-    <link rel="prev" title="Enum JobID" href="enum_case__generator_8hpp_1aaee3be947eeea73bf6b736d8b7eb9821.html" /> 
+    <link rel="next" title="Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)" href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html" />
+    <link rel="prev" title="Function qb::create_initial_state_simplify_pass" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -66,7 +68,18 @@
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#functions">Functions</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="#">Function get_emulator_noise_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1a832ddfffd686829905846c26ac967d11.html">Function emulator_initialize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html">Function get_emulator_noise_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0.html">Function qb::create_circuit_optimizer_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html">Function qb::create_initial_state_simplify_pass</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html">Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a.html">Function qb::create_peephole_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d.html">Function qb::create_remove_redundancies_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f.html">Function qb::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c.html">Function qb::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62.html">Function qb::create_two_qubit_squash_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4.html">Function qb::load_cudaq_backend</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html">Function qb::uniqueBitsQD</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a08ad20c72570d148656273c1a257fdc3.html">Function qb::vqee::ansatzToString</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1adff3b3981e9cbca47fd15b0c1e8f43d0.html">Function qb::vqee::ASWAP_Ansatz</a></li>
@@ -106,9 +119,9 @@
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
-      <li class="breadcrumb-item active">Function get_emulator_noise_model</li>
+      <li class="breadcrumb-item active">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</li>
       <li class="wy-breadcrumbs-aside">
-            <a href="../_sources/_cpp_api/function_emulator_8hpp_1ab0ae8a1bfd54e8b2a4a5ff26284adf3e.rst.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/_cpp_api/function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7.rst.txt" rel="nofollow"> View page source</a>
       </li>
   </ul>
   <hr/>
@@ -116,30 +129,17 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="function-get-emulator-noise-model">
-<span id="exhale-function-emulator-8hpp-1ab0ae8a1bfd54e8b2a4a5ff26284adf3e"></span><h1>Function get_emulator_noise_model<a class="headerlink" href="#function-get-emulator-noise-model" title="Permalink to this headline"></a></h1>
+  <section id="function-qb-create-noise-aware-placement-pass-const-noise-aware-placement-config">
+<span id="exhale-function-noise-aware-placement-pass-8hpp-1ae8555b21703b2f6b3c8fd70083df5bc7"></span><h1>Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)<a class="headerlink" href="#function-qb-create-noise-aware-placement-pass-const-noise-aware-placement-config" title="Permalink to this headline"></a></h1>
 <ul class="simple">
-<li><p>Defined in <a class="reference internal" href="file_emulator_include_qb_emulator_emulator.hpp.html#file-emulator-include-qb-emulator-emulator-hpp"><span class="std std-ref">File emulator.hpp</span></a></p></li>
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#file-core-include-qb-core-passes-noise-aware-placement-pass-hpp"><span class="std std-ref">File noise_aware_placement_pass.hpp</span></a></p></li>
 </ul>
 <section id="function-documentation">
 <h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline"></a></h2>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv424get_emulator_noise_modelPKc">
-<span id="_CPPv324get_emulator_noise_modelPKc"></span><span id="_CPPv224get_emulator_noise_modelPKc"></span><span id="get_emulator_noise_model__cCP"></span><span class="target" id="emulator_8hpp_1ab0ae8a1bfd54e8b2a4a5ff26284adf3e"></span><span class="n"><span class="pre">qb</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classqb_1_1NoiseModel.html#_CPPv4N2qb10NoiseModelE" title="qb::NoiseModel"><span class="n"><span class="pre">NoiseModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_emulator_noise_model</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="p"><span class="pre">*</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv424get_emulator_noise_modelPKc" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Retrieve the emulator noise model object corresponding to to name. </p>
-<p><dl class="simple">
-<dt><strong>Attention</strong></dt><dd><p>The emulator library retains the ownership of the underlying object, i.e., never delete the pointer, but rather making a copy if needed. </p>
-</dd>
-</dl>
-</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>name</strong> – Name of the noise model, e.g., ‘qb-nm1’ or ‘qb-nm2’, etc. </p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>Pointer to the corresponding noise model object. NULL if the name is invalid.</p>
-</dd>
-</dl>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb33create_noise_aware_placement_passERK28noise_aware_placement_config">
+<span id="_CPPv3N2qb33create_noise_aware_placement_passERK28noise_aware_placement_config"></span><span id="_CPPv2N2qb33create_noise_aware_placement_passERK28noise_aware_placement_config"></span><span id="qb::create_noise_aware_placement_pass__noise_aware_placement_configCR"></span><span class="target" id="noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_base__pass_8hpp_1adcd098d6fda3736000880814eb19bb93.html#_CPPv4N2qb11CircuitPassE" title="qb::CircuitPass"><span class="n"><span class="pre">CircuitPass</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">qb</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">create_noise_aware_placement_pass</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html#_CPPv4N2qb28noise_aware_placement_configE" title="qb::noise_aware_placement_config"><span class="n"><span class="pre">noise_aware_placement_config</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">device_info</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb33create_noise_aware_placement_passERK28noise_aware_placement_config" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Factory function to create a <code class="docutils literal notranslate"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html#classqb_1_1noise__aware__placement__pass"><span class="std std-ref"><span class="pre">noise_aware_placement_pass</span></span></a></code> as a generic <code class="docutils literal notranslate"><span class="pre">CircuitPass</span></code> from a user-provided config </p>
 </dd></dl>
 
 </section>
@@ -149,8 +149,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="enum_case__generator_8hpp_1aaee3be947eeea73bf6b736d8b7eb9821.html" class="btn btn-neutral float-left" title="Enum JobID" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html" class="btn btn-neutral float-right" title="Function qb::uniqueBitsQD" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html" class="btn btn-neutral float-left" title="Function qb::create_initial_state_simplify_pass" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html" class="btn btn-neutral float-right" title="Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

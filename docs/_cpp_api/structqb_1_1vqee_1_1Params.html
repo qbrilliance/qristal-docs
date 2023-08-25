@@ -16,13 +16,15 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class CircuitBuilder" href="classqb_1_1CircuitBuilder.html" />
-    <link rel="prev" title="Struct session::run_i_j_config" href="structqb_1_1session_1_1run__i__j__config.html" /> 
+    <link rel="next" title="Struct vqe_iteration_data" href="structqb_1_1vqee_1_1vqe__iteration__data.html" />
+    <link rel="prev" title="Struct run_i_j_config" href="structqb_1_1run__i__j__config.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -64,20 +66,36 @@
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html">Struct NoiseProperties::ReadoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1session_1_1run__i__j__config.html">Struct session::run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
@@ -149,6 +167,18 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params9algorithmE">
+<span id="_CPPv3N2qb4vqee6Params9algorithmE"></span><span id="_CPPv2N2qb4vqee6Params9algorithmE"></span><span id="qb::vqee::Params::algorithm__ss"></span><span class="target" id="structqb_1_1vqee_1_1Params_1a97eeab47bc23546335af948ebe58903c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">algorithm</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;cobyla&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params9algorithmE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>algorithm : sets the classical optimisation algorithm, e.g “nelder-mead”, “cobyla”, “l-bfgs” </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params12extraOptionsE">
+<span id="_CPPv3N2qb4vqee6Params12extraOptionsE"></span><span id="_CPPv2N2qb4vqee6Params12extraOptionsE"></span><span id="qb::vqee::Params::extraOptions__ss"></span><span class="target" id="structqb_1_1vqee_1_1Params_1ae1aca3133a695fdad68aba046d1027cb"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">extraOptions</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params12extraOptionsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>extraOptions : YAML format for options to use with the classical optimiser </p>
+</dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params9toleranceE">
 <span id="_CPPv3N2qb4vqee6Params9toleranceE"></span><span id="_CPPv2N2qb4vqee6Params9toleranceE"></span><span id="qb::vqee::Params::tolerance__double"></span><span class="target" id="structqb_1_1vqee_1_1Params_1af59d169b7c2a9bdf6a111367b72a8ba7"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tolerance</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1E-6</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params9toleranceE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
@@ -167,6 +197,12 @@
 <dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params5thetaE">
 <span id="_CPPv3N2qb4vqee6Params5thetaE"></span><span id="_CPPv2N2qb4vqee6Params5thetaE"></span><span id="qb::vqee::Params::theta__std::vector:double:"></span><span class="target" id="structqb_1_1vqee_1_1Params_1ad62a56a2554dffd0e27de59238776cf1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">theta</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params5thetaE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params13iterationDataE">
+<span id="_CPPv3N2qb4vqee6Params13iterationDataE"></span><span id="_CPPv2N2qb4vqee6Params13iterationDataE"></span><span id="qb::vqee::Params::iterationData__std::vector:vqe_iteration_data:"></span><span class="target" id="structqb_1_1vqee_1_1Params_1a1b4da2b1f6aa3c266eb7e258596406ec"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html#_CPPv4N2qb4vqee18vqe_iteration_dataE" title="qb::vqee::vqe_iteration_data"><span class="n"><span class="pre">vqe_iteration_data</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iterationData</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params13iterationDataE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>iterationData : a structure for per-iteration energy and theta </p>
+</dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params7nQubitsE">
@@ -203,6 +239,48 @@
 <span id="_CPPv3N2qb4vqee6Params11partitionedE"></span><span id="_CPPv2N2qb4vqee6Params11partitionedE"></span><span id="qb::vqee::Params::partitioned__b"></span><span class="target" id="structqb_1_1vqee_1_1Params_1affbf8e4a8e20c9551bf402b633d4e1e4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">partitioned</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params11partitionedE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params9enableVisE">
+<span id="_CPPv3N2qb4vqee6Params9enableVisE"></span><span id="_CPPv2N2qb4vqee6Params9enableVisE"></span><span id="qb::vqee::Params::enableVis__b"></span><span class="target" id="structqb_1_1vqee_1_1Params_1a5595d38e292f113374cff2f9fc99276c"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableVis</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params9enableVisE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>enableVis : when set to true, the vis member will be filled with ASCII bar graphs. These provide a visual cue of the VQE convergence from a text-only interface. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params9showThetaE">
+<span id="_CPPv3N2qb4vqee6Params9showThetaE"></span><span id="_CPPv2N2qb4vqee6Params9showThetaE"></span><span id="qb::vqee::Params::showTheta__b"></span><span class="target" id="structqb_1_1vqee_1_1Params_1a6e68da5353ea9a195cd234eca8f3c2fc"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showTheta</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params9showThetaE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>showTheta : when set to true, selected elements of theta are added to the visualisation </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params11limitThetaNE">
+<span id="_CPPv3N2qb4vqee6Params11limitThetaNE"></span><span id="_CPPv2N2qb4vqee6Params11limitThetaNE"></span><span id="qb::vqee::Params::limitThetaN__s"></span><span class="target" id="structqb_1_1vqee_1_1Params_1a244b03de695da518eba82b5aa5c7f272"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">limitThetaN</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params11limitThetaNE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>limitThetaN : limit to this number of elements of theta to visualise. 0 =&gt; no limit </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params4tailE">
+<span id="_CPPv3N2qb4vqee6Params4tailE"></span><span id="_CPPv2N2qb4vqee6Params4tailE"></span><span id="qb::vqee::Params::tail__s"></span><span class="target" id="structqb_1_1vqee_1_1Params_1af409eac72cead676e6f733b2c2f4e323"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tail</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params4tailE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>tail : visualise the last n=tail iterations only </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params5plainE">
+<span id="_CPPv3N2qb4vqee6Params5plainE"></span><span id="_CPPv2N2qb4vqee6Params5plainE"></span><span id="qb::vqee::Params::plain__b"></span><span class="target" id="structqb_1_1vqee_1_1Params_1ab576351d8b7cd4545957626ee14854e9"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plain</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params5plainE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>plain : when set to true, no colour codes are output in vis </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params7blockedE">
+<span id="_CPPv3N2qb4vqee6Params7blockedE"></span><span id="_CPPv2N2qb4vqee6Params7blockedE"></span><span id="qb::vqee::Params::blocked__b"></span><span class="target" id="structqb_1_1vqee_1_1Params_1aa1ba38e03c7a325e3d9948327e939411"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blocked</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params7blockedE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>blocked : when set to true, all elements in any given iteration are visualised in a single block. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6Params3visE">
+<span id="_CPPv3N2qb4vqee6Params3visE"></span><span id="_CPPv2N2qb4vqee6Params3visE"></span><span id="qb::vqee::Params::vis__ss"></span><span class="target" id="structqb_1_1vqee_1_1Params_1a03278c9cfb11358b2754c8a7a00b0136"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vis</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6Params3visE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>vis : a visualisation of energy and each element of theta, at selected iterations of VQE. </p>
+</dd></dl>
+
 </div>
 </dd></dl>
 
@@ -213,8 +291,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="structqb_1_1session_1_1run__i__j__config.html" class="btn btn-neutral float-left" title="Struct session::run_i_j_config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classqb_1_1CircuitBuilder.html" class="btn btn-neutral float-right" title="Class CircuitBuilder" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="structqb_1_1run__i__j__config.html" class="btn btn-neutral float-left" title="Struct run_i_j_config" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structqb_1_1vqee_1_1vqe__iteration__data.html" class="btn btn-neutral float-right" title="Struct vqe_iteration_data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

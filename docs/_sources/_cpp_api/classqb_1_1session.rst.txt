@@ -6,16 +6,6 @@ Class session
 - Defined in :ref:`file_core_include_qb_core_session.hpp`
 
 
-Nested Relationships
---------------------
-
-
-Nested Types
-************
-
-- :ref:`exhale_struct_structqb_1_1session_1_1run__i__j__config`
-
-
 Class Documentation
 -------------------
 

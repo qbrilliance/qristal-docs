@@ -16,6 +16,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
         <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
@@ -67,8 +69,8 @@
 <li class="toctree-l1"><a class="reference internal" href="quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -190,7 +192,7 @@
 </section>
 <section id="development-guide">
 <h2>Development guide<a class="headerlink" href="#development-guide" title="Permalink to this headline"></a></h2>
-<p>Qristal can either be run <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK/-/blob/main/README.md#docker">directly from the provided Docker image</a>, or <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK">installed from source</a>.  This section provides instructions for working with the source.</p>
+<p>Qristal can either be run <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK/-/blob/main/README.md#docker">directly from the provided Docker image</a>, or <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK">installed from source</a>.  This section provides instructions for working with the source. If using Windows Subsystem for Linux 2, ensure you have Docker Desktop installed <strong>on Windows</strong> and not under your Linux distribution, as it allows Docker to use <a class="reference external" href="https://docs.docker.com/desktop/windows/wsl/">WSL2 as a backend</a>.</p>
 <section id="dependencies">
 <h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h3>
 <p id="required-deps">Installing Qristal from source <strong>requires</strong> the following libraries/packages to be installed:</p>
@@ -241,6 +243,10 @@ make install
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>The <a class="reference internal" href="#required-deps"><span class="std std-ref">required dependencies</span></a> <strong>must</strong> be installed on your system. <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> will not handle those mandatory dependencies.</p>
+</aside>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>MPI is enabled by adding the option <code class="docutils literal notranslate"><span class="pre">-DENABLE_MPI=ON</span></code> to the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> command.</p>
 </aside>
 <ol class="arabic simple" start="2">
 <li><p>Manual Installation of <a class="reference internal" href="#auto-install-deps"><span class="std std-ref">additional dependencies</span></a> (<strong>Advanced</strong>)</p></li>

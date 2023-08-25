@@ -1,4 +1,4 @@
-# Variational Quantum Eigensolver (VQE) in Qristal
+# Variational Quantum Eigensolver (VQE)
 
 ## Example
 
@@ -133,13 +133,59 @@ The following VQE attributes are accepted:
 | `circuitString` | `tvqep.circuitString = '''`<br />`.compiler xasm`<br />`.circuit ansatz`<br />`.parameters theta`<br />`.qbit q`<br />`Ry(q[0], theta);'''` | Defines the [**ansatz**](#ansätze) circuit that<br /> has an associated parameter<br /> [**theta**](#theta). |
 | `pauliString` | `tvqep.pauliString = `<br />`'-1.04235464570829 `<br />`+ 0.18125791479311 X0 `<br />`+ -0.78864539363997 Z0'` | Sets the [Hamiltonian](#hamiltonian). |
 | `nQubits` | `tvqep.nQubits = `<br />`1` | Sets the number of qubits.  <br />This must be consistent <br />with both the `circuitString` and <br />the `pauliString` attributes. |
-| `optimalParameters` | `tvqep.optimalParameters = `<br />`24*[0.11]` | A vector of initial values for <br />ansatz parameters. <br />The length must match the <br />number of ansatz parameters | 
+| `optimalParameters` | `tvqep.optimalParameters = `<br />`24*[0.11]` | A vector of initial values for <br />ansatz parameters. <br />The length must match the <br />number of ansatz parameters. | 
 | `nShots` | `tvqep.nShots = `<br />`128` | Set the number of shots <br />in a single VQE iteration. |
 | `maxIters` | `tvqep.maxIters = `<br />`256` | Sets the upper limit <br />on the number of VQE <br />iterations to run. |
-| `isDeterministic` | `tvqep.isDeterministic = `<br />`True` | When set to `True`,<br /> the expectation values are <br />calculated using linear <br />algebra operations.  <br /><br />When set to `False` the <br />expectation values are <br />calculated from stochastic <br />samples of size `nShots`. |
+| `isDeterministic` | `tvqep.isDeterministic = `<br />`True` | When <br />`acceleratorName = 'qpp'` <br />and <br />`isDeterministic = True`,<br /> the expectation values are <br />calculated using linear <br />algebra operations.  <br /><br />When <br />`isDeterministic = False` <br />the expectation values are <br />calculated from stochastic <br />samples of size `nShots`. |
+| `enableVis` | `tvqep.enableVis = True` | Enable the convergence trace output. <br /><br />  These will be available in <br /> `tvqep.energyVis` (for energy) <br />and <br /> `tvqep.thetaVis` (for ansatz parameters). |
 | `tolerance` | `tvqep.tolerance = `<br />`1e-6` | Sets the function tolerance <br />that is used by the optimizer. |
 | `acceleratorName` | `tvqep.acceleratorName = `<br />`'qpp'` | Selects the back-end that <br />will  perform quantum circuit <br />execution. |
 
+### Setting up the optimization algorithm
+By default, the `cobyla` (gradient-free) algorithm will be used.  Alternative algorithms for driving the optimization can be used, along with extra options that are specific to individual algorithms.  The setup for each algorithm is discussed in the next sections.
+
+**Note**: These previously described attributes also apply to all algorithms below:
+
+* `maxIters`
+* `tolerance`
+* `optimalParameters`
+### Stochastic gradient algorithms
+#### **ADAM [Adaptive Momentum estimator]**
+
+| Attribute | Example | Details |
+| ---- | ---- | ---- |
+| `algorithm` | `tvqep.algorithm = `<br />` "adam"` | Selects the <br /> ADAM algorithm from <br /> the mlpack C++ library. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"stepsize: 0.5"` | Step size for each <br />iteration. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"beta1: 0.7"` | Exponential decay rate for<br /> the first moment estimates. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"beta2: 0.999"` | Exponential decay rate for <br /> the weighted infinity-norm estimates. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"eps: 1.0e-8"` | Mean-squared gradient initial value. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"momentum: 0.05"` | Momentum |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"exactobjective: false"` | ADAM exact objective |
+
+**Note**: `extraOptions` is a YAML string field, so you can for example have all options specified with:
+
+`tvqep.extraOptions = `<br />`"{stepsize: 0.1, beta1: 0.67, beta2: 0.9, momentum: 0.11, exactobjective: true}"`
+
+### Gradient-based algorithms
+#### **L-BFGS**
+
+| Attribute | Example | Details |
+| ---- | ---- | ---- |
+| `algorithm` | `tvqep.algorithm = `<br />` "l-bfgs"` | Selects the <br /> L-BFGS algorithm from <br /> the nlopt C++ library. |
+| `extraOptions` | | Identical to those for [Nelder-Mead](#nelder-mead) below.|
+### Gradient-free algorithms
+#### **Nelder-Mead**
+
+| Attribute | Example | Details |
+| ---- | ---- | ---- |
+| `algorithm` | `tvqep.algorithm = `<br />` "nelder-mead"` | Selects the <br /> Nelder-Mead algorithm from <br /> the nlopt C++ library. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"stopval: -1.05"` | Exits the optimization <br />as soon as the **energy <br />is below this threshold value**. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"lowerbounds: [-0.01, -0.01, -0.01]"` | Imposes  **lower-bounds** <br />on the value of `theta`. <br /><br />The number of elements <br />in the list must <br /> equal the number of <br />elements in `theta`. |
+| `extraOptions` | `tvqep.extraOptions = `<br />`"upperbounds: [0.1, 0.1, 0.1]"` | Imposes  **upper-bounds** <br />on the value of `theta`. <br /><br />The number of elements <br />in the list must <br /> equal the number of <br />elements in `theta`. |
+
+**Note**: `extraOptions` is a YAML string field, so you can for example have all options specified with:
+
+`tvqep.extraOptions = `<br />`"{lowerbounds: [-0.01, -0.01, -0.01], upperbounds: [0.1, 0.1, 0.1], stopval: -1.05}"`
 ### Triggering the VQE execution
 ```python
 qv = qbOpt.VQEE(tvqep)
@@ -151,15 +197,79 @@ The results from a completed VQE execution are available by reading the followin
 | ---- | ---- | ---- |
 | `optimalValue`  |  `tvqep.optimalValue` | The **minimum energy** corresponding to <br />parameters set at the `optimalParameters`. |
 | `optimalParameters` | `tvqep.optimalParameters` | The values for [theta](#theta) corresponding to <br />the minimum energy that VQE <br />has found within `maxIters` iterations. |
+| `iterationData[<index>].energy` | `tvqep.iterationData[8].energy` | The energy at iteration `<index>`. |
+| `iterationData[<index>].params` | `tvqep.iterationData[8].params` | The list of ansatz parameter <br />values at iteration `<index>`. |
+
+### Viewing the convergence trace
+**Note**: set `enableVis = True` prior to calling `run()` in order to generate the trace.
+
+This is available via the `vis` attribute.  The iteration that gave the reported optimum is marked with: `**|`.
+
+Color codes:
+* Red - indicates the optimum iteration
+* Green - indicates an iteration with the same energy as the optimum iteration
+
+**Example output** 
+```text
+Iteration 96
+Energy         |################# -0.95
+Theta
+       Element 0      |####################### 0.33*pi
+       Element 1      |##################### 0.19*pi
+       Element 2      |################### -0.12*pi
+       Element 3      |######################### 0.55*pi
+Iteration 97
+Energy       **|################ -0.98
+Theta
+       Element 0    **|####################### 0.3*pi
+       Element 1    **|##################### 0.19*pi
+       Element 2    **|#################### -0.059*pi
+       Element 3    **|######################### 0.5*pi
+Iteration 98
+Energy         |################# -0.97
+Theta
+       Element 0      |###################### 0.29*pi
+       Element 1      |##################### 0.14*pi
+       Element 2      |#################### 0.061*pi
+       Element 3      |######################### 0.55*pi
+Iteration 99
+Energy         |################ -0.98
+Theta
+       Element 0      |###################### 0.3*pi
+       Element 1      |##################### 0.19*pi
+       Element 2      |#################### -0.071*pi
+       Element 3      |######################## 0.49*pi
+Iteration 100
+Energy         |################# -0.97
+Theta
+       Element 0      |####################### 0.34*pi
+       Element 1      |##################### 0.15*pi
+       Element 2      |#################### -0.048*pi
+       Element 3      |########################## 0.62*pi
+```
+
+### Attributes related to the convergence trace
+Use these attributes to set the amount of information that appears in the convergence trace:
+
+| Attribute | Defaults | Details |
+| ---- | ---- | ---- |
+| `showTheta`  |  `tvqep.showTheta = False` | When set to `True`, <br />the elements of `theta` will <br />be displayed in the <br />convergence trace. |
+| `limitThetaN` | `tvqep.limitThetaN = 0` | Limits the number of <br />elements of `theta` appearing <br />in the trace to this value. <br />If set to 0, this <br />option is ignored.|
+| `tail` | `tvqep.tail = 0` | Output only the last <br />n=tail iterations. <br />If set to 0, this <br />option is ignored.|
+| `plain` | `tvqep.plain = False`| Setting this to `True` removes <br />color coding from the output. |
+| `blocked` | `tvqep.blocked = False`| Setting this to `True` outputs <br />the trace with all elements <br />of `theta` for any given iteration <br />contained in a single block. | 
 
 
-# General information
+## C++ API
+<a href="../_cpp_api/classqb_1_1vqee_1_1VQEE.html">See the class documentation.</a>
+
+## General VQE information
 
 VQE is classified as a **quantum-classical (hybrid) algorithm**. It uses a **classical optimizer** to minimize a **quantum kernel** based objective function. The objective function is usually determined by multiple measurements at each iteration.
 
 VQE finds the **ground state energy** of a physical system characterized by its **Hamiltonian** $H$ which is Hermitian. See [[Peruzzo et al. 2013](https://arxiv.org/abs/1304.3061), [O'Malley et al. 2015](https://arxiv.org/abs/1512.06860)] for details.
 
-## Quantum kernels in Qristal
+### Quantum kernels in Qristal
 In this section, the components that make up a quantum kernel are described in more detail.
 
 ### Hamiltonian
@@ -289,9 +399,6 @@ For example, an $H_2$ molecule with an atomic distance of 0.735 angstroms (Å) c
 ❗ **Important:** the default unit for coordinates is **angstroms**. 
 
 By default, Qristal uses the [sto-3g](https://en.wikipedia.org/wiki/STO-nG_basis_sets) basis set and the Jordan-Wigner fermion-to-qubit mapping.
-
-## C++ API
-<a href="../_cpp_api/classqb_1_1vqee_1_1VQEE.html">See the class documentation.</a>
 
 ## How to make function calls for a Python-level optimizer?
 

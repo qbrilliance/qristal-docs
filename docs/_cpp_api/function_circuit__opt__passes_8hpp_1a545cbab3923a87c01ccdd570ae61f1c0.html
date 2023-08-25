@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function qb::create_circuit_optimizer_pass &mdash; Quantum SDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function qb::create_initial_state_simplify_pass" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html" />
+    <link rel="prev" title="Function get_emulator_noise_model" href="function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Quantum SDK
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1a832ddfffd686829905846c26ac967d11.html">Function emulator_initialize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html">Function get_emulator_noise_model</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Function qb::create_circuit_optimizer_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html">Function qb::create_initial_state_simplify_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7.html">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html">Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a.html">Function qb::create_peephole_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d.html">Function qb::create_remove_redundancies_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f.html">Function qb::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c.html">Function qb::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62.html">Function qb::create_two_qubit_squash_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4.html">Function qb::load_cudaq_backend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html">Function qb::uniqueBitsQD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a08ad20c72570d148656273c1a257fdc3.html">Function qb::vqee::ansatzToString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1adff3b3981e9cbca47fd15b0c1e8f43d0.html">Function qb::vqee::ASWAP_Ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aed80dd6f9a61668d77c063809aaa2c22.html">Function qb::vqee::getEnumFromName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a6dea9fe524c91c7760109f31ab0b16e6.html">Function qb::vqee::getEnumName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a7dd55957c4e1ef794005337f4593ec00.html">Function qb::vqee::HEA_Ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aae8c884195ff76956afd9e51a51c6d00.html">Function qb::vqee::HEA_String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a9a437083d766e5c39c94122350681453.html">Function qb::vqee::hydrogenChainGeometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1af6e4d554405a672a83c459cf21f9561a.html">Function qb::vqee::makeJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vqee_8hpp_1a81b4b76a197b6eac3799adb0e74c4bc4.html">Template Function qb::vqee::operator&lt;&lt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a1cb5b92bb9f966f0e8a9c7efc11317cd.html">Function qb::vqee::pauliStringFromGeometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1abb94ed5b62f182939b94008f126534f3.html">Function qb::vqee::setAnsatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aa7b9e09bde9c753bebc04a7039511ee1.html">Function qb::vqee::stringToAnsatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a8da7c8fc0dd5137d50b551fa883350a9.html">Function qb::vqee::UCCSD_Ansatz</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Quantum SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Function qb::create_circuit_optimizer_pass</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-qb-create-circuit-optimizer-pass">
+<span id="exhale-function-circuit-opt-passes-8hpp-1a545cbab3923a87c01ccdd570ae61f1c0"></span><h1>Function qb::create_circuit_optimizer_pass<a class="headerlink" href="#function-qb-create-circuit-optimizer-pass" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#file-core-include-qb-core-passes-circuit-opt-passes-hpp"><span class="std std-ref">File circuit_opt_passes.hpp</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb29create_circuit_optimizer_passEv">
+<span id="_CPPv3N2qb29create_circuit_optimizer_passEv"></span><span id="_CPPv2N2qb29create_circuit_optimizer_passEv"></span><span id="qb::create_circuit_optimizer_pass"></span><span class="target" id="circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="typedef_base__pass_8hpp_1adcd098d6fda3736000880814eb19bb93.html#_CPPv4N2qb11CircuitPassE" title="qb::CircuitPass"><span class="n"><span class="pre">CircuitPass</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">qb</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">create_circuit_optimizer_pass</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb29create_circuit_optimizer_passEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pattern-based circuit optimization pass. </p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html" class="btn btn-neutral float-left" title="Function get_emulator_noise_model" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html" class="btn btn-neutral float-right" title="Function qb::create_initial_state_simplify_pass" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

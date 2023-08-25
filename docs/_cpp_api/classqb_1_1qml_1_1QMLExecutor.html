@@ -16,6 +16,8 @@
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
@@ -53,8 +55,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE) in Qristal</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html#general-information">General information</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -64,20 +66,36 @@
 <li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
 <li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties_1_1ReadoutError.html">Struct NoiseProperties::ReadoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1session_1_1run__i__j__config.html">Struct session::run_i_j_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsNLO.html">Class LbfgsNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
@@ -253,6 +271,82 @@
 <span id="_CPPv3N2qb3qml11QMLExecutor3accE"></span><span id="_CPPv2N2qb3qml11QMLExecutor3accE"></span><span id="qb::qml::QMLExecutor::acc__ss"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a09ba0a8d2a72e581f2f129d43db02ce4"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">acc</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;aer&quot;</span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor3accE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>The currently defined accelerator (defaults to “aer”). Valid settings: “aer” | “tnqvm” | “qpp”. </p>
 </dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor17getStatsFromShotsENSt3mapINSt6stringEiEE">
+<span id="_CPPv3N2qb3qml11QMLExecutor17getStatsFromShotsENSt3mapINSt6stringEiEE"></span><span id="_CPPv2N2qb3qml11QMLExecutor17getStatsFromShotsENSt3mapINSt6stringEiEE"></span><span id="qb::qml::QMLExecutor::getStatsFromShots__std::map:ss.i:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a97eeee6624ee8d3aa0d52551355ff840"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getStatsFromShots</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">shotsDict</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor17getStatsFromShotsENSt3mapINSt6stringEiEE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor20gradientTypeToStringEv">
+<span id="_CPPv3N2qb3qml11QMLExecutor20gradientTypeToStringEv"></span><span id="_CPPv2N2qb3qml11QMLExecutor20gradientTypeToStringEv"></span><span id="qb::qml::QMLExecutor::gradientTypeToString"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a8aad3742803cfda3043c399092500e25"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gradientTypeToString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor20gradientTypeToStringEv" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor14targetCircuit_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor14targetCircuit_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor14targetCircuit_E"></span><span id="qb::qml::QMLExecutor::targetCircuit___ParamCirc"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1ad7ec597b083f02b94888c51d96397312"></span><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCircE" title="qb::qml::ParamCirc"><span class="n"><span class="pre">ParamCirc</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">targetCircuit_</span></span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor14targetCircuit_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor5seed_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor5seed_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor5seed_E"></span><span id="qb::qml::QMLExecutor::seed___i"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a55f49b9a501f9f9df9e37e381d9d75b1"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seed_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="o"><span class="pre">-</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor5seed_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor7seeded_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor7seeded_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor7seeded_E"></span><span id="qb::qml::QMLExecutor::seeded___b"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1abe070159e15017429713cee95c773949"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seeded_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor7seeded_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor9numShots_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor9numShots_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor9numShots_E"></span><span id="qb::qml::QMLExecutor::numShots___std::s"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a95a091194349e4891ca860b1093e8e92"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">numShots_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1024</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor9numShots_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor11accPointer_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor11accPointer_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor11accPointer_E"></span><span id="qb::qml::QMLExecutor::accPointer___std::shared_ptr:xacc::Accelerator:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a99c7705f20588c5f49691373493ffc09"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accPointer_</span></span></span><span class="p"><span class="pre">{</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">getAccelerator</span></span><span class="p"><span class="pre">(</span></span><span class="s"><span class="pre">&quot;aer&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;shots&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">(</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">)</span></span><a class="reference internal" href="#_CPPv4N2qb3qml11QMLExecutor9numShots_E" title="qb::qml::QMLExecutor::numShots_"><span class="n"><span class="pre">numShots_</span></span></a><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor11accPointer_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor15inputParamVals_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor15inputParamVals_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor15inputParamVals_E"></span><span id="qb::qml::QMLExecutor::inputParamVals___std::vector:double:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a3850804fba145eccc06f4645bc8d95e0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">inputParamVals_</span></span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor15inputParamVals_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor16weightParamVals_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor16weightParamVals_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor16weightParamVals_E"></span><span id="qb::qml::QMLExecutor::weightParamVals___std::vector:double:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a861a88aa7aa29f3d9fae90e608288b40"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">weightParamVals_</span></span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor16weightParamVals_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor13outputBuffer_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor13outputBuffer_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor13outputBuffer_E"></span><span id="qb::qml::QMLExecutor::outputBuffer___std::shared_ptr:xacc::AcceleratorBuffer:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1abf81f7b45cd156715ec2df9a88b0cbe8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">outputBuffer_</span></span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor13outputBuffer_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor15gradientBuffer_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor15gradientBuffer_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor15gradientBuffer_E"></span><span id="qb::qml::QMLExecutor::gradientBuffer___std::shared_ptr:xacc::AcceleratorBuffer:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a3cb110717585e8b2de263cc2d9c298bf"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gradientBuffer_</span></span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor15gradientBuffer_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor12observables_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor12observables_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor12observables_E"></span><span id="qb::qml::QMLExecutor::observables___std::shared_ptr:xacc::Observable:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1af404f0586fe828860c6591f388a7a29d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Observable</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">observables_</span></span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor12observables_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor13gradientType_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor13gradientType_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor13gradientType_E"></span><span id="qb::qml::QMLExecutor::gradientType___GradientTypes"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a50fc5a875d49b1d7b3191497b6075262"></span><a class="reference internal" href="enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html#_CPPv4N2qb3qml13GradientTypesE" title="qb::qml::GradientTypes"><span class="n"><span class="pre">GradientTypes</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gradientType_</span></span></span><span class="p"><span class="pre">{</span></span><a class="reference internal" href="enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html#_CPPv4N2qb3qml13GradientTypesE" title="qb::qml::GradientTypes"><span class="n"><span class="pre">GradientTypes</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html#_CPPv4N2qb3qml13GradientTypes15parameter_shiftE" title="qb::qml::GradientTypes::parameter_shift"><span class="n"><span class="pre">parameter_shift</span></span></a><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor13gradientType_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb3qml11QMLExecutor15gradientMethod_E">
+<span id="_CPPv3N2qb3qml11QMLExecutor15gradientMethod_E"></span><span id="_CPPv2N2qb3qml11QMLExecutor15gradientMethod_E"></span><span id="qb::qml::QMLExecutor::gradientMethod___std::shared_ptr:xacc::AlgorithmGradientStrategy:"></span><span class="target" id="classqb_1_1qml_1_1QMLExecutor_1a1707ef1029901896863c3a911a8c703b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AlgorithmGradientStrategy</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gradientMethod_</span></span></span><a class="headerlink" href="#_CPPv4N2qb3qml11QMLExecutor15gradientMethod_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
 
 </div>
 </dd></dl>
