@@ -15,10 +15,9 @@ Base Type
 - ``public qb::vqee::VqeOpt`` (:ref:`exhale_class_classqb_1_1vqee_1_1VqeOpt`)
 
 
-Derived Types
-*************
+Derived Type
+************
 
-- ``public qb::vqee::LbfgsNLO`` (:ref:`exhale_class_classqb_1_1vqee_1_1LbfgsNLO`)
 - ``public qb::vqee::NelderMeadNLO`` (:ref:`exhale_class_classqb_1_1vqee_1_1NelderMeadNLO`)
 
 

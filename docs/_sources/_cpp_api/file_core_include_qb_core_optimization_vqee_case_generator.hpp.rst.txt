@@ -73,7 +73,9 @@ Classes
 
 - :ref:`exhale_class_classqb_1_1vqee_1_1AdamMLP`
 
-- :ref:`exhale_class_classqb_1_1vqee_1_1LbfgsNLO`
+- :ref:`exhale_class_classqb_1_1vqee_1_1CmaesMLP`
+
+- :ref:`exhale_class_classqb_1_1vqee_1_1LbfgsMLP`
 
 - :ref:`exhale_class_classqb_1_1vqee_1_1NelderMeadNLO`
 

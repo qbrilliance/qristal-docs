@@ -108,7 +108,7 @@
 <h2>Using Qristal<a class="headerlink" href="#using-qristal" title="Permalink to this headline"></a></h2>
 <section class="tex2jax_ignore mathjax_ignore" id="quickstart">
 <h3>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h3>
-<p>The fastest way to get a working Qristal installation is to <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK/-/blob/main/README.md#docker">run it directly from the provided Docker image</a>.</p>
+<p>The fastest way to get a working Qristal installation is to <a class="reference external" href="https://github.com/qbrilliance/qristal#docker">run it directly from the provided Docker image</a>.</p>
 <p>To learn how to use Qristal, let’s run a simple Python example to create a Bell state.</p>
 <p>The Bell state is the simplest example of a maximally entangled state, and comprises just 2 qubits. These 2 qubits contribute a Hilbert space of dimension 4. In the qubit basis <span class="math notranslate nohighlight">\(\ket{0}\)</span> and <span class="math notranslate nohighlight">\(\ket{1}\)</span>, these four components are written as
 <div class="math notranslate nohighlight">
@@ -192,7 +192,7 @@
 </section>
 <section id="development-guide">
 <h2>Development guide<a class="headerlink" href="#development-guide" title="Permalink to this headline"></a></h2>
-<p>Qristal can either be run <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK/-/blob/main/README.md#docker">directly from the provided Docker image</a>, or <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK">installed from source</a>.  This section provides instructions for working with the source. If using Windows Subsystem for Linux 2, ensure you have Docker Desktop installed <strong>on Windows</strong> and not under your Linux distribution, as it allows Docker to use <a class="reference external" href="https://docs.docker.com/desktop/windows/wsl/">WSL2 as a backend</a>.</p>
+<p>Qristal can either be run <a class="reference external" href="https://github.com/qbrilliance/qristal#docker">directly from the provided Docker image</a>, or <a class="reference external" href="https://github.com/qbrilliance/qristal">installed from source</a>.  This section provides instructions for working with the source. If using Windows Subsystem for Linux 2, ensure you have Docker Desktop installed <strong>on Windows</strong> and not under your Linux distribution, as it allows Docker to use <a class="reference external" href="https://docs.docker.com/desktop/windows/wsl/">WSL2 as a backend</a>.</p>
 <section id="dependencies">
 <h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h3>
 <p id="required-deps">Installing Qristal from source <strong>requires</strong> the following libraries/packages to be installed:</p>
@@ -206,7 +206,7 @@
 <li><p><a class="reference external" href="https://www.boost.org/">Boost</a> &gt;= 1.71</p></li>
 <li><p><a class="reference external" href="https://curl.se/">libcurl</a></p></li>
 </ul>
-<p>Also, note that Qristal will be built with support for CUDA Quantum if and only if cmake detects that your system has a compatible CUDA Quantum installation. A shortcut is to run Qristal directly from <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/QBSDK/-/blob/main/README.md#docker">the Docker image that we provide with a compatible version of CUDA Quantum already installed</a>.</p>
+<p>Also, note that Qristal will be built with support for CUDA Quantum if and only if cmake detects that your system has a compatible CUDA Quantum installation. A shortcut is to run Qristal directly from <a class="reference external" href="https://github.com/qbrilliance/qristal#docker">the Docker image that we provide with a compatible version of CUDA Quantum already installed</a>.</p>
 <p id="auto-install-deps">Additional dependencies that can be installed automatically at build time:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/eclipse/xacc">XACC</a></p></li>
@@ -232,7 +232,7 @@
 <ol class="arabic simple">
 <li><p>For development purposes, it is <strong>recommended</strong> to install Qristal using <em>automatic dependency installation</em> mode.</p></li>
 </ol>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://gitlab.com/qbau/software-and-apps/public/qbsdk.git qristal
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/qbrilliance/qristal.git qristal
 <span class="nb">cd</span> qristal
 mkdir build <span class="o">&amp;&amp;</span> <span class="nb">cd</span> build
 cmake .. -DINSTALL_MISSING<span class="o">=</span>ON
@@ -275,12 +275,12 @@ we value contributions in all shapes and sizes!</p>
 <li><p><strong>Asking Questions</strong></p></li>
 </ol>
 <p>Have a question? Some concepts are hard-to-understand?</p>
-<p>Please feel free to file an issue to ask your questions <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/qbsdk/-/issues/new">here</a>.</p>
+<p>Please feel free to file an issue to ask your questions <a class="reference external" href="https://github.com/qbrilliance/qristal/issues/new/choose">here</a>.</p>
 <p>Your question will serve as resource to others searching for help.</p>
 <ol class="arabic simple" start="2">
 <li><p><strong>Reporting and/or Commenting on Issues</strong></p></li>
 </ol>
-<p>If you have feedback about Qristal, please let us know by filing a <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/qbsdk/-/issues/new">new issue</a>!</p>
+<p>If you have feedback about Qristal, please let us know by filing a <a class="reference external" href="https://github.com/qbrilliance/qristal/issues/new/choose">new issue</a>!</p>
 <p>When filing a bug report, please follow the below template:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># [Title]</span>
 <span class="n">A</span><span class="w"> </span><span class="n">concise</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">specific</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">bug</span><span class="p">.</span><span class="w"></span>
@@ -305,25 +305,25 @@ we value contributions in all shapes and sizes!</p>
 <span class="o">-</span><span class="w"> </span><span class="n">Operating</span><span class="w"> </span><span class="n">system</span><span class="o">:</span><span class="w"></span>
 </pre></div>
 </div>
-<p>We also encourage you to look at the list of currently <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/qbsdk/-/issues">open issues</a> to share your ideas and expertise.</p>
+<p>We also encourage you to look at the list of currently <a class="reference external" href="https://github.com/qbrilliance/qristal/issues">open issues</a> to share your ideas and expertise.</p>
 <ol class="arabic simple" start="3">
 <li><p><strong>Contributing Code</strong></p></li>
 </ol>
-<p>Before submitting a <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/public/qbsdk/-/merge_requests/new">new merge request</a>, please make sure the following is done:</p>
+<p>Before submitting a <a class="reference external" href="https://github.com/qbrilliance/qristal/pulls">new pull request</a>, please make sure the following is done:</p>
 <ul class="simple">
 <li><p><strong>New features should include a unit test.</strong> If you’ve fixed a bug or added
 code that should be tested, add a test to the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory.</p></li>
 <li><p><strong>Ensure that the test suite passes</strong>, e.g., by running <code class="docutils literal notranslate"><span class="pre">ctest</span></code>. This will also be checked by our CI when the MR is submitted.</p></li>
 </ul>
-<p>When ready, submit your fork as a <a class="reference external" href="https://docs.gitlab.com/ee/user/project/merge_requests/getting_started.html">merge request</a>
-to the QB GitLab repository, filling out the merge request form.</p>
+<p>When ready, submit your fork as a <a class="reference external" href="https://docs.github.com/articles/using-pull-requests">pull request</a>
+to the QB GitHub repository, filling out the pull request form.</p>
 <ul class="simple">
-<li><p>When describing the merge request, please include as much detail as possible
+<li><p>When describing the pull request, please include as much detail as possible
 regarding the changes made/new features added/performance improvements. If including any
 bug fixes, mention the issue numbers associated with the bugs.</p></li>
-<li><p>Once you have submitted the merge request, the <strong>CI pipeline</strong> will automatically run to ensure that all tests continue to pass.</p></li>
+<li><p>Once you have submitted the pull request, the <strong>CI pipeline</strong> will automatically run to ensure that all tests continue to pass.</p></li>
 </ul>
-<p>We may ask for changes to a merge request if it requires more documentation or unit tests to better make use of it.</p>
+<p>We may ask for changes to a pull request if it requires more documentation or unit tests to better make use of it.</p>
 <p>Last but not least, <strong>thank you</strong> for taking the time to contribute.</p>
 </section>
 </section>
