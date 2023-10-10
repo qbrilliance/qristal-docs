@@ -58,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="qml.html">Quantum Machine Learning (QML)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nextflow.html">Nextflow</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -361,6 +362,58 @@ Must begin with the prefix: “amazon-braket-”</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="core.session.initial_bond_dimension">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_bond_dimension</span></span><a class="headerlink" href="#core.session.initial_bond_dimension" title="Permalink to this definition"></a></dt>
+<dd><p>initial_bond_dimension:</p>
+<p>Set the initial bond dimension (MPS simulator). The single setting applies globally.</p>
+<p>initial_bond_dimensions:</p>
+<p>A 1d-array (list) version of initial_bond_dimension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.initial_bond_dimensions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_bond_dimensions</span></span><a class="headerlink" href="#core.session.initial_bond_dimensions" title="Permalink to this definition"></a></dt>
+<dd><p>initial_bond_dimension:</p>
+<p>Set the initial bond dimension (MPS simulator). The single setting applies globally.</p>
+<p>initial_bond_dimensions:</p>
+<p>A 1d-array (list) version of initial_bond_dimension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.initial_kraus_dimension">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_kraus_dimension</span></span><a class="headerlink" href="#core.session.initial_kraus_dimension" title="Permalink to this definition"></a></dt>
+<dd><p>initial_kraus_dimension:</p>
+<p>Set the initial kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>initial_kraus_dimensions:</p>
+<p>A 1d-array (list) version of initial_kraus_dimension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.initial_kraus_dimensions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_kraus_dimensions</span></span><a class="headerlink" href="#core.session.initial_kraus_dimensions" title="Permalink to this definition"></a></dt>
+<dd><p>initial_kraus_dimension:</p>
+<p>Set the initial kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>initial_kraus_dimensions:</p>
+<p>A 1d-array (list) version of initial_kraus_dimension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="core.session.instring">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instring</span></span><a class="headerlink" href="#core.session.instring" title="Permalink to this definition"></a></dt>
 <dd><p>instring:</p>
@@ -472,6 +525,32 @@ Must begin with the prefix: “amazon-braket-”</p>
 <p>Set the maximum bond dimension (MPS simulator). The single setting applies globally.</p>
 <p>max_bond_dimensions:</p>
 <p>A 1d-array (list) version of max_bond_dimension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.max_kraus_dimension">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_kraus_dimension</span></span><a class="headerlink" href="#core.session.max_kraus_dimension" title="Permalink to this definition"></a></dt>
+<dd><p>max_kraus_dimension:</p>
+<p>Set the maximum kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>max_kraus_dimensions:</p>
+<p>A 1d-array (list) version of max_kraus_dimension.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.max_kraus_dimensions">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_kraus_dimensions</span></span><a class="headerlink" href="#core.session.max_kraus_dimensions" title="Permalink to this definition"></a></dt>
+<dd><p>max_kraus_dimension:</p>
+<p>Set the maximum kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>max_kraus_dimensions:</p>
+<p>A 1d-array (list) version of max_kraus_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
@@ -672,21 +751,21 @@ of the NoiseModel class:</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_count">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_count</span></span><a class="headerlink" href="#core.session.out_count" title="Permalink to this definition"></a></dt>
-<dd><p>out_count:</p>
-<p>After calling session.run(), the counts from running sn shots are stored in session.out_count, using a dictionary where the keys are state label bits interpreted as BCD (MSB format).</p>
-<p>out_counts:</p>
-<p>A 1d-array (list) version of session.out_count.</p>
+<dt class="sig sig-object py" id="core.session.out_bitstring">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_bitstring</span></span><a class="headerlink" href="#core.session.out_bitstring" title="Permalink to this definition"></a></dt>
+<dd><p>out_bitstring:</p>
+<p>After calling session.run(), the counts from running sn shots are stored in session.out_bitstring, using a dictionary where the keys are state label bits.</p>
+<p>out_bitstrings:</p>
+<p>A 1d-array (list) version of session.out_bitstring.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_counts">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_counts</span></span><a class="headerlink" href="#core.session.out_counts" title="Permalink to this definition"></a></dt>
-<dd><p>out_count:</p>
-<p>After calling session.run(), the counts from running sn shots are stored in session.out_count, using a dictionary where the keys are state label bits interpreted as BCD (MSB format).</p>
-<p>out_counts:</p>
-<p>A 1d-array (list) version of session.out_count.</p>
+<dt class="sig sig-object py" id="core.session.out_bitstrings">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_bitstrings</span></span><a class="headerlink" href="#core.session.out_bitstrings" title="Permalink to this definition"></a></dt>
+<dd><p>out_bitstring:</p>
+<p>After calling session.run(), the counts from running sn shots are stored in session.out_bitstring, using a dictionary where the keys are state label bits.</p>
+<p>out_bitstrings:</p>
+<p>A 1d-array (list) version of session.out_bitstring.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1015,6 +1094,32 @@ Default: “swap-shortest-path”</p>
 <p>Circuit depth of the random circuit to use as input. The single setting applies globally.</p>
 <p>randoms:</p>
 <p>A 1d-array (list) version of random.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.rel_svd_cutoff">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rel_svd_cutoff</span></span><a class="headerlink" href="#core.session.rel_svd_cutoff" title="Permalink to this definition"></a></dt>
+<dd><p>rel_svd_cutoff:</p>
+<p>Set the relative SVD cutoff threshold value (MPS simulator). The single setting applies globally.</p>
+<p>rel_svd_cutoffs:</p>
+<p>A 1d-array (list) version of rel_svd_cutoff.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.rel_svd_cutoffs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rel_svd_cutoffs</span></span><a class="headerlink" href="#core.session.rel_svd_cutoffs" title="Permalink to this definition"></a></dt>
+<dd><p>rel_svd_cutoff:</p>
+<p>Set the relative SVD cutoff threshold value (MPS simulator). The single setting applies globally.</p>
+<p>rel_svd_cutoffs:</p>
+<p>A 1d-array (list) version of rel_svd_cutoff.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+</aside>
 </dd></dl>
 
 <dl class="py method">

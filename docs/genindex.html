@@ -54,6 +54,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/qml.html">Quantum Machine Learning (QML)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/nextflow.html">Nextflow</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -315,10 +316,18 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.session.infiles">infiles (core.session property)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.session.instring">instring (core.session property)</a>
+      <li><a href="rst/python_autodoc.html#core.session.initial_bond_dimension">initial_bond_dimension (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.initial_bond_dimensions">initial_bond_dimensions (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.initial_kraus_dimension">initial_kraus_dimension (core.session property)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rst/python_autodoc.html#core.session.initial_kraus_dimensions">initial_kraus_dimensions (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.instring">instring (core.session property)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.session.instrings">instrings (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.inverse_circuit">inverse_circuit() (core.Circuit method)</a>
@@ -361,8 +370,12 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.session.max_bond_dimensions">max_bond_dimensions (core.session property)</a>
 </li>
+      <li><a href="rst/python_autodoc.html#core.session.max_kraus_dimension">max_kraus_dimension (core.session property)</a>
+</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rst/python_autodoc.html#core.session.max_kraus_dimensions">max_kraus_dimensions (core.session property)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.Circuit.mcx">mcx() (core.Circuit method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.measure">measure() (core.Circuit method)</a>
@@ -433,9 +446,9 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rst/python_autodoc.html#core.Circuit.openqasm">openqasm() (core.Circuit method)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.session.out_count">out_count (core.session property)</a>
+      <li><a href="rst/python_autodoc.html#core.session.out_bitstring">out_bitstring (core.session property)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.session.out_counts">out_counts (core.session property)</a>
+      <li><a href="rst/python_autodoc.html#core.session.out_bitstrings">out_bitstrings (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.session.out_divergence">out_divergence (core.session property)</a>
 </li>
@@ -753,9 +766,17 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator10initializeERKN4xacc16HeterogeneousMapE">qb::MpsAccelerator::initialize (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator26m_abs_truncation_thresholdE">qb::MpsAccelerator::m_abs_truncation_threshold (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator18m_initial_bond_dimE">qb::MpsAccelerator::m_initial_bond_dim (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator14m_max_bond_dimE">qb::MpsAccelerator::m_max_bond_dim (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator13m_noise_modelE">qb::MpsAccelerator::m_noise_model (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator10m_num_gpusE">qb::MpsAccelerator::m_num_gpus (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator26m_rel_truncation_thresholdE">qb::MpsAccelerator::m_rel_truncation_threshold (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator7m_shotsE">qb::MpsAccelerator::m_shots (C++ member)</a>
 </li>
@@ -1115,7 +1136,13 @@
 </li>
       <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config24init_contrast_thresholdsE">qb::run_i_j_config::init_contrast_thresholds (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config18initial_bond_tnqvmE">qb::run_i_j_config::initial_bond_tnqvm (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config19initial_kraus_tnqvmE">qb::run_i_j_config::initial_kraus_tnqvm (C++ member)</a>
+</li>
       <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config14max_bond_tnqvmE">qb::run_i_j_config::max_bond_tnqvm (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config15max_kraus_tnqvmE">qb::run_i_j_config::max_kraus_tnqvm (C++ member)</a>
 </li>
       <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config11no_optimiseE">qb::run_i_j_config::no_optimise (C++ member)</a>
 </li>
@@ -1142,6 +1169,8 @@
       <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config24qpu_config_json_filepathE">qb::run_i_j_config::qpu_config_json_filepath (C++ member)</a>
 </li>
       <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config25qubit_contrast_thresholdsE">qb::run_i_j_config::qubit_contrast_thresholds (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config20rel_svd_cutoff_tnqvmE">qb::run_i_j_config::rel_svd_cutoff_tnqvm (C++ member)</a>
 </li>
       <li><a href="_cpp_api/structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_config14simulator_seedE">qb::run_i_j_config::simulator_seed (C++ member)</a>
 </li>
@@ -1249,19 +1278,23 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session28get_init_contrast_thresholdsEv">qb::session::get_init_contrast_thresholds (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session27get_initial_bond_dimensionsEv">qb::session::get_initial_bond_dimensions (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session28get_initial_kraus_dimensionsEv">qb::session::get_initial_kraus_dimensions (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session13get_instringsEv">qb::session::get_instrings (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session15get_irtarget_msEv">qb::session::get_irtarget_ms (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18get_jensen_shannonERK6size_tRK6size_t">qb::session::get_jensen_shannon (C++ function)</a>, <a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18get_jensen_shannonEv">[1]</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4I00EN2qb7session29get_jensen_shannon_divergenceEdRKNSt3mapI2TQiEERK2TP">qb::session::get_jensen_shannon_divergence (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4I0EN2qb7session7get_keyEiRKNSt4pairIKi2TVEE">qb::session::get_key (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session29get_jensen_shannon_divergenceERKNSt3mapINSt6stringEiEERKNSt3mapINSt6stringENSt7complexIdEEEE">qb::session::get_jensen_shannon_divergence (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session16get_log_enabledsEv">qb::session::get_log_enableds (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session23get_max_bond_dimensionsEv">qb::session::get_max_bond_dimensions (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session24get_max_kraus_dimensionsEv">qb::session::get_max_kraus_dimensions (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session21get_noise_mitigationsEv">qb::session::get_noise_mitigations (C++ function)</a>
 </li>
@@ -1277,7 +1310,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session13get_notimingsEv">qb::session::get_notimings (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session14get_out_countsEv">qb::session::get_out_counts (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session18get_out_bitstringsEv">qb::session::get_out_bitstrings (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session19get_out_divergencesEv">qb::session::get_out_divergences (C++ function)</a>
 </li>
@@ -1303,8 +1336,6 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session14get_placementsEv">qb::session::get_placements (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4I0EN2qb7session15get_probabilityEdRK2TT">qb::session::get_probability (C++ function)</a>
-</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session7get_qnsEv">qb::session::get_qns (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session15get_qpu_configsEv">qb::session::get_qpu_configs (C++ function)</a>
@@ -1315,6 +1346,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session11get_randomsEv">qb::session::get_randoms (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session19get_rel_svd_cutoffsEv">qb::session::get_rel_svd_cutoffs (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session7get_rnsEv">qb::session::get_rns (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session14get_run_configE6size_t6size_t">qb::session::get_run_config (C++ function)</a>
@@ -1323,8 +1356,6 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11get_sim_qpuERK14run_i_j_config">qb::session::get_sim_qpu (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session7get_snsEv">qb::session::get_sns (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session11get_summaryEv">qb::session::get_summary (C++ function)</a>
@@ -1337,6 +1368,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session33get_use_default_contrast_settingsEv">qb::session::get_use_default_contrast_settings (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session9get_xasmsEv">qb::session::get_xasms (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session7getNameEv">qb::session::getName (C++ function)</a>
@@ -1367,6 +1400,10 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session30help_init_contrast_thresholds_E">qb::session::help_init_contrast_thresholds_ (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session29help_initial_bond_dimensions_E">qb::session::help_initial_bond_dimensions_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session30help_initial_kraus_dimensions_E">qb::session::help_initial_kraus_dimensions_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15help_instrings_E">qb::session::help_instrings_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session17help_irtarget_ms_E">qb::session::help_irtarget_ms_ (C++ member)</a>
@@ -1374,6 +1411,8 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18help_log_enableds_E">qb::session::help_log_enableds_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session25help_max_bond_dimensions_E">qb::session::help_max_bond_dimensions_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session26help_max_kraus_dimensions_E">qb::session::help_max_kraus_dimensions_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23help_noise_mitigations_E">qb::session::help_noise_mitigations_ (C++ member)</a>
 </li>
@@ -1389,7 +1428,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15help_notimings_E">qb::session::help_notimings_ (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session16help_out_counts_E">qb::session::help_out_counts_ (C++ member)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20help_out_bitstrings_E">qb::session::help_out_bitstrings_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21help_out_divergences_E">qb::session::help_out_divergences_ (C++ member)</a>
 </li>
@@ -1425,6 +1464,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session13help_randoms_E">qb::session::help_randoms_ (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21help_rel_svd_cutoffs_E">qb::session::help_rel_svd_cutoffs_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session9help_rns_E">qb::session::help_rns_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11help_seeds_E">qb::session::help_seeds_ (C++ member)</a>
@@ -1445,6 +1486,18 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session25init_contrast_thresholds_E">qb::session::init_contrast_thresholds_ (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session33INITIAL_BOND_DIMENSION_LOWERBOUNDE">qb::session::INITIAL_BOND_DIMENSION_LOWERBOUND (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session33INITIAL_BOND_DIMENSION_UPPERBOUNDE">qb::session::INITIAL_BOND_DIMENSION_UPPERBOUND (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session24initial_bond_dimensions_E">qb::session::initial_bond_dimensions_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session34INITIAL_KRAUS_DIMENSION_LOWERBOUNDE">qb::session::INITIAL_KRAUS_DIMENSION_LOWERBOUND (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session34INITIAL_KRAUS_DIMENSION_UPPERBOUNDE">qb::session::INITIAL_KRAUS_DIMENSION_UPPERBOUND (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session25initial_kraus_dimensions_E">qb::session::initial_kraus_dimensions_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session10instrings_E">qb::session::instrings_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session7INVALIDE">qb::session::INVALID (C++ member)</a>
@@ -1463,6 +1516,12 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20max_bond_dimensions_E">qb::session::max_bond_dimensions_ (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session30MAX_KRAUS_DIMENSION_LOWERBOUNDE">qb::session::MAX_KRAUS_DIMENSION_LOWERBOUND (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session30MAX_KRAUS_DIMENSION_UPPERBOUNDE">qb::session::MAX_KRAUS_DIMENSION_UPPERBOUND (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21max_kraus_dimensions_E">qb::session::max_kraus_dimensions_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session6name_mE">qb::session::name_m (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session13noise_models_E">qb::session::noise_models_ (C++ member)</a>
@@ -1479,7 +1538,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session8number_mE">qb::session::number_m (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11out_counts_E">qb::session::out_counts_ (C++ member)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15out_bitstrings_E">qb::session::out_bitstrings_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session16out_divergences_E">qb::session::out_divergences_ (C++ member)</a>
 </li>
@@ -1548,6 +1607,8 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session8randoms_E">qb::session::randoms_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18RANDOMS_UPPERBOUNDE">qb::session::RANDOMS_UPPERBOUND (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session16rel_svd_cutoffs_E">qb::session::rel_svd_cutoffs_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15reset_contrastsEv">qb::session::reset_contrasts (C++ function)</a>
 </li>
@@ -1619,6 +1680,14 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session28set_init_contrast_thresholdsERK11VectorMapND">qb::session::set_init_contrast_thresholds (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session26set_initial_bond_dimensionERK6size_t">qb::session::set_initial_bond_dimension (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session27set_initial_bond_dimensionsERK7VectorN">qb::session::set_initial_bond_dimensions (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session27set_initial_kraus_dimensionERK6size_t">qb::session::set_initial_kraus_dimension (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session28set_initial_kraus_dimensionsERK7VectorN">qb::session::set_initial_kraus_dimensions (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session12set_instringERKNSt6stringE">qb::session::set_instring (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session13set_instringsERK12VectorString">qb::session::set_instrings (C++ function)</a>
@@ -1634,6 +1703,10 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session22set_max_bond_dimensionERK6size_t">qb::session::set_max_bond_dimension (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23set_max_bond_dimensionsERK7VectorN">qb::session::set_max_bond_dimensions (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23set_max_kraus_dimensionERK6size_t">qb::session::set_max_kraus_dimension (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session24set_max_kraus_dimensionsERK7VectorN">qb::session::set_max_kraus_dimensions (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session9set_noiseERKb">qb::session::set_noise (C++ function)</a>
 </li>
@@ -1663,9 +1736,9 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session13set_notimingsERK10VectorBool">qb::session::set_notimings (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20set_output_amplitudeERK2NC">qb::session::set_output_amplitude (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20set_output_amplitudeERKNSt3mapINSt6stringENSt7complexIdEEEE">qb::session::set_output_amplitude (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21set_output_amplitudesERK11VectorMapNC">qb::session::set_output_amplitudes (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21set_output_amplitudesERKNSt6vectorINSt6vectorINSt3mapINSt6stringENSt7complexIdEEEEEEEE">qb::session::set_output_amplitudes (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session22set_output_oqm_enabledERKb">qb::session::set_output_oqm_enabled (C++ function)</a>
 </li>
@@ -1696,6 +1769,10 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session10set_randomERK6size_t">qb::session::set_random (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11set_randomsERK7VectorN">qb::session::set_randoms (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18set_rel_svd_cutoffERK2ND">qb::session::set_rel_svd_cutoff (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session19set_rel_svd_cutoffsERK11VectorMapND">qb::session::set_rel_svd_cutoffs (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session6set_rnERK6size_t">qb::session::set_rn (C++ function)</a>
 </li>
@@ -2153,6 +2230,10 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.ReadoutError">ReadoutError (class in core)</a>
 </li>
+      <li><a href="rst/python_autodoc.html#core.session.rel_svd_cutoff">rel_svd_cutoff (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.rel_svd_cutoffs">rel_svd_cutoffs (core.session property)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.session.reset_contrasts">reset_contrasts() (core.session method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.ripple_add">ripple_add() (core.Circuit method)</a>
@@ -2161,10 +2242,10 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.session.rns">rns (core.session property)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.session.run">run() (core.session method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rst/python_autodoc.html#core.session.run">run() (core.session method)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.session.run_async">run_async() (core.session method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.run_canonical_ae">run_canonical_ae() (core.Circuit method)</a>
