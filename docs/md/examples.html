@@ -58,6 +58,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -354,6 +355,15 @@
 <p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_aws_rigetti.py</span></code></p>
 <p>An example demonstrating integrated noise-aware placement during circuit execution on a hardware backend (e.g., Rigetti devices on AWS).
 Valid AWS credentials are required to run the example.</p>
+<p><code class="docutils literal notranslate"><span class="pre">aws_braket_qft.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>noise</em>: true</p>
+<p>A simple example demonstrating asynchronous circuit execution on AWS Braket. Note that currently only asynchronous circuit execution (via <code class="docutils literal notranslate"><span class="pre">run_async</span></code>) is supported for AWS Braket. To run on AWS Braket:</p>
+<ul class="simple">
+<li><p>Set up AWS account (e.g., using CLI) and enable AWS Braket;</p></li>
+<li><p>Use an AWS Region that supports AWS Braket (e.g., us-east-1);</p></li>
+<li><p>Create an S3 Bucket with prefix <code class="docutils literal notranslate"><span class="pre">amazon-braket-*</span></code> and create a folder inside the S3 bucket to store results.</p></li>
+</ul>
 </section>
 <section id="c">
 <h2>C++<a class="headerlink" href="#c" title="Permalink to this headline"></a></h2>

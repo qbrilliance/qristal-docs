@@ -80,9 +80,9 @@ Functions
 
 - :ref:`exhale_function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316`
 
-- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7`
-
 - :ref:`exhale_function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501`
+
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7`
 
 - :ref:`exhale_function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a`
 
