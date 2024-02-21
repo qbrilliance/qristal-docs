@@ -56,7 +56,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c`
-
 - :ref:`exhale_function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f`
+
+- :ref:`exhale_function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c`
 

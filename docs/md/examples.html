@@ -434,6 +434,26 @@ Valid AWS credentials are required to run the example.</p>
 <p>An example demonstrating setting up a pipeline of circuit optimization passes when using Qristal.</p>
 <p><code class="docutils literal notranslate"><span class="pre">cudaq_qft.py</span></code></p>
 <p>Running QFT circuit constructed by the Qristal circuit builder on a CUDA Quantum simulator backend. Required CUDA Quantum support.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qst</span></code></p>
+<p><em>qubits</em>: 2<br />
+<em>gate depth</em>: 2<br />
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum state tomography workflow for a two qubit Bell state, evaluating and printing the quantum state density.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qst_fidelity</span></code></p>
+<p><em>qubits</em>: 2<br />
+<em>gate depth</em>: 1<br />
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum state tomography workflow wrapped around a SPAM benchmark. For each circuit, the quantum state fidelity metric is evaluated and printed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qpt</span></code></p>
+<p><em>qubits</em>: 1<br />
+<em>gate depth</em>: 1<br />
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum process tomography workflow for a single Rx(pi/2) gate, evaluating and printing the quantum process matrix.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qpt_fidelity</span></code></p>
+<p><em>qubits</em>: 2<br />
+<em>gate depth</em>: 1<br />
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum process tomography workflow wrapped around a rotation sweep benchmark rotating qubit 0 from -pi to +pi applying Rx gates in 5 steps. For each circuit, the quantum process fidelity metric is evaluated and printed.</p>
 </section>
 <section id="c-with-cuda-quantum">
 <h2>C++ with CUDA Quantum<a class="headerlink" href="#c-with-cuda-quantum" title="Permalink to this headline"></a></h2>
@@ -450,37 +470,6 @@ Valid AWS credentials are required to run the example.</p>
 <p>Determination of the ground state of a chain of four hydrogen atoms, using VQE with the L-BFGS optimiser.</p>
 <p><code class="docutils literal notranslate"><span class="pre">cudaq_vqe_lbfgs</span></code></p>
 <p>Determination of the deuteron’s ground state energy using VQE with the L-BFGS optimiser.</p>
-</section>
-<section id="works-in-progress">
-<h2>Works in progress<a class="headerlink" href="#works-in-progress" title="Permalink to this headline"></a></h2>
-<p>Examples in the <code class="docutils literal notranslate"><span class="pre">wip</span></code> folder are works in progress.  These either do not presently run or still need additional testing.  This is a known issue, and thus not worth reporting as a new bug.</p>
-<p><code class="docutils literal notranslate"><span class="pre">aws_braket</span></code></p>
-<p>These need work on the aws_s3 argument.  You should be able to get the first two to run by just setting <code class="docutils literal notranslate"><span class="pre">s.aws_s3</span></code> to the name of an s3 bucket that you personally have access to (you need to have run <code class="docutils literal notranslate"><span class="pre">aws</span> <span class="pre">configure</span></code>, set up the bucket, etc).</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">aws_noise_demo.py</span></code><br />
-An example of circuit offload to AWS Braket, and an explicit test of the decay of coherence over time, as implemented in the default noise model.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">qft.py</span></code><br />
-A Fourier transform performed on an AWS simulator.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">verbatim.py</span></code><br />
-A circuit run on Rigetti hardware using the AWS <code class="docutils literal notranslate"><span class="pre">verbatim</span></code> option.</p></li>
-</ul>
-<p><code class="docutils literal notranslate"><span class="pre">lambda_accelerator</span></code></p>
-<p>Further examples using a remote accelerator.</p>
-<p><code class="docutils literal notranslate"><span class="pre">qap</span></code></p>
-<p>Some additional QAOA examples using recursive QAOA routines.</p>
-<p><code class="docutils literal notranslate"><span class="pre">vqe</span></code></p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">h2_vqe_aswap.py</span></code><br />
-Example using the variational quantum eigensolver and ASWAP ansatz to obtain the ground state energy of a H2 molecule.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">h2_vqe_uccsd.py</span></code><br />
-Example using the variational quantum eigensolver and UCCSD ansatz to obtain the ground state energy of a H2 molecule.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">h4_vqe_uccsd.py</span></code><br />
-Example using the variational quantum eigensolver and UCCSD ansatz to obtain the ground state energy of H4.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">h4_vqe_uccsd_aer</span></code><br />
-Example using the variational quantum eigensolver, a UCCSD ansatz and the AER simulator to obtain the ground state energy of H4.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">h6_vqe_uccsd_aer</span></code><br />
-Example using the variational quantum eigensolver, a UCCSD ansatz and the AER simulator to obtain the ground state energy of H6.</p></li>
-</ul>
 </section>
 </section>
 

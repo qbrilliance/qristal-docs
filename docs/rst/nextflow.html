@@ -73,6 +73,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#executing-a-nextflow-pipeline-and-generating-a-memory-usage-and-execution-time-report">Executing a Nextflow pipeline and generating a memory usage and execution time report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#example-demonstrating-asynchronous-execution-over-multiple-workers-shot-partitioning">Example demonstrating asynchronous execution over multiple workers (shot partitioning)</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#main-partitioned-nf">main-partitioned.nf</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-openqasm-file-ex-nf1-oqm">Example OpenQASM file: <code class="docutils literal notranslate"><span class="pre">ex-nf1.oqm</span></code></a></li>
 </ul>
 </li>
 </ul>
@@ -206,6 +207,7 @@ process sweepSvdCutoff {
     print(&quot;SVD cutoff: &quot;, tqb.svd_cutoff[0][0][0])
     print(tqb.out_raw[0][0])
     &quot;&quot;&quot;
+}
 
 workflow {
   channel.of(0.1, 0.01, 0.001, 0.0001, 0.00001) | sweepSvdCutoff | view
@@ -324,9 +326,22 @@ def gatherall = [:]
 workflow {
   circuit_ch = Channel.fromPath(&quot;*.oqm&quot;)
   shots_N_ch = (0..&lt;N_PROCESSES).collect { N_SHOTS/N_PROCESSES }
-  shotoutcomes_ch = partitionCircuitQubitBackend(circuit_ch, qubits_N_ch, backend_ch, shots_N_ch, workers_N_ch).map { jsonSlurper.parseText( it ) }
+  shotoutcomes_ch = partitionCircuitQubitBackend(circuit_ch, shots_N_ch).map { jsonSlurper.parseText( it ) }
   (shotoutcomes_ch.map { gatherall = (gatherall.keySet() + it.keySet()).collectEntries { k -&gt; [k, (gatherall[k] ?: 0) + (it[k] ?: 0)] } }).last().view()
 }
+</pre></div>
+</div>
+</section>
+<section id="example-openqasm-file-ex-nf1-oqm">
+<h3>Example OpenQASM file: <code class="docutils literal notranslate"><span class="pre">ex-nf1.oqm</span></code><a class="headerlink" href="#example-openqasm-file-ex-nf1-oqm" title="Permalink to this headline"></a></h3>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">OPENQASM</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
+<span class="n">include</span><span class="w"> </span><span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span><span class="w"></span>
+<span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<span class="n">creg</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
+<span class="n">h</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="n">cx</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
+<span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
+<span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
 </pre></div>
 </div>
 <p>Execute the pipeline using:</p>

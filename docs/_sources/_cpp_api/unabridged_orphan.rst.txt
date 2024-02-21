@@ -31,6 +31,16 @@ Directories
 .. toctree::
    :maxdepth: 5
 
+   dir_core_include_qb_core_backends.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   dir_core_include_qb_core_backends_qb_hardware.rst
+
+.. toctree::
+   :maxdepth: 5
+
    dir_core_include_qb_core_cudaq.rst
 
 .. toctree::
@@ -160,6 +170,16 @@ Files
 .. toctree::
    :maxdepth: 5
 
+   file_core_include_qb_core_backends_qb_hardware_qb_qpu.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
+   file_core_include_qb_core_backends_qb_hardware_qb_visitor.hpp.rst
+
+.. toctree::
+   :maxdepth: 5
+
    file_core_include_qb_core_optimization_qml_qml.hpp.rst
 
 .. toctree::
@@ -171,11 +191,6 @@ Files
    :maxdepth: 5
 
    file_emulator_include_qb_emulator_noise_model_QuantumBrillianceNoiseModel.hpp.rst
-
-.. toctree::
-   :maxdepth: 5
-
-   file_core_include_qb_core_QuantumBrillianceRemoteVisitor.hpp.rst
 
 .. toctree::
    :maxdepth: 5

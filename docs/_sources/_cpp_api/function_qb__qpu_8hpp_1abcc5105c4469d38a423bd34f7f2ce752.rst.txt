@@ -1,0 +1,14 @@
+.. _exhale_function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752:
+
+Function qb::execute_on_qb_hardware
+===================================
+
+- Defined in :ref:`file_core_include_qb_core_backends_qb_hardware_qb_qpu.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qb::execute_on_qb_hardware(std::shared_ptr<xacc::quantum::qb_qpu>, std::shared_ptr<xacc::AcceleratorBuffer>, std::vector<std::shared_ptr<xacc::CompositeInstruction>>&, const run_i_j_config&, bool)
+   :project: My Project

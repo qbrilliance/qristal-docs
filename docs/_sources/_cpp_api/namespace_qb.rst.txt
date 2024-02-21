@@ -34,8 +34,6 @@ Classes
 
 - :ref:`exhale_struct_structqb_1_1ReadoutError`
 
-- :ref:`exhale_struct_structqb_1_1run__i__j__config`
-
 - :ref:`exhale_class_classqb_1_1CircuitBuilder`
 
 - :ref:`exhale_class_classqb_1_1CirqQsim`
@@ -65,13 +63,6 @@ Classes
 - :ref:`exhale_class_classqb_1_1thread__pool`
 
 
-Enums
------
-
-
-- :ref:`exhale_enum_session_8hpp_1a02db9735a9c041d02e48753b9ff50d01`
-
-
 Functions
 ---------
 
@@ -80,9 +71,9 @@ Functions
 
 - :ref:`exhale_function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316`
 
-- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501`
-
 - :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7`
+
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501`
 
 - :ref:`exhale_function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a`
 
@@ -93,6 +84,8 @@ Functions
 - :ref:`exhale_function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c`
 
 - :ref:`exhale_function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62`
+
+- :ref:`exhale_function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752`
 
 - :ref:`exhale_function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4`
 

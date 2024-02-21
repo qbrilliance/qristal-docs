@@ -199,7 +199,7 @@
 <h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this headline"></a></h3>
 <p id="required-deps">Installing Qristal from source <strong>requires</strong> the following libraries/packages to be installed:</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://gcc.gnu.org/">GNU C++ Compiler</a> &gt;= 11.4.0.  Usage of clang 16.0.0 or later is supported, but gcc/g++ is still required for building exatn and tnqvm.</p></li>
+<li><p><a class="reference external" href="https://gcc.gnu.org/">GNU C++ Compiler</a> &gt;= 11.4.0.  Usage of clang 16.0.6 or later is supported, but gcc/g++ is still required for building exatn and tnqvm.</p></li>
 <li><p><a class="reference external" href="https://gcc.gnu.org/">GNU Fortran Compiler</a> &gt;= 11.4.0</p></li>
 <li><p><a class="reference external" href="https://cmake.org/">CMake</a> &gt;= 3.20</p></li>
 <li><p><a class="reference external" href="http://python.org/">Python</a> &gt;= 3.8</p></li>
@@ -241,17 +241,17 @@ cmake .. -DINSTALL_MISSING<span class="o">=</span>ON
 make install
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> flag ensures that all missing dependencies (if any) will be downloaded and installed automatically.  To automatically download and install only C++ dependencies, instead set <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=CXX</span></code>.  To download and install only Python module dependencies, use <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=PYTHON</span></code>.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+<p>-The <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> flag ensures that all missing dependencies (if any) will be downloaded and installed automatically.  To automatically download and install only C++ dependencies, instead set <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=CXX</span></code>.  To download and install only Python module dependencies, use <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=PYTHON</span></code>.</p>
 <p>The <a class="reference internal" href="#required-deps"><span class="std std-ref">required dependencies</span></a> <strong>must</strong> be installed on your system. <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> will not handle those mandatory dependencies.</p>
-</aside>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>MPI is enabled by adding the option <code class="docutils literal notranslate"><span class="pre">-DENABLE_MPI=ON</span></code> to the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> command.</p>
-</aside>
 <ol class="arabic simple" start="2">
-<li><p>Manual Installation of <a class="reference internal" href="#auto-install-deps"><span class="std std-ref">additional dependencies</span></a> (<strong>Advanced</strong>)</p></li>
+<li><p>Other useful <code class="docutils literal notranslate"><span class="pre">cmake</span></code> options</p></li>
+</ol>
+<p>The directory into which Qristal is to be installed can be specified by setting <code class="docutils literal notranslate"><span class="pre">-DCMAKE_INSTALL_PREFIX=&lt;YOUR</span> <span class="pre">QRISTAL</span> <span class="pre">INSTALLATION</span> <span class="pre">DIR&gt;</span></code>.</p>
+<p>If you wish to build Qristal’s C++ noise-aware circuit placement routines, you must also enable the use of the additional dependency <a class="reference external" href="https://github.com/CQCL/tket">TKET</a>. This is done by passing <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span></code> to <code class="docutils literal notranslate"><span class="pre">cmake</span></code>. TKET will be installed automatically by <code class="docutils literal notranslate"><span class="pre">cmake</span></code> if both <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span></code> and <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> (or <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=CXX</span></code>) are passed to <cite>cmake</cite>.</p>
+<p>MPI is enabled by adding the option <code class="docutils literal notranslate"><span class="pre">-DENABLE_MPI=ON</span></code>.</p>
+<p>If you also wish to build this html documentation, pass <code class="docutils literal notranslate"><span class="pre">-DBUILD_DOCS=ON</span></code>.</p>
+<ol class="arabic simple" start="3">
+<li><p>Manual Installation of <a class="reference internal" href="#auto-install-deps"><span class="std std-ref">additional dependencies</span></a> (<strong>Advanced alternative to step 1</strong>)</p></li>
 </ol>
 <ul class="simple">
 <li><p>Follow the installation instructions of <a class="reference external" href="https://github.com/eclipse/xacc">XACC</a>, <a class="reference external" href="https://github.com/ORNL-QCI/exatn">ExaTN</a> and <a class="reference external" href="https://github.com/ORNL-QCI/tnqvm">TNQVM</a>.</p></li>
@@ -261,12 +261,10 @@ make install
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake .. -DXACC_DIR<span class="o">=</span>&lt;YOUR XACC INSTALLATION DIR&gt; -DEXATN_DIR<span class="o">=</span>&lt;YOUR EXATN INSTALLATION DIR&gt; -DTNQVM_DIR<span class="o">=</span>&lt;YOUR TNQVM INSTALLATION DIR&gt;
 </pre></div>
 </div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
 <p>In this manual mode, the build system will check for a <strong>specific</strong> version of XACC, EXATN and TNQVM as provided.
 If not satisfied, it will terminate the build and ask for a reinstallation of the dependency.
 Please follow the error message to install the correct version (specified as a git commit hash key).</p>
-</aside>
+<p>Similarly, if building with noise-aware placement routines enabled using <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span></code>, you can pass <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span> <span class="pre">-DTKET_DIR=&lt;YOUR</span> <span class="pre">TKET</span> <span class="pre">INSTALLATION</span> <span class="pre">DIR&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">cmake</span></code> to tell it to use your own installation of TKET rather than building TKET from source.</p>
 </section>
 <section id="contributing">
 <h3>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline"></a></h3>
@@ -311,11 +309,12 @@ we value contributions in all shapes and sizes!</p>
 <ol class="arabic simple" start="3">
 <li><p><strong>Contributing Code</strong></p></li>
 </ol>
-<p>Before submitting a <a class="reference external" href="https://github.com/qbrilliance/qristal/pulls">new pull request</a>, please make sure the following is done:</p>
+<p>Before submitting a <a class="reference external" href="https://github.com/qbrilliance/qristal/pulls">new pull request</a>, please make sure to do the following:</p>
 <ul class="simple">
-<li><p><strong>New features should include a unit test.</strong> If you’ve fixed a bug or added
+<li><p><strong>Include a unit test for any new routines or features.</strong> If you’ve fixed a bug or added
 code that should be tested, add a test to the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory.</p></li>
-<li><p><strong>Ensure that the test suite passes</strong>, e.g., by running <code class="docutils literal notranslate"><span class="pre">ctest</span></code>. This will also be checked by our CI when the MR is submitted.</p></li>
+<li><p><strong>Ensure that the test suite passes</strong>, e.g., by running the <code class="docutils literal notranslate"><span class="pre">CITests</span></code> executable. This will also be checked by our CI when the MR is submitted.</p></li>
+<li><p><strong>Fix (not suppress) any warnings generated by your changes.</strong> You can turn warnings on in the code by passing <code class="docutils literal notranslate"><span class="pre">-DWARNINGS=ON</span></code> to <code class="docutils literal notranslate"><span class="pre">cmake</span></code>.</p></li>
 </ul>
 <p>When ready, submit your fork as a <a class="reference external" href="https://docs.github.com/articles/using-pull-requests">pull request</a>
 to the QB GitHub repository, filling out the pull request form.</p>

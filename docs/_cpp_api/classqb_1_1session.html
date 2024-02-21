@@ -72,7 +72,6 @@
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
-<li class="toctree-l4"><a class="reference internal" href="structqb_1_1run__i__j__config.html">Struct run_i_j_config</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
 <li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
@@ -98,7 +97,8 @@
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1QuantumBrillianceRemoteVisitor.html">Class QuantumBrillianceRemoteVisitor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__qpu.html">Class qb_qpu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__visitor.html">Class qb_visitor</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
@@ -315,34 +315,23 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session14set_qpu_configERKNSt6stringE">
-<span id="_CPPv3N2qb7session14set_qpu_configERKNSt6stringE"></span><span id="_CPPv2N2qb7session14set_qpu_configERKNSt6stringE"></span><span id="qb::session::set_qpu_config__ssCR"></span><span class="target" id="classqb_1_1session_1a9d1207b6d031f52130d5e08453bcb4ba"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_qpu_config</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">qpu_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session14set_qpu_configERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the path to the qpu config JSON file. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session32set_remote_backend_database_pathERKNSt6stringE">
+<span id="_CPPv3N2qb7session32set_remote_backend_database_pathERKNSt6stringE"></span><span id="_CPPv2N2qb7session32set_remote_backend_database_pathERKNSt6stringE"></span><span id="qb::session::set_remote_backend_database_path__ssCR"></span><span class="target" id="classqb_1_1session_1a6b31b75ccdd34ef26740e597a984a89e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_remote_backend_database_path</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">remote_backend_database</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session32set_remote_backend_database_pathERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the path to the remote backend database yaml file. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>qpu_config</strong> – Path to the qpu config JSON file </p>
+<dd class="field-odd"><p><strong>remote_backend_database_path</strong> – Path to the remote backend database yaml file. </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session15set_qpu_configsERK12VectorString">
-<span id="_CPPv3N2qb7session15set_qpu_configsERK12VectorString"></span><span id="_CPPv2N2qb7session15set_qpu_configsERK12VectorString"></span><span id="qb::session::set_qpu_configs__VectorStringCR"></span><span class="target" id="classqb_1_1session_1a1c4e7a10090ae1513d3b5164a649af77"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_qpu_configs</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">qpu_configs</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session15set_qpu_configsERK12VectorString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the list of paths to the qpu config JSON files. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>qpu_configs</strong> – List of paths to the qpu config JSON files </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session15get_qpu_configsEv">
-<span id="_CPPv3NK2qb7session15get_qpu_configsEv"></span><span id="_CPPv2NK2qb7session15get_qpu_configsEv"></span><span id="qb::session::get_qpu_configsC"></span><span class="target" id="classqb_1_1session_1afc8c44350806187571c041a2729495cd"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_qpu_configs</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session15get_qpu_configsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the list of paths to the qpu config JSON files. </p>
+<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session32get_remote_backend_database_pathEv">
+<span id="_CPPv3NK2qb7session32get_remote_backend_database_pathEv"></span><span id="_CPPv2NK2qb7session32get_remote_backend_database_pathEv"></span><span id="qb::session::get_remote_backend_database_pathC"></span><span class="target" id="classqb_1_1session_1a49b84afc0115724d38f81cff8ea6c7d3"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_remote_backend_database_path</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session32get_remote_backend_database_pathEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the path to the remote backend database yaml file. </p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List of paths to the qpu config JSON files </p>
+<dd class="field-odd"><p>Path to the remote backend database yaml file. </p>
 </dd>
 </dl>
 </dd></dl>
@@ -376,171 +365,6 @@
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List of backend accelerator names </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session19set_aws_device_nameERKNSt6stringE">
-<span id="_CPPv3N2qb7session19set_aws_device_nameERKNSt6stringE"></span><span id="_CPPv2N2qb7session19set_aws_device_nameERKNSt6stringE"></span><span id="qb::session::set_aws_device_name__ssCR"></span><span class="target" id="classqb_1_1session_1a15811ba3b7bbb629b1820a5a36b9c1bd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_device_name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">device_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session19set_aws_device_nameERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the AWS Braket device name, e.g., SV1, DM1, etc. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>device_name</strong> – Name of AWS Braket device </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session20set_aws_device_namesERK12VectorString">
-<span id="_CPPv3N2qb7session20set_aws_device_namesERK12VectorString"></span><span id="_CPPv2N2qb7session20set_aws_device_namesERK12VectorString"></span><span id="qb::session::set_aws_device_names__VectorStringCR"></span><span class="target" id="classqb_1_1session_1a8a67e622bf2d8c478dbbd5a46c15d786"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_device_names</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">device_names</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session20set_aws_device_namesERK12VectorString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set AWS Braket device names. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>device_names</strong> – Names of AWS Braket devices </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session20get_aws_device_namesEv">
-<span id="_CPPv3NK2qb7session20get_aws_device_namesEv"></span><span id="_CPPv2NK2qb7session20get_aws_device_namesEv"></span><span id="qb::session::get_aws_device_namesC"></span><span class="target" id="classqb_1_1session_1ae6741b5d07be2234d1d3e44d1000b03f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_aws_device_names</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session20get_aws_device_namesEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get AWS Braket device names. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Names of AWS Braket devices </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session14set_aws_formatERKNSt6stringE">
-<span id="_CPPv3N2qb7session14set_aws_formatERKNSt6stringE"></span><span id="_CPPv2N2qb7session14set_aws_formatERKNSt6stringE"></span><span id="qb::session::set_aws_format__ssCR"></span><span class="target" id="classqb_1_1session_1a1591f699213b3df1a98604e5932a3f64"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_format</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session14set_aws_formatERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the format to submit circuits to AWS Braket </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>format</strong> – Format type (e.g., openqasm3) </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session15set_aws_formatsERK12VectorString">
-<span id="_CPPv3N2qb7session15set_aws_formatsERK12VectorString"></span><span id="_CPPv2N2qb7session15set_aws_formatsERK12VectorString"></span><span id="qb::session::set_aws_formats__VectorStringCR"></span><span class="target" id="classqb_1_1session_1a38a8640f7e59e0f42dac8e6a16aa5488"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_formats</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">formats</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session15set_aws_formatsERK12VectorString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the format to submit circuits to AWS Braket </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>formats</strong> – List of format types (e.g., openqasm3) </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session15get_aws_formatsEv">
-<span id="_CPPv3NK2qb7session15get_aws_formatsEv"></span><span id="_CPPv2NK2qb7session15get_aws_formatsEv"></span><span id="qb::session::get_aws_formatsC"></span><span class="target" id="classqb_1_1session_1afcbd412bf19c47673236aed44ddb38b4"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_aws_formats</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session15get_aws_formatsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get format to submit circuits to AWS Braket. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>List of format types </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session10set_aws_s3ERKNSt6stringE">
-<span id="_CPPv3N2qb7session10set_aws_s3ERKNSt6stringE"></span><span id="_CPPv2N2qb7session10set_aws_s3ERKNSt6stringE"></span><span id="qb::session::set_aws_s3__ssCR"></span><span class="target" id="classqb_1_1session_1ac1c6b3935c24da7bf7be75abd1285d25"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_s3</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bucket_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session10set_aws_s3ERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the AWS S3 bucket to store results. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>bucket_name</strong> – Name of S3 bucket </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session11set_aws_s3sERK12VectorString">
-<span id="_CPPv3N2qb7session11set_aws_s3sERK12VectorString"></span><span id="_CPPv2N2qb7session11set_aws_s3sERK12VectorString"></span><span id="qb::session::set_aws_s3s__VectorStringCR"></span><span class="target" id="classqb_1_1session_1ac648b6f61de11879fead84c1251bdfd4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_s3s</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bucket_names</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session11set_aws_s3sERK12VectorString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the AWS S3 bucket to store results. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>bucket_names</strong> – Names of S3 bucket </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session11get_aws_s3sEv">
-<span id="_CPPv3NK2qb7session11get_aws_s3sEv"></span><span id="_CPPv2NK2qb7session11get_aws_s3sEv"></span><span id="qb::session::get_aws_s3sC"></span><span class="target" id="classqb_1_1session_1a3a28547026f136aa84f02afa05925e21"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_aws_s3s</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session11get_aws_s3sEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the AWS S3 bucket to store results. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Names of S3 bucket </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session15set_aws_s3_pathERKNSt6stringE">
-<span id="_CPPv3N2qb7session15set_aws_s3_pathERKNSt6stringE"></span><span id="_CPPv2N2qb7session15set_aws_s3_pathERKNSt6stringE"></span><span id="qb::session::set_aws_s3_path__ssCR"></span><span class="target" id="classqb_1_1session_1a37ab789dc94bb692ddd3de827e30ea58"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_s3_path</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session15set_aws_s3_pathERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the AWS S3 path. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>path</strong> – AWS S3 path </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session16set_aws_s3_pathsERK12VectorString">
-<span id="_CPPv3N2qb7session16set_aws_s3_pathsERK12VectorString"></span><span id="_CPPv2N2qb7session16set_aws_s3_pathsERK12VectorString"></span><span id="qb::session::set_aws_s3_paths__VectorStringCR"></span><span class="target" id="classqb_1_1session_1ae933e4e29010ce85251f032817f743ed"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_s3_paths</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">paths</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session16set_aws_s3_pathsERK12VectorString" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the AWS S3 paths. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>paths</strong> – AWS S3 paths </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session16get_aws_s3_pathsEv">
-<span id="_CPPv3NK2qb7session16get_aws_s3_pathsEv"></span><span id="_CPPv2NK2qb7session16get_aws_s3_pathsEv"></span><span id="qb::session::get_aws_s3_pathsC"></span><span class="target" id="classqb_1_1session_1aca528e42e267fa01cd519d66d208fb2c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_aws_s3_paths</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session16get_aws_s3_pathsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the AWS S3 paths. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>AWS S3 paths </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session16set_aws_verbatimERKb">
-<span id="_CPPv3N2qb7session16set_aws_verbatimERKb"></span><span id="_CPPv2N2qb7session16set_aws_verbatimERKb"></span><span id="qb::session::set_aws_verbatim__bCR"></span><span class="target" id="classqb_1_1session_1accd6ab0ba421938ec798b1afb4db88c9"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_verbatim</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">verbatim</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session16set_aws_verbatimERKb" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the AWS verbatim mode. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>verbatim</strong> – Verbatim mode </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17set_aws_verbatimsERK10VectorBool">
-<span id="_CPPv3N2qb7session17set_aws_verbatimsERK10VectorBool"></span><span id="_CPPv2N2qb7session17set_aws_verbatimsERK10VectorBool"></span><span id="qb::session::set_aws_verbatims__VectorBoolCR"></span><span class="target" id="classqb_1_1session_1a943549c108c73df2b2f0013cfa846ba2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_aws_verbatims</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorBool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">verbatims</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session17set_aws_verbatimsERK10VectorBool" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set the AWS verbatim modes. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>verbatims</strong> – Verbatim modes </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session17get_aws_verbatimsEv">
-<span id="_CPPv3NK2qb7session17get_aws_verbatimsEv"></span><span id="_CPPv2NK2qb7session17get_aws_verbatimsEv"></span><span id="qb::session::get_aws_verbatimsC"></span><span class="target" id="classqb_1_1session_1a68f7f284ed9a4a31f2d1005df09d07e4"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorBool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_aws_verbatims</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session17get_aws_verbatimsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the AWS verbatim mode. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Verbatim modes </p>
 </dd>
 </dl>
 </dd></dl>
@@ -882,6 +706,28 @@
 </dd></dl>
 
 <dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session17get_state_vec_rawEv">
+<span id="_CPPv3NK2qb7session17get_state_vec_rawEv"></span><span id="_CPPv2NK2qb7session17get_state_vec_rawEv"></span><span id="qb::session::get_state_vec_rawC"></span><span class="target" id="classqb_1_1session_1a8506d5777c67a94e80b23afea98af3fc"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_state_vec_raw</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session17get_state_vec_rawEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the full state vector (works with QPP backend only!) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Full complex state vector as std::vector&lt;std::complex&lt;double&gt;&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session13get_state_vecERKb">
+<span id="_CPPv3N2qb7session13get_state_vecERKb"></span><span id="_CPPv2N2qb7session13get_state_vecERKb"></span><span id="qb::session::get_state_vec__bCR"></span><span class="target" id="classqb_1_1session_1a7f0279a4ba4ca51b8f8b64e34b1bf928"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_state_vec</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_get_state_vec</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session13get_state_vecERKb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the flag to retrieve the state vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>in_get_state_vec</strong> – Flag to retrieve state vector (works with QPP backend only!) </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session22set_output_oqm_enabledERKb">
 <span id="_CPPv3N2qb7session22set_output_oqm_enabledERKb"></span><span id="_CPPv2N2qb7session22set_output_oqm_enabledERKb"></span><span id="qb::session::set_output_oqm_enabled__bCR"></span><span class="target" id="classqb_1_1session_1aef76072a8e448acb1ef67e7c46068df6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_output_oqm_enabled</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_output_oqm_enabled</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session22set_output_oqm_enabledERKb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the output transpilation and resource estimation flag. </p>
@@ -1076,83 +922,6 @@
 <dl class="field-list simple">
 <dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Theta values </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session33get_use_default_contrast_settingsEv">
-<span id="_CPPv3NK2qb7session33get_use_default_contrast_settingsEv"></span><span id="_CPPv2NK2qb7session33get_use_default_contrast_settingsEv"></span><span id="qb::session::get_use_default_contrast_settingsC"></span><span class="target" id="classqb_1_1session_1afba84d8206d6c5f6b7747694a07b993b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorBool</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_use_default_contrast_settings</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session33get_use_default_contrast_settingsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the use_default_contrast_setting configuration flags. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Config. values </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session27set_init_contrast_thresholdERKd">
-<span id="_CPPv3N2qb7session27set_init_contrast_thresholdERKd"></span><span id="_CPPv2N2qb7session27set_init_contrast_thresholdERKd"></span><span id="qb::session::set_init_contrast_threshold__doubleCR"></span><span class="target" id="classqb_1_1session_1a06ef743a11a64ff9c84734f6a633f40e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_init_contrast_threshold</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_init_contrast_threshold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session27set_init_contrast_thresholdERKd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set QB hardware contrast threshold above which initialisation is deemed successful. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>in_init_contrast_threshold</strong> – Non-negative threshold value </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session28set_init_contrast_thresholdsERK11VectorMapND">
-<span id="_CPPv3N2qb7session28set_init_contrast_thresholdsERK11VectorMapND"></span><span id="_CPPv2N2qb7session28set_init_contrast_thresholdsERK11VectorMapND"></span><span id="qb::session::set_init_contrast_thresholds__VectorMapNDCR"></span><span class="target" id="classqb_1_1session_1a592f7ccfc8df648a86e3dded41e9b6aa"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_init_contrast_thresholds</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorMapND</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_init_contrast_thresholds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session28set_init_contrast_thresholdsERK11VectorMapND" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set QB hardware contrast threshold above which initialisation is deemed successful. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>in_init_contrast_thresholds</strong> – Non-negative threshold values </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session28get_init_contrast_thresholdsEv">
-<span id="_CPPv3NK2qb7session28get_init_contrast_thresholdsEv"></span><span id="_CPPv2NK2qb7session28get_init_contrast_thresholdsEv"></span><span id="qb::session::get_init_contrast_thresholdsC"></span><span class="target" id="classqb_1_1session_1aa3b36ed4589f5294a3a451a199d93afa"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorMapND</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_init_contrast_thresholds</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session28get_init_contrast_thresholdsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the contrast threshold for initialisation. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Initialisation contrast thresholds </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session28set_qubit_contrast_thresholdERK2ND">
-<span id="_CPPv3N2qb7session28set_qubit_contrast_thresholdERK2ND"></span><span id="_CPPv2N2qb7session28set_qubit_contrast_thresholdERK2ND"></span><span id="qb::session::set_qubit_contrast_threshold__NDCR"></span><span class="target" id="classqb_1_1session_1ac3379b06dfc9a889682589ba0bcd3f80"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_qubit_contrast_threshold</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">ND</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_qubit_contrast_threshold</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session28set_qubit_contrast_thresholdERK2ND" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set QB hardware contrast thresholds during final readout on a per-qubit basis. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>in_qubit_contrast_threshold</strong> – Non-negative qubit readout threshold </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session29set_qubit_contrast_thresholdsERK11VectorMapND">
-<span id="_CPPv3N2qb7session29set_qubit_contrast_thresholdsERK11VectorMapND"></span><span id="_CPPv2N2qb7session29set_qubit_contrast_thresholdsERK11VectorMapND"></span><span id="qb::session::set_qubit_contrast_thresholds__VectorMapNDCR"></span><span class="target" id="classqb_1_1session_1a5167bf33f7c9c3b16ead3bd436b2bc10"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_qubit_contrast_thresholds</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorMapND</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_qubit_contrast_thresholds</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session29set_qubit_contrast_thresholdsERK11VectorMapND" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set QB hardware contrast thresholds during final readout on a per-qubit basis. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>in_qubit_contrast_thresholds</strong> – Non-negative qubit readout threshold </p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4NK2qb7session29get_qubit_contrast_thresholdsEv">
-<span id="_CPPv3NK2qb7session29get_qubit_contrast_thresholdsEv"></span><span id="_CPPv2NK2qb7session29get_qubit_contrast_thresholdsEv"></span><span id="qb::session::get_qubit_contrast_thresholdsC"></span><span class="target" id="classqb_1_1session_1a745099e13b3c85b7cd120244ed286831"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">VectorMapND</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_qubit_contrast_thresholds</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb7session29get_qubit_contrast_thresholdsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the qubit contrast thresholds for final readout. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Contrast thresholds used for final readout </p>
 </dd>
 </dl>
 </dd></dl>
@@ -1761,28 +1530,6 @@
 <dd><p>AWS Braket TN1, 8 async workers, 49 qubits, 256 shots, noiseless. </p>
 </dd></dl>
 
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session13set_contrastsERKdRKdRKd">
-<span id="_CPPv3N2qb7session13set_contrastsERKdRKdRKd"></span><span id="_CPPv2N2qb7session13set_contrastsERKdRKdRKd"></span><span id="qb::session::set_contrasts__doubleCR.doubleCR.doubleCR"></span><span class="target" id="classqb_1_1session_1a375ba226ef17327ea207c8aa40c289d7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_contrasts</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">init_ct</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">q0_ct</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">q1_ct</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session13set_contrastsERKdRKdRKd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>For QB hardware: contrast threshold helper methods. </p>
-<p>Contrast thresholds for QB hardware. Applies globally throughout a Qristal session.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>init_ct</strong> – Input contrast threshold used for initialisation </p></li>
-<li><p><strong>q0_ct</strong> – Input contrast threshold used for final readout of qubit[0] </p></li>
-<li><p><strong>q1_ct</strong> – Input contrast threshold used for final readout of qubit[1] </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session15reset_contrastsEv">
-<span id="_CPPv3N2qb7session15reset_contrastsEv"></span><span id="_CPPv2N2qb7session15reset_contrastsEv"></span><span id="qb::session::reset_contrasts"></span><span class="target" id="classqb_1_1session_1a4e658ebd9c050015a9dbfa8253be3205"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">reset_contrasts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session15reset_contrastsEv" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Removes all contrast thresholds stored in a Qristal session. </p>
-</dd></dl>
-
 </div>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-types">Private Types</p>
@@ -1892,21 +1639,6 @@
 <dd></dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session15validate_aws_s3ERKNSt6stringE">
-<span id="_CPPv3N2qb7session15validate_aws_s3ERKNSt6stringE"></span><span id="_CPPv2N2qb7session15validate_aws_s3ERKNSt6stringE"></span><span id="qb::session::validate_aws_s3__ssCR"></span><span class="target" id="classqb_1_1session_1a58daee480654e56bc23c5e8c46435f78"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validate_aws_s3</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bucket_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session15validate_aws_s3ERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session19validate_aws_formatERKNSt6stringE">
-<span id="_CPPv3N2qb7session19validate_aws_formatERKNSt6stringE"></span><span id="_CPPv2N2qb7session19validate_aws_formatERKNSt6stringE"></span><span id="qb::session::validate_aws_format__ssCR"></span><span class="target" id="classqb_1_1session_1aca58d4bce451b768ef01e9670cd9e509"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validate_aws_format</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">format</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session19validate_aws_formatERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session24validate_aws_device_nameERKNSt6stringE">
-<span id="_CPPv3N2qb7session24validate_aws_device_nameERKNSt6stringE"></span><span id="_CPPv2N2qb7session24validate_aws_device_nameERKNSt6stringE"></span><span id="qb::session::validate_aws_device_name__ssCR"></span><span class="target" id="classqb_1_1session_1ad64fe5042bc5244ffb6e1f3335d4e9d8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validate_aws_device_name</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">device_name</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session24validate_aws_device_nameERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session21validate_aer_sim_typeERKNSt6stringE">
 <span id="_CPPv3N2qb7session21validate_aer_sim_typeERKNSt6stringE"></span><span id="_CPPv2N2qb7session21validate_aer_sim_typeERKNSt6stringE"></span><span id="qb::session::validate_aer_sim_type__ssCR"></span><span class="target" id="classqb_1_1session_1ae1c950fa46c062ab5f15c8f849fc97a7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validate_aer_sim_type</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sim_type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session21validate_aer_sim_typeERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
@@ -1949,56 +1681,38 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session14get_run_configE6size_t6size_t">
-<span id="_CPPv3N2qb7session14get_run_configE6size_t6size_t"></span><span id="_CPPv2N2qb7session14get_run_configE6size_t6size_t"></span><span id="qb::session::get_run_config__s.s"></span><span class="target" id="classqb_1_1session_1af4d3402c8f13da8087d5c0b1c805856e"></span><a class="reference internal" href="structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_configE" title="qb::run_i_j_config"><span class="n"><span class="pre">run_i_j_config</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_run_config</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ii</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session14get_run_configE6size_t6size_t" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N2qb7session14get_run_configE6size_t6size_t"></span><span id="_CPPv2N2qb7session14get_run_configE6size_t6size_t"></span><span id="qb::session::get_run_config__s.s"></span><span class="target" id="classqb_1_1session_1af4d3402c8f13da8087d5c0b1c805856e"></span><span class="n"><span class="pre">run_i_j_config</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_run_config</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ii</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jj</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session14get_run_configE6size_t6size_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Retrieve and validate run configurations for index pair (ii, jj) using the table index convention. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb28QuantumBrillianceAcceleratorEEE">
-<span id="_CPPv3N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb28QuantumBrillianceAcceleratorEEE"></span><span id="_CPPv2N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb28QuantumBrillianceAcceleratorEEE"></span><span id="qb::session::process_run_result__std::sC.std::sC.run_i_j_configCR.std::shared_ptr:xacc::CompositeInstruction:.std::shared_ptr:xacc::Accelerator:.xacc::HeterogeneousMapCR.std::shared_ptr:xacc::AcceleratorBuffer:.double.std::shared_ptr:qb::QuantumBrillianceAccelerator:"></span><span class="target" id="classqb_1_1session_1a40684c4faa2605683d6e7cadf894a77b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process_run_result</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ii</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_configE" title="qb::run_i_j_config"><span class="n"><span class="pre">run_i_j_config</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kernel_ir</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sim_qpu</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sim_qpu_configs</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer_b</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">runtime_ms</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">qb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">QuantumBrillianceAccelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_transpiler</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb28QuantumBrillianceAcceleratorEEE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb7backendEEE">
+<span id="_CPPv3N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb7backendEEE"></span><span id="_CPPv2N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb7backendEEE"></span><span id="qb::session::process_run_result__std::sC.std::sC.run_i_j_configCR.std::shared_ptr:xacc::CompositeInstruction:.std::shared_ptr:xacc::Accelerator:.xacc::HeterogeneousMapCR.std::shared_ptr:xacc::AcceleratorBuffer:.double.std::shared_ptr:qb::backend:"></span><span class="target" id="classqb_1_1session_1a00925dfdf3e1634a23bfd36545a45694"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process_run_result</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ii</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">run_i_j_config</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kernel_ir</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sim_qpu</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sim_qpu_configs</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer_b</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">runtime_ms</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">qb</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_transpiler</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session18process_run_resultEKNSt6size_tEKNSt6size_tERK14run_i_j_configNSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN2qb7backendEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Helper to populate result tables (e.g. counts, expectation values, resource estimations) post-execution. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session13compile_inputERKNSt6stringEi18source_string_type">
-<span id="_CPPv3N2qb7session13compile_inputERKNSt6stringEi18source_string_type"></span><span id="_CPPv2N2qb7session13compile_inputERKNSt6stringEi18source_string_type"></span><span id="qb::session::compile_input__ssCR.i.source_string_type"></span><span class="target" id="classqb_1_1session_1ab227e84562b6d49f3bed09c2dce31577"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compile_input</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_source_string</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_num_qubits</span></span>, <a class="reference internal" href="enum_session_8hpp_1a02db9735a9c041d02e48753b9ff50d01.html#_CPPv4N2qb18source_string_typeE" title="qb::source_string_type"><span class="n"><span class="pre">source_string_type</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">in_source_type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session13compile_inputERKNSt6stringEi18source_string_type" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N2qb7session13compile_inputERKNSt6stringEi18source_string_type"></span><span id="_CPPv2N2qb7session13compile_inputERKNSt6stringEi18source_string_type"></span><span id="qb::session::compile_input__ssCR.i.source_string_type"></span><span class="target" id="classqb_1_1session_1ab227e84562b6d49f3bed09c2dce31577"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compile_input</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_source_string</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_num_qubits</span></span>, <span class="n"><span class="pre">source_string_type</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_source_type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session13compile_inputERKNSt6stringEi18source_string_type" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Util method to compile input source string into IR This method is thread-safe, thus can be used to compile multiple source strings in parallel. </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session30get_target_circuit_qasm_stringE6size_t6size_tRK14run_i_j_config">
-<span id="_CPPv3N2qb7session30get_target_circuit_qasm_stringE6size_t6size_tRK14run_i_j_config"></span><span id="_CPPv2N2qb7session30get_target_circuit_qasm_stringE6size_t6size_tRK14run_i_j_config"></span><span id="qb::session::get_target_circuit_qasm_string__s.s.run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1adbc83ade950e4ebd360e9c8538c73ba9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_target_circuit_qasm_string</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ii</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_configE" title="qb::run_i_j_config"><span class="n"><span class="pre">run_i_j_config</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session30get_target_circuit_qasm_stringE6size_t6size_tRK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N2qb7session30get_target_circuit_qasm_stringE6size_t6size_tRK14run_i_j_config"></span><span id="_CPPv2N2qb7session30get_target_circuit_qasm_stringE6size_t6size_tRK14run_i_j_config"></span><span id="qb::session::get_target_circuit_qasm_string__s.s.run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1adbc83ade950e4ebd360e9c8538c73ba9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_target_circuit_qasm_string</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ii</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">jj</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">run_i_j_config</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session30get_target_circuit_qasm_stringE6size_t6size_tRK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Retrieve the target circuit string for (i, j) task: This will involve loading file (if file mode is selected), generate random circuit string (if random mode is selected), etc. </p>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session21parse_qpu_config_jsonERKNSt6stringE">
-<span id="_CPPv3N2qb7session21parse_qpu_config_jsonERKNSt6stringE"></span><span id="_CPPv2N2qb7session21parse_qpu_config_jsonERKNSt6stringE"></span><span id="qb::session::parse_qpu_config_json__ssCR"></span><span class="target" id="classqb_1_1session_1a77cb33cfd0bce8afc36338bb010524e6"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">parse_qpu_config_json</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_file_path</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session21parse_qpu_config_jsonERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Parse QPU configuration JSON file. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session21construct_qpu_configsERK14run_i_j_config">
-<span id="_CPPv3N2qb7session21construct_qpu_configsERK14run_i_j_config"></span><span id="_CPPv2N2qb7session21construct_qpu_configsERK14run_i_j_config"></span><span id="qb::session::construct_qpu_configs__run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1a4ed793d8329c75e5d3395f69be0de79d"></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">construct_qpu_configs</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_configE" title="qb::run_i_j_config"><span class="n"><span class="pre">run_i_j_config</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session21construct_qpu_configsERK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Combine all QPU options into a dict (xacc::HeterogeneousMap) </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session11get_sim_qpuERK14run_i_j_config">
-<span id="_CPPv3N2qb7session11get_sim_qpuERK14run_i_j_config"></span><span id="_CPPv2N2qb7session11get_sim_qpuERK14run_i_j_config"></span><span id="qb::session::get_sim_qpu__run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1ac3a306266fd031b95df7b9abeb595e29"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_sim_qpu</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_configE" title="qb::run_i_j_config"><span class="n"><span class="pre">run_i_j_config</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session11get_sim_qpuERK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Get the simulator based on <code class="docutils literal notranslate"><a class="reference internal" href="structqb_1_1run__i__j__config.html#structqb_1_1run__i__j__config"><span class="std std-ref"><span class="pre">run_i_j_config</span></span></a></code> </p>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session11get_sim_qpuEbRK14run_i_j_config">
+<span id="_CPPv3N2qb7session11get_sim_qpuEbRK14run_i_j_config"></span><span id="_CPPv2N2qb7session11get_sim_qpuEbRK14run_i_j_config"></span><span id="qb::session::get_sim_qpu__b.run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1ad5d77dd9d44b9c6393d55bc7769e8efd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_sim_qpu</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">execute_on_hardware</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">run_i_j_config</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session11get_sim_qpuEbRK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the simulator based on <code class="docutils literal notranslate"><span class="pre">run_i_j_config</span></code> </p>
 </dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config">
-<span id="_CPPv3N2qb7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config"></span><span id="_CPPv2N2qb7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config"></span><span id="qb::session::execute_on_simulator__std::shared_ptr:xacc::Accelerator:.std::shared_ptr:xacc::AcceleratorBuffer:.std::vector:std::shared_ptr:xacc::CompositeInstruction::R.run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1aa80ef12cee85201f66e3e3701acb0927"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_on_simulator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">acc</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer_b</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">circuits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_configE" title="qb::run_i_j_config"><span class="n"><span class="pre">run_i_j_config</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N2qb7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config"></span><span id="_CPPv2N2qb7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config"></span><span id="qb::session::execute_on_simulator__std::shared_ptr:xacc::Accelerator:.std::shared_ptr:xacc::AcceleratorBuffer:.std::vector:std::shared_ptr:xacc::CompositeInstruction::R.run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1aa80ef12cee85201f66e3e3701acb0927"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_on_simulator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">acc</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer_b</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">circuits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">run_i_j_config</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Execute the circuit on a simulator. </p>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session19execute_on_hardwareENSt10shared_ptrIN4xacc7quantum34QuantumBrillianceRemoteAcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config">
-<span id="_CPPv3N2qb7session19execute_on_hardwareENSt10shared_ptrIN4xacc7quantum34QuantumBrillianceRemoteAcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config"></span><span id="_CPPv2N2qb7session19execute_on_hardwareENSt10shared_ptrIN4xacc7quantum34QuantumBrillianceRemoteAcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config"></span><span id="qb::session::execute_on_hardware__std::shared_ptr:xacc::quantum::QuantumBrillianceRemoteAccelerator:.std::shared_ptr:xacc::AcceleratorBuffer:.std::vector:std::shared_ptr:xacc::CompositeInstruction::R.run_i_j_configCR"></span><span class="target" id="classqb_1_1session_1a0257f61210993b95aab9625d06aa2313"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_on_hardware</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">QuantumBrillianceRemoteAccelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qdk</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer_b</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">circuits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1run__i__j__config.html#_CPPv4N2qb14run_i_j_configE" title="qb::run_i_j_config"><span class="n"><span class="pre">run_i_j_config</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">run_config</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb7session19execute_on_hardwareENSt10shared_ptrIN4xacc7quantum34QuantumBrillianceRemoteAcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_config" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Execute the circuit on the QB hardware (QuantumBrillianceRemoteAccelerator) </p>
 </dd></dl>
 
 <dl class="cpp function">
@@ -2022,6 +1736,16 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session29remote_backend_database_path_E">
+<span id="_CPPv3N2qb7session29remote_backend_database_path_E"></span><span id="_CPPv2N2qb7session29remote_backend_database_path_E"></span><span id="qb::session::remote_backend_database_path___ss"></span><span class="target" id="classqb_1_1session_1aa5004464654802a3f0c1d78ad38b591f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remote_backend_database_path_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session29remote_backend_database_path_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session24remote_backend_database_E">
+<span id="_CPPv3N2qb7session24remote_backend_database_E"></span><span id="_CPPv2N2qb7session24remote_backend_database_E"></span><span id="qb::session::remote_backend_database___YAML::Node"></span><span class="target" id="classqb_1_1session_1a9201292dfc915eb7a65aa028556692d0"></span><span class="n"><span class="pre">YAML</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remote_backend_database_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session24remote_backend_database_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session6name_mE">
 <span id="_CPPv3N2qb7session6name_mE"></span><span id="_CPPv2N2qb7session6name_mE"></span><span id="qb::session::name_m__VectorString"></span><span class="target" id="classqb_1_1session_1a7d2e6c7348bfd3eab27bd3a5369e8f9d"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name_m</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session6name_mE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
@@ -2042,11 +1766,6 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session12qpu_configs_E">
-<span id="_CPPv3N2qb7session12qpu_configs_E"></span><span id="_CPPv2N2qb7session12qpu_configs_E"></span><span id="qb::session::qpu_configs___VectorString"></span><span class="target" id="classqb_1_1session_1a19c9ff34e99420b19b6d31c5215a7326"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qpu_configs_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session12qpu_configs_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session10instrings_E">
 <span id="_CPPv3N2qb7session10instrings_E"></span><span id="_CPPv2N2qb7session10instrings_E"></span><span id="qb::session::instrings___VectorString"></span><span class="target" id="classqb_1_1session_1a942b7e5380a11c6842dae5ddc4f45a29"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">instrings_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session10instrings_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
@@ -2064,31 +1783,6 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session5accs_E">
 <span id="_CPPv3N2qb7session5accs_E"></span><span id="_CPPv2N2qb7session5accs_E"></span><span id="qb::session::accs___VectorString"></span><span class="target" id="classqb_1_1session_1a2e9a8e4652efff666f2191e0df8d864a"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">accs_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session5accs_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17aws_device_names_E">
-<span id="_CPPv3N2qb7session17aws_device_names_E"></span><span id="_CPPv2N2qb7session17aws_device_names_E"></span><span id="qb::session::aws_device_names___VectorString"></span><span class="target" id="classqb_1_1session_1a3bece6f704d411cdae8ec9ef667171a3"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aws_device_names_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session17aws_device_names_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session12aws_formats_E">
-<span id="_CPPv3N2qb7session12aws_formats_E"></span><span id="_CPPv2N2qb7session12aws_formats_E"></span><span id="qb::session::aws_formats___VectorString"></span><span class="target" id="classqb_1_1session_1ac2fbfe02899888131390c678fddc7908"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aws_formats_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session12aws_formats_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session14aws_verbatims_E">
-<span id="_CPPv3N2qb7session14aws_verbatims_E"></span><span id="_CPPv2N2qb7session14aws_verbatims_E"></span><span id="qb::session::aws_verbatims___VectorBool"></span><span class="target" id="classqb_1_1session_1a2c6edca18ea07b720d9bdcb4ab354a2c"></span><span class="n"><span class="pre">VectorBool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aws_verbatims_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session14aws_verbatims_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session8aws_s3s_E">
-<span id="_CPPv3N2qb7session8aws_s3s_E"></span><span id="_CPPv2N2qb7session8aws_s3s_E"></span><span id="qb::session::aws_s3s___VectorString"></span><span class="target" id="classqb_1_1session_1a2b360cc37e2e4646a6a47acf53e46dd9"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aws_s3s_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session8aws_s3s_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session13aws_s3_paths_E">
-<span id="_CPPv3N2qb7session13aws_s3_paths_E"></span><span id="_CPPv2N2qb7session13aws_s3_paths_E"></span><span id="qb::session::aws_s3_paths___VectorString"></span><span class="target" id="classqb_1_1session_1a12e473d5f6ab49c1bd2e2927b4b79546"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aws_s3_paths_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session13aws_s3_paths_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -2185,24 +1879,6 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session7thetas_E">
 <span id="_CPPv3N2qb7session7thetas_E"></span><span id="_CPPv2N2qb7session7thetas_E"></span><span id="qb::session::thetas___VectorMapND"></span><span class="target" id="classqb_1_1session_1ae4f005434285b8564c78eba8d50ea331"></span><span class="n"><span class="pre">VectorMapND</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thetas_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session7thetas_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session30use_default_contrast_settings_E">
-<span id="_CPPv3N2qb7session30use_default_contrast_settings_E"></span><span id="_CPPv2N2qb7session30use_default_contrast_settings_E"></span><span id="qb::session::use_default_contrast_settings___VectorBool"></span><span class="target" id="classqb_1_1session_1a78d8eb40337cfb899e340a3c07c6a0d2"></span><span class="n"><span class="pre">VectorBool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">use_default_contrast_settings_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session30use_default_contrast_settings_E" title="Permalink to this definition"></a><br /></dt>
-<dd><p><p>QB hardware configuration: contrast thresholds (non-negative real number) The balanced SSR contrast below which a shot will be ignored.</p>
-<p>init_contrast_thresholds_ applies during initialisation. qubit_contrast_thresholds_ applies on a per-qubit basis during final readout use_default_contrast_settings_ excludes all contrast threshold settings from being sent to the QB hardware</p>
-</p>
-</dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session25init_contrast_thresholds_E">
-<span id="_CPPv3N2qb7session25init_contrast_thresholds_E"></span><span id="_CPPv2N2qb7session25init_contrast_thresholds_E"></span><span id="qb::session::init_contrast_thresholds___VectorMapND"></span><span class="target" id="classqb_1_1session_1abfd34c73816f7b24e40026987869c203"></span><span class="n"><span class="pre">VectorMapND</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init_contrast_thresholds_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session25init_contrast_thresholds_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session26qubit_contrast_thresholds_E">
-<span id="_CPPv3N2qb7session26qubit_contrast_thresholds_E"></span><span id="_CPPv2N2qb7session26qubit_contrast_thresholds_E"></span><span id="qb::session::qubit_contrast_thresholds___VectorMapND"></span><span class="target" id="classqb_1_1session_1a3c104103c7201fc2d67bea694a540b09"></span><span class="n"><span class="pre">VectorMapND</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qubit_contrast_thresholds_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session26qubit_contrast_thresholds_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -2311,6 +1987,16 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17in_get_state_vec_E">
+<span id="_CPPv3N2qb7session17in_get_state_vec_E"></span><span id="_CPPv2N2qb7session17in_get_state_vec_E"></span><span id="qb::session::in_get_state_vec___b"></span><span class="target" id="classqb_1_1session_1a0344dffa8c8355b0807ca10f158061a7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">in_get_state_vec_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session17in_get_state_vec_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session10state_vec_E">
+<span id="_CPPv3N2qb7session10state_vec_E"></span><span id="_CPPv2N2qb7session10state_vec_E"></span><span id="qb::session::state_vec___std::shared_ptr:std::vector:std::complex:double:::"></span><span class="target" id="classqb_1_1session_1aa3e1a1276e34ad9c9ca3da4d05790e36"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">state_vec_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session10state_vec_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session18error_mitigations_E">
 <span id="_CPPv3N2qb7session18error_mitigations_E"></span><span id="_CPPv2N2qb7session18error_mitigations_E"></span><span id="qb::session::error_mitigations___VectorString"></span><span class="target" id="classqb_1_1session_1a98b2d190a6b7a866af2f480c883d2305"></span><span class="n"><span class="pre">VectorString</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">error_mitigations_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session18error_mitigations_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
@@ -2341,36 +2027,6 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18SNS_DM1_LOWERBOUNDE">
-<span id="_CPPv3N2qb7session18SNS_DM1_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session18SNS_DM1_LOWERBOUNDE"></span><span id="qb::session::SNS_DM1_LOWERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a4a4ae94f0dda88f876122a74eaf49c59"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SNS_DM1_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session18SNS_DM1_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18SNS_DM1_UPPERBOUNDE">
-<span id="_CPPv3N2qb7session18SNS_DM1_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session18SNS_DM1_UPPERBOUNDE"></span><span id="qb::session::SNS_DM1_UPPERBOUND__sC"></span><span class="target" id="classqb_1_1session_1aa734cadbe19a50727e530f5a43de6dd7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SNS_DM1_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span><a class="headerlink" href="#_CPPv4N2qb7session18SNS_DM1_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18SNS_SV1_LOWERBOUNDE">
-<span id="_CPPv3N2qb7session18SNS_SV1_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session18SNS_SV1_LOWERBOUNDE"></span><span id="qb::session::SNS_SV1_LOWERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a7bdc3860921c73274f6a694aa9e1299b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SNS_SV1_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session18SNS_SV1_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18SNS_SV1_UPPERBOUNDE">
-<span id="_CPPv3N2qb7session18SNS_SV1_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session18SNS_SV1_UPPERBOUNDE"></span><span id="qb::session::SNS_SV1_UPPERBOUND__sC"></span><span class="target" id="classqb_1_1session_1ab3a2de4295df75726eb04e677a18340f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SNS_SV1_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span><a class="headerlink" href="#_CPPv4N2qb7session18SNS_SV1_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18SNS_TN1_LOWERBOUNDE">
-<span id="_CPPv3N2qb7session18SNS_TN1_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session18SNS_TN1_LOWERBOUNDE"></span><span id="qb::session::SNS_TN1_LOWERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a3b3e921d79bc99d275f69754d630474d"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SNS_TN1_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session18SNS_TN1_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18SNS_TN1_UPPERBOUNDE">
-<span id="_CPPv3N2qb7session18SNS_TN1_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session18SNS_TN1_UPPERBOUNDE"></span><span id="qb::session::SNS_TN1_UPPERBOUND__sC"></span><span class="target" id="classqb_1_1session_1ab2fe41630f94dd49e091b72ad7f2a247"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SNS_TN1_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">999</span></span><a class="headerlink" href="#_CPPv4N2qb7session18SNS_TN1_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session14QNS_LOWERBOUNDE">
 <span id="_CPPv3N2qb7session14QNS_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session14QNS_LOWERBOUNDE"></span><span id="qb::session::QNS_LOWERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a75219c5e5c89ee2f5b71f191038f6fb4"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session14QNS_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
@@ -2378,36 +2034,6 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session14QNS_UPPERBOUNDE">
 <span id="_CPPv3N2qb7session14QNS_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session14QNS_UPPERBOUNDE"></span><span id="qb::session::QNS_UPPERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a8c905ab30a05d9272486d1053372cfd5"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span><a class="headerlink" href="#_CPPv4N2qb7session14QNS_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18QNS_DM1_LOWERBOUNDE">
-<span id="_CPPv3N2qb7session18QNS_DM1_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session18QNS_DM1_LOWERBOUNDE"></span><span id="qb::session::QNS_DM1_LOWERBOUND__sC"></span><span class="target" id="classqb_1_1session_1ab1ee718a280a84b6aa2d0ead7ea58a12"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_DM1_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session18QNS_DM1_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18QNS_DM1_UPPERBOUNDE">
-<span id="_CPPv3N2qb7session18QNS_DM1_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session18QNS_DM1_UPPERBOUNDE"></span><span id="qb::session::QNS_DM1_UPPERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a029bd11e2866ce2930ac00b1f7d73fff"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_DM1_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">17</span></span><a class="headerlink" href="#_CPPv4N2qb7session18QNS_DM1_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18QNS_SV1_LOWERBOUNDE">
-<span id="_CPPv3N2qb7session18QNS_SV1_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session18QNS_SV1_LOWERBOUNDE"></span><span id="qb::session::QNS_SV1_LOWERBOUND__sC"></span><span class="target" id="classqb_1_1session_1acf48c5f63c42a3141127c29634a3c3d6"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_SV1_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session18QNS_SV1_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18QNS_SV1_UPPERBOUNDE">
-<span id="_CPPv3N2qb7session18QNS_SV1_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session18QNS_SV1_UPPERBOUNDE"></span><span id="qb::session::QNS_SV1_UPPERBOUND__sC"></span><span class="target" id="classqb_1_1session_1aab11b88c7fdc8bfa0b8b66d1a16f7725"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_SV1_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">34</span></span><a class="headerlink" href="#_CPPv4N2qb7session18QNS_SV1_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18QNS_TN1_LOWERBOUNDE">
-<span id="_CPPv3N2qb7session18QNS_TN1_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session18QNS_TN1_LOWERBOUNDE"></span><span id="qb::session::QNS_TN1_LOWERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a255cc4973c6609d649c27d2921e5841c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_TN1_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session18QNS_TN1_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18QNS_TN1_UPPERBOUNDE">
-<span id="_CPPv3N2qb7session18QNS_TN1_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session18QNS_TN1_UPPERBOUNDE"></span><span id="qb::session::QNS_TN1_UPPERBOUND__sC"></span><span class="target" id="classqb_1_1session_1a4b0c1d20360b856c8325e7e1d0eac7e3"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QNS_TN1_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">48</span></span><a class="headerlink" href="#_CPPv4N2qb7session18QNS_TN1_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -2466,73 +2092,8 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session22VALID_QB_HARDWARE_ACCSE">
-<span id="_CPPv3N2qb7session22VALID_QB_HARDWARE_ACCSE"></span><span id="_CPPv2N2qb7session22VALID_QB_HARDWARE_ACCSE"></span><span id="qb::session::VALID_QB_HARDWARE_ACCS__std::unordered_set:ss:"></span><span class="target" id="classqb_1_1session_1a35dc88b7e245e5970fc6a791e035b4c7"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_ACCS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;loopback&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session22VALID_QB_HARDWARE_ACCSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17VALID_AWS_DEVICESE">
-<span id="_CPPv3N2qb7session17VALID_AWS_DEVICESE"></span><span id="_CPPv2N2qb7session17VALID_AWS_DEVICESE"></span><span id="qb::session::VALID_AWS_DEVICES__std::unordered_set:ss:"></span><span class="target" id="classqb_1_1session_1ad2ce5ffb4e00d82f199c9f94f36af36d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_AWS_DEVICES</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;SV1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;DM1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;TN1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;LocalSimulator&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;Rigetti&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session17VALID_AWS_DEVICESE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17VALID_AWS_FORMATSE">
-<span id="_CPPv3N2qb7session17VALID_AWS_FORMATSE"></span><span id="_CPPv2N2qb7session17VALID_AWS_FORMATSE"></span><span id="qb::session::VALID_AWS_FORMATS__std::unordered_set:ss:"></span><span class="target" id="classqb_1_1session_1ad99f905a9af8a175f13b4d63d68a4bbd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_AWS_FORMATS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;braket&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;openqasm3&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session17VALID_AWS_FORMATSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session20VALID_AWS_S3_PREFIXSE">
-<span id="_CPPv3N2qb7session20VALID_AWS_S3_PREFIXSE"></span><span id="_CPPv2N2qb7session20VALID_AWS_S3_PREFIXSE"></span><span id="qb::session::VALID_AWS_S3_PREFIXS__std::unordered_set:ss:"></span><span class="target" id="classqb_1_1session_1ad006efb31abec11583d3f34dee1237e0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_AWS_S3_PREFIXS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;amazon-braket-&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session20VALID_AWS_S3_PREFIXSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session19VALID_AER_SIM_TYPESE">
 <span id="_CPPv3N2qb7session19VALID_AER_SIM_TYPESE"></span><span id="_CPPv2N2qb7session19VALID_AER_SIM_TYPESE"></span><span id="qb::session::VALID_AER_SIM_TYPES__std::unordered_set:ss:"></span><span class="target" id="classqb_1_1session_1a708dd71c53bc556d90d08223bd548a42"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_AER_SIM_TYPES</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;statevector&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;density_matrix&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;matrix_product_state&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session19VALID_AER_SIM_TYPESE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session26VALID_QB_HARDWARE_COMMANDSE">
-<span id="_CPPv3N2qb7session26VALID_QB_HARDWARE_COMMANDSE"></span><span id="_CPPv2N2qb7session26VALID_QB_HARDWARE_COMMANDSE"></span><span id="qb::session::VALID_QB_HARDWARE_COMMANDS__std::unordered_set:ss:"></span><span class="target" id="classqb_1_1session_1a1f83bfe2497ea351a605a55dbde4510a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_COMMANDS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;circuit&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session26VALID_QB_HARDWARE_COMMANDSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session22VALID_QB_HARDWARE_URLSE">
-<span id="_CPPv3N2qb7session22VALID_QB_HARDWARE_URLSE"></span><span id="_CPPv2N2qb7session22VALID_QB_HARDWARE_URLSE"></span><span id="qb::session::VALID_QB_HARDWARE_URLS__std::map:ss.ss:"></span><span class="target" id="classqb_1_1session_1aa5ef06e15f9a7393a4e9affa6070f4be"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_URLS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;https://172.17.0.1:8443&quot;</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;https://172.17.0.1:8443&quot;</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;loopback&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;http://127.0.0.1:8000&quot;</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session22VALID_QB_HARDWARE_URLSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session27VALID_QB_HARDWARE_POSTPATHSE">
-<span id="_CPPv3N2qb7session27VALID_QB_HARDWARE_POSTPATHSE"></span><span id="_CPPv2N2qb7session27VALID_QB_HARDWARE_POSTPATHSE"></span><span id="qb::session::VALID_QB_HARDWARE_POSTPATHS__std::map:ss.ss:"></span><span class="target" id="classqb_1_1session_1a707a19293f97aeb3678a4a28831d574a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_POSTPATHS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;&quot;</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session27VALID_QB_HARDWARE_POSTPATHSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session30VALID_QB_HARDWARE_POLLING_SECSE">
-<span id="_CPPv3N2qb7session30VALID_QB_HARDWARE_POLLING_SECSE"></span><span id="_CPPv2N2qb7session30VALID_QB_HARDWARE_POLLING_SECSE"></span><span id="qb::session::VALID_QB_HARDWARE_POLLING_SECS__std::map:ss.i:"></span><span class="target" id="classqb_1_1session_1af4fd72eabc8ebb25a65eca16253a4b2f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_POLLING_SECS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">3</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session30VALID_QB_HARDWARE_POLLING_SECSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session38VALID_QB_HARDWARE_POLLING_RETRY_LIMITSE">
-<span id="_CPPv3N2qb7session38VALID_QB_HARDWARE_POLLING_RETRY_LIMITSE"></span><span id="_CPPv2N2qb7session38VALID_QB_HARDWARE_POLLING_RETRY_LIMITSE"></span><span id="qb::session::VALID_QB_HARDWARE_POLLING_RETRY_LIMITS__std::map:ss.i:"></span><span class="target" id="classqb_1_1session_1a3f4e0f1ea82066ed6780e55567831213"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_POLLING_RETRY_LIMITS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session38VALID_QB_HARDWARE_POLLING_RETRY_LIMITSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session38VALID_QB_HARDWARE_OVER_REQUEST_FACTORSE">
-<span id="_CPPv3N2qb7session38VALID_QB_HARDWARE_OVER_REQUEST_FACTORSE"></span><span id="_CPPv2N2qb7session38VALID_QB_HARDWARE_OVER_REQUEST_FACTORSE"></span><span id="qb::session::VALID_QB_HARDWARE_OVER_REQUEST_FACTORS__std::map:ss.i:"></span><span class="target" id="classqb_1_1session_1a851f90c4fa828c4a318fd56295ca0a7b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_OVER_REQUEST_FACTORS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">4</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session38VALID_QB_HARDWARE_OVER_REQUEST_FACTORSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session35VALID_QB_HARDWARE_RESAMPLE_ENABLEDSE">
-<span id="_CPPv3N2qb7session35VALID_QB_HARDWARE_RESAMPLE_ENABLEDSE"></span><span id="_CPPv2N2qb7session35VALID_QB_HARDWARE_RESAMPLE_ENABLEDSE"></span><span id="qb::session::VALID_QB_HARDWARE_RESAMPLE_ENABLEDS__std::map:ss.b:"></span><span class="target" id="classqb_1_1session_1a1431e27473420f3f467fab49c18df094"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_RESAMPLE_ENABLEDS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session35VALID_QB_HARDWARE_RESAMPLE_ENABLEDSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session44VALID_QB_HARDWARE_RECURSIVE_REQUEST_ENABLEDSE">
-<span id="_CPPv3N2qb7session44VALID_QB_HARDWARE_RECURSIVE_REQUEST_ENABLEDSE"></span><span id="_CPPv2N2qb7session44VALID_QB_HARDWARE_RECURSIVE_REQUEST_ENABLEDSE"></span><span id="qb::session::VALID_QB_HARDWARE_RECURSIVE_REQUEST_ENABLEDS__std::map:ss.b:"></span><span class="target" id="classqb_1_1session_1a04d635668231eaa7a110c5d7db28ce4a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_RECURSIVE_REQUEST_ENABLEDS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session44VALID_QB_HARDWARE_RECURSIVE_REQUEST_ENABLEDSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session44VALID_QB_HARDWARE_RESAMPLE_ABOVE_PERCENTAGESE">
-<span id="_CPPv3N2qb7session44VALID_QB_HARDWARE_RESAMPLE_ABOVE_PERCENTAGESE"></span><span id="_CPPv2N2qb7session44VALID_QB_HARDWARE_RESAMPLE_ABOVE_PERCENTAGESE"></span><span id="qb::session::VALID_QB_HARDWARE_RESAMPLE_ABOVE_PERCENTAGES__std::map:ss.i:"></span><span class="target" id="classqb_1_1session_1a2d728abdbd648f1ec8ff23bf2bf48e84"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_RESAMPLE_ABOVE_PERCENTAGES</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;dqc_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">95</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qdk_gen1&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">95</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;loopback&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">95</span></span><span class="p"><span class="pre">}</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session44VALID_QB_HARDWARE_RESAMPLE_ABOVE_PERCENTAGESE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -2543,51 +2104,6 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session25VALID_HARDWARE_PLACEMENTSE">
 <span id="_CPPv3N2qb7session25VALID_HARDWARE_PLACEMENTSE"></span><span id="_CPPv2N2qb7session25VALID_HARDWARE_PLACEMENTSE"></span><span id="qb::session::VALID_HARDWARE_PLACEMENTS__std::unordered_set:ss:"></span><span class="target" id="classqb_1_1session_1abc450208f84ad04bb1b0ad2c0eacf259"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_HARDWARE_PLACEMENTS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;swap-shortest-path&quot;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;noise-aware&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N2qb7session25VALID_HARDWARE_PLACEMENTSE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session19CONTRAST_UPPERBOUNDE">
-<span id="_CPPv3N2qb7session19CONTRAST_UPPERBOUNDE"></span><span id="_CPPv2N2qb7session19CONTRAST_UPPERBOUNDE"></span><span id="qb::session::CONTRAST_UPPERBOUND__doubleC"></span><span class="target" id="classqb_1_1session_1a2c0f2846d6b402d30db0843ee998ca14"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONTRAST_UPPERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0</span></span><a class="headerlink" href="#_CPPv4N2qb7session19CONTRAST_UPPERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session19CONTRAST_LOWERBOUNDE">
-<span id="_CPPv3N2qb7session19CONTRAST_LOWERBOUNDE"></span><span id="_CPPv2N2qb7session19CONTRAST_LOWERBOUNDE"></span><span id="qb::session::CONTRAST_LOWERBOUND__doubleC"></span><span class="target" id="classqb_1_1session_1aa6b272b413217877bdffad1d55fdab3e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CONTRAST_LOWERBOUND</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span><a class="headerlink" href="#_CPPv4N2qb7session19CONTRAST_LOWERBOUNDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session22VALID_QB_HARDWARE_INITE">
-<span id="_CPPv3N2qb7session22VALID_QB_HARDWARE_INITE"></span><span id="_CPPv2N2qb7session22VALID_QB_HARDWARE_INITE"></span><span id="qb::session::VALID_QB_HARDWARE_INIT__iC"></span><span class="target" id="classqb_1_1session_1ab77d4f99795eb8e7b39298d1f8d0944f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_INIT</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N2qb7session22VALID_QB_HARDWARE_INITE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session28VALID_QB_HARDWARE_REQUEST_IDE">
-<span id="_CPPv3N2qb7session28VALID_QB_HARDWARE_REQUEST_IDE"></span><span id="_CPPv2N2qb7session28VALID_QB_HARDWARE_REQUEST_IDE"></span><span id="qb::session::VALID_QB_HARDWARE_REQUEST_ID__iC"></span><span class="target" id="classqb_1_1session_1a637433794e4cf549e87e58735e5117b5"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_REQUEST_ID</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N2qb7session28VALID_QB_HARDWARE_REQUEST_IDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session25VALID_QB_HARDWARE_POLL_IDE">
-<span id="_CPPv3N2qb7session25VALID_QB_HARDWARE_POLL_IDE"></span><span id="_CPPv2N2qb7session25VALID_QB_HARDWARE_POLL_IDE"></span><span id="qb::session::VALID_QB_HARDWARE_POLL_ID__iC"></span><span class="target" id="classqb_1_1session_1aca1a0793518e87e3bb23ff406a9cbdfd"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_POLL_ID</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N2qb7session25VALID_QB_HARDWARE_POLL_IDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session24VALID_QB_HARDWARE_CYCLESE">
-<span id="_CPPv3N2qb7session24VALID_QB_HARDWARE_CYCLESE"></span><span id="_CPPv2N2qb7session24VALID_QB_HARDWARE_CYCLESE"></span><span id="qb::session::VALID_QB_HARDWARE_CYCLES__iC"></span><span class="target" id="classqb_1_1session_1a775a4760d43cc01a6d9ad90820fa4a86"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_QB_HARDWARE_CYCLES</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N2qb7session24VALID_QB_HARDWARE_CYCLESE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17POLLING_NOT_READYE">
-<span id="_CPPv3N2qb7session17POLLING_NOT_READYE"></span><span id="_CPPv2N2qb7session17POLLING_NOT_READYE"></span><span id="qb::session::POLLING_NOT_READY__iC"></span><span class="target" id="classqb_1_1session_1a1b233e322ba306e4f8187f1c58237134"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">POLLING_NOT_READY</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">300</span></span><a class="headerlink" href="#_CPPv4N2qb7session17POLLING_NOT_READYE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session22POLLING_PROCESS_FAILEDE">
-<span id="_CPPv3N2qb7session22POLLING_PROCESS_FAILEDE"></span><span id="_CPPv2N2qb7session22POLLING_PROCESS_FAILEDE"></span><span id="qb::session::POLLING_PROCESS_FAILED__iC"></span><span class="target" id="classqb_1_1session_1ad0a95d776e65701dc912075d61c024da"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">POLLING_PROCESS_FAILED</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">500</span></span><a class="headerlink" href="#_CPPv4N2qb7session22POLLING_PROCESS_FAILEDE" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session15POLLING_SUCCESSE">
-<span id="_CPPv3N2qb7session15POLLING_SUCCESSE"></span><span id="_CPPv2N2qb7session15POLLING_SUCCESSE"></span><span id="qb::session::POLLING_SUCCESS__iC"></span><span class="target" id="classqb_1_1session_1a34d9b05577ea889ae5c1a393160f0858"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">POLLING_SUCCESS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N2qb7session15POLLING_SUCCESSE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 </div>
@@ -2627,38 +2143,13 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17help_qpu_configs_E">
-<span id="_CPPv3N2qb7session17help_qpu_configs_E"></span><span id="_CPPv2N2qb7session17help_qpu_configs_E"></span><span id="qb::session::help_qpu_configs___cCP"></span><span class="target" id="classqb_1_1session_1add17dfac233794594e7a87ff49f88947"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_qpu_configs_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session17help_qpu_configs_E" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session34help_remote_backend_database_path_E">
+<span id="_CPPv3N2qb7session34help_remote_backend_database_path_E"></span><span id="_CPPv2N2qb7session34help_remote_backend_database_path_E"></span><span id="qb::session::help_remote_backend_database_path___cCP"></span><span class="target" id="classqb_1_1session_1ae2c13353323d5b88b223a7ff57f23826"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_remote_backend_database_path_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session34help_remote_backend_database_path_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session10help_accs_E">
 <span id="_CPPv3N2qb7session10help_accs_E"></span><span id="_CPPv2N2qb7session10help_accs_E"></span><span id="qb::session::help_accs___cCP"></span><span class="target" id="classqb_1_1session_1a04cc4e7351027e7aaee46a5b88e5b744"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_accs_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session10help_accs_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session22help_aws_device_names_E">
-<span id="_CPPv3N2qb7session22help_aws_device_names_E"></span><span id="_CPPv2N2qb7session22help_aws_device_names_E"></span><span id="qb::session::help_aws_device_names___cCP"></span><span class="target" id="classqb_1_1session_1aa8267092587894cb77b59ee0dff51baf"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_aws_device_names_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session22help_aws_device_names_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session17help_aws_formats_E">
-<span id="_CPPv3N2qb7session17help_aws_formats_E"></span><span id="_CPPv2N2qb7session17help_aws_formats_E"></span><span id="qb::session::help_aws_formats___cCP"></span><span class="target" id="classqb_1_1session_1ae0713c1ac8b6e59bb68c00aa3804058e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_aws_formats_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session17help_aws_formats_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session13help_aws_s3s_E">
-<span id="_CPPv3N2qb7session13help_aws_s3s_E"></span><span id="_CPPv2N2qb7session13help_aws_s3s_E"></span><span id="qb::session::help_aws_s3s___cCP"></span><span class="target" id="classqb_1_1session_1ac2cab45c74643aa768e0d4554e371960"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_aws_s3s_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session13help_aws_s3s_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session18help_aws_s3_paths_E">
-<span id="_CPPv3N2qb7session18help_aws_s3_paths_E"></span><span id="_CPPv2N2qb7session18help_aws_s3_paths_E"></span><span id="qb::session::help_aws_s3_paths___cCP"></span><span class="target" id="classqb_1_1session_1ae7b52f27fba270946ddaafe2e1f11577"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_aws_s3_paths_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session18help_aws_s3_paths_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session19help_aws_verbatims_E">
-<span id="_CPPv3N2qb7session19help_aws_verbatims_E"></span><span id="_CPPv2N2qb7session19help_aws_verbatims_E"></span><span id="qb::session::help_aws_verbatims___cCP"></span><span class="target" id="classqb_1_1session_1a1ce4779be98a98c859f702b03fdee80b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_aws_verbatims_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session19help_aws_verbatims_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">
@@ -2712,6 +2203,11 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N2qb7session15help_state_vec_E">
+<span id="_CPPv3N2qb7session15help_state_vec_E"></span><span id="_CPPv2N2qb7session15help_state_vec_E"></span><span id="qb::session::help_state_vec___cCP"></span><span class="target" id="classqb_1_1session_1a25bcd3d864aa0fb6e65595ab141cf57d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_state_vec_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session15help_state_vec_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session25help_output_oqm_enableds_E">
 <span id="_CPPv3N2qb7session25help_output_oqm_enableds_E"></span><span id="_CPPv2N2qb7session25help_output_oqm_enableds_E"></span><span id="qb::session::help_output_oqm_enableds___cCP"></span><span class="target" id="classqb_1_1session_1afa1fc0f42a292bf5dcad6c20d2c2ca2e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_output_oqm_enableds_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session25help_output_oqm_enableds_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
@@ -2749,21 +2245,6 @@
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb7session12help_thetas_E">
 <span id="_CPPv3N2qb7session12help_thetas_E"></span><span id="_CPPv2N2qb7session12help_thetas_E"></span><span id="qb::session::help_thetas___cCP"></span><span class="target" id="classqb_1_1session_1a3c5125311e7f93bf73cdadbf9771334d"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_thetas_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session12help_thetas_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session35help_use_default_contrast_settings_E">
-<span id="_CPPv3N2qb7session35help_use_default_contrast_settings_E"></span><span id="_CPPv2N2qb7session35help_use_default_contrast_settings_E"></span><span id="qb::session::help_use_default_contrast_settings___cCP"></span><span class="target" id="classqb_1_1session_1a276fb1c869cf3eb25b603c1e33a4053b"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_use_default_contrast_settings_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session35help_use_default_contrast_settings_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session30help_init_contrast_thresholds_E">
-<span id="_CPPv3N2qb7session30help_init_contrast_thresholds_E"></span><span id="_CPPv2N2qb7session30help_init_contrast_thresholds_E"></span><span id="qb::session::help_init_contrast_thresholds___cCP"></span><span class="target" id="classqb_1_1session_1a774e441b92b08043f631234e8d0abe17"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_init_contrast_thresholds_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session30help_init_contrast_thresholds_E" title="Permalink to this definition"></a><br /></dt>
-<dd></dd></dl>
-
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb7session31help_qubit_contrast_thresholds_E">
-<span id="_CPPv3N2qb7session31help_qubit_contrast_thresholds_E"></span><span id="_CPPv2N2qb7session31help_qubit_contrast_thresholds_E"></span><span id="qb::session::help_qubit_contrast_thresholds___cCP"></span><span class="target" id="classqb_1_1session_1a5d7d8d38ff8bc9dcd3ee05b67bb84516"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">char</span></span><span class="w"> </span><span class="p"><span class="pre">*</span></span><span class="sig-name descname"><span class="n"><span class="pre">help_qubit_contrast_thresholds_</span></span></span><a class="headerlink" href="#_CPPv4N2qb7session31help_qubit_contrast_thresholds_E" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">

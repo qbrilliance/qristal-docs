@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class qb_visitor &mdash; Quantum SDK  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Enum DefaultAnsatzes" href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" />
+    <link rel="prev" title="Class qb_qpu" href="classxacc_1_1quantum_1_1qb__qpu.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Quantum SDK
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqb_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1CmaesMLP.html">Class CmaesMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1LbfgsMLP.html">Class LbfgsMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqb_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__qpu.html">Class qb_qpu</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class qb_visitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Quantum SDK</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class qb_visitor</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classxacc_1_1quantum_1_1qb__visitor.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-qb-visitor">
+<span id="exhale-class-classxacc-1-1quantum-1-1qb-visitor"></span><h1>Class qb_visitor<a class="headerlink" href="#class-qb-visitor" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qb_core_backends_qb_hardware_qb_visitor.hpp.html#file-core-include-qb-core-backends-qb-hardware-qb-visitor-hpp"><span class="std std-ref">File qb_visitor.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">xacc::quantum::AllGateVisitor</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitorE">
+<span id="_CPPv3N4xacc7quantum10qb_visitorE"></span><span id="_CPPv2N4xacc7quantum10qb_visitorE"></span><span id="xacc::quantum::qb_visitor"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qb_visitor</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AllGateVisitor</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitorE" title="Permalink to this definition"></a><br /></dt>
+<dd><div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-visitor-functions-for-gates-and-measurement.">Visitor functions for gates and measurement.</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER8Identity">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER8Identity"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER8Identity"></span><span id="xacc::quantum::qb_visitor::visit__IdentityR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a98438c988e2cceea3d2dd80639ca4eeb"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Identity</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER8Identity" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Identity (no-op) </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER2Rx">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER2Rx"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER2Rx"></span><span id="xacc::quantum::qb_visitor::visit__RxR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1af5bf7f65d092625595e5e94aa9e8dc0d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Rx</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER2Rx" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about x axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER2Ry">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER2Ry"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER2Ry"></span><span id="xacc::quantum::qb_visitor::visit__RyR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a63bef240f455506db985595c145c586d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Ry</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER2Ry" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about y axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER2CZ">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER2CZ"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER2CZ"></span><span id="xacc::quantum::qb_visitor::visit__CZR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a19730a81846a3725865fb0d8c4d8a955"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CZ</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER2CZ" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled Z gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER2Rz">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER2Rz"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER2Rz"></span><span id="xacc::quantum::qb_visitor::visit__RzR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a42faab1996df7b28e0ab1747bd87136c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Rz</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER2Rz" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Rotation about z axis. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER8Hadamard">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER8Hadamard"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER8Hadamard"></span><span id="xacc::quantum::qb_visitor::visit__HadamardR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a64ac684f3fd6880edce5ad6737de8897"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Hadamard</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER8Hadamard" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Hadamard gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER4CNOT">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER4CNOT"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER4CNOT"></span><span id="xacc::quantum::qb_visitor::visit__CNOTR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a42bb8159c3643afb76b75ee0a55e1093"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CNOT</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER4CNOT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled NOT gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER1S">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER1S"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER1S"></span><span id="xacc::quantum::qb_visitor::visit__SR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1abd3b5fe40af1e6268ba1c92f348c4f29"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">S</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER1S" title="Permalink to this definition"></a><br /></dt>
+<dd><p>S gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER3Sdg">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER3Sdg"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER3Sdg"></span><span id="xacc::quantum::qb_visitor::visit__SdgR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a6948354faed4bac5edcf58aa414cb396"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Sdg</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER3Sdg" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Inverse S gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER1T">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER1T"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER1T"></span><span id="xacc::quantum::qb_visitor::visit__TR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a75d18dd2f9711e40df5993e5717b55c4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">T</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER1T" title="Permalink to this definition"></a><br /></dt>
+<dd><p>T gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER3Tdg">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER3Tdg"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER3Tdg"></span><span id="xacc::quantum::qb_visitor::visit__TdgR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a4ae4019569f8b7d1f0c649d31eb1cf93"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Tdg</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER3Tdg" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Inverse T gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER1X">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER1X"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER1X"></span><span id="xacc::quantum::qb_visitor::visit__XR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a8cc7aa42079d28efa4b2d2fdef87f612"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">X</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER1X" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli X gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER1Y">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER1Y"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER1Y"></span><span id="xacc::quantum::qb_visitor::visit__YR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a26a9f5c1ca8e62fe80676bdb66a118f4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Y</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER1Y" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli Y gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER1Z">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER1Z"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER1Z"></span><span id="xacc::quantum::qb_visitor::visit__ZR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a21602738af1255944bea425b8dc80223"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Z</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER1Z" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Pauli Z date. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER6CPhase">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER6CPhase"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER6CPhase"></span><span id="xacc::quantum::qb_visitor::visit__CPhaseR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a7e17b0ee9eda324c900a535b6d01047b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">CPhase</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER6CPhase" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Controlled phase gate. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER4Swap">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER4Swap"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER4Swap"></span><span id="xacc::quantum::qb_visitor::visit__SwapR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1ae393a10fee1f27bf4ba590ee5d2ff678"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Swap</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER4Swap" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Swap the values of two qubits. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER1U">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER1U"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER1U"></span><span id="xacc::quantum::qb_visitor::visit__UR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1ae1c97859287a3ba9d3cabd96736449bd"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">U</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER1U" title="Permalink to this definition"></a><br /></dt>
+<dd><p>General 1-qubit unitary. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor5visitER7Measure">
+<span id="_CPPv3N4xacc7quantum10qb_visitor5visitER7Measure"></span><span id="_CPPv2N4xacc7quantum10qb_visitor5visitER7Measure"></span><span id="xacc::quantum::qb_visitor::visit__MeasureR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a06cfccad87374bfca501d13d6e5ea7e0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">visit</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Measure</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor5visitER7Measure" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Measure a single qubit. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor10qb_visitorEKiKb">
+<span id="_CPPv3N4xacc7quantum10qb_visitor10qb_visitorEKiKb"></span><span id="_CPPv2N4xacc7quantum10qb_visitor10qb_visitorEKiKb"></span><span id="xacc::quantum::qb_visitor::qb_visitor__iC.bC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1abaa7d63f06cf6e630afb4e435162b19a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qb_visitor</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nQubits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cut_angles</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor10qb_visitorEKiKb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitorD0Ev">
+<span id="_CPPv3N4xacc7quantum10qb_visitorD0Ev"></span><span id="_CPPv2N4xacc7quantum10qb_visitorD0Ev"></span><span id="xacc::quantum::qb_visitor::~qb_visitor"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a25321d5ae3fec713bc070670d89317ad"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">~qb_visitor</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitorD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4xacc7quantum10qb_visitor4nameEv">
+<span id="_CPPv3NK4xacc7quantum10qb_visitor4nameEv"></span><span id="_CPPv2NK4xacc7quantum10qb_visitor4nameEv"></span><span id="xacc::quantum::qb_visitor::nameC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1ab7d605055429363d01026ec29ef6aedc"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum10qb_visitor4nameEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return name of the visitor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4xacc7quantum10qb_visitor11descriptionEv">
+<span id="_CPPv3NK4xacc7quantum10qb_visitor11descriptionEv"></span><span id="_CPPv2NK4xacc7quantum10qb_visitor11descriptionEv"></span><span id="xacc::quantum::qb_visitor::descriptionC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a33bf307823e9c3f50d4f939597d40eec"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum10qb_visitor11descriptionEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return description of the visitor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor4normERKd">
+<span id="_CPPv3N4xacc7quantum10qb_visitor4normERKd"></span><span id="_CPPv2N4xacc7quantum10qb_visitor4normERKd"></span><span id="xacc::quantum::qb_visitor::norm__doubleCR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1ac071512d09eb80a35cfaba0f138e4bc3"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">norm</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor4normERKd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Normalise angles to the interval (-pi,pi]. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor13getXasmStringEv">
+<span id="_CPPv3N4xacc7quantum10qb_visitor13getXasmStringEv"></span><span id="_CPPv2N4xacc7quantum10qb_visitor13getXasmStringEv"></span><span id="xacc::quantum::qb_visitor::getXasmString"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a74fd046eec90f68987553b9c11f56acf"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getXasmString</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor13getXasmStringEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Return the finished qpu OpenQasm kernel. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK4xacc7quantum10qb_visitor15getTranspiledIREv">
+<span id="_CPPv3NK4xacc7quantum10qb_visitor15getTranspiledIREv"></span><span id="_CPPv2NK4xacc7quantum10qb_visitor15getTranspiledIREv"></span><span id="xacc::quantum::qb_visitor::getTranspiledIRC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a08352db27b45a812a73e83f0d70a9d59"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTranspiledIR</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum10qb_visitor15getTranspiledIREv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieved the IR tree in the basis gate set. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor8nQubits_E">
+<span id="_CPPv3N4xacc7quantum10qb_visitor8nQubits_E"></span><span id="_CPPv2N4xacc7quantum10qb_visitor8nQubits_E"></span><span id="xacc::quantum::qb_visitor::nQubits___i"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a1f8d195d5734433614ce9c861b7295a2"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nQubits_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor8nQubits_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of qubits. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor20classicalBitCounter_E">
+<span id="_CPPv3N4xacc7quantum10qb_visitor20classicalBitCounter_E"></span><span id="_CPPv2N4xacc7quantum10qb_visitor20classicalBitCounter_E"></span><span id="xacc::quantum::qb_visitor::classicalBitCounter___unsigned-i"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a969f508d6e4d8d34240b6f259767a3e3"></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">classicalBitCounter_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor20classicalBitCounter_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of classical bit registers to which measurements have been assigned. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor25qubitToClassicalBitIndex_E">
+<span id="_CPPv3N4xacc7quantum10qb_visitor25qubitToClassicalBitIndex_E"></span><span id="_CPPv2N4xacc7quantum10qb_visitor25qubitToClassicalBitIndex_E"></span><span id="xacc::quantum::qb_visitor::qubitToClassicalBitIndex___std::map:unsigned-i.unsigned-i:"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a96362484210e9951b52528d2b7d13a85"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">unsigned</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qubitToClassicalBitIndex_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor25qubitToClassicalBitIndex_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Map from qubit indices to assigned classical readout bit indices. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor9sequence_E">
+<span id="_CPPv3N4xacc7quantum10qb_visitor9sequence_E"></span><span id="_CPPv2N4xacc7quantum10qb_visitor9sequence_E"></span><span id="xacc::quantum::qb_visitor::sequence___nlohmann::json"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a06359cf2599fc2567684a46b4f72acaf"></span><span class="n"><span class="pre">nlohmann</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">json</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sequence_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor9sequence_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>JSON for sequence of gates (XASM format) </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor2piE">
+<span id="_CPPv3N4xacc7quantum10qb_visitor2piE"></span><span id="_CPPv2N4xacc7quantum10qb_visitor2piE"></span><span id="xacc::quantum::qb_visitor::pi__doubleC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a87e3fc28d02e43b63759ffc8bbc3900b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pi</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">constants</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pi</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor2piE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>No point reinventing the circle is there? </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum10qb_visitor24restrict_angles_to_pmpi_E">
+<span id="_CPPv3N4xacc7quantum10qb_visitor24restrict_angles_to_pmpi_E"></span><span id="_CPPv2N4xacc7quantum10qb_visitor24restrict_angles_to_pmpi_E"></span><span id="xacc::quantum::qb_visitor::restrict_angles_to_pmpi___b"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a54fa961ff579b94ad00c52f5712af272"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">restrict_angles_to_pmpi_</span></span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum10qb_visitor24restrict_angles_to_pmpi_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Restrict native gate rotation angles to (-pi,pi]. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classxacc_1_1quantum_1_1qb__qpu.html" class="btn btn-neutral float-left" title="Class qb_qpu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" class="btn btn-neutral float-right" title="Enum DefaultAnsatzes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

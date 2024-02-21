@@ -171,108 +171,6 @@
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_device">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_device</span></span><a class="headerlink" href="#core.session.aws_device" title="Permalink to this definition"></a></dt>
-<dd><p>aws_device:</p>
-<p>Valid settings: SV1 | TN1 | DM1 | Rigetti | LocalSimulator</p>
-<p>Selects an AWS Braket back-end simulator or QPU.</p>
-<p>aws_devices:</p>
-<p>A 1d-array (list) version of aws_device.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_devices">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_devices</span></span><a class="headerlink" href="#core.session.aws_devices" title="Permalink to this definition"></a></dt>
-<dd><p>aws_device:</p>
-<p>Valid settings: SV1 | TN1 | DM1 | Rigetti | LocalSimulator</p>
-<p>Selects an AWS Braket back-end simulator or QPU.</p>
-<p>aws_devices:</p>
-<p>A 1d-array (list) version of aws_device.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_format">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_format</span></span><a class="headerlink" href="#core.session.aws_format" title="Permalink to this definition"></a></dt>
-<dd><p>aws_format:</p>
-<p>Valid settings: braket | openqasm3</p>
-<p>Selects an AWS Braket back-end simulator or QPU language.</p>
-<p>aws_formats:</p>
-<p>A 1d-array (list) version of aws_device.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_formats">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_formats</span></span><a class="headerlink" href="#core.session.aws_formats" title="Permalink to this definition"></a></dt>
-<dd><p>aws_format:</p>
-<p>Valid settings: braket | openqasm3</p>
-<p>Selects an AWS Braket back-end simulator or QPU language.</p>
-<p>aws_formats:</p>
-<p>A 1d-array (list) version of aws_device.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_s3">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_s3</span></span><a class="headerlink" href="#core.session.aws_s3" title="Permalink to this definition"></a></dt>
-<dd><p>aws_s3:</p>
-<p>Valid settings: amazon-braket-*</p>
-<p>Specifies an AWS S3 bucket in which to store outputs from AWS Braket.
-Must begin with the prefix: “amazon-braket-”</p>
-<p>aws_s3s:</p>
-<p>A 1d-array (list) version of aws_s3.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_s3_path">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_s3_path</span></span><a class="headerlink" href="#core.session.aws_s3_path" title="Permalink to this definition"></a></dt>
-<dd><p>aws_s3_path:</p>
-<p>Valid settings: see AWS documentation for S3 path name conventions.</p>
-<p>Specifies a path (inside the S3 bucket specified by aws_s3) to store outputs from AWS Braket.</p>
-<p>aws_s3_paths:</p>
-<p>A 1d-array (list) version of aws_s3_path.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_s3_paths">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_s3_paths</span></span><a class="headerlink" href="#core.session.aws_s3_paths" title="Permalink to this definition"></a></dt>
-<dd><p>aws_s3_path:</p>
-<p>Valid settings: see AWS documentation for S3 path name conventions.</p>
-<p>Specifies a path (inside the S3 bucket specified by aws_s3) to store outputs from AWS Braket.</p>
-<p>aws_s3_paths:</p>
-<p>A 1d-array (list) version of aws_s3_path.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_s3s">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_s3s</span></span><a class="headerlink" href="#core.session.aws_s3s" title="Permalink to this definition"></a></dt>
-<dd><p>aws_s3:</p>
-<p>Valid settings: amazon-braket-*</p>
-<p>Specifies an AWS S3 bucket in which to store outputs from AWS Braket.
-Must begin with the prefix: “amazon-braket-”</p>
-<p>aws_s3s:</p>
-<p>A 1d-array (list) version of aws_s3.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_verbatim">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_verbatim</span></span><a class="headerlink" href="#core.session.aws_verbatim" title="Permalink to this definition"></a></dt>
-<dd><p>aws_verbatim:</p>
-<p>Valid settings: true | false</p>
-<p>Selects whether verbatim mode is used on AWS Braket hardware QPU (currently Rigetti).</p>
-<p>aws_verbatims:</p>
-<p>A 1d-array (list) version of aws_verbatim flag.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aws_verbatims">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aws_verbatims</span></span><a class="headerlink" href="#core.session.aws_verbatims" title="Permalink to this definition"></a></dt>
-<dd><p>aws_verbatim:</p>
-<p>Valid settings: true | false</p>
-<p>Selects whether verbatim mode is used on AWS Braket hardware QPU (currently Rigetti).</p>
-<p>aws_verbatims:</p>
-<p>A 1d-array (list) version of aws_verbatim flag.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="core.session.beta">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#core.session.beta" title="Permalink to this definition"></a></dt>
 <dd><div class="admonition warning">
@@ -1040,26 +938,6 @@ Default: “swap-shortest-path”</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.qpu_config">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qpu_config</span></span><a class="headerlink" href="#core.session.qpu_config" title="Permalink to this definition"></a></dt>
-<dd><p>qpu_config:</p>
-<p>A JSON file that contains configuration data for Quantum Brilliance hardware.</p>
-<p>qpu_configs:</p>
-<p>Valid settings: [qpu_config, …]</p>
-<p>A 1d-array (list) version of session.qpu_config.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.qpu_configs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qpu_configs</span></span><a class="headerlink" href="#core.session.qpu_configs" title="Permalink to this definition"></a></dt>
-<dd><p>qpu_config:</p>
-<p>A JSON file that contains configuration data for Quantum Brilliance hardware.</p>
-<p>qpu_configs:</p>
-<p>Valid settings: [qpu_config, …]</p>
-<p>A 1d-array (list) version of session.qpu_config.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="core.session.quil1">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quil1</span></span><a class="headerlink" href="#core.session.quil1" title="Permalink to this definition"></a></dt>
 <dd><p>quil1:</p>
@@ -1125,10 +1003,10 @@ Default: “swap-shortest-path”</p>
 </aside>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.reset_contrasts">
-<span class="sig-name descname"><span class="pre">reset_contrasts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.reset_contrasts" title="Permalink to this definition"></a></dt>
-<dd><p>QB hardware contrast thresholds reset</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.remote_backend_database_path">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote_backend_database_path</span></span><a class="headerlink" href="#core.session.remote_backend_database_path" title="Permalink to this definition"></a></dt>
+<dd><p>A YAML file that contains configuration data for remote backends (including hardware).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1192,12 +1070,6 @@ Default: “swap-shortest-path”</p>
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="core.session.set_contrasts">
-<span class="sig-name descname"><span class="pre">set_contrasts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.set_contrasts" title="Permalink to this definition"></a></dt>
-<dd><p>QB hardware contrast thresholds: init, qubit[0] final readout, qubit[1] final readout</p>
-</dd></dl>
-
-<dl class="py method">
 <dt class="sig sig-object py" id="core.session.set_parallel_run_config">
 <span class="sig-name descname"><span class="pre">set_parallel_run_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.set_parallel_run_config" title="Permalink to this definition"></a></dt>
 <dd><p>Set the parallel execution configuration</p>
@@ -1219,6 +1091,13 @@ Default: “swap-shortest-path”</p>
 <p>Number of measurement shots. The single setting applies globally.</p>
 <p>sns:</p>
 <p>A 1d-array (list) version of sn.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.state_vector">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_vector</span></span><a class="headerlink" href="#core.session.state_vector" title="Permalink to this definition"></a></dt>
+<dd><p>in_get_state_vec:</p>
+<p>Using this will extract the state vector (supported by the <cite>qpp</cite> backend only).</p>
 </dd></dl>
 
 <dl class="py property">

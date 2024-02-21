@@ -165,7 +165,7 @@ Retrieving license-key and floating-setting from json file: /qb/QB-Emulator-Lice
 <span class="o">}</span>
 Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class="m">20053</span> and machine code: floating-7943610145998300972
 Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class="m">20053</span> and machine code: floating-7943610145998300972
-QB-Emulator-License.json<span class="o">{</span>
+<span class="o">{</span>
     <span class="s2">&quot;00&quot;</span>: <span class="m">274</span>,
     <span class="s2">&quot;01&quot;</span>: <span class="m">247</span>,
     <span class="s2">&quot;10&quot;</span>: <span class="m">234</span>,
@@ -216,7 +216,7 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class=
 <ol class="arabic simple" start="9">
 <li><p>Try out a C++ example with CUDA Quantum.  Navigate to the example folder:</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /mnt/qb/qristal/examples/cpp/benchmark1_cudaq/<span class="sb">`</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /mnt/qb/qristal/examples/cpp/benchmark1_cudaq/
 </pre></div>
 </div>
 <ol class="arabic simple" start="10">
@@ -261,7 +261,6 @@ Results:
 <ul class="simple">
 <li><p>Tensor network backends <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code>, <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> and <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code> should only be used with placement turned on (<code class="docutils literal notranslate"><span class="pre">session.noplacement=False</span></code>) and with TKET support for Qristal installed (<code class="docutils literal notranslate"><span class="pre">WITH_TKET=ON</span></code> at cmake time; customer images are shipped with Qristal already compiled this way).</p></li>
 <li><p>Even with placement turned on, <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code>, <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> and <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code> will fail for some circuits if noise modelling is turned on and used with  QPU topologies that include connections between qubits with non-sequential indices.  The noise model <code class="docutils literal notranslate"><span class="pre">nm-3</span></code> is designed to be safe from this problem.</p></li>
-<li><p>Tensor network backends may use large amounts of memory and/or run very slowly for some circuits consisting of more than ~15 qubits.</p></li>
 </ul>
 </section>
 </section>

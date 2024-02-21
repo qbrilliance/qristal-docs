@@ -25,6 +25,12 @@ Includes
 --------
 
 
+- ``complex``
+
+- ``functional``
+
+- ``map``
+
 - ``qb/core/async_executor.hpp``
 
 - ``qb/core/cmake_variables.hpp``
@@ -35,7 +41,15 @@ Includes
 
 - ``qb/core/remote_async_accelerator.hpp``
 
+- ``qb/core/session_utils.hpp``
+
 - ``qb/core/utils.hpp``
+
+- ``string``
+
+- ``vector``
+
+- ``yaml-cpp/yaml.h``
 
 
 
@@ -57,14 +71,5 @@ Classes
 -------
 
 
-- :ref:`exhale_struct_structqb_1_1run__i__j__config`
-
 - :ref:`exhale_class_classqb_1_1session`
-
-
-Enums
------
-
-
-- :ref:`exhale_enum_session_8hpp_1a02db9735a9c041d02e48753b9ff50d01`
 
