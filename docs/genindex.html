@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Index &mdash; Quantum SDK  documentation</title>
+  <title>Index &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -33,7 +33,7 @@
           
           
           <a href="index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -49,13 +49,20 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -69,7 +76,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">Quantum SDK</a>
+          <a href="index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -129,10 +136,10 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.session.aer_sim_types">aer_sim_types (core.session property)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.Circuit.amcu">amcu() (core.Circuit method)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rst/python_autodoc.html#core.Circuit.amcu">amcu() (core.Circuit method)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.Circuit.amplitude_amplification">amplitude_amplification() (core.Circuit method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.AmplitudeDampingChannel">AmplitudeDampingChannel (class in core)</a>
@@ -145,11 +152,7 @@
         <li><a href="rst/python_autodoc.html#core.swap_placement_pass.apply">(core.swap_placement_pass method)</a>
 </li>
       </ul></li>
-      <li><a href="rst/python_autodoc.html#core.session.aws32dm1">aws32dm1() (core.session method)</a>
-</li>
-      <li><a href="rst/python_autodoc.html#core.session.aws32sv1">aws32sv1() (core.session method)</a>
-</li>
-      <li><a href="rst/python_autodoc.html#core.session.aws8tn1">aws8tn1() (core.session method)</a>
+      <li><a href="rst/python_autodoc.html#core.session.aws_setup">aws_setup() (core.session method)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -163,12 +166,18 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rst/python_autodoc.html#core.session.betas">betas (core.session property)</a>
 </li>
+      <li><a href="rst/python_autodoc.html#core.session.bitstring_index">bitstring_index() (core.session method)</a>
+</li>
   </ul></td>
 </tr></table>
 
 <h2 id="C">C</h2>
 <table style="width: 100%" class="indextable genindextable"><tr>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rst/python_autodoc.html#core.session.calc_jacobian">calc_jacobian (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.calc_jacobians">calc_jacobians (core.session property)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.Circuit.canonical_ae">canonical_ae() (core.Circuit method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.ccx">ccx() (core.Circuit method)</a>
@@ -191,10 +200,10 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.compare_gt">compare_gt() (core.Circuit method)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.NoiseModel.connectivity">connectivity (core.NoiseModel property)</a>
-</li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rst/python_autodoc.html#core.NoiseModel.connectivity">connectivity (core.NoiseModel property)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.Circuit.controlled_multiplication">controlled_multiplication() (core.Circuit method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.controlled_proper_fraction_division">controlled_proper_fraction_division() (core.Circuit method)</a>
@@ -273,7 +282,7 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.GeneralizedPhaseAmplitudeDampingChannel">GeneralizedPhaseAmplitudeDampingChannel (class in core)</a>
 </li>
-      <li><a href="_cpp_api/function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html#_CPPv424get_emulator_noise_modelPKc">get_emulator_noise_model (C++ function)</a>
+      <li><a href="_cpp_api/function_emulator_8hpp_1ac026c44df5ae9229f864838d2fa22d7f.html#_CPPv424get_emulator_noise_modelPKc">get_emulator_noise_model (C++ function)</a>
 </li>
   </ul></td>
 </tr></table>
@@ -353,15 +362,19 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.session.max_kraus_dimension">max_kraus_dimension (core.session property)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rst/python_autodoc.html#core.session.max_kraus_dimensions">max_kraus_dimensions (core.session property)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rst/python_autodoc.html#core.Circuit.mcx">mcx() (core.Circuit method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.measure">measure() (core.Circuit method)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.measure_all">measure_all() (core.Circuit method)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.measure_sample_sequential">measure_sample_sequential (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.measure_sample_sequentials">measure_sample_sequentials (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.Circuit.multiplication">multiplication() (core.Circuit method)</a>
 </li>
@@ -395,10 +408,10 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.NoiseModel.QubitConnectivity">NoiseModel.QubitConnectivity (class in core)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rst/python_autodoc.html#core.NoiseProperties">NoiseProperties (class in core)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rst/python_autodoc.html#core.session.noises">noises (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.session.nooptimise">nooptimise (core.session property)</a>
@@ -417,6 +430,10 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.session.notimings">notimings (core.session property)</a>
 </li>
+      <li><a href="rst/python_autodoc.html#core.Circuit.num_free_params">num_free_params() (core.Circuit method)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.Circuit.num_qubits">num_qubits() (core.Circuit method)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.session.num_threads">num_threads (core.session property)</a>
 </li>
   </ul></td>
@@ -427,9 +444,7 @@
   <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="rst/python_autodoc.html#core.Circuit.openqasm">openqasm() (core.Circuit method)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.session.out_bitstring">out_bitstring (core.session property)</a>
-</li>
-      <li><a href="rst/python_autodoc.html#core.session.out_bitstrings">out_bitstrings (core.session property)</a>
+      <li><a href="rst/python_autodoc.html#core.session.out_counts">out_counts (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.session.out_divergence">out_divergence (core.session property)</a>
 </li>
@@ -438,6 +453,10 @@
       <li><a href="rst/python_autodoc.html#core.session.out_double_qubit_gate_qty">out_double_qubit_gate_qty (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.session.out_double_qubit_gate_qtys">out_double_qubit_gate_qtys (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.out_prob_jacobians">out_prob_jacobians (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.out_probs">out_probs (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.session.out_qbjson">out_qbjson (core.session property)</a>
 </li>
@@ -487,10 +506,16 @@
 </li>
       <li><a href="rst/python_autodoc.html#core.ReadoutError.p_10">p_10 (core.ReadoutError property)</a>
 </li>
-      <li><a href="rst/python_autodoc.html#core.PhaseDampingChannel">PhaseDampingChannel (class in core)</a>
+      <li><a href="rst/python_autodoc.html#core.Circuit.param_dict_to_list">param_dict_to_list() (core.Circuit method)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.parameter_list">parameter_list (core.session property)</a>
+</li>
+      <li><a href="rst/python_autodoc.html#core.session.parameter_lists">parameter_lists (core.session property)</a>
 </li>
   </ul></td>
   <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="rst/python_autodoc.html#core.PhaseDampingChannel">PhaseDampingChannel (class in core)</a>
+</li>
       <li><a href="rst/python_autodoc.html#core.session.placement">placement (core.session property)</a>
 </li>
       <li><a href="rst/python_autodoc.html#core.session.placements">placements (core.session property)</a>
@@ -510,6 +535,10 @@
       <li><a href="rst/python_autodoc.html#core.session.qb12">qb12() (core.session method)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilderE">qb::CircuitBuilder (C++ class)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder29add_gate_with_free_parametersENSt6stringENSt6vectorI6size_tEENSt6vectorINSt6stringEEE">qb::CircuitBuilder::add_gate_with_free_parameters (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder30add_instruction_params_to_listENSt10shared_ptrIN4xacc11InstructionEEE">qb::CircuitBuilder::add_instruction_params_to_list (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder22AmplitudeAmplificationER14CircuitBuilderR14CircuitBuilderi">qb::CircuitBuilder::AmplitudeAmplification (C++ function)</a>
 </li>
@@ -543,7 +572,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder14ControlledSwapENSt6vectorIiEENSt6vectorIiEENSt6vectorIiEENSt6vectorIiEE">qb::CircuitBuilder::ControlledSwap (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder6CPhaseE6size_t6size_td">qb::CircuitBuilder::CPhase (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder6CPhaseE6size_t6size_tNSt6stringE">qb::CircuitBuilder::CPhase (C++ function)</a>, <a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder6CPhaseE6size_t6size_td">[1]</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2CUER14CircuitBuilderNSt6vectorIiEE">qb::CircuitBuilder::CU (C++ function)</a>
 </li>
@@ -555,11 +584,15 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder17ExponentialSearchENSt6stringE18StatePrepFuncCType15OracleFuncCTypeiNSt8functionIFiiEEEiNSt6vectorIiEENSt6vectorIiEENSt6stringE">qb::CircuitBuilder::ExponentialSearch (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder12free_params_E">qb::CircuitBuilder::free_params_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder14gate_provider_E">qb::CircuitBuilder::gate_provider_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder14GeneralisedMCXEiNSt6vectorIiEENSt6vectorIiEE">qb::CircuitBuilder::GeneralisedMCX (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder3getEv">qb::CircuitBuilder::get (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4NK2qb14CircuitBuilder15get_free_paramsEv">qb::CircuitBuilder::get_free_params (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder1HE6size_t">qb::CircuitBuilder::H (C++ function)</a>
 </li>
@@ -568,6 +601,10 @@
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder14InverseCircuitER14CircuitBuilder">qb::CircuitBuilder::InverseCircuit (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder4IQFTERKNSt6vectorIiEE">qb::CircuitBuilder::IQFT (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4NK2qb14CircuitBuilder15is_parametrizedEv">qb::CircuitBuilder::is_parametrized (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder16is_parametrized_E">qb::CircuitBuilder::is_parametrized_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder3MCXERKNSt6vectorIiEE6size_t">qb::CircuitBuilder::MCX (C++ function)</a>
 </li>
@@ -578,6 +615,14 @@
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder27MultiControlledUWithAncillaER14CircuitBuilderNSt6vectorIiEENSt6vectorIiEE">qb::CircuitBuilder::MultiControlledUWithAncilla (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder14MultiplicationENSt6vectorIiEENSt6vectorIiEENSt6vectorIiEEib">qb::CircuitBuilder::Multiplication (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4NK2qb14CircuitBuilder15num_free_paramsEv">qb::CircuitBuilder::num_free_params (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder10num_qubitsEv">qb::CircuitBuilder::num_qubits (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder11num_qubits_E">qb::CircuitBuilder::num_qubits_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4NK2qb14CircuitBuilder16param_map_to_vecERKNSt3mapINSt6stringEdEE">qb::CircuitBuilder::param_map_to_vec (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4NK2qb14CircuitBuilder5printEv">qb::CircuitBuilder::print (C++ function)</a>
 </li>
@@ -597,11 +642,11 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder24RunMLAmplitudeEstimationER14CircuitBuilderR14CircuitBuilderNSt8functionIFiNSt6stringEiEEENSt6vectorIiEEiiiNSt6stringE">qb::CircuitBuilder::RunMLAmplitudeEstimation (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RXE6size_td">qb::CircuitBuilder::RX (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RXE6size_tNSt6stringE">qb::CircuitBuilder::RX (C++ function)</a>, <a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RXE6size_td">[1]</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RYE6size_td">qb::CircuitBuilder::RY (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RYE6size_tNSt6stringE">qb::CircuitBuilder::RY (C++ function)</a>, <a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RYE6size_td">[1]</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RZE6size_td">qb::CircuitBuilder::RZ (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RZE6size_tNSt6stringE">qb::CircuitBuilder::RZ (C++ function)</a>, <a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2RZE6size_td">[1]</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder1SE6size_t">qb::CircuitBuilder::S (C++ function)</a>
 </li>
@@ -617,9 +662,9 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder3TdgE6size_t">qb::CircuitBuilder::Tdg (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2U1E6size_td">qb::CircuitBuilder::U1 (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2U1E6size_tNSt6stringE">qb::CircuitBuilder::U1 (C++ function)</a>, <a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2U1E6size_td">[1]</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2U3E6size_tddd">qb::CircuitBuilder::U3 (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2U3E6size_tNSt6stringENSt6stringENSt6stringE">qb::CircuitBuilder::U3 (C++ function)</a>, <a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder2U3E6size_tddd">[1]</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1CircuitBuilder.html#_CPPv4N2qb14CircuitBuilder6UPrimeERiRiRiRi">qb::CircuitBuilder::UPrime (C++ function)</a>
 </li>
@@ -669,19 +714,19 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1CirqQsim.html#_CPPv4N2qb8CirqQsim19updateConfigurationERKN4xacc16HeterogeneousMapE">qb::CirqQsim::updateConfiguration (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0.html#_CPPv4N2qb29create_circuit_optimizer_passEv">qb::create_circuit_optimizer_pass (C++ function)</a>
+      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a0817e5330bf1d5cd43bd290d8b12f058.html#_CPPv4N2qb29create_circuit_optimizer_passEv">qb::create_circuit_optimizer_pass (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html#_CPPv4N2qb34create_initial_state_simplify_passEv">qb::create_initial_state_simplify_pass (C++ function)</a>
+      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a278d09f8d45794b205700d84d88b280f.html#_CPPv4N2qb34create_initial_state_simplify_passEv">qb::create_initial_state_simplify_pass (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html#_CPPv4N2qb33create_noise_aware_placement_passENSt10shared_ptrIN4xacc11AcceleratorEEE">qb::create_noise_aware_placement_pass (C++ function)</a>, <a href="_cpp_api/function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7.html#_CPPv4N2qb33create_noise_aware_placement_passERK28noise_aware_placement_config">[1]</a>
+      <li><a href="_cpp_api/function_noise__aware__placement__pass_8hpp_1ac55aa39b348ea8db4a9c2f97d564bc92.html#_CPPv4N2qb33create_noise_aware_placement_passERK28noise_aware_placement_config">qb::create_noise_aware_placement_pass (C++ function)</a>, <a href="_cpp_api/function_noise__aware__placement__pass_8hpp_1ae8cef3783d913c604cc1344dc854c5b1.html#_CPPv4N2qb33create_noise_aware_placement_passENSt10shared_ptrIN4xacc11AcceleratorEEE">[1]</a>
 </li>
-      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a.html#_CPPv4N2qb20create_peephole_passEv">qb::create_peephole_pass (C++ function)</a>
+      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a7cb929d9837a7a52e08d1843cf748968.html#_CPPv4N2qb20create_peephole_passEv">qb::create_peephole_pass (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d.html#_CPPv4N2qb31create_remove_redundancies_passEv">qb::create_remove_redundancies_pass (C++ function)</a>
+      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a7b97a0eb840b1a54fabf516a7ebc1ba5.html#_CPPv4N2qb31create_remove_redundancies_passEv">qb::create_remove_redundancies_pass (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c.html#_CPPv4N2qb26create_swap_placement_passENSt10shared_ptrIN4xacc11AcceleratorEEE">qb::create_swap_placement_pass (C++ function)</a>, <a href="_cpp_api/function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f.html#_CPPv4N2qb26create_swap_placement_passERKNSt6vectorINSt4pairIiiEEEE">[1]</a>
+      <li><a href="_cpp_api/function_swap__placement__pass_8hpp_1a538dcdd4fa63c91aed83cae829c0000a.html#_CPPv4N2qb26create_swap_placement_passENSt10shared_ptrIN4xacc11AcceleratorEEE">qb::create_swap_placement_pass (C++ function)</a>, <a href="_cpp_api/function_swap__placement__pass_8hpp_1a73eedda9102c5b9819ce17981b661e12.html#_CPPv4N2qb26create_swap_placement_passERKNSt6vectorINSt4pairIiiEEEE">[1]</a>
 </li>
-      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62.html#_CPPv4N2qb28create_two_qubit_squash_passEv">qb::create_two_qubit_squash_pass (C++ function)</a>
+      <li><a href="_cpp_api/function_circuit__opt__passes_8hpp_1af9087351805d30805b0c6214960cd890.html#_CPPv4N2qb28create_two_qubit_squash_passEv">qb::create_two_qubit_squash_pass (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1cudaq__ir__converter.html#_CPPv4N2qb18cudaq_ir_converterE">qb::cudaq_ir_converter (C++ class)</a>
 </li>
@@ -729,7 +774,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1cudaq__sim__pool.html#_CPPv4N2qb14cudaq_sim_poolD0Ev">qb::cudaq_sim_pool::~cudaq_sim_pool (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752.html#_CPPv4N2qb22execute_on_qb_hardwareENSt10shared_ptrIN4xacc7quantum6qb_qpuEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_configb">qb::execute_on_qb_hardware (C++ function)</a>
+      <li><a href="_cpp_api/function_qb__qpu_8hpp_1a9d78b600220a284847b7db5239015e7b.html#_CPPv4N2qb22execute_on_qb_hardwareENSt10shared_ptrIN4xacc7quantum6qb_qpuEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEERK14run_i_j_configb">qb::execute_on_qb_hardware (C++ function)</a>
 </li>
       <li><a href="_cpp_api/function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4.html#_CPPv4N2qb18load_cudaq_backendENSt6stringE">qb::load_cudaq_backend (C++ function)</a>
 </li>
@@ -754,6 +799,8 @@
       <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator18m_initial_bond_dimE">qb::MpsAccelerator::m_initial_bond_dim (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator14m_max_bond_dimE">qb::MpsAccelerator::m_max_bond_dim (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator19m_meas_sampling_seqE">qb::MpsAccelerator::m_meas_sampling_seq (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1MpsAccelerator.html#_CPPv4N2qb14MpsAccelerator13m_noise_modelE">qb::MpsAccelerator::m_noise_model (C++ member)</a>
 </li>
@@ -967,139 +1014,13 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel12QbNoiseModelE10Generation">qb::QbNoiseModel::QbNoiseModel (C++ function)</a>, <a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel12QbNoiseModelE10Generationdd">[1]</a>, <a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel12QbNoiseModelE10Generationdddd">[2]</a>, <a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel12QbNoiseModelE10Generationdddddd">[3]</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdd">qb::QbNoiseModel::setup_2_qubits (C++ function)</a>, <a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdddd">[1]</a>, <a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdddddd">[2]</a>
+      <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE">qb::QbNoiseModel::setup_2_qubits (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel15setup_48_qubitsEdd">qb::QbNoiseModel::setup_48_qubits (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel22setup_48_qubits_linearEdd">qb::QbNoiseModel::setup_48_qubits_linear (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel15setup_48_qubitsEddb">qb::QbNoiseModel::setup_48_qubits (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel15setup_64_qubitsEdd">qb::QbNoiseModel::setup_64_qubits (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel16setup_gate_noiseE6size_tddNSt6vectorINSt4pairI6size_t6size_tEEEE">qb::QbNoiseModel::setup_gate_noise (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html#_CPPv4N2qb3qml15DefaultAnsatzesE">qb::qml::DefaultAnsatzes (C++ enum)</a>
-</li>
-      <li><a href="_cpp_api/enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html#_CPPv4N2qb3qml15DefaultAnsatzes8qrlRDBMSE">qb::qml::DefaultAnsatzes::qrlRDBMS (C++ enumerator)</a>
-</li>
-      <li><a href="_cpp_api/enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html#_CPPv4N2qb3qml13GradientTypesE">qb::qml::GradientTypes (C++ enum)</a>
-</li>
-      <li><a href="_cpp_api/enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html#_CPPv4N2qb3qml13GradientTypes15parameter_shiftE">qb::qml::GradientTypes::parameter_shift (C++ enumerator)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCircE">qb::qml::ParamCirc (C++ class)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc6CPhaseE6size_t6size_tPc">qb::qml::ParamCirc::CPhase (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc15encodingAnsatz_E">qb::qml::ParamCirc::encodingAnsatz_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc16encParamIndices_E">qb::qml::ParamCirc::encParamIndices_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc13genParamNamesEv">qb::qml::ParamCirc::genParamNames (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc23getNumAnsatzRepetitionsEv">qb::qml::ParamCirc::getNumAnsatzRepetitions (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc12getNumInputsEv">qb::qml::ParamCirc::getNumInputs (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc12getNumParamsEv">qb::qml::ParamCirc::getNumParams (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc12getNumQubitsEv">qb::qml::ParamCirc::getNumQubits (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc21numAnsatzRepetitions_E">qb::qml::ParamCirc::numAnsatzRepetitions_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc10numInputs_E">qb::qml::ParamCirc::numInputs_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc10numParams_E">qb::qml::ParamCirc::numParams_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc10numQubits_E">qb::qml::ParamCirc::numQubits_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc9ParamCircE6size_t">qb::qml::ParamCirc::ParamCirc (C++ function)</a>, <a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc9ParamCircENSt6size_tEN3qml15DefaultAnsatzesENSt6size_tEN2qb12VectorStringE">[1]</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc17processAndAddGateENSt6stringENSt6vectorI6size_tEEPc">qb::qml::ParamCirc::processAndAddGate (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc14queryOptAnsatzEv">qb::qml::ParamCirc::queryOptAnsatz (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc8reuploadEv">qb::qml::ParamCirc::reupload (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc12reuploading_E">qb::qml::ParamCirc::reuploading_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc2RXE6size_tPc">qb::qml::ParamCirc::RX (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc2RYE6size_tPc">qb::qml::ParamCirc::RY (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc2RZE6size_tPc">qb::qml::ParamCirc::RZ (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc2U1E6size_tPc">qb::qml::ParamCirc::U1 (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc9varGates_E">qb::qml::ParamCirc::varGates_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1ParamCirc.html#_CPPv4N2qb3qml9ParamCirc16varParamIndices_E">qb::qml::ParamCirc::varParamIndices_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutorE">qb::qml::QMLExecutor (C++ class)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor3accE">qb::qml::QMLExecutor::acc (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor11accPointer_E">qb::qml::QMLExecutor::accPointer_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor24constructFullParamVectorEv">qb::qml::QMLExecutor::constructFullParamVector (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor9getBufferEv">qb::qml::QMLExecutor::getBuffer (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor10getCircuitEv">qb::qml::QMLExecutor::getCircuit (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor13getGradBufferEv">qb::qml::QMLExecutor::getGradBuffer (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor14getInputParamsEv">qb::qml::QMLExecutor::getInputParams (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor11getNumShotsEv">qb::qml::QMLExecutor::getNumShots (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor7getSeedEv">qb::qml::QMLExecutor::getSeed (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor16getStatGradientsEv">qb::qml::QMLExecutor::getStatGradients (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor8getStatsEv">qb::qml::QMLExecutor::getStats (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor17getStatsFromShotsENSt3mapINSt6stringEiEE">qb::qml::QMLExecutor::getStatsFromShots (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor10getWeightsEv">qb::qml::QMLExecutor::getWeights (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor15gradientBuffer_E">qb::qml::QMLExecutor::gradientBuffer_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor15gradientMethod_E">qb::qml::QMLExecutor::gradientMethod_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor13gradientType_E">qb::qml::QMLExecutor::gradientType_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor20gradientTypeToStringEv">qb::qml::QMLExecutor::gradientTypeToString (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor15inputParamVals_E">qb::qml::QMLExecutor::inputParamVals_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor9numShots_E">qb::qml::QMLExecutor::numShots_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor12observables_E">qb::qml::QMLExecutor::observables_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor13outputBuffer_E">qb::qml::QMLExecutor::outputBuffer_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor11QMLExecutorE9ParamCircNSt6vectorIdEENSt6vectorIdEE">qb::qml::QMLExecutor::QMLExecutor (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor3runEv">qb::qml::QMLExecutor::run (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor12runGradientsEv">qb::qml::QMLExecutor::runGradients (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor5seed_E">qb::qml::QMLExecutor::seed_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor7seeded_E">qb::qml::QMLExecutor::seeded_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor10setCircuitE9ParamCirc">qb::qml::QMLExecutor::setCircuit (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor14setInputParamsENSt6vectorIdEE">qb::qml::QMLExecutor::setInputParams (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor11setNumShotsENSt6size_tE">qb::qml::QMLExecutor::setNumShots (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor7setSeedEi">qb::qml::QMLExecutor::setSeed (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor10setWeightsENSt6vectorIdEE">qb::qml::QMLExecutor::setWeights (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor14targetCircuit_E">qb::qml::QMLExecutor::targetCircuit_ (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1qml_1_1QMLExecutor.html#_CPPv4N2qb3qml11QMLExecutor16weightParamVals_E">qb::qml::QMLExecutor::weightParamVals_ (C++ member)</a>
+      <li><a href="_cpp_api/classqb_1_1QbNoiseModel.html#_CPPv4N2qb12QbNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE">qb::QbNoiseModel::setup_gate_noise (C++ function)</a>
 </li>
       <li><a href="_cpp_api/structqb_1_1ReadoutError.html#_CPPv4N2qb12ReadoutErrorE">qb::ReadoutError (C++ struct)</a>
 </li>
@@ -1119,13 +1040,13 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session14aer_sim_types_E">qb::session::aer_sim_types_ (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session8aws32dm1Ev">qb::session::aws32dm1 (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session8aws32sv1Ev">qb::session::aws32sv1 (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session7aws8tn1Ev">qb::session::aws8tn1 (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session9aws_setupE4uint4uint4uint">qb::session::aws_setup (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session6betas_E">qb::session::betas_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15bitstring_indexENSt6stringE6size_t6size_t">qb::session::bitstring_index (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15calc_jacobians_E">qb::session::calc_jacobians_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session19circuit_input_typesE">qb::session::circuit_input_types (C++ enum)</a>
 </li>
@@ -1165,6 +1086,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session9get_betasEv">qb::session::get_betas (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session18get_calc_jacobiansEv">qb::session::get_calc_jacobians (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session16get_circuit_optsEv">qb::session::get_circuit_opts (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session9get_debugEv">qb::session::get_debug (C++ function)</a>
@@ -1185,13 +1108,15 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18get_jensen_shannonERK6size_tRK6size_t">qb::session::get_jensen_shannon (C++ function)</a>, <a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18get_jensen_shannonEv">[1]</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session29get_jensen_shannon_divergenceERKNSt3mapINSt6stringEiEERKNSt3mapINSt6stringENSt7complexIdEEEE">qb::session::get_jensen_shannon_divergence (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session29get_jensen_shannon_divergenceEKNSt6vectorIiEEKNSt6vectorINSt7complexIdEEEE">qb::session::get_jensen_shannon_divergence (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session16get_log_enabledsEv">qb::session::get_log_enableds (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session23get_max_bond_dimensionsEv">qb::session::get_max_bond_dimensions (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session24get_max_kraus_dimensionsEv">qb::session::get_max_kraus_dimensions (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session30get_measure_sample_sequentialsEv">qb::session::get_measure_sample_sequentials (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session21get_noise_mitigationsEv">qb::session::get_noise_mitigations (C++ function)</a>
 </li>
@@ -1207,11 +1132,15 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session13get_notimingsEv">qb::session::get_notimings (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session18get_out_bitstringsEv">qb::session::get_out_bitstrings (C++ function)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session14get_out_countsEv">qb::session::get_out_counts (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session19get_out_divergencesEv">qb::session::get_out_divergences (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session30get_out_double_qubit_gate_qtysEv">qb::session::get_out_double_qubit_gate_qtys (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session22get_out_prob_jacobiansEv">qb::session::get_out_prob_jacobians (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session13get_out_probsEv">qb::session::get_out_probs (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session15get_out_qbjsonsEv">qb::session::get_out_qbjsons (C++ function)</a>
 </li>
@@ -1231,6 +1160,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session23get_output_oqm_enabledsEv">qb::session::get_output_oqm_enableds (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session21get_parameter_vectorsEv">qb::session::get_parameter_vectors (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session14get_placementsEv">qb::session::get_placements (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session7get_qnsEv">qb::session::get_qns (C++ function)</a>
@@ -1241,8 +1172,6 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session19get_rel_svd_cutoffsEv">qb::session::get_rel_svd_cutoffs (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session32get_remote_backend_database_pathEv">qb::session::get_remote_backend_database_path (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4NK2qb7session7get_rnsEv">qb::session::get_rns (C++ function)</a>
@@ -1277,6 +1206,10 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11help_betas_E">qb::session::help_betas_ (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21help_bitstring_index_E">qb::session::help_bitstring_index_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20help_calc_jacobians_E">qb::session::help_calc_jacobians_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18help_circuit_opts_E">qb::session::help_circuit_opts_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11help_debug_E">qb::session::help_debug_ (C++ member)</a>
@@ -1299,12 +1232,16 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session26help_max_kraus_dimensions_E">qb::session::help_max_kraus_dimensions_ (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session32help_measure_sample_sequentials_E">qb::session::help_measure_sample_sequentials_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23help_noise_mitigations_E">qb::session::help_noise_mitigations_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18help_noise_models_E">qb::session::help_noise_models_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session12help_noises_E">qb::session::help_noises_ (C++ member)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session17help_nooptimises_E">qb::session::help_nooptimises_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18help_noplacements_E">qb::session::help_noplacements_ (C++ member)</a>
@@ -1313,11 +1250,15 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15help_notimings_E">qb::session::help_notimings_ (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20help_out_bitstrings_E">qb::session::help_out_bitstrings_ (C++ member)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session16help_out_counts_E">qb::session::help_out_counts_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21help_out_divergences_E">qb::session::help_out_divergences_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session32help_out_double_qubit_gate_qtys_E">qb::session::help_out_double_qubit_gate_qtys_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session19help_out_jacobians_E">qb::session::help_out_jacobians_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15help_out_probs_E">qb::session::help_out_probs_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session17help_out_qbjsons_E">qb::session::help_out_qbjsons_ (C++ member)</a>
 </li>
@@ -1336,6 +1277,8 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23help_output_amplitudes_E">qb::session::help_output_amplitudes_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session25help_output_oqm_enableds_E">qb::session::help_output_oqm_enableds_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23help_parameter_vectors_E">qb::session::help_parameter_vectors_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session16help_placements_E">qb::session::help_placements_ (C++ member)</a>
 </li>
@@ -1405,6 +1348,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21max_kraus_dimensions_E">qb::session::max_kraus_dimensions_ (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session27measure_sample_sequentials_E">qb::session::measure_sample_sequentials_ (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session6name_mE">qb::session::name_m (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session13noise_models_E">qb::session::noise_models_ (C++ member)</a>
@@ -1421,11 +1366,15 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session8number_mE">qb::session::number_m (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15out_bitstrings_E">qb::session::out_bitstrings_ (C++ member)</a>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11out_counts_E">qb::session::out_counts_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session16out_divergences_E">qb::session::out_divergences_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session27out_double_qubit_gate_qtys_E">qb::session::out_double_qubit_gate_qtys_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session19out_prob_gradients_E">qb::session::out_prob_gradients_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session10out_probs_E">qb::session::out_probs_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session12out_qbjsons_E">qb::session::out_qbjsons_ (C++ member)</a>
 </li>
@@ -1444,6 +1393,8 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18output_amplitudes_E">qb::session::output_amplitudes_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20output_oqm_enableds_E">qb::session::output_oqm_enableds_ (C++ member)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18parameter_vectors_E">qb::session::parameter_vectors_ (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session11placements_E">qb::session::placements_ (C++ member)</a>
 </li>
@@ -1483,6 +1434,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session9run_asyncEKNSt6size_tEKNSt6size_tENSt10shared_ptrIN4xacc11AcceleratorEEE">qb::session::run_async (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session13run_gradientsEK6size_tK6size_t">qb::session::run_gradients (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session12run_internalEKNSt6size_tEKNSt6size_tENSt10shared_ptrIN4xacc11AcceleratorEEEPNSt5mutexE">qb::session::run_internal (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session6seeds_E">qb::session::seeds_ (C++ member)</a>
@@ -1500,6 +1453,10 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session8set_betaERK2ND">qb::session::set_beta (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session9set_betasERK11VectorMapND">qb::session::set_betas (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session17set_calc_jacobianEb">qb::session::set_calc_jacobian (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18set_calc_jacobiansE10VectorBool">qb::session::set_calc_jacobians (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session15set_circuit_optERK6Passes">qb::session::set_circuit_opt (C++ function)</a>
 </li>
@@ -1543,6 +1500,10 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session24set_max_kraus_dimensionsERK7VectorN">qb::session::set_max_kraus_dimensions (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session29set_measure_sample_sequentialERKNSt6stringE">qb::session::set_measure_sample_sequential (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session30set_measure_sample_sequentialsERK12VectorString">qb::session::set_measure_sample_sequentials (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session9set_noiseERKb">qb::session::set_noise (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20set_noise_mitigationERKNSt6stringE">qb::session::set_noise_mitigation (C++ function)</a>
@@ -1580,6 +1541,10 @@
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23set_output_oqm_enabledsERK10VectorBool">qb::session::set_output_oqm_enableds (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session23set_parallel_run_configERKNSt6stringE">qb::session::set_parallel_run_config (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session20set_parameter_vectorERKNSt6vectorIdEE">qb::session::set_parameter_vector (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21set_parameter_vectorsE7Table2dINSt6vectorIdEEE">qb::session::set_parameter_vectors (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session13set_placementERKNSt6stringE">qb::session::set_placement (C++ function)</a>
 </li>
@@ -1651,6 +1616,8 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session25VALID_HARDWARE_PLACEMENTSE">qb::session::VALID_HARDWARE_PLACEMENTS (C++ member)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session30VALID_MEASURE_SAMPLING_OPTIONSE">qb::session::VALID_MEASURE_SAMPLING_OPTIONS (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session12validate_accERKNSt6stringE">qb::session::validate_acc (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21validate_aer_sim_typeERKNSt6stringE">qb::session::validate_aer_sim_type (C++ function)</a>
@@ -1659,11 +1626,15 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session18validate_instringsEv">qb::session::validate_instrings (C++ function)</a>
 </li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session31validate_measure_sample_optionsERKNSt6stringE">qb::session::validate_measure_sample_options (C++ function)</a>
+</li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session25validate_noise_mitigationERKNSt6stringE">qb::session::validate_noise_mitigation (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21validate_qns_nonemptyEv">qb::session::validate_qns_nonempty (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21validate_rns_nonemptyEv">qb::session::validate_rns_nonempty (C++ function)</a>
+</li>
+      <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session12validate_runEv">qb::session::validate_run (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1session.html#_CPPv4N2qb7session21validate_sns_nonemptyEv">qb::session::validate_sns_nonempty (C++ function)</a>
 </li>
@@ -1695,7 +1666,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4N2qb11thread_pool17initialise_threadEv">qb::thread_pool::initialise_thread (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args">qb::thread_pool::internal_submit (C++ function)</a>, <a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool15internal_submitENSt9enable_ifIXntNSt7is_voidI11result_typeE5valueEENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args">[1]</a>
+      <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args">qb::thread_pool::internal_submit (C++ function)</a>, <a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args">[1]</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4N2qb11thread_pool4loopENSt10shared_ptrIbEE">qb::thread_pool::loop (C++ function)</a>
 </li>
@@ -1715,7 +1686,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4N2qb11thread_pool13shutting_downE">qb::thread_pool::shutting_down (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args">qb::thread_pool::submit (C++ function)</a>, <a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool6submitENSt9enable_ifIXntNSt7is_voidI11result_typeE5valueEENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args">[1]</a>
+      <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args">qb::thread_pool::submit (C++ function)</a>, <a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4I0Dp0EN2qb11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args">[1]</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4N2qb11thread_pool11thread_poolERK11thread_pool">qb::thread_pool::thread_pool (C++ function)</a>, <a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4N2qb11thread_pool11thread_poolEv">[1]</a>
 </li>
@@ -1725,7 +1696,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1thread__pool.html#_CPPv4N2qb11thread_poolD0Ev">qb::thread_pool::~thread_pool (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html#_CPPv4N2qb12uniqueBitsQDERNSt10shared_ptrIN4xacc20CompositeInstructionEEE">qb::uniqueBitsQD (C++ function)</a>
+      <li><a href="_cpp_api/function_circuit__builder_8hpp_1ac4474aa344183b310290d76980efd1d8.html#_CPPv4N2qb12uniqueBitsQDERNSt10shared_ptrIN4xacc20CompositeInstructionEEE">qb::uniqueBitsQD (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1vqee_1_1AdamMLP.html#_CPPv4N2qb4vqee7AdamMLPE">qb::vqee::AdamMLP (C++ class)</a>
 </li>
@@ -1755,7 +1726,7 @@
 </li>
       <li><a href="_cpp_api/function_case__generator_8hpp_1a08ad20c72570d148656273c1a257fdc3.html#_CPPv4N2qb4vqee14ansatzToStringEKNSt10shared_ptrIN4xacc20CompositeInstructionEEE">qb::vqee::ansatzToString (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_case__generator_8hpp_1adff3b3981e9cbca47fd15b0c1e8f43d0.html#_CPPv4N2qb4vqee12ASWAP_AnsatzEKiKiKb">qb::vqee::ASWAP_Ansatz (C++ function)</a>
+      <li><a href="_cpp_api/function_case__generator_8hpp_1adec23d8c352e72f63093552915160c39.html#_CPPv4N2qb4vqee12ASWAP_AnsatzEKiKiKb">qb::vqee::ASWAP_Ansatz (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classqb_1_1vqee_1_1CmaesMLP.html#_CPPv4N2qb4vqee8CmaesMLPE">qb::vqee::CmaesMLP (C++ class)</a>
 </li>
@@ -1779,7 +1750,7 @@
 </li>
       <li><a href="_cpp_api/function_case__generator_8hpp_1a6dea9fe524c91c7760109f31ab0b16e6.html#_CPPv4N2qb4vqee11getEnumNameE8AnsatzID">qb::vqee::getEnumName (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_case__generator_8hpp_1a7dd55957c4e1ef794005337f4593ec00.html#_CPPv4N2qb4vqee10HEA_AnsatzEKNSt6size_tEKNSt6size_tE">qb::vqee::HEA_Ansatz (C++ function)</a>
+      <li><a href="_cpp_api/function_case__generator_8hpp_1a163ea4cfb75e408f55c9cd2b96cf3751.html#_CPPv4N2qb4vqee10HEA_AnsatzEKNSt6size_tEKNSt6size_tE">qb::vqee::HEA_Ansatz (C++ function)</a>
 </li>
       <li><a href="_cpp_api/function_case__generator_8hpp_1aae8c884195ff76956afd9e51a51c6d00.html#_CPPv4N2qb4vqee10HEA_StringEKNSt6size_tEKNSt6size_tE">qb::vqee::HEA_String (C++ function)</a>
 </li>
@@ -1845,7 +1816,7 @@
 </li>
       <li><a href="_cpp_api/classqb_1_1vqee_1_1NLO.html#_CPPv4N2qb4vqee3NLO28vector_double_valued_fields_E">qb::vqee::NLO::vector_double_valued_fields_ (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/function_vqee_8hpp_1a81b4b76a197b6eac3799adb0e74c4bc4.html#_CPPv4I0EN2qb4vqeelsERNSt7ostreamERNSt7ostreamERKNSt6vectorI1TEE">qb::vqee::operator&lt;&lt; (C++ function)</a>
+      <li><a href="_cpp_api/function_vqee_8hpp_1a6698d1bb45226c33390ecc9fba58ff65.html#_CPPv4I0EN2qb4vqeelsERNSt7ostreamERNSt7ostreamERKNSt6vectorI1TEE">qb::vqee::operator&lt;&lt; (C++ function)</a>
 </li>
       <li><a href="_cpp_api/structqb_1_1vqee_1_1Params.html#_CPPv4N2qb4vqee6ParamsE">qb::vqee::Params (C++ struct)</a>
 </li>
@@ -1903,9 +1874,9 @@
 </li>
       <li><a href="_cpp_api/function_case__generator_8hpp_1abb94ed5b62f182939b94008f126534f3.html#_CPPv4N2qb4vqee9setAnsatzER6ParamsK8AnsatzIDKiKiKb">qb::vqee::setAnsatz (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_case__generator_8hpp_1aa7b9e09bde9c753bebc04a7039511ee1.html#_CPPv4N2qb4vqee14stringToAnsatzEKNSt6stringE">qb::vqee::stringToAnsatz (C++ function)</a>
+      <li><a href="_cpp_api/function_case__generator_8hpp_1a5c5c195b25e0439ff2961de3ebff472d.html#_CPPv4N2qb4vqee14stringToAnsatzEKNSt6stringE">qb::vqee::stringToAnsatz (C++ function)</a>
 </li>
-      <li><a href="_cpp_api/function_case__generator_8hpp_1a8da7c8fc0dd5137d50b551fa883350a9.html#_CPPv4N2qb4vqee12UCCSD_AnsatzEKiKi">qb::vqee::UCCSD_Ansatz (C++ function)</a>
+      <li><a href="_cpp_api/function_case__generator_8hpp_1aeaa5edaa7686251614c8e28a53aed0a1.html#_CPPv4N2qb4vqee12UCCSD_AnsatzEKiKi">qb::vqee::UCCSD_Ansatz (C++ function)</a>
 </li>
       <li><a href="_cpp_api/structqb_1_1vqee_1_1vqe__iteration__data.html#_CPPv4N2qb4vqee18vqe_iteration_dataE">qb::vqee::vqe_iteration_data (C++ struct)</a>
 </li>
@@ -2113,11 +2084,11 @@
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpuE">xacc::quantum::qb_qpu (C++ class)</a>
 </li>
+      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu10circuit_idE">xacc::quantum::qb_qpu::circuit_id (C++ member)</a>
+</li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu7commandE">xacc::quantum::qb_qpu::command (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu17configurationKeysEv">xacc::quantum::qb_qpu::configurationKeys (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu6cyclesE">xacc::quantum::qb_qpu::cycles (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu5debugE">xacc::quantum::qb_qpu::debug (C++ member)</a>
 </li>
@@ -2139,8 +2110,6 @@
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu11http_headerE">xacc::quantum::qb_qpu::http_header (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu9hwbackendE">xacc::quantum::qb_qpu::hwbackend (C++ member)</a>
-</li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu4initE">xacc::quantum::qb_qpu::init (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu23init_contrast_thresholdE">xacc::quantum::qb_qpu::init_contrast_threshold (C++ member)</a>
@@ -2155,17 +2124,11 @@
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu10order_of_mE">xacc::quantum::qb_qpu::order_of_m (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu12over_requestE">xacc::quantum::qb_qpu::over_request (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu7poll_idE">xacc::quantum::qb_qpu::poll_id (C++ member)</a>
-</li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu12poll_retriesE">xacc::quantum::qb_qpu::poll_retries (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu9poll_secsE">xacc::quantum::qb_qpu::poll_secs (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu4PostERKNSt6stringERKNSt6stringERKNSt6stringENSt3mapINSt6stringENSt6stringEEE">xacc::quantum::qb_qpu::Post (C++ function)</a>
-</li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu18previous_post_pathE">xacc::quantum::qb_qpu::previous_post_path (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE">xacc::quantum::qb_qpu::processInput (C++ function)</a>
 </li>
@@ -2173,27 +2136,23 @@
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu3PutERKNSt6stringERKNSt6stringERKNSt6stringENSt3mapINSt6stringENSt6stringEEE">xacc::quantum::qb_qpu::Put (C++ function)</a>
 </li>
-  </ul></td>
-  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu6qb_qpuEKb">xacc::quantum::qb_qpu::qb_qpu (C++ function)</a>
 </li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu19QB_SAFE_LIMIT_SHOTSE">xacc::quantum::qb_qpu::QB_SAFE_LIMIT_SHOTS (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu6qbjsonE">xacc::quantum::qb_qpu::qbjson (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu25qubit_contrast_thresholdsE">xacc::quantum::qb_qpu::qubit_contrast_thresholds (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu17recursive_requestE">xacc::quantum::qb_qpu::recursive_request (C++ member)</a>
-</li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu10request_idE">xacc::quantum::qb_qpu::request_id (C++ member)</a>
+      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu9recursiveE">xacc::quantum::qb_qpu::recursive (C++ member)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu8resampleE">xacc::quantum::qb_qpu::resample (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu25resample_above_percentageE">xacc::quantum::qb_qpu::resample_above_percentage (C++ member)</a>
-</li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu7resultsE">xacc::quantum::qb_qpu::results (C++ member)</a>
 </li>
-      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu12resultsReadyENSt10shared_ptrI17AcceleratorBufferEEKNSt6vectorINSt10shared_ptrI20CompositeInstructionEEEERNSt3mapINSt6stringEiEEii">xacc::quantum::qb_qpu::resultsReady (C++ function)</a>
+      <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu12resultsReadyEKNSt6vectorINSt10shared_ptrI20CompositeInstructionEEEERNSt3mapINSt6stringEiEEii">xacc::quantum::qb_qpu::resultsReady (C++ function)</a>
 </li>
       <li><a href="_cpp_api/classxacc_1_1quantum_1_1qb__qpu.html#_CPPv4N4xacc7quantum6qb_qpu14setup_hardwareEv">xacc::quantum::qb_qpu::setup_hardware (C++ function)</a>
 </li>
@@ -2267,7 +2226,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

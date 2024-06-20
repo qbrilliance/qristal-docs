@@ -1,0 +1,14 @@
+.. _exhale_function_circuit__opt__passes_8hpp_1a7cb929d9837a7a52e08d1843cf748968:
+
+Function qb::create_peephole_pass
+=================================
+
+- Defined in :ref:`file_core_include_qb_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qb::create_peephole_pass()
+   :project: My Project

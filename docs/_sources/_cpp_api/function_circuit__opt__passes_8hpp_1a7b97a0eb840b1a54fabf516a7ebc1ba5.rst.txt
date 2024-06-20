@@ -1,0 +1,14 @@
+.. _exhale_function_circuit__opt__passes_8hpp_1a7b97a0eb840b1a54fabf516a7ebc1ba5:
+
+Function qb::create_remove_redundancies_pass
+============================================
+
+- Defined in :ref:`file_core_include_qb_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qb::create_remove_redundancies_pass()
+   :project: My Project

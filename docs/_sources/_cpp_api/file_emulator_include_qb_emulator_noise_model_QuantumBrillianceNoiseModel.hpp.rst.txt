@@ -25,6 +25,8 @@ Includes
 --------
 
 
+- ``optional``
+
 - ``qb/core/noise_model/noise_model.hpp`` (:ref:`file_core_include_qb_core_noise_model_noise_model.hpp`)
 
 

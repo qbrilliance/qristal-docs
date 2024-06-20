@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Python API &mdash; Quantum SDK  documentation</title>
+  <title>Python API &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -37,7 +37,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -53,13 +53,20 @@
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -83,7 +90,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -153,21 +160,9 @@
 </dd></dl>
 
 <dl class="py method">
-<dt class="sig sig-object py" id="core.session.aws32dm1">
-<span class="sig-name descname"><span class="pre">aws32dm1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.aws32dm1" title="Permalink to this definition"></a></dt>
-<dd><p>AWS Braket DM1, 32 async workers</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.aws32sv1">
-<span class="sig-name descname"><span class="pre">aws32sv1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.aws32sv1" title="Permalink to this definition"></a></dt>
-<dd><p>AWS Braket SV1, 32 async workers</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.aws8tn1">
-<span class="sig-name descname"><span class="pre">aws8tn1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.aws8tn1" title="Permalink to this definition"></a></dt>
-<dd><p>AWS Braket TN1, 8 async workers</p>
+<dt class="sig sig-object py" id="core.session.aws_setup">
+<span class="sig-name descname"><span class="pre">aws_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.aws_setup" title="Permalink to this definition"></a></dt>
+<dd><p>AWS Braket Setup</p>
 </dd></dl>
 
 <dl class="py property">
@@ -176,7 +171,7 @@
 <dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This property is currently unused.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -185,7 +180,37 @@
 <dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This property is currently unused.</p>
-</aside>
+</div>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.session.bitstring_index">
+<span class="sig-name descname"><span class="pre">bitstring_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#core.session.bitstring_index" title="Permalink to this definition"></a></dt>
+<dd><p>Get the (base-10) integer index for the counts/probabilities list, corresponding to a bitstring for the quantum experiment at (ii, jj).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.calc_jacobian">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_jacobian</span></span><a class="headerlink" href="#core.session.calc_jacobian" title="Permalink to this definition"></a></dt>
+<dd><p>calc_jacobian:</p>
+<p>Valid settings: True | False</p>
+<p>Setting this to True will calculate gradients for the circuit when session.run() is evoked. The single setting applies globally.
+The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.</p>
+<p>calc_jacobians:</p>
+<p>Valid settings: [[True|False, …], [True|False, …]]</p>
+<p>A 1d-array (list) version of calc_jacobian.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.calc_jacobians">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_jacobians</span></span><a class="headerlink" href="#core.session.calc_jacobians" title="Permalink to this definition"></a></dt>
+<dd><p>calc_jacobian:</p>
+<p>Valid settings: True | False</p>
+<p>Setting this to True will calculate gradients for the circuit when session.run() is evoked. The single setting applies globally.
+The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.</p>
+<p>calc_jacobians:</p>
+<p>Valid settings: [[True|False, …], [True|False, …]]</p>
+<p>A 1d-array (list) version of calc_jacobian.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -270,7 +295,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -283,7 +308,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -296,7 +321,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -309,7 +334,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -380,7 +405,7 @@
 <dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This property is currently unused.</p>
-</aside>
+</div>
 <p>log_enabled:</p>
 <p>Setting this to True to enable logging to file. The single setting applies globally.</p>
 <p>Valid settings: True | False</p>
@@ -395,7 +420,7 @@
 <dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This property is currently unused.</p>
-</aside>
+</div>
 <p>log_enabled:</p>
 <p>Setting this to True to enable logging to file. The single setting applies globally.</p>
 <p>Valid settings: True | False</p>
@@ -414,7 +439,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -427,7 +452,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -440,7 +465,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -453,7 +478,33 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.measure_sample_sequential">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_sequential</span></span><a class="headerlink" href="#core.session.measure_sample_sequential" title="Permalink to this definition"></a></dt>
+<dd><p>measure_sample_sequential:</p>
+<p>Set the measurement sampling method (QB emulator tensor network simulator). The single setting applies globally.</p>
+<p>measure_sample_sequentials:</p>
+<p>A 1d-array (list) version of measure_sample_sequential.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the emulator tensor network accelerators.</p>
+</div>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.measure_sample_sequentials">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_sequentials</span></span><a class="headerlink" href="#core.session.measure_sample_sequentials" title="Permalink to this definition"></a></dt>
+<dd><p>measure_sample_sequential:</p>
+<p>Set the measurement sampling method (QB emulator tensor network simulator). The single setting applies globally.</p>
+<p>measure_sample_sequentials:</p>
+<p>A 1d-array (list) version of measure_sample_sequential.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using the emulator tensor network accelerators.</p>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -493,7 +544,7 @@
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Requires setting: noise = True (to have effect)</p>
-</aside>
+</div>
 <p>The default (built in) model is a simple depolarizing noise model on all qubits.</p>
 <p>Users may make their own instances of the NoiseModel class (or make an instance of the
 default and modify it), and then assign that model to this property.  See examples/python/noise_model*.py.</p>
@@ -517,7 +568,7 @@ of the NoiseModel class:</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Requires setting: noise = True (to have effect)</p>
-</aside>
+</div>
 <p>The default (built in) model is a simple depolarizing noise model on all qubits.</p>
 <p>Users may make their own instances of the NoiseModel class (or make an instance of the
 default and modify it), and then assign that model to this property.  See examples/python/noise_model*.py.</p>
@@ -616,7 +667,7 @@ of the NoiseModel class:</p>
 <dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This property is currently unused.</p>
-</aside>
+</div>
 <p>notiming:</p>
 <p>Valid settings: True | False</p>
 <p>Setting this to True to disable timing estimation. The single setting applies globally.</p>
@@ -631,7 +682,7 @@ of the NoiseModel class:</p>
 <dd><div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>This property is currently unused.</p>
-</aside>
+</div>
 <p>notiming:</p>
 <p>Valid settings: True | False</p>
 <p>Setting this to True to disable timing estimation. The single setting applies globally.</p>
@@ -645,28 +696,18 @@ of the NoiseModel class:</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_threads</span></span><a class="headerlink" href="#core.session.num_threads" title="Permalink to this definition"></a></dt>
 <dd><p>The number of threads in the QB SDK thread pool</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>num_threads</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_bitstring">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_bitstring</span></span><a class="headerlink" href="#core.session.out_bitstring" title="Permalink to this definition"></a></dt>
-<dd><p>out_bitstring:</p>
-<p>After calling session.run(), the counts from running sn shots are stored in session.out_bitstring, using a dictionary where the keys are state label bits.</p>
-<p>out_bitstrings:</p>
-<p>A 1d-array (list) version of session.out_bitstring.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_bitstrings">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_bitstrings</span></span><a class="headerlink" href="#core.session.out_bitstrings" title="Permalink to this definition"></a></dt>
-<dd><p>out_bitstring:</p>
-<p>After calling session.run(), the counts from running sn shots are stored in session.out_bitstring, using a dictionary where the keys are state label bits.</p>
-<p>out_bitstrings:</p>
-<p>A 1d-array (list) version of session.out_bitstring.</p>
+<dt class="sig sig-object py" id="core.session.out_counts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_counts</span></span><a class="headerlink" href="#core.session.out_counts" title="Permalink to this definition"></a></dt>
+<dd><p>out_counts:</p>
+<p>After calling session.run(), the counts from running sn shots are stored in a list of shot counts.
+The indices of this list correspond to a different possible base-2 bitstring solution, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -703,6 +744,32 @@ of the NoiseModel class:</p>
 <p>After calling session.profile(), the circuit in session.out_transpiled_circuit is processed and the count of the number of two-qubit gates is stored as session.out_double_qubit_gate_qty, using a dictionary where the keys are integers corresponding to qubit indexes.</p>
 <p>out_double_qubit_gate_qtys:</p>
 <p>A 1d-array (list) version of session.out_double_qubit_gate_qty.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.out_prob_jacobians">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_prob_jacobians</span></span><a class="headerlink" href="#core.session.out_prob_jacobians" title="Permalink to this definition"></a></dt>
+<dd><p>out_prob_jacobians:</p>
+<p>After calling session.run() with <cite>calc_jacobian(s)</cite> set to true, the probability jacobians from running sn shots are stored in session.out_prob_jacobian, using a list of 2D list-of-lists format.
+The jacobians calculate the gradients of the probability with respect to the runtime parameters, in the following format (where y is the probability list and x is the parameter list):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\frac{dy_0}{dx_0} &amp; \frac{dy_0}{dx_1} &amp; ... &amp; \frac{dy_0}{dx_n} \\
+\frac{dy_1}{dx_0} &amp; \frac{dy_1}{dx_1} &amp; ... &amp; \frac{dy_1}{dx_n} \\
+... \\
+\frac{dy_m}{dx_0} &amp; \frac{dy_m}{dx_1} &amp; ... &amp; \frac{dy_m}{dx_n}
+\end{bmatrix}\end{split}\]</div>
+<p>Since the jacobian is returned as a list-of-lists, it can be accessed in row major format, and indexing the above matrix can be done accordingly, i.e. get_out_jacobians()[0][1] corresponds to the dy_0/dx_1 value.
+x_i correspond to the parameters set in the parameter list (i.e. the parameters ordered by their first appearance in the circuit.)
+y_i are the output probabilities of different bitstrings, indexed in the same manner as the out_count list. Explicitly, the index i corresponding to a specific bitstring can be obtained by calling bitstring_index(bitstring, j, k) for experiment (j, k).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.out_probs">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_probs</span></span><a class="headerlink" href="#core.session.out_probs" title="Permalink to this definition"></a></dt>
+<dd><p>out_probs:</p>
+<p>After calling session.run() with <cite>calc_jacobian(s)</cite> set to true, the probability distribution from running sn shots stored in a list of solution output probabilities.
+The indices of this list correspond to a different possible base-2 bitstring solution, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -890,6 +957,24 @@ of the NoiseModel class:</p>
 </dd></dl>
 
 <dl class="py property">
+<dt class="sig sig-object py" id="core.session.parameter_list">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameter_list</span></span><a class="headerlink" href="#core.session.parameter_list" title="Permalink to this definition"></a></dt>
+<dd><p>parameter_vector:</p>
+<p>Runtime parameters for the input parametrized circuit. The single setting applies globally.</p>
+<p>parameter_vectors:</p>
+<p>A 1d-array (list) version of parameter_vector.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.parameter_lists">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameter_lists</span></span><a class="headerlink" href="#core.session.parameter_lists" title="Permalink to this definition"></a></dt>
+<dd><p>parameter_vector:</p>
+<p>Runtime parameters for the input parametrized circuit. The single setting applies globally.</p>
+<p>parameter_vectors:</p>
+<p>A 1d-array (list) version of parameter_vector.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="core.session.placement">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">placement</span></span><a class="headerlink" href="#core.session.placement" title="Permalink to this definition"></a></dt>
 <dd><p>placement:</p>
@@ -987,7 +1072,7 @@ Default: “swap-shortest-path”</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -1000,7 +1085,7 @@ Default: “swap-shortest-path”</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -1110,7 +1195,7 @@ Default: “swap-shortest-path”</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -1123,7 +1208,7 @@ Default: “swap-shortest-path”</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the “tnqvm” backend accelerator.</p>
-</aside>
+</div>
 </dd></dl>
 
 <dl class="py property">
@@ -1474,8 +1559,12 @@ satisfied.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.cphase">
-<span class="sig-name descname"><span class="pre">cphase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.cphase" title="Permalink to this definition"></a></dt>
-<dd><blockquote>
+<span class="sig-name descname"><span class="pre">cphase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.cphase" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>cphase(self: core.Circuit, ctrl_idx: int, target_idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
 <div><p>CPhase gate</p>
 </div></blockquote>
 <p>This method adds a controlled-U1 (CPhase) gate to the circuit.</p>
@@ -1487,6 +1576,26 @@ conditional on the control qubit being in the 1 state.</p>
 <li><p><strong>target_idx</strong> the index of the target qubit [int]</p></li>
 <li><p><strong>theta</strong> the value of the phase [double]</p></li>
 </ul>
+</div></blockquote>
+</li>
+<li><p>cphase(self: core.Circuit, ctrl_idx: int, target_idx: int, param_name: str) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>CPhase gate</p>
+</div></blockquote>
+<p>This method adds a controlled-U1 (CPhase) gate with a free parameter ”
+“to the circuit.</p>
+<p>The CPHase gate performs a U1(theta) gate on the target qubit
+conditional on the control qubit being in the 1 state.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>ctrl_idx</strong> the index of the control qubit [int]</p></li>
+<li><p><strong>target_idx</strong> the index of the target qubit [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
 </dd></dl>
 
 <dl class="py method">
@@ -1738,9 +1847,39 @@ measured.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="core.Circuit.num_free_params">
+<span class="sig-name descname"><span class="pre">num_free_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.num_free_params" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of free parameters in the (parametrized) circuit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.Circuit.num_qubits">
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.num_qubits" title="Permalink to this definition"></a></dt>
+<dd><p>Returns the number of (physical) qubits in the circuit.</p>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.openqasm">
 <span class="sig-name descname"><span class="pre">openqasm</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#core.Circuit.openqasm" title="Permalink to this definition"></a></dt>
-<dd><p>Get the OpenQASM representation of the circuit.</p>
+<dd><p>Get the OpenQASM representation of the (non-parametrized) circuit.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.Circuit.param_dict_to_list">
+<span class="sig-name descname"><span class="pre">param_dict_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.Circuit.param_dict_to_list" title="Permalink to this definition"></a></dt>
+<dd><p>Convert a dictionary that defines parameter assignments to a vector for
+input to the session object. The vector will be ordered according to
+the definition of the free parameter in the circuit; for example, if
+a gate is defined with the free parameter “alpha” in an empty circuit,
+its mapped parameter will be at index 0 in the vector. If another gate
+exists in this circuit with the parameter “beta”, the value for this
+mapped parameter will be at index 1, and so on.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>param_dict</strong> the dictionary</p></li>
+</ul>
+<p>Returns:</p>
+<p>A vector containing the ordered parameter values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1904,8 +2043,12 @@ the state_prep circuit A.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.rx">
-<span class="sig-name descname"><span class="pre">rx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.rx" title="Permalink to this definition"></a></dt>
-<dd><blockquote>
+<span class="sig-name descname"><span class="pre">rx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.rx" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>rx(self: core.Circuit, idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
 <div><p>RX gate</p>
 </div></blockquote>
 <p>This method adds an x-axis rotation (RX) gate to the circuit.</p>
@@ -1914,12 +2057,33 @@ the state_prep circuit A.</p>
 <li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
 <li><p><strong>theta</strong> the angle of rotation about the x-axis [double]</p></li>
 </ul>
+</div></blockquote>
+</li>
+<li><p>rx(self: core.Circuit, idx: int, name: str) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>RX gate</p>
+</div></blockquote>
+<p>This method adds an x-axis rotation (RX) gate with a free parameter ”
+“to the circuit.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.ry">
-<span class="sig-name descname"><span class="pre">ry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.ry" title="Permalink to this definition"></a></dt>
-<dd><blockquote>
+<span class="sig-name descname"><span class="pre">ry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.ry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>ry(self: core.Circuit, idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
 <div><p>RY gate</p>
 </div></blockquote>
 <p>This method adds a y-axis rotation (RY) gate to the circuit.</p>
@@ -1928,12 +2092,33 @@ the state_prep circuit A.</p>
 <li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
 <li><p><strong>theta</strong> the angle of rotation about the y-axis [double]</p></li>
 </ul>
+</div></blockquote>
+</li>
+<li><p>ry(self: core.Circuit, idx: int, param_name: str) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>RY gate</p>
+</div></blockquote>
+<p>This method adds a y-axis rotation (RY) gate with a free parameter ”
+“to the circuit.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.rz">
-<span class="sig-name descname"><span class="pre">rz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.rz" title="Permalink to this definition"></a></dt>
-<dd><blockquote>
+<span class="sig-name descname"><span class="pre">rz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.rz" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>rz(self: core.Circuit, idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
 <div><p>RZ gate</p>
 </div></blockquote>
 <p>This method adds a z-axis rotation (RZ) gate to the circuit.</p>
@@ -1942,6 +2127,23 @@ the state_prep circuit A.</p>
 <li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
 <li><p><strong>theta</strong> the angle of rotation about the z-axis [double]</p></li>
 </ul>
+</div></blockquote>
+</li>
+<li><p>rz(self: core.Circuit, idx: int, param_name: str) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>RZ gate</p>
+</div></blockquote>
+<p>This method adds a z-axis rotation (RZ) gate with a free parameter ”
+“to the circuit.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
 </dd></dl>
 
 <dl class="py method">
@@ -2053,8 +2255,12 @@ the state_prep circuit A.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.u1">
-<span class="sig-name descname"><span class="pre">u1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.u1" title="Permalink to this definition"></a></dt>
-<dd><blockquote>
+<span class="sig-name descname"><span class="pre">u1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.u1" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>u1(self: core.Circuit, idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
 <div><p>U1 gate</p>
 </div></blockquote>
 <p>This method adds a phase (U1) gate to the circuit.</p>
@@ -2063,6 +2269,21 @@ the state_prep circuit A.</p>
 <li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
 <li><p><strong>theta</strong> the value of the phase [double]</p></li>
 </ul>
+</div></blockquote>
+</li>
+<li><p>u1(self: core.Circuit, idx: int, param_name: str) -&gt; None</p>
+<blockquote>
+<div><p>U1 gate</p>
+<p>This method adds a phase (U1) gate with a free parameter ”
+“to the circuit.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
 </dd></dl>
 
 <dl class="py method">
@@ -2092,7 +2313,7 @@ the state_prep circuit A.</p>
 <p>The X gate is defined by its action on the basis states</p>
 </div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>[</strong><strong>int</strong><strong>]</strong> (<em>- idx the index of the qubit being acted on</em>) – </p>
 </dd>
 </dl>
@@ -2208,7 +2429,7 @@ the state_prep circuit A.</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qobj_compiler</span></span><a class="headerlink" href="#core.NoiseModel.qobj_compiler" title="Permalink to this definition"></a></dt>
 <dd><p>‘xacc-qobj’ | ‘qristal-qobj’.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type<span class="colon">:</span></dt>
+<dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>The name of the QObj compiler to use with the AER simulator. Valid options</p>
 </dd>
 </dl>
@@ -2518,7 +2739,7 @@ the state_prep circuit A.</p>
 <span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.noise_aware_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qb::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.noise_aware_placement_pass.apply" title="Permalink to this definition"></a></dt>
 <dd><p>Apply noise-aware placement on the input circuit.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>circuit</strong> – Circuit to be placed (map qubit indices and inject SWAP gates as necessary)</p>
 </dd>
 </dl>
@@ -2546,7 +2767,7 @@ the state_prep circuit A.</p>
 <span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.swap_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qb::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.swap_placement_pass.apply" title="Permalink to this definition"></a></dt>
 <dd><p>Apply SWAP-based placement on the input circuit.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>circuit</strong> – Circuit to be placed (map qubit indices and inject SWAP gates as necessary)</p>
 </dd>
 </dl>
@@ -2568,7 +2789,7 @@ the state_prep circuit A.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

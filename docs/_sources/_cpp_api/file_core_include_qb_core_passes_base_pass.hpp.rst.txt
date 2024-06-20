@@ -37,13 +37,13 @@ Included By
 -----------
 
 
-- :ref:`file_core_include_qb_core_session.hpp`
+- :ref:`file_core_include_qb_core_passes_circuit_opt_passes.hpp`
 
 - :ref:`file_core_include_qb_core_passes_noise_aware_placement_pass.hpp`
 
 - :ref:`file_core_include_qb_core_passes_swap_placement_pass.hpp`
 
-- :ref:`file_core_include_qb_core_passes_circuit_opt_passes.hpp`
+- :ref:`file_core_include_qb_core_session.hpp`
 
 
 

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class VqeOpt &mdash; Quantum SDK  documentation</title>
+  <title>Class VqeOpt &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -36,7 +36,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -52,13 +52,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -85,8 +92,6 @@
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
@@ -117,7 +122,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -158,7 +163,7 @@
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOptE">
 <span id="_CPPv3N2qb4vqee6VqeOptE"></span><span id="_CPPv2N2qb4vqee6VqeOptE"></span><span id="qb::vqee::VqeOpt"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VqeOpt</span></span></span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOptE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Selection of classical optimisation algorithms and associated hyperparameters. Override <a class="reference internal" href="#classqb_1_1vqee_1_1VqeOpt_1adfb2bd5ed6b44156dc3bb319ead6dee8"><span class="std std-ref">get()</span></a> in a derived class and provide a definition that validates the relevant hyperparameters there. </p>
+<dd><p>Selection of classical optimisation algorithms and associated hyperparameters. Override <a class="reference internal" href="#classqb_1_1vqee_1_1VqeOpt_1a8f18ef39a8c352f4a0c0b6e4e667fbb6"><span class="std std-ref">get()</span></a> in a derived class and provide a definition that validates the relevant hyperparameters there. </p>
 <p>Additional hyperparameters ie “extra options” should be stored in the YAML::Node member [m_node_] </p>
 <p>Subclassed by <a class="reference internal" href="classqb_1_1vqee_1_1AdamMLP.html#classqb_1_1vqee_1_1AdamMLP"><span class="std std-ref">qb::vqee::AdamMLP</span></a>, <a class="reference internal" href="classqb_1_1vqee_1_1CmaesMLP.html#classqb_1_1vqee_1_1CmaesMLP"><span class="std std-ref">qb::vqee::CmaesMLP</span></a>, <a class="reference internal" href="classqb_1_1vqee_1_1LbfgsMLP.html#classqb_1_1vqee_1_1LbfgsMLP"><span class="std std-ref">qb::vqee::LbfgsMLP</span></a>, <a class="reference internal" href="classqb_1_1vqee_1_1NLO.html#classqb_1_1vqee_1_1NLO"><span class="std std-ref">qb::vqee::NLO</span></a></p>
 <div class="breathe-sectiondef docutils container">
@@ -183,7 +188,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb4vqee6VqeOpt3getEv">
-<span id="_CPPv3N2qb4vqee6VqeOpt3getEv"></span><span id="_CPPv2N2qb4vqee6VqeOpt3getEv"></span><span id="qb::vqee::VqeOpt::get"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1adfb2bd5ed6b44156dc3bb319ead6dee8"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Optimizer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt3getEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N2qb4vqee6VqeOpt3getEv"></span><span id="_CPPv2N2qb4vqee6VqeOpt3getEv"></span><span id="qb::vqee::VqeOpt::get"></span><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a8f18ef39a8c352f4a0c0b6e4e667fbb6"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Optimizer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb4vqee6VqeOpt3getEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Getters. </p>
 </dd></dl>
 
@@ -195,7 +200,7 @@
 <span id="_CPPv3I0EN2qb4vqee6VqeOpt17pass_yaml_to_xaccERKN4YAML4NodeERKNSt3setINSt6stringEEERKNSt3mapINSt6stringENSt6stringEEERN4xacc16HeterogeneousMapEb"></span><span id="_CPPv2I0EN2qb4vqee6VqeOpt17pass_yaml_to_xaccERKN4YAML4NodeERKNSt3setINSt6stringEEERKNSt3mapINSt6stringENSt6stringEEERN4xacc16HeterogeneousMapEb"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">T</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqb_1_1vqee_1_1VqeOpt_1a7cfcf822a96cf91ba5d11e7f426a75d2"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pass_yaml_to_xacc</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">YAML</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">node</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">keys</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">yaml_to_xacc_keys</span></span>, <span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_xoptions</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">debug</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN2qb4vqee6VqeOpt17pass_yaml_to_xaccEvRKN4YAML4NodeERKNSt3setINSt6stringEEERKNSt3mapINSt6stringENSt6stringEEERN4xacc16HeterogeneousMapEb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Helper template for converting YAML to XACC options</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>node</strong> – YAML formatted string of extra options </p></li>
 <li><p><strong>keys</strong> – std::set of key names expected in the YAML that all have a corresponding value of type T </p></li>
@@ -263,7 +268,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

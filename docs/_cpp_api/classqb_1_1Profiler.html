@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class Profiler &mdash; Quantum SDK  documentation</title>
+  <title>Class Profiler &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -36,7 +36,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -52,13 +52,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -85,8 +92,6 @@
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
@@ -117,7 +122,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -153,7 +158,7 @@
 <span id="_CPPv3N2qb8Profiler8ProfilerENSt6stringEKiKdKdKdKdKdKb"></span><span id="_CPPv2N2qb8Profiler8ProfilerENSt6stringEKiKdKdKdKdKdKb"></span><span id="qb::Profiler::Profiler__ss.iC.doubleC.doubleC.doubleC.doubleC.doubleC.bC"></span><span class="target" id="classqb_1_1Profiler_1a397a77bb6e8eaf7ae31bff7011b69287"></span><span class="sig-name descname"><span class="n"><span class="pre">Profiler</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">target_circuit</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n_qubits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_1q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_2q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_initialisation_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">30</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_readout_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pc_send_to_control_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">debug</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler8ProfilerENSt6stringEKiKdKdKdKdKdKb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor (from an OpenQASM string) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>target_circuit</strong> – </p></li>
 <li><p><strong>n_qubits</strong> – </p></li>
@@ -173,7 +178,7 @@
 <span id="_CPPv3N2qb8Profiler8ProfilerERNSt10shared_ptrIN4xacc20CompositeInstructionEEEKiKdKdKdKdKdKb"></span><span id="_CPPv2N2qb8Profiler8ProfilerERNSt10shared_ptrIN4xacc20CompositeInstructionEEEKiKdKdKdKdKdKb"></span><span id="qb::Profiler::Profiler__std::shared_ptr:xacc::CompositeInstruction:R.iC.doubleC.doubleC.doubleC.doubleC.doubleC.bC"></span><span class="target" id="classqb_1_1Profiler_1a95863a2f0b1420c2afb8f953fde544a4"></span><span class="sig-name descname"><span class="n"><span class="pre">Profiler</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n_qubits</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_1q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_2q_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.001</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_initialisation_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">30</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q_readout_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">pc_send_to_control_time_ms</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">debug</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler8ProfilerERNSt10shared_ptrIN4xacc20CompositeInstructionEEEKiKdKdKdKdKdKb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Constructor (from a XACC IR) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>f</strong> – </p></li>
 <li><p><strong>n_qubits</strong> – </p></li>
@@ -193,13 +198,13 @@
 <span id="_CPPv3N2qb8Profiler48get_total_initialisation_maxgate_readout_time_msEKdKi"></span><span id="_CPPv2N2qb8Profiler48get_total_initialisation_maxgate_readout_time_msEKdKi"></span><span id="qb::Profiler::get_total_initialisation_maxgate_readout_time_ms__doubleC.iC"></span><span class="target" id="classqb_1_1Profiler_1ae1b92d55d9ce5661c5555fa65887db40"></span><span class="n"><span class="pre">ND</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_total_initialisation_maxgate_readout_time_ms</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">simulation_total_time</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0.0</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">shots</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler48get_total_initialisation_maxgate_readout_time_msEKdKi" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the total time (i.e., init + gate + readout) for all qubits. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>simulation_total_time</strong> – </p></li>
 <li><p><strong>shots</strong> – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
@@ -210,7 +215,7 @@
 <span id="_CPPv3N2qb8Profiler23get_count_1q_gates_on_qEv"></span><span id="_CPPv2N2qb8Profiler23get_count_1q_gates_on_qEv"></span><span id="qb::Profiler::get_count_1q_gates_on_q"></span><span class="target" id="classqb_1_1Profiler_1a92370e025efb356195a2dc1c004020e7"></span><span class="n"><span class="pre">NN</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_1q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_1q_gates_on_qEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the count of one-qubit gates for all qubits. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p></p>
 </dd>
 </dl>
@@ -221,7 +226,7 @@
 <span id="_CPPv3N2qb8Profiler23get_count_2q_gates_on_qEv"></span><span id="_CPPv2N2qb8Profiler23get_count_2q_gates_on_qEv"></span><span id="qb::Profiler::get_count_2q_gates_on_q"></span><span class="target" id="classqb_1_1Profiler_1af3872087ed9f905af2497341b0fe7f11"></span><span class="n"><span class="pre">NN</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_2q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_2q_gates_on_qEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the count of two-qubit gates for all qubits. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p></p>
 </dd>
 </dl>
@@ -232,10 +237,10 @@
 <span id="_CPPv3N2qb8Profiler23get_count_1q_gates_on_qEKi"></span><span id="_CPPv2N2qb8Profiler23get_count_1q_gates_on_qEKi"></span><span id="qb::Profiler::get_count_1q_gates_on_q__iC"></span><span class="target" id="classqb_1_1Profiler_1a944061e56d4e48722e2966a3d40d9652"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_1q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iq</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_1q_gates_on_qEKi" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the count of one-qubit gates on a qubit line. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>iq</strong> – </p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
@@ -246,10 +251,10 @@
 <span id="_CPPv3N2qb8Profiler23get_count_2q_gates_on_qEKi"></span><span id="_CPPv2N2qb8Profiler23get_count_2q_gates_on_qEKi"></span><span id="qb::Profiler::get_count_2q_gates_on_q__iC"></span><span class="target" id="classqb_1_1Profiler_1a26b16d645c23af8cdd1e0695e95cb673"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_count_2q_gates_on_q</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">iq</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler23get_count_2q_gates_on_qEKi" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the count of two-qubit gates on a qubit line Note: a two-qubit gate will be accounted for on both of its qubit operands. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>iq</strong> – </p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p></p>
 </dd>
 </dl>
@@ -260,7 +265,7 @@
 <span id="_CPPv3N2qb8Profiler18get_largestdepth_qEv"></span><span id="_CPPv2N2qb8Profiler18get_largestdepth_qEv"></span><span id="qb::Profiler::get_largestdepth_q"></span><span class="target" id="classqb_1_1Profiler_1aeb47af8a6fa855920a24d5688b9250ba"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_largestdepth_q</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb8Profiler18get_largestdepth_qEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get Id of the qubit having the most number of gates (largest depth) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p></p>
 </dd>
 </dl>
@@ -403,7 +408,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

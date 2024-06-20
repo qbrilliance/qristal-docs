@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class qb_visitor &mdash; Quantum SDK  documentation</title>
+  <title>Class qb_visitor &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Enum DefaultAnsatzes" href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" />
+    <link rel="next" title="Enum AnsatzID" href="enum_case__generator_8hpp_1a623b5d9a0f13a864f13151f24a491f36.html" />
     <link rel="prev" title="Class qb_qpu" href="classxacc_1_1quantum_1_1qb__qpu.html" /> 
 </head>
 
@@ -36,7 +36,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -52,13 +52,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -85,8 +92,6 @@
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
@@ -117,7 +122,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -306,7 +311,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK4xacc7quantum10qb_visitor15getTranspiledIREv">
-<span id="_CPPv3NK4xacc7quantum10qb_visitor15getTranspiledIREv"></span><span id="_CPPv2NK4xacc7quantum10qb_visitor15getTranspiledIREv"></span><span id="xacc::quantum::qb_visitor::getTranspiledIRC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a08352db27b45a812a73e83f0d70a9d59"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTranspiledIR</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum10qb_visitor15getTranspiledIREv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK4xacc7quantum10qb_visitor15getTranspiledIREv"></span><span id="_CPPv2NK4xacc7quantum10qb_visitor15getTranspiledIREv"></span><span id="xacc::quantum::qb_visitor::getTranspiledIRC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__visitor_1a95094c1bd8459bd1d97fea09fbc54553"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getTranspiledIR</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK4xacc7quantum10qb_visitor15getTranspiledIREv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Retrieved the IR tree in the basis gate set. </p>
 </dd></dl>
 
@@ -360,13 +365,13 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="classxacc_1_1quantum_1_1qb__qpu.html" class="btn btn-neutral float-left" title="Class qb_qpu" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html" class="btn btn-neutral float-right" title="Enum DefaultAnsatzes" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="enum_case__generator_8hpp_1a623b5d9a0f13a864f13151f24a491f36.html" class="btn btn-neutral float-right" title="Enum AnsatzID" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

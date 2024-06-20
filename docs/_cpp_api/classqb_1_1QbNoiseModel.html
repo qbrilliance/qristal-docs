@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Class QbNoiseModel &mdash; Quantum SDK  documentation</title>
+  <title>Class QbNoiseModel &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -23,7 +23,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Class ParamCirc" href="classqb_1_1qml_1_1ParamCirc.html" />
+    <link rel="next" title="Class session" href="classqb_1_1session.html" />
     <link rel="prev" title="Class Profiler" href="classqb_1_1Profiler.html" /> 
 </head>
 
@@ -36,7 +36,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -52,13 +52,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -85,8 +92,6 @@
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Class QbNoiseModel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
@@ -117,7 +122,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -198,7 +203,7 @@
 <span id="_CPPv3N2qb12QbNoiseModel12QbNoiseModelE10Generation"></span><span id="_CPPv2N2qb12QbNoiseModel12QbNoiseModelE10Generation"></span><span id="qb::QbNoiseModel::QbNoiseModel__Generation"></span><span class="target" id="classqb_1_1QbNoiseModel_1ad776e9a0f715e2b94d209ca274c32b02"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QbNoiseModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N2qb12QbNoiseModel10GenerationE" title="qb::QbNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">gen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N2qb12QbNoiseModel10GenerationE" title="qb::QbNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N2qb12QbNoiseModel10Generation3nm2E" title="qb::QbNoiseModel::Generation::nm2"><span class="n"><span class="pre">nm2</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel12QbNoiseModelE10Generation" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Construct a new Qb Noise Model object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>gen</strong> – Specifies the noise model generation </p>
 </dd>
 </dl>
@@ -214,7 +219,7 @@
 </dl>
 </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>gen</strong> – Specifies the noise model generation </p></li>
 <li><p><strong>t1_ns</strong> – T1 value to set (in nanoseconds) </p></li>
@@ -229,7 +234,7 @@
 <span id="_CPPv3N2qb12QbNoiseModel12QbNoiseModelE10Generationdddd"></span><span id="_CPPv2N2qb12QbNoiseModel12QbNoiseModelE10Generationdddd"></span><span id="qb::QbNoiseModel::QbNoiseModel__Generation.double.double.double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1aea50dfe2b04d7644ed167b4d27c9098d"></span><span class="sig-name descname"><span class="n"><span class="pre">QbNoiseModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N2qb12QbNoiseModel10GenerationE" title="qb::QbNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">gen</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel12QbNoiseModelE10Generationdddd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Construct a new Qb Noise Model object IMPORTANT: This is for testability only whereby we allow for variation to T1, T2, and gate error value to verify the noise model. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>gen</strong> – Specifies the noise model generation </p></li>
 <li><p><strong>t1_ns</strong> – T1 value to set (in nanoseconds) </p></li>
@@ -246,7 +251,7 @@
 <span id="_CPPv3N2qb12QbNoiseModel12QbNoiseModelE10Generationdddddd"></span><span id="_CPPv2N2qb12QbNoiseModel12QbNoiseModelE10Generationdddddd"></span><span id="qb::QbNoiseModel::QbNoiseModel__Generation.double.double.double.double.double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1ac8c2aaa51011cd138d647faab01d4b52"></span><span class="sig-name descname"><span class="n"><span class="pre">QbNoiseModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N2qb12QbNoiseModel10GenerationE" title="qb::QbNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">gen</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_01</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_10</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel12QbNoiseModelE10Generationdddddd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Construct a new Qb Noise Model object IMPORTANT: This is for testability only whereby we allow for variation to T1, T2, SPAM and gate error value to verify the noise model. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>gen</strong> – Specifies the noise model generation </p></li>
 <li><p><strong>t1_ns</strong> – T1 value to set (in nanoseconds) </p></li>
@@ -265,10 +270,10 @@
 <span id="_CPPv3NK2qb12QbNoiseModel13get_ro_errorsE6size_t"></span><span id="_CPPv2NK2qb12QbNoiseModel13get_ro_errorsE6size_t"></span><span id="qb::QbNoiseModel::get_ro_errors__sC"></span><span class="target" id="classqb_1_1QbNoiseModel_1a1572444bb0d2b95b86ef0e5b3a6082e0"></span><a class="reference internal" href="structqb_1_1ReadoutError.html#_CPPv4N2qb12ReadoutErrorE" title="qb::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_ro_errors</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qubit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK2qb12QbNoiseModel13get_ro_errorsE6size_t" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the ro errors of a qubit. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>qubit</strong> – Qubit index </p>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dt class="field-even">Returns</dt>
 <dd class="field-even"><p>Readout errors </p>
 </dd>
 </dl>
@@ -276,10 +281,10 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel15get_noise_propsEv">
-<span id="_CPPv3N2qb12QbNoiseModel15get_noise_propsEv"></span><span id="_CPPv2N2qb12QbNoiseModel15get_noise_propsEv"></span><span id="qb::QbNoiseModel::get_noise_props"></span><span class="target" id="classqb_1_1QbNoiseModel_1a1a71ea023ecff789d01041eb6e94f569"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1NoiseProperties.html#_CPPv4N2qb15NoisePropertiesE" title="qb::NoiseProperties"><span class="n"><span class="pre">NoiseProperties</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_noise_props</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel15get_noise_propsEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N2qb12QbNoiseModel15get_noise_propsEv"></span><span id="_CPPv2N2qb12QbNoiseModel15get_noise_propsEv"></span><span id="qb::QbNoiseModel::get_noise_props"></span><span class="target" id="classqb_1_1QbNoiseModel_1ad901e4b819ab87a34d7e23ffe0a9ca2b"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structqb_1_1NoiseProperties.html#_CPPv4N2qb15NoisePropertiesE" title="qb::NoiseProperties"><span class="n"><span class="pre">NoiseProperties</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_noise_props</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel15get_noise_propsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the noise props object. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dt class="field-odd">Returns</dt>
 <dd class="field-odd"><p><a class="reference internal" href="structqb_1_1NoiseProperties.html#structqb_1_1NoiseProperties"><span class="std std-ref">NoiseProperties</span></a> associated with the noise model. </p>
 </dd>
 </dl>
@@ -297,28 +302,15 @@
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel15setup_48_qubitsEdd">
-<span id="_CPPv3N2qb12QbNoiseModel15setup_48_qubitsEdd"></span><span id="_CPPv2N2qb12QbNoiseModel15setup_48_qubitsEdd"></span><span id="qb::QbNoiseModel::setup_48_qubits__double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1ac6fe56d925a22df5daabc25c2aae3335"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_48_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel15setup_48_qubitsEdd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set up noise model for 48 qubits: 4x4 grid, each NV cluster contains 3 qubits Note: this is an obsolete noise model configuration whereby C13 spins are considered as qubits. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel15setup_48_qubitsEddb">
+<span id="_CPPv3N2qb12QbNoiseModel15setup_48_qubitsEddb"></span><span id="_CPPv2N2qb12QbNoiseModel15setup_48_qubitsEddb"></span><span id="qb::QbNoiseModel::setup_48_qubits__double.double.b"></span><span class="target" id="classqb_1_1QbNoiseModel_1a3cb897c28b8235989c74dfd4deda565b"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_48_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">linear</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel15setup_48_qubitsEddb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set up noise model for 48 qubits. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
 <li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel22setup_48_qubits_linearEdd">
-<span id="_CPPv3N2qb12QbNoiseModel22setup_48_qubits_linearEdd"></span><span id="_CPPv2N2qb12QbNoiseModel22setup_48_qubits_linearEdd"></span><span id="qb::QbNoiseModel::setup_48_qubits_linear__double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1aa69e9de463d78c7e5ab725da43f5194a"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_48_qubits_linear</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel22setup_48_qubits_linearEdd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set up noise model for 48 qubits with linearly increasing qubit index: 48 NV centres in a 1-dimensional grid, each NV centre contains 1 qubit. Note: this is an obsolete noise model configuration whereby C13 spins are considered as qubits. </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
-<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
+<li><p><strong>linear</strong> – False/Default: 4x4 grid, each NV cluster contains 3 qubits (Note: this is an obsolete noise model configuration whereby C13 spins are considered as qubits) True: Use linear connectivity model - 48 NV centers on a linear chain, where each NV contains 1 qubit. </p></li>
 </ul>
 </dd>
 </dl>
@@ -329,7 +321,7 @@
 <span id="_CPPv3N2qb12QbNoiseModel15setup_64_qubitsEdd"></span><span id="_CPPv2N2qb12QbNoiseModel15setup_64_qubitsEdd"></span><span id="qb::QbNoiseModel::setup_64_qubits__double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1a0a7428288aad6ef35b1e453ef392a3ce"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_64_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel15setup_64_qubitsEdd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set up an 8x8 grid of NV centres, 1 qubit per NV. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
 <li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
@@ -339,41 +331,11 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdd">
-<span id="_CPPv3N2qb12QbNoiseModel14setup_2_qubitsEdd"></span><span id="_CPPv2N2qb12QbNoiseModel14setup_2_qubitsEdd"></span><span id="qb::QbNoiseModel::setup_2_qubits__double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1a07867436c9b5c8dee46d2bd73ab1599c"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_2_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdd" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE">
+<span id="_CPPv3N2qb12QbNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE"></span><span id="_CPPv2N2qb12QbNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE"></span><span id="qb::QbNoiseModel::setup_2_qubits__double.double.std::optional:double:.std::optional:double:.std::optional:double:.std::optional:double:"></span><span class="target" id="classqb_1_1QbNoiseModel_1a2a14743bc5e1178d49cabc0a1ad872de"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_2_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_01</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_10</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>QDK V1 setup: two qubits q0 (NV centre), q1 (coupled C13 nucleus) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
-<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdddd">
-<span id="_CPPv3N2qb12QbNoiseModel14setup_2_qubitsEdddd"></span><span id="_CPPv2N2qb12QbNoiseModel14setup_2_qubitsEdddd"></span><span id="qb::QbNoiseModel::setup_2_qubits__double.double.double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1ae1fea53fbd2f197c66c81724b7095cbf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_2_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdddd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>QDK V1 setup: two qubits q0 (NV centre), q1 (coupled C13 nucleus) </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><ul class="simple">
-<li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
-<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
-<li><p><strong>single_qubit_gate_error</strong> – single qubit gate error (prob between 0 and 1) </p></li>
-<li><p><strong>two_qubit_gate_error</strong> – two qubit gate error (prob between 0 and 1) </p></li>
-</ul>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdddddd">
-<span id="_CPPv3N2qb12QbNoiseModel14setup_2_qubitsEdddddd"></span><span id="_CPPv2N2qb12QbNoiseModel14setup_2_qubitsEdddddd"></span><span id="qb::QbNoiseModel::setup_2_qubits__double.double.double.double.double.double"></span><span class="target" id="classqb_1_1QbNoiseModel_1a3a09ece469c586b2c682a9361fdb1828"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_2_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_01</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_10</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel14setup_2_qubitsEdddddd" title="Permalink to this definition"></a><br /></dt>
-<dd><p>QDK V1 setup: two qubits q0 (NV centre), q1 (coupled C13 nucleus) </p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
 <li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
@@ -393,15 +355,22 @@
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel16setup_gate_noiseE6size_tddNSt6vectorINSt4pairI6size_t6size_tEEEE">
-<span id="_CPPv3N2qb12QbNoiseModel16setup_gate_noiseE6size_tddNSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="_CPPv2N2qb12QbNoiseModel16setup_gate_noiseE6size_tddNSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="qb::QbNoiseModel::setup_gate_noise__s.double.double.std::vector:std::pair:s.s::"></span><span class="target" id="classqb_1_1QbNoiseModel_1a5dc833d00aeb28f23369582e463cb842"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_gate_noise</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_qubits</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_connectivity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel16setup_gate_noiseE6size_tddNSt6vectorINSt4pairI6size_t6size_tEEEE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Set up 1-qubit gate noise and 2-qubit gate noise. </p>
+<dt class="sig sig-object cpp" id="_CPPv4N2qb12QbNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE">
+<span id="_CPPv3N2qb12QbNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="_CPPv2N2qb12QbNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="qb::QbNoiseModel::setup_gate_noise__s.double.double.double.double.double.double.double.double.std::vector:std::pair:double.double::.std::vector:std::pair:s.s::"></span><span class="target" id="classqb_1_1QbNoiseModel_1adf81180ab1d2e6bf168ba71cf7257bae"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_gate_noise</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_qubits</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ry_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cz_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx_gate_duration_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ry_gate_duration_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cz_gate_duration_ns</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_roErrors</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_connectivity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N2qb12QbNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set up 1- and 2-qubit gate noise, and connectivity info. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>nb_qubits</strong> – Number of qubits </p></li>
 <li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
-<li><p><strong>t2_ns</strong> – T2 valus (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
+<li><p><strong>rx_gate_error</strong> – Rx gate error </p></li>
+<li><p><strong>ry_gate_error</strong> – Ry gate error </p></li>
+<li><p><strong>cz_gate_error</strong> – Cz gate error </p></li>
+<li><p><strong>rx_gate_duration_ns</strong> – Rx gate duration (in nanoseconds) </p></li>
+<li><p><strong>ry_gate_duration_ns</strong> – Ry gate duration (in nanoseconds) </p></li>
+<li><p><strong>cz_gate_duration_ns</strong> – Cz gate duration (in nanoseconds) </p></li>
+<li><p><strong>qb_roErrors</strong> – Qubit read-out error </p></li>
 <li><p><strong>qb_connectivity</strong> – Qubit connectivity vector </p></li>
 </ul>
 </dd>
@@ -419,13 +388,13 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="classqb_1_1Profiler.html" class="btn btn-neutral float-left" title="Class Profiler" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="classqb_1_1qml_1_1ParamCirc.html" class="btn btn-neutral float-right" title="Class ParamCirc" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="classqb_1_1session.html" class="btn btn-neutral float-right" title="Class session" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

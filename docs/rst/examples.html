@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Examples &mdash; Quantum SDK  documentation</title>
+  <title>Examples &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -38,7 +38,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -62,13 +62,20 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -82,7 +89,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -263,17 +270,32 @@
 <p><em>qubits</em>: 2
 <em>gate depth</em>: 6
 <em>noise</em>: true</p>
-<p>A version of <code class="docutils literal notranslate"><span class="pre">quickstart.py</span></code> with noise.</p>
-<p><code class="docutils literal notranslate"><span class="pre">noise_model_user_defined.py</span></code></p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">quickstart.py</span></code> with noise. There are two options of noise models: <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">qdk1</span></code> (the latter requires the Qristal Emulator. Details about the noise model are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/noise_models.html">here</a>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_kraus.py</span></code></p>
 <p><em>qubits</em>: 2
 <em>gate depth</em>: 6
 <em>noise</em>: true</p>
-<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of a user-defined noise model.</p>
-<p><code class="docutils literal notranslate"><span class="pre">noise_model_user_defined_qb_gateset.py</span></code></p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of Kraus matrices to generate custom noise channels. Custom noise channels are then used to generate a custom noise model.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_parameterized.py</span></code></p>
 <p><em>qubits</em>: 2
 <em>gate depth</em>: 6
 <em>noise</em>: true</p>
-<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model_user_defined.py</span></code> demonstrating the use of a user-defined noise model in a different basis gate set.</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of custom noise model parameters (<span class="math notranslate nohighlight">\(t_1\)</span>, <span class="math notranslate nohighlight">\(t_2\)</span>, gate errors, etc) to generate a custom noise model. This noise model consists of common noise channels: amplitude damping, phase damping and depolarization.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of noise channels to generate a user-defined noise model. The noise model consists of common noise channels: amplitude damping, phase damping and depolarization.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel_qb_gateset.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel.py</span></code> demonstrating the use of a user-defined noise model in a different basis gate set.</p>
+<p><code class="docutils literal notranslate"><span class="pre">parametrization_demo.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 4
+<em>noise</em>: false</p>
+<p>An extremely simple demonstration of how to construct and execute parametrized circuits using Qristal.</p>
 <p><code class="docutils literal notranslate"><span class="pre">pfd.py</span></code></p>
 <p><em>qubits</em>: 12
 <em>gate depth</em>: 4690
@@ -291,11 +313,6 @@
 <p><em>qubits</em>: 5
 <em>noise</em>: false</p>
 <p>Example of a quantum Fourier transform.</p>
-<p><code class="docutils literal notranslate"><span class="pre">qml/RDBMS_query_optimization.py</span></code></p>
-<p><em>qubits</em>: 4
-<em>variational_params</em>: 40
-<em>noise</em>: false</p>
-<p>Example showing QML wrapped in PyTorch for optimizing the join order of tables for reduced query latency in relational database management systems (such as PostgreSQL).</p>
 <p><code class="docutils literal notranslate"><span class="pre">qpe.py</span></code></p>
 <p><em>qubits</em>: 5
 <em>gate depth</em>: 16
@@ -374,6 +391,10 @@ Valid AWS credentials are required to run the example.</p>
 <li><p>Use an AWS Region that supports AWS Braket (e.g., us-east-1);</p></li>
 <li><p>Create an S3 Bucket with prefix <code class="docutils literal notranslate"><span class="pre">amazon-braket-*</span></code> and create a folder inside the S3 bucket to store results.</p></li>
 </ul>
+<p><code class="docutils literal notranslate"><span class="pre">execute_GST_XY.py</span></code></p>
+<p><em>qubits</em>: 1
+<em>noise</em>: true/false (depends on setting in C++ runner)</p>
+<p>A simple example demonstrating the creation of a gate set tomography experiment design for 1-qubit gates Rx(pi/2) and Ry(pi/2) using pyGSTi. An exported circuit list is passed to a provided pyGSTi_runner (using qb::benchmark). The gathered results are loaded back into pyGSTi and used to create an html report.</p>
 </section>
 <section id="c">
 <h2>C++<a class="headerlink" href="#c" title="Permalink to this headline"></a></h2>
@@ -403,11 +424,27 @@ Valid AWS credentials are required to run the example.</p>
 <em>gate depth</em>: 6
 <em>noise</em>: true</p>
 <p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code>.</p>
-<p><code class="docutils literal notranslate"><span class="pre">noise_model_user_defined</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_kraus</span></code></p>
 <p><em>qubits</em>: 2
 <em>gate depth</em>: 6
 <em>noise</em>: true</p>
-<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_user_defined.py</span></code>.</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_kraus.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_parameterized</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_parameterized.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">parametrization</span></code></p>
+<p><em>qubits</em>: 1-2
+<em>circuits</em>: 2
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Demonstrates the use of parametrized gates/circuits in Qristal, as well as how to execute parametrized circuits after providing runtime parameters, and calculating jacobians for these parameters.</p>
 <p><code class="docutils literal notranslate"><span class="pre">vqee</span></code></p>
 <p><em>qubits</em>: 4
 <em>gate depth</em>: 83
@@ -464,6 +501,11 @@ Valid AWS credentials are required to run the example.</p>
 <em>gate depth</em>: 1
 <em>noise</em>: false</p>
 <p>This example shows the execution of a standard quantum process tomography workflow wrapped around a rotation sweep benchmark rotating qubit 0 from -pi to +pi applying Rx gates in 5 steps. For each circuit, the quantum process fidelity metric is evaluated and printed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pyGSTi_runner</span></code></p>
+<p><em>qubits</em>: 1
+<em>gate depth</em>: depends on pyGSTi experiment design
+<em>noise</em>: false/true</p>
+<p>Example executor for 1-qubit pyGSTi experiments reading in pyGSTi circuits from std::cin and printing pyGSTi compatible results to std::cout. This example is used in the python example execute_GST_XY.py to create a pyGSTi report.</p>
 </section>
 <section id="c-with-cuda-quantum">
 <h2>C++ with CUDA Quantum<a class="headerlink" href="#c-with-cuda-quantum" title="Permalink to this headline"></a></h2>
@@ -494,7 +536,7 @@ Valid AWS credentials are required to run the example.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

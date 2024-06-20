@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Noise models &mdash; Quantum SDK  documentation</title>
+  <title>Noise models &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -36,7 +36,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -52,13 +52,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -72,7 +79,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -97,11 +104,12 @@
 <li><p>Emulating the noise inherent in hardware quantum gates, and</p></li>
 <li><p>Optimizing qubit assignment for a given quantum circuit.</p></li>
 </ul>
+<p>For details on the simulators that support these noise models, please see this <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html">link</a>.</p>
 <section id="summary-of-built-in-noise-models">
 <h2>Summary of built-in noise models<a class="headerlink" href="#summary-of-built-in-noise-models" title="Permalink to this headline"></a></h2>
 <section id="default">
 <h3><code class="docutils literal notranslate"><span class="pre">default</span></code><a class="headerlink" href="#default" title="Permalink to this headline"></a></h3>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Model name</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">default</span></code></p></th>
@@ -139,19 +147,11 @@
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Commercial emulator releases: 2023 onwards</p></li>
 </ul>
-<p>Availability on simulators:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> aer</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qsim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> tnqvm</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> sparse-sim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qpp</p></li>
-</ul>
 <p>This model takes the number of qubits specified by the user and generates a fully connected topology between all qubits.  Quantum gate noise is modelled using single-qubit depolarization and 2-qubit depolarization channels.  The channels are uniform across all qubits.  Readout errors are also accounted for in this model.</p>
 </section>
 <section id="qb-nm1">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-nm1</span></code><a class="headerlink" href="#qb-nm1" title="Permalink to this headline"></a></h3>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Model name</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-nm1</span></code></p></th>
@@ -171,18 +171,10 @@
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Commercial emulator releases: 2023 onwards</p></li>
 </ul>
-<p>Availability on simulators:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> aer</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> qsim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> tnqvm</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> sparse-sim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qpp</p></li>
-</ul>
 </section>
 <section id="qb-nm2">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-nm2</span></code><a class="headerlink" href="#qb-nm2" title="Permalink to this headline"></a></h3>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Model name</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-nm2</span></code></p></th>
@@ -202,18 +194,10 @@
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Commercial emulator releases: 2023 onwards</p></li>
 </ul>
-<p>Availability on simulators:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> aer</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> qsim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> tnqvm</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> sparse-sim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qpp</p></li>
-</ul>
 </section>
 <section id="qb-nm3">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-nm3</span></code><a class="headerlink" href="#qb-nm3" title="Permalink to this headline"></a></h3>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Model name</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-nm3</span></code></p></th>
@@ -233,18 +217,10 @@
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Commercial emulator releases: 2023 onwards</p></li>
 </ul>
-<p>Availability on simulators:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> aer</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> qsim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> tnqvm</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> sparse-sim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qpp</p></li>
-</ul>
 </section>
 <section id="qb-qdk1">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-qdk1</span></code><a class="headerlink" href="#qb-qdk1" title="Permalink to this headline"></a></h3>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Model name</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-qdk1</span></code></p></th>
@@ -264,18 +240,10 @@
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Commercial emulator releases: 2023 onwards</p></li>
 </ul>
-<p>Availability on simulators:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> aer</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qsim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> tnqvm</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> sparse-sim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qpp</p></li>
-</ul>
 </section>
 <section id="qb-dqc2">
 <h3><code class="docutils literal notranslate"><span class="pre">qb-dqc2</span></code><a class="headerlink" href="#qb-dqc2" title="Permalink to this headline"></a></h3>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Model name</p></th>
 <th class="head"><p><code class="docutils literal notranslate"><span class="pre">qb-dqc2</span></code></p></th>
@@ -294,14 +262,6 @@
 <ul class="contains-task-list simple">
 <li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> Open source releases: 2023 onwards</p></li>
 <li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> Commercial emulator releases: 2023 onwards</p></li>
-</ul>
-<p>Availability on simulators:</p>
-<ul class="contains-task-list simple">
-<li class="task-list-item"><p><input class="task-list-item-checkbox" checked="checked" disabled="disabled" type="checkbox"> aer</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qsim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> tnqvm</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> sparse-sim</p></li>
-<li class="task-list-item"><p><input class="task-list-item-checkbox" disabled="disabled" type="checkbox"> qpp</p></li>
 </ul>
 </section>
 </section>
@@ -374,7 +334,7 @@
 </section>
 <section id="noise-channels">
 <h2>Noise channels<a class="headerlink" href="#noise-channels" title="Permalink to this headline"></a></h2>
-<table class="docutils align-default">
+<table class="colwidths-auto docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Name</p></th>
 <th class="head"><p>Description</p></th>
@@ -411,7 +371,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

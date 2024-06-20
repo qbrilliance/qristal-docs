@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>C++ API &mdash; Quantum SDK  documentation</title>
+  <title>C++ API &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -24,7 +24,7 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Namespace nvqir" href="namespace_nvqir.html" />
-    <link rel="prev" title="Qristal Emulator Getting Started Guide" href="../rst/emulator.html" /> 
+    <link rel="prev" title="Quantum Gates" href="../rst/quantum_gates.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -36,7 +36,7 @@
           
           
           <a href="../index.html" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -52,13 +52,20 @@
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul class="current">
@@ -69,7 +76,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#namespaces">Namespaces</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="namespace_nvqir.html">Namespace nvqir</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespace_qb.html">Namespace qb</a></li>
-<li class="toctree-l4"><a class="reference internal" href="namespace_qb__qml.html">Namespace qb::qml</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespace_qb__vqee.html">Namespace qb::vqee</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespace_xacc.html">Namespace xacc</a></li>
 <li class="toctree-l4"><a class="reference internal" href="namespace_xacc__quantum.html">Namespace xacc::quantum</a></li>
@@ -93,8 +99,6 @@
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1Profiler.html">Class Profiler</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1QbNoiseModel.html">Class QbNoiseModel</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a></li>
-<li class="toctree-l4"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqb_1_1thread__pool.html">Class thread_pool</a></li>
@@ -110,40 +114,38 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#enums">Enums</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html">Enum DefaultAnsatzes</a></li>
-<li class="toctree-l4"><a class="reference internal" href="enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html">Enum GradientTypes</a></li>
 <li class="toctree-l4"><a class="reference internal" href="enum_case__generator_8hpp_1a623b5d9a0f13a864f13151f24a491f36.html">Enum AnsatzID</a></li>
 <li class="toctree-l4"><a class="reference internal" href="enum_case__generator_8hpp_1aaee3be947eeea73bf6b736d8b7eb9821.html">Enum JobID</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1a832ddfffd686829905846c26ac967d11.html">Function emulator_initialize</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html">Function get_emulator_noise_model</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0.html">Function qb::create_circuit_optimizer_pass</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html">Function qb::create_initial_state_simplify_pass</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7.html">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html">Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a.html">Function qb::create_peephole_pass</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d.html">Function qb::create_remove_redundancies_pass</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f.html">Function qb::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c.html">Function qb::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62.html">Function qb::create_two_qubit_squash_pass</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752.html">Function qb::execute_on_qb_hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1ac026c44df5ae9229f864838d2fa22d7f.html">Function get_emulator_noise_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0817e5330bf1d5cd43bd290d8b12f058.html">Function qb::create_circuit_optimizer_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a278d09f8d45794b205700d84d88b280f.html">Function qb::create_initial_state_simplify_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ac55aa39b348ea8db4a9c2f97d564bc92.html">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8cef3783d913c604cc1344dc854c5b1.html">Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a7cb929d9837a7a52e08d1843cf748968.html">Function qb::create_peephole_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a7b97a0eb840b1a54fabf516a7ebc1ba5.html">Function qb::create_remove_redundancies_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a73eedda9102c5b9819ce17981b661e12.html">Function qb::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a538dcdd4fa63c91aed83cae829c0000a.html">Function qb::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1af9087351805d30805b0c6214960cd890.html">Function qb::create_two_qubit_squash_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_qb__qpu_8hpp_1a9d78b600220a284847b7db5239015e7b.html">Function qb::execute_on_qb_hardware</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4.html">Function qb::load_cudaq_backend</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html">Function qb::uniqueBitsQD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_circuit__builder_8hpp_1ac4474aa344183b310290d76980efd1d8.html">Function qb::uniqueBitsQD</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a08ad20c72570d148656273c1a257fdc3.html">Function qb::vqee::ansatzToString</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1adff3b3981e9cbca47fd15b0c1e8f43d0.html">Function qb::vqee::ASWAP_Ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1adec23d8c352e72f63093552915160c39.html">Function qb::vqee::ASWAP_Ansatz</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aed80dd6f9a61668d77c063809aaa2c22.html">Function qb::vqee::getEnumFromName</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a6dea9fe524c91c7760109f31ab0b16e6.html">Function qb::vqee::getEnumName</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a7dd55957c4e1ef794005337f4593ec00.html">Function qb::vqee::HEA_Ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a163ea4cfb75e408f55c9cd2b96cf3751.html">Function qb::vqee::HEA_Ansatz</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aae8c884195ff76956afd9e51a51c6d00.html">Function qb::vqee::HEA_String</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a9a437083d766e5c39c94122350681453.html">Function qb::vqee::hydrogenChainGeometry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1af6e4d554405a672a83c459cf21f9561a.html">Function qb::vqee::makeJob</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_vqee_8hpp_1a81b4b76a197b6eac3799adb0e74c4bc4.html">Template Function qb::vqee::operator&lt;&lt;</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_vqee_8hpp_1a6698d1bb45226c33390ecc9fba58ff65.html">Template Function qb::vqee::operator&lt;&lt;</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a1cb5b92bb9f966f0e8a9c7efc11317cd.html">Function qb::vqee::pauliStringFromGeometry</a></li>
 <li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1abb94ed5b62f182939b94008f126534f3.html">Function qb::vqee::setAnsatz</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aa7b9e09bde9c753bebc04a7039511ee1.html">Function qb::vqee::stringToAnsatz</a></li>
-<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a8da7c8fc0dd5137d50b551fa883350a9.html">Function qb::vqee::UCCSD_Ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a5c5c195b25e0439ff2961de3ebff472d.html">Function qb::vqee::stringToAnsatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aeaa5edaa7686251614c8e28a53aed0a1.html">Function qb::vqee::UCCSD_Ansatz</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#typedefs">Typedefs</a><ul>
@@ -166,7 +168,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">Quantum SDK</a>
+          <a href="../index.html">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -191,7 +193,7 @@
 <ul class="treeView" id="class-treeView">
   <li>
     <ul class="collapsibleList">
-      <li>Namespace <a href="namespace_qb.html#namespace-qb">qb</a><ul><li>Namespace <a href="namespace_qb__qml.html#namespace-qb-qml">qb::qml</a><ul><li>Class <a href="classqb_1_1qml_1_1ParamCirc.html#exhale-class-classqb-1-1qml-1-1ParamCirc">ParamCirc</a></li><li>Class <a href="classqb_1_1qml_1_1QMLExecutor.html#exhale-class-classqb-1-1qml-1-1QMLExecutor">QMLExecutor</a></li><li>Enum <a href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html#exhale-enum-qml-8hpp-1adf5a25f4ac3ec2b56ebebe076aab8167">DefaultAnsatzes</a></li><li class="lastChild">Enum <a href="enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html#exhale-enum-qml-8hpp-1a651af41c64ef0aebe87ed1be728adf73">GradientTypes</a></li></ul></li><li>Namespace <a href="namespace_qb__vqee.html#namespace-qb-vqee">qb::vqee</a><ul><li>Struct <a href="structqb_1_1vqee_1_1Params.html#exhale-struct-structqb-1-1vqee-1-1Params">Params</a></li><li>Struct <a href="structqb_1_1vqee_1_1vqe__iteration__data.html#exhale-struct-structqb-1-1vqee-1-1vqe-iteration-data">vqe_iteration_data</a></li><li>Class <a href="classqb_1_1vqee_1_1AdamMLP.html#exhale-class-classqb-1-1vqee-1-1AdamMLP">AdamMLP</a></li><li>Class <a href="classqb_1_1vqee_1_1CmaesMLP.html#exhale-class-classqb-1-1vqee-1-1CmaesMLP">CmaesMLP</a></li><li>Class <a href="classqb_1_1vqee_1_1LbfgsMLP.html#exhale-class-classqb-1-1vqee-1-1LbfgsMLP">LbfgsMLP</a></li><li>Class <a href="classqb_1_1vqee_1_1NelderMeadNLO.html#exhale-class-classqb-1-1vqee-1-1NelderMeadNLO">NelderMeadNLO</a></li><li>Class <a href="classqb_1_1vqee_1_1NLO.html#exhale-class-classqb-1-1vqee-1-1NLO">NLO</a></li><li>Class <a href="classqb_1_1vqee_1_1VQEE.html#exhale-class-classqb-1-1vqee-1-1VQEE">VQEE</a></li><li>Class <a href="classqb_1_1vqee_1_1VqeOpt.html#exhale-class-classqb-1-1vqee-1-1VqeOpt">VqeOpt</a></li><li>Enum <a href="enum_case__generator_8hpp_1a623b5d9a0f13a864f13151f24a491f36.html#exhale-enum-case-generator-8hpp-1a623b5d9a0f13a864f13151f24a491f36">AnsatzID</a></li><li class="lastChild">Enum <a href="enum_case__generator_8hpp_1aaee3be947eeea73bf6b736d8b7eb9821.html#exhale-enum-case-generator-8hpp-1aaee3be947eeea73bf6b736d8b7eb9821">JobID</a></li></ul></li><li>Struct <a href="structqb_1_1noise__aware__placement__config.html#exhale-struct-structqb-1-1noise-aware-placement-config">noise_aware_placement_config</a></li><li>Struct <a href="structqb_1_1NoiseProperties.html#exhale-struct-structqb-1-1NoiseProperties">NoiseProperties</a></li><li>Struct <a href="structqb_1_1pair__hash.html#exhale-struct-structqb-1-1pair-hash">pair_hash</a></li><li>Struct <a href="structqb_1_1ReadoutError.html#exhale-struct-structqb-1-1ReadoutError">ReadoutError</a></li><li>Class <a href="classqb_1_1CircuitBuilder.html#exhale-class-classqb-1-1CircuitBuilder">CircuitBuilder</a></li><li>Class <a href="classqb_1_1CirqQsim.html#exhale-class-classqb-1-1CirqQsim">CirqQsim</a></li><li>Class <a href="classqb_1_1cudaq__ir__converter.html#exhale-class-classqb-1-1cudaq-ir-converter">cudaq_ir_converter</a></li><li>Class <a href="classqb_1_1cudaq__sim__pool.html#exhale-class-classqb-1-1cudaq-sim-pool">cudaq_sim_pool</a></li><li>Class <a href="classqb_1_1MpsAccelerator.html#exhale-class-classqb-1-1MpsAccelerator">MpsAccelerator</a></li><li>Class <a href="classqb_1_1noise__aware__placement__pass.html#exhale-class-classqb-1-1noise-aware-placement-pass">noise_aware_placement_pass</a></li><li>Class <a href="classqb_1_1NoiseModel.html#exhale-class-classqb-1-1NoiseModel">NoiseModel</a></li><li>Class <a href="classqb_1_1optimization__pass.html#exhale-class-classqb-1-1optimization-pass">optimization_pass</a></li><li>Template Class <a href="classqb_1_1Pass.html#exhale-class-classqb-1-1Pass">Pass</a></li><li>Class <a href="classqb_1_1Profiler.html#exhale-class-classqb-1-1Profiler">Profiler</a></li><li>Class <a href="classqb_1_1QbNoiseModel.html#exhale-class-classqb-1-1QbNoiseModel">QbNoiseModel</a></li><li>Class <a href="classqb_1_1session.html#exhale-class-classqb-1-1session">session</a></li><li>Class <a href="classqb_1_1swap__placement__pass.html#exhale-class-classqb-1-1swap-placement-pass">swap_placement_pass</a></li><li class="lastChild">Class <a href="classqb_1_1thread__pool.html#exhale-class-classqb-1-1thread-pool">thread_pool</a></li></ul></li><li class="lastChild">Namespace <a href="namespace_xacc.html#namespace-xacc">xacc</a><ul><li class="lastChild">Namespace <a href="namespace_xacc__quantum.html#namespace-xacc-quantum">xacc::quantum</a><ul><li>Class <a href="classxacc_1_1quantum_1_1qb__qpu.html#exhale-class-classxacc-1-1quantum-1-1qb-qpu">qb_qpu</a></li><li class="lastChild">Class <a href="classxacc_1_1quantum_1_1qb__visitor.html#exhale-class-classxacc-1-1quantum-1-1qb-visitor">qb_visitor</a></li></ul></li></ul></li>
+      <li>Namespace <a href="namespace_qb.html#namespace-qb">qb</a><ul><li>Namespace <a href="namespace_qb__vqee.html#namespace-qb-vqee">qb::vqee</a><ul><li>Struct <a href="structqb_1_1vqee_1_1Params.html#exhale-struct-structqb-1-1vqee-1-1Params">Params</a></li><li>Struct <a href="structqb_1_1vqee_1_1vqe__iteration__data.html#exhale-struct-structqb-1-1vqee-1-1vqe-iteration-data">vqe_iteration_data</a></li><li>Class <a href="classqb_1_1vqee_1_1AdamMLP.html#exhale-class-classqb-1-1vqee-1-1AdamMLP">AdamMLP</a></li><li>Class <a href="classqb_1_1vqee_1_1CmaesMLP.html#exhale-class-classqb-1-1vqee-1-1CmaesMLP">CmaesMLP</a></li><li>Class <a href="classqb_1_1vqee_1_1LbfgsMLP.html#exhale-class-classqb-1-1vqee-1-1LbfgsMLP">LbfgsMLP</a></li><li>Class <a href="classqb_1_1vqee_1_1NelderMeadNLO.html#exhale-class-classqb-1-1vqee-1-1NelderMeadNLO">NelderMeadNLO</a></li><li>Class <a href="classqb_1_1vqee_1_1NLO.html#exhale-class-classqb-1-1vqee-1-1NLO">NLO</a></li><li>Class <a href="classqb_1_1vqee_1_1VQEE.html#exhale-class-classqb-1-1vqee-1-1VQEE">VQEE</a></li><li>Class <a href="classqb_1_1vqee_1_1VqeOpt.html#exhale-class-classqb-1-1vqee-1-1VqeOpt">VqeOpt</a></li><li>Enum <a href="enum_case__generator_8hpp_1a623b5d9a0f13a864f13151f24a491f36.html#exhale-enum-case-generator-8hpp-1a623b5d9a0f13a864f13151f24a491f36">AnsatzID</a></li><li class="lastChild">Enum <a href="enum_case__generator_8hpp_1aaee3be947eeea73bf6b736d8b7eb9821.html#exhale-enum-case-generator-8hpp-1aaee3be947eeea73bf6b736d8b7eb9821">JobID</a></li></ul></li><li>Struct <a href="structqb_1_1noise__aware__placement__config.html#exhale-struct-structqb-1-1noise-aware-placement-config">noise_aware_placement_config</a></li><li>Struct <a href="structqb_1_1NoiseProperties.html#exhale-struct-structqb-1-1NoiseProperties">NoiseProperties</a></li><li>Struct <a href="structqb_1_1pair__hash.html#exhale-struct-structqb-1-1pair-hash">pair_hash</a></li><li>Struct <a href="structqb_1_1ReadoutError.html#exhale-struct-structqb-1-1ReadoutError">ReadoutError</a></li><li>Class <a href="classqb_1_1CircuitBuilder.html#exhale-class-classqb-1-1CircuitBuilder">CircuitBuilder</a></li><li>Class <a href="classqb_1_1CirqQsim.html#exhale-class-classqb-1-1CirqQsim">CirqQsim</a></li><li>Class <a href="classqb_1_1cudaq__ir__converter.html#exhale-class-classqb-1-1cudaq-ir-converter">cudaq_ir_converter</a></li><li>Class <a href="classqb_1_1cudaq__sim__pool.html#exhale-class-classqb-1-1cudaq-sim-pool">cudaq_sim_pool</a></li><li>Class <a href="classqb_1_1MpsAccelerator.html#exhale-class-classqb-1-1MpsAccelerator">MpsAccelerator</a></li><li>Class <a href="classqb_1_1noise__aware__placement__pass.html#exhale-class-classqb-1-1noise-aware-placement-pass">noise_aware_placement_pass</a></li><li>Class <a href="classqb_1_1NoiseModel.html#exhale-class-classqb-1-1NoiseModel">NoiseModel</a></li><li>Class <a href="classqb_1_1optimization__pass.html#exhale-class-classqb-1-1optimization-pass">optimization_pass</a></li><li>Template Class <a href="classqb_1_1Pass.html#exhale-class-classqb-1-1Pass">Pass</a></li><li>Class <a href="classqb_1_1Profiler.html#exhale-class-classqb-1-1Profiler">Profiler</a></li><li>Class <a href="classqb_1_1QbNoiseModel.html#exhale-class-classqb-1-1QbNoiseModel">QbNoiseModel</a></li><li>Class <a href="classqb_1_1session.html#exhale-class-classqb-1-1session">session</a></li><li>Class <a href="classqb_1_1swap__placement__pass.html#exhale-class-classqb-1-1swap-placement-pass">swap_placement_pass</a></li><li class="lastChild">Class <a href="classqb_1_1thread__pool.html#exhale-class-classqb-1-1thread-pool">thread_pool</a></li></ul></li><li class="lastChild">Namespace <a href="namespace_xacc.html#namespace-xacc">xacc</a><ul><li class="lastChild">Namespace <a href="namespace_xacc__quantum.html#namespace-xacc-quantum">xacc::quantum</a><ul><li>Class <a href="classxacc_1_1quantum_1_1qb__qpu.html#exhale-class-classxacc-1-1quantum-1-1qb-qpu">qb_qpu</a></li><li class="lastChild">Class <a href="classxacc_1_1quantum_1_1qb__visitor.html#exhale-class-classxacc-1-1quantum-1-1qb-visitor">qb_visitor</a></li></ul></li></ul></li>
     </ul>
   </li><!-- only tree view element -->
 </ul><!-- /treeView class-treeView --></section>
@@ -200,7 +202,7 @@
 <ul class="treeView" id="file-treeView">
   <li>
     <ul class="collapsibleList">
-      <li>Directory <a href="dir_core.html#dir-core">core</a><ul><li class="lastChild">Directory <a href="dir_core_include.html#dir-core-include">include</a><ul><li class="lastChild">Directory <a href="dir_core_include_qb.html#dir-core-include-qb">qb</a><ul><li class="lastChild">Directory <a href="dir_core_include_qb_core.html#dir-core-include-qb-core">core</a><ul><li>Directory <a href="dir_core_include_qb_core_backends.html#dir-core-include-qb-core-backends">backends</a><ul><li class="lastChild">Directory <a href="dir_core_include_qb_core_backends_qb_hardware.html#dir-core-include-qb-core-backends-qb-hardware">qb_hardware</a><ul><li>File <a href="file_core_include_qb_core_backends_qb_hardware_qb_qpu.hpp.html#file-core-include-qb-core-backends-qb-hardware-qb-qpu.hpp">qb_qpu.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_backends_qb_hardware_qb_visitor.hpp.html#file-core-include-qb-core-backends-qb-hardware-qb-visitor.hpp">qb_visitor.hpp</a></li></ul></li></ul></li><li>Directory <a href="dir_core_include_qb_core_cudaq.html#dir-core-include-qb-core-cudaq">cudaq</a><ul><li>File <a href="file_core_include_qb_core_cudaq_ir_converter.hpp.html#file-core-include-qb-core-cudaq-ir-converter.hpp">ir_converter.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#file-core-include-qb-core-cudaq-sim-pool.hpp">sim_pool.hpp</a></li></ul></li><li>Directory <a href="dir_core_include_qb_core_noise_model.html#dir-core-include-qb-core-noise-model">noise_model</a><ul><li>File <a href="file_core_include_qb_core_noise_model_noise_model.hpp.html#file-core-include-qb-core-noise-model-noise-model.hpp">noise_model.hpp</a></li><li>File <a href="file_core_include_qb_core_noise_model_noise_properties.hpp.html#file-core-include-qb-core-noise-model-noise-properties.hpp">noise_properties.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_noise_model_readout_error.hpp.html#file-core-include-qb-core-noise-model-readout-error.hpp">readout_error.hpp</a></li></ul></li><li>Directory <a href="dir_core_include_qb_core_optimization.html#dir-core-include-qb-core-optimization">optimization</a><ul><li>Directory <a href="dir_core_include_qb_core_optimization_qml.html#dir-core-include-qb-core-optimization-qml">qml</a><ul><li class="lastChild">File <a href="file_core_include_qb_core_optimization_qml_qml.hpp.html#file-core-include-qb-core-optimization-qml-qml.hpp">qml.hpp</a></li></ul></li><li class="lastChild">Directory <a href="dir_core_include_qb_core_optimization_vqee.html#dir-core-include-qb-core-optimization-vqee">vqee</a><ul><li>File <a href="file_core_include_qb_core_optimization_vqee_case_generator.hpp.html#file-core-include-qb-core-optimization-vqee-case-generator.hpp">case_generator.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_optimization_vqee_vqee.hpp.html#file-core-include-qb-core-optimization-vqee-vqee.hpp">vqee.hpp</a></li></ul></li></ul></li><li>Directory <a href="dir_core_include_qb_core_passes.html#dir-core-include-qb-core-passes">passes</a><ul><li>File <a href="file_core_include_qb_core_passes_base_pass.hpp.html#file-core-include-qb-core-passes-base-pass.hpp">base_pass.hpp</a></li><li>File <a href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#file-core-include-qb-core-passes-circuit-opt-passes.hpp">circuit_opt_passes.hpp</a></li><li>File <a href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html#file-core-include-qb-core-passes-noise-aware-placement-config.hpp">noise_aware_placement_config.hpp</a></li><li>File <a href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#file-core-include-qb-core-passes-noise-aware-placement-pass.hpp">noise_aware_placement_pass.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html#file-core-include-qb-core-passes-swap-placement-pass.hpp">swap_placement_pass.hpp</a></li></ul></li><li>File <a href="file_core_include_qb_core_circuit_builder.hpp.html#file-core-include-qb-core-circuit-builder.hpp">circuit_builder.hpp</a></li><li>File <a href="file_core_include_qb_core_profiler.hpp.html#file-core-include-qb-core-profiler.hpp">profiler.hpp</a></li><li>File <a href="file_core_include_qb_core_session.hpp.html#file-core-include-qb-core-session.hpp">session.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_thread_pool.hpp.html#file-core-include-qb-core-thread-pool.hpp">thread_pool.hpp</a></li></ul></li></ul></li></ul></li></ul></li><li class="lastChild">Directory <a href="dir_emulator.html#dir-emulator">emulator</a><ul><li class="lastChild">Directory <a href="dir_emulator_include.html#dir-emulator-include">include</a><ul><li class="lastChild">Directory <a href="dir_emulator_include_qb.html#dir-emulator-include-qb">qb</a><ul><li class="lastChild">Directory <a href="dir_emulator_include_qb_emulator.html#dir-emulator-include-qb-emulator">emulator</a><ul><li>Directory <a href="dir_emulator_include_qb_emulator_noise_model.html#dir-emulator-include-qb-emulator-noise-model">noise_model</a><ul><li class="lastChild">File <a href="file_emulator_include_qb_emulator_noise_model_QuantumBrillianceNoiseModel.hpp.html#file-emulator-include-qb-emulator-noise-model-QuantumBrillianceNoiseModel.hpp">QuantumBrillianceNoiseModel.hpp</a></li></ul></li><li>Directory <a href="dir_emulator_include_qb_emulator_nv_sim.html#dir-emulator-include-qb-emulator-nv-sim">nv_sim</a><ul><li class="lastChild">File <a href="file_emulator_include_qb_emulator_nv_sim_mps_accelerator.hpp.html#file-emulator-include-qb-emulator-nv-sim-mps-accelerator.hpp">mps_accelerator.hpp</a></li></ul></li><li>Directory <a href="dir_emulator_include_qb_emulator_qsim.html#dir-emulator-include-qb-emulator-qsim">qsim</a><ul><li class="lastChild">File <a href="file_emulator_include_qb_emulator_qsim_qsim_emulator.hpp.html#file-emulator-include-qb-emulator-qsim-qsim-emulator.hpp">qsim_emulator.hpp</a></li></ul></li><li class="lastChild">File <a href="file_emulator_include_qb_emulator_emulator.hpp.html#file-emulator-include-qb-emulator-emulator.hpp">emulator.hpp</a></li></ul></li></ul></li></ul></li></ul></li>
+      <li>Directory <a href="dir_core.html#dir-core">core</a><ul><li class="lastChild">Directory <a href="dir_core_include.html#dir-core-include">include</a><ul><li class="lastChild">Directory <a href="dir_core_include_qb.html#dir-core-include-qb">qb</a><ul><li class="lastChild">Directory <a href="dir_core_include_qb_core.html#dir-core-include-qb-core">core</a><ul><li>Directory <a href="dir_core_include_qb_core_backends.html#dir-core-include-qb-core-backends">backends</a><ul><li class="lastChild">Directory <a href="dir_core_include_qb_core_backends_qb_hardware.html#dir-core-include-qb-core-backends-qb-hardware">qb_hardware</a><ul><li>File <a href="file_core_include_qb_core_backends_qb_hardware_qb_qpu.hpp.html#file-core-include-qb-core-backends-qb-hardware-qb-qpu.hpp">qb_qpu.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_backends_qb_hardware_qb_visitor.hpp.html#file-core-include-qb-core-backends-qb-hardware-qb-visitor.hpp">qb_visitor.hpp</a></li></ul></li></ul></li><li>Directory <a href="dir_core_include_qb_core_cudaq.html#dir-core-include-qb-core-cudaq">cudaq</a><ul><li>File <a href="file_core_include_qb_core_cudaq_ir_converter.hpp.html#file-core-include-qb-core-cudaq-ir-converter.hpp">ir_converter.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_cudaq_sim_pool.hpp.html#file-core-include-qb-core-cudaq-sim-pool.hpp">sim_pool.hpp</a></li></ul></li><li>Directory <a href="dir_core_include_qb_core_noise_model.html#dir-core-include-qb-core-noise-model">noise_model</a><ul><li>File <a href="file_core_include_qb_core_noise_model_noise_model.hpp.html#file-core-include-qb-core-noise-model-noise-model.hpp">noise_model.hpp</a></li><li>File <a href="file_core_include_qb_core_noise_model_noise_properties.hpp.html#file-core-include-qb-core-noise-model-noise-properties.hpp">noise_properties.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_noise_model_readout_error.hpp.html#file-core-include-qb-core-noise-model-readout-error.hpp">readout_error.hpp</a></li></ul></li><li>Directory <a href="dir_core_include_qb_core_optimization.html#dir-core-include-qb-core-optimization">optimization</a><ul><li class="lastChild">Directory <a href="dir_core_include_qb_core_optimization_vqee.html#dir-core-include-qb-core-optimization-vqee">vqee</a><ul><li>File <a href="file_core_include_qb_core_optimization_vqee_case_generator.hpp.html#file-core-include-qb-core-optimization-vqee-case-generator.hpp">case_generator.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_optimization_vqee_vqee.hpp.html#file-core-include-qb-core-optimization-vqee-vqee.hpp">vqee.hpp</a></li></ul></li></ul></li><li>Directory <a href="dir_core_include_qb_core_passes.html#dir-core-include-qb-core-passes">passes</a><ul><li>File <a href="file_core_include_qb_core_passes_base_pass.hpp.html#file-core-include-qb-core-passes-base-pass.hpp">base_pass.hpp</a></li><li>File <a href="file_core_include_qb_core_passes_circuit_opt_passes.hpp.html#file-core-include-qb-core-passes-circuit-opt-passes.hpp">circuit_opt_passes.hpp</a></li><li>File <a href="file_core_include_qb_core_passes_noise_aware_placement_config.hpp.html#file-core-include-qb-core-passes-noise-aware-placement-config.hpp">noise_aware_placement_config.hpp</a></li><li>File <a href="file_core_include_qb_core_passes_noise_aware_placement_pass.hpp.html#file-core-include-qb-core-passes-noise-aware-placement-pass.hpp">noise_aware_placement_pass.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_passes_swap_placement_pass.hpp.html#file-core-include-qb-core-passes-swap-placement-pass.hpp">swap_placement_pass.hpp</a></li></ul></li><li>File <a href="file_core_include_qb_core_circuit_builder.hpp.html#file-core-include-qb-core-circuit-builder.hpp">circuit_builder.hpp</a></li><li>File <a href="file_core_include_qb_core_profiler.hpp.html#file-core-include-qb-core-profiler.hpp">profiler.hpp</a></li><li>File <a href="file_core_include_qb_core_session.hpp.html#file-core-include-qb-core-session.hpp">session.hpp</a></li><li class="lastChild">File <a href="file_core_include_qb_core_thread_pool.hpp.html#file-core-include-qb-core-thread-pool.hpp">thread_pool.hpp</a></li></ul></li></ul></li></ul></li></ul></li><li class="lastChild">Directory <a href="dir_emulator.html#dir-emulator">emulator</a><ul><li class="lastChild">Directory <a href="dir_emulator_include.html#dir-emulator-include">include</a><ul><li class="lastChild">Directory <a href="dir_emulator_include_qb.html#dir-emulator-include-qb">qb</a><ul><li class="lastChild">Directory <a href="dir_emulator_include_qb_emulator.html#dir-emulator-include-qb-emulator">emulator</a><ul><li>Directory <a href="dir_emulator_include_qb_emulator_noise_model.html#dir-emulator-include-qb-emulator-noise-model">noise_model</a><ul><li class="lastChild">File <a href="file_emulator_include_qb_emulator_noise_model_QuantumBrillianceNoiseModel.hpp.html#file-emulator-include-qb-emulator-noise-model-QuantumBrillianceNoiseModel.hpp">QuantumBrillianceNoiseModel.hpp</a></li></ul></li><li>Directory <a href="dir_emulator_include_qb_emulator_nv_sim.html#dir-emulator-include-qb-emulator-nv-sim">nv_sim</a><ul><li class="lastChild">File <a href="file_emulator_include_qb_emulator_nv_sim_mps_accelerator.hpp.html#file-emulator-include-qb-emulator-nv-sim-mps-accelerator.hpp">mps_accelerator.hpp</a></li></ul></li><li>Directory <a href="dir_emulator_include_qb_emulator_qsim.html#dir-emulator-include-qb-emulator-qsim">qsim</a><ul><li class="lastChild">File <a href="file_emulator_include_qb_emulator_qsim_qsim_emulator.hpp.html#file-emulator-include-qb-emulator-qsim-qsim-emulator.hpp">qsim_emulator.hpp</a></li></ul></li><li class="lastChild">File <a href="file_emulator_include_qb_emulator_emulator.hpp.html#file-emulator-include-qb-emulator-emulator.hpp">emulator.hpp</a></li></ul></li></ul></li></ul></li></ul></li>
     </ul>
   </li><!-- only tree view element -->
 </ul><!-- /treeView file-treeView --></section>
@@ -220,15 +222,6 @@
 <li class="toctree-l2"><a class="reference internal" href="namespace_qb.html#classes">Classes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="namespace_qb.html#functions">Functions</a></li>
 <li class="toctree-l2"><a class="reference internal" href="namespace_qb.html#typedefs">Typedefs</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="namespace_qb__qml.html">Namespace qb::qml</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="namespace_qb__qml.html#classes">Classes</a></li>
-<li class="toctree-l2"><a class="reference internal" href="namespace_qb__qml.html#enums">Enums</a></li>
 </ul>
 </li>
 </ul>
@@ -314,10 +307,6 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="classqb_1_1CircuitBuilder.html">Class CircuitBuilder</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classqb_1_1CircuitBuilder.html#inheritance-relationships">Inheritance Relationships</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classqb_1_1CircuitBuilder.html#derived-type">Derived Type</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="classqb_1_1CircuitBuilder.html#class-documentation">Class Documentation</a></li>
 </ul>
 </li>
@@ -431,26 +420,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="classqb_1_1QbNoiseModel.html#class-documentation">Class Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html">Class ParamCirc</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html#inheritance-relationships">Inheritance Relationships</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html#base-type">Base Type</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="classqb_1_1qml_1_1ParamCirc.html#class-documentation">Class Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html">Class QMLExecutor</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="classqb_1_1qml_1_1QMLExecutor.html#class-documentation">Class Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -593,22 +562,6 @@
 <h3>Enums<a class="headerlink" href="#enums" title="Permalink to this headline"></a></h3>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html">Enum DefaultAnsatzes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="enum_qml_8hpp_1adf5a25f4ac3ec2b56ebebe076aab8167.html#enum-documentation">Enum Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html">Enum GradientTypes</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="enum_qml_8hpp_1a651af41c64ef0aebe87ed1be728adf73.html#enum-documentation">Enum Documentation</a></li>
-</ul>
-</li>
-</ul>
-</div>
-<div class="toctree-wrapper compound">
-<ul>
 <li class="toctree-l1"><a class="reference internal" href="enum_case__generator_8hpp_1a623b5d9a0f13a864f13151f24a491f36.html">Enum AnsatzID</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="enum_case__generator_8hpp_1a623b5d9a0f13a864f13151f24a491f36.html#enum-documentation">Enum Documentation</a></li>
 </ul>
@@ -636,88 +589,88 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html">Function get_emulator_noise_model</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_emulator_8hpp_1a64f37e82ce3a379dddd441276659ff24.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_emulator_8hpp_1ac026c44df5ae9229f864838d2fa22d7f.html">Function get_emulator_noise_model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_emulator_8hpp_1ac026c44df5ae9229f864838d2fa22d7f.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0.html">Function qb::create_circuit_optimizer_pass</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0817e5330bf1d5cd43bd290d8b12f058.html">Function qb::create_circuit_optimizer_pass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0817e5330bf1d5cd43bd290d8b12f058.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html">Function qb::create_initial_state_simplify_pass</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a278d09f8d45794b205700d84d88b280f.html">Function qb::create_initial_state_simplify_pass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a278d09f8d45794b205700d84d88b280f.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7.html">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ac55aa39b348ea8db4a9c2f97d564bc92.html">Function qb::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ac55aa39b348ea8db4a9c2f97d564bc92.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html">Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8cef3783d913c604cc1344dc854c5b1.html">Function qb::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_noise__aware__placement__pass_8hpp_1ae8cef3783d913c604cc1344dc854c5b1.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a.html">Function qb::create_peephole_pass</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a7cb929d9837a7a52e08d1843cf748968.html">Function qb::create_peephole_pass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a7cb929d9837a7a52e08d1843cf748968.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d.html">Function qb::create_remove_redundancies_pass</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a7b97a0eb840b1a54fabf516a7ebc1ba5.html">Function qb::create_remove_redundancies_pass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a7b97a0eb840b1a54fabf516a7ebc1ba5.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f.html">Function qb::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a73eedda9102c5b9819ce17981b661e12.html">Function qb::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a73eedda9102c5b9819ce17981b661e12.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c.html">Function qb::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a538dcdd4fa63c91aed83cae829c0000a.html">Function qb::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_swap__placement__pass_8hpp_1a538dcdd4fa63c91aed83cae829c0000a.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62.html">Function qb::create_two_qubit_squash_pass</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1af9087351805d30805b0c6214960cd890.html">Function qb::create_two_qubit_squash_pass</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_circuit__opt__passes_8hpp_1af9087351805d30805b0c6214960cd890.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752.html">Function qb::execute_on_qb_hardware</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_qb__qpu_8hpp_1a9d78b600220a284847b7db5239015e7b.html">Function qb::execute_on_qb_hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_qb__qpu_8hpp_1a9d78b600220a284847b7db5239015e7b.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -732,8 +685,8 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html">Function qb::uniqueBitsQD</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_circuit__builder_8hpp_1ac4474aa344183b310290d76980efd1d8.html">Function qb::uniqueBitsQD</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_circuit__builder_8hpp_1ac4474aa344183b310290d76980efd1d8.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -748,8 +701,8 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1adff3b3981e9cbca47fd15b0c1e8f43d0.html">Function qb::vqee::ASWAP_Ansatz</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1adff3b3981e9cbca47fd15b0c1e8f43d0.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1adec23d8c352e72f63093552915160c39.html">Function qb::vqee::ASWAP_Ansatz</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1adec23d8c352e72f63093552915160c39.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -772,8 +725,8 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1a7dd55957c4e1ef794005337f4593ec00.html">Function qb::vqee::HEA_Ansatz</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1a7dd55957c4e1ef794005337f4593ec00.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1a163ea4cfb75e408f55c9cd2b96cf3751.html">Function qb::vqee::HEA_Ansatz</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1a163ea4cfb75e408f55c9cd2b96cf3751.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -804,8 +757,8 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_vqee_8hpp_1a81b4b76a197b6eac3799adb0e74c4bc4.html">Template Function qb::vqee::operator&lt;&lt;</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_vqee_8hpp_1a81b4b76a197b6eac3799adb0e74c4bc4.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_vqee_8hpp_1a6698d1bb45226c33390ecc9fba58ff65.html">Template Function qb::vqee::operator&lt;&lt;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_vqee_8hpp_1a6698d1bb45226c33390ecc9fba58ff65.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -828,16 +781,16 @@
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1aa7b9e09bde9c753bebc04a7039511ee1.html">Function qb::vqee::stringToAnsatz</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1aa7b9e09bde9c753bebc04a7039511ee1.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1a5c5c195b25e0439ff2961de3ebff472d.html">Function qb::vqee::stringToAnsatz</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1a5c5c195b25e0439ff2961de3ebff472d.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1a8da7c8fc0dd5137d50b551fa883350a9.html">Function qb::vqee::UCCSD_Ansatz</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1a8da7c8fc0dd5137d50b551fa883350a9.html#function-documentation">Function Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="function_case__generator_8hpp_1aeaa5edaa7686251614c8e28a53aed0a1.html">Function qb::vqee::UCCSD_Ansatz</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="function_case__generator_8hpp_1aeaa5edaa7686251614c8e28a53aed0a1.html#function-documentation">Function Documentation</a></li>
 </ul>
 </li>
 </ul>
@@ -885,14 +838,14 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../rst/emulator.html" class="btn btn-neutral float-left" title="Qristal Emulator Getting Started Guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../rst/quantum_gates.html" class="btn btn-neutral float-left" title="Quantum Gates" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="namespace_nvqir.html" class="btn btn-neutral float-right" title="Namespace nvqir" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

@@ -70,5 +70,5 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752`
+- :ref:`exhale_function_qb__qpu_8hpp_1a9d78b600220a284847b7db5239015e7b`
 

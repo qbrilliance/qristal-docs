@@ -39,17 +39,13 @@ Includes
 
 - ``assert.h``
 
+- ``string``
+
 - ``xacc.hpp``
 
 - ``xacc_service.hpp``
 
 
-
-Included By
------------
-
-
-- :ref:`file_core_include_qb_core_optimization_qml_qml.hpp`
 
 
 
@@ -72,7 +68,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de`
+- :ref:`exhale_function_circuit__builder_8hpp_1ac4474aa344183b310290d76980efd1d8`
 
 
 Typedefs

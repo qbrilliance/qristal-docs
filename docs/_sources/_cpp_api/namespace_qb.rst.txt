@@ -17,8 +17,6 @@ Namespaces
 ----------
 
 
-- :ref:`namespace_qb__qml`
-
 - :ref:`namespace_qb__vqee`
 
 
@@ -67,29 +65,29 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_circuit__opt__passes_8hpp_1a545cbab3923a87c01ccdd570ae61f1c0`
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a0817e5330bf1d5cd43bd290d8b12f058`
 
-- :ref:`exhale_function_circuit__opt__passes_8hpp_1a67c82445d4266309992147612188b316`
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a278d09f8d45794b205700d84d88b280f`
 
-- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7`
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ac55aa39b348ea8db4a9c2f97d564bc92`
 
-- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501`
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8cef3783d913c604cc1344dc854c5b1`
 
-- :ref:`exhale_function_circuit__opt__passes_8hpp_1a245093d381459ac07ab613f29611388a`
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a7cb929d9837a7a52e08d1843cf748968`
 
-- :ref:`exhale_function_circuit__opt__passes_8hpp_1a827e7f2b8a54343ab73941613181c79d`
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1a7b97a0eb840b1a54fabf516a7ebc1ba5`
 
-- :ref:`exhale_function_swap__placement__pass_8hpp_1a8ad72ff84c5b33c59c8316501fa2747f`
+- :ref:`exhale_function_swap__placement__pass_8hpp_1a73eedda9102c5b9819ce17981b661e12`
 
-- :ref:`exhale_function_swap__placement__pass_8hpp_1a25e7d9770e70951b279c25dbc1b7029c`
+- :ref:`exhale_function_swap__placement__pass_8hpp_1a538dcdd4fa63c91aed83cae829c0000a`
 
-- :ref:`exhale_function_circuit__opt__passes_8hpp_1a0299b0d8c2002e6003a022546ae25f62`
+- :ref:`exhale_function_circuit__opt__passes_8hpp_1af9087351805d30805b0c6214960cd890`
 
-- :ref:`exhale_function_qb__qpu_8hpp_1abcc5105c4469d38a423bd34f7f2ce752`
+- :ref:`exhale_function_qb__qpu_8hpp_1a9d78b600220a284847b7db5239015e7b`
 
 - :ref:`exhale_function_sim__pool_8hpp_1ac7cb3588bc9ab7f005b569244e09a0b4`
 
-- :ref:`exhale_function_circuit__builder_8hpp_1a7a90a73049f9676b6c3308498506b8de`
+- :ref:`exhale_function_circuit__builder_8hpp_1ac4474aa344183b310290d76980efd1d8`
 
 
 Typedefs

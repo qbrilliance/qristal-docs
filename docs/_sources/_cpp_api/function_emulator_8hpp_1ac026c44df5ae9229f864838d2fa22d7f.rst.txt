@@ -1,0 +1,14 @@
+.. _exhale_function_emulator_8hpp_1ac026c44df5ae9229f864838d2fa22d7f:
+
+Function get_emulator_noise_model
+=================================
+
+- Defined in :ref:`file_emulator_include_qb_emulator_emulator.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: get_emulator_noise_model(const char *)
+   :project: My Project

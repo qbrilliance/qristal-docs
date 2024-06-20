@@ -6,15 +6,6 @@ Class CircuitBuilder
 - Defined in :ref:`file_core_include_qb_core_circuit_builder.hpp`
 
 
-Inheritance Relationships
--------------------------
-
-Derived Type
-************
-
-- ``public qb::qml::ParamCirc`` (:ref:`exhale_class_classqb_1_1qml_1_1ParamCirc`)
-
-
 Class Documentation
 -------------------
 

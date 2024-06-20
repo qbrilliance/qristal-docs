@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Welcome to Qristal – The Quantum Brilliance SDK &mdash; Quantum SDK  documentation</title>
+  <title>Welcome to Qristal – The Quantum Brilliance SDK &mdash; Qristal  documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
       <link rel="stylesheet" href="_static/collapsible-lists/css/tree_view.css" type="text/css" />
@@ -35,7 +35,7 @@
           
           
           <a href="#" class="icon icon-home">
-            Quantum SDK
+            Qristal
               <img src="_static/qb_logo.png" class="logo" alt="Logo"/>
           </a>
 <div role="search">
@@ -51,13 +51,20 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/examples.html">Examples</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/quantum_computing.html">Quantum Computing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html">Noise models</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/parametrization.html">Parametrized Quantum Circuits</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/qml.html">Quantum Machine Learning (QML)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rst/nextflow.html">Nextflow</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
 <ul>
@@ -71,7 +78,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="#">Quantum SDK</a>
+          <a href="#">Qristal</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -118,14 +125,32 @@
 <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="rst/getting_started.html">Getting started</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#using-qristal">Using Qristal</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#installing-from-source">Installing from source</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#development-guide">Development guide</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#dependencies">Dependencies</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#installation">Installation</a></li>
-<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#contributing">Contributing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#contributing">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#asking-questions">Asking Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#reporting-and-discussing-issues">Reporting and Discussing Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#contributing-code">Contributing Code</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/getting_started.html#emulator">Emulator</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/getting_started.html#qristal-emulator-getting-started-guide">Qristal Emulator Getting Started Guide</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#check-that-your-system-meets-minimum-requirements">1. Check that your system meets minimum requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#install-docker">2. Install Docker</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#log-in-to-the-gitlab-docker-registry">3. Log in to the Gitlab Docker registry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#get-the-qristal-emulator-image">4. Get the Qristal Emulator Image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#activate-the-image-using-your-license-key">5. Activate the image using your license key</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#test-that-your-image-is-successfully-activated">6. Test that your image is successfully activated</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#run-some-other-examples">7. Run some other examples</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#test-out-the-jupyter-lab-interface-and-try-the-exercise">8. Test out the Jupyter Lab interface, and try the exercise</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#write-your-own-quantum-programs">9. Write your own quantum programs!</a></li>
+<li class="toctree-l4"><a class="reference internal" href="rst/getting_started.html#known-issues">10. Known issues</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -145,10 +170,56 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rst/cli.html">Command-line interface</a></li>
-<li class="toctree-l1"><a class="reference internal" href="rst/quantum_computing.html">Quantum Computing</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/quantum_computing.html#quantum-gates">Quantum Gates</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rst/backends.html">Backends</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/backends.html#hardware-backends">Hardware backends</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#quantum-brilliance">Quantum Brilliance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#amazon-braket-rigetti-aws-braket-rigetti">Amazon Braket Rigetti: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (Rigetti)</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="rst/backends.html#state-vector-simulators">State-vector simulators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#quantum-brilliance-state-vector-qsim">Quantum Brilliance state vector: <code class="docutils literal notranslate"><span class="pre">qsim</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#microsoft-sparse-state-vector-sparse-sim">Microsoft sparse state vector: <code class="docutils literal notranslate"><span class="pre">sparse-sim</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#quantum-state-vector-simulator-qpp-and-cudaq-qpp">Quantum++ state-vector simulator: <code class="docutils literal notranslate"><span class="pre">qpp</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qpp</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#cuquantum-state-vector-simulators-custatevec-fp32-and-custatevec-fp64">cuQuantum state-vector simulators: <code class="docutils literal notranslate"><span class="pre">custatevec:fp32</span></code> and <code class="docutils literal notranslate"><span class="pre">custatevec:fp64</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#aer-state-vector-aer-statevector">Aer state vector: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">statevector</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#amazon-braket-sv1-aws-braket-sv1">Amazon Braket SV1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (SV1)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/backends.html#tensor-network-simulators">Tensor network simulators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps">Quantum Brilliance Matrix-Product State (MPS): <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mps</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo">Quantum Brilliance Matrix-Product Density Operator: <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mpdo</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification">Quantum Brilliance purification: <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_purification</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#tnqvm-exatn-mps-tnqvm">TNQVM-ExaTN MPS: <code class="docutils literal notranslate"><span class="pre">tnqvm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#aer-mps-aer-matrix-product-state">Aer MPS: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">matrix_product_state</span></code>)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#amazon-braket-tn1-aws-braket-tn1">Amazon Braket TN1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (TN1)</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rst/backends.html#density-matrix-simulators">Density matrix simulators</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#cuda-quantum-density-matrix-simulator-cudaq-dm">CUDA Quantum density matrix simulator: <code class="docutils literal notranslate"><span class="pre">cudaq:dm</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#amazon-braket-dm1-aws-braket-dm1">Amazon Braket DM1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (DM1)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/backends.html#aer-density-matrix-aer-density-matrix">Aer density matrix: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">density_matrix</span></code>)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/emulator.html">Qristal Emulator Getting Started Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#check-that-your-system-meets-minimum-requirements">1. Check that your system meets minimum requirements</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#install-docker">2. Install Docker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#log-in-to-the-gitlab-docker-registry">3. Log in to the Gitlab Docker registry</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#get-the-qristal-emulator-image">4. Get the Qristal Emulator Image</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#activate-the-image-using-your-license-key">5. Activate the image using your license key</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#test-that-your-image-is-successfully-activated">6. Test that your image is successfully activated</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#run-some-other-examples">7. Run some other examples</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#test-out-the-jupyter-lab-interface-and-try-the-exercise">8. Test out the Jupyter Lab interface, and try the exercise</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#write-your-own-quantum-programs">9. Write your own quantum programs!</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#known-issues">10. Known issues</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html">Noise models</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#summary-of-built-in-noise-models">Summary of built-in noise models</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="rst/noise_models.html#default"><code class="docutils literal notranslate"><span class="pre">default</span></code></a></li>
@@ -169,6 +240,15 @@
 <li class="toctree-l1"><a class="reference internal" href="rst/noise_models.html#user-defined-noise-models">User defined noise models</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#modifying-the-default-noise-model">Modifying the <code class="docutils literal notranslate"><span class="pre">default</span></code> noise model</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rst/noise_models.html#noise-channels">Noise channels</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="rst/parametrization.html">Parametrized Quantum Circuits</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="rst/parametrization.html#example-in-qristal">Example in Qristal</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="rst/parametrization.html#defining-a-parametrized-circuit">Defining a parametrized circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/parametrization.html#executing-the-circuit">Executing the circuit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="rst/parametrization.html#obtaining-results">Obtaining results</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="rst/vqe.html">Variational Quantum Eigensolver (VQE)</a><ul>
@@ -216,13 +296,6 @@
 <li class="toctree-l2"><a class="reference internal" href="rst/vqe.html#how-to-make-function-calls-for-a-python-level-optimizer">How to make function calls for a Python-level optimizer?</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rst/qml.html">Quantum Machine Learning (QML)</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#defining-a-variational-quantum-circuit">Defining a variational quantum circuit</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#using-qmlexecutor-to-assign-values-to-parameters">Using QMLExecutor to assign values to parameters</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#converting-the-parametrized-quantum-circuit-to-a-neural-network-layer">Converting the parametrized quantum circuit to a neural network layer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/qml.html#references">References</a></li>
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="rst/nextflow.html">Nextflow</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="rst/nextflow.html#installing-nextflow">Installing Nextflow</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="rst/nextflow.html#prerequisites">Prerequisites</a></li>
@@ -244,19 +317,12 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="rst/emulator.html">Qristal Emulator Getting Started Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#check-that-your-system-meets-minimum-requirements">1. Check that your system meets minimum requirements</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#install-docker">2. Install Docker</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#log-in-to-the-gitlab-docker-registry">3. Log in to the Gitlab Docker registry</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#get-the-qristal-emulator-image">4. Get the Qristal Emulator Image</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#activate-the-image-using-your-license-key">5. Activate the image using your license key</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#test-that-your-image-is-successfully-activated">6. Test that your image is successfully activated</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#run-some-other-examples">7. Run some other examples</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#test-out-the-jupyter-lab-interface-and-try-the-exercise">8. Test out the Jupyter Lab interface, and try the exercise</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#write-your-own-quantum-programs">9. Write your own quantum programs!</a></li>
-<li class="toctree-l2"><a class="reference internal" href="rst/emulator.html#known-issues">10. Known issues</a></li>
 </ul>
-</li>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="rst/quantum_gates.html">Quantum Gates</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
@@ -289,7 +355,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2023, Quantum Brilliance Pty Ltd.</p>
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
   </div>
 
    

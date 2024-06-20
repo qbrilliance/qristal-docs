@@ -60,7 +60,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1a050b831511155dd81b55dc918aa07501`
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ac55aa39b348ea8db4a9c2f97d564bc92`
 
-- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8555b21703b2f6b3c8fd70083df5bc7`
+- :ref:`exhale_function_noise__aware__placement__pass_8hpp_1ae8cef3783d913c604cc1344dc854c5b1`
 

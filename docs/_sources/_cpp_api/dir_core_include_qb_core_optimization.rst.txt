@@ -15,7 +15,6 @@ Directory optimization
 Subdirectories
 --------------
 
-- :ref:`dir_core_include_qb_core_optimization_qml`
 - :ref:`dir_core_include_qb_core_optimization_vqee`
 
 
