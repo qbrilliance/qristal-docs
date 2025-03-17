@@ -1,0 +1,110 @@
+
+.. _namespace_qristal:
+
+Namespace qristal
+=================
+
+
+This file declares an Accelerator backend class based on the Cirq Qsim simulator. 
+
+
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal__vqee`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structqristal_1_1noise__aware__placement__config`
+
+- :ref:`exhale_struct_structqristal_1_1noise__channel__components`
+
+- :ref:`exhale_struct_structqristal_1_1NoiseProperties`
+
+- :ref:`exhale_struct_structqristal_1_1pair__hash`
+
+- :ref:`exhale_struct_structqristal_1_1ReadoutError`
+
+- :ref:`exhale_class_classqristal_1_1CircuitBuilder`
+
+- :ref:`exhale_class_classqristal_1_1CirqQsim`
+
+- :ref:`exhale_class_classqristal_1_1cudaq__ir__converter`
+
+- :ref:`exhale_class_classqristal_1_1cudaq__sim__pool`
+
+- :ref:`exhale_class_classqristal_1_1EmulatorNoiseModel`
+
+- :ref:`exhale_class_classqristal_1_1MpsAccelerator`
+
+- :ref:`exhale_class_classqristal_1_1noise__aware__placement__pass`
+
+- :ref:`exhale_class_classqristal_1_1NoiseModel`
+
+- :ref:`exhale_class_classqristal_1_1optimization__pass`
+
+- :ref:`exhale_class_classqristal_1_1Pass`
+
+- :ref:`exhale_class_classqristal_1_1Profiler`
+
+- :ref:`exhale_class_classqristal_1_1session`
+
+- :ref:`exhale_class_classqristal_1_1swap__placement__pass`
+
+- :ref:`exhale_class_classqristal_1_1thread__pool`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceqristal_1a25c8bec252abb54a785117a93efcc789`
+
+- :ref:`exhale_function_namespaceqristal_1a90f03c5a631a262eed975e2e4acf90dd`
+
+- :ref:`exhale_function_namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac`
+
+- :ref:`exhale_function_namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59`
+
+- :ref:`exhale_function_namespaceqristal_1a69841193d5b7e6bd134ff73fd9ae0b6d`
+
+- :ref:`exhale_function_namespaceqristal_1a933afc036cea2f09756ee761909d7624`
+
+- :ref:`exhale_function_namespaceqristal_1a2d39d534b08204042c939ff913e8922c`
+
+- :ref:`exhale_function_namespaceqristal_1a0c7414393b53cd595f315c59da514626`
+
+- :ref:`exhale_function_namespaceqristal_1a3cf3918fcbcb2c559fb2c5336f6b637e`
+
+- :ref:`exhale_function_namespaceqristal_1a533e3df3cb74a558333ef0a19ac41681`
+
+- :ref:`exhale_function_namespaceqristal_1ac874ad8148f207717824721aba620e4c`
+
+- :ref:`exhale_function_namespaceqristal_1a4b5d78bb0bdf8b9a6181a926070e2af6`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespaceqristal_1ac319fa09ba300bf9963b1e3168caf3b7`
+
+- :ref:`exhale_typedef_namespaceqristal_1a7816f47af9016722f68dd6d11c1589e8`
+
+- :ref:`exhale_typedef_namespaceqristal_1af91e4640cc4e3b80f692ff49659ba8bc`
+
+- :ref:`exhale_typedef_namespaceqristal_1a98d1e0a7b33b8dfb424b5f60b4a6d86a`

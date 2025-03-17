@@ -156,7 +156,7 @@
 <li><p><strong>Initial values</strong> for ansatz parameters, referred from here on as <code class="docutils literal notranslate"><span class="pre">theta</span></code></p></li>
 </ul>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">qb.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
+<span class="kn">import</span> <span class="nn">qristal.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
 
 <span class="n">params</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">Params</span><span class="p">()</span>
 
@@ -264,7 +264,7 @@
 <h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline"></a></h2>
 <section id="importing-the-module">
 <h3>Importing the module<a class="headerlink" href="#importing-the-module" title="Permalink to this headline"></a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qb.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qristal.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
 
 </pre></div>
 </div>
@@ -717,7 +717,7 @@ Do <strong>not</strong> change the first two lines:</p>
 <section id="how-to-make-function-calls-for-a-python-level-optimizer">
 <h2>How to make function calls for a Python-level optimizer?<a class="headerlink" href="#how-to-make-function-calls-for-a-python-level-optimizer" title="Permalink to this headline"></a></h2>
 <p>In order to use the optimization algorithms in <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> or <code class="docutils literal notranslate"><span class="pre">skquant.opt</span></code>  for VQE, it is necessary to provide a function that accepts the parameter values at the current iteration and returns the energy.  The function below provides this.  Note: it accepts an input (<code class="docutils literal notranslate"><span class="pre">theta</span></code>) that is a NumPy array:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qb.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qristal.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
 
 <span class="c1">#</span>
 <span class="c1"># Wrapper that accepts a parameter,</span>

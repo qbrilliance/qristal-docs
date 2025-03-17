@@ -102,12 +102,12 @@
 <h2>Example in Qristal<a class="headerlink" href="#example-in-qristal" title="Permalink to this headline"></a></h2>
 <section id="defining-a-parametrized-circuit">
 <h3>Defining a parametrized circuit<a class="headerlink" href="#defining-a-parametrized-circuit" title="Permalink to this headline"></a></h3>
-<p>Qristal can be used to define both parametrized and non-parametrized quantum gates using the <code class="docutils literal notranslate"><span class="pre">qb.core.Circuit()</span></code> object in Python. Here is a sample circuit definition:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the core of the QB SDK</span>
-<span class="kn">import</span> <span class="nn">qb.core</span>
+<p>Qristal can be used to define both parametrized and non-parametrized quantum gates using the <code class="docutils literal notranslate"><span class="pre">qristal.core.Circuit()</span></code> object in Python. Here is a sample circuit definition:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import the core of Qristal</span>
+<span class="kn">import</span> <span class="nn">qristal.core</span>
 
 <span class="c1"># Define a circuit</span>
-<span class="n">circuit</span> <span class="o">=</span> <span class="n">qb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">Circuit</span><span class="p">()</span>
+<span class="n">circuit</span> <span class="o">=</span> <span class="n">qristal</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">Circuit</span><span class="p">()</span>
 
 <span class="c1"># Add some gates</span>
 <span class="n">circuit</span><span class="o">.</span><span class="n">rx</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s2">&quot;alpha&quot;</span><span class="p">)</span>
@@ -137,10 +137,10 @@
 <span class="n">params_map</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;alpha&quot;</span><span class="p">:</span> <span class="mf">1.0</span><span class="p">,</span> <span class="s2">&quot;beta&quot;</span><span class="p">:</span> <span class="mf">1.5</span><span class="p">,</span> <span class="s2">&quot;gamma&quot;</span><span class="p">:</span> <span class="mf">2.0</span><span class="p">}</span>
 <span class="n">params_list</span> <span class="o">=</span> <span class="n">circuit</span><span class="o">.</span><span class="n">param_dict_to_list</span><span class="p">(</span><span class="n">params_map</span><span class="p">)</span>
 <span class="c1"># Create the executor object</span>
-<span class="n">my_sim</span> <span class="o">=</span> <span class="n">qb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+<span class="n">my_sim</span> <span class="o">=</span> <span class="n">qristal</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
 
 <span class="c1">#Define settings</span>
-<span class="n">my_sim</span><span class="o">.</span><span class="n">qb12</span><span class="p">()</span>
+<span class="n">my_sim</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 <span class="n">my_sim</span><span class="o">.</span><span class="n">qn</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">my_sim</span><span class="o">.</span><span class="n">sn</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">my_sim</span><span class="o">.</span><span class="n">parameter_list</span> <span class="o">=</span> <span class="n">params_list</span>

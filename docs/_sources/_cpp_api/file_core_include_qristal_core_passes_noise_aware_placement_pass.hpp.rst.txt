@@ -1,0 +1,66 @@
+
+.. _file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp:
+
+File noise_aware_placement_pass.hpp
+===================================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qristal_core_passes>` (``core/include/qristal/core/passes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qristal/core/passes/noise_aware_placement_pass.hpp``)
+--------------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
+
+- ``memory``
+
+- ``noise_aware_placement_config.hpp`` (:ref:`file_core_include_qristal_core_passes_noise_aware_placement_config.hpp`)
+
+- ``optional``
+
+- ``unordered_map``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal`
+
+- :ref:`namespace_xacc`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqristal_1_1noise__aware__placement__pass`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac`
+
+- :ref:`exhale_function_namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59`
+

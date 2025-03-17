@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespaceqristal_1af91e4640cc4e3b80f692ff49659ba8bc:
+
+Typedef qristal::Passes
+=======================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_base_pass.hpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: qristal::Passes
+   :project: My Project

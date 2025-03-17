@@ -184,22 +184,22 @@ process sweepSvdCutoff {
 
     &quot;&quot;&quot;
     #!/usr/bin/python3
-    import qb.core
+    import qristal.core
     import numpy as np
 
-    tqb = qb.core.session()
-    tqb.qb12()
-    tqb.qn = 2     # Number of qubits
-    tqb.sn = 1024  # Number of shots
-    tqb.acc = &quot;tnqvm&quot;
-    tqb.noplacement = True
-    tqb.nooptimise = True
-    tqb.notiming = True
-    tqb.output_oqm_enabled = False
-    tqb.svd_cutoff[0][0][0] = ${svdcutoff}
-    tqb.instring = &#39;&#39;&#39;
+    my_sim = qristal.core.session()
+    my_sim.init()
+    my_sim.qn = 2     # Number of qubits
+    my_sim.sn = 1024  # Number of shots
+    my_sim.acc = &quot;tnqvm&quot;
+    my_sim.noplacement = True
+    my_sim.nooptimise = True
+    my_sim.notiming = True
+    my_sim.output_oqm_enabled = False
+    my_sim.svd_cutoff[0][0][0] = ${svdcutoff}
+    my_sim.instring = &#39;&#39;&#39;
 
-    __qpu__ void QBCIRCUIT(qreg q) {
+    __qpu__ void qristal_circuit(qreg q) {
     OPENQASM 2.0;
     include &quot;qelib1.inc&quot;;
     creg c[2];
@@ -210,9 +210,9 @@ process sweepSvdCutoff {
     }
 
     &#39;&#39;&#39;
-    tqb.run()
-    print(&quot;SVD cutoff: &quot;, tqb.svd_cutoff[0][0][0])
-    print(tqb.out_raw[0][0])
+    my_sim.run()
+    print(&quot;SVD cutoff: &quot;, my_sim.svd_cutoff[0][0][0])
+    print(my_sim.results[0][0])
     &quot;&quot;&quot;
 }
 
@@ -275,17 +275,17 @@ process partitionCircuitQubitBackend {
     import json
     import numpy as np
     import time
-    import qb.core
-    tqb = qb.core.session()
-    tqb.qb12()
+    import qristal.core
+    my_sim = qristal.core.session()
+    my_sim.init()
 
-    tqb.qn = $N_PHYSICAL_QUBITS  # Number of qubits
-    tqb.infile = &quot;$circuit&quot;
+    my_sim.qn = $N_PHYSICAL_QUBITS  # Number of qubits
+    my_sim.infile = &quot;$circuit&quot;
 
-    tqb.noplacement = True
-    tqb.nooptimise = True
-    tqb.notiming = True
-    tqb.output_oqm_enabled = False
+    my_sim.noplacement = True
+    my_sim.nooptimise = True
+    my_sim.notiming = True
+    my_sim.output_oqm_enabled = False
 
     NW = $N_ASYNC_THREADS  # number of async workers
     SLEEP_SECONDS = 0.1 # seconds to sleep between progress
@@ -294,19 +294,19 @@ process partitionCircuitQubitBackend {
     # Set up workers
     # Set up the pool of backends for parallel task distribution
     qpu_config = {&quot;accs&quot;: NW*[{&quot;acc&quot;: &quot;$QRISTAL_ACC&quot;}]}
-    tqb.set_parallel_run_config(json.dumps(qpu_config))
+    my_sim.set_parallel_run_config(json.dumps(qpu_config))
 
     # Set the number of threads to use in the thread pool
-    tqb.num_threads = NW
+    my_sim.num_threads = NW
 
     # Set up jobs that partition the requested number of shots
-    tqb.sn[ALG_UNDER_TEST].clear()
+    my_sim.sn[ALG_UNDER_TEST].clear()
     for jj in range(NW):
-        tqb.sn[ALG_UNDER_TEST].append($shots_N // NW)
+        my_sim.sn[ALG_UNDER_TEST].append($shots_N // NW)
 
     handles = []
     for i in range(NW):
-        handles.append(tqb.run_async(ALG_UNDER_TEST, i))
+        handles.append(my_sim.run_async(ALG_UNDER_TEST, i))
         time.sleep(0.001)
 
     # Gather the results

@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespaceqristal_1a7816f47af9016722f68dd6d11c1589e8:
+
+Typedef qristal::OracleFuncCType
+================================
+
+- Defined in :ref:`file_core_include_qristal_core_circuit_builder.hpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: qristal::OracleFuncCType
+   :project: My Project

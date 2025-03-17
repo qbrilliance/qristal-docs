@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>File ir_converter.hpp &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">File ir_converter.hpp</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/file_core_include_qristal_core_cudaq_ir_converter.hpp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="file-ir-converter-hpp">
+<span id="file-core-include-qristal-core-cudaq-ir-converter-hpp"></span><h1>File ir_converter.hpp<a class="headerlink" href="#file-ir-converter-hpp" title="Permalink to this headline"></a></h1>
+<p>↰ <a class="reference internal" href="dir_core_include_qristal_core_cudaq.html#dir-core-include-qristal-core-cudaq"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/cudaq</span></code>)</p>
+<div class="contents local topic" id="contents">
+<p class="topic-title">Contents</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#definition-core-include-qristal-core-cudaq-ir-converter-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/cudaq/ir_converter.hpp</span></code>)</a></p></li>
+<li><p><a class="reference internal" href="#includes" id="id2">Includes</a></p></li>
+<li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
+<li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
+</ul>
+</div>
+<section id="definition-core-include-qristal-core-cudaq-ir-converter-hpp">
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/cudaq/ir_converter.hpp</span></code>)<a class="headerlink" href="#definition-core-include-qristal-core-cudaq-ir-converter-hpp" title="Permalink to this headline"></a></h2>
+</section>
+<section id="includes">
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">AllGateVisitor.hpp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">CommonGates.hpp</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">cudaq/builder/kernel_builder.h</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code></p></li>
+</ul>
+</section>
+<section id="namespaces">
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="namespace_qristal.html#namespace-qristal"><span class="std std-ref">Namespace qristal</span></a></p></li>
+</ul>
+</section>
+<section id="classes">
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html#exhale-class-classqristal-1-1cudaq-ir-converter"><span class="std std-ref">Class cudaq_ir_converter</span></a></p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

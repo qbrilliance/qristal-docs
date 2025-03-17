@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class thread_pool &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class AdamMLP" href="classqristal_1_1vqee_1_1AdamMLP.html" />
+    <link rel="prev" title="Class swap_placement_pass" href="classqristal_1_1swap__placement__pass.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__channel__components.html">Struct noise_channel_components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1CmaesMLP.html">Class CmaesMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1LbfgsMLP.html">Class LbfgsMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__qpu.html">Class qb_qpu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__visitor.html">Class qb_visitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class thread_pool</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classqristal_1_1thread__pool.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-thread-pool">
+<span id="exhale-class-classqristal-1-1thread-pool"></span><h1>Class thread_pool<a class="headerlink" href="#class-thread-pool" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_thread_pool.hpp.html#file-core-include-qristal-core-thread-pool-hpp"><span class="std std-ref">File thread_pool.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_poolE">
+<span id="_CPPv3N7qristal11thread_poolE"></span><span id="_CPPv2N7qristal11thread_poolE"></span><span id="qristal::thread_pool"></span><span class="target" id="classqristal_1_1thread__pool"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">thread_pool</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_poolE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A threadsafe singleton thread pool class based on std::thread. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool24set_num_threads_internalEKi">
+<span id="_CPPv3N7qristal11thread_pool24set_num_threads_internalEKi"></span><span id="_CPPv2N7qristal11thread_pool24set_num_threads_internalEKi"></span><span id="qristal::thread_pool::set_num_threads_internal__iC"></span><span class="target" id="classqristal_1_1thread__pool_1a829367ea9d19e47556301d516fc236ea"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_num_threads_internal</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool24set_num_threads_internalEKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the number of threads to be maintained in the pool. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool24get_num_threads_internalEv">
+<span id="_CPPv3N7qristal11thread_pool24get_num_threads_internalEv"></span><span id="_CPPv2N7qristal11thread_pool24get_num_threads_internalEv"></span><span id="qristal::thread_pool::get_num_threads_internal"></span><span class="target" id="classqristal_1_1thread__pool_1aa55ee52e7c1d2dff1da243a9dae3dc22"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_num_threads_internal</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool24get_num_threads_internalEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the number of threads to be maintained in the pool. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args">
+<span id="_CPPv3I0Dp0EN7qristal11thread_pool15internal_submitERR8FunctionDpRR4Args"></span><span id="_CPPv2I0Dp0EN7qristal11thread_pool15internal_submitERR8FunctionDpRR4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">result_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">invoke_result_t</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqristal_1_1thread__pool_1a68c3a4017fed0101d6bdfd0def3fdf95"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_if</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">notstd</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_void</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::result_type"><span class="n"><span class="pre">result_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">future</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::result_type"><span class="n"><span class="pre">result_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">internal_submit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send a function with a return type to the thread pool for execution. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">result_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">invoke_result_t</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqristal_1_1thread__pool_1a2e0b65ff6d6100901a66c557570d04dc"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_if</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_void</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::result_type"><span class="n"><span class="pre">result_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">internal_submit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::internal_submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0Dp0EN7qristal11thread_pool15internal_submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Send a function with no return value to the thread pool for execution. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool11thread_poolERK11thread_pool">
+<span id="_CPPv3N7qristal11thread_pool11thread_poolERK11thread_pool"></span><span id="_CPPv2N7qristal11thread_pool11thread_poolERK11thread_pool"></span><span id="qristal::thread_pool::thread_pool__thread_poolCR"></span><span class="target" id="classqristal_1_1thread__pool_1a1c1fa82fb479bf4eea43ae41954f4a79"></span><span class="sig-name descname"><span class="n"><span class="pre">thread_pool</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7qristal11thread_pool11thread_poolERK11thread_pool" title="qristal::thread_pool::thread_pool"><span class="n"><span class="pre">thread_pool</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool11thread_poolERK11thread_pool" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Uncopyable. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_poolaSERK11thread_pool">
+<span id="_CPPv3N7qristal11thread_poolaSERK11thread_pool"></span><span id="_CPPv2N7qristal11thread_poolaSERK11thread_pool"></span><span id="qristal::thread_pool::assign-operator__thread_poolCR"></span><span class="target" id="classqristal_1_1thread__pool_1afa8b3330d11520121294a75d260a8e70"></span><a class="reference internal" href="#_CPPv4N7qristal11thread_poolE" title="qristal::thread_pool"><span class="n"><span class="pre">thread_pool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="k"><span class="pre">operator</span></span><span class="o"><span class="pre">=</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7qristal11thread_poolE" title="qristal::thread_pool"><span class="n"><span class="pre">thread_pool</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">delete</span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_poolaSERK11thread_pool" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Unassignable. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-functions">Public Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool15set_num_threadsEKi">
+<span id="_CPPv3N7qristal11thread_pool15set_num_threadsEKi"></span><span id="_CPPv2N7qristal11thread_pool15set_num_threadsEKi"></span><span id="qristal::thread_pool::set_num_threads__iC"></span><span class="target" id="classqristal_1_1thread__pool_1a1e6bf40b72a0fa84e45518460f6c4b5f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_num_threads</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool15set_num_threadsEKi" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Public interface for setting the number of threads to be maintained in the pool. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool15get_num_threadsEv">
+<span id="_CPPv3N7qristal11thread_pool15get_num_threadsEv"></span><span id="_CPPv2N7qristal11thread_pool15get_num_threadsEv"></span><span id="qristal::thread_pool::get_num_threads"></span><span class="target" id="classqristal_1_1thread__pool_1acadf9563b1763197ae960a6bdd5b5381"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_num_threads</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool15get_num_threadsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Public interface for retrieving the number of threads to be maintained in the pool. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args">
+<span id="_CPPv3I0Dp0EN7qristal11thread_pool6submitERR8FunctionDpRR4Args"></span><span id="_CPPv2I0Dp0EN7qristal11thread_pool6submitERR8FunctionDpRR4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">result_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">invoke_result_t</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqristal_1_1thread__pool_1af879e6c4c2dddf41708ae9ed6b1e86bc"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_if</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">notstd</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_void</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::result_type"><span class="n"><span class="pre">result_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">future</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::result_type"><span class="n"><span class="pre">result_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">submit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifIN6notstd7is_voidI11result_typeE5valueENSt6futureI11result_typeEEE4typeERR8FunctionDpRR4Args" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Public interface for sending a function with a return type to the thread pool for execution. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args">
+<span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Function</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">result_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">invoke_result_t</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">decay_t</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">...</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqristal_1_1thread__pool_1a6ebfa207de043add0d8c5764107d4f77"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">enable_if</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">is_void</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::result_type"><span class="n"><span class="pre">result_type</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">value</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">type</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">submit</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Function"><span class="n"><span class="pre">Function</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">f</span></span>, <a class="reference internal" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="qristal::thread_pool::submit::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0Dp0EN7qristal11thread_pool6submitENSt9enable_ifINSt7is_voidI11result_typeE5valueEvE4typeERR8FunctionDpRR4Args" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Public interface for sending a function with no return type to the thread pool for execution. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool11thread_poolEv">
+<span id="_CPPv3N7qristal11thread_pool11thread_poolEv"></span><span id="_CPPv2N7qristal11thread_pool11thread_poolEv"></span><span id="qristal::thread_pool::thread_pool"></span><span class="target" id="classqristal_1_1thread__pool_1a07a869539fb9f8d5d1e22f55936b23fa"></span><span class="sig-name descname"><span class="n"><span class="pre">thread_pool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool11thread_poolEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Constructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_poolD0Ev">
+<span id="_CPPv3N7qristal11thread_poolD0Ev"></span><span id="_CPPv2N7qristal11thread_poolD0Ev"></span><span id="qristal::thread_pool::~thread_pool"></span><span class="target" id="classqristal_1_1thread__pool_1a60f3ce58b18aa73698b6169fc651a128"></span><span class="sig-name descname"><span class="n"><span class="pre">~thread_pool</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_poolD0Ev" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool17initialise_threadEv">
+<span id="_CPPv3N7qristal11thread_pool17initialise_threadEv"></span><span id="_CPPv2N7qristal11thread_pool17initialise_threadEv"></span><span id="qristal::thread_pool::initialise_thread"></span><span class="target" id="classqristal_1_1thread__pool_1aceb872659c32f2fbd973ec0385ebfe8e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">thread</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialise_thread</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool17initialise_threadEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialise a thread-future pair. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool4loopENSt10shared_ptrIbEE">
+<span id="_CPPv3N7qristal11thread_pool4loopENSt10shared_ptrIbEE"></span><span id="_CPPv2N7qristal11thread_pool4loopENSt10shared_ptrIbEE"></span><span id="qristal::thread_pool::loop__std::shared_ptr:b:"></span><span class="target" id="classqristal_1_1thread__pool_1af83245a43e1d628056c42a6dee40dbbf"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">loop</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool4loopENSt10shared_ptrIbEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Work collector. Each thread runs this indefinitely until the pool is destroyed. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool11num_threadsE">
+<span id="_CPPv3N7qristal11thread_pool11num_threadsE"></span><span id="_CPPv2N7qristal11thread_pool11num_threadsE"></span><span id="qristal::thread_pool::num_threads__i"></span><span class="target" id="classqristal_1_1thread__pool_1a1070527c9859c32e29270660b755cd32"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_threads</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool11num_threadsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of threads to be maintained in the pool. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool18num_active_threadsE">
+<span id="_CPPv3N7qristal11thread_pool18num_active_threadsE"></span><span id="_CPPv2N7qristal11thread_pool18num_active_threadsE"></span><span id="qristal::thread_pool::num_active_threads__i"></span><span class="target" id="classqristal_1_1thread__pool_1ab6c12539cb74b0097779573883082c54"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">num_active_threads</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool18num_active_threadsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Number of active threads in the pool. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool7threadsE">
+<span id="_CPPv3N7qristal11thread_pool7threadsE"></span><span id="_CPPv2N7qristal11thread_pool7threadsE"></span><span id="qristal::thread_pool::threads__std::vector:std::pair:std::thread.std::shared_ptr:b:::"></span><span class="target" id="classqristal_1_1thread__pool_1a471bfec4681bffb3cefe19d2af93771b"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">thread</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">threads</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool7threadsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A vector of threads for running tasks, paired with flags indicating if they have exited their loop. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool5queueE">
+<span id="_CPPv3N7qristal11thread_pool5queueE"></span><span id="_CPPv2N7qristal11thread_pool5queueE"></span><span class="target" id="classqristal_1_1thread__pool_1a5e0205e63cb6c0f0a0934890fbe844cf"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">queue</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">queue</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool5queueE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A queue of tasks waiting to be run by threads. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool7queue_mE">
+<span id="_CPPv3N7qristal11thread_pool7queue_mE"></span><span id="_CPPv2N7qristal11thread_pool7queue_mE"></span><span id="qristal::thread_pool::queue_m__std::mutex"></span><span class="target" id="classqristal_1_1thread__pool_1a7d2b75ee4dd63735da151ba39e420b6d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">queue_m</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool7queue_mE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Thread lockers for the queue and the shutdown flag. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool9threads_mE">
+<span id="_CPPv3N7qristal11thread_pool9threads_mE"></span><span id="_CPPv2N7qristal11thread_pool9threads_mE"></span><span id="qristal::thread_pool::threads_m__std::mutex"></span><span class="target" id="classqristal_1_1thread__pool_1a31a94548d6934c93082f410e887365fa"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">mutex</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">threads_m</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool9threads_mE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool13shutting_downE">
+<span id="_CPPv3N7qristal11thread_pool13shutting_downE"></span><span id="_CPPv2N7qristal11thread_pool13shutting_downE"></span><span id="qristal::thread_pool::shutting_down__std::atomic:b:"></span><span class="target" id="classqristal_1_1thread__pool_1aae29778190c430a8470d1ae5d3a8f546"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">atomic</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shutting_down</span></span></span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool13shutting_downE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Flag indicating that the pool is being destroyed. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-functions">Private Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11thread_pool12get_instanceEv">
+<span id="_CPPv3N7qristal11thread_pool12get_instanceEv"></span><span id="_CPPv2N7qristal11thread_pool12get_instanceEv"></span><span id="qristal::thread_pool::get_instance"></span><span class="target" id="classqristal_1_1thread__pool_1a394b48a4754885ef77956210f7a3185a"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7qristal11thread_poolE" title="qristal::thread_pool"><span class="n"><span class="pre">thread_pool</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_instance</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal11thread_pool12get_instanceEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Getter for the instance; makes this class a threadsafe singleton. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqristal_1_1swap__placement__pass.html" class="btn btn-neutral float-left" title="Class swap_placement_pass" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqristal_1_1vqee_1_1AdamMLP.html" class="btn btn-neutral float-right" title="Class AdamMLP" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+.. _exhale_typedef_namespaceqristal_1a98d1e0a7b33b8dfb424b5f60b4a6d86a:
+
+Typedef qristal::StatePrepFuncCType
+===================================
+
+- Defined in :ref:`file_core_include_qristal_core_circuit_builder.hpp`
+
+
+Typedef Documentation
+---------------------
+
+
+.. doxygentypedef:: qristal::StatePrepFuncCType
+   :project: My Project

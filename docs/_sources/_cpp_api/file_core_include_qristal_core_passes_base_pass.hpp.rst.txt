@@ -1,0 +1,72 @@
+
+.. _file_core_include_qristal_core_passes_base_pass.hpp:
+
+File base_pass.hpp
+==================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qristal_core_passes>` (``core/include/qristal/core/passes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qristal/core/passes/base_pass.hpp``)
+---------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``memory``
+
+- ``string``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+- :ref:`file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp`
+
+- :ref:`file_core_include_qristal_core_passes_swap_placement_pass.hpp`
+
+- :ref:`file_core_include_qristal_core_session.hpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqristal_1_1Pass`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespaceqristal_1ac319fa09ba300bf9963b1e3168caf3b7`
+
+- :ref:`exhale_typedef_namespaceqristal_1af91e4640cc4e3b80f692ff49659ba8bc`
+

@@ -1,0 +1,71 @@
+
+.. _file_core_include_qristal_core_noise_model_noise_model.hpp:
+
+File noise_model.hpp
+====================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qristal_core_noise_model>` (``core/include/qristal/core/noise_model``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qristal/core/noise_model/noise_model.hpp``)
+----------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``functional``
+
+- ``optional``
+
+- ``qristal/core/noise_model/json_complex_convert.hpp``
+
+- ``qristal/core/noise_model/noise_channel.hpp``
+
+- ``qristal/core/noise_model/noise_properties.hpp`` (:ref:`file_core_include_qristal_core_noise_model_noise_properties.hpp`)
+
+- ``qristal/core/noise_model/readout_error.hpp`` (:ref:`file_core_include_qristal_core_noise_model_readout_error.hpp`)
+
+- ``qristal/core/passes/noise_aware_placement_config.hpp`` (:ref:`file_core_include_qristal_core_passes_noise_aware_placement_config.hpp`)
+
+- ``unordered_map``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_core_include_qristal_core_session.hpp`
+
+- :ref:`file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp`
+
+- :ref:`file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqristal_1_1NoiseModel`
+

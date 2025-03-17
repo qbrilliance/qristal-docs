@@ -1,0 +1,81 @@
+
+.. _file_core_include_qristal_core_circuit_builder.hpp:
+
+File circuit_builder.hpp
+========================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qristal_core>` (``core/include/qristal/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qristal/core/circuit_builder.hpp``)
+--------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``Accelerator.hpp``
+
+- ``Circuit.hpp``
+
+- ``CompositeInstruction.hpp``
+
+- ``GateModifier.hpp``
+
+- ``IRProvider.hpp``
+
+- ``InstructionIterator.hpp``
+
+- ``assert.h``
+
+- ``string``
+
+- ``xacc.hpp``
+
+- ``xacc_service.hpp``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqristal_1_1CircuitBuilder`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceqristal_1a4b5d78bb0bdf8b9a6181a926070e2af6`
+
+
+Typedefs
+--------
+
+
+- :ref:`exhale_typedef_namespaceqristal_1a7816f47af9016722f68dd6d11c1589e8`
+
+- :ref:`exhale_typedef_namespaceqristal_1a98d1e0a7b33b8dfb424b5f60b4a6d86a`
+

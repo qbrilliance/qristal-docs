@@ -15,7 +15,7 @@ Directory include
 Subdirectories
 --------------
 
-- :ref:`dir_core_include_qb`
+- :ref:`dir_core_include_qristal`
 
 
 

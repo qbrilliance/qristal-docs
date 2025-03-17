@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Struct Params &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Struct vqe_iteration_data" href="structqristal_1_1vqee_1_1vqe__iteration__data.html" />
+    <link rel="prev" title="Struct ReadoutError" href="structqristal_1_1ReadoutError.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__channel__components.html">Struct noise_channel_components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1CmaesMLP.html">Class CmaesMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1LbfgsMLP.html">Class LbfgsMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__qpu.html">Class qb_qpu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__visitor.html">Class qb_visitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Struct Params</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/structqristal_1_1vqee_1_1Params.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="struct-params">
+<span id="exhale-struct-structqristal-1-1vqee-1-1params"></span><h1>Struct Params<a class="headerlink" href="#struct-params" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#file-core-include-qristal-core-optimization-vqee-case-generator-hpp"><span class="std std-ref">File case_generator.hpp</span></a></p></li>
+</ul>
+<section id="struct-documentation">
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp struct">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6ParamsE">
+<span id="_CPPv3N7qristal4vqee6ParamsE"></span><span id="_CPPv2N7qristal4vqee6ParamsE"></span><span id="qristal::vqee::Params"></span><span class="target" id="structqristal_1_1vqee_1_1Params"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Params</span></span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6ParamsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Data container for VQE optimizer problems. Everything is constant, except theta and value which should be updated during iterations. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params6ansatzE">
+<span id="_CPPv3N7qristal4vqee6Params6ansatzE"></span><span id="_CPPv2N7qristal4vqee6Params6ansatzE"></span><span id="qristal::vqee::Params::ansatz__std::shared_ptr:xacc::CompositeInstruction:"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a17f0eb57b5c1b374fcd88ac1b46ccd60"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ansatz</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params6ansatzE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params13circuitStringE">
+<span id="_CPPv3N7qristal4vqee6Params13circuitStringE"></span><span id="_CPPv2N7qristal4vqee6Params13circuitStringE"></span><span id="qristal::vqee::Params::circuitString__ss"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1ae245edc80d5c43e8135a38185edb44e4"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">circuitString</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params13circuitStringE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params11pauliStringE">
+<span id="_CPPv3N7qristal4vqee6Params11pauliStringE"></span><span id="_CPPv2N7qristal4vqee6Params11pauliStringE"></span><span id="qristal::vqee::Params::pauliString__ss"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a3b57349c8193f28fb638786eb798372c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">pauliString</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params11pauliStringE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params15acceleratorNameE">
+<span id="_CPPv3N7qristal4vqee6Params15acceleratorNameE"></span><span id="_CPPv2N7qristal4vqee6Params15acceleratorNameE"></span><span id="qristal::vqee::Params::acceleratorName__ss"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a8c4dd726e60c07a9bb4ff1efca239c51"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">acceleratorName</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;qpp&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params15acceleratorNameE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params9algorithmE">
+<span id="_CPPv3N7qristal4vqee6Params9algorithmE"></span><span id="_CPPv2N7qristal4vqee6Params9algorithmE"></span><span id="qristal::vqee::Params::algorithm__ss"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1aececd270328da05685317ac1d764f637"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">algorithm</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="s"><span class="pre">&quot;cobyla&quot;</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params9algorithmE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>algorithm : sets the classical optimisation algorithm, e.g “nelder-mead”, “cobyla”, “l-bfgs” </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params12extraOptionsE">
+<span id="_CPPv3N7qristal4vqee6Params12extraOptionsE"></span><span id="_CPPv2N7qristal4vqee6Params12extraOptionsE"></span><span id="qristal::vqee::Params::extraOptions__ss"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a51bf3e2678f9d4308fec5c6a658e6290"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">extraOptions</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params12extraOptionsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>extraOptions : YAML format for options to use with the classical optimiser </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params9toleranceE">
+<span id="_CPPv3N7qristal4vqee6Params9toleranceE"></span><span id="_CPPv2N7qristal4vqee6Params9toleranceE"></span><span id="qristal::vqee::Params::tolerance__double"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1aa6df2cbae3d7e5ab8e8777542d2f5434"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tolerance</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1E-6</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params9toleranceE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params12optimalValueE">
+<span id="_CPPv3N7qristal4vqee6Params12optimalValueE"></span><span id="_CPPv2N7qristal4vqee6Params12optimalValueE"></span><span id="qristal::vqee::Params::optimalValue__double"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a487bc4ba2af64841e98ecbef5843113b"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">optimalValue</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params12optimalValueE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params8energiesE">
+<span id="_CPPv3N7qristal4vqee6Params8energiesE"></span><span id="_CPPv2N7qristal4vqee6Params8energiesE"></span><span id="qristal::vqee::Params::energies__std::vector:double:"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1aa7227180a460374ec33438bb5c37b346"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">energies</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params8energiesE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params5thetaE">
+<span id="_CPPv3N7qristal4vqee6Params5thetaE"></span><span id="_CPPv2N7qristal4vqee6Params5thetaE"></span><span id="qristal::vqee::Params::theta__std::vector:double:"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1aae881bc119c1b94862e87051b253a552"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">theta</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params5thetaE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params13iterationDataE">
+<span id="_CPPv3N7qristal4vqee6Params13iterationDataE"></span><span id="_CPPv2N7qristal4vqee6Params13iterationDataE"></span><span id="qristal::vqee::Params::iterationData__std::vector:vqe_iteration_data:"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1aa10daeac4de203f4cde2aaa07cc27421"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html#_CPPv4N7qristal4vqee18vqe_iteration_dataE" title="qristal::vqee::vqe_iteration_data"><span class="n"><span class="pre">vqe_iteration_data</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">iterationData</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params13iterationDataE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>iterationData : a structure for per-iteration energy and theta </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params7nQubitsE">
+<span id="_CPPv3N7qristal4vqee6Params7nQubitsE"></span><span id="_CPPv2N7qristal4vqee6Params7nQubitsE"></span><span id="qristal::vqee::Params::nQubits__i"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a82281e98f430d3223a475e3aceff5ee5"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nQubits</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params7nQubitsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params6nShotsE">
+<span id="_CPPv3N7qristal4vqee6Params6nShotsE"></span><span id="_CPPv2N7qristal4vqee6Params6nShotsE"></span><span id="qristal::vqee::Params::nShots__i"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a5c811dc5c82c76d8730e6ae5b75e51b6"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nShots</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params6nShotsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params8maxItersE">
+<span id="_CPPv3N7qristal4vqee6Params8maxItersE"></span><span id="_CPPv2N7qristal4vqee6Params8maxItersE"></span><span id="qristal::vqee::Params::maxIters__i"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a58491a99aff2b162904ddfdb1b99c45f"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">maxIters</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">50</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params8maxItersE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params7nWorkerE">
+<span id="_CPPv3N7qristal4vqee6Params7nWorkerE"></span><span id="_CPPv2N7qristal4vqee6Params7nWorkerE"></span><span id="qristal::vqee::Params::nWorker__i"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1af9b8769b67777299133a0e187aafcf81"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nWorker</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params7nWorkerE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params17nThreadsPerWorkerE">
+<span id="_CPPv3N7qristal4vqee6Params17nThreadsPerWorkerE"></span><span id="_CPPv2N7qristal4vqee6Params17nThreadsPerWorkerE"></span><span id="qristal::vqee::Params::nThreadsPerWorker__i"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a49b8013b93b1537c403bad4272ff634d"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nThreadsPerWorker</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params17nThreadsPerWorkerE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params15isDeterministicE">
+<span id="_CPPv3N7qristal4vqee6Params15isDeterministicE"></span><span id="_CPPv2N7qristal4vqee6Params15isDeterministicE"></span><span id="qristal::vqee::Params::isDeterministic__b"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a2ca66b5bd2629cd439da4e35e0e8cf96"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">isDeterministic</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">true</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params15isDeterministicE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params11partitionedE">
+<span id="_CPPv3N7qristal4vqee6Params11partitionedE"></span><span id="_CPPv2N7qristal4vqee6Params11partitionedE"></span><span id="qristal::vqee::Params::partitioned__b"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a34a908d351bb19e309d4569c14e5133a"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">partitioned</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params11partitionedE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params9enableVisE">
+<span id="_CPPv3N7qristal4vqee6Params9enableVisE"></span><span id="_CPPv2N7qristal4vqee6Params9enableVisE"></span><span id="qristal::vqee::Params::enableVis__b"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a6bdce9e1b34dcf894af325a286fc56a5"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">enableVis</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params9enableVisE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>enableVis : when set to true, the vis member will be filled with ASCII bar graphs. These provide a visual cue of the VQE convergence from a text-only interface. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params9showThetaE">
+<span id="_CPPv3N7qristal4vqee6Params9showThetaE"></span><span id="_CPPv2N7qristal4vqee6Params9showThetaE"></span><span id="qristal::vqee::Params::showTheta__b"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1ac768bec152fc3f69beb26b259f2259d0"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">showTheta</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params9showThetaE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>showTheta : when set to true, selected elements of theta are added to the visualisation </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params11limitThetaNE">
+<span id="_CPPv3N7qristal4vqee6Params11limitThetaNE"></span><span id="_CPPv2N7qristal4vqee6Params11limitThetaNE"></span><span id="qristal::vqee::Params::limitThetaN__s"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a51b75e98660195ba83b7eee85e729d19"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">limitThetaN</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params11limitThetaNE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>limitThetaN : limit to this number of elements of theta to visualise. 0 =&gt; no limit </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params4tailE">
+<span id="_CPPv3N7qristal4vqee6Params4tailE"></span><span id="_CPPv2N7qristal4vqee6Params4tailE"></span><span id="qristal::vqee::Params::tail__s"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a4eb8815e2f3f5c8b7af6aee204dfe359"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">tail</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params4tailE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>tail : visualise the last n=tail iterations only </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params5plainE">
+<span id="_CPPv3N7qristal4vqee6Params5plainE"></span><span id="_CPPv2N7qristal4vqee6Params5plainE"></span><span id="qristal::vqee::Params::plain__b"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a12a61921af6eec20b270e8f63011c175"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">plain</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params5plainE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>plain : when set to true, no colour codes are output in vis </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params7blockedE">
+<span id="_CPPv3N7qristal4vqee6Params7blockedE"></span><span id="_CPPv2N7qristal4vqee6Params7blockedE"></span><span id="qristal::vqee::Params::blocked__b"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a1f9a44425fed0199a9f83049e73ba9e1"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">blocked</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="k"><span class="pre">false</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params7blockedE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>blocked : when set to true, all elements in any given iteration are visualised in a single block. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee6Params3visE">
+<span id="_CPPv3N7qristal4vqee6Params3visE"></span><span id="_CPPv2N7qristal4vqee6Params3visE"></span><span id="qristal::vqee::Params::vis__ss"></span><span class="target" id="structqristal_1_1vqee_1_1Params_1a285355b2b694aca54f4f42a69ce1fad9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">vis</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee6Params3visE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>vis : a visualisation of energy and each element of theta, at selected iterations of VQE. </p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="structqristal_1_1ReadoutError.html" class="btn btn-neutral float-left" title="Struct ReadoutError" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="structqristal_1_1vqee_1_1vqe__iteration__data.html" class="btn btn-neutral float-right" title="Struct vqe_iteration_data" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

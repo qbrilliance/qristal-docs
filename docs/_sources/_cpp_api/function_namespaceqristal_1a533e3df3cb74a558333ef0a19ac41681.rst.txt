@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1a533e3df3cb74a558333ef0a19ac41681:
+
+Function qristal::execute_on_qb_hardware
+========================================
+
+- Defined in :ref:`file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::execute_on_qb_hardware(std::shared_ptr<xacc::quantum::qb_qpu>, std::shared_ptr<xacc::AcceleratorBuffer>, std::vector<std::shared_ptr<xacc::CompositeInstruction>>&, const run_i_j_config&, bool)
+   :project: My Project

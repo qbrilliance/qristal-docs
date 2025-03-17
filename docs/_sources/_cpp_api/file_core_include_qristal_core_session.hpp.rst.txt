@@ -1,0 +1,79 @@
+
+.. _file_core_include_qristal_core_session.hpp:
+
+File session.hpp
+================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qristal_core>` (``core/include/qristal/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qristal/core/session.hpp``)
+------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``cmath``
+
+- ``complex``
+
+- ``functional``
+
+- ``map``
+
+- ``qristal/core/async_executor.hpp``
+
+- ``qristal/core/cmake_variables.hpp``
+
+- ``qristal/core/noise_model/noise_model.hpp`` (:ref:`file_core_include_qristal_core_noise_model_noise_model.hpp`)
+
+- ``qristal/core/passes/base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
+
+- ``qristal/core/remote_async_accelerator.hpp``
+
+- ``qristal/core/session_utils.hpp``
+
+- ``qristal/core/utils.hpp``
+
+- ``string``
+
+- ``unordered_map``
+
+- ``vector``
+
+- ``yaml-cpp/yaml.h``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal`
+
+- :ref:`namespace_xacc`
+
+- :ref:`namespace_xacc__quantum`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqristal_1_1session`
+

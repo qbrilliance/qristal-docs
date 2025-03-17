@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class EmulatorNoiseModel &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class MpsAccelerator" href="classqristal_1_1MpsAccelerator.html" />
+    <link rel="prev" title="Class cudaq_sim_pool" href="classqristal_1_1cudaq__sim__pool.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__channel__components.html">Struct noise_channel_components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class EmulatorNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1CmaesMLP.html">Class CmaesMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1LbfgsMLP.html">Class LbfgsMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__qpu.html">Class qb_qpu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__visitor.html">Class qb_visitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class EmulatorNoiseModel</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classqristal_1_1EmulatorNoiseModel.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-emulatornoisemodel">
+<span id="exhale-class-classqristal-1-1emulatornoisemodel"></span><h1>Class EmulatorNoiseModel<a class="headerlink" href="#class-emulatornoisemodel" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp.html#file-emulator-include-qristal-emulator-noise-model-emulatornoisemodel-hpp"><span class="std std-ref">File EmulatorNoiseModel.hpp</span></a></p></li>
+</ul>
+<section id="inheritance-relationships">
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<section id="base-type">
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qristal::NoiseModel</span></code> (<a class="reference internal" href="classqristal_1_1NoiseModel.html#exhale-class-classqristal-1-1noisemodel"><span class="std std-ref">Class NoiseModel</span></a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModelE">
+<span id="_CPPv3N7qristal18EmulatorNoiseModelE"></span><span id="_CPPv2N7qristal18EmulatorNoiseModelE"></span><span id="qristal::EmulatorNoiseModel"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EmulatorNoiseModel</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">qristal</span></span><span class="p"><span class="pre">::</span></span><a class="reference internal" href="classqristal_1_1NoiseModel.html#_CPPv4N7qristal10NoiseModelE" title="qristal::NoiseModel"><span class="n"><span class="pre">NoiseModel</span></span></a><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModelE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>QB Noise Model: Noise model of QB’s NV quantum devices. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-types">Public Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel10GenerationE">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel10GenerationE"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel10GenerationE"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Generation</span></span></span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel10GenerationE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enum to denote noise model generation. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel10Generation3nm1E">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel10Generation3nm1E"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel10Generation3nm1E"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea2ac1226cbcfae043f000544b71048bc4"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nm1</span></span></span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel10Generation3nm1E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel10Generation3nm2E">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel10Generation3nm2E"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel10Generation3nm2E"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea8968cee7fdca9ccf005b014287d50326"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nm2</span></span></span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel10Generation3nm2E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel10Generation3nm3E">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel10Generation3nm3E"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel10Generation3nm3E"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abead2187898ebe460ee6623013a74f692ed"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nm3</span></span></span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel10Generation3nm3E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel10Generation4qdk1E">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel10Generation4qdk1E"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel10Generation4qdk1E"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abead4410f4c5f1f7f7a205af4c156bdba25"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qdk1</span></span></span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel10Generation4qdk1E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel10Generation4dqc2E">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel10Generation4dqc2E"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel10Generation4dqc2E"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea3e8a7f080b55747dfb5dd20e6b514413"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dqc2</span></span></span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel10Generation4dqc2E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generation">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generation"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generation"></span><span id="qristal::EmulatorNoiseModel::EmulatorNoiseModel__Generation"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1aefda1184d3ab0c47322738c836a47873"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EmulatorNoiseModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7qristal18EmulatorNoiseModel10GenerationE" title="qristal::EmulatorNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">gen</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7qristal18EmulatorNoiseModel10GenerationE" title="qristal::EmulatorNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N7qristal18EmulatorNoiseModel10Generation3nm2E" title="qristal::EmulatorNoiseModel::Generation::nm2"><span class="n"><span class="pre">nm2</span></span></a><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generation" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new Qb Noise Model object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>gen</strong> – Specifies the noise model generation </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdd">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdd"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdd"></span><span id="qristal::EmulatorNoiseModel::EmulatorNoiseModel__Generation.double.double"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1ad64276559bf93e3841f96e8237ca075d"></span><span class="sig-name descname"><span class="n"><span class="pre">EmulatorNoiseModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7qristal18EmulatorNoiseModel10GenerationE" title="qristal::EmulatorNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">gen</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new Qb Noise Model object. </p>
+<p><dl class="simple">
+<dt><strong>Attention</strong></dt><dd><p>This is for testability only whereby we allow for variation to T1 and T2 value to verify the noise model.</p>
+</dd>
+</dl>
+</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen</strong> – Specifies the noise model generation </p></li>
+<li><p><strong>t1_ns</strong> – T1 value to set (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value to set (in nanoseconds) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddd">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddd"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddd"></span><span id="qristal::EmulatorNoiseModel::EmulatorNoiseModel__Generation.double.double.double.double"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a56b9f360b99b440e4192e98f4691476e"></span><span class="sig-name descname"><span class="n"><span class="pre">EmulatorNoiseModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7qristal18EmulatorNoiseModel10GenerationE" title="qristal::EmulatorNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">gen</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new Qb Noise Model object IMPORTANT: This is for testability only whereby we allow for variation to T1, T2, and gate error value to verify the noise model. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen</strong> – Specifies the noise model generation </p></li>
+<li><p><strong>t1_ns</strong> – T1 value to set (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value to set (in nanoseconds) </p></li>
+<li><p><strong>single_qubit_gate_error</strong> – single qubit gate error (prob between 0 and 1) </p></li>
+<li><p><strong>two_qubit_gate_error</strong> – two qubit gate error (prob between 0 and 1) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddddd">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddddd"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddddd"></span><span id="qristal::EmulatorNoiseModel::EmulatorNoiseModel__Generation.double.double.double.double.double.double"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1ad7056a6cd31669f041a328e0b9007160"></span><span class="sig-name descname"><span class="n"><span class="pre">EmulatorNoiseModel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7qristal18EmulatorNoiseModel10GenerationE" title="qristal::EmulatorNoiseModel::Generation"><span class="n"><span class="pre">Generation</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">gen</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_01</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_10</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel18EmulatorNoiseModelE10Generationdddddd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new Qb Noise Model object IMPORTANT: This is for testability only whereby we allow for variation to T1, T2, SPAM and gate error value to verify the noise model. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>gen</strong> – Specifies the noise model generation </p></li>
+<li><p><strong>t1_ns</strong> – T1 value to set (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value to set (in nanoseconds) </p></li>
+<li><p><strong>single_qubit_gate_error</strong> – single qubit gate error (prob between 0 and 1) </p></li>
+<li><p><strong>two_qubit_gate_error</strong> – two qubit gate error (prob between 0 and 1) </p></li>
+<li><p><strong>p_01</strong> – probability of reading out the 0 state when the 1 state is prepared (prob between 0 and 1) </p></li>
+<li><p><strong>p_10</strong> – probability of reading out the 1 state when the 0 state is prepared (prob between 0 and 1) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal18EmulatorNoiseModel13get_ro_errorsE6size_t">
+<span id="_CPPv3NK7qristal18EmulatorNoiseModel13get_ro_errorsE6size_t"></span><span id="_CPPv2NK7qristal18EmulatorNoiseModel13get_ro_errorsE6size_t"></span><span id="qristal::EmulatorNoiseModel::get_ro_errors__sC"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a0c8333b7c43e510f91c267829e956548"></span><a class="reference internal" href="structqristal_1_1ReadoutError.html#_CPPv4N7qristal12ReadoutErrorE" title="qristal::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_ro_errors</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qubit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal18EmulatorNoiseModel13get_ro_errorsE6size_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the ro errors of a qubit. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>qubit</strong> – Qubit index </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Readout errors </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel15get_noise_propsEv">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel15get_noise_propsEv"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel15get_noise_propsEv"></span><span id="qristal::EmulatorNoiseModel::get_noise_props"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a9c83e488baf0d924ab1a5b7c5e2e9838"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><a class="reference internal" href="structqristal_1_1NoiseProperties.html#_CPPv4N7qristal15NoisePropertiesE" title="qristal::NoiseProperties"><span class="n"><span class="pre">NoiseProperties</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_noise_props</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel15get_noise_propsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the noise props object. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p><a class="reference internal" href="structqristal_1_1NoiseProperties.html#structqristal_1_1NoiseProperties"><span class="std std-ref">NoiseProperties</span></a> associated with the noise model. </p>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-attributes">Protected Attributes</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel12m_noise_propE">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel12m_noise_propE"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel12m_noise_propE"></span><span id="qristal::EmulatorNoiseModel::m_noise_prop__NoiseProperties"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1ace32a9c27e6d171b2e3bc946325e3469"></span><a class="reference internal" href="structqristal_1_1NoiseProperties.html#_CPPv4N7qristal15NoisePropertiesE" title="qristal::NoiseProperties"><span class="n"><span class="pre">NoiseProperties</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_noise_prop</span></span></span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel12m_noise_propE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel15setup_48_qubitsEddb">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel15setup_48_qubitsEddb"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel15setup_48_qubitsEddb"></span><span id="qristal::EmulatorNoiseModel::setup_48_qubits__double.double.b"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a510d31af99269dfc2e91e81f165bb7b4"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_48_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">linear</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel15setup_48_qubitsEddb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set up noise model for 48 qubits. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
+<li><p><strong>linear</strong> – False/Default: 4x4 grid, each NV cluster contains 3 qubits (Note: this is an obsolete noise model configuration whereby C13 spins are considered as qubits) True: Use linear connectivity model - 48 NV centers on a linear chain, where each NV contains 1 qubit. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel15setup_64_qubitsEdd">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel15setup_64_qubitsEdd"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel15setup_64_qubitsEdd"></span><span id="qristal::EmulatorNoiseModel::setup_64_qubits__double.double"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a14db5899efc4a8b1d526398547c538da"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_64_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel15setup_64_qubitsEdd" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set up an 8x8 grid of NV centres, 1 qubit per NV. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE"></span><span id="qristal::EmulatorNoiseModel::setup_2_qubits__double.double.std::optional:double:.std::optional:double:.std::optional:double:.std::optional:double:"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a429e92654c977e27a930a2c296ea4e7e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_2_qubits</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">single_qubit_gate_error</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">two_qubit_gate_error</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_01</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">p_10</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel14setup_2_qubitsEddNSt8optionalIdEENSt8optionalIdEENSt8optionalIdEENSt8optionalIdEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>QDK V1 setup: two qubits q0 (NV centre), q1 (coupled C13 nucleus) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
+<li><p><strong>single_qubit_gate_error</strong> – single qubit gate error (prob between 0 and 1) </p></li>
+<li><p><strong>two_qubit_gate_error</strong> – two qubit gate error (prob between 0 and 1) </p></li>
+<li><p><strong>p_01</strong> – probability of reading out the 0 state when the 1 state is prepared (prob between 0 and 1) </p></li>
+<li><p><strong>p_10</strong> – probability of reading out the 1 state when the 0 state is prepared (prob between 0 and 1) </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel16init_noise_propsEv">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel16init_noise_propsEv"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel16init_noise_propsEv"></span><span id="qristal::EmulatorNoiseModel::init_noise_props"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a6bfa3a30735c8977b7e009f736d96d43"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">init_noise_props</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel16init_noise_propsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initialize the noise properties. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal18EmulatorNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE">
+<span id="_CPPv3N7qristal18EmulatorNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="_CPPv2N7qristal18EmulatorNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="qristal::EmulatorNoiseModel::setup_gate_noise__s.double.double.double.double.double.double.double.double.std::vector:std::pair:double.double::.std::vector:std::pair:s.s::"></span><span class="target" id="classqristal_1_1EmulatorNoiseModel_1a7c7be37c321481f864c00fd87f5ca4f5"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_gate_noise</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_qubits</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t2_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ry_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cz_gate_error</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">rx_gate_duration_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ry_gate_duration_ns</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">cz_gate_duration_ns</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_roErrors</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_connectivity</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal18EmulatorNoiseModel16setup_gate_noiseE6size_tddddddddNSt6vectorINSt4pairIddEEEENSt6vectorINSt4pairI6size_t6size_tEEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set up 1- and 2-qubit gate noise, and connectivity info. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>nb_qubits</strong> – Number of qubits </p></li>
+<li><p><strong>t1_ns</strong> – T1 value (in nanoseconds) </p></li>
+<li><p><strong>t2_ns</strong> – T2 value (in nanoseconds) </p></li>
+<li><p><strong>rx_gate_error</strong> – Rx gate error </p></li>
+<li><p><strong>ry_gate_error</strong> – Ry gate error </p></li>
+<li><p><strong>cz_gate_error</strong> – Cz gate error </p></li>
+<li><p><strong>rx_gate_duration_ns</strong> – Rx gate duration (in nanoseconds) </p></li>
+<li><p><strong>ry_gate_duration_ns</strong> – Ry gate duration (in nanoseconds) </p></li>
+<li><p><strong>cz_gate_duration_ns</strong> – Cz gate duration (in nanoseconds) </p></li>
+<li><p><strong>qb_roErrors</strong> – Qubit read-out error </p></li>
+<li><p><strong>qb_connectivity</strong> – Qubit connectivity vector </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqristal_1_1cudaq__sim__pool.html" class="btn btn-neutral float-left" title="Class cudaq_sim_pool" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqristal_1_1MpsAccelerator.html" class="btn btn-neutral float-right" title="Class MpsAccelerator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

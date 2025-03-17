@@ -122,21 +122,17 @@
 <br/><br/></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">poll_retries</span></code>: <em>integer</em>, required. Maximum number of times to query the device about the completion status of a running circuit. If this many unsuccessful queries are made, return a timeout error.
 <br/><br/></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">recursive</span></code>: <em>boolean</em>, required. If less than the requested number of shots is returned, resubmit the circuit to the device (potentially multiple times) in order to generate additional shots. Not compatible with <code class="docutils literal notranslate"><span class="pre">resample</span></code>.
-<br/><br/></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">resample</span></code>: <em>boolean</em>, required. If less than the requested number of shots is returned, bootstrap resample from the received counts in order to make up any shortfall. Not compatible with <code class="docutils literal notranslate"><span class="pre">recursive</span></code>.
-<br/><br/></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">url</span></code>: <em>string</em>, required.  The URL of the hardware device (or its circuit server <em>qcstack</em>, if <em>qcstack</em> is not running on the hardware device itself).
 <br/><br/></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">use_default_contrast_settings</span></code>: <em>boolean</em>, optional. Run with the default measurement contrast settings defined by the hardware device. Default: True
 <br/>The following options are required if <code class="docutils literal notranslate"><span class="pre">use_default_contrast_settings</span> <span class="pre">=</span> <span class="pre">false</span></code>:</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">init_contrast_threshold</span></code>: <em>floating-point</em>.  The contrast threshold to use for initialisation during post-selection. Shots are only accepted if qubit initialisation using pulsed ODMR results in a photoluminescence contrast exceeding this value. The usable upper bound on this setting is 0.6. Hardware default is 0.1.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">qubit_contrast_thresholds</span></code>: <em>{ integer keys <span class="math notranslate nohighlight">\(\rightarrow\)</span> floating-point values }</em>.  The contrast threshold to apply on a per-qubit basis during final readout. Shots are only accepted if readout using pulsed ODMR results in a photoluminescence contrast exceeding this value. The best realistic case is about 0.3. Hardware is unusable when this is less than about 0.05. Indexing of this list matches the indices of qubits in circuits. Hardware default is 0.1.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">init_contrast_threshold</span></code>: <em>floating-point</em>.  The contrast threshold to use for initialisation during post-selection. Shots are only accepted if qubit initialisation using single-shot readout results in a photoluminescence contrast exceeding this value. The highest practically usable setting is about 0.2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qubit_contrast_thresholds</span></code>: <em>{ integer keys <span class="math notranslate nohighlight">\(\rightarrow\)</span> floating-point values }</em>.  The contrast threshold to apply on a per-qubit basis during final readout. Shots are only accepted if single-shot readout produces a  photoluminescence contrast exceeding this value. The highest practically usable setting is about 0.2. Indexing of this list matches the indices of qubits in circuits.</p></li>
 </ul>
 </li>
 </ul>
-<p>These parameters are set in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file, under the top-level heading corresponding to the named QB hardware resource to which they should be applied. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qb.session.remote_backend_database_path</span></code> attribute.</p>
+<p>These parameters are set in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file, under the top-level heading corresponding to the named QB hardware resource to which they should be applied. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qristal.session.remote_backend_database_path</span></code> attribute.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">tests/qcstack</span></code>.</p>
 <p><strong>Notes</strong>:</p>
 <p>Entries in <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> may contain environment variables, in order to facilitate interoperability with job schedulers such as qtil and SLURM, e.g.</p>
@@ -162,7 +158,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">path</span></code>: <em>string</em>, required. The path to the folder within the AWS S3 bucket where the results of running the circuit should be saved.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbatim</span></code>: <em>boolean</em>, optional, default <code class="docutils literal notranslate"><span class="pre">false</span></code>. Execute circuits verbatim as provided on AWS Braket. Setting <code class="docutils literal notranslate"><span class="pre">verbatim</span> <span class="pre">=</span> <span class="pre">true</span></code> causes the circuit submitted to Braket to be executed directly, without any optimisation, placement, transpilation or other IR transformations.</p></li>
 </ul>
-<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qb.session.remote_backend_database_path</span></code> attribute.</p>
+<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qristal.session.remote_backend_database_path</span></code> attribute.</p>
 <p><strong>Example</strong>: tests/AWSBraketHostedTester.Simple</p>
 <p><strong>Notes</strong>: The example in tests/AWSBraketHostedTester.Simple has the call to the Rigetti backend commented out at present, as no Rigetti devices were available on AWS Braket at the time of writing.</p>
 </section>
@@ -178,7 +174,7 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qsim_noisy.py</span></code></p>
 </section>
 <section id="microsoft-sparse-state-vector-sparse-sim">
@@ -195,7 +191,12 @@
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: CPU</p>
 <p><strong>Requires</strong>: CUDA Quantum (<code class="docutils literal notranslate"><span class="pre">cudaq:qpp</span></code> version only)</p>
-<p><strong>Parameters</strong>: None</p>
+<p><strong>Parameters</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">get_state_vec</span></code>: <em>boolean</em>, optional. Retrieve final state-vector if set as true (default = false).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_state_vec_raw</span></code>: <em>pointer of vector of complex double</em>, optional. Holds the final state-vector.</p></li>
+</ul>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">demo1.py</span></code></p>
 </section>
 <section id="cuquantum-state-vector-simulators-custatevec-fp32-and-custatevec-fp64">
@@ -216,8 +217,10 @@
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>: <em>string</em>, optional. The type of AER simulator. Can be set as <code class="docutils literal notranslate"><span class="pre">aer_sim_type</span> <span class="pre">=</span> <span class="pre">statevector</span></code> (default).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_state_vec</span></code>: <em>boolean</em>, optional. Retrieve final state-vector if set as true (default = false).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">get_state_vec_raw</span></code>: <em>pointer of vector of complex double</em>, optional. Holds the final state-vector.</p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code></p>
 </section>
 <section id="amazon-braket-sv1-aws-braket-sv1">
@@ -234,7 +237,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, required. Include noise in the circuit simulation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbatim</span></code>: <em>boolean</em>, optional, default <code class="docutils literal notranslate"><span class="pre">false</span></code>. Execute circuits verbatim as provided on AWS Braket. Setting <code class="docutils literal notranslate"><span class="pre">verbatim</span> <span class="pre">=</span> <span class="pre">true</span></code> causes the circuit submitted to Braket to be executed directly, without any optimisation, placement, transpilation or other IR transformations.</p></li>
 </ul>
-<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qb.session.remote_backend_database_path</span></code> attribute.</p>
+<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qristal.session.remote_backend_database_path</span></code> attribute.</p>
 <p><strong>Example</strong>: tests/AWSBraketHostedTester.Simple</p>
 <p><strong>Notes</strong>: Up to 34 qubits and 10,000 shots supported.</p>
 </section>
@@ -254,19 +257,19 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-8. Smallest absolute value of the singular values to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_sequential</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">on</span></code> for cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">off</span></code> for cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">sequential</span></code> for sequential cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet</span></code> for single-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet_multishot</span></code> for multi-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_mps_noisy.py</span></code></p>
 <p><strong>Notes</strong>:</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">qb12()</span></code> method sets the following parameters:</p>
+<p>In a <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method sets the following parameters:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>: 256</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">initial_bond_dimension</span></code>: 1</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: 1.0e-6</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: 1.0e-3</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_sequential</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
 </ul>
 </section>
 <section id="quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo">
@@ -282,19 +285,19 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-8. Smallest absolute value of the singular values to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_sequential</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">on</span></code> for cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">off</span></code> for cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">sequential</span></code> for sequential cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet</span></code> for single-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_mpdo_noisy.py</span></code></p>
 <p><strong>Notes</strong>:</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">qb12()</span></code> method sets the following parameters:</p>
+<p>In a <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method sets the following parameters:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>: 256</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">initial_bond_dimension</span></code>: 1</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: 1.0e-6</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: 1.0e-3</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_sequential</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
 </ul>
 </section>
 <section id="quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification">
@@ -312,12 +315,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-8. Smallest absolute value of the singular values to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_sequential</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">on</span></code> for cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">off</span></code> for cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">sequential</span></code> for sequential cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet</span></code> for single-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet_multishot</span></code> for multi-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_purification_noisy.py</span></code></p>
 <p><strong>Notes</strong>:</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">qb12()</span></code> method sets the following parameters:</p>
+<p>In a <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method sets the following parameters:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>: 256</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">initial_bond_dimension</span></code>: 1</p></li>
@@ -326,7 +329,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: 1.0e-6</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: 1.0e-3</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_sequential</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
 </ul>
 </section>
 <section id="tnqvm-exatn-mps-tnqvm">
@@ -339,8 +342,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>:</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code></p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
-<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">test_random_seed_tnqvm()</span></code> in <code class="docutils literal notranslate"><span class="pre">tests/python_module/execution_test.py</span></code></p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
+<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
 </section>
 <section id="aer-mps-aer-matrix-product-state">
 <h3>Aer MPS: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">matrix_product_state</span></code>)<a class="headerlink" href="#aer-mps-aer-matrix-product-state" title="Permalink to this headline"></a></h3>
@@ -352,8 +355,8 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>: <em>string</em>, required. The type of AER simulator. Must be set as <code class="docutils literal notranslate"><span class="pre">aer_sim_type</span> <span class="pre">=</span> <span class="pre">matrix_product_state</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
-<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">aer_simulator/aer_mps_simple.py</span></code></p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
+<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
 </section>
 <section id="amazon-braket-tn1-aws-braket-tn1">
 <h3>Amazon Braket TN1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (TN1)<a class="headerlink" href="#amazon-braket-tn1-aws-braket-tn1" title="Permalink to this headline"></a></h3>
@@ -369,7 +372,7 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, required. Include noise in the circuit simulation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbatim</span></code>: <em>boolean</em>, optional, default <code class="docutils literal notranslate"><span class="pre">false</span></code>. Execute circuits verbatim as provided on AWS Braket. Setting <code class="docutils literal notranslate"><span class="pre">verbatim</span> <span class="pre">=</span> <span class="pre">true</span></code> causes the circuit submitted to Braket to be executed directly, without any optimisation, placement, transpilation or other IR transformations.</p></li>
 </ul>
-<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qb.session.remote_backend_database_path</span></code> attribute.</p>
+<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qristal.session.remote_backend_database_path</span></code> attribute.</p>
 <p><strong>Example</strong>: tests/AWSBraketHostedTester.Simple</p>
 <p><strong>Notes</strong>: Up to 48 qubits and 999 shots supported.</p>
 </section>
@@ -383,7 +386,7 @@
 <p><strong>Executes on</strong>: GPU</p>
 <p><strong>Requires</strong>: CUDA Quantum</p>
 <p><strong>Parameters</strong>: None</p>
-<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">tests/python_module/cudaq_integration.py</span></code></p>
+<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
 </section>
 <section id="amazon-braket-dm1-aws-braket-dm1">
 <h3>Amazon Braket DM1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (DM1)<a class="headerlink" href="#amazon-braket-dm1-aws-braket-dm1" title="Permalink to this headline"></a></h3>
@@ -399,12 +402,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, required. Include noise in the circuit simulation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">verbatim</span></code>: <em>boolean</em>, optional, default <code class="docutils literal notranslate"><span class="pre">false</span></code>. Execute circuits verbatim as provided on AWS Braket. Setting <code class="docutils literal notranslate"><span class="pre">verbatim</span> <span class="pre">=</span> <span class="pre">true</span></code> causes the circuit submitted to Braket to be executed directly, without any optimisation, placement, transpilation or other IR transformations.</p></li>
 </ul>
-<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qb.session.remote_backend_database_path</span></code> attribute.</p>
+<p>These parameters are set under the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> heading in the <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> configuration file. To use an alternative file, assign its path to the <code class="docutils literal notranslate"><span class="pre">qristal.session.remote_backend_database_path</span></code> attribute.</p>
 <p><strong>Example</strong>: tests/AWSBraketHostedTester.Simple</p>
 <p><strong>Notes</strong>:</p>
 <ul class="simple">
 <li><p>Up to 17 qubits and 10,000 shots supported.</p></li>
-<li><p>Noise must be enabled in order to use this simulator.  This is done by setting the <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attribute <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">True</span></code>.</p></li>
+<li><p>Noise must be enabled in order to use this simulator.  This is done by setting the <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attribute <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">True</span></code>.</p></li>
 </ul>
 </section>
 <section id="aer-density-matrix-aer-density-matrix">
@@ -417,9 +420,9 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>: <em>string</em>, required. The type of AER simulator. Must be set as <code class="docutils literal notranslate"><span class="pre">aer_sim_type</span> <span class="pre">=</span> <span class="pre">density_matrix</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, required. Include noise in the circuit simulation.</p></li>
 </ul>
-<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attributes.</p>
-<p><strong>Example</strong>:</p>
-<p><strong>Notes</strong>: Noise must be enabled in order to use this simulator.  This is done by setting the <code class="docutils literal notranslate"><span class="pre">qb.core.session</span></code> attribute <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">True</span></code>.</p>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
+<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
+<p><strong>Notes</strong>: Noise must be enabled in order to use this simulator.  This is done by setting the <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attribute <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">True</span></code>.</p>
 </section>
 </section>
 </section>

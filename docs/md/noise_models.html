@@ -270,11 +270,11 @@
 <section id="c">
 <h3>C++<a class="headerlink" href="#c" title="Permalink to this headline"></a></h3>
 <p>This example can be found at <code class="docutils literal notranslate"><span class="pre">examples/cpp/noise_model</span></code>, along with a <code class="docutils literal notranslate"><span class="pre">CMakeLists.txt</span></code> file for building it.</p>
-<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;qb/core/session.hpp&quot;</span><span class="cp"></span>
+<div class="highlight-C++ notranslate"><div class="highlight"><pre><span></span><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;qristal/core/session.hpp&quot;</span><span class="cp"></span>
 <span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"></span>
 <span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">my_sim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qb</span><span class="o">::</span><span class="n">session</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">my_sim</span><span class="p">.</span><span class="n">qb12</span><span class="p">();</span><span class="w">          </span><span class="c1">// Set up meaningful defaults</span>
+<span class="w">    </span><span class="k">auto</span><span class="w"> </span><span class="n">my_sim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">qristal</span><span class="o">::</span><span class="n">session</span><span class="p">();</span><span class="w"></span>
+<span class="w">    </span><span class="n">my_sim</span><span class="p">.</span><span class="n">init</span><span class="p">();</span><span class="w">          </span><span class="c1">// Set up meaningful defaults</span>
 <span class="w">    </span><span class="n">my_sim</span><span class="p">.</span><span class="n">set_qn</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w">       </span><span class="c1">// 2 qubits</span>
 <span class="w">    </span><span class="n">my_sim</span><span class="p">.</span><span class="n">set_acc</span><span class="p">(</span><span class="s">&quot;aer&quot;</span><span class="p">);</span><span class="w">  </span><span class="c1">// Aer simulator selected</span>
 <span class="w">    </span><span class="n">my_sim</span><span class="p">.</span><span class="n">set_noise</span><span class="p">(</span><span class="nb">true</span><span class="p">);</span><span class="w"> </span><span class="c1">// Set this to true for noise models to be active</span>
@@ -289,8 +289,7 @@
 <span class="s">       measure q[0] -&gt; c[0];</span>
 <span class="s">       </span><span class="dl">)</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
 <span class="w">    </span><span class="n">my_sim</span><span class="p">.</span><span class="n">run</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">string</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">((</span><span class="n">my_sim</span><span class="p">.</span><span class="n">get_out_raws</span><span class="p">()).</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">)).</span><span class="n">at</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">std</span><span class="o">::</span><span class="n">cout</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">my_sim</span><span class="p">.</span><span class="n">results</span><span class="p">()[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">&lt;&lt;</span><span class="w"> </span><span class="n">std</span><span class="o">::</span><span class="n">endl</span><span class="p">;</span><span class="w"></span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
 <span class="p">}</span><span class="w"></span>
 </pre></div>
@@ -299,9 +298,9 @@
 <section id="python">
 <h3>Python<a class="headerlink" href="#python" title="Permalink to this headline"></a></h3>
 <p>This example can be found at <code class="docutils literal notranslate"><span class="pre">examples/python/noise_model.py</span></code>.</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qb.core</span>
-<span class="n">my_sim</span> <span class="o">=</span> <span class="n">qb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
-<span class="n">my_sim</span><span class="o">.</span><span class="n">qb12</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qristal.core</span>
+<span class="n">my_sim</span> <span class="o">=</span> <span class="n">qristal</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+<span class="n">my_sim</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 <span class="n">my_sim</span><span class="o">.</span><span class="n">qn</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="n">my_sim</span><span class="o">.</span><span class="n">acc</span> <span class="o">=</span> <span class="s2">&quot;aer&quot;</span>
 <span class="n">my_sim</span><span class="o">.</span><span class="n">noise</span> <span class="o">=</span> <span class="kc">True</span>
@@ -316,7 +315,7 @@
 <span class="s1">    measure q[0] -&gt; c[0];</span>
 <span class="s1">&#39;&#39;&#39;</span>
 <span class="n">my_sim</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">my_sim</span><span class="o">.</span><span class="n">out_raws</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_sim</span><span class="o">.</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 </section>
@@ -324,7 +323,7 @@
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="user-defined-noise-models">
 <h1>User defined noise models<a class="headerlink" href="#user-defined-noise-models" title="Permalink to this headline"></a></h1>
-<p>QB Qristal allows an end-user to implement noise models. First use  <a href="../_cpp_api/structqb_1_1NoiseProperties.html">NoiseProperties</a> to set up noise model parameters.  Then pass the parameters to the constructor of <code class="docutils literal notranslate"><span class="pre">qb::NoiseModel</span></code>.</p>
+<p>QB Qristal allows an end-user to implement noise models. First use  <a href="../_cpp_api/structqb_1_1NoiseProperties.html">NoiseProperties</a> to set up noise model parameters.  Then pass the parameters to the constructor of <code class="docutils literal notranslate"><span class="pre">qristal::NoiseModel</span></code>.</p>
 <section id="modifying-the-default-noise-model">
 <h2>Modifying the <code class="docutils literal notranslate"><span class="pre">default</span></code> noise model<a class="headerlink" href="#modifying-the-default-noise-model" title="Permalink to this headline"></a></h2>
 <p>See the source code for the <code class="docutils literal notranslate"><span class="pre">default</span></code> noise model [<code class="docutils literal notranslate"><span class="pre">DefaultNoiseModelFactory</span></code>] in:</p>
@@ -359,7 +358,7 @@
 </tbody>
 </table>
 <p>See the header code in:</p>
-<p><code class="docutils literal notranslate"><span class="pre">core/include/qb/core/noise_model/noise_model.hpp</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/noise_model/noise_model.hpp</span></code></p>
 </section>
 </section>
 

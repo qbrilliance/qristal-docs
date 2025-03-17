@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Typedef qristal::CircuitPass &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Typedef qristal::OracleFuncCType" href="typedef_namespaceqristal_1a7816f47af9016722f68dd6d11c1589e8.html" />
+    <link rel="prev" title="Function qristal::vqee::UCCSD_Ansatz" href="function_case__generator_8hpp_1ab19835bd104c8690ff23116e72aed461.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Typedef qristal::CircuitPass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_namespaceqristal_1a7816f47af9016722f68dd6d11c1589e8.html">Typedef qristal::OracleFuncCType</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_namespaceqristal_1af91e4640cc4e3b80f692ff49659ba8bc.html">Typedef qristal::Passes</a></li>
+<li class="toctree-l4"><a class="reference internal" href="typedef_namespaceqristal_1a98d1e0a7b33b8dfb424b5f60b4a6d86a.html">Typedef qristal::StatePrepFuncCType</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Typedef qristal::CircuitPass</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/typedef_namespaceqristal_1ac319fa09ba300bf9963b1e3168caf3b7.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="typedef-qristal-circuitpass">
+<span id="exhale-typedef-namespaceqristal-1ac319fa09ba300bf9963b1e3168caf3b7"></span><h1>Typedef qristal::CircuitPass<a class="headerlink" href="#typedef-qristal-circuitpass" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#file-core-include-qristal-core-passes-base-pass-hpp"><span class="std std-ref">File base_pass.hpp</span></a></p></li>
+</ul>
+<section id="typedef-documentation">
+<h2>Typedef Documentation<a class="headerlink" href="#typedef-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal11CircuitPassE">
+<span id="_CPPv3N7qristal11CircuitPassE"></span><span id="_CPPv2N7qristal11CircuitPassE"></span><span class="target" id="namespaceqristal_1ac319fa09ba300bf9963b1e3168caf3b7"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">qristal</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">CircuitPass</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="classqristal_1_1Pass.html#_CPPv4I0EN7qristal4PassE" title="qristal::Pass"><span class="n"><span class="pre">Pass</span></span></a><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classqristal_1_1CircuitBuilder.html#_CPPv4N7qristal14CircuitBuilderE" title="qristal::CircuitBuilder"><span class="n"><span class="pre">CircuitBuilder</span></span></a><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N7qristal11CircuitPassE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Alias the pass that work on <a class="reference internal" href="classqristal_1_1CircuitBuilder.html#classqristal_1_1CircuitBuilder"><span class="std std-ref">CircuitBuilder</span></a> (i.e., XACC IR) </p>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="function_case__generator_8hpp_1ab19835bd104c8690ff23116e72aed461.html" class="btn btn-neutral float-left" title="Function qristal::vqee::UCCSD_Ansatz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="typedef_namespaceqristal_1a7816f47af9016722f68dd6d11c1589e8.html" class="btn btn-neutral float-right" title="Typedef qristal::OracleFuncCType" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

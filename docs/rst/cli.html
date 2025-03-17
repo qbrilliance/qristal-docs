@@ -99,10 +99,10 @@
              
   <section class="tex2jax_ignore mathjax_ignore" id="command-line-interface">
 <h1>Command-line interface<a class="headerlink" href="#command-line-interface" title="Permalink to this headline"></a></h1>
-<p><code class="docutils literal notranslate"><span class="pre">qbsdkcli</span></code> is a command-line executable that provides a command-line interface to Qristal.</p>
-<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  qbsdkcli [input-circuit-file] {OPTIONS}
+<p><code class="docutils literal notranslate"><span class="pre">qristal_cli</span></code> is a command-line executable that provides a command-line interface to Qristal.</p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>  qristal_cli [input-circuit-file] {OPTIONS}
 
-    qbsdkcli - Circuit simulation with the timing, noise and topology parameters of
+    qristal_cli - Circuit simulation with the timing, noise and topology parameters of
     QB hardware. This tool is a component of Qristal. The configuration of this
     tool is set in a configuration file named &quot;sdk_cfg.json&quot;. Note: command-line options
     specified here will override that of the configuration file.
@@ -125,8 +125,8 @@
                                           connections.)
         -s[#shots]                        -s128 gives 128 shots, default: 1024
       * Switches
-        -n, --noise                       Enable QB noise model, a simulation of
-                                          noise sources within the QB hardware
+        -n, --noise                       Enable noise modelling, a simulation of
+                                          noise sources within quantum hardware
                                           and their effect on results. The noise
                                           has three main sources, internal
                                           thermal and magnetic fluctuations, and
@@ -139,7 +139,7 @@
                                           [here](https://qristal.readthedocs.io/en/latest/rst/noise_models.html) .
         --noplacement                     Disable placement mapping
         --optimise                        Enable circuit optimiser
-        --nosim                           Skip simulation
+        --execute_circuit                 Perform actual execution of the circuit; default: true
       * Random circuit options
         --random=[#random_circuit_depth]  --random=20 will sample and analyse
                                           quantum random circuits of [#qubits]

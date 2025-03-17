@@ -15,7 +15,7 @@ Directory include
 Subdirectories
 --------------
 
-- :ref:`dir_emulator_include_qb`
+- :ref:`dir_emulator_include_qristal`
 
 
 

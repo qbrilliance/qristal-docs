@@ -1,0 +1,62 @@
+
+.. _file_core_include_qristal_core_passes_swap_placement_pass.hpp:
+
+File swap_placement_pass.hpp
+============================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qristal_core_passes>` (``core/include/qristal/core/passes``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qristal/core/passes/swap_placement_pass.hpp``)
+-------------------------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
+
+- ``memory``
+
+- ``vector``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal`
+
+- :ref:`namespace_xacc`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqristal_1_1swap__placement__pass`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceqristal_1a0c7414393b53cd595f315c59da514626`
+
+- :ref:`exhale_function_namespaceqristal_1a2d39d534b08204042c939ff913e8922c`
+

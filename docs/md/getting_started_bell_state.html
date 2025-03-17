@@ -131,15 +131,15 @@
 </center>
 <p>Now let’s code up the circuit to generate <span class="math notranslate nohighlight">\(\ket{\Phi^+}\)</span>.</p>
 <p>Import the Qristal core:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qb.core</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qristal.core</span>
 </pre></div>
 </div>
 <p>Create a quantum computing session using Qristal:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span> <span class="o">=</span> <span class="n">qb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span> <span class="o">=</span> <span class="n">qristal</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Choose some default session parameters:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span><span class="o">.</span><span class="n">qb12</span><span class="p">()</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span><span class="o">.</span><span class="n">init</span><span class="p">()</span>
 </pre></div>
 </div>
 <p>Set the number of shots to run through the circuit:</p>
@@ -174,7 +174,7 @@
 </pre></div>
 </div>
 <p>Print the cumulative results in each of the classical registers:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_sim</span><span class="o">.</span><span class="n">out_raw</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_sim</span><span class="o">.</span><span class="n">results</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">])</span>
 </pre></div>
 </div>
 

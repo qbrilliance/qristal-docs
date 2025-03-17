@@ -25,7 +25,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="Typedef qb::StatePrepFuncCType" href="../_cpp_api/typedef_circuit__builder_8hpp_1a3a836b4117e2cd67fc1980ad99cb2443.html" /> 
+    <link rel="prev" title="Typedef qristal::StatePrepFuncCType" href="../_cpp_api/typedef_namespaceqristal_1a98d1e0a7b33b8dfb424b5f60b4a6d86a.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -118,6 +118,16 @@
 <dt class="sig sig-object py" id="core.session">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">session</span></span><a class="headerlink" href="#core.session" title="Permalink to this definition"></a></dt>
 <dd><dl class="py property">
+<dt class="sig sig-object py" id="core.session.SPAM_confusion">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SPAM_confusion</span></span><a class="headerlink" href="#core.session.SPAM_confusion" title="Permalink to this definition"></a></dt>
+<dd><p>SPAM_confusion:</p>
+<p>Set a state preparation and measurement (SPAM) confusion matrix, which will be used to correct the measured results.
+After setting, and calling <cite>run()</cite>, the results variable will automatically be populated with SPAM-corrected counts.
+The native counts will be stored in <cite>results_native</cite> instead. Calling <cite>SPAM_confusion</cite> after setting, will return
+the used SPAM correction matrix, i.e., the inverse of the passed confusion matrix.</p>
+</dd></dl>
+
+<dl class="py property">
 <dt class="sig sig-object py" id="core.session.acc">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acc</span></span><a class="headerlink" href="#core.session.acc" title="Permalink to this definition"></a></dt>
 <dd><p>acc:</p>
@@ -161,32 +171,26 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.session.aws_setup">
-<span class="sig-name descname"><span class="pre">aws_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.aws_setup" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">aws_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.aws_setup" title="Permalink to this definition"></a></dt>
 <dd><p>AWS Braket Setup</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.beta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">beta</span></span><a class="headerlink" href="#core.session.beta" title="Permalink to this definition"></a></dt>
-<dd><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This property is currently unused.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.betas">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">betas</span></span><a class="headerlink" href="#core.session.betas" title="Permalink to this definition"></a></dt>
-<dd><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This property is currently unused.</p>
-</div>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.session.bitstring_index">
-<span class="sig-name descname"><span class="pre">bitstring_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#core.session.bitstring_index" title="Permalink to this definition"></a></dt>
-<dd><p>Get the (base-10) integer index for the counts/probabilities list, corresponding to a bitstring for the quantum experiment at (ii, jj).</p>
+<span class="sig-name descname"><span class="pre">bitstring_index</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.session.bitstring_index" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>bitstring_index(self: core.session, arg0: core.VectorBool) -&gt; int</p>
+<blockquote>
+<div><p>Get the (base-10) integer index for the counts/probabilities list, corresponding to a specific output state specified by a list of bit values.</p>
+</div></blockquote>
+</li>
+<li><p>bitstring_index(self: core.session, arg0: numpy.ndarray[bool]) -&gt; int</p>
+<blockquote>
+<div><p>Get the (base-10) integer index for the counts/probabilities list, corresponding to a specific output state specified by a list of bit values.</p>
+</div></blockquote>
+</li>
+</ol>
 </dd></dl>
 
 <dl class="py property">
@@ -195,7 +199,8 @@
 <dd><p>calc_jacobian:</p>
 <p>Valid settings: True | False</p>
 <p>Setting this to True will calculate gradients for the circuit when session.run() is evoked. The single setting applies globally.
-The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.</p>
+The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.
+Note that calc_jacobian = True implies calc_out_counts = True.</p>
 <p>calc_jacobians:</p>
 <p>Valid settings: [[True|False, …], [True|False, …]]</p>
 <p>A 1d-array (list) version of calc_jacobian.</p>
@@ -207,10 +212,35 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dd><p>calc_jacobian:</p>
 <p>Valid settings: True | False</p>
 <p>Setting this to True will calculate gradients for the circuit when session.run() is evoked. The single setting applies globally.
-The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.</p>
+The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.
+Note that calc_jacobian = True implies calc_out_counts = True.</p>
 <p>calc_jacobians:</p>
 <p>Valid settings: [[True|False, …], [True|False, …]]</p>
 <p>A 1d-array (list) version of calc_jacobian.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.calc_out_counts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_out_counts</span></span><a class="headerlink" href="#core.session.calc_out_counts" title="Permalink to this definition"></a></dt>
+<dd><p>calc_out_counts:</p>
+<p>Valid settings: True | False</p>
+<p>Setting this to True will calculate a non-compact vector of count results when session.run() is evoked. The single setting applies globally.
+Note that calc_out_counts = True is implied by calc_jacobian = True.</p>
+<p>calc_out_countss:</p>
+<p>Valid settings: [[True|False, …], [True|False, …]]</p>
+<p>A 1d-array (list) version of calc_out_counts.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.calc_out_countss">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_out_countss</span></span><a class="headerlink" href="#core.session.calc_out_countss" title="Permalink to this definition"></a></dt>
+<dd><p>calc_out_counts:</p>
+<p>Valid settings: True | False</p>
+<p>Setting this to True will calculate a non-compact vector of count results when session.run() is evoked. The single setting applies globally.
+Note that calc_out_counts = True is implied by calc_jacobian = True.</p>
+<p>calc_out_countss:</p>
+<p>Valid settings: [[True|False, …], [True|False, …]]</p>
+<p>A 1d-array (list) version of calc_out_counts.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -243,6 +273,66 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dt class="sig sig-object py" id="core.session.divergence">
 <span class="sig-name descname"><span class="pre">divergence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.divergence" title="Permalink to this definition"></a></dt>
 <dd><p>Calculate Jensen-Shannon divergence</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.session.draw_shot">
+<span class="sig-name descname"><span class="pre">draw_shot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">core.VectorBool</span></span></span><a class="headerlink" href="#core.session.draw_shot" title="Permalink to this definition"></a></dt>
+<dd><p>draw_shot(i,j) : Draw a single shot from the saved results of circuit i, condition j.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.execute_circuit">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute_circuit</span></span><a class="headerlink" href="#core.session.execute_circuit" title="Permalink to this definition"></a></dt>
+<dd><p>execute_circuit:</p>
+<p>Valid settings: True | False</p>
+<p>Set this to False to disable circuit simulation. The single setting applies globally.</p>
+<p>execute_circuits:</p>
+<p>Valid settings: [[True|False, …], [True|False, …]]</p>
+<p>A 1d-array (list) version of execute_circuit.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.execute_circuits">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute_circuits</span></span><a class="headerlink" href="#core.session.execute_circuits" title="Permalink to this definition"></a></dt>
+<dd><p>execute_circuit:</p>
+<p>Valid settings: True | False</p>
+<p>Set this to False to disable circuit simulation. The single setting applies globally.</p>
+<p>execute_circuits:</p>
+<p>Valid settings: [[True|False, …], [True|False, …]]</p>
+<p>A 1d-array (list) version of execute_circuit.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.expected_amplitudes">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expected_amplitudes</span></span><a class="headerlink" href="#core.session.expected_amplitudes" title="Permalink to this definition"></a></dt>
+<dd><p>expected_amplitudes:</p>
+<p>Set the expected amplitudes for Jensen-Shannon divergence calculation. The single setting applies globally.</p>
+<p>amp:</p>
+<p>A 1d-array (list) version of expected_amplitudes.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.expected_amplitudess">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expected_amplitudess</span></span><a class="headerlink" href="#core.session.expected_amplitudess" title="Permalink to this definition"></a></dt>
+<dd><p>expected_amplitudes:</p>
+<p>Set the expected amplitudes for Jensen-Shannon divergence calculation. The single setting applies globally.</p>
+<p>amp:</p>
+<p>A 1d-array (list) version of expected_amplitudes.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.get_state_vec">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_state_vec</span></span><a class="headerlink" href="#core.session.get_state_vec" title="Permalink to this definition"></a></dt>
+<dd><p>in_get_state_vec:</p>
+<p>Using this will extract the state vector (supported by the <cite>qpp</cite> backend only).</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.get_state_vec_raw">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_state_vec_raw</span></span><a class="headerlink" href="#core.session.get_state_vec_raw" title="Permalink to this definition"></a></dt>
+<dd><p>in_get_state_vec:</p>
+<p>Using this will extract the state vector (supported by the <cite>qpp</cite> backend only).</p>
 </dd></dl>
 
 <dl class="py property">
@@ -285,16 +375,22 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <p>A 1d-array (list) version of session.infile.</p>
 </dd></dl>
 
+<dl class="py method">
+<dt class="sig sig-object py" id="core.session.init">
+<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.init" title="Permalink to this definition"></a></dt>
+<dd><p>Quantum Brilliance 12-qubit defaults</p>
+</dd></dl>
+
 <dl class="py property">
 <dt class="sig sig-object py" id="core.session.initial_bond_dimension">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_bond_dimension</span></span><a class="headerlink" href="#core.session.initial_bond_dimension" title="Permalink to this definition"></a></dt>
 <dd><p>initial_bond_dimension:</p>
-<p>Set the initial bond dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the initial bond dimension (tensor network simulators). The single setting applies globally.</p>
 <p>initial_bond_dimensions:</p>
 <p>A 1d-array (list) version of initial_bond_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
 </dd></dl>
 
@@ -302,12 +398,12 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dt class="sig sig-object py" id="core.session.initial_bond_dimensions">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_bond_dimensions</span></span><a class="headerlink" href="#core.session.initial_bond_dimensions" title="Permalink to this definition"></a></dt>
 <dd><p>initial_bond_dimension:</p>
-<p>Set the initial bond dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the initial bond dimension (tensor network simulators). The single setting applies globally.</p>
 <p>initial_bond_dimensions:</p>
 <p>A 1d-array (list) version of initial_bond_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
 </dd></dl>
 
@@ -315,12 +411,12 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dt class="sig sig-object py" id="core.session.initial_kraus_dimension">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_kraus_dimension</span></span><a class="headerlink" href="#core.session.initial_kraus_dimension" title="Permalink to this definition"></a></dt>
 <dd><p>initial_kraus_dimension:</p>
-<p>Set the initial kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the initial kraus dimension (emulator purification simulator). The single setting applies globally.</p>
 <p>initial_kraus_dimensions:</p>
 <p>A 1d-array (list) version of initial_kraus_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the emulator purification backend accelerator.</p>
 </div>
 </dd></dl>
 
@@ -328,12 +424,12 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dt class="sig sig-object py" id="core.session.initial_kraus_dimensions">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_kraus_dimensions</span></span><a class="headerlink" href="#core.session.initial_kraus_dimensions" title="Permalink to this definition"></a></dt>
 <dd><p>initial_kraus_dimension:</p>
-<p>Set the initial kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the initial kraus dimension (emulator purification simulator). The single setting applies globally.</p>
 <p>initial_kraus_dimensions:</p>
 <p>A 1d-array (list) version of initial_kraus_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the emulator purification backend accelerator.</p>
 </div>
 </dd></dl>
 
@@ -342,7 +438,7 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instring</span></span><a class="headerlink" href="#core.session.instring" title="Permalink to this definition"></a></dt>
 <dd><p>instring:</p>
 <p>A string that defines a circuit in OpenQASM format.  Simple example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__qpu__</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">QBCIRCUIT</span><span class="p">(</span><span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__qpu__</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">qristal_circuit</span><span class="p">(</span><span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="n">OPENQASM</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s">&quot;qelib1.inc;&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="n">creg</span><span class="w"> </span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
@@ -364,7 +460,7 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instrings</span></span><a class="headerlink" href="#core.session.instrings" title="Permalink to this definition"></a></dt>
 <dd><p>instring:</p>
 <p>A string that defines a circuit in OpenQASM format.  Simple example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__qpu__</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">QBCIRCUIT</span><span class="p">(</span><span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__qpu__</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">qristal_circuit</span><span class="p">(</span><span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">        </span><span class="n">OPENQASM</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
 <span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s">&quot;qelib1.inc;&quot;</span><span class="w"></span>
 <span class="w">        </span><span class="n">creg</span><span class="w"> </span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
@@ -400,45 +496,15 @@ The gradients calculated will be a jacobian of the output probabilities with res
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.log_enabled">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">log_enabled</span></span><a class="headerlink" href="#core.session.log_enabled" title="Permalink to this definition"></a></dt>
-<dd><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This property is currently unused.</p>
-</div>
-<p>log_enabled:</p>
-<p>Setting this to True to enable logging to file. The single setting applies globally.</p>
-<p>Valid settings: True | False</p>
-<p>log_enableds:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of log_enabled.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.log_enableds">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">log_enableds</span></span><a class="headerlink" href="#core.session.log_enableds" title="Permalink to this definition"></a></dt>
-<dd><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This property is currently unused.</p>
-</div>
-<p>log_enabled:</p>
-<p>Setting this to True to enable logging to file. The single setting applies globally.</p>
-<p>Valid settings: True | False</p>
-<p>log_enableds:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of log_enabled.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="core.session.max_bond_dimension">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_bond_dimension</span></span><a class="headerlink" href="#core.session.max_bond_dimension" title="Permalink to this definition"></a></dt>
 <dd><p>max_bond_dimension:</p>
-<p>Set the maximum bond dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the maximum bond dimension (tensor network simulators). The single setting applies globally.</p>
 <p>max_bond_dimensions:</p>
 <p>A 1d-array (list) version of max_bond_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
 </dd></dl>
 
@@ -446,12 +512,12 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dt class="sig sig-object py" id="core.session.max_bond_dimensions">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_bond_dimensions</span></span><a class="headerlink" href="#core.session.max_bond_dimensions" title="Permalink to this definition"></a></dt>
 <dd><p>max_bond_dimension:</p>
-<p>Set the maximum bond dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the maximum bond dimension (tensor network simulators). The single setting applies globally.</p>
 <p>max_bond_dimensions:</p>
 <p>A 1d-array (list) version of max_bond_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
 </dd></dl>
 
@@ -459,12 +525,12 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dt class="sig sig-object py" id="core.session.max_kraus_dimension">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_kraus_dimension</span></span><a class="headerlink" href="#core.session.max_kraus_dimension" title="Permalink to this definition"></a></dt>
 <dd><p>max_kraus_dimension:</p>
-<p>Set the maximum kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the maximum kraus dimension (emulator purification simulator). The single setting applies globally.</p>
 <p>max_kraus_dimensions:</p>
 <p>A 1d-array (list) version of max_kraus_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the emulator purification backend accelerator.</p>
 </div>
 </dd></dl>
 
@@ -472,22 +538,22 @@ The gradients calculated will be a jacobian of the output probabilities with res
 <dt class="sig sig-object py" id="core.session.max_kraus_dimensions">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_kraus_dimensions</span></span><a class="headerlink" href="#core.session.max_kraus_dimensions" title="Permalink to this definition"></a></dt>
 <dd><p>max_kraus_dimension:</p>
-<p>Set the maximum kraus dimension (MPS simulator). The single setting applies globally.</p>
+<p>Set the maximum kraus dimension (emulator purification simulator). The single setting applies globally.</p>
 <p>max_kraus_dimensions:</p>
 <p>A 1d-array (list) version of max_kraus_dimension.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the emulator purification backend accelerator.</p>
 </div>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.measure_sample_sequential">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_sequential</span></span><a class="headerlink" href="#core.session.measure_sample_sequential" title="Permalink to this definition"></a></dt>
-<dd><p>measure_sample_sequential:</p>
+<dt class="sig sig-object py" id="core.session.measure_sample_method">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_method</span></span><a class="headerlink" href="#core.session.measure_sample_method" title="Permalink to this definition"></a></dt>
+<dd><p>measure_sample_method:</p>
 <p>Set the measurement sampling method (QB emulator tensor network simulator). The single setting applies globally.</p>
-<p>measure_sample_sequentials:</p>
-<p>A 1d-array (list) version of measure_sample_sequential.</p>
+<p>measure_sample_methods:</p>
+<p>A 1d-array (list) version of measure_sample_method.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the emulator tensor network accelerators.</p>
@@ -495,12 +561,12 @@ The gradients calculated will be a jacobian of the output probabilities with res
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.measure_sample_sequentials">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_sequentials</span></span><a class="headerlink" href="#core.session.measure_sample_sequentials" title="Permalink to this definition"></a></dt>
-<dd><p>measure_sample_sequential:</p>
+<dt class="sig sig-object py" id="core.session.measure_sample_methods">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_methods</span></span><a class="headerlink" href="#core.session.measure_sample_methods" title="Permalink to this definition"></a></dt>
+<dd><p>measure_sample_method:</p>
 <p>Set the measurement sampling method (QB emulator tensor network simulator). The single setting applies globally.</p>
-<p>measure_sample_sequentials:</p>
-<p>A 1d-array (list) version of measure_sample_sequential.</p>
+<p>measure_sample_methods:</p>
+<p>A 1d-array (list) version of measure_sample_method.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This is only needed if using the emulator tensor network accelerators.</p>
@@ -640,28 +706,6 @@ of the NoiseModel class:</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.nosim">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nosim</span></span><a class="headerlink" href="#core.session.nosim" title="Permalink to this definition"></a></dt>
-<dd><p>nosim:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable circuit simulation. The single setting applies globally.</p>
-<p>nosims:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of nosim.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.nosims">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nosims</span></span><a class="headerlink" href="#core.session.nosims" title="Permalink to this definition"></a></dt>
-<dd><p>nosim:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable circuit simulation. The single setting applies globally.</p>
-<p>nosims:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of nosim.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="core.session.notiming">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notiming</span></span><a class="headerlink" href="#core.session.notiming" title="Permalink to this definition"></a></dt>
 <dd><div class="admonition warning">
@@ -694,7 +738,7 @@ of the NoiseModel class:</p>
 <dl class="py property">
 <dt class="sig sig-object py" id="core.session.num_threads">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_threads</span></span><a class="headerlink" href="#core.session.num_threads" title="Permalink to this definition"></a></dt>
-<dd><p>The number of threads in the QB SDK thread pool</p>
+<dd><p>The number of threads in the Qristal thread pool</p>
 <dl class="field-list simple">
 <dt class="field-odd">Type</dt>
 <dd class="field-odd"><p>num_threads</p>
@@ -707,14 +751,14 @@ of the NoiseModel class:</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_counts</span></span><a class="headerlink" href="#core.session.out_counts" title="Permalink to this definition"></a></dt>
 <dd><p>out_counts:</p>
 <p>After calling session.run(), the counts from running sn shots are stored in a list of shot counts.
-The indices of this list correspond to a different possible base-2 bitstring solution, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
+The indices of this list correspond to the different possible base-2 bitstring solutions, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="core.session.out_divergence">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_divergence</span></span><a class="headerlink" href="#core.session.out_divergence" title="Permalink to this definition"></a></dt>
 <dd><p>out_divergence:</p>
-<p>After calling session.divergence(), the Jensen-Shannon divergence between session.out_count and session.output_amplitude is calculated and stored session.out_divergence.</p>
+<p>After calling session.divergence(), the Jensen-Shannon divergence between session.results and session.expected_amplitudes is calculated and stored in session.out_divergence.</p>
 <p>out_divergences:</p>
 <p>A 1d-array (list) version of session.out_divergence.</p>
 </dd></dl>
@@ -723,7 +767,7 @@ The indices of this list correspond to a different possible base-2 bitstring sol
 <dt class="sig sig-object py" id="core.session.out_divergences">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_divergences</span></span><a class="headerlink" href="#core.session.out_divergences" title="Permalink to this definition"></a></dt>
 <dd><p>out_divergence:</p>
-<p>After calling session.divergence(), the Jensen-Shannon divergence between session.out_count and session.output_amplitude is calculated and stored session.out_divergence.</p>
+<p>After calling session.divergence(), the Jensen-Shannon divergence between session.results and session.expected_amplitudes is calculated and stored in session.out_divergence.</p>
 <p>out_divergences:</p>
 <p>A 1d-array (list) version of session.out_divergence.</p>
 </dd></dl>
@@ -761,7 +805,7 @@ The jacobians calculate the gradients of the probability with respect to the run
 \end{bmatrix}\end{split}\]</div>
 <p>Since the jacobian is returned as a list-of-lists, it can be accessed in row major format, and indexing the above matrix can be done accordingly, i.e. get_out_jacobians()[0][1] corresponds to the dy_0/dx_1 value.
 x_i correspond to the parameters set in the parameter list (i.e. the parameters ordered by their first appearance in the circuit.)
-y_i are the output probabilities of different bitstrings, indexed in the same manner as the out_count list. Explicitly, the index i corresponding to a specific bitstring can be obtained by calling bitstring_index(bitstring, j, k) for experiment (j, k).</p>
+y_i are the output probabilities of different bitstrings, indexed in the same manner as the out_count list. Explicitly, the index i corresponding to a specific bitstring can be obtained by calling bitstring_index(bitstring), with bitstring given as a list of bit values.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -769,7 +813,7 @@ y_i are the output probabilities of different bitstrings, indexed in the same ma
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_probs</span></span><a class="headerlink" href="#core.session.out_probs" title="Permalink to this definition"></a></dt>
 <dd><p>out_probs:</p>
 <p>After calling session.run() with <cite>calc_jacobian(s)</cite> set to true, the probability distribution from running sn shots stored in a list of solution output probabilities.
-The indices of this list correspond to a different possible base-2 bitstring solution, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
+The indices of this list correspond to the different possible base-2 bitstring solutions, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -806,24 +850,6 @@ The indices of this list correspond to a different possible base-2 bitstring sol
 <p>When acc=’aer’, the .qobj JSON input used by a standalone Aer installation is stored in out_qobj.  Note: session.run() must be called first.</p>
 <p>out_qobjs:</p>
 <p>A 1d-array (list) version of session.out_qobj.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_raw">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_raw</span></span><a class="headerlink" href="#core.session.out_raw" title="Permalink to this definition"></a></dt>
-<dd><p>out_raw:</p>
-<p>After calling session.run(), the counts from running sn shots are stored in session.out_raw, using a JSON format.</p>
-<p>out_raws:</p>
-<p>A 1d-array (list) version of session.out_raw.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_raws">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_raws</span></span><a class="headerlink" href="#core.session.out_raws" title="Permalink to this definition"></a></dt>
-<dd><p>out_raw:</p>
-<p>After calling session.run(), the counts from running sn shots are stored in session.out_raw, using a JSON format.</p>
-<p>out_raws:</p>
-<p>A 1d-array (list) version of session.out_raw.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -917,24 +943,6 @@ The indices of this list correspond to a different possible base-2 bitstring sol
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.output_amplitude">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_amplitude</span></span><a class="headerlink" href="#core.session.output_amplitude" title="Permalink to this definition"></a></dt>
-<dd><p>output_amplitude:</p>
-<p>Set the amplitudes for Jensen-Shannon divergence calculation. The single setting applies globally.</p>
-<p>output_amplitudes:</p>
-<p>A 1d-array (list) version of output_amplitude.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.output_amplitudes">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_amplitudes</span></span><a class="headerlink" href="#core.session.output_amplitudes" title="Permalink to this definition"></a></dt>
-<dd><p>output_amplitude:</p>
-<p>Set the amplitudes for Jensen-Shannon divergence calculation. The single setting applies globally.</p>
-<p>output_amplitudes:</p>
-<p>A 1d-array (list) version of output_amplitude.</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="core.session.output_oqm_enabled">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_oqm_enabled</span></span><a class="headerlink" href="#core.session.output_oqm_enabled" title="Permalink to this definition"></a></dt>
 <dd><p>output_oqm_enabled:</p>
@@ -996,12 +1004,6 @@ Default: “swap-shortest-path”</p>
 <p>placements:</p>
 <p>Valid settings: [[“swap-shortest-path” | “noise-aware”, …], [“swap-shortest-path” | “noise-aware”, …]]</p>
 <p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.qb12">
-<span class="sig-name descname"><span class="pre">qb12</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.qb12" title="Permalink to this definition"></a></dt>
-<dd><p>Quantum Brilliance 12-qubit defaults</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1066,12 +1068,12 @@ Default: “swap-shortest-path”</p>
 <dt class="sig sig-object py" id="core.session.rel_svd_cutoff">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rel_svd_cutoff</span></span><a class="headerlink" href="#core.session.rel_svd_cutoff" title="Permalink to this definition"></a></dt>
 <dd><p>rel_svd_cutoff:</p>
-<p>Set the relative SVD cutoff threshold value (MPS simulator). The single setting applies globally.</p>
+<p>Set the relative SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
 <p>rel_svd_cutoffs:</p>
 <p>A 1d-array (list) version of rel_svd_cutoff.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
 </dd></dl>
 
@@ -1079,12 +1081,12 @@ Default: “swap-shortest-path”</p>
 <dt class="sig sig-object py" id="core.session.rel_svd_cutoffs">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rel_svd_cutoffs</span></span><a class="headerlink" href="#core.session.rel_svd_cutoffs" title="Permalink to this definition"></a></dt>
 <dd><p>rel_svd_cutoff:</p>
-<p>Set the relative SVD cutoff threshold value (MPS simulator). The single setting applies globally.</p>
+<p>Set the relative SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
 <p>rel_svd_cutoffs:</p>
 <p>A 1d-array (list) version of rel_svd_cutoff.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
 </dd></dl>
 
@@ -1095,21 +1097,17 @@ Default: “swap-shortest-path”</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.rn">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rn</span></span><a class="headerlink" href="#core.session.rn" title="Permalink to this definition"></a></dt>
-<dd><p>rn:</p>
-<p>Number of repetitions. The single setting applies globally.</p>
-<p>rns:</p>
-<p>A 1d-array (list) version of rn.</p>
+<dt class="sig sig-object py" id="core.session.results">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">results</span></span><a class="headerlink" href="#core.session.results" title="Permalink to this definition"></a></dt>
+<dd><p>results:</p>
+<p>After calling session.run(), the counts from running sn shots are stored in a dictionary of shot counts. The dictionary keys are bit lists of length qn, with the same bit indexation as the processor registers.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.rns">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rns</span></span><a class="headerlink" href="#core.session.rns" title="Permalink to this definition"></a></dt>
-<dd><p>rn:</p>
-<p>Number of repetitions. The single setting applies globally.</p>
-<p>rns:</p>
-<p>A 1d-array (list) version of rn.</p>
+<dt class="sig sig-object py" id="core.session.results_native">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">results_native</span></span><a class="headerlink" href="#core.session.results_native" title="Permalink to this definition"></a></dt>
+<dd><p>results_native:</p>
+<p>An additional results container holding the native measurement results if automatic SPAM correction was enabled in session.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1128,6 +1126,12 @@ Default: “swap-shortest-path”</p>
 <dt class="sig sig-object py" id="core.session.run_complete">
 <span class="sig-name descname"><span class="pre">run_complete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#core.session.run_complete" title="Permalink to this definition"></a></dt>
 <dd><p>run_complete(i,j) : Check if the execution of circuit i, condition j has been completed.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.session.run_with_SPAM">
+<span class="sig-name descname"><span class="pre">run_with_SPAM</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.run_with_SPAM" title="Permalink to this definition"></a></dt>
+<dd><p>Automatically execute a SPAM measurement and enable automatic SPAM correction. Then automatically exexute run().</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1179,22 +1183,15 @@ Default: “swap-shortest-path”</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.state_vector">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_vector</span></span><a class="headerlink" href="#core.session.state_vector" title="Permalink to this definition"></a></dt>
-<dd><p>in_get_state_vec:</p>
-<p>Using this will extract the state vector (supported by the <cite>qpp</cite> backend only).</p>
-</dd></dl>
-
-<dl class="py property">
 <dt class="sig sig-object py" id="core.session.svd_cutoff">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">svd_cutoff</span></span><a class="headerlink" href="#core.session.svd_cutoff" title="Permalink to this definition"></a></dt>
 <dd><p>svd_cutoff:</p>
-<p>Set the SVD cutoff threshold value (MPS simulator). The single setting applies globally.</p>
+<p>Set the SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
 <p>svd_cutoffs:</p>
 <p>A 1d-array (list) version of svd_cutoff.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
 </dd></dl>
 
@@ -1202,31 +1199,13 @@ Default: “swap-shortest-path”</p>
 <dt class="sig sig-object py" id="core.session.svd_cutoffs">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">svd_cutoffs</span></span><a class="headerlink" href="#core.session.svd_cutoffs" title="Permalink to this definition"></a></dt>
 <dd><p>svd_cutoff:</p>
-<p>Set the SVD cutoff threshold value (MPS simulator). The single setting applies globally.</p>
+<p>Set the SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
 <p>svd_cutoffs:</p>
 <p>A 1d-array (list) version of svd_cutoff.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>This is only needed if using the “tnqvm” backend accelerator.</p>
+<p>This is only needed if using the tensor network backend accelerators.</p>
 </div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.theta">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">theta</span></span><a class="headerlink" href="#core.session.theta" title="Permalink to this definition"></a></dt>
-<dd><p>theta:</p>
-<p>Angle variables (theta) to invoke the input parameterized quantum circuit with. The single setting applies globally.</p>
-<p>thetas:</p>
-<p>A 1d-array (list) version of theta.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.thetas">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">thetas</span></span><a class="headerlink" href="#core.session.thetas" title="Permalink to this definition"></a></dt>
-<dd><p>theta:</p>
-<p>Angle variables (theta) to invoke the input parameterized quantum circuit with. The single setting applies globally.</p>
-<p>thetas:</p>
-<p>A 1d-array (list) version of theta.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1599,6 +1578,118 @@ conditional on the control qubit being in the 1 state.</p>
 </dd></dl>
 
 <dl class="py method">
+<dt class="sig sig-object py" id="core.Circuit.crx">
+<span class="sig-name descname"><span class="pre">crx</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.crx" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>crx(self: core.Circuit, ctrl_idx: int, target_idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>CRX gate</p>
+</div></blockquote>
+<p>The CRX gate performs a RX(theta) gate on the target qubit
+conditional on the control qubit being in the 1 state.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>ctrl_idx</strong> the index of the control qubit [int]</p></li>
+<li><p><strong>target_idx</strong> the index of the target qubit [int]</p></li>
+<li><p><strong>theta</strong> the value of the phase [double]</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>crx(self: core.Circuit, ctrl_idx: int, target_idx: int, param_name: str) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>CRX gate</p>
+</div></blockquote>
+<p>This method adds a controlled parameterized z-axis rotation (CRX) gate to the circuit.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>ctrl_idx</strong> the index of the control qubit [int]</p></li>
+<li><p><strong>target_idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.Circuit.cry">
+<span class="sig-name descname"><span class="pre">cry</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.cry" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>cry(self: core.Circuit, ctrl_idx: int, target_idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>CRY gate</p>
+</div></blockquote>
+<p>The CRY gate performs a RY(theta) gate on the target qubit
+conditional on the control qubit being in the 1 state.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>ctrl_idx</strong> the index of the control qubit [int]</p></li>
+<li><p><strong>target_idx</strong> the index of the target qubit [int]</p></li>
+<li><p><strong>theta</strong> the value of the phase [double]</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>cry(self: core.Circuit, ctrl_idx: int, target_idx: int, param_name: str) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>CRY gate</p>
+</div></blockquote>
+<p>This method adds a controlled parameterized z-axis rotation (CRY) gate to the circuit.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>ctrl_idx</strong> the index of the control qubit [int]</p></li>
+<li><p><strong>target_idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.Circuit.crz">
+<span class="sig-name descname"><span class="pre">crz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.crz" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>crz(self: core.Circuit, ctrl_idx: int, target_idx: int, theta: float) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>CRZ gate</p>
+</div></blockquote>
+<p>This method adds a controlled-U1 (CPhase) gate to the circuit.</p>
+<p>The CRZ gate performs a RZ(theta) gate on the target qubit
+conditional on the control qubit being in the 1 state.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>ctrl_idx</strong> the index of the control qubit [int]</p></li>
+<li><p><strong>target_idx</strong> the index of the target qubit [int]</p></li>
+<li><p><strong>theta</strong> the value of the phase [double]</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p>crz(self: core.Circuit, ctrl_idx: int, target_idx: int, param_name: str) -&gt; None</p>
+<blockquote>
+<div><blockquote>
+<div><p>CRZ gate</p>
+</div></blockquote>
+<p>This method adds a controlled parameterized z-axis rotation (CRZ) gate to the circuit.</p>
+<p>Parameters:</p>
+<ul class="simple">
+<li><p><strong>ctrl_idx</strong> the index of the control qubit [int]</p></li>
+<li><p><strong>target_idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>name</strong> the name of the free parameter [string]</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ol>
+</dd></dl>
+
+<dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.cz">
 <span class="sig-name descname"><span class="pre">cz</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ctrl_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">target_idx</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.cz" title="Permalink to this definition"></a></dt>
 <dd><blockquote>
@@ -1848,13 +1939,13 @@ measured.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.num_free_params">
-<span class="sig-name descname"><span class="pre">num_free_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.num_free_params" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">num_free_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#core.Circuit.num_free_params" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the number of free parameters in the (parametrized) circuit.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.num_qubits">
-<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.num_qubits" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">num_qubits</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#core.Circuit.num_qubits" title="Permalink to this definition"></a></dt>
 <dd><p>Returns the number of (physical) qubits in the circuit.</p>
 </dd></dl>
 
@@ -2288,11 +2379,27 @@ the state_prep circuit A.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.u3">
-<span class="sig-name descname"><span class="pre">u3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.Circuit</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idx:</span> <span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">theta:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">phi:</span> <span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lambda:</span> <span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.Circuit.u3" title="Permalink to this definition"></a></dt>
-<dd><blockquote>
-<div><p>U3 gate</p>
+<span class="sig-name descname"><span class="pre">u3</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.Circuit.u3" title="Permalink to this definition"></a></dt>
+<dd><p>Overloaded function.</p>
+<ol class="arabic">
+<li><p>u3(self: core.Circuit, idx: int, param_1: str, param_2: str, param_3: str) -&gt; None</p>
+<blockquote>
+<div><p>Parameterized U3 gate
+U3 gate</p>
+<p>This method adds an arbitrary parametrized single qubit gate (U3) to the circuit, shown as U at <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_gates.html">https://qristal.readthedocs.io/en/latest/rst/quantum_gates.html</a>
+Parameters:</p>
+<ul class="simple">
+<li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
+<li><p><strong>param_1</strong> the name of the 1st free parameter (theta) [string]</p></li>
+<li><p><strong>param_2</strong> the name of the 2nd free parameter (phi) [string]</p></li>
+<li><p><strong>param_3</strong> the name of the 3rd free parameter (lambda) [string]</p></li>
+</ul>
 </div></blockquote>
-<p>This method adds an arbitrary single qubit gate (U3) to the circuit.</p>
+</li>
+<li><p>u3(self: core.Circuit, idx: int, theta: float, phi: float, lambda: float) -&gt; None</p>
+<blockquote>
+<div><p>U3 gate</p>
+<p>This method adds an arbitrary single qubit gate (U3) to the circuit, shown as U at <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_gates.html">https://qristal.readthedocs.io/en/latest/rst/quantum_gates.html</a></p>
 <p>Parameters:</p>
 <ul class="simple">
 <li><p><strong>idx</strong> the index of the qubit being acted on [int]</p></li>
@@ -2300,6 +2407,9 @@ the state_prep circuit A.</p>
 <li><p><strong>phi</strong> [double]</p></li>
 <li><p><strong>lambda</strong> [double]</p></li>
 </ul>
+</div></blockquote>
+</li>
+</ol>
 </dd></dl>
 
 <dl class="py method">
@@ -2373,26 +2483,14 @@ the state_prep circuit A.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.NoiseModel.add_gate_error">
-<span class="sig-name descname"><span class="pre">add_gate_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.NoiseModel.add_gate_error" title="Permalink to this definition"></a></dt>
-<dd><p>Overloaded function.</p>
-<ol class="arabic">
-<li><p>add_gate_error(self: core.NoiseModel, arg0: List[core.KrausOperator], arg1: str, arg2: core.N) -&gt; None</p>
-<blockquote>
-<div><p>Add a gate error channel for a gate operation</p>
+<span class="sig-name descname"><span class="pre">add_gate_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.NoiseModel" title="core.NoiseModel"><span class="pre">core.NoiseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.NoiseModel.add_gate_error" title="Permalink to this definition"></a></dt>
+<dd><p>Add a gate error channel for a gate operation</p>
 <p>Parameters:</p>
 <ul class="simple">
 <li><p><em>noise_channel</em> Noise channel to be associated with the gate [List(KraussOperator)]</p></li>
 <li><p><em>gate_name</em> Name of the gates [String]</p></li>
-<li><p><em>qubits</em> Qubit indices of the gate. [qb.core.N]</p></li>
+<li><p><em>qubits</em> Qubit indices of the gate. [List(Integer)]</p></li>
 </ul>
-</div></blockquote>
-</li>
-<li><p>add_gate_error(self: core.NoiseModel, arg0: List[core.KrausOperator], arg1: str, arg2: list) -&gt; None</p>
-<blockquote>
-<div><p>Overload of add_gate_error that takes <em>qubits</em> directly as List(Integer).</p>
-</div></blockquote>
-</li>
-</ol>
 </dd></dl>
 
 <dl class="py method">
@@ -2736,7 +2834,7 @@ the state_prep circuit A.</p>
 <dd><p>The noise_aware_placement_pass class uses device connectivity, gate errors (1-q and 2-q) and readout errors to find the best placement map.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="core.noise_aware_placement_pass.apply">
-<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.noise_aware_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qb::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.noise_aware_placement_pass.apply" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.noise_aware_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qristal::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.noise_aware_placement_pass.apply" title="Permalink to this definition"></a></dt>
 <dd><p>Apply noise-aware placement on the input circuit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2764,7 +2862,7 @@ the state_prep circuit A.</p>
 <dd><p>Circuit placement pass based on injection of SWAP gates to satisfy device connectivity topology.</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="core.swap_placement_pass.apply">
-<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.swap_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qb::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.swap_placement_pass.apply" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.swap_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qristal::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.swap_placement_pass.apply" title="Permalink to this definition"></a></dt>
 <dd><p>Apply SWAP-based placement on the input circuit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -2783,7 +2881,7 @@ the state_prep circuit A.</p>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../_cpp_api/typedef_circuit__builder_8hpp_1a3a836b4117e2cd67fc1980ad99cb2443.html" class="btn btn-neutral float-left" title="Typedef qb::StatePrepFuncCType" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../_cpp_api/typedef_namespaceqristal_1a98d1e0a7b33b8dfb424b5f60b4a6d86a.html" class="btn btn-neutral float-left" title="Typedef qristal::StatePrepFuncCType" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>

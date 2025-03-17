@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Function qristal::vqee::getEnumFromName &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Function qristal::vqee::getEnumName" href="function_case__generator_8hpp_1a1a957616b0909e087a2ed62237f7fe76.html" />
+    <link rel="prev" title="Function qristal::vqee::ASWAP_Ansatz" href="function_case__generator_8hpp_1a00e9c2eba208fcb4fd182ccf7559589b.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#functions">Functions</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1a832ddfffd686829905846c26ac967d11.html">Function emulator_initialize</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_emulator_8hpp_1adfaff34883361f2dd62b27550bac36fe.html">Function get_emulator_noise_model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a25c8bec252abb54a785117a93efcc789.html">Function qristal::create_circuit_optimizer_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a90f03c5a631a262eed975e2e4acf90dd.html">Function qristal::create_initial_state_simplify_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac.html">Function qristal::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59.html">Function qristal::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a69841193d5b7e6bd134ff73fd9ae0b6d.html">Function qristal::create_peephole_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a933afc036cea2f09756ee761909d7624.html">Function qristal::create_remove_redundancies_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a2d39d534b08204042c939ff913e8922c.html">Function qristal::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a0c7414393b53cd595f315c59da514626.html">Function qristal::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a3cf3918fcbcb2c559fb2c5336f6b637e.html">Function qristal::create_two_qubit_squash_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a533e3df3cb74a558333ef0a19ac41681.html">Function qristal::execute_on_qb_hardware</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1ac874ad8148f207717824721aba620e4c.html">Function qristal::load_cudaq_backend</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_namespaceqristal_1a4b5d78bb0bdf8b9a6181a926070e2af6.html">Function qristal::uniqueBitsQD</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a475f7114f7c5c98ba342d80ad493f0ef.html">Function qristal::vqee::ansatzToString</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a00e9c2eba208fcb4fd182ccf7559589b.html">Function qristal::vqee::ASWAP_Ansatz</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Function qristal::vqee::getEnumFromName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a1a957616b0909e087a2ed62237f7fe76.html">Function qristal::vqee::getEnumName</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a92f11964f5042cfc4f77d35c3082793e.html">Function qristal::vqee::HEA_Ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1ab843871a089a9a2361d8e9c4d7b947cb.html">Function qristal::vqee::HEA_String</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a3ca0638d0a6ba01ccc9c96ab653a6dfc.html">Function qristal::vqee::hydrogenChainGeometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a7abc548c902c4cac1f894e173cfdac21.html">Function qristal::vqee::makeJob</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a5e802f970d241a2341983052458b3f90.html">Function qristal::vqee::pauliStringFromGeometry</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1a8ecaa71ad6546cd528dd13934c25ca28.html">Function qristal::vqee::setAnsatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1aa41e4bc1c0abb8609cf1cd7f462bccc2.html">Function qristal::vqee::stringToAnsatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="function_case__generator_8hpp_1ab19835bd104c8690ff23116e72aed461.html">Function qristal::vqee::UCCSD_Ansatz</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Function qristal::vqee::getEnumFromName</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/function_case__generator_8hpp_1a479faad80a0991c55869b018674d2947.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="function-qristal-vqee-getenumfromname">
+<span id="exhale-function-case-generator-8hpp-1a479faad80a0991c55869b018674d2947"></span><h1>Function qristal::vqee::getEnumFromName<a class="headerlink" href="#function-qristal-vqee-getenumfromname" title="Permalink to this headline"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#file-core-include-qristal-core-optimization-vqee-case-generator-hpp"><span class="std std-ref">File case_generator.hpp</span></a></p></li>
+</ul>
+<section id="function-documentation">
+<h2>Function Documentation<a class="headerlink" href="#function-documentation" title="Permalink to this headline"></a></h2>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee15getEnumFromNameENSt6stringE">
+<span id="_CPPv3N7qristal4vqee15getEnumFromNameENSt6stringE"></span><span id="_CPPv2N7qristal4vqee15getEnumFromNameENSt6stringE"></span><span id="qristal::vqee::getEnumFromName__ss"></span><span class="target" id="case__generator_8hpp_1a479faad80a0991c55869b018674d2947"></span><a class="reference internal" href="enum_case__generator_8hpp_1a78dd4cb59afb128640ea563bcf401baa.html#_CPPv4N7qristal4vqee8AnsatzIDE" title="qristal::vqee::AnsatzID"><span class="n"><span class="pre">AnsatzID</span></span></a><span class="w"> </span><span class="sig-prename descclassname"><span class="n"><span class="pre">qristal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vqee</span></span><span class="p"><span class="pre">::</span></span></span><span class="sig-name descname"><span class="n"><span class="pre">getEnumFromName</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">ansatzIDstr</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal4vqee15getEnumFromNameENSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="function_case__generator_8hpp_1a00e9c2eba208fcb4fd182ccf7559589b.html" class="btn btn-neutral float-left" title="Function qristal::vqee::ASWAP_Ansatz" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="function_case__generator_8hpp_1a1a957616b0909e087a2ed62237f7fe76.html" class="btn btn-neutral float-right" title="Function qristal::vqee::getEnumName" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

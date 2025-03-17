@@ -3,7 +3,7 @@
 Class qb_visitor
 ================
 
-- Defined in :ref:`file_core_include_qb_core_backends_qb_hardware_qb_visitor.hpp`
+- Defined in :ref:`file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp`
 
 
 Inheritance Relationships

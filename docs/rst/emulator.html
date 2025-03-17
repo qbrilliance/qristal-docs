@@ -143,8 +143,8 @@
 <section id="activate-the-image-using-your-license-key">
 <h2>5. Activate the image using your license key<a class="headerlink" href="#activate-the-image-using-your-license-key" title="Permalink to this headline"></a></h2>
 <p>At the command prompt <em>inside the image</em>, run the following commands, replacing <code class="docutils literal notranslate"><span class="pre">XXXXX-XXXXX-XXXXX-XXXXX</span></code> with the license key that you have received from Quantum Brilliance:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir /qb
-<span class="nb">echo</span> -e <span class="s1">&#39;{\n  &quot;isFloatingLicense&quot;: true,\n  &quot;LicenseKey&quot;: &quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;\n}&#39;</span> &gt; /qb/QB-Emulator-License.json
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir /qristal
+<span class="nb">echo</span> -e <span class="s1">&#39;{\n  &quot;isFloatingLicense&quot;: true,\n  &quot;LicenseKey&quot;: &quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;\n}&#39;</span> &gt; /qristal/Qristal-Emulator-License.json
 </pre></div>
 </div>
 </section>
@@ -165,7 +165,7 @@
 <p>You should see something similar to the following:</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Running <span class="k">in</span> virtual machine: enforcing floating license!
 
-Retrieving license-key and floating-setting from json file: /qb/QB-Emulator-License.json
+Retrieving license-key and floating-setting from json file: /qristal/Qristal-Emulator-License.json
 <span class="o">{</span>
     <span class="s2">&quot;LicenseKey&quot;</span>: <span class="s2">&quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;</span>,
     <span class="s2">&quot;isFloatingLicense&quot;</span>: <span class="nb">true</span>
@@ -199,7 +199,7 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class=
 </pre></div>
 </div>
 </li>
-<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">noise_model</span> <span class="o">=</span> <span class="n">qb</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">NoiseModel</span><span class="p">(</span><span class="s2">&quot;qb-nm1&quot;</span><span class="p">,</span> <span class="n">n_qbits</span><span class="p">)</span>
+<li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">noise_model</span> <span class="o">=</span> <span class="n">qristal</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">NoiseModel</span><span class="p">(</span><span class="s2">&quot;qb-nm1&quot;</span><span class="p">,</span> <span class="n">n_qbits</span><span class="p">)</span>
 </pre></div>
 </div>
 </li>
@@ -210,7 +210,7 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class=
 </ol>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Running <span class="k">in</span> virtual machine: enforcing floating license!
 
-Retrieving license-key and floating-setting from json file: /qb/QB-Emulator-License.json
+Retrieving license-key and floating-setting from json file: /qristal/Qristal-Emulator-License.json
 <span class="o">{</span>
     <span class="s2">&quot;LicenseKey&quot;</span>: <span class="s2">&quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;</span>,
     <span class="s2">&quot;isFloatingLicense&quot;</span>: <span class="nb">true</span>

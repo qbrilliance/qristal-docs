@@ -3,7 +3,7 @@
 Function emulator_initialize
 ============================
 
-- Defined in :ref:`file_emulator_include_qb_emulator_emulator.hpp`
+- Defined in :ref:`file_emulator_include_qristal_emulator_emulator.hpp`
 
 
 Function Documentation

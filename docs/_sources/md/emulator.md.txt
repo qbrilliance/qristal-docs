@@ -14,15 +14,15 @@ If you have NVIDIA GPUs on your system and want to use them, you will also need 
 
 ## 3. Log in to the Gitlab Docker registry
 
-Open a terminal and run: 
+Open a terminal and run:
 ```shell
 sudo docker login -u XXXX registry.gitlab.com
 ```
 where `XXXX` is replaced with your Gitlab username.  Depending on your Gitlab authentication settings, you may need to work through getting a token and/or setting up two-factor authentication.  If you have trouble, please refer to [this guide](https://docs.gitlab.com/ee/user/packages/container_registry/authenticate_with_container_registry.html).
 
-## 4. Get the Qristal Emulator Image 
+## 4. Get the Qristal Emulator Image
 
-In a terminal, run: 
+In a terminal, run:
 ```shell
 sudo docker run --rm -it --name emulator registry.gitlab.com/qbau/software-and-apps/public-restricted/emulator/qristal-emulator
 ```
@@ -32,8 +32,8 @@ If you have NVIDIA GPUs on your system and want to use them, insert `--gpus all`
 
 At the command prompt _inside the image_, run the following commands, replacing `XXXXX-XXXXX-XXXXX-XXXXX` with the license key that you have received from Quantum Brilliance:
 ```shell
-mkdir /qb
-echo -e '{\n  "isFloatingLicense": true,\n  "LicenseKey": "XXXXX-XXXXX-XXXXX-XXXXX"\n}' > /qb/QB-Emulator-License.json
+mkdir /qristal
+echo -e '{\n  "isFloatingLicense": true,\n  "LicenseKey": "XXXXX-XXXXX-XXXXX-XXXXX"\n}' > /qristal/Qristal-Emulator-License.json
 ```
 
 ## 6. Test that your image is successfully activated
@@ -56,7 +56,7 @@ You should see something similar to the following:
 ```shell
 Running in virtual machine: enforcing floating license!
 
-Retrieving license-key and floating-setting from json file: /qb/QB-Emulator-License.json
+Retrieving license-key and floating-setting from json file: /qristal/Qristal-Emulator-License.json
 {
     "LicenseKey": "XXXXX-XXXXX-XXXXX-XXXXX",
     "isFloatingLicense": true
@@ -85,14 +85,14 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: 20053 and ma
       s.noise = True
       ```
     - ```python
-      s.noise_model = qb.core.NoiseModel("qb-nm1", n_qbits)
+      s.noise_model = qristal.core.NoiseModel("qb-nm1", n_qbits)
       ```
 7. Exit the text editor by hitting `Ctrl + x`, then enter `y` to save changes, then hit `Enter`.
 8. Rerun the example using the same command `python3 qsim_noisy.py`. You should see something similar to this output:
 ```shell
 Running in virtual machine: enforcing floating license!
 
-Retrieving license-key and floating-setting from json file: /qb/QB-Emulator-License.json
+Retrieving license-key and floating-setting from json file: /qristal/Qristal-Emulator-License.json
 {
     "LicenseKey": "XXXXX-XXXXX-XXXXX-XXXXX",
     "isFloatingLicense": true
@@ -101,7 +101,7 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: 20053 and ma
 Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: 20053 and machine code: floating-5076244496556924759
 {'000': 1, '010': 18, '100': 7, '110': 982, '111': 16}
 ```
-9. Try out a C++ example with CUDA Quantum.  Navigate to the example folder: 
+9. Try out a C++ example with CUDA Quantum.  Navigate to the example folder:
 ```shell
 cd /mnt/qb/qristal/examples/cpp/benchmark1_cudaq/
 ```
@@ -113,7 +113,7 @@ mkdir build
 cd build
 cmake ..
 make
-./benchmark1_cudaq 
+./benchmark1_cudaq
 ```
 You should get results that look similar to this:
 ```shell

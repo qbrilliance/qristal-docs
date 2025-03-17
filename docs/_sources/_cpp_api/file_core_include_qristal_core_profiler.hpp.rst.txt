@@ -1,0 +1,55 @@
+
+.. _file_core_include_qristal_core_profiler.hpp:
+
+File profiler.hpp
+=================
+
+|exhale_lsh| :ref:`Parent directory <dir_core_include_qristal_core>` (``core/include/qristal/core``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+
+.. contents:: Contents
+   :local:
+   :backlinks: none
+
+Definition (``core/include/qristal/core/profiler.hpp``)
+-------------------------------------------------------
+
+
+
+
+
+
+Includes
+--------
+
+
+- ``map``
+
+- ``memory``
+
+- ``qristal/core/typedefs.hpp``
+
+- ``unordered_map``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_qristal`
+
+- :ref:`namespace_xacc`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classqristal_1_1Profiler`
+
