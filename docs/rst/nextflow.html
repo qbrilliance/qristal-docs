@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nextflow &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul class="current">
@@ -75,11 +79,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#executing-a-nextflow-pipeline-and-generating-a-memory-usage-and-execution-time-report">Executing a Nextflow pipeline and generating a memory usage and execution time report</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#example-demonstrating-asynchronous-execution-over-multiple-workers-shot-partitioning">Example demonstrating asynchronous execution over multiple workers (shot partitioning)</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#main-partitioned-nf">main-partitioned.nf</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#example-openqasm-file-ex-nf1-oqm">Example OpenQASM file: <code class="docutils literal notranslate"><span class="pre">ex-nf1.oqm</span></code></a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -118,30 +117,30 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="nextflow">
-<h1>Nextflow<a class="headerlink" href="#nextflow" title="Permalink to this headline"></a></h1>
+<h1>Nextflow<a class="headerlink" href="#nextflow" title="Permalink to this heading"></a></h1>
 <p><a class="reference external" href="https://www.nextflow.io/index.html">Nextflow</a> is the preferred workflow framework in Qristal.  The typical use case is a large, multi-stage HPC application that has sequential stages (best executed within an interactive session); followed by stages that are parallel (best executed as independent job submissions to the HPC scheduler).</p>
 <p>Qristal’s class structure is well suited to producing command line executable programs that utilize MPI for parallelization.  We then use Nextflow to stitch together multiple MPI-enabled executables into a main application workflow.  For hybrid quantum-classical applications, each process of the MPI executable has functions that run either on a simulated quantum backend, or an actual QPU.</p>
 <section id="installing-nextflow">
-<h2>Installing Nextflow<a class="headerlink" href="#installing-nextflow" title="Permalink to this headline"></a></h2>
+<h2>Installing Nextflow<a class="headerlink" href="#installing-nextflow" title="Permalink to this heading"></a></h2>
 <section id="prerequisites">
-<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline"></a></h3>
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading"></a></h3>
 <p><strong>Java Runtime Environment</strong></p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openjdk</span><span class="mi">-17</span><span class="o">-</span><span class="n">jre</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">sudo</span><span class="w"> </span><span class="n">apt</span><span class="w"> </span><span class="n">install</span><span class="w"> </span><span class="n">openjdk</span><span class="mi">-17</span><span class="o">-</span><span class="n">jre</span>
 </pre></div>
 </div>
 </section>
 <section id="downloading-nextflow">
-<h3>Downloading Nextflow<a class="headerlink" href="#downloading-nextflow" title="Permalink to this headline"></a></h3>
+<h3>Downloading Nextflow<a class="headerlink" href="#downloading-nextflow" title="Permalink to this heading"></a></h3>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">curl</span><span class="w"> </span><span class="o">-</span><span class="n">s</span><span class="w"> </span><span class="n">https</span><span class="o">:</span><span class="c1">//get.nextflow.io | bash</span>
 </pre></div>
 </div>
 </section>
 </section>
 <section id="structure-of-a-nextflow-project">
-<h2>Structure of a Nextflow project<a class="headerlink" href="#structure-of-a-nextflow-project" title="Permalink to this headline"></a></h2>
+<h2>Structure of a Nextflow project<a class="headerlink" href="#structure-of-a-nextflow-project" title="Permalink to this heading"></a></h2>
 <p>The root directory of a project will contain these files:</p>
 <section id="nextflow-config">
-<h3>nextflow.config<a class="headerlink" href="#nextflow-config" title="Permalink to this headline"></a></h3>
+<h3>nextflow.config<a class="headerlink" href="#nextflow-config" title="Permalink to this heading"></a></h3>
 <p>An example of this file is shown below:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>profiles {
     standard {
@@ -169,7 +168,7 @@
 </div>
 </section>
 <section id="main-nf">
-<h3>main.nf<a class="headerlink" href="#main-nf" title="Permalink to this headline"></a></h3>
+<h3>main.nf<a class="headerlink" href="#main-nf" title="Permalink to this heading"></a></h3>
 <p>This is the entrypoint script that drives the Nextflow execution.  Below is an example of a <code class="docutils literal notranslate"><span class="pre">main.nf</span></code> that sweeps over 5 settings for SVD cutoff (used by the MPS method):</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/env nextflow
 nextflow.enable.dsl=2
@@ -188,7 +187,6 @@ process sweepSvdCutoff {
     import numpy as np
 
     my_sim = qristal.core.session()
-    my_sim.init()
     my_sim.qn = 2     # Number of qubits
     my_sim.sn = 1024  # Number of shots
     my_sim.acc = &quot;tnqvm&quot;
@@ -196,7 +194,7 @@ process sweepSvdCutoff {
     my_sim.nooptimise = True
     my_sim.notiming = True
     my_sim.output_oqm_enabled = False
-    my_sim.svd_cutoff[0][0][0] = ${svdcutoff}
+    my_sim.svd_cutoff = ${svdcutoff}
     my_sim.instring = &#39;&#39;&#39;
 
     __qpu__ void qristal_circuit(qreg q) {
@@ -211,8 +209,8 @@ process sweepSvdCutoff {
 
     &#39;&#39;&#39;
     my_sim.run()
-    print(&quot;SVD cutoff: &quot;, my_sim.svd_cutoff[0][0][0])
-    print(my_sim.results[0][0])
+    print(&quot;SVD cutoff: &quot;, my_sim.svd_cutoff)
+    print(my_sim.results)
     &quot;&quot;&quot;
 }
 
@@ -223,140 +221,24 @@ workflow {
 </div>
 </section>
 <section id="bin">
-<h3>bin/<a class="headerlink" href="#bin" title="Permalink to this headline"></a></h3>
+<h3>bin/<a class="headerlink" href="#bin" title="Permalink to this heading"></a></h3>
 <p>This directory should contain all scripts (eg Bash, Perl, Python) that are executable.  This directory is automatically added to the search path by Nextflow.</p>
 </section>
 <section id="work">
-<h3>work/<a class="headerlink" href="#work" title="Permalink to this headline"></a></h3>
+<h3>work/<a class="headerlink" href="#work" title="Permalink to this heading"></a></h3>
 <p>This is where output from Nextflow is stored.  There will be one subdirectory per pipeline execution here.</p>
 </section>
 </section>
 <section id="executing-a-nextflow-pipeline-and-generating-a-memory-usage-and-execution-time-report">
-<h2>Executing a Nextflow pipeline and generating a memory usage and execution time report<a class="headerlink" href="#executing-a-nextflow-pipeline-and-generating-a-memory-usage-and-execution-time-report" title="Permalink to this headline"></a></h2>
+<h2>Executing a Nextflow pipeline and generating a memory usage and execution time report<a class="headerlink" href="#executing-a-nextflow-pipeline-and-generating-a-memory-usage-and-execution-time-report" title="Permalink to this heading"></a></h2>
 <p>Execute with the <code class="docutils literal notranslate"><span class="pre">standard</span></code> profile:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nextflow</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">nf</span><span class="w"> </span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">report</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nextflow</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">nf</span><span class="w"> </span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">report</span>
 </pre></div>
 </div>
 <p>Execute with the <code class="docutils literal notranslate"><span class="pre">cluster</span></code> profile:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nextflow</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">nf</span><span class="w"> </span><span class="o">-</span><span class="n">profile</span><span class="w"> </span><span class="n">cluster</span><span class="w"> </span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">report</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nextflow</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">main</span><span class="p">.</span><span class="n">nf</span><span class="w"> </span><span class="o">-</span><span class="n">profile</span><span class="w"> </span><span class="n">cluster</span><span class="w"> </span><span class="o">-</span><span class="n">with</span><span class="o">-</span><span class="n">report</span>
 </pre></div>
 </div>
-</section>
-<section id="example-demonstrating-asynchronous-execution-over-multiple-workers-shot-partitioning">
-<h2>Example demonstrating asynchronous execution over multiple workers (shot partitioning)<a class="headerlink" href="#example-demonstrating-asynchronous-execution-over-multiple-workers-shot-partitioning" title="Permalink to this headline"></a></h2>
-<p>The pipeline parallelises circuit evaluation across multiple processes, and across multiple threads per process.  This example detects all circuits in the current working directory (extension <code class="docutils literal notranslate"><span class="pre">.oqm</span></code>).  These are assumed to be in OpenQASM 2.0 format.</p>
-<section id="main-partitioned-nf">
-<h3>main-partitioned.nf<a class="headerlink" href="#main-partitioned-nf" title="Permalink to this headline"></a></h3>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/env nextflow
-nextflow.enable.dsl=2
-import groovy.json.JsonSlurper
-
-def N_SHOTS = 512
-def N_PROCESSES = 4
-def N_ASYNC_THREADS = 2
-
-def N_PHYSICAL_QUBITS = 2
-def QRISTAL_ACC = &quot;aer&quot;
-
-def jsonSlurper = new JsonSlurper()
-
-process partitionCircuitQubitBackend {
-    debug false
-    input:
-        path circuit
-        each shots_N
-
-    output:
-       stdout
-
-    &quot;&quot;&quot;
-    #!/usr/bin/python3
-    import ast
-    import json
-    import numpy as np
-    import time
-    import qristal.core
-    my_sim = qristal.core.session()
-    my_sim.init()
-
-    my_sim.qn = $N_PHYSICAL_QUBITS  # Number of qubits
-    my_sim.infile = &quot;$circuit&quot;
-
-    my_sim.noplacement = True
-    my_sim.nooptimise = True
-    my_sim.notiming = True
-    my_sim.output_oqm_enabled = False
-
-    NW = $N_ASYNC_THREADS  # number of async workers
-    SLEEP_SECONDS = 0.1 # seconds to sleep between progress
-    ALG_UNDER_TEST = 0
-
-    # Set up workers
-    # Set up the pool of backends for parallel task distribution
-    qpu_config = {&quot;accs&quot;: NW*[{&quot;acc&quot;: &quot;$QRISTAL_ACC&quot;}]}
-    my_sim.set_parallel_run_config(json.dumps(qpu_config))
-
-    # Set the number of threads to use in the thread pool
-    my_sim.num_threads = NW
-
-    # Set up jobs that partition the requested number of shots
-    my_sim.sn[ALG_UNDER_TEST].clear()
-    for jj in range(NW):
-        my_sim.sn[ALG_UNDER_TEST].append($shots_N // NW)
-
-    handles = []
-    for i in range(NW):
-        handles.append(my_sim.run_async(ALG_UNDER_TEST, i))
-        time.sleep(0.001)
-
-    # Gather the results
-    allres = {}
-    componentres = [ast.literal_eval(handles[i].get()) for i in range(NW)]
-    for ii in range(NW):
-        allres = {k: allres.get(k,0) + componentres[ii].get(k,0) for k in set(allres) | set(componentres[ii])}
-
-    # View the results
-    print(json.dumps(allres))
-
-    # Store the settings
-    save_js = {}
-    save_js[&#39;shots&#39;] = $shots_N
-    save_js[&#39;backend&#39;] = &quot;$QRISTAL_ACC&quot;
-    save_js[&#39;workers&#39;] = $N_ASYNC_THREADS
-    save_js[&#39;circuit&#39;] = &quot;$circuit&quot;
-    save_js[&#39;qubits&#39;] = $N_PHYSICAL_QUBITS
-    with open(&#39;settings.json&#39;, &#39;w&#39;) as f:
-        json.dump(save_js, f)
-    &quot;&quot;&quot;
-}
-def gatherall = [:]
-workflow {
-  circuit_ch = Channel.fromPath(&quot;*.oqm&quot;)
-  shots_N_ch = (0..&lt;N_PROCESSES).collect { N_SHOTS/N_PROCESSES }
-  shotoutcomes_ch = partitionCircuitQubitBackend(circuit_ch, shots_N_ch).map { jsonSlurper.parseText( it ) }
-  (shotoutcomes_ch.map { gatherall = (gatherall.keySet() + it.keySet()).collectEntries { k -&gt; [k, (gatherall[k] ?: 0) + (it[k] ?: 0)] } }).last().view()
-}
-</pre></div>
-</div>
-</section>
-<section id="example-openqasm-file-ex-nf1-oqm">
-<h3>Example OpenQASM file: <code class="docutils literal notranslate"><span class="pre">ex-nf1.oqm</span></code><a class="headerlink" href="#example-openqasm-file-ex-nf1-oqm" title="Permalink to this headline"></a></h3>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">OPENQASM</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
-<span class="n">include</span><span class="w"> </span><span class="s">&quot;qelib1.inc&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
-<span class="n">creg</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"></span>
-<span class="n">h</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="n">cx</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-</pre></div>
-</div>
-<p>Execute the pipeline using:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">nextflow</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">main</span><span class="o">-</span><span class="n">partitioned</span><span class="p">.</span><span class="n">nf</span><span class="w"></span>
-</pre></div>
-</div>
-<p>The results are stored in subdirectories under <code class="docutils literal notranslate"><span class="pre">work/</span></code>.  View the <code class="docutils literal notranslate"><span class="pre">.command.out</span></code> and <code class="docutils literal notranslate"><span class="pre">settings.json</span></code> files there.</p>
-</section>
 </section>
 </section>
 

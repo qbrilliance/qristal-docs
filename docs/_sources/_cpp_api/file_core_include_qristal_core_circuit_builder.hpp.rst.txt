@@ -68,7 +68,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespaceqristal_1a4b5d78bb0bdf8b9a6181a926070e2af6`
+- :ref:`exhale_function_namespaceqristal_1accdcb2d78f78b9b243e35aee35dd35da`
 
 
 Typedefs

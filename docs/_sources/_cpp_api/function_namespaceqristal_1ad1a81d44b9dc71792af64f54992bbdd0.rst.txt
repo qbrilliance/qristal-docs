@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1ad1a81d44b9dc71792af64f54992bbdd0:
+
+Function qristal::create_rebase_to_clifford_pass
+================================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_rebase_to_clifford_pass()
+   :project: My Project

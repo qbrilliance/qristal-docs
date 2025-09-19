@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File circuit_opt_passes.hpp &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -49,9 +53,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -96,9 +100,9 @@
            <div itemprop="articleBody">
              
   <section id="file-circuit-opt-passes-hpp">
-<span id="file-core-include-qristal-core-passes-circuit-opt-passes-hpp"></span><h1>File circuit_opt_passes.hpp<a class="headerlink" href="#file-circuit-opt-passes-hpp" title="Permalink to this headline"></a></h1>
+<span id="file-core-include-qristal-core-passes-circuit-opt-passes-hpp"></span><h1>File circuit_opt_passes.hpp<a class="headerlink" href="#file-circuit-opt-passes-hpp" title="Permalink to this heading"></a></h1>
 <p>↰ <a class="reference internal" href="dir_core_include_qristal_core_passes.html#dir-core-include-qristal-core-passes"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes</span></code>)</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#definition-core-include-qristal-core-passes-circuit-opt-passes-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/circuit_opt_passes.hpp</span></code>)</a></p></li>
@@ -107,38 +111,45 @@
 <li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
 <li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p></li>
 </ul>
-</div>
+</nav>
 <section id="definition-core-include-qristal-core-passes-circuit-opt-passes-hpp">
-<h2>Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/circuit_opt_passes.hpp</span></code>)<a class="headerlink" href="#definition-core-include-qristal-core-passes-circuit-opt-passes-hpp" title="Permalink to this headline"></a></h2>
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/circuit_opt_passes.hpp</span></code>)<a class="headerlink" href="#definition-core-include-qristal-core-passes-circuit-opt-passes-hpp" title="Permalink to this heading"></a></h2>
 </section>
 <section id="includes">
-<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline"></a></h2>
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base_pass.hpp</span></code> (<a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#file-core-include-qristal-core-passes-base-pass-hpp"><span class="std std-ref">File base_pass.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qristal/core/passes/base_pass.hpp</span></code> (<a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#file-core-include-qristal-core-passes-base-pass-hpp"><span class="std std-ref">File base_pass.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></li>
 </ul>
 </section>
 <section id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="namespace_qristal.html#namespace-qristal"><span class="std std-ref">Namespace qristal</span></a></p></li>
 </ul>
 </section>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="classqristal_1_1optimization__pass.html#exhale-class-classqristal-1-1optimization-pass"><span class="std std-ref">Class optimization_pass</span></a></p></li>
+<li><p><a class="reference internal" href="classqristal_1_1sequence__pass.html#exhale-class-classqristal-1-1sequence-pass"><span class="std std-ref">Class sequence_pass</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_namespaceqristal_1a25c8bec252abb54a785117a93efcc789.html#exhale-function-namespaceqristal-1a25c8bec252abb54a785117a93efcc789"><span class="std std-ref">Function qristal::create_circuit_optimizer_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a90f03c5a631a262eed975e2e4acf90dd.html#exhale-function-namespaceqristal-1a90f03c5a631a262eed975e2e4acf90dd"><span class="std std-ref">Function qristal::create_initial_state_simplify_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a69841193d5b7e6bd134ff73fd9ae0b6d.html#exhale-function-namespaceqristal-1a69841193d5b7e6bd134ff73fd9ae0b6d"><span class="std std-ref">Function qristal::create_peephole_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a933afc036cea2f09756ee761909d7624.html#exhale-function-namespaceqristal-1a933afc036cea2f09756ee761909d7624"><span class="std std-ref">Function qristal::create_remove_redundancies_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a3cf3918fcbcb2c559fb2c5336f6b637e.html#exhale-function-namespaceqristal-1a3cf3918fcbcb2c559fb2c5336f6b637e"><span class="std std-ref">Function qristal::create_two_qubit_squash_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a487d72f94356a43f8efee9c2b34943d8.html#exhale-function-namespaceqristal-1a487d72f94356a43f8efee9c2b34943d8"><span class="std std-ref">Function qristal::create_circuit_optimizer_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1abbbd7e3f01265e0e33a2801252dc0a53.html#exhale-function-namespaceqristal-1abbbd7e3f01265e0e33a2801252dc0a53"><span class="std std-ref">Function qristal::create_commute_through_multis_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a02c16ea9f8d031bd5bbf5c1d3c1970dc.html#exhale-function-namespaceqristal-1a02c16ea9f8d031bd5bbf5c1d3c1970dc"><span class="std std-ref">Function qristal::create_decompose_swap_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a2d2285d01e059fcd4a8c90d67b106743.html#exhale-function-namespaceqristal-1a2d2285d01e059fcd4a8c90d67b106743"><span class="std std-ref">Function qristal::create_decompose_ZX_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a7558c8a4b20f4998486bf1d809094875.html#exhale-function-namespaceqristal-1a7558c8a4b20f4998486bf1d809094875"><span class="std std-ref">Function qristal::create_initial_state_simplify_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ac864c8d9dcb9a05b398212c020d7d478.html#exhale-function-namespaceqristal-1ac864c8d9dcb9a05b398212c020d7d478"><span class="std std-ref">Function qristal::create_optimise_cliffords_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ad08a9faa73b37279f1ead13be8093bab.html#exhale-function-namespaceqristal-1ad08a9faa73b37279f1ead13be8093bab"><span class="std std-ref">Function qristal::create_optimise_post_routing_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a81c3d19fd2682239bbd9249c69ec6dc0.html#exhale-function-namespaceqristal-1a81c3d19fd2682239bbd9249c69ec6dc0"><span class="std std-ref">Function qristal::create_peephole_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ad1a81d44b9dc71792af64f54992bbdd0.html#exhale-function-namespaceqristal-1ad1a81d44b9dc71792af64f54992bbdd0"><span class="std std-ref">Function qristal::create_rebase_to_clifford_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a2a6ed3a4cfa3d0d8ec4b7f69367450c6.html#exhale-function-namespaceqristal-1a2a6ed3a4cfa3d0d8ec4b7f69367450c6"><span class="std std-ref">Function qristal::create_remove_redundancies_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a6b0c9fffff783343143a33f0214f08d2.html#exhale-function-namespaceqristal-1a6b0c9fffff783343143a33f0214f08d2"><span class="std std-ref">Function qristal::create_two_qubit_squash_pass</span></a></p></li>
 </ul>
 </section>
 </section>

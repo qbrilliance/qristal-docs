@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1a81c3d19fd2682239bbd9249c69ec6dc0:
+
+Function qristal::create_peephole_pass
+======================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_peephole_pass()
+   :project: My Project

@@ -25,9 +25,9 @@ Includes
 --------
 
 
-- ``base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
-
 - ``memory``
+
+- ``qristal/core/passes/base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
 
 - ``vector``
 
@@ -56,7 +56,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespaceqristal_1a0c7414393b53cd595f315c59da514626`
+- :ref:`exhale_function_namespaceqristal_1a0baf91cdb7c9f783fd63527beff58027`
 
-- :ref:`exhale_function_namespaceqristal_1a2d39d534b08204042c939ff913e8922c`
+- :ref:`exhale_function_namespaceqristal_1a31fc03cfe90a3f44fcc5605b219258f9`
 

@@ -14,6 +14,7 @@ Derived Types
 
 - ``public qristal::noise_aware_placement_pass`` (:ref:`exhale_class_classqristal_1_1noise__aware__placement__pass`)
 - ``public qristal::optimization_pass`` (:ref:`exhale_class_classqristal_1_1optimization__pass`)
+- ``public qristal::sequence_pass`` (:ref:`exhale_class_classqristal_1_1sequence__pass`)
 - ``public qristal::swap_placement_pass`` (:ref:`exhale_class_classqristal_1_1swap__placement__pass`)
 
 

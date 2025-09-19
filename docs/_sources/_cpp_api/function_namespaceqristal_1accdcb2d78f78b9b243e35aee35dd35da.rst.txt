@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1accdcb2d78f78b9b243e35aee35dd35da:
+
+Function qristal::uniqueBitsQD
+==============================
+
+- Defined in :ref:`file_core_include_qristal_core_circuit_builder.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::uniqueBitsQD(std::shared_ptr<xacc::CompositeInstruction>&)
+   :project: My Project

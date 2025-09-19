@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1a487d72f94356a43f8efee9c2b34943d8:
+
+Function qristal::create_circuit_optimizer_pass
+===============================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_circuit_optimizer_pass()
+   :project: My Project

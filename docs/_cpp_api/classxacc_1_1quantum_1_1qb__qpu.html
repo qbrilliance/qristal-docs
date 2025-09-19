@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Class qb_qpu &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -84,6 +88,7 @@
 <li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html">Class CirqQsimCPU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
@@ -93,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1sequence__pass.html">Class sequence_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
@@ -143,21 +149,21 @@
            <div itemprop="articleBody">
              
   <section id="class-qb-qpu">
-<span id="exhale-class-classxacc-1-1quantum-1-1qb-qpu"></span><h1>Class qb_qpu<a class="headerlink" href="#class-qb-qpu" title="Permalink to this headline"></a></h1>
+<span id="exhale-class-classxacc-1-1quantum-1-1qb-qpu"></span><h1>Class qb_qpu<a class="headerlink" href="#class-qb-qpu" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp.html#file-core-include-qristal-core-backends-qb-hardware-qb-qpu-hpp"><span class="std std-ref">File qb_qpu.hpp</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this heading"></a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">RemoteAccelerator</span></code></p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading"></a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpuE">
 <span id="_CPPv3N4xacc7quantum6qb_qpuE"></span><span id="_CPPv2N4xacc7quantum6qb_qpuE"></span><span id="xacc::quantum::qb_qpu"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qb_qpu</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">RemoteAccelerator</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpuE" title="Permalink to this definition"></a><br /></dt>
@@ -219,7 +225,7 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpu17configurationKeysEv">
-<span id="_CPPv3N4xacc7quantum6qb_qpu17configurationKeysEv"></span><span id="_CPPv2N4xacc7quantum6qb_qpu17configurationKeysEv"></span><span id="xacc::quantum::qb_qpu::configurationKeys"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a3653d47c6a0cd5474a237bfb98aa563e"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configurationKeys</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu17configurationKeysEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N4xacc7quantum6qb_qpu17configurationKeysEv"></span><span id="_CPPv2N4xacc7quantum6qb_qpu17configurationKeysEv"></span><span id="xacc::quantum::qb_qpu::configurationKeys"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1ad0c629fa97c3267c8178afe76cb51a02"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configurationKeys</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu17configurationKeysEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the available configuration settings. </p>
 </dd></dl>
 
@@ -228,7 +234,7 @@
 <span id="_CPPv3N4xacc7quantum6qb_qpu19updateConfigurationERK16HeterogeneousMap"></span><span id="_CPPv2N4xacc7quantum6qb_qpu19updateConfigurationERK16HeterogeneousMap"></span><span id="xacc::quantum::qb_qpu::updateConfiguration__HeterogeneousMapCR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1ab8709ab33f1df7fbafe82e9a8b28651e"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateConfiguration</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu19updateConfigurationERK16HeterogeneousMap" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Change the configuration of QB hardware. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>config</strong> – Input the new configuration settings to be applied </p>
 </dd>
 </dl>
@@ -239,7 +245,7 @@
 <span id="_CPPv3N4xacc7quantum6qb_qpu10initializeERK16HeterogeneousMap"></span><span id="_CPPv2N4xacc7quantum6qb_qpu10initializeERK16HeterogeneousMap"></span><span id="xacc::quantum::qb_qpu::initialize__HeterogeneousMapCR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a87ae098810453a9566fd22f6e6aab5e1"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">params</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu10initializeERK16HeterogeneousMap" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Initialize the configuration of QB hardware. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>params</strong> – Input the new configuration settings to be applied </p>
 </dd>
 </dl>
@@ -250,21 +256,21 @@
 <span id="_CPPv3N4xacc7quantum6qb_qpu14setup_hardwareEb"></span><span id="_CPPv2N4xacc7quantum6qb_qpu14setup_hardwareEb"></span><span id="xacc::quantum::qb_qpu::setup_hardware__b"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a9221f9b59b3af3ffb1d16f71175eaa95"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">setup_hardware</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">check_hardware_lifesigns</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu14setup_hardwareEb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Initialise the QB hardware (reserve, get native gateset, etc.) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>check_hardware_lifesigns</strong> – Check for a response from the hardware </p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="cpp function">
-<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt6vectorINSt10shared_ptrI20CompositeInstructionEEEEb">
-<span id="_CPPv3N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt6vectorINSt10shared_ptrI20CompositeInstructionEEEEb"></span><span id="_CPPv2N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt6vectorINSt10shared_ptrI20CompositeInstructionEEEEb"></span><span id="xacc::quantum::qb_qpu::execute__std::shared_ptr:AcceleratorBuffer:.std::vector:std::shared_ptr:CompositeInstruction::C.b"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a06ea96176c98bad697469c3fe7565af2"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">functions</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">execute_circuit</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt6vectorINSt10shared_ptrI20CompositeInstructionEEEEb" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt10shared_ptrI20CompositeInstructionEEb">
+<span id="_CPPv3N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt10shared_ptrI20CompositeInstructionEEb"></span><span id="_CPPv2N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt10shared_ptrI20CompositeInstructionEEb"></span><span id="xacc::quantum::qb_qpu::execute__std::shared_ptr:AcceleratorBuffer:.std::shared_ptr:CompositeInstruction:C.b"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a53cbdd450ccd3657e3e4dd65171eebb7"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">function</span></span>, <span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">execute_circuit</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu7executeENSt10shared_ptrI17AcceleratorBufferEEKNSt10shared_ptrI20CompositeInstructionEEb" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Submit the circuit with HTTP POST to QB hardware and poll for results with HTTP GET. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buffer</strong> – Output location and storage of intermediate results </p></li>
-<li><p><strong>functions</strong> – Input circuit in XACC IR format </p></li>
+<li><p><strong>function</strong> – Input circuit in XACC IR format </p></li>
 <li><p><strong>execute_circuit</strong> – Actually send the circuit to the hardware for execution </p></li>
 </ul>
 </dd>
@@ -273,11 +279,11 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE">
-<span id="_CPPv3N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE"></span><span id="_CPPv2N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE"></span><span id="xacc::quantum::qb_qpu::processInput__std::shared_ptr:AcceleratorBuffer:.std::vector:std::shared_ptr:CompositeInstruction::"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a849758f236611447af9e4c9665df14b1"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processInput</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">functions</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE"></span><span id="_CPPv2N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE"></span><span id="xacc::quantum::qb_qpu::processInput__std::shared_ptr:AcceleratorBuffer:.std::vector:std::shared_ptr:CompositeInstruction::"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1abf403fef83cb53c3e980a86517a5afc7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processInput</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">functions</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu12processInputENSt10shared_ptrI17AcceleratorBufferEENSt6vectorINSt10shared_ptrI20CompositeInstructionEEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Converts the circuit to a representation that QB hardware accepts. </p>
 <p>Sets up QB specific metadata, visits XACC IR to construct JSON strings for the circuit and required measurements, then combines both into the HTTP POST request body.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buffer</strong> – Output location and storage of intermediate results </p></li>
 <li><p><strong>functions</strong> – Input circuit in XACC IR format </p></li>
@@ -291,7 +297,7 @@
 <span id="_CPPv3N4xacc7quantum6qb_qpu15processResponseENSt10shared_ptrI17AcceleratorBufferEERKNSt6stringE"></span><span id="_CPPv2N4xacc7quantum6qb_qpu15processResponseENSt10shared_ptrI17AcceleratorBufferEERKNSt6stringE"></span><span id="xacc::quantum::qb_qpu::processResponse__std::shared_ptr:AcceleratorBuffer:.ssCR"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1ad9c76ceb7ca0d2ec5a9d70468fc822b8"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">processResponse</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">response</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu15processResponseENSt10shared_ptrI17AcceleratorBufferEERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Handle the response to the initial POST (circuit submission) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buffer</strong> – Output location and storage of intermediate results </p></li>
 <li><p><strong>response</strong> – Input the response body returned by the prior POST request </p></li>
@@ -302,17 +308,8 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpu16poll_for_resultsEv">
-<span id="_CPPv3N4xacc7quantum6qb_qpu16poll_for_resultsEv"></span><span id="_CPPv2N4xacc7quantum6qb_qpu16poll_for_resultsEv"></span><span id="xacc::quantum::qb_qpu::poll_for_results"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a7ae8f401d7a757ecae26f5a0f23326b6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">poll_for_results</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu16poll_for_resultsEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N4xacc7quantum6qb_qpu16poll_for_resultsEv"></span><span id="_CPPv2N4xacc7quantum6qb_qpu16poll_for_resultsEv"></span><span id="xacc::quantum::qb_qpu::poll_for_results"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a8879c193d838fea2762e3871b15a8f49"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">poll_for_results</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu16poll_for_resultsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Poll QB hardware for circuit results. </p>
-</dd></dl>
-
-</div>
-<div class="breathe-sectiondef docutils container">
-<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
-<dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpu19QB_SAFE_LIMIT_SHOTSE">
-<span id="_CPPv3N4xacc7quantum6qb_qpu19QB_SAFE_LIMIT_SHOTSE"></span><span id="_CPPv2N4xacc7quantum6qb_qpu19QB_SAFE_LIMIT_SHOTSE"></span><span id="xacc::quantum::qb_qpu::QB_SAFE_LIMIT_SHOTS__iC"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a575ae2c809a006599201d27d7b378686"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">QB_SAFE_LIMIT_SHOTS</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">512</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu19QB_SAFE_LIMIT_SHOTSE" title="Permalink to this definition"></a><br /></dt>
-<dd><p>Safe limit for QB hardware. </p>
 </dd></dl>
 
 </div>
@@ -341,7 +338,7 @@
 <span id="_CPPv3N4xacc7quantum6qb_qpu12resultsReadyERNSt3mapINSt6stringEiEE"></span><span id="_CPPv2N4xacc7quantum6qb_qpu12resultsReadyERNSt3mapINSt6stringEiEE"></span><span id="xacc::quantum::qb_qpu::resultsReady__std::map:ss.i:R"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a9a53b5e9b4d2fa6a5fb5be7cf3b4d291"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">resultsReady</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">counts</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu12resultsReadyERNSt3mapINSt6stringEiEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Polling for circuit execution results via HTTP GET. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>counts</strong> – Output location for shot outcomes </p>
 </dd>
 </dl>
@@ -368,7 +365,7 @@
 
 <dl class="cpp var">
 <dt class="sig sig-object cpp" id="_CPPv4N4xacc7quantum6qb_qpu5shotsE">
-<span id="_CPPv3N4xacc7quantum6qb_qpu5shotsE"></span><span id="_CPPv2N4xacc7quantum6qb_qpu5shotsE"></span><span id="xacc::quantum::qb_qpu::shots__i"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1af6bc2f24740a6a358452f6b97853f0dc"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shots</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu5shotsE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N4xacc7quantum6qb_qpu5shotsE"></span><span id="_CPPv2N4xacc7quantum6qb_qpu5shotsE"></span><span id="xacc::quantum::qb_qpu::shots__s"></span><span class="target" id="classxacc_1_1quantum_1_1qb__qpu_1a4c89ce5afec47afc5bf6ce3b3fe0b6f9"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shots</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N4xacc7quantum6qb_qpu5shotsE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Number of shots in a cycle. </p>
 </dd></dl>
 

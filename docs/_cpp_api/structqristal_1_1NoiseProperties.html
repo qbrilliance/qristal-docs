@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Struct NoiseProperties &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -84,6 +88,7 @@
 <li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html">Class CirqQsimCPU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
@@ -93,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1sequence__pass.html">Class sequence_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
@@ -143,12 +149,12 @@
            <div itemprop="articleBody">
              
   <section id="struct-noiseproperties">
-<span id="exhale-struct-structqristal-1-1noiseproperties"></span><h1>Struct NoiseProperties<a class="headerlink" href="#struct-noiseproperties" title="Permalink to this headline"></a></h1>
+<span id="exhale-struct-structqristal-1-1noiseproperties"></span><h1>Struct NoiseProperties<a class="headerlink" href="#struct-noiseproperties" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_properties.hpp.html#file-core-include-qristal-core-noise-model-noise-properties-hpp"><span class="std std-ref">File noise_properties.hpp</span></a></p></li>
 </ul>
 <section id="struct-documentation">
-<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this headline"></a></h2>
+<h2>Struct Documentation<a class="headerlink" href="#struct-documentation" title="Permalink to this heading"></a></h2>
 <dl class="cpp struct">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal15NoisePropertiesE">
 <span id="_CPPv3N7qristal15NoisePropertiesE"></span><span id="_CPPv2N7qristal15NoisePropertiesE"></span><span id="qristal::NoiseProperties"></span><span class="target" id="structqristal_1_1NoiseProperties"></span><span class="k"><span class="pre">struct</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoiseProperties</span></span></span><a class="headerlink" href="#_CPPv4N7qristal15NoisePropertiesE" title="Permalink to this definition"></a><br /></dt>
@@ -166,8 +172,8 @@
 <span id="_CPPv3N7qristal15NoiseProperties5t1_usE"></span><span id="_CPPv2N7qristal15NoiseProperties5t1_usE"></span><span id="qristal::NoiseProperties::t1_us__std::unordered_map:s.double:"></span><span class="target" id="structqristal_1_1NoiseProperties_1a788efa5d70ac3a0680db55bb7f7c7cb4"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t1_us</span></span></span><a class="headerlink" href="#_CPPv4N7qristal15NoiseProperties5t1_usE" title="Permalink to this definition"></a><br /></dt>
 <dd><p><strong>T1</strong> is the <strong>qubit relaxation time</strong>. For a qubit register, with individual qubits zero-indexed by i; <code class="docutils literal notranslate"><span class="pre">t1_us</span></code> is a map from qubit[i] -&gt; T1[i]. Unit: microseconds </p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// C++ code example: 4 qubits all with T1 = 1.5us</span>
-<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">t1_us</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">}};</span><span class="w"></span>
+<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">t1_us</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="p">}};</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -177,8 +183,8 @@
 <span id="_CPPv3N7qristal15NoiseProperties5t2_usE"></span><span id="_CPPv2N7qristal15NoiseProperties5t2_usE"></span><span id="qristal::NoiseProperties::t2_us__std::unordered_map:s.double:"></span><span class="target" id="structqristal_1_1NoiseProperties_1a188ba8a8dffcdc9ffd72f649bb4333f0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">t2_us</span></span></span><a class="headerlink" href="#_CPPv4N7qristal15NoiseProperties5t2_usE" title="Permalink to this definition"></a><br /></dt>
 <dd><p><strong>T2</strong> is the <strong>qubit dephasing time</strong>. For a qubit register, with individual qubits zero-indexed by i, <code class="docutils literal notranslate"><span class="pre">t2_us</span></code> is a map from qubit[i] -&gt; T2[i]. Unit: microseconds </p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// C++ code example: 4 qubits all with T2 = 0.15us</span>
-<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">t2_us</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">}};</span><span class="w"></span>
+<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">t2_us</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mf">0.15</span><span class="p">}};</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -188,13 +194,13 @@
 <span id="_CPPv3N7qristal15NoiseProperties14readout_errorsE"></span><span id="_CPPv2N7qristal15NoiseProperties14readout_errorsE"></span><span id="qristal::NoiseProperties::readout_errors__std::unordered_map:s.ReadoutError:"></span><span class="target" id="structqristal_1_1NoiseProperties_1a5f92e8c47c81a02c007fdc4c3e62cd05"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="structqristal_1_1ReadoutError.html#_CPPv4N7qristal12ReadoutErrorE" title="qristal::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">readout_errors</span></span></span><a class="headerlink" href="#_CPPv4N7qristal15NoiseProperties14readout_errorsE" title="Permalink to this definition"></a><br /></dt>
 <dd><p><strong>readout_errors</strong> is the <strong>classical readout error (off-diagonal elements of the confusion matrix)</strong>. For a qubit register, with individual qubits zero-indexed by i, <code class="docutils literal notranslate"><span class="pre">readout_errors</span></code> is a map from qubit[i] -&gt; <a class="reference internal" href="structqristal_1_1ReadoutError.html#structqristal_1_1ReadoutError"><span class="std std-ref">qristal::ReadoutError</span></a>[i]. Unit: none (quantities are probabilities). </p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// C++ code example: 2 qubits with p(0|1) = p(1|0) = 0.05, 2 qubits with p(0|1) = 0.1 and p(1|0) = 0.08</span>
-<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span><span class="w"></span>
-<span class="n">qristal</span><span class="o">::</span><span class="n">ReadoutError</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.10</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.08</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">}};</span><span class="w"></span>
+<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span>
+<span class="n">qristal</span><span class="o">::</span><span class="n">ReadoutError</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">;</span>
+<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span>
+<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="p">;</span>
+<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.10</span><span class="p">;</span>
+<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.08</span><span class="p">;</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="p">}};</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -204,8 +210,8 @@
 <span id="_CPPv3N7qristal15NoiseProperties12gate_time_usE"></span><span id="_CPPv2N7qristal15NoiseProperties12gate_time_usE"></span><span id="qristal::NoiseProperties::gate_time_us__std::unordered_map:ss.std::map:std::vector:s:.double::"></span><span class="target" id="structqristal_1_1NoiseProperties_1a1bf88945b271279e2d1f2ff1c21c0ab3"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gate_time_us</span></span></span><a class="headerlink" href="#_CPPv4N7qristal15NoiseProperties12gate_time_usE" title="Permalink to this definition"></a><br /></dt>
 <dd><p><strong>gate_time_us</strong> is the duration for a quantum gate operation when applied at a target set of qubits. Unit: microseconds </p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// C++ code example: &quot;u3&quot; single-qubit gate, uniform duration 5.2us, 4 qubits</span>
-<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">{{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">0</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">1</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">2</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">3</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}}};</span><span class="w"></span>
+<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">{{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">0</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">1</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">2</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">3</span><span class="p">},</span><span class="mf">5.2</span><span class="p">}}};</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -215,8 +221,8 @@
 <span id="_CPPv3N7qristal15NoiseProperties17gate_pauli_errorsE"></span><span id="_CPPv2N7qristal15NoiseProperties17gate_pauli_errorsE"></span><span id="qristal::NoiseProperties::gate_pauli_errors__std::unordered_map:ss.std::map:std::vector:s:.double::"></span><span class="target" id="structqristal_1_1NoiseProperties_1a19573dbd9446520f4856224bc71d99c0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gate_pauli_errors</span></span></span><a class="headerlink" href="#_CPPv4N7qristal15NoiseProperties17gate_pauli_errorsE" title="Permalink to this definition"></a><br /></dt>
 <dd><p><strong>gate_pauli_errors</strong> is the parameter for gate error derived from randomized benchmarking of a quantum gate operation that is applied at a target set of qubits. Unit: none </p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="c1">// C++ code example: &quot;u3&quot; single-qubit gate, gate error parameter = 0.03, uniform for 4 qubits</span>
-<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">{{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">0</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">1</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">2</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">3</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}}};</span><span class="w"></span>
+<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">{{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">0</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">1</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">2</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}},</span><span class="w"> </span><span class="p">{</span><span class="s">&quot;u3&quot;</span><span class="p">,{{</span><span class="mi">3</span><span class="p">},</span><span class="mf">0.03</span><span class="p">}}};</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -233,8 +239,8 @@
 <span class="c1">//     |           |</span>
 <span class="c1">//     v           v</span>
 <span class="c1">//    q3 &lt;--cx--&gt; q2</span>
-<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">qubit_topology</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">},{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">}};</span><span class="w"></span>
+<span class="n">qristal</span><span class="o">::</span><span class="n">NoiseProperties</span><span class="w"> </span><span class="n">t_qbnp</span><span class="p">;</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">qubit_topology</span><span class="p">{{</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">},{</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">},{</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">},{</span><span class="mi">3</span><span class="p">,</span><span class="mi">0</span><span class="p">}};</span>
 </pre></div>
 </div>
 </dd></dl>

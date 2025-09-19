@@ -29,8 +29,6 @@ Includes
 
 - ``memory``
 
-- ``qristal/core/typedefs.hpp``
-
 - ``unordered_map``
 
 

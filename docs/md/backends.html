@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Backends &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,13 +18,14 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -98,12 +102,14 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="backends">
-<h1>Backends<a class="headerlink" href="#backends" title="Permalink to this headline"></a></h1>
+<h1>Backends<a class="headerlink" href="#backends" title="Permalink to this heading"></a></h1>
 <p>Qristal can execute circuits on a wide variety of hardware and simulator backends.</p>
 <section id="hardware-backends">
-<h2>Hardware backends<a class="headerlink" href="#hardware-backends" title="Permalink to this headline"></a></h2>
+<h2>Hardware backends<a class="headerlink" href="#hardware-backends" title="Permalink to this heading"></a></h2>
+<p><strong>Parallelism</strong></p>
+<p>Note that Qristal supports parallel execution on multiple quantum hardware devices, using MPI. To make use of this feature, each MPI process must be configured to use a different physical hardware accelerator. For maximum performance, we recommend using the same model of quantum hardware device for each accelerator.  See <code class="xref cpp cpp-member docutils literal notranslate"><span class="pre">session::mpi_accelerators</span></code> for more info.</p>
 <section id="quantum-brilliance">
-<h3>Quantum Brilliance<a class="headerlink" href="#quantum-brilliance" title="Permalink to this headline"></a></h3>
+<h3>Quantum Brilliance<a class="headerlink" href="#quantum-brilliance" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Quantum Brilliance room-temperature QPUs based on diamond NV technology.  Includes all rack-mounted Quantum Development Kit (QDK) and desktop quantum computer (DQC) iterations, as well as virtualised instances.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: A local or remote Quantum Brilliance quantum computer.</p>
@@ -136,17 +142,17 @@
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">tests/qcstack</span></code>.</p>
 <p><strong>Notes</strong>:</p>
 <p>Entries in <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> may contain environment variables, in order to facilitate interoperability with job schedulers such as qtil and SLURM, e.g.</p>
-<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">qpu1</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$QTIL_qpus_1_IP</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exclusive_access</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span><span class="w"></span>
-<span class="w">  </span><span class="nt">exclusive_access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$QTIL_qpus_1_TOKEN</span><span class="w"></span>
-<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span><span class="w"></span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">qpu1</span><span class="p">:</span>
+<span class="w">  </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$QTIL_qpus_1_IP</span>
+<span class="w">  </span><span class="nt">exclusive_access</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">true</span>
+<span class="w">  </span><span class="nt">exclusive_access_token</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">$QTIL_qpus_1_TOKEN</span>
+<span class="w">  </span><span class="l l-Scalar l-Scalar-Plain">...</span>
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">$QTIL_qpus_1_IP</span></code> and <code class="docutils literal notranslate"><span class="pre">$QTIL_qpus_1_TOKEN</span></code> are the device IP and JWT provided by qtil via SLURM during job allocation.</p>
 </section>
 <section id="amazon-braket-rigetti-aws-braket-rigetti">
-<h3>Amazon Braket Rigetti: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (Rigetti)<a class="headerlink" href="#amazon-braket-rigetti-aws-braket-rigetti" title="Permalink to this headline"></a></h3>
+<h3>Amazon Braket Rigetti: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (Rigetti)<a class="headerlink" href="#amazon-braket-rigetti-aws-braket-rigetti" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Executor on Rigetti hardware, provided by Amazon Web Services (AWS) Braket.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: AWS (remote Rigetti QPU)</p>
@@ -164,21 +170,42 @@
 </section>
 </section>
 <section id="state-vector-simulators">
-<h2>State-vector simulators<a class="headerlink" href="#state-vector-simulators" title="Permalink to this headline"></a></h2>
-<section id="quantum-brilliance-state-vector-qsim">
-<h3>Quantum Brilliance state vector: <code class="docutils literal notranslate"><span class="pre">qsim</span></code><a class="headerlink" href="#quantum-brilliance-state-vector-qsim" title="Permalink to this headline"></a></h3>
-<p><strong>Description</strong>: A noise-aware, GPU-enabled state-vector simulator developed by Quantum Brilliance, built atop the Google Cirq qsim simulator.</p>
-<p><strong>Provided by</strong>: Open-source Qristal SDK (CPU version), Qristal Emulator (GPU version)</p>
-<p><strong>Executes on</strong>: CPU or GPU</p>
+<h2>State-vector simulators<a class="headerlink" href="#state-vector-simulators" title="Permalink to this heading"></a></h2>
+<section id="quantum-brilliance-cpu-state-vector-qb-statevector-cpu">
+<h3>Quantum Brilliance CPU state vector: <code class="docutils literal notranslate"><span class="pre">qb-statevector-cpu</span></code><a class="headerlink" href="#quantum-brilliance-cpu-state-vector-qb-statevector-cpu" title="Permalink to this heading"></a></h3>
+<p><strong>Description</strong>: A noise-aware, state-vector simulator developed by Quantum Brilliance, built atop the Google Cirq qsim simulator.</p>
+<p><strong>Provided by</strong>: Qristal Emulator</p>
+<p><strong>Executes on</strong>: CPU</p>
 <p><strong>Parameters</strong>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, must be set <code class="docutils literal notranslate"><span class="pre">true</span></code>. Include noise in the circuit simulation.</p></li>
 </ul>
 <p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
-<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qsim_noisy.py</span></code></p>
+<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_statevector_noisy.py</span></code></p>
+</section>
+<section id="quantum-brilliance-gpu-state-vector-qb-statevector-gpu">
+<h3>Quantum Brilliance GPU state vector: <code class="docutils literal notranslate"><span class="pre">qb-statevector-gpu</span></code><a class="headerlink" href="#quantum-brilliance-gpu-state-vector-qb-statevector-gpu" title="Permalink to this heading"></a></h3>
+<p><strong>Description</strong>: A noise-aware, GPU-enabled state-vector simulator developed by Quantum Brilliance, built atop the Google Cirq qsim simulator.</p>
+<p><strong>Provided by</strong>: Qristal Emulator</p>
+<p><strong>Executes on</strong>: GPU</p>
+<p><strong>Parameters</strong>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, must be set <code class="docutils literal notranslate"><span class="pre">true</span></code>. Include noise in the circuit simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu_device_ids</span></code>: <em>Vector of integers</em>, optional. Device IDs of GPUs to run on.</p></li>
+</ul>
+<p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
+<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_statevector_noisy.py</span></code></p>
+</section>
+<section id="qsim-state-vector-qsim">
+<h3>Qsim state vector: <code class="docutils literal notranslate"><span class="pre">qsim</span></code><a class="headerlink" href="#qsim-state-vector-qsim" title="Permalink to this heading"></a></h3>
+<p><strong>Description</strong>: The Google Cirq qsim simulator.</p>
+<p><strong>Provided by</strong>: Open-source Qristal SDK</p>
+<p><strong>Executes on</strong>: CPU</p>
+<p><strong>Parameters</strong>: None</p>
+<p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">multiplication.py</span></code></p>
 </section>
 <section id="microsoft-sparse-state-vector-sparse-sim">
-<h3>Microsoft sparse state vector: <code class="docutils literal notranslate"><span class="pre">sparse-sim</span></code><a class="headerlink" href="#microsoft-sparse-state-vector-sparse-sim" title="Permalink to this headline"></a></h3>
+<h3>Microsoft sparse state vector: <code class="docutils literal notranslate"><span class="pre">sparse-sim</span></code><a class="headerlink" href="#microsoft-sparse-state-vector-sparse-sim" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: The Microsoft Quantum sparse state-vector simulator allows a high number of qubits to be simulated whenever the quantum circuit being executed preserves sparsity.  It utilises a sparse representation of the state vector and methods to delay the application of some gates (e.g. Hadamard).</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: CPU</p>
@@ -186,7 +213,7 @@
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">parametrization_demo.py</span></code></p>
 </section>
 <section id="quantum-state-vector-simulator-qpp-and-cudaq-qpp">
-<h3>Quantum++ state-vector simulator: <code class="docutils literal notranslate"><span class="pre">qpp</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qpp</span></code><a class="headerlink" href="#quantum-state-vector-simulator-qpp-and-cudaq-qpp" title="Permalink to this headline"></a></h3>
+<h3>Quantum++ state-vector simulator: <code class="docutils literal notranslate"><span class="pre">qpp</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qpp</span></code><a class="headerlink" href="#quantum-state-vector-simulator-qpp-and-cudaq-qpp" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: The Quantum++ state vector simulator, configured to use XACC IR (<code class="docutils literal notranslate"><span class="pre">qpp</span></code>) or QIR (<code class="docutils literal notranslate"><span class="pre">cudaq:qpp</span></code>).</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: CPU</p>
@@ -199,22 +226,22 @@
 <p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">demo1.py</span></code></p>
 </section>
-<section id="cuquantum-state-vector-simulators-custatevec-fp32-and-custatevec-fp64">
-<h3>cuQuantum state-vector simulators: <code class="docutils literal notranslate"><span class="pre">custatevec:fp32</span></code> and <code class="docutils literal notranslate"><span class="pre">custatevec:fp64</span></code><a class="headerlink" href="#cuquantum-state-vector-simulators-custatevec-fp32-and-custatevec-fp64" title="Permalink to this headline"></a></h3>
-<p><strong>Description</strong>: Single (<code class="docutils literal notranslate"><span class="pre">custatevec:fp32</span></code>) and double-precision (<code class="docutils literal notranslate"><span class="pre">custatevec:fp64</span></code>) versions of the CUDA Quantum state vector simulator, built on CuQuantum libraries.</p>
+<section id="cuquantum-state-vector-simulators-cudaq-custatevec-fp32-and-cudaq-custatevec-fp64">
+<h3>cuQuantum state-vector simulators: <code class="docutils literal notranslate"><span class="pre">cudaq:custatevec_fp32</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:custatevec_fp64</span></code><a class="headerlink" href="#cuquantum-state-vector-simulators-cudaq-custatevec-fp32-and-cudaq-custatevec-fp64" title="Permalink to this heading"></a></h3>
+<p><strong>Description</strong>: Single (<code class="docutils literal notranslate"><span class="pre">cudaq:custatevec_fp32</span></code>) and double-precision (<code class="docutils literal notranslate"><span class="pre">cudaq:custatevec_fp64</span></code>) versions of the CUDA Quantum state vector simulator, built on CuQuantum libraries.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: GPU</p>
 <p><strong>Requires</strong>: CUDA Quantum</p>
-<p><strong>Parameters</strong>: None</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">cudaq_qft.py</span></code></p>
 </section>
 <section id="aer-state-vector-aer-statevector">
-<h3>Aer state vector: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">statevector</span></code>)<a class="headerlink" href="#aer-state-vector-aer-statevector" title="Permalink to this headline"></a></h3>
+<h3>Aer state vector: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">statevector</span></code>)<a class="headerlink" href="#aer-state-vector-aer-statevector" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: IBM Qiskit Aer noise-aware state-vector simulator.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: CPU</p>
 <p><strong>Parameters</strong>:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">aer_omp_threads</span></code> <em>integer</em>, optional. The number of OpenMP threads that the AER simulator should run with. If not set, the environment variable OMP_NUM_THREADS is read and explicitly passed to AER instead, overriding any other choices of thread number done internally in AER.  If neither is set, AER chooses the number of threads internally.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>: <em>string</em>, optional. The type of AER simulator. Can be set as <code class="docutils literal notranslate"><span class="pre">aer_sim_type</span> <span class="pre">=</span> <span class="pre">statevector</span></code> (default).</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">get_state_vec</span></code>: <em>boolean</em>, optional. Retrieve final state-vector if set as true (default = false).</p></li>
@@ -224,7 +251,7 @@
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code></p>
 </section>
 <section id="amazon-braket-sv1-aws-braket-sv1">
-<h3>Amazon Braket SV1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (SV1)<a class="headerlink" href="#amazon-braket-sv1-aws-braket-sv1" title="Permalink to this headline"></a></h3>
+<h3>Amazon Braket SV1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (SV1)<a class="headerlink" href="#amazon-braket-sv1-aws-braket-sv1" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: State-vector simulator provided by Amazon Web Services (AWS) Braket.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: AWS (remote CPU virtual machine)</p>
@@ -243,9 +270,9 @@
 </section>
 </section>
 <section id="tensor-network-simulators">
-<h2>Tensor network simulators<a class="headerlink" href="#tensor-network-simulators" title="Permalink to this headline"></a></h2>
+<h2>Tensor network simulators<a class="headerlink" href="#tensor-network-simulators" title="Permalink to this heading"></a></h2>
 <section id="quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps">
-<h3>Quantum Brilliance Matrix-Product State (MPS): <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mps</span></code><a class="headerlink" href="#quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps" title="Permalink to this headline"></a></h3>
+<h3>Quantum Brilliance Matrix-Product State (MPS): <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mps</span></code><a class="headerlink" href="#quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Quantum Brilliance’s noise-aware MPS simulator, configured to use XACC IR (<code class="docutils literal notranslate"><span class="pre">qb-mps</span></code>) or QIR (<code class="docutils literal notranslate"><span class="pre">cudaq:qb_mps</span></code>). The MPS method represents the quantum wavefunction as a tensor contraction of individual qubit’s quantum state. Each qubit’s quantum state is a rank-3 tensor (rank-2 tensor for boundary qubits).</p>
 <p><strong>Provided by</strong>: Qristal Emulator</p>
 <p><strong>Executes on</strong>: GPU</p>
@@ -258,22 +285,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">sequential</span></code> for sequential cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet</span></code> for single-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet_multishot</span></code> for multi-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu_device_ids</span></code>: <em>Vector of integers</em>. GPU device IDs. Note that the <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mps</span></code> version currently only supports execution on a single GPU.</p></li>
 </ul>
 <p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_mps_noisy.py</span></code></p>
-<p><strong>Notes</strong>:</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method sets the following parameters:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>: 256</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initial_bond_dimension</span></code>: 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: 1.0e-6</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: 1.0e-3</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
-</ul>
 </section>
 <section id="quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo">
-<h3>Quantum Brilliance Matrix-Product Density Operator: <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mpdo</span></code><a class="headerlink" href="#quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo" title="Permalink to this headline"></a></h3>
+<h3>Quantum Brilliance Matrix-Product Density Operator: <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mpdo</span></code><a class="headerlink" href="#quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Quantum Brilliance’s noise-aware matrix-product density operator (MPDO) simulator, configured to use XACC IR (<code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code>) or QIR (<code class="docutils literal notranslate"><span class="pre">cudaq:qb_mpdo</span></code>). The MPDO method represents the density matrix as a tensor contraction of individual qubit’s density operator. Each qubit’s density operator is a rank-4 tensor (rank-3 tensor for boundary qubits).</p>
 <p><strong>Provided by</strong>: Qristal Emulator</p>
 <p><strong>Executes on</strong>: GPU</p>
@@ -286,22 +304,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">sequential</span></code> for sequential cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet</span></code> for single-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu_device_ids</span></code>: <em>Vector of integers</em>. GPU device IDs. Note that the <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mpdo</span></code> version currently only supports execution on a single GPU.</p></li>
 </ul>
 <p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_mpdo_noisy.py</span></code></p>
-<p><strong>Notes</strong>:</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method sets the following parameters:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>: 256</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initial_bond_dimension</span></code>: 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: 1.0e-6</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: 1.0e-3</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
-</ul>
 </section>
 <section id="quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification">
-<h3>Quantum Brilliance purification: <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_purification</span></code><a class="headerlink" href="#quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification" title="Permalink to this headline"></a></h3>
+<h3>Quantum Brilliance purification: <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_purification</span></code><a class="headerlink" href="#quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Quantum Brilliance’s noise-aware state purification simulator, configured to use XACC IR (<code class="docutils literal notranslate"><span class="pre">qb-purification</span></code>) or QIR (<code class="docutils literal notranslate"><span class="pre">cudaq:qb_purification</span></code>). The purification method represents the purified quantum state as a tensor contraction of individual qubit’s purified state. Each qubit’s purified state is a rank-4 tensor (rank-3 tensor for boundary qubits).</p>
 <p><strong>Provided by</strong>: Qristal Emulator</p>
 <p><strong>Executes on</strong>: GPU</p>
@@ -316,24 +325,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: <em>floating-point</em>, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">sequential</span></code> for sequential cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet</span></code> for single-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet_multishot</span></code> for multi-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu_device_ids</span></code>: <em>Vector of integers</em>. GPU device IDs. Note that the <code class="docutils literal notranslate"><span class="pre">cudaq:purification</span></code> version currently only supports execution on a single GPU.</p></li>
 </ul>
 <p>These parameters are currently <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code> attributes.</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qb_purification_noisy.py</span></code></p>
-<p><strong>Notes</strong>:</p>
-<p>In a <code class="docutils literal notranslate"><span class="pre">qristal.core.session</span></code>, the <code class="docutils literal notranslate"><span class="pre">init()</span></code> method sets the following parameters:</p>
-<ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>: 256</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initial_bond_dimension</span></code>: 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">max_kraus_dimension</span></code>: 256</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">initial_kraus_dimension</span></code>: 1</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: 1.0e-6</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: 1.0e-3</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <code class="docutils literal notranslate"><span class="pre">false</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p></li>
-</ul>
 </section>
 <section id="tnqvm-exatn-mps-tnqvm">
-<h3>TNQVM-ExaTN MPS: <code class="docutils literal notranslate"><span class="pre">tnqvm</span></code><a class="headerlink" href="#tnqvm-exatn-mps-tnqvm" title="Permalink to this headline"></a></h3>
+<h3>TNQVM-ExaTN MPS: <code class="docutils literal notranslate"><span class="pre">tnqvm</span></code><a class="headerlink" href="#tnqvm-exatn-mps-tnqvm" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Matrix product state simulator from the ExaTN package.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: CPU</p>
@@ -346,12 +344,13 @@
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
 </section>
 <section id="aer-mps-aer-matrix-product-state">
-<h3>Aer MPS: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">matrix_product_state</span></code>)<a class="headerlink" href="#aer-mps-aer-matrix-product-state" title="Permalink to this headline"></a></h3>
+<h3>Aer MPS: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">matrix_product_state</span></code>)<a class="headerlink" href="#aer-mps-aer-matrix-product-state" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: IBM Qiskit Aer noise-aware MPS simulator.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: CPU</p>
 <p><strong>Parameters</strong>:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">aer_omp_threads</span></code> <em>integer</em>, optional. The number of OpenMP threads that the AER simulator should run with. If not set, the environment variable OMP_NUM_THREADS is read and explicitly passed to AER instead, overriding any other choices of thread number done internally in AER.  If neither is set, AER chooses the number of threads internally.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>: <em>string</em>, required. The type of AER simulator. Must be set as <code class="docutils literal notranslate"><span class="pre">aer_sim_type</span> <span class="pre">=</span> <span class="pre">matrix_product_state</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, optional. Include noise in the circuit simulation.</p></li>
 </ul>
@@ -359,7 +358,7 @@
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
 </section>
 <section id="amazon-braket-tn1-aws-braket-tn1">
-<h3>Amazon Braket TN1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (TN1)<a class="headerlink" href="#amazon-braket-tn1-aws-braket-tn1" title="Permalink to this headline"></a></h3>
+<h3>Amazon Braket TN1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (TN1)<a class="headerlink" href="#amazon-braket-tn1-aws-braket-tn1" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Tensor-network simulator provided by Amazon Web Services (AWS) Braket.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: AWS (remote CPU virtual machine)</p>
@@ -378,18 +377,17 @@
 </section>
 </section>
 <section id="density-matrix-simulators">
-<h2>Density matrix simulators<a class="headerlink" href="#density-matrix-simulators" title="Permalink to this headline"></a></h2>
+<h2>Density matrix simulators<a class="headerlink" href="#density-matrix-simulators" title="Permalink to this heading"></a></h2>
 <section id="cuda-quantum-density-matrix-simulator-cudaq-dm">
-<h3>CUDA Quantum density matrix simulator: <code class="docutils literal notranslate"><span class="pre">cudaq:dm</span></code><a class="headerlink" href="#cuda-quantum-density-matrix-simulator-cudaq-dm" title="Permalink to this headline"></a></h3>
+<h3>CUDA Quantum density matrix simulator: <code class="docutils literal notranslate"><span class="pre">cudaq:dm</span></code><a class="headerlink" href="#cuda-quantum-density-matrix-simulator-cudaq-dm" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: The CUDA Quantum density matrix simulator, built on CuQuantum libraries.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
-<p><strong>Executes on</strong>: GPU</p>
+<p><strong>Executes on</strong>: CPU</p>
 <p><strong>Requires</strong>: CUDA Quantum</p>
-<p><strong>Parameters</strong>: None</p>
 <p><strong>Example</strong>: <code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
 </section>
 <section id="amazon-braket-dm1-aws-braket-dm1">
-<h3>Amazon Braket DM1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (DM1)<a class="headerlink" href="#amazon-braket-dm1-aws-braket-dm1" title="Permalink to this headline"></a></h3>
+<h3>Amazon Braket DM1: <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> (DM1)<a class="headerlink" href="#amazon-braket-dm1-aws-braket-dm1" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: Density-matrix simulator provided by Amazon Web Services (AWS) Braket.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: AWS (remote CPU virtual machine)</p>
@@ -411,12 +409,13 @@
 </ul>
 </section>
 <section id="aer-density-matrix-aer-density-matrix">
-<h3>Aer density matrix: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">density_matrix</span></code>)<a class="headerlink" href="#aer-density-matrix-aer-density-matrix" title="Permalink to this headline"></a></h3>
+<h3>Aer density matrix: <code class="docutils literal notranslate"><span class="pre">aer</span></code> (<code class="docutils literal notranslate"><span class="pre">density_matrix</span></code>)<a class="headerlink" href="#aer-density-matrix-aer-density-matrix" title="Permalink to this heading"></a></h3>
 <p><strong>Description</strong>: IBM Qiskit Aer noise-aware density matrix simulator.</p>
 <p><strong>Provided by</strong>: Open-source Qristal SDK</p>
 <p><strong>Executes on</strong>: CPU</p>
 <p><strong>Parameters</strong>:</p>
 <ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">aer_omp_threads</span></code> <em>integer</em>, optional. The number of OpenMP threads that the AER simulator should run with. If not set, the environment variable OMP_NUM_THREADS is read and explicitly passed to AER instead, overriding any other choices of thread number done internally in AER.  If neither is set, AER chooses the number of threads internally.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>: <em>string</em>, required. The type of AER simulator. Must be set as <code class="docutils literal notranslate"><span class="pre">aer_sim_type</span> <span class="pre">=</span> <span class="pre">density_matrix</span></code>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>, required. Include noise in the circuit simulation.</p></li>
 </ul>

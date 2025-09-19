@@ -53,3 +53,5 @@ Classes
 
 - :ref:`exhale_class_classqristal_1_1CirqQsim`
 
+- :ref:`exhale_class_classqristal_1_1CirqQsimCPU`
+

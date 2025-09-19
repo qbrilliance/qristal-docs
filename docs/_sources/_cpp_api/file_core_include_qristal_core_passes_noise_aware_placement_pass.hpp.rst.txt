@@ -25,13 +25,13 @@ Includes
 --------
 
 
-- ``base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
-
 - ``memory``
 
-- ``noise_aware_placement_config.hpp`` (:ref:`file_core_include_qristal_core_passes_noise_aware_placement_config.hpp`)
-
 - ``optional``
+
+- ``qristal/core/passes/base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
+
+- ``qristal/core/passes/noise_aware_placement_config.hpp`` (:ref:`file_core_include_qristal_core_passes_noise_aware_placement_config.hpp`)
 
 - ``unordered_map``
 
@@ -60,7 +60,7 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac`
+- :ref:`exhale_function_namespaceqristal_1aacdb0d9acd9238a42d95dc7007316c40`
 
-- :ref:`exhale_function_namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59`
+- :ref:`exhale_function_namespaceqristal_1ab84e7009dac394c6989cb9f130e42b08`
 

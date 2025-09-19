@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Qristal Virtual QPU &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../_cpp_api/library_root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Qristal Virtual QPU</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/md/vqpu.md.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="qristal-virtual-qpu">
+<h1>Qristal Virtual QPU<a class="headerlink" href="#qristal-virtual-qpu" title="Permalink to this heading"></a></h1>
+<p>The Qristal vQPU is a virtualised quantum hardware solution. It offers an interface indistinguishable from a real QPU, executing quantum circuits and participating in resource allocation by cloud and HPC schedulers in exactly the same manner as a real processor.</p>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>The vQPU can be installed in three different ways: with the pre-built Docker image or bare metal in source or binary form.</p>
+<section id="binary-install">
+<h3>Binary install<a class="headerlink" href="#binary-install" title="Permalink to this heading"></a></h3>
+<p>Coming soon.</p>
+</section>
+<section id="docker">
+<h3>Docker<a class="headerlink" href="#docker" title="Permalink to this heading"></a></h3>
+<p>Note that this method presently requires access to a QB internal development container repository, and is therefore only applicable to employees of QB and partners with relevant access agreements.</p>
+<p>To launch a Qristal vQPU,</p>
+<ol class="arabic simple">
+<li><p>Set environment variable <code class="docutils literal notranslate"><span class="pre">VQPU_PORT</span></code> to the port that you would like to use to communicate with the vQPU, e.g. <code class="docutils literal notranslate"><span class="pre">export</span> <span class="pre">VQPU_PORT=8888</span></code>.</p></li>
+<li><p>Set the environment variable <code class="docutils literal notranslate"><span class="pre">VQPU_CONFIG_DIR</span></code> to the full path to the directory containing the <code class="docutils literal notranslate"><span class="pre">vqpu.system_config.json</span></code> file that you wish to use to define the vQPU configuration.  Examples can be found in the Qristal emulator repository, in the folder <code class="docutils literal notranslate"><span class="pre">tests/vqpu/experiment_configs</span></code>.</p></li>
+<li><p>Run the following from a Linux command prompt:</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="o">--</span><span class="n">rm</span><span class="w"> </span><span class="o">-</span><span class="n">d</span><span class="w"> </span><span class="o">--</span><span class="n">name</span><span class="w"> </span><span class="n">qristal_vqpu</span><span class="w"> </span><span class="o">-</span><span class="n">v</span><span class="w"> </span><span class="n">$VQPU_CONFIG_DIR</span><span class="o">:/</span><span class="n">mnt</span><span class="o">/</span><span class="n">qb</span><span class="o">/</span><span class="n">qcstack</span><span class="o">/</span><span class="n">packages</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">qb</span><span class="o">/</span><span class="n">system</span><span class="o">/</span><span class="n">configs</span><span class="o">/</span><span class="n">experiment_configs</span><span class="w"> </span><span class="o">-</span><span class="n">p$</span><span class="p">{</span><span class="n">VQPU_PORT</span><span class="p">}</span><span class="o">:</span><span class="mi">8080</span><span class="w"> </span><span class="n">registry</span><span class="p">.</span><span class="n">gitlab</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">qbau</span><span class="o">/</span><span class="n">software</span><span class="o">-</span><span class="k">and</span><span class="o">-</span><span class="n">apps</span><span class="o">/</span><span class="n">emulator</span><span class="o">/</span><span class="n">qristal</span><span class="o">-</span><span class="n">vqpu</span><span class="o">-</span><span class="n">dev</span><span class="o">:</span><span class="n">latest</span>
+</pre></div>
+</div>
+<p>Step 2 can be skipped, and the <code class="docutils literal notranslate"><span class="pre">-v</span></code> switch removed from step 3, if you are happy to simply run with the default vQPU configuration stored in qcstack.</p>
+</section>
+<section id="source-install">
+<h3>Source install<a class="headerlink" href="#source-install" title="Permalink to this heading"></a></h3>
+<p>Note that this method requires access to QB internal repositories, and is therefore only applicable to employees of QB and partners with relevant access agreements.</p>
+<ol class="arabic simple">
+<li><p>Install Qristal from source as per <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/getting_started.html#installing-from-source">the installation guide</a>.</p></li>
+<li><p>If planning to use emulator backends or non-default noise models, also install the Qristal Emulator <a class="reference external" href="https://gitlab.com/qbau/software-and-apps/emulator">from source</a>.</p></li>
+<li><p>Clone the <a class="reference external" href="https://gitlab.com/qbau/control/qcstack">qcstack repository</a>.</p></li>
+<li><p>Export the path to your qcstack repository to the environment variable <code class="docutils literal notranslate"><span class="pre">QcStackPath</span></code></p></li>
+<li><p>Install <code class="docutils literal notranslate"><span class="pre">qcstack_server</span></code> by running <code class="docutils literal notranslate"><span class="pre">poetry</span> <span class="pre">install</span></code> from within <code class="docutils literal notranslate"><span class="pre">$QcStackPath/apps/qcstack_server</span></code>.</p></li>
+<li><p>Link <code class="docutils literal notranslate"><span class="pre">lib/qristal</span></code> from within your Qristal installation directory to <code class="docutils literal notranslate"><span class="pre">$QcStackPath/apps/qcstack_server/qristal</span></code>.</p></li>
+<li><p>Launch the vQPU by changing directory to <code class="docutils literal notranslate"><span class="pre">$QcStackPath/apps/qcstack_server</span></code> and running</p></li>
+</ol>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">poetry</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">python3</span><span class="w"> </span><span class="o">-</span><span class="n">m</span><span class="w"> </span><span class="n">qb</span><span class="p">.</span><span class="n">qcstack_server</span><span class="p">.</span><span class="n">qcstack_server</span><span class="w"> </span><span class="o">--</span><span class="n">system</span><span class="w"> </span><span class="n">vqpu</span><span class="w"> </span><span class="o">--</span><span class="n">max</span><span class="o">-</span><span class="n">circuit</span><span class="o">-</span><span class="n">depth</span><span class="w"> </span><span class="n">X</span><span class="w"> </span><span class="o">--</span><span class="n">reservation</span><span class="o">-</span><span class="n">shared</span><span class="o">-</span><span class="n">secret</span><span class="w"> </span><span class="n">Y</span>
+</pre></div>
+</div>
+<p>where <code class="docutils literal notranslate"><span class="pre">X</span></code> is the maximum circuit depth that you desire the vQPU to accept, and <code class="docutils literal notranslate"><span class="pre">Y</span></code> is the secret key that you wish to be required to reserve the vQPU for exclusive use.</p>
+</section>
+</section>
+<section id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
+<p>Once the vQPU process is running, you may:</p>
+<ul class="simple">
+<li><p>execute circuits on the vQPU from an instance of Qristal by interacting with it over http as if it were a bare-metal QPU using <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html###hardware-backends#quantum-brilliance">the QB hardware backend</a>.</p></li>
+<li><p>schedule and reserve the vQPU from an HPC scheduler as if were a bare metal QPU, using <em>qtil</em>.</p></li>
+</ul>
+</section>
+<section id="options">
+<h2>Options<a class="headerlink" href="#options" title="Permalink to this heading"></a></h2>
+<p>The Qristal vQPU offers many of the same options and settings as the Qristal SDK’s <code class="docutils literal notranslate"><span class="pre">session</span></code> object.  These can be set by editing or overwriting the file <code class="docutils literal notranslate"><span class="pre">$QcStackPath/packages/system/qb/system/configs/experiment_configs/vqpu.system_config.json</span></code>.</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">debug</span></code>: <em>boolean</em>. Run the vQPU with debug output.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qubits</span></code>: <em>integer</em>. The number of qubits to emulate.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noise</span></code>: <em>boolean</em>. Include noise in the circuit simulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">noise_model</span></code>: <em>string</em>. Required and used only if <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">True</span></code>. The name of the Qristal SDK or Qristal Emulator noise model to employ during QPU emulation.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">mitigation</span></code>: <em>string</em>. Optional. Used only if <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">True</span></code>. The name of the noise mitigation method to apply to the results produced by the vQPU.  Valid values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>:             No noise mitigation (default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;ro-error&quot;</span></code>:                 Simple readout mitigation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;rich-extrap&quot;</span></code>:              Richardson extrapolation</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;assignment-error-kernel&quot;</span></code>:  SPAM correction</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">placement</span></code>: <em>string</em>. Optional. The name of the circuit placement method to apply to circuits to be executed by the vQPU.  Valid values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>:             No placement (default; this is currently the only valid value if <code class="docutils literal notranslate"><span class="pre">noise</span> <span class="pre">=</span> <span class="pre">False</span></code>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;swap-shortest-path&quot;</span></code>:       Shortest-path topological placement only.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;noise-aware&quot;</span></code>:              Noise-aware placement (includes topological placement).</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qristal_seed</span></code>: <em>integer or ‘null’</em>. Optional. The random seed to pass to Qristal to seed the vQPU. The default value (<code class="docutils literal notranslate"><span class="pre">null</span></code>) causes the vQPU to choose its own seed from the system clock.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">gpu_device_ids</span></code>: <em>Vector of integers</em>. Optional. The GPU device IDs to use when running the simulation (for GPU-enabled accelerators only).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">backend</span></code>: <em>string</em>. The simulator backend to use for QPU virtualisation. Valid values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;qsim&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#qsim-state-vector-qsim">Qsim state vector</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;sparse-sim&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#microsoft-sparse-state-vector-sparse-sim">Microsoft sparse state vector</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;qpp&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-state-vector-simulator-qpp-and-cudaq-qpp">Quantum++ state-vector simulator (via XACC IR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cudaq:qpp&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-state-vector-simulator-qpp-and-cudaq-qpp">Quantum++ state-vector simulator (via QIR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cudaq:custatevec_fp32&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#cuquantum-state-vector-simulators-custatevec-fp32-and-custatevec-fp64">cuQuantum state-vector simulator (single precision)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cudaq:custatevec_fp64&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#cuquantum-state-vector-simulators-custatevec-fp32-and-custatevec-fp64">cuQuantum state-vector simulator (double precision)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;aer&quot;</span></code>: Qiskit Aer. The actual simulator chosen is set via the option <code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;aws-braket&quot;</span></code>: Amazon Braket. The actual simulator chosen is set by the <code class="docutils literal notranslate"><span class="pre">device</span></code> field of the <code class="docutils literal notranslate"><span class="pre">aws-braket</span></code> node in the file <code class="docutils literal notranslate"><span class="pre">remote_backends.yaml</span></code> within the Qristal installation directory.  Valid values are: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#amazon-braket-sv1-aws-braket-sv1">SV1</a>, <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#amazon-braket-tn1-aws-braket-tn1">TN1</a> and <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#amazon-braket-dm1-aws-braket-dm1">DM1</a>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;qb-statevector-cpu&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-cpu-state-vector-qb-statevector-cpu">Quantum Brilliance CPU state vector</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;qb-statevector-gpu&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-gpu-state-vector-qb-statevector-gpu">Quantum Brilliance GPU state vector</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;qb-mpdo&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo">Quantum Brilliance Matrix-Product Density Operator (via XACC IR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cudaq:qb_mpdo&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo">Quantum Brilliance Matrix-Product Density Operator (via QIR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;qb-purification&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification">Quantum Brilliance purification (via XACC IR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cudaq:qb_purification&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification">Quantum Brilliance purification (via QIR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;qb-mps&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps">Quantum Brilliance Matrix-Product State (MPS; via XACC IR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cudaq:qb_mps&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps">Quantum Brilliance Matrix-Product State (MPS; via QIR)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;tnqvm&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#tnqvm-exatn-mps-tnqvm">TNQVM-ExaTN Matrix-Product State (MPS)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;cudaq:dm&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#cuda-quantum-density-matrix-simulator-cudaq-dm">CUDA Quantum density matrix simulator</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aer_sim_type</span></code>: <em>string</em>. Optional. Used only if <code class="docutils literal notranslate"><span class="pre">backend</span> <span class="pre">=</span> <span class="pre">&quot;aer&quot;</span></code>. The selected simulator from Qiskit Aer to be employed if using the <code class="docutils literal notranslate"><span class="pre">aer</span></code> backend for Qristal. Valid values:</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;None&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;&quot;</span></code>: Let the installed version of Aer choose the simulator type for itself according to the passed circuit (default)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;statevector&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#aer-state-vector-aer-statevector">state vector</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;matrix_product_state&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#aer-mps-aer-matrix-product-state">matrix product state</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;density_matrix&quot;</span></code>: <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#aer-density-matrix-aer-density-matrix">density matrix</a></p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">aer_omp_threads</span></code>: <em>integer</em>. Optional. Used only if <code class="docutils literal notranslate"><span class="pre">backend</span> <span class="pre">=</span> <span class="pre">&quot;aer&quot;</span></code>. Force Qiskit Aer to use exactly the given number of OpenMP threads. If this option is not given, the number of threads is set to the value of the environment variable <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code>. If <code class="docutils literal notranslate"><span class="pre">OMP_NUM_THREADS</span></code> is not set, Aer chooses the number of OpenMP threads to use.</p></li>
+</ul>
+<p>Tensor network backend settings used if <code class="docutils literal notranslate"><span class="pre">backend</span></code> is one of <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code>, <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code>, <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code>, <code class="docutils literal notranslate"><span class="pre">cudaq:qb-mpdo</span></code>, <code class="docutils literal notranslate"><span class="pre">cudaq:qb-mps</span></code> or <code class="docutils literal notranslate"><span class="pre">cudaq:qb-purification</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initial_bond_dimension</span></code>: <em>integer</em>, range: [1, 50000].  Initial number of singular values in the virtual index/dimension. Can be used to speed up simulation if final state’s bond dimension is known.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_bond_dimension</span></code>: <em>integer</em>, range: [1, 50000]. Maximum number of singular values kept in the virtual index/dimension.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">svd_cutoff</span></code>: <em>floating-point</em>. Smallest absolute value of the singular values to keep.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">rel_svd_cutoff</span></code>: <em>floating-point</em>. Smallest singular value, relative to the largest singular value, to keep.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">measure_sample_method</span></code>: <em>string</em>, optional. Measurement sampling modes: <code class="docutils literal notranslate"><span class="pre">sequential</span></code> for sequential cutensor-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet</span></code> for single-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">cutensornet_multishot</span></code> for multi-shot cutensornet-based sampling, <code class="docutils literal notranslate"><span class="pre">auto</span></code> (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.</p></li>
+</ul>
+<p>Settings used if <code class="docutils literal notranslate"><span class="pre">backend</span></code> is <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> or <code class="docutils literal notranslate"><span class="pre">cudaq:qb-purification</span></code>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">initial_kraus_dimension</span></code>: <em>integer</em>, range: [1, 50000]. Initial number of singular values in the Kraus index/dimension. Can be used to speed up simulation if final state’s Kraus dimension is known.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_kraus_dimension</span></code>: <em>integer</em>, range: [1, 50000]. Maximum number of singular values kept in the Kraus index/dimension.</p></li>
+</ul>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

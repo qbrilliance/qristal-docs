@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Qristal Emulator Getting Started Guide &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,15 +18,16 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Noise models" href="noise_models.html" />
+    <link rel="next" title="Qristal Virtual QPU" href="vqpu.html" />
     <link rel="prev" title="Backends" href="backends.html" /> 
 </head>
 
@@ -51,7 +55,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Qristal Emulator Getting Started Guide</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#check-that-your-system-meets-minimum-requirements">1. Check that your system meets minimum requirements</a></li>
@@ -66,6 +69,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#known-issues">10. Known issues</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -110,9 +114,9 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="qristal-emulator-getting-started-guide">
-<h1>Qristal Emulator Getting Started Guide<a class="headerlink" href="#qristal-emulator-getting-started-guide" title="Permalink to this headline"></a></h1>
+<h1>Qristal Emulator Getting Started Guide<a class="headerlink" href="#qristal-emulator-getting-started-guide" title="Permalink to this heading"></a></h1>
 <section id="check-that-your-system-meets-minimum-requirements">
-<h2>1. Check that your system meets minimum requirements<a class="headerlink" href="#check-that-your-system-meets-minimum-requirements" title="Permalink to this headline"></a></h2>
+<h2>1. Check that your system meets minimum requirements<a class="headerlink" href="#check-that-your-system-meets-minimum-requirements" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p>16 GB RAM</p></li>
 <li><p>x86 processor</p></li>
@@ -120,79 +124,79 @@
 </ul>
 </section>
 <section id="install-docker">
-<h2>2. Install Docker<a class="headerlink" href="#install-docker" title="Permalink to this headline"></a></h2>
+<h2>2. Install Docker<a class="headerlink" href="#install-docker" title="Permalink to this heading"></a></h2>
 <p>Instructions for installing Docker can be found <a class="reference external" href="https://docs.docker.com/engine/install/">here</a>.  You only need the Engine, not the Desktop.</p>
 <p>If you have NVIDIA GPUs on your system and want to use them, you will also need to install the <a class="reference external" href="https://github.com/NVIDIA/nvidia-docker">NVIDIA Container Toolkit</a>.</p>
 </section>
 <section id="log-in-to-the-gitlab-docker-registry">
-<h2>3. Log in to the Gitlab Docker registry<a class="headerlink" href="#log-in-to-the-gitlab-docker-registry" title="Permalink to this headline"></a></h2>
+<h2>3. Log in to the Gitlab Docker registry<a class="headerlink" href="#log-in-to-the-gitlab-docker-registry" title="Permalink to this heading"></a></h2>
 <p>Open a terminal and run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo docker login -u XXXX registry.gitlab.com
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span>login<span class="w"> </span>-u<span class="w"> </span>XXXX<span class="w"> </span>registry.gitlab.com
 </pre></div>
 </div>
 <p>where <code class="docutils literal notranslate"><span class="pre">XXXX</span></code> is replaced with your Gitlab username.  Depending on your Gitlab authentication settings, you may need to work through getting a token and/or setting up two-factor authentication.  If you have trouble, please refer to <a class="reference external" href="https://docs.gitlab.com/ee/user/packages/container_registry/authenticate_with_container_registry.html">this guide</a>.</p>
 </section>
 <section id="get-the-qristal-emulator-image">
-<h2>4. Get the Qristal Emulator Image<a class="headerlink" href="#get-the-qristal-emulator-image" title="Permalink to this headline"></a></h2>
+<h2>4. Get the Qristal Emulator Image<a class="headerlink" href="#get-the-qristal-emulator-image" title="Permalink to this heading"></a></h2>
 <p>In a terminal, run:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo docker run --rm -it --name emulator registry.gitlab.com/qbau/software-and-apps/public-restricted/emulator/qristal-emulator
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>sudo<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>--name<span class="w"> </span>emulator<span class="w"> </span>registry.gitlab.com/qbau/software-and-apps/public-restricted/emulator/qristal-emulator
 </pre></div>
 </div>
 <p>If you have NVIDIA GPUs on your system and want to use them, insert <code class="docutils literal notranslate"><span class="pre">--gpus</span> <span class="pre">all</span></code> after <code class="docutils literal notranslate"><span class="pre">run</span></code> in the command above.</p>
 </section>
 <section id="activate-the-image-using-your-license-key">
-<h2>5. Activate the image using your license key<a class="headerlink" href="#activate-the-image-using-your-license-key" title="Permalink to this headline"></a></h2>
+<h2>5. Activate the image using your license key<a class="headerlink" href="#activate-the-image-using-your-license-key" title="Permalink to this heading"></a></h2>
 <p>At the command prompt <em>inside the image</em>, run the following commands, replacing <code class="docutils literal notranslate"><span class="pre">XXXXX-XXXXX-XXXXX-XXXXX</span></code> with the license key that you have received from Quantum Brilliance:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir /qristal
-<span class="nb">echo</span> -e <span class="s1">&#39;{\n  &quot;isFloatingLicense&quot;: true,\n  &quot;LicenseKey&quot;: &quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;\n}&#39;</span> &gt; /qristal/Qristal-Emulator-License.json
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>/qristal
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s1">&#39;{\n  &quot;isFloatingLicense&quot;: true,\n  &quot;LicenseKey&quot;: &quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;\n}&#39;</span><span class="w"> </span>&gt;<span class="w"> </span>/qristal/Qristal-Emulator-License.json
 </pre></div>
 </div>
 </section>
 <section id="test-that-your-image-is-successfully-activated">
-<h2>6. Test that your image is successfully activated<a class="headerlink" href="#test-that-your-image-is-successfully-activated" title="Permalink to this headline"></a></h2>
+<h2>6. Test that your image is successfully activated<a class="headerlink" href="#test-that-your-image-is-successfully-activated" title="Permalink to this heading"></a></h2>
 <p>Navigate to the Python examples folder in the image</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /mnt/qb/qristal/examples/python
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/mnt/qb/qristal/examples/python
 </pre></div>
 </div>
 <p>Run a simple example that uses a noise model.  First, using a noise model that is built into the open-source version of Qristal and does not require an emulator license:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 noise_model.py
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>noise_model.py
 </pre></div>
 </div>
 <p>Next, retry the example using a noise model imported from the emulator:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3 noise_model.py --qdk
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python3<span class="w"> </span>noise_model.py<span class="w"> </span>--qdk
 </pre></div>
 </div>
 <p>You should see something similar to the following:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Running <span class="k">in</span> virtual machine: enforcing floating license!
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Running<span class="w"> </span><span class="k">in</span><span class="w"> </span>virtual<span class="w"> </span>machine:<span class="w"> </span>enforcing<span class="w"> </span>floating<span class="w"> </span>license!
 
-Retrieving license-key and floating-setting from json file: /qristal/Qristal-Emulator-License.json
+Retrieving<span class="w"> </span>license-key<span class="w"> </span>and<span class="w"> </span>floating-setting<span class="w"> </span>from<span class="w"> </span>json<span class="w"> </span>file:<span class="w"> </span>/qristal/Qristal-Emulator-License.json
 <span class="o">{</span>
-    <span class="s2">&quot;LicenseKey&quot;</span>: <span class="s2">&quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;</span>,
-    <span class="s2">&quot;isFloatingLicense&quot;</span>: <span class="nb">true</span>
+<span class="w">    </span><span class="s2">&quot;LicenseKey&quot;</span>:<span class="w"> </span><span class="s2">&quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;isFloatingLicense&quot;</span>:<span class="w"> </span><span class="nb">true</span>
 <span class="o">}</span>
-Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class="m">20053</span> and machine code: floating-7943610145998300972
-Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class="m">20053</span> and machine code: floating-7943610145998300972
+Provided<span class="w"> </span>floating<span class="w"> </span>license,<span class="w"> </span>key:<span class="w"> </span>XXXXX-XXXXX-XXXXX-XXXXX,<span class="w"> </span>productID:<span class="w"> </span><span class="m">20053</span><span class="w"> </span>and<span class="w"> </span>machine<span class="w"> </span>code:<span class="w"> </span>floating-7943610145998300972
+Provided<span class="w"> </span>floating<span class="w"> </span>license,<span class="w"> </span>key:<span class="w"> </span>XXXXX-XXXXX-XXXXX-XXXXX,<span class="w"> </span>productID:<span class="w"> </span><span class="m">20053</span><span class="w"> </span>and<span class="w"> </span>machine<span class="w"> </span>code:<span class="w"> </span>floating-7943610145998300972
 <span class="o">{</span>
-    <span class="s2">&quot;00&quot;</span>: <span class="m">274</span>,
-    <span class="s2">&quot;01&quot;</span>: <span class="m">247</span>,
-    <span class="s2">&quot;10&quot;</span>: <span class="m">234</span>,
-    <span class="s2">&quot;11&quot;</span>: <span class="m">269</span>
+<span class="w">    </span><span class="s2">&quot;00&quot;</span>:<span class="w"> </span><span class="m">274</span>,
+<span class="w">    </span><span class="s2">&quot;01&quot;</span>:<span class="w"> </span><span class="m">247</span>,
+<span class="w">    </span><span class="s2">&quot;10&quot;</span>:<span class="w"> </span><span class="m">234</span>,
+<span class="w">    </span><span class="s2">&quot;11&quot;</span>:<span class="w"> </span><span class="m">269</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 </section>
 <section id="run-some-other-examples">
-<h2>7. Run some other examples<a class="headerlink" href="#run-some-other-examples" title="Permalink to this headline"></a></h2>
+<h2>7. Run some other examples<a class="headerlink" href="#run-some-other-examples" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Go to the Python examples folder in the image: <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">/mnt/qb/qristal/examples/python</span></code></p></li>
-<li><p>Run example <code class="docutils literal notranslate"><span class="pre">qsim_noisy.py</span></code> using <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">qsim_noisy.py</span></code>. You should get the output:</p></li>
+<li><p>Run example <code class="docutils literal notranslate"><span class="pre">qb_statevector_noisy.py</span></code> using <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">qb_statevector_noisy.py</span></code>. You should get the output:</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s1">&#39;110&#39;</span>: <span class="m">1024</span><span class="o">}</span>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="o">{</span><span class="s1">&#39;110&#39;</span>:<span class="w"> </span><span class="m">1024</span><span class="o">}</span>
 </pre></div>
 </div>
 <ol class="arabic" start="4">
 <li><p>Install the text editor <code class="docutils literal notranslate"><span class="pre">nano</span></code> to edit the noise properties using <code class="docutils literal notranslate"><span class="pre">apt</span> <span class="pre">install</span> <span class="pre">nano</span></code>.</p></li>
-<li><p>Open <code class="docutils literal notranslate"><span class="pre">qsim_noisy.py</span></code> with the text editor <code class="docutils literal notranslate"><span class="pre">nano</span></code> using <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">qsim_noisy.py</span></code></p></li>
+<li><p>Open <code class="docutils literal notranslate"><span class="pre">qb_statevector_noisy.py</span></code> with the text editor <code class="docutils literal notranslate"><span class="pre">nano</span></code> using <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">qb_statevector_noisy.py</span></code></p></li>
 <li><p>Within the text editor, turn on noise properties by uncommenting lines</p>
 <ul>
 <li><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span><span class="o">.</span><span class="n">noise</span> <span class="o">=</span> <span class="kc">True</span>
@@ -206,43 +210,43 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class=
 </ul>
 </li>
 <li><p>Exit the text editor by hitting <code class="docutils literal notranslate"><span class="pre">Ctrl</span> <span class="pre">+</span> <span class="pre">x</span></code>, then enter <code class="docutils literal notranslate"><span class="pre">y</span></code> to save changes, then hit <code class="docutils literal notranslate"><span class="pre">Enter</span></code>.</p></li>
-<li><p>Rerun the example using the same command <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">qsim_noisy.py</span></code>. You should see something similar to this output:</p></li>
+<li><p>Rerun the example using the same command <code class="docutils literal notranslate"><span class="pre">python3</span> <span class="pre">qb_statevector_noisy.py</span></code>. You should see something similar to this output:</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Running <span class="k">in</span> virtual machine: enforcing floating license!
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Running<span class="w"> </span><span class="k">in</span><span class="w"> </span>virtual<span class="w"> </span>machine:<span class="w"> </span>enforcing<span class="w"> </span>floating<span class="w"> </span>license!
 
-Retrieving license-key and floating-setting from json file: /qristal/Qristal-Emulator-License.json
+Retrieving<span class="w"> </span>license-key<span class="w"> </span>and<span class="w"> </span>floating-setting<span class="w"> </span>from<span class="w"> </span>json<span class="w"> </span>file:<span class="w"> </span>/qristal/Qristal-Emulator-License.json
 <span class="o">{</span>
-    <span class="s2">&quot;LicenseKey&quot;</span>: <span class="s2">&quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;</span>,
-    <span class="s2">&quot;isFloatingLicense&quot;</span>: <span class="nb">true</span>
+<span class="w">    </span><span class="s2">&quot;LicenseKey&quot;</span>:<span class="w"> </span><span class="s2">&quot;XXXXX-XXXXX-XXXXX-XXXXX&quot;</span>,
+<span class="w">    </span><span class="s2">&quot;isFloatingLicense&quot;</span>:<span class="w"> </span><span class="nb">true</span>
 <span class="o">}</span>
-Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class="m">20053</span> and machine code: floating-5076244496556924759
-Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: <span class="m">20053</span> and machine code: floating-5076244496556924759
-<span class="o">{</span><span class="s1">&#39;000&#39;</span>: <span class="m">1</span>, <span class="s1">&#39;010&#39;</span>: <span class="m">18</span>, <span class="s1">&#39;100&#39;</span>: <span class="m">7</span>, <span class="s1">&#39;110&#39;</span>: <span class="m">982</span>, <span class="s1">&#39;111&#39;</span>: <span class="m">16</span><span class="o">}</span>
+Provided<span class="w"> </span>floating<span class="w"> </span>license,<span class="w"> </span>key:<span class="w"> </span>XXXXX-XXXXX-XXXXX-XXXXX,<span class="w"> </span>productID:<span class="w"> </span><span class="m">20053</span><span class="w"> </span>and<span class="w"> </span>machine<span class="w"> </span>code:<span class="w"> </span>floating-5076244496556924759
+Provided<span class="w"> </span>floating<span class="w"> </span>license,<span class="w"> </span>key:<span class="w"> </span>XXXXX-XXXXX-XXXXX-XXXXX,<span class="w"> </span>productID:<span class="w"> </span><span class="m">20053</span><span class="w"> </span>and<span class="w"> </span>machine<span class="w"> </span>code:<span class="w"> </span>floating-5076244496556924759
+<span class="o">{</span><span class="s1">&#39;000&#39;</span>:<span class="w"> </span><span class="m">1</span>,<span class="w"> </span><span class="s1">&#39;010&#39;</span>:<span class="w"> </span><span class="m">18</span>,<span class="w"> </span><span class="s1">&#39;100&#39;</span>:<span class="w"> </span><span class="m">7</span>,<span class="w"> </span><span class="s1">&#39;110&#39;</span>:<span class="w"> </span><span class="m">982</span>,<span class="w"> </span><span class="s1">&#39;111&#39;</span>:<span class="w"> </span><span class="m">16</span><span class="o">}</span>
 </pre></div>
 </div>
 <ol class="arabic simple" start="9">
 <li><p>Try out a C++ example with CUDA Quantum.  Navigate to the example folder:</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> /mnt/qb/qristal/examples/cpp/benchmark1_cudaq/
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span><span class="w"> </span>/mnt/qb/qristal/examples/cpp/benchmark1_cudaq/
 </pre></div>
 </div>
 <ol class="arabic simple" start="10">
 <li><p>Build and run the example:</p></li>
 </ol>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir build
-<span class="nb">cd</span> build
-cmake ..
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>mkdir<span class="w"> </span>build
+<span class="nb">cd</span><span class="w"> </span>build
+cmake<span class="w"> </span>..
 make
 ./benchmark1_cudaq
 </pre></div>
 </div>
 <p>You should get results that look similar to this:</p>
-<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Executing C++ demo...
-About to run quantum program...
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>Executing<span class="w"> </span>C++<span class="w"> </span>demo...
+About<span class="w"> </span>to<span class="w"> </span>run<span class="w"> </span>quantum<span class="w"> </span>program...
 Results:
 <span class="o">{</span>
-    <span class="s2">&quot;00000000000000000000&quot;</span>: <span class="m">10038</span>,
-    <span class="s2">&quot;11111111111111111111&quot;</span>: <span class="m">9962</span>
+<span class="w">    </span><span class="s2">&quot;00000000000000000000&quot;</span>:<span class="w"> </span><span class="m">10038</span>,
+<span class="w">    </span><span class="s2">&quot;11111111111111111111&quot;</span>:<span class="w"> </span><span class="m">9962</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -251,7 +255,7 @@ Results:
 </ol>
 </section>
 <section id="test-out-the-jupyter-lab-interface-and-try-the-exercise">
-<h2>8. Test out the Jupyter Lab interface, and try the exercise<a class="headerlink" href="#test-out-the-jupyter-lab-interface-and-try-the-exercise" title="Permalink to this headline"></a></h2>
+<h2>8. Test out the Jupyter Lab interface, and try the exercise<a class="headerlink" href="#test-out-the-jupyter-lab-interface-and-try-the-exercise" title="Permalink to this heading"></a></h2>
 <ol class="arabic simple">
 <li><p>Launch Jupyter Lab by opening up your browser and typing in the navigator <code class="docutils literal notranslate"><span class="pre">localhost:8889</span></code>.</p></li>
 <li><p>Make a new notebook, and try executing one of the python examples in it.</p></li>
@@ -259,15 +263,14 @@ Results:
 </ol>
 </section>
 <section id="write-your-own-quantum-programs">
-<h2>9. Write your own quantum programs!<a class="headerlink" href="#write-your-own-quantum-programs" title="Permalink to this headline"></a></h2>
+<h2>9. Write your own quantum programs!<a class="headerlink" href="#write-your-own-quantum-programs" title="Permalink to this heading"></a></h2>
 <p>We’d love to hear how you get on – let your sales contact know!</p>
 </section>
 <section id="known-issues">
-<h2>10. Known issues<a class="headerlink" href="#known-issues" title="Permalink to this headline"></a></h2>
+<h2>10. Known issues<a class="headerlink" href="#known-issues" title="Permalink to this heading"></a></h2>
 <p>The following are known issues under active development:</p>
 <ul class="simple">
-<li><p>Tensor network backends <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code>, <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> and <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code> should only be used with placement turned on (<code class="docutils literal notranslate"><span class="pre">session.noplacement=False</span></code>) and with TKET support for Qristal installed (<code class="docutils literal notranslate"><span class="pre">WITH_TKET=ON</span></code> at cmake time; customer images are shipped with Qristal already compiled this way).</p></li>
-<li><p>Even with placement turned on, <code class="docutils literal notranslate"><span class="pre">qb-mps</span></code>, <code class="docutils literal notranslate"><span class="pre">qb-purification</span></code> and <code class="docutils literal notranslate"><span class="pre">qb-mpdo</span></code> will fail for some circuits if noise modelling is turned on and used with  QPU topologies that include connections between qubits with non-sequential indices.  The noise model <code class="docutils literal notranslate"><span class="pre">nm-3</span></code> is designed to be safe from this problem.</p></li>
+<li><p>When using Cudaq-wrapped tensor network backends <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mps</span></code>, <code class="docutils literal notranslate"><span class="pre">cudaq:qb_purification</span></code> and <code class="docutils literal notranslate"><span class="pre">cudaq:qb_mpdo</span></code>, all qubits in the circuit need to be measured. The measurement order of the qubits needs to be in increasing order of the qubit index. Only if these guidelines are followed will bitstring output registers from these backends be consistent with the outputs of other backends.</p></li>
 </ul>
 </section>
 </section>
@@ -277,7 +280,7 @@ Results:
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="backends.html" class="btn btn-neutral float-left" title="Backends" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="noise_models.html" class="btn btn-neutral float-right" title="Noise models" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="vqpu.html" class="btn btn-neutral float-right" title="Qristal Virtual QPU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

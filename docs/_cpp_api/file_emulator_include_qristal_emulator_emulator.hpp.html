@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File emulator.hpp &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -49,9 +53,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -96,9 +100,9 @@
            <div itemprop="articleBody">
              
   <section id="file-emulator-hpp">
-<span id="file-emulator-include-qristal-emulator-emulator-hpp"></span><h1>File emulator.hpp<a class="headerlink" href="#file-emulator-hpp" title="Permalink to this headline"></a></h1>
+<span id="file-emulator-include-qristal-emulator-emulator-hpp"></span><h1>File emulator.hpp<a class="headerlink" href="#file-emulator-hpp" title="Permalink to this heading"></a></h1>
 <p>↰ <a class="reference internal" href="dir_emulator_include_qristal_emulator.html#dir-emulator-include-qristal-emulator"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator</span></code>)</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#definition-emulator-include-qristal-emulator-emulator-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator/emulator.hpp</span></code>)</a></p></li>
@@ -106,28 +110,30 @@
 <li><p><a class="reference internal" href="#namespaces" id="id3">Namespaces</a></p></li>
 <li><p><a class="reference internal" href="#functions" id="id4">Functions</a></p></li>
 </ul>
-</div>
+</nav>
 <section id="definition-emulator-include-qristal-emulator-emulator-hpp">
-<h2>Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator/emulator.hpp</span></code>)<a class="headerlink" href="#definition-emulator-include-qristal-emulator-emulator-hpp" title="Permalink to this headline"></a></h2>
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator/emulator.hpp</span></code>)<a class="headerlink" href="#definition-emulator-include-qristal-emulator-emulator-hpp" title="Permalink to this heading"></a></h2>
 </section>
 <section id="includes">
-<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline"></a></h2>
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">string</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">vector</span></code></p></li>
 </ul>
 </section>
 <section id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="namespace_qristal.html#namespace-qristal"><span class="std std-ref">Namespace qristal</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
 <ul class="simple">
+<li><p><a class="reference internal" href="function_emulator_8hpp_1aaa8323809b05568a3f75b76eca97c5b7.html#exhale-function-emulator-8hpp-1aaa8323809b05568a3f75b76eca97c5b7"><span class="std std-ref">Function emulator_built_with_cuda</span></a></p></li>
 <li><p><a class="reference internal" href="function_emulator_8hpp_1a832ddfffd686829905846c26ac967d11.html#exhale-function-emulator-8hpp-1a832ddfffd686829905846c26ac967d11"><span class="std std-ref">Function emulator_initialize</span></a></p></li>
-<li><p><a class="reference internal" href="function_emulator_8hpp_1adfaff34883361f2dd62b27550bac36fe.html#exhale-function-emulator-8hpp-1adfaff34883361f2dd62b27550bac36fe"><span class="std std-ref">Function get_emulator_noise_model</span></a></p></li>
+<li><p><a class="reference internal" href="function_emulator_8hpp_1af683f73f51f7fad07c44b5583d2060b7.html#exhale-function-emulator-8hpp-1af683f73f51f7fad07c44b5583d2060b7"><span class="std std-ref">Function get_emulator_noise_model</span></a></p></li>
 </ul>
 </section>
 </section>

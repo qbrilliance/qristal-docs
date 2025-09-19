@@ -33,7 +33,7 @@ Includes
 
 - ``map``
 
-- ``qristal/core/async_executor.hpp``
+- ``qristal/core/circuit_language.hpp``
 
 - ``qristal/core/cmake_variables.hpp``
 
@@ -43,11 +43,13 @@ Includes
 
 - ``qristal/core/remote_async_accelerator.hpp``
 
-- ``qristal/core/session_utils.hpp``
-
 - ``qristal/core/utils.hpp``
 
 - ``string``
+
+- ``string_view``
+
+- ``type_traits``
 
 - ``unordered_map``
 

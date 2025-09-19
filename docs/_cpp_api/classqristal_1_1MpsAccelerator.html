@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Class MpsAccelerator &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -84,6 +88,7 @@
 <li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html">Class CirqQsimCPU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
@@ -93,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1sequence__pass.html">Class sequence_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
@@ -143,21 +149,21 @@
            <div itemprop="articleBody">
              
   <section id="class-mpsaccelerator">
-<span id="exhale-class-classqristal-1-1mpsaccelerator"></span><h1>Class MpsAccelerator<a class="headerlink" href="#class-mpsaccelerator" title="Permalink to this headline"></a></h1>
+<span id="exhale-class-classqristal-1-1mpsaccelerator"></span><h1>Class MpsAccelerator<a class="headerlink" href="#class-mpsaccelerator" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_emulator_include_qristal_emulator_nv_sim_mps_accelerator.hpp.html#file-emulator-include-qristal-emulator-nv-sim-mps-accelerator-hpp"><span class="std std-ref">File mps_accelerator.hpp</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this heading"></a></h2>
 <section id="base-type">
-<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this headline"></a></h3>
+<h3>Base Type<a class="headerlink" href="#base-type" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">xacc::Accelerator</span></code></p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading"></a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal14MpsAcceleratorE">
 <span id="_CPPv3N7qristal14MpsAcceleratorE"></span><span id="_CPPv2N7qristal14MpsAcceleratorE"></span><span id="qristal::MpsAccelerator"></span><span class="target" id="classqristal_1_1MpsAccelerator"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MpsAccelerator</span></span></span><span class="w"> </span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="k"><span class="pre">public</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAcceleratorE" title="Permalink to this definition"></a><br /></dt>
@@ -169,7 +175,7 @@
 <span id="_CPPv3NK7qristal14MpsAccelerator4nameEv"></span><span id="_CPPv2NK7qristal14MpsAccelerator4nameEv"></span><span id="qristal::MpsAccelerator::nameC"></span><span class="target" id="classqristal_1_1MpsAccelerator_1aded470ca52cdb3d3a110c36520ab2f33"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">name</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK7qristal14MpsAccelerator4nameEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the name of the backend accelerator. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Backend name </p>
 </dd>
 </dl>
@@ -180,7 +186,7 @@
 <span id="_CPPv3NK7qristal14MpsAccelerator11descriptionEv"></span><span id="_CPPv2NK7qristal14MpsAccelerator11descriptionEv"></span><span id="qristal::MpsAccelerator::descriptionC"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a528562d22a147e2f72c4b0964316997a"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">description</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4NK7qristal14MpsAccelerator11descriptionEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the short description of the backend accelerator. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Description string </p>
 </dd>
 </dl>
@@ -191,7 +197,7 @@
 <span id="_CPPv3N7qristal14MpsAccelerator10initializeERKN4xacc16HeterogeneousMapE"></span><span id="_CPPv2N7qristal14MpsAccelerator10initializeERKN4xacc16HeterogeneousMapE"></span><span id="qristal::MpsAccelerator::initialize__xacc::HeterogeneousMapCR"></span><span class="target" id="classqristal_1_1MpsAccelerator_1ac48c93763dcd6f7dd49895d732bf76a4"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialize</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">params</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator10initializeERKN4xacc16HeterogeneousMapE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Initialize the backend accelerator. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>params</strong> – Configuration parameters </p>
 </dd>
 </dl>
@@ -202,7 +208,7 @@
 <span id="_CPPv3N7qristal14MpsAccelerator19updateConfigurationERKN4xacc16HeterogeneousMapE"></span><span id="_CPPv2N7qristal14MpsAccelerator19updateConfigurationERKN4xacc16HeterogeneousMapE"></span><span id="qristal::MpsAccelerator::updateConfiguration__xacc::HeterogeneousMapCR"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a8b70a0b0f4b6b9e9242083708c7ab693"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">updateConfiguration</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">config</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator19updateConfigurationERKN4xacc16HeterogeneousMapE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Update the backend accelerator’s configurations. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>config</strong> – Parameters to update </p>
 </dd>
 </dl>
@@ -210,10 +216,10 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal14MpsAccelerator17configurationKeysEv">
-<span id="_CPPv3N7qristal14MpsAccelerator17configurationKeysEv"></span><span id="_CPPv2N7qristal14MpsAccelerator17configurationKeysEv"></span><span id="qristal::MpsAccelerator::configurationKeys"></span><span class="target" id="classqristal_1_1MpsAccelerator_1adf10a4e726e4ee2b92d493cac86f280a"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configurationKeys</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator17configurationKeysEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7qristal14MpsAccelerator17configurationKeysEv"></span><span id="_CPPv2N7qristal14MpsAccelerator17configurationKeysEv"></span><span id="qristal::MpsAccelerator::configurationKeys"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a111fb1698e963de1649c9adb5b623512"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configurationKeys</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator17configurationKeysEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the list of configuration options. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Names of configuration options </p>
 </dd>
 </dl>
@@ -224,7 +230,7 @@
 <span id="_CPPv3N7qristal14MpsAccelerator11getBitOrderEv"></span><span id="_CPPv2N7qristal14MpsAccelerator11getBitOrderEv"></span><span id="qristal::MpsAccelerator::getBitOrder"></span><span class="target" id="classqristal_1_1MpsAccelerator_1ac59e82d5d64c7e0580171fb327bfbf68"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">BitOrder</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getBitOrder</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator11getBitOrderEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the Bit Order convention that the backend follows. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Bit order scheme </p>
 </dd>
 </dl>
@@ -235,7 +241,7 @@
 <span id="_CPPv3N7qristal14MpsAccelerator13getPropertiesEv"></span><span id="_CPPv2N7qristal14MpsAccelerator13getPropertiesEv"></span><span id="qristal::MpsAccelerator::getProperties"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a78911438ce8ab317cf83821d5eab7c10"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getProperties</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator13getPropertiesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the backend’s properties. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Properties as a list of (key, value) pairs </p>
 </dd>
 </dl>
@@ -246,7 +252,7 @@
 <span id="_CPPv3N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt10shared_ptrIN4xacc20CompositeInstructionEEE"></span><span id="_CPPv2N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt10shared_ptrIN4xacc20CompositeInstructionEEE"></span><span id="qristal::MpsAccelerator::execute__std::shared_ptr:xacc::AcceleratorBuffer:.std::shared_ptr:xacc::CompositeInstruction:C"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a07313478a9582122b42659679a4686db"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">compositeInstruction</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt10shared_ptrIN4xacc20CompositeInstructionEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Execute a single quantum circuit and store results in the result buffer. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buffer</strong> – Accelerator backend to store execution results and info </p></li>
 <li><p><strong>compositeInstruction</strong> – Input circuit to execute </p></li>
@@ -257,10 +263,10 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEE">
-<span id="_CPPv3N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEE"></span><span id="_CPPv2N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEE"></span><span id="qristal::MpsAccelerator::execute__std::shared_ptr:xacc::AcceleratorBuffer:.std::vector:std::shared_ptr:xacc::CompositeInstruction::C"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a80ba9158953f1d4bc91afb1ec7769a02"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">compositeInstructions</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEE"></span><span id="_CPPv2N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEE"></span><span id="qristal::MpsAccelerator::execute__std::shared_ptr:xacc::AcceleratorBuffer:.std::vector:std::shared_ptr:xacc::CompositeInstruction::C"></span><span class="target" id="classqristal_1_1MpsAccelerator_1ae7e701ba647fa593fb3baf04499f4b19"></span><span class="k"><span class="pre">virtual</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">compositeInstructions</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">override</span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator7executeENSt10shared_ptrIN4xacc17AcceleratorBufferEEEKNSt6vectorINSt10shared_ptrIN4xacc20CompositeInstructionEEEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Execute list of quantum circuits and store results in the result buffer. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>buffer</strong> – Accelerator backend to store execution results and info </p></li>
 <li><p><strong>compositeInstructions</strong> – List of input circuits to execute </p></li>
@@ -277,7 +283,7 @@
 <span id="_CPPv3N7qristal14MpsAccelerator11apply_noiseENSt10shared_ptrIN4xacc11InstructionEEER13MPSStateSpaceRKN7qristal8internal14nv_noise_modelE"></span><span id="_CPPv2N7qristal14MpsAccelerator11apply_noiseENSt10shared_ptrIN4xacc11InstructionEEER13MPSStateSpaceRKN7qristal8internal14nv_noise_modelE"></span><span id="qristal::MpsAccelerator::apply_noise__std::shared_ptr:xacc::Instruction:.MPSStateSpaceR.qristal::internal::nv_noise_modelCR"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a8cfcf87ddccaf3f9d92245af67671985"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">apply_noise</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Instruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">inst</span></span>, <span class="n"><span class="pre">MPSStateSpace</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">state</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">qristal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">internal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nv_noise_model</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">noise_model</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator11apply_noiseENSt10shared_ptrIN4xacc11InstructionEEER13MPSStateSpaceRKN7qristal8internal14nv_noise_modelE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Apply noise channels on a qubit’s state. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>inst</strong> – List of instruction, i.e. quantum circuit, to execute </p></li>
 <li><p><strong>state</strong> – Qubit state </p></li>
@@ -301,8 +307,8 @@
 <dd></dd></dl>
 
 <dl class="cpp var">
-<dt class="sig sig-object cpp" id="_CPPv4N7qristal14MpsAccelerator10m_num_gpusE">
-<span id="_CPPv3N7qristal14MpsAccelerator10m_num_gpusE"></span><span id="_CPPv2N7qristal14MpsAccelerator10m_num_gpusE"></span><span id="qristal::MpsAccelerator::m_num_gpus__i"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a33b62c1cf4a0e27d2c366c2969b912f8"></span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_num_gpus</span></span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator10m_num_gpusE" title="Permalink to this definition"></a><br /></dt>
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal14MpsAccelerator16m_gpu_device_idsE">
+<span id="_CPPv3N7qristal14MpsAccelerator16m_gpu_device_idsE"></span><span id="_CPPv2N7qristal14MpsAccelerator16m_gpu_device_idsE"></span><span id="qristal::MpsAccelerator::m_gpu_device_ids__std::vector:s:"></span><span class="target" id="classqristal_1_1MpsAccelerator_1a52c108fe71ceafda5d190a1a921e1e0f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">m_gpu_device_ids</span></span></span><a class="headerlink" href="#_CPPv4N7qristal14MpsAccelerator16m_gpu_device_idsE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp var">

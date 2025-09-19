@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1aacdb0d9acd9238a42d95dc7007316c40:
+
+Function qristal::create_noise_aware_placement_pass(std::shared_ptr<xacc::Accelerator>)
+=======================================================================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_noise_aware_placement_pass(std::shared_ptr<xacc::Accelerator>)
+   :project: My Project

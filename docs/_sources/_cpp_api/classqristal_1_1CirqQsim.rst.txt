@@ -15,6 +15,12 @@ Base Type
 - ``public xacc::Accelerator``
 
 
+Derived Type
+************
+
+- ``public qristal::CirqQsimCPU`` (:ref:`exhale_class_classqristal_1_1CirqQsimCPU`)
+
+
 Class Documentation
 -------------------
 

@@ -37,8 +37,6 @@ Includes
 
 - ``qristal/core/backends/qb_hardware/qb_visitor.hpp`` (:ref:`file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp`)
 
-- ``qristal/core/session_utils.hpp``
-
 - ``string``
 
 - ``vector``
@@ -70,5 +68,5 @@ Functions
 ---------
 
 
-- :ref:`exhale_function_namespaceqristal_1a533e3df3cb74a558333ef0a19ac41681`
+- :ref:`exhale_function_namespaceqristal_1a9a73e5108b4c5918f2b1c0f22be34d08`
 

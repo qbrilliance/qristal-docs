@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>File noise_aware_placement_pass.hpp &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -49,9 +53,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -96,9 +100,9 @@
            <div itemprop="articleBody">
              
   <section id="file-noise-aware-placement-pass-hpp">
-<span id="file-core-include-qristal-core-passes-noise-aware-placement-pass-hpp"></span><h1>File noise_aware_placement_pass.hpp<a class="headerlink" href="#file-noise-aware-placement-pass-hpp" title="Permalink to this headline"></a></h1>
+<span id="file-core-include-qristal-core-passes-noise-aware-placement-pass-hpp"></span><h1>File noise_aware_placement_pass.hpp<a class="headerlink" href="#file-noise-aware-placement-pass-hpp" title="Permalink to this heading"></a></h1>
 <p>↰ <a class="reference internal" href="dir_core_include_qristal_core_passes.html#dir-core-include-qristal-core-passes"><span class="std std-ref">Parent directory</span></a> (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes</span></code>)</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#definition-core-include-qristal-core-passes-noise-aware-placement-pass-hpp" id="id1">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/noise_aware_placement_pass.hpp</span></code>)</a></p></li>
@@ -107,38 +111,38 @@
 <li><p><a class="reference internal" href="#classes" id="id4">Classes</a></p></li>
 <li><p><a class="reference internal" href="#functions" id="id5">Functions</a></p></li>
 </ul>
-</div>
+</nav>
 <section id="definition-core-include-qristal-core-passes-noise-aware-placement-pass-hpp">
-<h2>Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/noise_aware_placement_pass.hpp</span></code>)<a class="headerlink" href="#definition-core-include-qristal-core-passes-noise-aware-placement-pass-hpp" title="Permalink to this headline"></a></h2>
+<h2>Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/noise_aware_placement_pass.hpp</span></code>)<a class="headerlink" href="#definition-core-include-qristal-core-passes-noise-aware-placement-pass-hpp" title="Permalink to this heading"></a></h2>
 </section>
 <section id="includes">
-<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this headline"></a></h2>
+<h2>Includes<a class="headerlink" href="#includes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">base_pass.hpp</span></code> (<a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#file-core-include-qristal-core-passes-base-pass-hpp"><span class="std std-ref">File base_pass.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">memory</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_config.hpp</span></code> (<a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html#file-core-include-qristal-core-passes-noise-aware-placement-config-hpp"><span class="std std-ref">File noise_aware_placement_config.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">optional</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qristal/core/passes/base_pass.hpp</span></code> (<a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#file-core-include-qristal-core-passes-base-pass-hpp"><span class="std std-ref">File base_pass.hpp</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">qristal/core/passes/noise_aware_placement_config.hpp</span></code> (<a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html#file-core-include-qristal-core-passes-noise-aware-placement-config-hpp"><span class="std std-ref">File noise_aware_placement_config.hpp</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">unordered_map</span></code></p></li>
 </ul>
 </section>
 <section id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="namespace_qristal.html#namespace-qristal"><span class="std std-ref">Namespace qristal</span></a></p></li>
 <li><p><a class="reference internal" href="namespace_xacc.html#namespace-xacc"><span class="std std-ref">Namespace xacc</span></a></p></li>
 </ul>
 </section>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html#exhale-class-classqristal-1-1noise-aware-placement-pass"><span class="std std-ref">Class noise_aware_placement_pass</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac.html#exhale-function-namespaceqristal-1a717e4729da81e7d44b1180889a7c3fac"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59.html#exhale-function-namespaceqristal-1aa13e379a0c2cb8df6223c9a145b37c59"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1aacdb0d9acd9238a42d95dc7007316c40.html#exhale-function-namespaceqristal-1aacdb0d9acd9238a42d95dc7007316c40"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ab84e7009dac394c6989cb9f130e42b08.html#exhale-function-namespaceqristal-1ab84e7009dac394c6989cb9f130e42b08"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</span></a></p></li>
 </ul>
 </section>
 </section>

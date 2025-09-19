@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Class NoiseModel &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -84,6 +88,7 @@
 <li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html">Class CirqQsimCPU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
@@ -93,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1sequence__pass.html">Class sequence_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
@@ -143,21 +149,21 @@
            <div itemprop="articleBody">
              
   <section id="class-noisemodel">
-<span id="exhale-class-classqristal-1-1noisemodel"></span><h1>Class NoiseModel<a class="headerlink" href="#class-noisemodel" title="Permalink to this headline"></a></h1>
+<span id="exhale-class-classqristal-1-1noisemodel"></span><h1>Class NoiseModel<a class="headerlink" href="#class-noisemodel" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_model.hpp.html#file-core-include-qristal-core-noise-model-noise-model-hpp"><span class="std std-ref">File noise_model.hpp</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this heading"></a></h2>
 <section id="derived-type">
-<h3>Derived Type<a class="headerlink" href="#derived-type" title="Permalink to this headline"></a></h3>
+<h3>Derived Type<a class="headerlink" href="#derived-type" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qristal::EmulatorNoiseModel</span></code> (<a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html#exhale-class-classqristal-1-1emulatornoisemodel"><span class="std std-ref">Class EmulatorNoiseModel</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading"></a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal10NoiseModelE">
 <span id="_CPPv3N7qristal10NoiseModelE"></span><span id="_CPPv2N7qristal10NoiseModelE"></span><span id="qristal::NoiseModel"></span><span class="target" id="classqristal_1_1NoiseModel"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NoiseModel</span></span></span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModelE" title="Permalink to this definition"></a><br /></dt>
@@ -195,7 +201,7 @@
 <span id="_CPPv3N7qristal10NoiseModel10NoiseModelERKN8nlohmann4jsonE"></span><span id="_CPPv2N7qristal10NoiseModel10NoiseModelERKN8nlohmann4jsonE"></span><span id="qristal::NoiseModel::NoiseModel__nlohmann::jsonCR"></span><span class="target" id="classqristal_1_1NoiseModel_1ac732d35076fac591a9118f4085995772"></span><span class="sig-name descname"><span class="n"><span class="pre">NoiseModel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">nlohmann</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">json</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">js</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel10NoiseModelERKN8nlohmann4jsonE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Construct a new Noise Model object from JSON. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>js</strong> – JSON object contains noise model parameters </p>
 </dd>
 </dl>
@@ -206,7 +212,7 @@
 <span id="_CPPv3N7qristal10NoiseModel10NoiseModelERK15NoiseProperties"></span><span id="_CPPv2N7qristal10NoiseModel10NoiseModelERK15NoiseProperties"></span><span id="qristal::NoiseModel::NoiseModel__NoisePropertiesCR"></span><span class="target" id="classqristal_1_1NoiseModel_1ad8447bba18c74d69966492eb11748fe6"></span><span class="sig-name descname"><span class="n"><span class="pre">NoiseModel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqristal_1_1NoiseProperties.html#_CPPv4N7qristal15NoisePropertiesE" title="qristal::NoiseProperties"><span class="n"><span class="pre">NoiseProperties</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">noise_props</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel10NoiseModelERK15NoiseProperties" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Construct a new Noise Model object from noise properties. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>noise_props</strong> – Device noise properties </p>
 </dd>
 </dl>
@@ -214,12 +220,12 @@
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal10NoiseModel10NoiseModelERKNSt6stringE6size_tNSt8optionalI17QubitConnectivityEENSt8optionalINSt17reference_wrapperIKNSt6vectorINSt4pairI6size_t6size_tEEEEEEEE">
-<span id="_CPPv3N7qristal10NoiseModel10NoiseModelERKNSt6stringE6size_tNSt8optionalI17QubitConnectivityEENSt8optionalINSt17reference_wrapperIKNSt6vectorINSt4pairI6size_t6size_tEEEEEEEE"></span><span id="_CPPv2N7qristal10NoiseModel10NoiseModelERKNSt6stringE6size_tNSt8optionalI17QubitConnectivityEENSt8optionalINSt17reference_wrapperIKNSt6vectorINSt4pairI6size_t6size_tEEEEEEEE"></span><span id="qristal::NoiseModel::NoiseModel__ssCR.s.std::optional:QubitConnectivity:.std::optional:std::reference_wrapper:std::vector:std::pair:s.s::C::"></span><span class="target" id="classqristal_1_1NoiseModel_1a649dc24620e8591462037450be2f5081"></span><span class="sig-name descname"><span class="n"><span class="pre">NoiseModel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_qubits</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivityE" title="qristal::NoiseModel::QubitConnectivity"><span class="n"><span class="pre">QubitConnectivity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">connectivity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">reference_wrapper</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">connected_pairs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel10NoiseModelERKNSt6stringE6size_tNSt8optionalI17QubitConnectivityEENSt8optionalINSt17reference_wrapperIKNSt6vectorINSt4pairI6size_t6size_tEEEEEEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7qristal10NoiseModel10NoiseModelERKNSt6stringE6size_tNSt8optionalI17QubitConnectivityEENSt8optionalINSt17reference_wrapperIKNSt6vectorINSt4pairI6size_t6size_tEEEEEEEE"></span><span id="_CPPv2N7qristal10NoiseModel10NoiseModelERKNSt6stringE6size_tNSt8optionalI17QubitConnectivityEENSt8optionalINSt17reference_wrapperIKNSt6vectorINSt4pairI6size_t6size_tEEEEEEEE"></span><span id="qristal::NoiseModel::NoiseModel__ssCR.s.std::optional:QubitConnectivity:.std::optional:std::reference_wrapper:std::vector:std::pair:s.s::C::"></span><span class="target" id="classqristal_1_1NoiseModel_1a87fb445014701cf08281cc8c08745d93"></span><span class="sig-name descname"><span class="n"><span class="pre">NoiseModel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">name</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_qubits</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivityE" title="qristal::NoiseModel::QubitConnectivity"><span class="n"><span class="pre">QubitConnectivity</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">connectivity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">optional</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">reference_wrapper</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">connected_pairs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">nullopt</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel10NoiseModelERKNSt6stringE6size_tNSt8optionalI17QubitConnectivityEENSt8optionalINSt17reference_wrapperIKNSt6vectorINSt4pairI6size_t6size_tEEEEEEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Build and return a registered noise model. Optionally allows for customization, e.g., number of qubits, if supported. </p>
 <p>
 IMPORTANT NOTE: The ability to build and return some noise models requires the Qristal Emulator library libqristal_emulator.so to be found at runtime. To dynamically load libqristal_emulator.so requires: (1) For Python users: libqristal_emulator.so is installed in the lib/ directory of the Qristal core package (i.e., the same location as the core Python package itself) (2) For C++ users: if building an executable linking against libqristal_core, you need to set the rpath of your executable target to include the directory where libqristal_emulator.so located. In both cases, LD_LIBRARY_PATH can <strong>also</strong> be used to point the dynamic linker to the location of libqristal_emulator.so (if setting rpath fails). </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>name</strong> – The name of the registered noise model. </p></li>
 <li><p><strong>nb_qubits</strong> – Number of qubits </p></li>
@@ -227,7 +233,7 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <li><p><strong>connected_pairs</strong> – [Optional] Custom connectivity topology (if not AllToAll) </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Noise model object</p>
 </dd>
 </dl>
@@ -238,7 +244,7 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <span id="_CPPv3NK7qristal10NoiseModel7to_jsonEv"></span><span id="_CPPv2NK7qristal10NoiseModel7to_jsonEv"></span><span id="qristal::NoiseModel::to_jsonC"></span><span class="target" id="classqristal_1_1NoiseModel_1aaeda633b965b4296c55428ee47e2e2ae"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">to_json</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel7to_jsonEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Convert noise model to json string. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>JSON string </p>
 </dd>
 </dl>
@@ -246,10 +252,10 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qristal10NoiseModel16get_connectivityEv">
-<span id="_CPPv3NK7qristal10NoiseModel16get_connectivityEv"></span><span id="_CPPv2NK7qristal10NoiseModel16get_connectivityEv"></span><span id="qristal::NoiseModel::get_connectivityC"></span><span class="target" id="classqristal_1_1NoiseModel_1a4943a12d0ec232889e7a8e8e7996f8d5"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_connectivity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel16get_connectivityEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qristal10NoiseModel16get_connectivityEv"></span><span id="_CPPv2NK7qristal10NoiseModel16get_connectivityEv"></span><span id="qristal::NoiseModel::get_connectivityC"></span><span class="target" id="classqristal_1_1NoiseModel_1a13d9eaa1318a3b48239638ed49ff7677"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_connectivity</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel16get_connectivityEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the connectivity (pairs of connected qubits) </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Connectivity as list of qubit index pairs </p>
 </dd>
 </dl>
@@ -257,10 +263,10 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qristal10NoiseModel18get_readout_errorsEv">
-<span id="_CPPv3NK7qristal10NoiseModel18get_readout_errorsEv"></span><span id="_CPPv2NK7qristal10NoiseModel18get_readout_errorsEv"></span><span id="qristal::NoiseModel::get_readout_errorsC"></span><span class="target" id="classqristal_1_1NoiseModel_1ab44a0c023aaf1263bd5a88468942426b"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="structqristal_1_1ReadoutError.html#_CPPv4N7qristal12ReadoutErrorE" title="qristal::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_readout_errors</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel18get_readout_errorsEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qristal10NoiseModel18get_readout_errorsEv"></span><span id="_CPPv2NK7qristal10NoiseModel18get_readout_errorsEv"></span><span id="qristal::NoiseModel::get_readout_errorsC"></span><span class="target" id="classqristal_1_1NoiseModel_1a3790d65543f7bd73c358d0e3b78d535c"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><a class="reference internal" href="structqristal_1_1ReadoutError.html#_CPPv4N7qristal12ReadoutErrorE" title="qristal::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_readout_errors</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel18get_readout_errorsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get the readout errors. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Map from qubit index to readout errors </p>
 </dd>
 </dl>
@@ -268,10 +274,10 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qristal10NoiseModel18get_noise_channelsEv">
-<span id="_CPPv3NK7qristal10NoiseModel18get_noise_channelsEv"></span><span id="_CPPv2NK7qristal10NoiseModel18get_noise_channelsEv"></span><span id="qristal::NoiseModel::get_noise_channelsC"></span><span class="target" id="classqristal_1_1NoiseModel_1ad21331449bce1b12c492e4afa6a7ae26"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">NoiseChannel</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_noise_channels</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel18get_noise_channelsEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qristal10NoiseModel18get_noise_channelsEv"></span><span id="_CPPv2NK7qristal10NoiseModel18get_noise_channelsEv"></span><span id="qristal::NoiseModel::get_noise_channelsC"></span><span class="target" id="classqristal_1_1NoiseModel_1a18ab6f15f85012a7e37e706d7322378f"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">NoiseChannel</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">get_noise_channels</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel18get_noise_channelsEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Get all the gate noise channels. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Map from (gate name + qubit operands) to noise channels </p>
 </dd>
 </dl>
@@ -282,7 +288,7 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <span id="_CPPv3N7qristal10NoiseModel14add_gate_errorERK12NoiseChannelRKNSt6stringERKNSt6vectorI6size_tEE"></span><span id="_CPPv2N7qristal10NoiseModel14add_gate_errorERK12NoiseChannelRKNSt6stringERKNSt6vectorI6size_tEE"></span><span id="qristal::NoiseModel::add_gate_error__NoiseChannelCR.ssCR.std::vector:s:CR"></span><span class="target" id="classqristal_1_1NoiseModel_1a5808a0205a33436ae47e3683c0a1f1d0"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_gate_error</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">NoiseChannel</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">noise_channel</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">gate_name</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">qubits</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel14add_gate_errorERK12NoiseChannelRKNSt6stringERKNSt6vectorI6size_tEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Add a gate error channel for a gate operation. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>noise_channel</strong> – Noise channel to be associated with the gate </p></li>
 <li><p><strong>gate_name</strong> – Name of the gates </p></li>
@@ -297,7 +303,7 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <span id="_CPPv3N7qristal10NoiseModel22add_qubit_connectivityEii"></span><span id="_CPPv2N7qristal10NoiseModel22add_qubit_connectivityEii"></span><span id="qristal::NoiseModel::add_qubit_connectivity__i.i"></span><span class="target" id="classqristal_1_1NoiseModel_1a6697476fd330f9a13e16ed7e36ace021"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">add_qubit_connectivity</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q1</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">q2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel22add_qubit_connectivityEii" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Add a connected qubit pair to the topology model. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>q1</strong> – First qubit index </p></li>
 <li><p><strong>q2</strong> – Second qubit index </p></li>
@@ -311,7 +317,7 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <span id="_CPPv3N7qristal10NoiseModel23set_qubit_readout_errorE6size_tRK12ReadoutError"></span><span id="_CPPv2N7qristal10NoiseModel23set_qubit_readout_errorE6size_tRK12ReadoutError"></span><span id="qristal::NoiseModel::set_qubit_readout_error__s.ReadoutErrorCR"></span><span class="target" id="classqristal_1_1NoiseModel_1a6106e83eac9bd5882b0b7068000cd819"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_qubit_readout_error</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qubitIdx</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="structqristal_1_1ReadoutError.html#_CPPv4N7qristal12ReadoutErrorE" title="qristal::ReadoutError"><span class="n"><span class="pre">ReadoutError</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">ro_error</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel23set_qubit_readout_errorE6size_tRK12ReadoutError" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Set the qubit readout error. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>qubitIdx</strong> – Qubit to set </p></li>
 <li><p><strong>ro_error</strong> – Readout error </p></li>
@@ -325,7 +331,7 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <span id="_CPPv3NK7qristal10NoiseModel17get_qobj_compilerEv"></span><span id="_CPPv2NK7qristal10NoiseModel17get_qobj_compilerEv"></span><span id="qristal::NoiseModel::get_qobj_compilerC"></span><span class="target" id="classqristal_1_1NoiseModel_1acc73ff28358d7eeb179828877e61d061"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_qobj_compiler</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel17get_qobj_compilerEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Retrieve the name of the QObj compiler to use with the AER simulator. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Name of the QObj compiler </p>
 </dd>
 </dl>
@@ -339,10 +345,10 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qristal10NoiseModel20get_qobj_basis_gatesEv">
-<span id="_CPPv3NK7qristal10NoiseModel20get_qobj_basis_gatesEv"></span><span id="_CPPv2NK7qristal10NoiseModel20get_qobj_basis_gatesEv"></span><span id="qristal::NoiseModel::get_qobj_basis_gatesC"></span><span class="target" id="classqristal_1_1NoiseModel_1a2870c41a96de9aa5b7b50aa5c8e78b3f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_qobj_basis_gates</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel20get_qobj_basis_gatesEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qristal10NoiseModel20get_qobj_basis_gatesEv"></span><span id="_CPPv2NK7qristal10NoiseModel20get_qobj_basis_gatesEv"></span><span id="qristal::NoiseModel::get_qobj_basis_gatesC"></span><span class="target" id="classqristal_1_1NoiseModel_1a4e680754752cc09088c03d6ec63ab10f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_qobj_basis_gates</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel20get_qobj_basis_gatesEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Return the list of basis gates that the AER QObj will be referring to. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>List of basis gates. Note: This corresponds to which QObj compiler being set. The AER simulator will only look for gate noise associated with these gates. </p>
 </dd>
 </dl>
@@ -371,14 +377,14 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <span id="_CPPv3N7qristal10NoiseModel23decoherence_pauli_errorEddd"></span><span id="_CPPv2N7qristal10NoiseModel23decoherence_pauli_errorEddd"></span><span id="qristal::NoiseModel::decoherence_pauli_error__double.double.double"></span><span class="target" id="classqristal_1_1NoiseModel_1a0505821676be0f36b6719edbe58bd037"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">decoherence_pauli_error</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">t1</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">tphi</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">gate_time</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel23decoherence_pauli_errorEddd" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Calculate component of Pauli error caused by decoherence on a single qubit. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>t1</strong> – T1 time </p></li>
 <li><p><strong>tphi</strong> – Tphi time </p></li>
 <li><p><strong>gate_time</strong> – Duration of the gate affected by this error. </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Calculated Pauli error resulting from decoherence. </p>
 </dd>
 </dl>
@@ -389,10 +395,16 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <span id="_CPPv3NK7qristal10NoiseModel31to_noise_aware_placement_configEv"></span><span id="_CPPv2NK7qristal10NoiseModel31to_noise_aware_placement_configEv"></span><span id="qristal::NoiseModel::to_noise_aware_placement_configC"></span><span class="target" id="classqristal_1_1NoiseModel_1ab035e0a4c9c2ee9c5ea4ec1a78ad41b7"></span><a class="reference internal" href="structqristal_1_1noise__aware__placement__config.html#_CPPv4N7qristal28noise_aware_placement_configE" title="qristal::noise_aware_placement_config"><span class="n"><span class="pre">noise_aware_placement_config</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">to_noise_aware_placement_config</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal10NoiseModel31to_noise_aware_placement_configEv" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Helper method to convert this <a class="reference internal" href="#classqristal_1_1NoiseModel"><span class="std std-ref">NoiseModel</span></a> into a noise aware placement configuration. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p><a class="reference internal" href="structqristal_1_1noise__aware__placement__config.html#structqristal_1_1noise__aware__placement__config"><span class="std std-ref">noise_aware_placement_config</span></a></p>
 </dd>
 </dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal10NoiseModel37initialise_noise_properties_from_jsonERKN8nlohmann4jsonE">
+<span id="_CPPv3N7qristal10NoiseModel37initialise_noise_properties_from_jsonERKN8nlohmann4jsonE"></span><span id="_CPPv2N7qristal10NoiseModel37initialise_noise_properties_from_jsonERKN8nlohmann4jsonE"></span><span id="qristal::NoiseModel::initialise_noise_properties_from_json__nlohmann::jsonCR"></span><span class="target" id="classqristal_1_1NoiseModel_1a34dd9594919c66ff0a1539d44e42cc50"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initialise_noise_properties_from_json</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">nlohmann</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">json</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">js</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel37initialise_noise_properties_from_jsonERKN8nlohmann4jsonE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create qristal noise properties and channels from type nlohmann::json. </p>
 </dd></dl>
 
 </div>
@@ -433,10 +445,10 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-protected-static-functions">Protected Static Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal10NoiseModel12make_defaultER10NoiseModel6size_t17QubitConnectivityRKNSt6vectorINSt4pairI6size_t6size_tEEEE">
-<span id="_CPPv3N7qristal10NoiseModel12make_defaultER10NoiseModel6size_t17QubitConnectivityRKNSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="_CPPv2N7qristal10NoiseModel12make_defaultER10NoiseModel6size_t17QubitConnectivityRKNSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="qristal::NoiseModel::make_default__NoiseModelR.s.QubitConnectivity.std::vector:std::pair:s.s::CR"></span><span class="target" id="classqristal_1_1NoiseModel_1af0809e12f28813fed9a9a9814d8abf9f"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">make_default</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModelE" title="qristal::NoiseModel"><span class="n"><span class="pre">NoiseModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">make_from_this</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_qubits</span></span>, <a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivityE" title="qristal::NoiseModel::QubitConnectivity"><span class="n"><span class="pre">QubitConnectivity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">connectivity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivityE" title="qristal::NoiseModel::QubitConnectivity"><span class="n"><span class="pre">QubitConnectivity</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivity8AllToAllE" title="qristal::NoiseModel::QubitConnectivity::AllToAll"><span class="n"><span class="pre">AllToAll</span></span></a>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">connected_pairs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel12make_defaultER10NoiseModel6size_t17QubitConnectivityRKNSt6vectorINSt4pairI6size_t6size_tEEEE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7qristal10NoiseModel12make_defaultER10NoiseModel6size_t17QubitConnectivityRKNSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="_CPPv2N7qristal10NoiseModel12make_defaultER10NoiseModel6size_t17QubitConnectivityRKNSt6vectorINSt4pairI6size_t6size_tEEEE"></span><span id="qristal::NoiseModel::make_default__NoiseModelR.s.QubitConnectivity.std::vector:std::pair:s.s::CR"></span><span class="target" id="classqristal_1_1NoiseModel_1a8a94854b78998f608f672403a3dbefc3"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">make_default</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModelE" title="qristal::NoiseModel"><span class="n"><span class="pre">NoiseModel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">make_from_this</span></span>, <span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nb_qubits</span></span>, <a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivityE" title="qristal::NoiseModel::QubitConnectivity"><span class="n"><span class="pre">QubitConnectivity</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">connectivity</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivityE" title="qristal::NoiseModel::QubitConnectivity"><span class="n"><span class="pre">QubitConnectivity</span></span></a><span class="p"><span class="pre">::</span></span><a class="reference internal" href="#_CPPv4N7qristal10NoiseModel17QubitConnectivity8AllToAllE" title="qristal::NoiseModel::QubitConnectivity::AllToAll"><span class="n"><span class="pre">AllToAll</span></span></a>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">connected_pairs</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="p"><span class="pre">}</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal10NoiseModel12make_defaultER10NoiseModel6size_t17QubitConnectivityRKNSt6vectorINSt4pairI6size_t6size_tEEEE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Build and return the default noise model. Optionally allows for customization, e.g., number of qubits, if supported. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>make_from_this</strong> – The <a class="reference internal" href="#classqristal_1_1NoiseModel"><span class="std std-ref">NoiseModel</span></a> instance to build into the default noise model. </p></li>
 <li><p><strong>nb_qubits</strong> – Number of qubits </p></li>
@@ -444,7 +456,7 @@ IMPORTANT NOTE: The ability to build and return some noise models requires the Q
 <li><p><strong>connected_pairs</strong> – [Optional] Custom connectivity topology (if not AllToAll) </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>Noise model object </p>
 </dd>
 </dl>

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Class VQEE &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -84,6 +88,7 @@
 <li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html">Class CirqQsimCPU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
@@ -93,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1sequence__pass.html">Class sequence_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
@@ -143,12 +149,12 @@
            <div itemprop="articleBody">
              
   <section id="class-vqee">
-<span id="exhale-class-classqristal-1-1vqee-1-1vqee"></span><h1>Class VQEE<a class="headerlink" href="#class-vqee" title="Permalink to this headline"></a></h1>
+<span id="exhale-class-classqristal-1-1vqee-1-1vqee"></span><h1>Class VQEE<a class="headerlink" href="#class-vqee" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_vqee.hpp.html#file-core-include-qristal-core-optimization-vqee-vqee-hpp"><span class="std std-ref">File vqee.hpp</span></a></p></li>
 </ul>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading"></a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee4VQEEE">
 <span id="_CPPv3N7qristal4vqee4VQEEE"></span><span id="_CPPv2N7qristal4vqee4VQEEE"></span><span id="qristal::vqee::VQEE"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VQEE</span></span></span><a class="headerlink" href="#_CPPv4N7qristal4vqee4VQEEE" title="Permalink to this definition"></a><br /></dt>
@@ -172,22 +178,22 @@
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qristal4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi">
-<span id="_CPPv3NK7qristal4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi"></span><span id="_CPPv2NK7qristal4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi"></span><span id="qristal::vqee::VQEE::splitPauli__std::shared_ptr:xacc::quantum::PauliOperator:R.iC"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1ae7c42a8df4ed892fb1a8833c1d9fc718"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PauliOperator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">splitPauli</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PauliOperator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_pauli</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nTermsPerSplit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qristal4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi"></span><span id="_CPPv2NK7qristal4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi"></span><span id="qristal::vqee::VQEE::splitPauli__std::shared_ptr:xacc::quantum::PauliOperator:R.iC"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1abfbbf67fc0aeb8a641dac85e29d4fb9a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PauliOperator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">splitPauli</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">quantum</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">PauliOperator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_pauli</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">nTermsPerSplit</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal4vqee4VQEE10splitPauliERNSt10shared_ptrIN4xacc7quantum13PauliOperatorEEEi" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qristal4vqee4VQEE14getAcceleratorERKNSt6stringE">
-<span id="_CPPv3NK7qristal4vqee4VQEE14getAcceleratorERKNSt6stringE"></span><span id="_CPPv2NK7qristal4vqee4VQEE14getAcceleratorERKNSt6stringE"></span><span id="qristal::vqee::VQEE::getAccelerator__ssCRC"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1a0cb0f72e7938316de904f4bfd5c6f235"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAccelerator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">accName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal4vqee4VQEE14getAcceleratorERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qristal4vqee4VQEE14getAcceleratorERKNSt6stringE"></span><span id="_CPPv2NK7qristal4vqee4VQEE14getAcceleratorERKNSt6stringE"></span><span id="qristal::vqee::VQEE::getAccelerator__ssCRC"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1a8a00a9f6f5cfdba34cf665b67bf6942a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAccelerator</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">accName</span></span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal4vqee4VQEE14getAcceleratorERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4NK7qristal4vqee4VQEE9getAnsatzEv">
-<span id="_CPPv3NK7qristal4vqee4VQEE9getAnsatzEv"></span><span id="_CPPv2NK7qristal4vqee4VQEE9getAnsatzEv"></span><span id="qristal::vqee::VQEE::getAnsatzC"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1a4fa739a49f36aba04346e776bd871557"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnsatz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal4vqee4VQEE9getAnsatzEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3NK7qristal4vqee4VQEE9getAnsatzEv"></span><span id="_CPPv2NK7qristal4vqee4VQEE9getAnsatzEv"></span><span id="qristal::vqee::VQEE::getAnsatzC"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1ad3ceccbf8e5fd38deb613b051b4a8cc4"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getAnsatz</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal4vqee4VQEE9getAnsatzEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
 <dt class="sig sig-object cpp" id="_CPPv4N7qristal4vqee4VQEE13getObservableEv">
-<span id="_CPPv3N7qristal4vqee4VQEE13getObservableEv"></span><span id="_CPPv2N7qristal4vqee4VQEE13getObservableEv"></span><span id="qristal::vqee::VQEE::getObservable"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1ad0a6c9c56d4296cb0f6b3f912d5af31a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Observable</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getObservable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal4vqee4VQEE13getObservableEv" title="Permalink to this definition"></a><br /></dt>
+<span id="_CPPv3N7qristal4vqee4VQEE13getObservableEv"></span><span id="_CPPv2N7qristal4vqee4VQEE13getObservableEv"></span><span id="qristal::vqee::VQEE::getObservable"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1a9fcb0fef3d4060e5cb7384f0867800ac"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Observable</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">getObservable</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal4vqee4VQEE13getObservableEv" title="Permalink to this definition"></a><br /></dt>
 <dd></dd></dl>
 
 <dl class="cpp function">
@@ -196,7 +202,7 @@
 <dd><p>Subroutines for visualising VQE convergence. </p>
 <p>Locate the iteration that produced the optimum theta</p>
 <dl class="field-list simple">
-<dt class="field-odd">Returns</dt>
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
 <dd class="field-odd"><p>Index that matches the optimum iteration found by XACC </p>
 </dd>
 </dl>
@@ -210,7 +216,7 @@
 <p>Example output:</p>
 <p>Iteration 96 Energy |################# -0.95 Theta Element 0 |####################### 0.33*pi Element 1 |##################### 0.19*pi Element 2 |################### -0.12*pi Element 3 |######################### 0.55*pi Iteration 97 Energy **|################ -0.98 Theta Element 0 **|####################### 0.3*pi Element 1 **|##################### 0.19*pi Element 2 **|#################### -0.059*pi Element 3 **|######################### 0.5*pi Iteration 98 Energy |################# -0.97 Theta Element 0 |###################### 0.29*pi Element 1 |##################### 0.14*pi Element 2 |#################### 0.061*pi Element 3 |######################### 0.55*pi</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>in_title</strong> – A string to be used as a title before the text-art output </p></li>
 <li><p><strong>in_start_elem</strong> – Index for the starting element within theta for which the next in_elem_n elements will be visualised </p></li>
@@ -227,7 +233,7 @@
 <span id="_CPPv3N7qristal4vqee4VQEE17generateEnergyVisEKNSt6vectorIdEEKNSt6stringEKiKiKiKi"></span><span id="_CPPv2N7qristal4vqee4VQEE17generateEnergyVisEKNSt6vectorIdEEKNSt6stringEKiKiKiKi"></span><span id="qristal::vqee::VQEE::generateEnergyVis__std::vector:double:C.ssC.iC.iC.iC.iC"></span><span class="target" id="classqristal_1_1vqee_1_1VQEE_1ab6761f1732b81e27ddf6b0e45b8d1706"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">generateEnergyVis</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_val</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_title</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_stride</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_scale</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">20</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_width</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_precision</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">2</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal4vqee4VQEE17generateEnergyVisEKNSt6vectorIdEEKNSt6stringEKiKiKiKi" title="Permalink to this definition"></a><br /></dt>
 <dd><p>Create a text-art bar graph for energy. The resultant visualisation is stored in params_.vis. The iteration corresponding to the optimum is marked ‘**’. Values are displayed at the right extremity of each bar. The scaling of bars is based on the energy at the first iteration, and rescales as soon as the size of a bar in any iteration is zero. </p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>in_val</strong> – An array with consecutive iterations separated by in_stride elements </p></li>
 <li><p><strong>in_title</strong> – A string to be used as a title before the text-art output </p></li>
@@ -237,7 +243,7 @@
 <li><p><strong>in_precision</strong> – The precision for printing a value at the right extremity of a bar</p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns</dt>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><p>String representation of energy convergence trace </p>
 </dd>
 </dl>

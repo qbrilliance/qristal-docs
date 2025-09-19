@@ -74,12 +74,12 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: 20053 and ma
 ## 7. Run some other examples
 
 1. Go to the Python examples folder in the image: `cd /mnt/qb/qristal/examples/python`
-2. Run example `qsim_noisy.py` using `python3 qsim_noisy.py`. You should get the output:
+2. Run example `qb_statevector_noisy.py` using `python3 qb_statevector_noisy.py`. You should get the output:
 ```shell
 {'110': 1024}
 ```
 4. Install the text editor `nano` to edit the noise properties using `apt install nano`.
-5. Open `qsim_noisy.py` with the text editor `nano` using `nano qsim_noisy.py`
+5. Open `qb_statevector_noisy.py` with the text editor `nano` using `nano qb_statevector_noisy.py`
 6. Within the text editor, turn on noise properties by uncommenting lines
     - ```python
       s.noise = True
@@ -88,7 +88,7 @@ Provided floating license, key: XXXXX-XXXXX-XXXXX-XXXXX, productID: 20053 and ma
       s.noise_model = qristal.core.NoiseModel("qb-nm1", n_qbits)
       ```
 7. Exit the text editor by hitting `Ctrl + x`, then enter `y` to save changes, then hit `Enter`.
-8. Rerun the example using the same command `python3 qsim_noisy.py`. You should see something similar to this output:
+8. Rerun the example using the same command `python3 qb_statevector_noisy.py`. You should see something similar to this output:
 ```shell
 Running in virtual machine: enforcing floating license!
 
@@ -143,5 +143,4 @@ We'd love to hear how you get on -- let your sales contact know!
 
 The following are known issues under active development:
 
-- Tensor network backends `qb-mps`, `qb-purification` and `qb-mpdo` should only be used with placement turned on (`session.noplacement=False`) and with TKET support for Qristal installed (`WITH_TKET=ON` at cmake time; customer images are shipped with Qristal already compiled this way).
-- Even with placement turned on, `qb-mps`, `qb-purification` and `qb-mpdo` will fail for some circuits if noise modelling is turned on and used with  QPU topologies that include connections between qubits with non-sequential indices.  The noise model `nm-3` is designed to be safe from this problem.
+- When using Cudaq-wrapped tensor network backends `cudaq:qb_mps`, `cudaq:qb_purification` and `cudaq:qb_mpdo`, all qubits in the circuit need to be measured. The measurement order of the qubits needs to be in increasing order of the qubit index. Only if these guidelines are followed will bitstring output registers from these backends be consistent with the outputs of other backends.

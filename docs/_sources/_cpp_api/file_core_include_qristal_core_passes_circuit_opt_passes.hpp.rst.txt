@@ -25,9 +25,9 @@ Includes
 --------
 
 
-- ``base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
-
 - ``memory``
+
+- ``qristal/core/passes/base_pass.hpp`` (:ref:`file_core_include_qristal_core_passes_base_pass.hpp`)
 
 - ``string``
 
@@ -49,18 +49,32 @@ Classes
 
 - :ref:`exhale_class_classqristal_1_1optimization__pass`
 
+- :ref:`exhale_class_classqristal_1_1sequence__pass`
+
 
 Functions
 ---------
 
 
-- :ref:`exhale_function_namespaceqristal_1a25c8bec252abb54a785117a93efcc789`
+- :ref:`exhale_function_namespaceqristal_1a487d72f94356a43f8efee9c2b34943d8`
 
-- :ref:`exhale_function_namespaceqristal_1a90f03c5a631a262eed975e2e4acf90dd`
+- :ref:`exhale_function_namespaceqristal_1abbbd7e3f01265e0e33a2801252dc0a53`
 
-- :ref:`exhale_function_namespaceqristal_1a69841193d5b7e6bd134ff73fd9ae0b6d`
+- :ref:`exhale_function_namespaceqristal_1a02c16ea9f8d031bd5bbf5c1d3c1970dc`
 
-- :ref:`exhale_function_namespaceqristal_1a933afc036cea2f09756ee761909d7624`
+- :ref:`exhale_function_namespaceqristal_1a2d2285d01e059fcd4a8c90d67b106743`
 
-- :ref:`exhale_function_namespaceqristal_1a3cf3918fcbcb2c559fb2c5336f6b637e`
+- :ref:`exhale_function_namespaceqristal_1a7558c8a4b20f4998486bf1d809094875`
+
+- :ref:`exhale_function_namespaceqristal_1ac864c8d9dcb9a05b398212c020d7d478`
+
+- :ref:`exhale_function_namespaceqristal_1ad08a9faa73b37279f1ead13be8093bab`
+
+- :ref:`exhale_function_namespaceqristal_1a81c3d19fd2682239bbd9249c69ec6dc0`
+
+- :ref:`exhale_function_namespaceqristal_1ad1a81d44b9dc71792af64f54992bbdd0`
+
+- :ref:`exhale_function_namespaceqristal_1a2a6ed3a4cfa3d0d8ec4b7f69367450c6`
+
+- :ref:`exhale_function_namespaceqristal_1a6b0c9fffff783343143a33f0214f08d2`
 

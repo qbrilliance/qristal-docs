@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1a7558c8a4b20f4998486bf1d809094875:
+
+Function qristal::create_initial_state_simplify_pass
+====================================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_initial_state_simplify_pass()
+   :project: My Project

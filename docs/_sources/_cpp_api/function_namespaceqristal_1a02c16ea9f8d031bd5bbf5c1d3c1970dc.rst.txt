@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1a02c16ea9f8d031bd5bbf5c1d3c1970dc:
+
+Function qristal::create_decompose_swap_pass
+============================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_decompose_swap_pass()
+   :project: My Project

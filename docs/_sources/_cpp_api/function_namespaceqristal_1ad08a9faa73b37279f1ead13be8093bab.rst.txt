@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1ad08a9faa73b37279f1ead13be8093bab:
+
+Function qristal::create_optimise_post_routing_pass
+===================================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_optimise_post_routing_pass()
+   :project: My Project

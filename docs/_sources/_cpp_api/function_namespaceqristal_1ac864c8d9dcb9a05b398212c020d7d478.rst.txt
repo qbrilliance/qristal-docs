@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1ac864c8d9dcb9a05b398212c020d7d478:
+
+Function qristal::create_optimise_cliffords_pass
+================================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_optimise_cliffords_pass()
+   :project: My Project

@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Variational Quantum Eigensolver (VQE) &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,13 +18,14 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" /> 
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -98,19 +102,19 @@
            <div itemprop="articleBody">
              
   <section class="tex2jax_ignore mathjax_ignore" id="variational-quantum-eigensolver-vqe">
-<h1>Variational Quantum Eigensolver (VQE)<a class="headerlink" href="#variational-quantum-eigensolver-vqe" title="Permalink to this headline"></a></h1>
+<h1>Variational Quantum Eigensolver (VQE)<a class="headerlink" href="#variational-quantum-eigensolver-vqe" title="Permalink to this heading"></a></h1>
 <section id="example">
-<h2>Example<a class="headerlink" href="#example" title="Permalink to this headline"></a></h2>
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
 <p>The code below shows how the Qristal interface for VQE (<code class="docutils literal notranslate"><span class="pre">vqee</span></code>) is called.</p>
 <p>In general, you will need to provide these inputs:</p>
 <ul class="simple">
-<li><p><a class="reference internal" href="#ansatze"><span class="std std-doc">ansatz</span></a></p></li>
-<li><p><a class="reference internal" href="#hamiltonian"><span class="std std-doc">Hamiltonian</span></a> which must be <a class="reference internal" href="#convention-of-mapping-spin-orbitals-onto-qubits"><span class="std std-doc">consistent with the ansatz</span></a></p></li>
+<li><p><a class="reference internal" href="#ansatze">ansatz</a></p></li>
+<li><p><a class="reference internal" href="#hamiltonian">Hamiltonian</a> which must be <a class="reference internal" href="#convention-of-mapping-spin-orbitals-onto-qubits">consistent with the ansatz</a></p></li>
 <li><p><strong>Number of qubits</strong>, which must be consistent with the ansatz and the Hamiltonian</p></li>
 <li><p><strong>Initial values</strong> for ansatz parameters, referred from here on as <code class="docutils literal notranslate"><span class="pre">theta</span></code></p></li>
 </ul>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">qristal.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">qristal.core.optimization.vqee</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qbOpt</span>
 
 <span class="n">params</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">Params</span><span class="p">()</span>
 
@@ -178,59 +182,59 @@
 </pre></div>
 </div>
 <p>Example output:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">***</span><span class="w">  </span><span class="n">sparse</span><span class="o">-</span><span class="n">sim</span><span class="w"> </span><span class="o">***</span><span class="w"></span>
-<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">sparse</span><span class="o">-</span><span class="n">sim</span><span class="w"></span>
-<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span><span class="w"></span>
-<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">***</span><span class="w">  </span><span class="n">sparse</span><span class="o">-</span><span class="n">sim</span><span class="w"> </span><span class="o">***</span>
+<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">sparse</span><span class="o">-</span><span class="n">sim</span>
+<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span>
+<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span>
 
-<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span><span class="w"></span>
-<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
+<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span>
+<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
 
-<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span><span class="w"></span>
-
-
-
-<span class="o">***</span><span class="w">  </span><span class="n">qpp</span><span class="w"> </span><span class="o">***</span><span class="w"></span>
-<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">qpp</span><span class="w"></span>
-<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span><span class="w"></span>
-<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
-
-<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span><span class="w"></span>
-<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
-
-<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span><span class="w"></span>
+<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
 
 
 
-<span class="o">***</span><span class="w">  </span><span class="n">aer</span><span class="w"> </span><span class="o">***</span><span class="w"></span>
-<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">aer</span><span class="w"></span>
-<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span><span class="w"></span>
-<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span><span class="w"></span>
+<span class="o">***</span><span class="w">  </span><span class="n">qpp</span><span class="w"> </span><span class="o">***</span>
+<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">qpp</span>
+<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span>
+<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span>
 
-<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span><span class="w"></span>
-<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span><span class="w"></span>
+<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span>
+<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
 
-<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span><span class="w"></span>
+<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
+
+
+
+<span class="o">***</span><span class="w">  </span><span class="n">aer</span><span class="w"> </span><span class="o">***</span>
+<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">aer</span>
+<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span>
+<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span>
+<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
 </pre></div>
 </div>
 </section>
 <section id="python-api">
-<h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline"></a></h2>
+<h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h2>
 <section id="importing-the-module">
-<h3>Importing the module<a class="headerlink" href="#importing-the-module" title="Permalink to this headline"></a></h3>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qristal.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
+<h3>Importing the module<a class="headerlink" href="#importing-the-module" title="Permalink to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">qristal.core.optimization.vqee</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qbOpt</span>
 
 </pre></div>
 </div>
 </section>
 <section id="setting-up-the-parameters-for-vqe">
-<h3>Setting up the parameters for VQE<a class="headerlink" href="#setting-up-the-parameters-for-vqe" title="Permalink to this headline"></a></h3>
+<h3>Setting up the parameters for VQE<a class="headerlink" href="#setting-up-the-parameters-for-vqe" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tvqep</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">Params</span><span class="p">()</span>
 
 </pre></div>
 </div>
 <p>The following VQE attributes are accepted:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
 <th class="head"><p>Example</p></th>
@@ -240,11 +244,11 @@
 <tbody>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">circuitString</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.circuitString</span> <span class="pre">=</span> <span class="pre">'''</span></code><br /><code class="docutils literal notranslate"><span class="pre">.compiler</span> <span class="pre">xasm</span></code><br /><code class="docutils literal notranslate"><span class="pre">.circuit</span> <span class="pre">ansatz</span></code><br /><code class="docutils literal notranslate"><span class="pre">.parameters</span> <span class="pre">theta</span></code><br /><code class="docutils literal notranslate"><span class="pre">.qbit</span> <span class="pre">q</span></code><br /><code class="docutils literal notranslate"><span class="pre">Ry(q[0],</span> <span class="pre">theta);'''</span></code></p></td>
-<td><p>Defines the <a class="reference internal" href="#ansatze"><span class="std std-doc"><strong>ansatz</strong></span></a> circuit that<br /> has an associated parameter<br /> <a class="reference internal" href="#theta"><span class="std std-doc"><strong>theta</strong></span></a>.</p></td>
+<td><p>Defines the <a class="reference internal" href="#ansatze"><strong>ansatz</strong></a> circuit that<br /> has an associated parameter<br /> <a class="reference internal" href="#theta"><strong>theta</strong></a>.</p></td>
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pauliString</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.pauliString</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">'-1.04235464570829</span> </code><br /><code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">0.18125791479311</span> <span class="pre">X0</span> </code><br /><code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">-0.78864539363997</span> <span class="pre">Z0'</span></code></p></td>
-<td><p>Sets the <a class="reference internal" href="#hamiltonian"><span class="std std-doc">Hamiltonian</span></a>.</p></td>
+<td><p>Sets the <a class="reference internal" href="#hamiltonian">Hamiltonian</a>.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nQubits</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.nQubits</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
@@ -282,7 +286,7 @@
 </table>
 </section>
 <section id="setting-up-the-optimization-algorithm">
-<h3>Setting up the optimization algorithm<a class="headerlink" href="#setting-up-the-optimization-algorithm" title="Permalink to this headline"></a></h3>
+<h3>Setting up the optimization algorithm<a class="headerlink" href="#setting-up-the-optimization-algorithm" title="Permalink to this heading"></a></h3>
 <p>By default, the <code class="docutils literal notranslate"><span class="pre">cobyla</span></code> (gradient-free) algorithm will be used.  Alternative algorithms for driving the optimization can be used, along with extra options that are specific to individual algorithms.  The setup for each algorithm is discussed in the next sections.</p>
 <p><strong>Note</strong>: These previously described attributes also apply to all algorithms below:</p>
 <ul class="simple">
@@ -292,10 +296,10 @@
 </ul>
 </section>
 <section id="stochastic-gradient-algorithms">
-<h3>Stochastic gradient algorithms<a class="headerlink" href="#stochastic-gradient-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Stochastic gradient algorithms<a class="headerlink" href="#stochastic-gradient-algorithms" title="Permalink to this heading"></a></h3>
 <section id="adam-adaptive-momentum-estimator">
-<h4><strong>ADAM [Adaptive Momentum estimator]</strong><a class="headerlink" href="#adam-adaptive-momentum-estimator" title="Permalink to this headline"></a></h4>
-<table class="colwidths-auto docutils align-default">
+<h4><strong>ADAM [Adaptive Momentum estimator]</strong><a class="headerlink" href="#adam-adaptive-momentum-estimator" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
 <th class="head"><p>Example</p></th>
@@ -338,10 +342,10 @@
 </section>
 </section>
 <section id="heuristic-algorithms">
-<h3>Heuristic algorithms<a class="headerlink" href="#heuristic-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Heuristic algorithms<a class="headerlink" href="#heuristic-algorithms" title="Permalink to this heading"></a></h3>
 <section id="cma-es-covariance-matrix-adapter-evolution-strategy">
-<h4><strong>CMA-ES [Covariance Matrix Adapter Evolution Strategy]</strong><a class="headerlink" href="#cma-es-covariance-matrix-adapter-evolution-strategy" title="Permalink to this headline"></a></h4>
-<table class="colwidths-auto docutils align-default">
+<h4><strong>CMA-ES [Covariance Matrix Adapter Evolution Strategy]</strong><a class="headerlink" href="#cma-es-covariance-matrix-adapter-evolution-strategy" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
 <th class="head"><p>Example</p></th>
@@ -372,10 +376,10 @@
 </section>
 </section>
 <section id="gradient-based-algorithms">
-<h3>Gradient-based algorithms<a class="headerlink" href="#gradient-based-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Gradient-based algorithms<a class="headerlink" href="#gradient-based-algorithms" title="Permalink to this heading"></a></h3>
 <section id="l-bfgs">
-<h4><strong>L-BFGS</strong><a class="headerlink" href="#l-bfgs" title="Permalink to this headline"></a></h4>
-<table class="colwidths-auto docutils align-default">
+<h4><strong>L-BFGS</strong><a class="headerlink" href="#l-bfgs" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
 <th class="head"><p>Example</p></th>
@@ -396,10 +400,10 @@
 </section>
 </section>
 <section id="gradient-free-algorithms">
-<h3>Gradient-free algorithms<a class="headerlink" href="#gradient-free-algorithms" title="Permalink to this headline"></a></h3>
+<h3>Gradient-free algorithms<a class="headerlink" href="#gradient-free-algorithms" title="Permalink to this heading"></a></h3>
 <section id="nelder-mead">
-<h4><strong>Nelder-Mead</strong><a class="headerlink" href="#nelder-mead" title="Permalink to this headline"></a></h4>
-<table class="colwidths-auto docutils align-default">
+<h4><strong>Nelder-Mead</strong><a class="headerlink" href="#nelder-mead" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
 <th class="head"><p>Example</p></th>
@@ -430,16 +434,16 @@
 </section>
 </section>
 <section id="triggering-the-vqe-execution">
-<h3>Triggering the VQE execution<a class="headerlink" href="#triggering-the-vqe-execution" title="Permalink to this headline"></a></h3>
+<h3>Triggering the VQE execution<a class="headerlink" href="#triggering-the-vqe-execution" title="Permalink to this heading"></a></h3>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">qv</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">VQEE</span><span class="p">(</span><span class="n">tvqep</span><span class="p">)</span>
 <span class="n">qv</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
 </pre></div>
 </div>
 </section>
 <section id="accessing-the-results">
-<h3>Accessing the results<a class="headerlink" href="#accessing-the-results" title="Permalink to this headline"></a></h3>
+<h3>Accessing the results<a class="headerlink" href="#accessing-the-results" title="Permalink to this heading"></a></h3>
 <p>The results from a completed VQE execution are available by reading the following attributes:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
 <th class="head"><p>Example</p></th>
@@ -453,7 +457,7 @@
 </tr>
 <tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">optimalParameters</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.optimalParameters</span></code></p></td>
-<td><p>The values for <a class="reference internal" href="#theta"><span class="std std-doc">theta</span></a> corresponding to <br />the minimum energy that VQE <br />has found within <code class="docutils literal notranslate"><span class="pre">maxIters</span></code> iterations.</p></td>
+<td><p>The values for <a class="reference internal" href="#theta">theta</a> corresponding to <br />the minimum energy that VQE <br />has found within <code class="docutils literal notranslate"><span class="pre">maxIters</span></code> iterations.</p></td>
 </tr>
 <tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iterationData[&lt;index&gt;].energy</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">tvqep.iterationData[8].energy</span></code></p></td>
@@ -467,7 +471,7 @@
 </table>
 </section>
 <section id="viewing-the-convergence-trace">
-<h3>Viewing the convergence trace<a class="headerlink" href="#viewing-the-convergence-trace" title="Permalink to this headline"></a></h3>
+<h3>Viewing the convergence trace<a class="headerlink" href="#viewing-the-convergence-trace" title="Permalink to this heading"></a></h3>
 <p><strong>Note</strong>: set <code class="docutils literal notranslate"><span class="pre">enableVis</span> <span class="pre">=</span> <span class="pre">True</span></code> prior to calling <code class="docutils literal notranslate"><span class="pre">run()</span></code> in order to generate the trace.</p>
 <p>This is available via the <code class="docutils literal notranslate"><span class="pre">vis</span></code> attribute.  The iteration that gave the reported optimum is marked with: <code class="docutils literal notranslate"><span class="pre">**|</span></code>.</p>
 <p>Color codes:</p>
@@ -515,9 +519,9 @@ Theta
 </div>
 </section>
 <section id="attributes-related-to-the-convergence-trace">
-<h3>Attributes related to the convergence trace<a class="headerlink" href="#attributes-related-to-the-convergence-trace" title="Permalink to this headline"></a></h3>
+<h3>Attributes related to the convergence trace<a class="headerlink" href="#attributes-related-to-the-convergence-trace" title="Permalink to this heading"></a></h3>
 <p>Use these attributes to set the amount of information that appears in the convergence trace:</p>
-<table class="colwidths-auto docutils align-default">
+<table class="docutils align-default">
 <thead>
 <tr class="row-odd"><th class="head"><p>Attribute</p></th>
 <th class="head"><p>Defaults</p></th>
@@ -550,19 +554,19 @@ Theta
 </section>
 </section>
 <section id="c-api">
-<h2>C++ API<a class="headerlink" href="#c-api" title="Permalink to this headline"></a></h2>
+<h2>C++ API<a class="headerlink" href="#c-api" title="Permalink to this heading"></a></h2>
 <p><a href="../_cpp_api/classqb_1_1vqee_1_1VQEE.html">See the class documentation.</a></p>
 </section>
 <section id="general-vqe-information">
-<h2>General VQE information<a class="headerlink" href="#general-vqe-information" title="Permalink to this headline"></a></h2>
+<h2>General VQE information<a class="headerlink" href="#general-vqe-information" title="Permalink to this heading"></a></h2>
 <p>VQE is classified as a <strong>quantum-classical (hybrid) algorithm</strong>. It uses a <strong>classical optimizer</strong> to minimize a <strong>quantum kernel</strong> based objective function. The objective function is usually determined by multiple measurements at each iteration.</p>
 <p>VQE finds the <strong>ground state energy</strong> of a physical system characterized by its <strong>Hamiltonian</strong> <span class="math notranslate nohighlight">\(H\)</span> which is Hermitian. See [<a class="reference external" href="https://arxiv.org/abs/1304.3061">Peruzzo et al. 2013</a>, <a class="reference external" href="https://arxiv.org/abs/1512.06860">O’Malley et al. 2015</a>] for details.</p>
 <section id="quantum-kernels-in-qristal">
-<h3>Quantum kernels in Qristal<a class="headerlink" href="#quantum-kernels-in-qristal" title="Permalink to this headline"></a></h3>
+<h3>Quantum kernels in Qristal<a class="headerlink" href="#quantum-kernels-in-qristal" title="Permalink to this heading"></a></h3>
 <p>In this section, the components that make up a quantum kernel are described in more detail.</p>
 </section>
 <section id="hamiltonian">
-<h3>Hamiltonian<a class="headerlink" href="#hamiltonian" title="Permalink to this headline"></a></h3>
+<h3>Hamiltonian<a class="headerlink" href="#hamiltonian" title="Permalink to this heading"></a></h3>
 <p>While the user provides a Hamiltonian that has been transformed from their problem/system of interest, special attention is needed on the resulting format of the Hamiltonian so that it is valid as an input to Qristal.  In particular:</p>
 <ul class="simple">
 <li><p>the Hamiltonian must be formatted as a <strong>string</strong>. This string is an expression of a weighted sum of <strong>Pauli terms</strong>.</p></li>
@@ -570,66 +574,66 @@ Theta
 <li><p>In all Pauli terms, any <strong>Identity (I) operators are implicit - do not show I operator explicitly.</strong></p></li>
 </ul>
 <p>Examples of valid Hamiltonians (but with no physical meaning):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;-1.2 + 1.1 Z0Z1 + 4.1 Z1 - 11.8 Z0&quot;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;-1.2 + 1.1 Z0Z1 + 4.1 Z1 - 11.8 Z0&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;12.3 + 0.002 Z0X1X2 - 1.2 X0Z2 - 3.3 Z1 - 5.0 Y2&quot;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;12.3 + 0.002 Z0X1X2 - 1.2 X0Z2 - 3.3 Z1 - 5.0 Y2&quot;</span>
 </pre></div>
 </div>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;5.907 - 2.1433 X0X1 - 2.1433 Y0Y1 + (0.3,0.21829) Z0 + 0.34 Z0Z1Z2Z3&quot;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;5.907 - 2.1433 X0X1 - 2.1433 Y0Y1 + (0.3,0.21829) Z0 + 0.34 Z0Z1Z2Z3&quot;</span>
 
-<span class="nl">Note</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.21829</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.21829</span><span class="n">j</span><span class="w"></span>
+<span class="nl">Note</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.21829</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.21829</span><span class="n">j</span>
 </pre></div>
 </div>
 <p>Example of a physically valid Hamiltonian (for deuteron):</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;5.907 - 2.1433 X0X1 - 2.1433 Y0Y1 + .21829 Z0 - 6.125 Z1&quot;</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;5.907 - 2.1433 X0X1 - 2.1433 Y0Y1 + .21829 Z0 - 6.125 Z1&quot;</span>
 </pre></div>
 </div>
 </section>
 <section id="ansatze">
-<h3>Ansätze<a class="headerlink" href="#ansatze" title="Permalink to this headline"></a></h3>
+<h3>Ansätze<a class="headerlink" href="#ansatze" title="Permalink to this heading"></a></h3>
 <p>As in all parameterized models, choice of model architecture, or <em>ansatz</em>, is an important parameter in the success of the optimization.</p>
-<p>Here it is a quantum circuit that prepares a quantum state and is conditioned by the values of <a class="reference internal" href="#theta"><span class="std std-doc">theta</span></a> (i.e. the input parameters mentioned above).  To <a class="reference internal" href="#user-defined-ansatz"><span class="std std-doc">specify your ansatz</span></a>, see the instructions below.</p>
+<p>Here it is a quantum circuit that prepares a quantum state and is conditioned by the values of <a class="reference internal" href="#theta">theta</a> (i.e. the input parameters mentioned above).  To <a class="reference internal" href="#user-defined-ansatz">specify your ansatz</a>, see the instructions below.</p>
 <section id="theta">
-<h4>theta<a class="headerlink" href="#theta" title="Permalink to this headline"></a></h4>
+<h4>theta<a class="headerlink" href="#theta" title="Permalink to this heading"></a></h4>
 <p>Input parameters of an ansatz, usually rotation angles (in radians).</p>
 </section>
 <section id="user-defined-ansatz">
-<h4>User defined ansatz<a class="headerlink" href="#user-defined-ansatz" title="Permalink to this headline"></a></h4>
+<h4>User defined ansatz<a class="headerlink" href="#user-defined-ansatz" title="Permalink to this heading"></a></h4>
 <p>This functionality requires using the XASM format.  An example of this is shown below:</p>
 <p>❗ <strong>Important:</strong>
 Do <strong>not</strong> change the first two lines:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">.</span><span class="n">compiler</span><span class="w"> </span><span class="n">xasm</span><span class="w"></span>
-<span class="w"> </span><span class="p">.</span><span class="n">circuit</span><span class="w"> </span><span class="n">ansatz</span><span class="w"></span>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">.</span><span class="n">compiler</span><span class="w"> </span><span class="n">xasm</span>
+<span class="w"> </span><span class="p">.</span><span class="n">circuit</span><span class="w"> </span><span class="n">ansatz</span>
 </pre></div>
 </div>
 <p>You can use the parameter (declared here as <code class="docutils literal notranslate"><span class="pre">theta</span></code>) as a 0-indexed array, ie <code class="docutils literal notranslate"><span class="pre">theta[0],</span> <span class="pre">theta[1],</span> <span class="pre">theta[2]</span></code>, …, etc.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.compiler xasm
-.circuit ansatz
-.parameters theta
-.qbit q
-  X<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">])</span><span class="p">;</span>
-  X<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">0</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">1</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">3</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">4</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">5</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">6</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">7</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">8</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">3</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">9</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">10</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">11</span><span class="o">])</span><span class="p">;</span>
-  CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>, q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
-  CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>, q<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
-  CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>, q<span class="o">[</span><span class="m">3</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">12</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">13</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">14</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">15</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">16</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">17</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">18</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">19</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">20</span><span class="o">])</span><span class="p">;</span>
-  U<span class="o">(</span>q<span class="o">[</span><span class="m">3</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">21</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">22</span><span class="o">]</span>, theta<span class="o">[</span><span class="m">23</span><span class="o">])</span><span class="p">;</span>
-  CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>, q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
-  CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>, q<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
-  CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>, q<span class="o">[</span><span class="m">3</span><span class="o">])</span><span class="p">;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.compiler<span class="w"> </span>xasm
+.circuit<span class="w"> </span>ansatz
+.parameters<span class="w"> </span>theta
+.qbit<span class="w"> </span>q
+<span class="w">  </span>X<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>X<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">3</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">4</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">5</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">6</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">7</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">8</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">3</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">9</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">10</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">11</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">3</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">12</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">13</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">14</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">15</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">16</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">17</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">18</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">19</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">20</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">3</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">21</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">22</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">23</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">3</span><span class="o">])</span><span class="p">;</span>
 </pre></div>
 </div>
 <p>Use gates that are in <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html">XASM gate format</a> to build the ansatz circuit.</p>
 </section>
 <section id="built-in-ansatze">
-<h4>Built in ansätze<a class="headerlink" href="#built-in-ansatze" title="Permalink to this headline"></a></h4>
+<h4>Built in ansätze<a class="headerlink" href="#built-in-ansatze" title="Permalink to this heading"></a></h4>
 <p>See the examples folder: <code class="docutils literal notranslate"><span class="pre">examples/python/vqee_example1.py</span></code> for the syntax to call the ansätze described below.</p>
 <ul>
 <li><p>Default ansatz:  the <a class="reference external" href="https://www.nature.com/articles/nature23879">Hardware Efficient Ansatz</a> (HEA)</p>
@@ -651,13 +655,13 @@ Do <strong>not</strong> change the first two lines:</p>
 </section>
 </section>
 <section id="convention-of-mapping-spin-orbitals-onto-qubits">
-<h3>Convention of mapping spin orbitals onto qubits<a class="headerlink" href="#convention-of-mapping-spin-orbitals-onto-qubits" title="Permalink to this headline"></a></h3>
+<h3>Convention of mapping spin orbitals onto qubits<a class="headerlink" href="#convention-of-mapping-spin-orbitals-onto-qubits" title="Permalink to this heading"></a></h3>
 <p>❗ <strong>Important:</strong></p>
 <p>The built-in ASWAP and UCCSD ansätze in Qristal map all alpha (up) spins <strong>then</strong> all beta (down) spins. Thus, care must be taken to make sure that the input Pauli Hamiltonian follows the same mapping convention.  Note that e.g. Pennylane, on the other hand, alternates alpha and beta (up and down) spins.</p>
-<p>If the Hamiltonian input is provided following the description in <a class="reference internal" href="#molecular-geometries-in-qristal"><span class="std std-doc">Molecular geometries in Qristal</span></a>, then the mapping is guaranteed to be compatible with the above convention.</p>
+<p>If the Hamiltonian input is provided following the description in <a class="reference internal" href="#molecular-geometries-in-qristal">Molecular geometries in Qristal</a>, then the mapping is guaranteed to be compatible with the above convention.</p>
 </section>
 <section id="molecular-geometries-in-qristal">
-<h3>Molecular geometries in Qristal<a class="headerlink" href="#molecular-geometries-in-qristal" title="Permalink to this headline"></a></h3>
+<h3>Molecular geometries in Qristal<a class="headerlink" href="#molecular-geometries-in-qristal" title="Permalink to this heading"></a></h3>
 <p>See the examples folder: <code class="docutils literal notranslate"><span class="pre">examples/python/vqee_example3.py</span></code> for the syntax to use molecular geometries.</p>
 <p>Instead of directly specifying a Hamiltonian, users can instead input a molecular geometry in terms of the elements and coordinates of all atoms in the system. Qristal will then generate the corresponding Hamiltonian automatically.</p>
 <p>For this functionality, Qristal requires PySCF-style XYZ syntax, i.e.,
@@ -669,16 +673,16 @@ Do <strong>not</strong> change the first two lines:</p>
 </section>
 </section>
 <section id="how-to-make-function-calls-for-a-python-level-optimizer">
-<h2>How to make function calls for a Python-level optimizer?<a class="headerlink" href="#how-to-make-function-calls-for-a-python-level-optimizer" title="Permalink to this headline"></a></h2>
+<h2>How to make function calls for a Python-level optimizer?<a class="headerlink" href="#how-to-make-function-calls-for-a-python-level-optimizer" title="Permalink to this heading"></a></h2>
 <p>In order to use the optimization algorithms in <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> or <code class="docutils literal notranslate"><span class="pre">skquant.opt</span></code>  for VQE, it is necessary to provide a function that accepts the parameter values at the current iteration and returns the energy.  The function below provides this.  Note: it accepts an input (<code class="docutils literal notranslate"><span class="pre">theta</span></code>) that is a NumPy array:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">qristal.core.optimization.vqee</span> <span class="k">as</span> <span class="nn">qbOpt</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">qristal.core.optimization.vqee</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qbOpt</span>
 
 <span class="c1">#</span>
 <span class="c1"># Wrapper that accepts a parameter,</span>
 <span class="c1"># theta (type is NumPy ndarray)</span>
 <span class="c1"># and calls vqee for 1 iteration.  The energy is returned.</span>
 <span class="c1">#</span>
-<span class="k">def</span> <span class="nf">qbvqe</span><span class="p">(</span><span class="n">theta</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">qbvqe</span><span class="p">(</span><span class="n">theta</span><span class="p">):</span>
     <span class="n">params</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">Params</span><span class="p">()</span>
     <span class="n">params</span><span class="o">.</span><span class="n">nShots</span> <span class="o">=</span> <span class="mi">64</span>   <span class="c1"># Number of shots</span>
     <span class="n">params</span><span class="o">.</span><span class="n">maxIters</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># initial energy only - no internal optimisation steps</span>

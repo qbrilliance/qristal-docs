@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python API &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,13 +18,14 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
         <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -52,9 +56,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -109,70 +113,47 @@
            <div itemprop="articleBody">
              
   <section id="python-api">
-<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline"></a></h1>
+<h1>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h1>
 <section id="the-session-class">
-<h2>The session class<a class="headerlink" href="#the-session-class" title="Permalink to this headline"></a></h2>
+<h2>The session class<a class="headerlink" href="#the-session-class" title="Permalink to this heading"></a></h2>
 <p>The <cite>session</cite> class provides a way to set up the experiment table.</p>
 <p>You can use the experiment table to run a list of quantum circuits under different conditions, such as number of measurement shots, backends, parameters, etc.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="core.session">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">core.</span></span><span class="sig-name descname"><span class="pre">session</span></span><a class="headerlink" href="#core.session" title="Permalink to this definition"></a></dt>
 <dd><dl class="py property">
-<dt class="sig sig-object py" id="core.session.SPAM_confusion">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">SPAM_confusion</span></span><a class="headerlink" href="#core.session.SPAM_confusion" title="Permalink to this definition"></a></dt>
-<dd><p>SPAM_confusion:</p>
-<p>Set a state preparation and measurement (SPAM) confusion matrix, which will be used to correct the measured results.
-After setting, and calling <cite>run()</cite>, the results variable will automatically be populated with SPAM-corrected counts.
-The native counts will be stored in <cite>results_native</cite> instead. Calling <cite>SPAM_confusion</cite> after setting, will return
-the used SPAM correction matrix, i.e., the inverse of the passed confusion matrix.</p>
+<dt class="sig sig-object py" id="core.session.all_bitstring_counts">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_bitstring_counts</span></span><a class="headerlink" href="#core.session.all_bitstring_counts" title="Permalink to this definition"></a></dt>
+<dd><p>all_bitstring_counts:</p>
+<p>After calling session.run(), the counts from running sn shots are stored in a list of shot counts.
+The indices of this list correspond to the different possible base-2 bitstring solutions, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.acc">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">acc</span></span><a class="headerlink" href="#core.session.acc" title="Permalink to this definition"></a></dt>
-<dd><p>acc:</p>
-<p>Valid settings: aer | tnqvm</p>
-<p>Select a back-end simulator. The single setting applies globally to all infiles, all instrings, and random circuits.</p>
-<p>accs:</p>
-<p>Valid settings: [[aer|tnqvm, …], [aer|tnqvm, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of random depths.</p>
+<dt class="sig sig-object py" id="core.session.all_bitstring_probabilities">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_bitstring_probabilities</span></span><a class="headerlink" href="#core.session.all_bitstring_probabilities" title="Permalink to this definition"></a></dt>
+<dd><p>all_bitstring_probabilities:</p>
+<p>The probability distribution from running sn shots stored in a list of solution output probabilities, provided after calling session.run() with <cite>calc_gradients</cite> set True.
+The indices of this list correspond to the different possible base-2 bitstring solutions, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.accs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">accs</span></span><a class="headerlink" href="#core.session.accs" title="Permalink to this definition"></a></dt>
-<dd><p>acc:</p>
-<p>Valid settings: aer | tnqvm</p>
-<p>Select a back-end simulator. The single setting applies globally to all infiles, all instrings, and random circuits.</p>
-<p>accs:</p>
-<p>Valid settings: [[aer|tnqvm, …], [aer|tnqvm, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of random depths.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aer_sim_type">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aer_sim_type</span></span><a class="headerlink" href="#core.session.aer_sim_type" title="Permalink to this definition"></a></dt>
-<dd><p>aer_sim_type:</p>
-<p>Valid settings: statevector | density_matrix | matrix_product_state</p>
-<p>Selects a simulation method for the AER simulator.</p>
-<p>aer_sim_types:</p>
-<p>A 1d-array (list) version of aer_sim_type.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.aer_sim_types">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">aer_sim_types</span></span><a class="headerlink" href="#core.session.aer_sim_types" title="Permalink to this definition"></a></dt>
-<dd><p>aer_sim_type:</p>
-<p>Valid settings: statevector | density_matrix | matrix_product_state</p>
-<p>Selects a simulation method for the AER simulator.</p>
-<p>aer_sim_types:</p>
-<p>A 1d-array (list) version of aer_sim_type.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.aws_setup">
-<span class="sig-name descname"><span class="pre">aws_setup</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.aws_setup" title="Permalink to this definition"></a></dt>
-<dd><p>AWS Braket Setup</p>
+<dt class="sig sig-object py" id="core.session.all_bitstring_probability_gradients">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">all_bitstring_probability_gradients</span></span><a class="headerlink" href="#core.session.all_bitstring_probability_gradients" title="Permalink to this definition"></a></dt>
+<dd><p>all_bitstring_probability_gradients:</p>
+<p>The probability Jacobians from running sn shots, after calling session.run() with <cite>calc_gradients</cite> set True.
+The Jacobian is an array of gradients of the probability of each bitstring combination with respect to the runtime parameters,
+in the following format (where y is the list of probabilities and x is the parameter list):</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}\begin{bmatrix}
+\frac{dy_0}{dx_0} &amp; \frac{dy_0}{dx_1} &amp; ... &amp; \frac{dy_0}{dx_n} \\
+\frac{dy_1}{dx_0} &amp; \frac{dy_1}{dx_1} &amp; ... &amp; \frac{dy_1}{dx_n} \\
+... \\
+\frac{dy_m}{dx_0} &amp; \frac{dy_m}{dx_1} &amp; ... &amp; \frac{dy_m}{dx_n}
+\end{bmatrix}\end{split}\]</div>
+<p>As the Jacobian is returned as a list-of-lists, it can be accessed in row major format, and indexing the above matrix can be done accordingly, i.e. all_bitstring_probability_gradients()[0][1] corresponds to the dy_0/dx_1 value.
+The entry x_i corresponds to the ith parameter in the parameter list (i.e. the parameters ordered by their first appearance in the circuit.)
+The entry y_i is the output probability of ith bitstring, indexed in the same manner as the all_bitstring_counts. Explicitly, the index i corresponding to a specific bitstring can be obtained by calling bitstring_index(bitstring), with bitstring given as a list of bit values.</p>
 </dd></dl>
 
 <dl class="py method">
@@ -193,546 +174,29 @@ the used SPAM correction matrix, i.e., the inverse of the passed confusion matri
 </ol>
 </dd></dl>
 
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.calc_jacobian">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_jacobian</span></span><a class="headerlink" href="#core.session.calc_jacobian" title="Permalink to this definition"></a></dt>
-<dd><p>calc_jacobian:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True will calculate gradients for the circuit when session.run() is evoked. The single setting applies globally.
-The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.
-Note that calc_jacobian = True implies calc_out_counts = True.</p>
-<p>calc_jacobians:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of calc_jacobian.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.calc_jacobians">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_jacobians</span></span><a class="headerlink" href="#core.session.calc_jacobians" title="Permalink to this definition"></a></dt>
-<dd><p>calc_jacobian:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True will calculate gradients for the circuit when session.run() is evoked. The single setting applies globally.
-The gradients calculated will be a jacobian of the output probabilities with respect to the input parameters, i.e. d_probs/d_params.
-Note that calc_jacobian = True implies calc_out_counts = True.</p>
-<p>calc_jacobians:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of calc_jacobian.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.calc_out_counts">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_out_counts</span></span><a class="headerlink" href="#core.session.calc_out_counts" title="Permalink to this definition"></a></dt>
-<dd><p>calc_out_counts:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True will calculate a non-compact vector of count results when session.run() is evoked. The single setting applies globally.
-Note that calc_out_counts = True is implied by calc_jacobian = True.</p>
-<p>calc_out_countss:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of calc_out_counts.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.calc_out_countss">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">calc_out_countss</span></span><a class="headerlink" href="#core.session.calc_out_countss" title="Permalink to this definition"></a></dt>
-<dd><p>calc_out_counts:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True will calculate a non-compact vector of count results when session.run() is evoked. The single setting applies globally.
-Note that calc_out_counts = True is implied by calc_jacobian = True.</p>
-<p>calc_out_countss:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of calc_out_counts.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.circuit_optimization">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">circuit_optimization</span></span><a class="headerlink" href="#core.session.circuit_optimization" title="Permalink to this definition"></a></dt>
-<dd><p>circuit_optimization:</p>
-<p>List of circuit optimization passes.</p>
-<p>circuit_optimizations:</p>
-<p>A 1d-array (list) version of circuit_optimization.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.circuit_optimizations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">circuit_optimizations</span></span><a class="headerlink" href="#core.session.circuit_optimizations" title="Permalink to this definition"></a></dt>
-<dd><p>circuit_optimization:</p>
-<p>List of circuit optimization passes.</p>
-<p>circuit_optimizations:</p>
-<p>A 1d-array (list) version of circuit_optimization.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.debug">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">debug</span></span><a class="headerlink" href="#core.session.debug" title="Permalink to this definition"></a></dt>
-<dd><p>debug:</p>
-<p>Valid settings: True | False</p>
-<p>When set to True, extra debugging information will be printed.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.divergence">
-<span class="sig-name descname"><span class="pre">divergence</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.divergence" title="Permalink to this definition"></a></dt>
-<dd><p>Calculate Jensen-Shannon divergence</p>
-</dd></dl>
-
 <dl class="py method">
 <dt class="sig sig-object py" id="core.session.draw_shot">
-<span class="sig-name descname"><span class="pre">draw_shot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">core.VectorBool</span></span></span><a class="headerlink" href="#core.session.draw_shot" title="Permalink to this definition"></a></dt>
-<dd><p>draw_shot(i,j) : Draw a single shot from the saved results of circuit i, condition j.</p>
+<span class="sig-name descname"><span class="pre">draw_shot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">core.VectorBool</span></span></span><a class="headerlink" href="#core.session.draw_shot" title="Permalink to this definition"></a></dt>
+<dd><p>draw_shot : Draw a single shot from the saved results of circuit i, condition j.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.execute_circuit">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute_circuit</span></span><a class="headerlink" href="#core.session.execute_circuit" title="Permalink to this definition"></a></dt>
-<dd><p>execute_circuit:</p>
-<p>Valid settings: True | False</p>
-<p>Set this to False to disable circuit simulation. The single setting applies globally.</p>
-<p>execute_circuits:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of execute_circuit.</p>
+<dt class="sig sig-object py" id="core.session.gpu_device_ids">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">gpu_device_ids</span></span><a class="headerlink" href="#core.session.gpu_device_ids" title="Permalink to this definition"></a></dt>
+<dd><p>gpu_device_ids:</p>
+<p>Set list of GPU device IDs to use with GPU-enabled backends.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.execute_circuits">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">execute_circuits</span></span><a class="headerlink" href="#core.session.execute_circuits" title="Permalink to this definition"></a></dt>
-<dd><p>execute_circuit:</p>
-<p>Valid settings: True | False</p>
-<p>Set this to False to disable circuit simulation. The single setting applies globally.</p>
-<p>execute_circuits:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of execute_circuit.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.expected_amplitudes">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expected_amplitudes</span></span><a class="headerlink" href="#core.session.expected_amplitudes" title="Permalink to this definition"></a></dt>
-<dd><p>expected_amplitudes:</p>
-<p>Set the expected amplitudes for Jensen-Shannon divergence calculation. The single setting applies globally.</p>
-<p>amp:</p>
-<p>A 1d-array (list) version of expected_amplitudes.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.expected_amplitudess">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">expected_amplitudess</span></span><a class="headerlink" href="#core.session.expected_amplitudess" title="Permalink to this definition"></a></dt>
-<dd><p>expected_amplitudes:</p>
-<p>Set the expected amplitudes for Jensen-Shannon divergence calculation. The single setting applies globally.</p>
-<p>amp:</p>
-<p>A 1d-array (list) version of expected_amplitudes.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.get_state_vec">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_state_vec</span></span><a class="headerlink" href="#core.session.get_state_vec" title="Permalink to this definition"></a></dt>
-<dd><p>in_get_state_vec:</p>
-<p>Using this will extract the state vector (supported by the <cite>qpp</cite> backend only).</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.get_state_vec_raw">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">get_state_vec_raw</span></span><a class="headerlink" href="#core.session.get_state_vec_raw" title="Permalink to this definition"></a></dt>
-<dd><p>in_get_state_vec:</p>
-<p>Using this will extract the state vector (supported by the <cite>qpp</cite> backend only).</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.include_qb">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">include_qb</span></span><a class="headerlink" href="#core.session.include_qb" title="Permalink to this definition"></a></dt>
-<dd><p>include_qb:</p>
-<p>A file that contains OpenQASM format gate definitions for custom Quantum Brilliance gates.</p>
-<p>include_qbs:</p>
-<p>Valid settings: [include_qb, …]</p>
-<p>A 1d-array (list) version of session.include_qb.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.include_qbs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">include_qbs</span></span><a class="headerlink" href="#core.session.include_qbs" title="Permalink to this definition"></a></dt>
-<dd><p>include_qb:</p>
-<p>A file that contains OpenQASM format gate definitions for custom Quantum Brilliance gates.</p>
-<p>include_qbs:</p>
-<p>Valid settings: [include_qb, …]</p>
-<p>A 1d-array (list) version of session.include_qb.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.infile">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">infile</span></span><a class="headerlink" href="#core.session.infile" title="Permalink to this definition"></a></dt>
-<dd><p>infile:</p>
-<p>Name of a file containing (default: OpenQASM format) a quantum circuit.</p>
-<p>infiles:</p>
-<p>Valid settings: [infile, …]</p>
-<p>A 1d-array (list) version of session.infile.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.infiles">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">infiles</span></span><a class="headerlink" href="#core.session.infiles" title="Permalink to this definition"></a></dt>
-<dd><p>infile:</p>
-<p>Name of a file containing (default: OpenQASM format) a quantum circuit.</p>
-<p>infiles:</p>
-<p>Valid settings: [infile, …]</p>
-<p>A 1d-array (list) version of session.infile.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.init">
-<span class="sig-name descname"><span class="pre">init</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.init" title="Permalink to this definition"></a></dt>
-<dd><p>Quantum Brilliance 12-qubit defaults</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.initial_bond_dimension">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_bond_dimension</span></span><a class="headerlink" href="#core.session.initial_bond_dimension" title="Permalink to this definition"></a></dt>
-<dd><p>initial_bond_dimension:</p>
-<p>Set the initial bond dimension (tensor network simulators). The single setting applies globally.</p>
-<p>initial_bond_dimensions:</p>
-<p>A 1d-array (list) version of initial_bond_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.initial_bond_dimensions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_bond_dimensions</span></span><a class="headerlink" href="#core.session.initial_bond_dimensions" title="Permalink to this definition"></a></dt>
-<dd><p>initial_bond_dimension:</p>
-<p>Set the initial bond dimension (tensor network simulators). The single setting applies globally.</p>
-<p>initial_bond_dimensions:</p>
-<p>A 1d-array (list) version of initial_bond_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.initial_kraus_dimension">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_kraus_dimension</span></span><a class="headerlink" href="#core.session.initial_kraus_dimension" title="Permalink to this definition"></a></dt>
-<dd><p>initial_kraus_dimension:</p>
-<p>Set the initial kraus dimension (emulator purification simulator). The single setting applies globally.</p>
-<p>initial_kraus_dimensions:</p>
-<p>A 1d-array (list) version of initial_kraus_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the emulator purification backend accelerator.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.initial_kraus_dimensions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">initial_kraus_dimensions</span></span><a class="headerlink" href="#core.session.initial_kraus_dimensions" title="Permalink to this definition"></a></dt>
-<dd><p>initial_kraus_dimension:</p>
-<p>Set the initial kraus dimension (emulator purification simulator). The single setting applies globally.</p>
-<p>initial_kraus_dimensions:</p>
-<p>A 1d-array (list) version of initial_kraus_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the emulator purification backend accelerator.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.instring">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instring</span></span><a class="headerlink" href="#core.session.instring" title="Permalink to this definition"></a></dt>
-<dd><p>instring:</p>
-<p>A string that defines a circuit in OpenQASM format.  Simple example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__qpu__</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">qristal_circuit</span><span class="p">(</span><span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">OPENQASM</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s">&quot;qelib1.inc;&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="n">creg</span><span class="w"> </span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">creg</span><span class="w"> </span><span class="n">c1</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">h</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">cx</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c0</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c1</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>instrings:</p>
-<p>Valid settings: [instring, …]</p>
-<p>A 1d-array (list) version of session.instring.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.instrings">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">instrings</span></span><a class="headerlink" href="#core.session.instrings" title="Permalink to this definition"></a></dt>
-<dd><p>instring:</p>
-<p>A string that defines a circuit in OpenQASM format.  Simple example:</p>
-<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">__qpu__</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">qristal_circuit</span><span class="p">(</span><span class="n">qreg</span><span class="w"> </span><span class="n">q</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">OPENQASM</span><span class="w"> </span><span class="mf">2.0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">include</span><span class="w"> </span><span class="s">&quot;qelib1.inc;&quot;</span><span class="w"></span>
-<span class="w">        </span><span class="n">creg</span><span class="w"> </span><span class="n">c0</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">creg</span><span class="w"> </span><span class="n">c1</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">h</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">cx</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c0</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="w">        </span><span class="n">measure</span><span class="w"> </span><span class="n">q</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">c1</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</pre></div>
-</div>
-<p>instrings:</p>
-<p>Valid settings: [instring, …]</p>
-<p>A 1d-array (list) version of session.instring.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.ir_target">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ir_target</span></span><a class="headerlink" href="#core.session.ir_target" title="Permalink to this definition"></a></dt>
-<dd><p>ir_target:</p>
-<p>Input quantum circuit (core.Circuit).</p>
-<p>ir_targets:</p>
-<p>A 1d-array (list) version of ir_target.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.ir_targets">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">ir_targets</span></span><a class="headerlink" href="#core.session.ir_targets" title="Permalink to this definition"></a></dt>
-<dd><p>ir_target:</p>
-<p>Input quantum circuit (core.Circuit).</p>
-<p>ir_targets:</p>
-<p>A 1d-array (list) version of ir_target.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.max_bond_dimension">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_bond_dimension</span></span><a class="headerlink" href="#core.session.max_bond_dimension" title="Permalink to this definition"></a></dt>
-<dd><p>max_bond_dimension:</p>
-<p>Set the maximum bond dimension (tensor network simulators). The single setting applies globally.</p>
-<p>max_bond_dimensions:</p>
-<p>A 1d-array (list) version of max_bond_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.max_bond_dimensions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_bond_dimensions</span></span><a class="headerlink" href="#core.session.max_bond_dimensions" title="Permalink to this definition"></a></dt>
-<dd><p>max_bond_dimension:</p>
-<p>Set the maximum bond dimension (tensor network simulators). The single setting applies globally.</p>
-<p>max_bond_dimensions:</p>
-<p>A 1d-array (list) version of max_bond_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.max_kraus_dimension">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_kraus_dimension</span></span><a class="headerlink" href="#core.session.max_kraus_dimension" title="Permalink to this definition"></a></dt>
-<dd><p>max_kraus_dimension:</p>
-<p>Set the maximum kraus dimension (emulator purification simulator). The single setting applies globally.</p>
-<p>max_kraus_dimensions:</p>
-<p>A 1d-array (list) version of max_kraus_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the emulator purification backend accelerator.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.max_kraus_dimensions">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">max_kraus_dimensions</span></span><a class="headerlink" href="#core.session.max_kraus_dimensions" title="Permalink to this definition"></a></dt>
-<dd><p>max_kraus_dimension:</p>
-<p>Set the maximum kraus dimension (emulator purification simulator). The single setting applies globally.</p>
-<p>max_kraus_dimensions:</p>
-<p>A 1d-array (list) version of max_kraus_dimension.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the emulator purification backend accelerator.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.measure_sample_method">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_method</span></span><a class="headerlink" href="#core.session.measure_sample_method" title="Permalink to this definition"></a></dt>
-<dd><p>measure_sample_method:</p>
-<p>Set the measurement sampling method (QB emulator tensor network simulator). The single setting applies globally.</p>
-<p>measure_sample_methods:</p>
-<p>A 1d-array (list) version of measure_sample_method.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the emulator tensor network accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.measure_sample_methods">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">measure_sample_methods</span></span><a class="headerlink" href="#core.session.measure_sample_methods" title="Permalink to this definition"></a></dt>
-<dd><p>measure_sample_method:</p>
-<p>Set the measurement sampling method (QB emulator tensor network simulator). The single setting applies globally.</p>
-<p>measure_sample_methods:</p>
-<p>A 1d-array (list) version of measure_sample_method.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the emulator tensor network accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.noise">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise</span></span><a class="headerlink" href="#core.session.noise" title="Permalink to this definition"></a></dt>
-<dd><p>noise:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to enable noisy simulation (if supported by the <cite>acc</cite> backend). The single setting applies globally.</p>
-<p>noises:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of noise.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.noise_mitigation">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise_mitigation</span></span><a class="headerlink" href="#core.session.noise_mitigation" title="Permalink to this definition"></a></dt>
-<dd><p>noise_mitigation:</p>
-<p>Select a noise mitigation module.</p>
-<p>noise_mitigations:</p>
-<p>A 1d-array (list) version of noise_mitigation.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.noise_mitigations">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise_mitigations</span></span><a class="headerlink" href="#core.session.noise_mitigations" title="Permalink to this definition"></a></dt>
-<dd><p>noise_mitigation:</p>
-<p>Select a noise mitigation module.</p>
-<p>noise_mitigations:</p>
-<p>A 1d-array (list) version of noise_mitigation.</p>
+<dt class="sig sig-object py" id="core.session.irtarget">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">irtarget</span></span><a class="headerlink" href="#core.session.irtarget" title="Permalink to this definition"></a></dt>
+<dd><p>Circuit object to be executed.</p>
 </dd></dl>
 
 <dl class="py property">
 <dt class="sig sig-object py" id="core.session.noise_model">
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise_model</span></span><a class="headerlink" href="#core.session.noise_model" title="Permalink to this definition"></a></dt>
-<dd><p>noise_model:</p>
-<p>Set the noise model to be used in subsequent simulations.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Requires setting: noise = True (to have effect)</p>
-</div>
-<p>The default (built in) model is a simple depolarizing noise model on all qubits.</p>
-<p>Users may make their own instances of the NoiseModel class (or make an instance of the
-default and modify it), and then assign that model to this property.  See examples/python/noise_model*.py.</p>
-<p>If the Qristal Emulator is installed, the following additional models are available and
-can be accessed by specifying the relevant model name as a string passed to the constructor
-of the NoiseModel class:</p>
-<p>“qb-nm1” : 4x4 NV centres in x-y grid, 3 qubits per NV centre</p>
-<p>“qb-nm2” : 8x8 NV centres in x-y grid, 1 qubit per NV centre, nearest x and nearest y connectivity</p>
-<p>“qb-nm3” : 48 NV centres in a 1-dimensional grid with linear qubit index, 1 qubits per NV centre</p>
-<p>“qb-qdk1” : 1 NV centre with 2 qubits, fidelities tuned to match deployed device</p>
-<p>“qb-dqc2” : 1 NV centre with 2 qubits, fidelities tuned to match lab-based device</p>
-<p>noise_models:</p>
-<p>A 1d-array (list) version of noise_model.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.noise_models">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noise_models</span></span><a class="headerlink" href="#core.session.noise_models" title="Permalink to this definition"></a></dt>
-<dd><p>noise_model:</p>
-<p>Set the noise model to be used in subsequent simulations.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Requires setting: noise = True (to have effect)</p>
-</div>
-<p>The default (built in) model is a simple depolarizing noise model on all qubits.</p>
-<p>Users may make their own instances of the NoiseModel class (or make an instance of the
-default and modify it), and then assign that model to this property.  See examples/python/noise_model*.py.</p>
-<p>If the Qristal Emulator is installed, the following additional models are available and
-can be accessed by specifying the relevant model name as a string passed to the constructor
-of the NoiseModel class:</p>
-<p>“qb-nm1” : 4x4 NV centres in x-y grid, 3 qubits per NV centre</p>
-<p>“qb-nm2” : 8x8 NV centres in x-y grid, 1 qubit per NV centre, nearest x and nearest y connectivity</p>
-<p>“qb-nm3” : 48 NV centres in a 1-dimensional grid with linear qubit index, 1 qubits per NV centre</p>
-<p>“qb-qdk1” : 1 NV centre with 2 qubits, fidelities tuned to match deployed device</p>
-<p>“qb-dqc2” : 1 NV centre with 2 qubits, fidelities tuned to match lab-based device</p>
-<p>noise_models:</p>
-<p>A 1d-array (list) version of noise_model.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.noises">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noises</span></span><a class="headerlink" href="#core.session.noises" title="Permalink to this definition"></a></dt>
-<dd><p>noise:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to enable noisy simulation (if supported by the <cite>acc</cite> backend). The single setting applies globally.</p>
-<p>noises:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of noise.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.nooptimise">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nooptimise</span></span><a class="headerlink" href="#core.session.nooptimise" title="Permalink to this definition"></a></dt>
-<dd><p>nooptimise:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable circuit optimization. The single setting applies globally.</p>
-<p>nooptimises:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of nooptimise.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.nooptimises">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">nooptimises</span></span><a class="headerlink" href="#core.session.nooptimises" title="Permalink to this definition"></a></dt>
-<dd><p>nooptimise:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable circuit optimization. The single setting applies globally.</p>
-<p>nooptimises:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of nooptimise.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.noplacement">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noplacement</span></span><a class="headerlink" href="#core.session.noplacement" title="Permalink to this definition"></a></dt>
-<dd><p>noplacement:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable circuit placement. The single setting applies globally.</p>
-<p>noplacements:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of noplacement.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.noplacements">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">noplacements</span></span><a class="headerlink" href="#core.session.noplacements" title="Permalink to this definition"></a></dt>
-<dd><p>noplacement:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable circuit placement. The single setting applies globally.</p>
-<p>noplacements:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of noplacement.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.notiming">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notiming</span></span><a class="headerlink" href="#core.session.notiming" title="Permalink to this definition"></a></dt>
-<dd><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This property is currently unused.</p>
-</div>
-<p>notiming:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable timing estimation. The single setting applies globally.</p>
-<p>notimings:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of notiming.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.notimings">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">notimings</span></span><a class="headerlink" href="#core.session.notimings" title="Permalink to this definition"></a></dt>
-<dd><div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This property is currently unused.</p>
-</div>
-<p>notiming:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to disable timing estimation. The single setting applies globally.</p>
-<p>notimings:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of notiming.</p>
+<dd><p>Circuit object to be executed.</p>
 </dd></dl>
 
 <dl class="py property">
@@ -740,360 +204,31 @@ of the NoiseModel class:</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">num_threads</span></span><a class="headerlink" href="#core.session.num_threads" title="Permalink to this definition"></a></dt>
 <dd><p>The number of threads in the Qristal thread pool</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>num_threads</p>
 </dd>
 </dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_counts">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_counts</span></span><a class="headerlink" href="#core.session.out_counts" title="Permalink to this definition"></a></dt>
-<dd><p>out_counts:</p>
-<p>After calling session.run(), the counts from running sn shots are stored in a list of shot counts.
-The indices of this list correspond to the different possible base-2 bitstring solutions, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
+<dt class="sig sig-object py" id="core.session.one_qubit_gate_depths">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">one_qubit_gate_depths</span></span><a class="headerlink" href="#core.session.one_qubit_gate_depths" title="Permalink to this definition"></a></dt>
+<dd><p>one_qubit_gate_depths:</p>
+<p>After calling session.run(), get the number of single qubit gates applied to each qubit, using a dictionary where the keys are integers corresponding to qubit indices.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_divergence">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_divergence</span></span><a class="headerlink" href="#core.session.out_divergence" title="Permalink to this definition"></a></dt>
-<dd><p>out_divergence:</p>
-<p>After calling session.divergence(), the Jensen-Shannon divergence between session.results and session.expected_amplitudes is calculated and stored in session.out_divergence.</p>
-<p>out_divergences:</p>
-<p>A 1d-array (list) version of session.out_divergence.</p>
+<dt class="sig sig-object py" id="core.session.qbjson">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qbjson</span></span><a class="headerlink" href="#core.session.qbjson" title="Permalink to this definition"></a></dt>
+<dd><p>qbjson:</p>
+<p>Get the output QB JSON string sent to QB hardware, after calling session.run().</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_divergences">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_divergences</span></span><a class="headerlink" href="#core.session.out_divergences" title="Permalink to this definition"></a></dt>
-<dd><p>out_divergence:</p>
-<p>After calling session.divergence(), the Jensen-Shannon divergence between session.results and session.expected_amplitudes is calculated and stored in session.out_divergence.</p>
-<p>out_divergences:</p>
-<p>A 1d-array (list) version of session.out_divergence.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_double_qubit_gate_qty">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_double_qubit_gate_qty</span></span><a class="headerlink" href="#core.session.out_double_qubit_gate_qty" title="Permalink to this definition"></a></dt>
-<dd><p>out_double_qubit_gate_qty:</p>
-<p>After calling session.profile(), the circuit in session.out_transpiled_circuit is processed and the count of the number of two-qubit gates is stored as session.out_double_qubit_gate_qty, using a dictionary where the keys are integers corresponding to qubit indexes.</p>
-<p>out_double_qubit_gate_qtys:</p>
-<p>A 1d-array (list) version of session.out_double_qubit_gate_qty.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_double_qubit_gate_qtys">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_double_qubit_gate_qtys</span></span><a class="headerlink" href="#core.session.out_double_qubit_gate_qtys" title="Permalink to this definition"></a></dt>
-<dd><p>out_double_qubit_gate_qty:</p>
-<p>After calling session.profile(), the circuit in session.out_transpiled_circuit is processed and the count of the number of two-qubit gates is stored as session.out_double_qubit_gate_qty, using a dictionary where the keys are integers corresponding to qubit indexes.</p>
-<p>out_double_qubit_gate_qtys:</p>
-<p>A 1d-array (list) version of session.out_double_qubit_gate_qty.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_prob_jacobians">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_prob_jacobians</span></span><a class="headerlink" href="#core.session.out_prob_jacobians" title="Permalink to this definition"></a></dt>
-<dd><p>out_prob_jacobians:</p>
-<p>After calling session.run() with <cite>calc_jacobian(s)</cite> set to true, the probability jacobians from running sn shots are stored in session.out_prob_jacobian, using a list of 2D list-of-lists format.
-The jacobians calculate the gradients of the probability with respect to the runtime parameters, in the following format (where y is the probability list and x is the parameter list):</p>
-<div class="math notranslate nohighlight">
-\[\begin{split}\begin{bmatrix}
-\frac{dy_0}{dx_0} &amp; \frac{dy_0}{dx_1} &amp; ... &amp; \frac{dy_0}{dx_n} \\
-\frac{dy_1}{dx_0} &amp; \frac{dy_1}{dx_1} &amp; ... &amp; \frac{dy_1}{dx_n} \\
-... \\
-\frac{dy_m}{dx_0} &amp; \frac{dy_m}{dx_1} &amp; ... &amp; \frac{dy_m}{dx_n}
-\end{bmatrix}\end{split}\]</div>
-<p>Since the jacobian is returned as a list-of-lists, it can be accessed in row major format, and indexing the above matrix can be done accordingly, i.e. get_out_jacobians()[0][1] corresponds to the dy_0/dx_1 value.
-x_i correspond to the parameters set in the parameter list (i.e. the parameters ordered by their first appearance in the circuit.)
-y_i are the output probabilities of different bitstrings, indexed in the same manner as the out_count list. Explicitly, the index i corresponding to a specific bitstring can be obtained by calling bitstring_index(bitstring), with bitstring given as a list of bit values.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_probs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_probs</span></span><a class="headerlink" href="#core.session.out_probs" title="Permalink to this definition"></a></dt>
-<dd><p>out_probs:</p>
-<p>After calling session.run() with <cite>calc_jacobian(s)</cite> set to true, the probability distribution from running sn shots stored in a list of solution output probabilities.
-The indices of this list correspond to the different possible base-2 bitstring solutions, with the mapping from bitstring to list index provided by the function bitstring_index.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_qbjson">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_qbjson</span></span><a class="headerlink" href="#core.session.out_qbjson" title="Permalink to this definition"></a></dt>
-<dd><p>out_qbjson:</p>
-<p>Shows JSON data sent to QB hardware.  Note: session.run() must be called first.</p>
-<p>out_qbjsons:</p>
-<p>A 1d-array (list) version of session.out_qbjson.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_qbjsons">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_qbjsons</span></span><a class="headerlink" href="#core.session.out_qbjsons" title="Permalink to this definition"></a></dt>
-<dd><p>out_qbjson:</p>
-<p>Shows JSON data sent to QB hardware.  Note: session.run() must be called first.</p>
-<p>out_qbjsons:</p>
-<p>A 1d-array (list) version of session.out_qbjson.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_qobj">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_qobj</span></span><a class="headerlink" href="#core.session.out_qobj" title="Permalink to this definition"></a></dt>
-<dd><p>out_qobj:</p>
-<p>When acc=’aer’, the .qobj JSON input used by a standalone Aer installation is stored in out_qobj.  Note: session.run() must be called first.</p>
-<p>out_qobjs:</p>
-<p>A 1d-array (list) version of session.out_qobj.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_qobjs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_qobjs</span></span><a class="headerlink" href="#core.session.out_qobjs" title="Permalink to this definition"></a></dt>
-<dd><p>out_qobj:</p>
-<p>When acc=’aer’, the .qobj JSON input used by a standalone Aer installation is stored in out_qobj.  Note: session.run() must be called first.</p>
-<p>out_qobjs:</p>
-<p>A 1d-array (list) version of session.out_qobj.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_single_qubit_gate_qty">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_single_qubit_gate_qty</span></span><a class="headerlink" href="#core.session.out_single_qubit_gate_qty" title="Permalink to this definition"></a></dt>
-<dd><p>out_single_qubit_gate_qty:</p>
-<p>After calling session.profile(), the circuit in session.out_transpiled_circuit is processed and the count of the number of single qubit gates is stored as session.out_single_qubit_gate_qty, using a dictionary where the keys are integers corresponding to qubit indexes.</p>
-<p>out_single_qubit_gate_qtys:</p>
-<p>A 1d-array (list) version of session.out_single_qubit_gate_qty.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_single_qubit_gate_qtys">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_single_qubit_gate_qtys</span></span><a class="headerlink" href="#core.session.out_single_qubit_gate_qtys" title="Permalink to this definition"></a></dt>
-<dd><p>out_single_qubit_gate_qty:</p>
-<p>After calling session.profile(), the circuit in session.out_transpiled_circuit is processed and the count of the number of single qubit gates is stored as session.out_single_qubit_gate_qty, using a dictionary where the keys are integers corresponding to qubit indexes.</p>
-<p>out_single_qubit_gate_qtys:</p>
-<p>A 1d-array (list) version of session.out_single_qubit_gate_qty.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_total_init_maxgate_readout_time">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_total_init_maxgate_readout_time</span></span><a class="headerlink" href="#core.session.out_total_init_maxgate_readout_time" title="Permalink to this definition"></a></dt>
-<dd><p>out_total_init_maxgate_readout_time:</p>
-<p>After calling session.profile(), the circuit in in session.out_transpiled_circuit is processed and timing estimates taken to perform the required number of shots [sn] are stored as session.out_total_init_maxgate_readout_time.</p>
-<p>It uses a dictionary with the following keys [integer]:</p>
-<blockquote>
-<div><p>0: total, in ms;</p>
-<p>1: initialisation time component, in ms;</p>
-<p>2: max depth gate time component, in ms;</p>
-<p>3: readout time component, in ms;</p>
-<p>4: total (classically simulated time), in ms;</p>
-<p>5: PC transfer to controller time, in ms.</p>
-</div></blockquote>
-<p>out_total_init_maxgate_readout_times:</p>
-<p>A 1d-array (list) version of session.out_total_init_maxgate_readout_time.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_total_init_maxgate_readout_times">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_total_init_maxgate_readout_times</span></span><a class="headerlink" href="#core.session.out_total_init_maxgate_readout_times" title="Permalink to this definition"></a></dt>
-<dd><p>out_total_init_maxgate_readout_time:</p>
-<p>After calling session.profile(), the circuit in in session.out_transpiled_circuit is processed and timing estimates taken to perform the required number of shots [sn] are stored as session.out_total_init_maxgate_readout_time.</p>
-<p>It uses a dictionary with the following keys [integer]:</p>
-<blockquote>
-<div><p>0: total, in ms;</p>
-<p>1: initialisation time component, in ms;</p>
-<p>2: max depth gate time component, in ms;</p>
-<p>3: readout time component, in ms;</p>
-<p>4: total (classically simulated time), in ms;</p>
-<p>5: PC transfer to controller time, in ms.</p>
-</div></blockquote>
-<p>out_total_init_maxgate_readout_times:</p>
-<p>A 1d-array (list) version of session.out_total_init_maxgate_readout_time.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_transpiled_circuit">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_transpiled_circuit</span></span><a class="headerlink" href="#core.session.out_transpiled_circuit" title="Permalink to this definition"></a></dt>
-<dd><p>out_transpiled_circuit:</p>
-<p>After calling session.run(), the transpiled version of session.instring is stored as session.out_transpiled_circuit.</p>
-<p>out_transpiled_circuits:</p>
-<p>A 1d-array (list) version of session.out_transpiled_circuit.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_transpiled_circuits">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_transpiled_circuits</span></span><a class="headerlink" href="#core.session.out_transpiled_circuits" title="Permalink to this definition"></a></dt>
-<dd><p>out_transpiled_circuit:</p>
-<p>After calling session.run(), the transpiled version of session.instring is stored as session.out_transpiled_circuit.</p>
-<p>out_transpiled_circuits:</p>
-<p>A 1d-array (list) version of session.out_transpiled_circuit.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_z_op_expect">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_z_op_expect</span></span><a class="headerlink" href="#core.session.out_z_op_expect" title="Permalink to this definition"></a></dt>
-<dd><p>out_z_op_expect:</p>
-<p>After calling run(), the Z-operator expectation value determined from counts in respective states is stored in out_z_op_expects, using a dictionary where the keys are integers, and currently only key:0 is used.</p>
-<p>out_z_op_expects:</p>
-<p>A 1d-array (list) version of out_z_op_expect.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.out_z_op_expects">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">out_z_op_expects</span></span><a class="headerlink" href="#core.session.out_z_op_expects" title="Permalink to this definition"></a></dt>
-<dd><p>out_z_op_expect:</p>
-<p>After calling run(), the Z-operator expectation value determined from counts in respective states is stored in out_z_op_expects, using a dictionary where the keys are integers, and currently only key:0 is used.</p>
-<p>out_z_op_expects:</p>
-<p>A 1d-array (list) version of out_z_op_expect.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.output_oqm_enabled">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_oqm_enabled</span></span><a class="headerlink" href="#core.session.output_oqm_enabled" title="Permalink to this definition"></a></dt>
-<dd><p>output_oqm_enabled:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to enable circuit timing and resource estimation. The single setting applies globally.</p>
-<p>output_oqm_enableds:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of output_oqm_enabled.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.output_oqm_enableds">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">output_oqm_enableds</span></span><a class="headerlink" href="#core.session.output_oqm_enableds" title="Permalink to this definition"></a></dt>
-<dd><p>output_oqm_enabled:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True to enable circuit timing and resource estimation. The single setting applies globally.</p>
-<p>output_oqm_enableds:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>A 1d-array (list) version of output_oqm_enabled.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.parameter_list">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameter_list</span></span><a class="headerlink" href="#core.session.parameter_list" title="Permalink to this definition"></a></dt>
-<dd><p>parameter_vector:</p>
-<p>Runtime parameters for the input parametrized circuit. The single setting applies globally.</p>
-<p>parameter_vectors:</p>
-<p>A 1d-array (list) version of parameter_vector.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.parameter_lists">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">parameter_lists</span></span><a class="headerlink" href="#core.session.parameter_lists" title="Permalink to this definition"></a></dt>
-<dd><p>parameter_vector:</p>
-<p>Runtime parameters for the input parametrized circuit. The single setting applies globally.</p>
-<p>parameter_vectors:</p>
-<p>A 1d-array (list) version of parameter_vector.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.placement">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">placement</span></span><a class="headerlink" href="#core.session.placement" title="Permalink to this definition"></a></dt>
-<dd><p>placement:</p>
-<p>Valid settings: “swap-shortest-path” | “noise-aware”</p>
-<p>Setting the method to map from logical qubits to the physical qubits of the device that will be used to carry them. The single setting applies globally to all infiles and all instrings.
-Default: “swap-shortest-path”</p>
-<p>placements:</p>
-<p>Valid settings: [[“swap-shortest-path” | “noise-aware”, …], [“swap-shortest-path” | “noise-aware”, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.placements">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">placements</span></span><a class="headerlink" href="#core.session.placements" title="Permalink to this definition"></a></dt>
-<dd><p>placement:</p>
-<p>Valid settings: “swap-shortest-path” | “noise-aware”</p>
-<p>Setting the method to map from logical qubits to the physical qubits of the device that will be used to carry them. The single setting applies globally to all infiles and all instrings.
-Default: “swap-shortest-path”</p>
-<p>placements:</p>
-<p>Valid settings: [[“swap-shortest-path” | “noise-aware”, …], [“swap-shortest-path” | “noise-aware”, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.qn">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qn</span></span><a class="headerlink" href="#core.session.qn" title="Permalink to this definition"></a></dt>
-<dd><p>qn:</p>
-<p>Number of qubits. The single setting applies globally.</p>
-<p>qns:</p>
-<p>A 1d-array (list) version of qn.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.qns">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qns</span></span><a class="headerlink" href="#core.session.qns" title="Permalink to this definition"></a></dt>
-<dd><p>qn:</p>
-<p>Number of qubits. The single setting applies globally.</p>
-<p>qns:</p>
-<p>A 1d-array (list) version of qn.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.quil1">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quil1</span></span><a class="headerlink" href="#core.session.quil1" title="Permalink to this definition"></a></dt>
-<dd><p>quil1:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True causes circuits to be interpreted in Quil 1.0 format. The single setting applies globally to all infiles and all instrings.</p>
-<p>quil1s:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.quil1s">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">quil1s</span></span><a class="headerlink" href="#core.session.quil1s" title="Permalink to this definition"></a></dt>
-<dd><p>quil1:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True causes circuits to be interpreted in Quil 1.0 format. The single setting applies globally to all infiles and all instrings.</p>
-<p>quil1s:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.random">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">random</span></span><a class="headerlink" href="#core.session.random" title="Permalink to this definition"></a></dt>
-<dd><p>random:</p>
-<p>Circuit depth of the random circuit to use as input. The single setting applies globally.</p>
-<p>randoms:</p>
-<p>A 1d-array (list) version of random.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.randoms">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">randoms</span></span><a class="headerlink" href="#core.session.randoms" title="Permalink to this definition"></a></dt>
-<dd><p>random:</p>
-<p>Circuit depth of the random circuit to use as input. The single setting applies globally.</p>
-<p>randoms:</p>
-<p>A 1d-array (list) version of random.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.rel_svd_cutoff">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rel_svd_cutoff</span></span><a class="headerlink" href="#core.session.rel_svd_cutoff" title="Permalink to this definition"></a></dt>
-<dd><p>rel_svd_cutoff:</p>
-<p>Set the relative SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
-<p>rel_svd_cutoffs:</p>
-<p>A 1d-array (list) version of rel_svd_cutoff.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.rel_svd_cutoffs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">rel_svd_cutoffs</span></span><a class="headerlink" href="#core.session.rel_svd_cutoffs" title="Permalink to this definition"></a></dt>
-<dd><p>rel_svd_cutoff:</p>
-<p>Set the relative SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
-<p>rel_svd_cutoffs:</p>
-<p>A 1d-array (list) version of rel_svd_cutoff.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.remote_backend_database_path">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">remote_backend_database_path</span></span><a class="headerlink" href="#core.session.remote_backend_database_path" title="Permalink to this definition"></a></dt>
-<dd><p>A YAML file that contains configuration data for remote backends (including hardware).</p>
+<dt class="sig sig-object py" id="core.session.qobj">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qobj</span></span><a class="headerlink" href="#core.session.qobj" title="Permalink to this definition"></a></dt>
+<dd><p>qobj:</p>
+<p>Retrieve the input passed to the aer simulator backend in .qobj JSON format, after calling session.run().</p>
 </dd></dl>
 
 <dl class="py property">
@@ -1113,19 +248,13 @@ Default: “swap-shortest-path”</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="core.session.run">
 <span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.run" title="Permalink to this definition"></a></dt>
-<dd><p>Execute all declared quantum circuits under all conditions</p>
+<dd><p>Execute quantum circuit synchronously (blocking).</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.session.run_async">
-<span class="sig-name descname"><span class="pre">run_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">core.Handle</span></span></span><a class="headerlink" href="#core.session.run_async" title="Permalink to this definition"></a></dt>
-<dd><p>run_async(i,j) : Launch the execution of circuit i, condition j asynchronously.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.run_complete">
-<span class="sig-name descname"><span class="pre">run_complete</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#core.session.run_complete" title="Permalink to this definition"></a></dt>
-<dd><p>run_complete(i,j) : Check if the execution of circuit i, condition j has been completed.</p>
+<span class="sig-name descname"><span class="pre">run_async</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">core.Handle</span></span></span><a class="headerlink" href="#core.session.run_async" title="Permalink to this definition"></a></dt>
+<dd><p>Execute quantum circuit asynchronously (non-blocking).</p>
 </dd></dl>
 
 <dl class="py method">
@@ -1134,107 +263,55 @@ Default: “swap-shortest-path”</p>
 <dd><p>Automatically execute a SPAM measurement and enable automatic SPAM correction. Then automatically exexute run().</p>
 </dd></dl>
 
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.runit">
-<span class="sig-name descname"><span class="pre">runit</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.runit" title="Permalink to this definition"></a></dt>
-<dd><p>runit(i,j) : Execute circuit i, condition j</p>
+<dl class="py property">
+<dt class="sig sig-object py" id="core.session.state_vec">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">state_vec</span></span><a class="headerlink" href="#core.session.state_vec" title="Permalink to this definition"></a></dt>
+<dd><p>state_vec:</p>
+<p>Get the full complex state vector – works with qpp and aer statevector backends only!</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.seed">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">seed</span></span><a class="headerlink" href="#core.session.seed" title="Permalink to this definition"></a></dt>
-<dd><p>seed:</p>
-<p>Set the random seed value.</p>
-<p>seeds:</p>
-<p>A 1d-array (list) version of seed.</p>
+<dt class="sig sig-object py" id="core.session.timing_estimates">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">timing_estimates</span></span><a class="headerlink" href="#core.session.timing_estimates" title="Permalink to this definition"></a></dt>
+<dd><p>timing_estimates:</p>
+<p>After calling session.run(), get estimated circuit execution times on hardware, in ms.</p>
+<dl class="simple">
+<dt>Keys (integers):</dt><dd><p>0: Total time
+1: Initialisation component
+2: Gate (max. depth) component
+3: Readout component
+4: Total time (from classical simulation)
+5: PC transfer to controller time</p>
+</dd>
+</dl>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.seeds">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">seeds</span></span><a class="headerlink" href="#core.session.seeds" title="Permalink to this definition"></a></dt>
-<dd><p>seed:</p>
-<p>Set the random seed value.</p>
-<p>seeds:</p>
-<p>A 1d-array (list) version of seed.</p>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="core.session.set_parallel_run_config">
-<span class="sig-name descname"><span class="pre">set_parallel_run_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.session" title="core.session"><span class="pre">core.session</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.session.set_parallel_run_config" title="Permalink to this definition"></a></dt>
-<dd><p>Set the parallel execution configuration</p>
+<dt class="sig sig-object py" id="core.session.transpiled_circuit">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">transpiled_circuit</span></span><a class="headerlink" href="#core.session.transpiled_circuit" title="Permalink to this definition"></a></dt>
+<dd><p>transpiled_circuit:</p>
+<p>Retrieve the transpiled version of the executed circuit after calling session.run().</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.sn">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sn</span></span><a class="headerlink" href="#core.session.sn" title="Permalink to this definition"></a></dt>
-<dd><p>sn:</p>
-<p>Number of measurement shots. The single setting applies globally.</p>
-<p>sns:</p>
-<p>A 1d-array (list) version of sn.</p>
+<dt class="sig sig-object py" id="core.session.two_qubit_gate_depths">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">two_qubit_gate_depths</span></span><a class="headerlink" href="#core.session.two_qubit_gate_depths" title="Permalink to this definition"></a></dt>
+<dd><p>two_qubit_gate_depths:</p>
+<p>After calling session.run(), get the number of two qubit gates applied to each qubit, using a dictionary where the keys are integers corresponding to qubit indices.</p>
 </dd></dl>
 
 <dl class="py property">
-<dt class="sig sig-object py" id="core.session.sns">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">sns</span></span><a class="headerlink" href="#core.session.sns" title="Permalink to this definition"></a></dt>
-<dd><p>sn:</p>
-<p>Number of measurement shots. The single setting applies globally.</p>
-<p>sns:</p>
-<p>A 1d-array (list) version of sn.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.svd_cutoff">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">svd_cutoff</span></span><a class="headerlink" href="#core.session.svd_cutoff" title="Permalink to this definition"></a></dt>
-<dd><p>svd_cutoff:</p>
-<p>Set the SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
-<p>svd_cutoffs:</p>
-<p>A 1d-array (list) version of svd_cutoff.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.svd_cutoffs">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">svd_cutoffs</span></span><a class="headerlink" href="#core.session.svd_cutoffs" title="Permalink to this definition"></a></dt>
-<dd><p>svd_cutoff:</p>
-<p>Set the SVD cutoff threshold value (tensor network simulators). The single setting applies globally.</p>
-<p>svd_cutoffs:</p>
-<p>A 1d-array (list) version of svd_cutoff.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This is only needed if using the tensor network backend accelerators.</p>
-</div>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.xasm">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xasm</span></span><a class="headerlink" href="#core.session.xasm" title="Permalink to this definition"></a></dt>
-<dd><p>xasm:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True causes circuits to be interpreted in XASM format.  The single setting applies globally to all infiles and all instrings.</p>
-<p>xasms:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
-</dd></dl>
-
-<dl class="py property">
-<dt class="sig sig-object py" id="core.session.xasms">
-<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">xasms</span></span><a class="headerlink" href="#core.session.xasms" title="Permalink to this definition"></a></dt>
-<dd><p>xasm:</p>
-<p>Valid settings: True | False</p>
-<p>Setting this to True causes circuits to be interpreted in XASM format.  The single setting applies globally to all infiles and all instrings.</p>
-<p>xasms:</p>
-<p>Valid settings: [[True|False, …], [True|False, …]]</p>
-<p>The lead dimension’s element 0 matches the vector of infiles, element 1 matches the vector of instrings, element 2 matches the vector of randoms.</p>
+<dt class="sig sig-object py" id="core.session.z_op_expectation">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">z_op_expectation</span></span><a class="headerlink" href="#core.session.z_op_expectation" title="Permalink to this definition"></a></dt>
+<dd><p>z_op_expectation:</p>
+<p>After calling session.run(), get the output expected value in the Z basis, from the shot counts observed.</p>
 </dd></dl>
 
 </dd></dl>
 
 </section>
 <section id="the-circuit-class">
-<h2>The Circuit class<a class="headerlink" href="#the-circuit-class" title="Permalink to this headline"></a></h2>
+<h2>The Circuit class<a class="headerlink" href="#the-circuit-class" title="Permalink to this heading"></a></h2>
 <p>The <cite>Circuit</cite> class represents a quantum circuit, i.e., an ordered sequence of [quantum gates and measurements](<a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html">https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html</a>).</p>
 <p>In addition to elementary gates, it also supports pre-built circuit templates for commonly-used algorithms, such as Quantum Fourier Transform (QFT), algebraic circuits, etc.</p>
 <dl class="py class">
@@ -1535,6 +612,11 @@ satisfied.</p>
 <li><p><strong>flags_off</strong> The indices of any qubits that should be “off” controls (i.e. circuit executed if qubit = 0) [list of int]</p></li>
 </ul>
 </dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="core.Circuit.copy">
+<span class="sig-name descname"><span class="pre">copy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></span><a class="headerlink" href="#core.Circuit.copy" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.cphase">
@@ -1957,7 +1039,7 @@ measured.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.Circuit.param_dict_to_list">
-<span class="sig-name descname"><span class="pre">param_dict_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.Circuit.param_dict_to_list" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">param_dict_to_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.Circuit" title="core.Circuit"><span class="pre">core.Circuit</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">dict</span><span class="p"><span class="pre">[</span></span><span class="pre">str</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><span class="pre">float</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.Circuit.param_dict_to_list" title="Permalink to this definition"></a></dt>
 <dd><p>Convert a dictionary that defines parameter assignments to a vector for
 input to the session object. The vector will be ordered according to
 the definition of the free parameter in the circuit; for example, if
@@ -2423,7 +1505,7 @@ Parameters:</p>
 <p>The X gate is defined by its action on the basis states</p>
 </div></blockquote>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>[</strong><strong>int</strong><strong>]</strong> (<em>- idx the index of the qubit being acted on</em>) – </p>
 </dd>
 </dl>
@@ -2459,7 +1541,7 @@ Parameters:</p>
 
 </section>
 <section id="noise-modelling">
-<h2>Noise Modelling<a class="headerlink" href="#noise-modelling" title="Permalink to this headline"></a></h2>
+<h2>Noise Modelling<a class="headerlink" href="#noise-modelling" title="Permalink to this heading"></a></h2>
 <p>QB Qristal allows an end-user to implement noise models in Python.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="core.NoiseModel">
@@ -2483,11 +1565,11 @@ Parameters:</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="core.NoiseModel.add_gate_error">
-<span class="sig-name descname"><span class="pre">add_gate_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.NoiseModel" title="core.NoiseModel"><span class="pre">core.NoiseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.NoiseModel.add_gate_error" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">add_gate_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#core.NoiseModel" title="core.NoiseModel"><span class="pre">core.NoiseModel</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.NoiseModel.add_gate_error" title="Permalink to this definition"></a></dt>
 <dd><p>Add a gate error channel for a gate operation</p>
 <p>Parameters:</p>
 <ul class="simple">
-<li><p><em>noise_channel</em> Noise channel to be associated with the gate [List(KraussOperator)]</p></li>
+<li><p><em>noise_channel</em> Noise channel to be associated with the gate [List(KrausOperator)]</p></li>
 <li><p><em>gate_name</em> Name of the gates [String]</p></li>
 <li><p><em>qubits</em> Qubit indices of the gate. [List(Integer)]</p></li>
 </ul>
@@ -2527,7 +1609,7 @@ Parameters:</p>
 <em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">qobj_compiler</span></span><a class="headerlink" href="#core.NoiseModel.qobj_compiler" title="Permalink to this definition"></a></dt>
 <dd><p>‘xacc-qobj’ | ‘qristal-qobj’.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Type</dt>
+<dt class="field-odd">Type<span class="colon">:</span></dt>
 <dd class="field-odd"><p>The name of the QObj compiler to use with the AER simulator. Valid options</p>
 </dd>
 </dl>
@@ -2571,18 +1653,18 @@ Parameters:</p>
 <p>Unit: none (range: [0.0, 1.0])</p>
 <p>Code example: 4 qubits: “u3” single-qubit gate, uniform gate error parameter = 0.03 (3%); “cx” between neighboring qubits (on a line), gate error parameter = 0.1 (10%):</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
-<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="n">num_qubits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.03</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="n">num_qubits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">)</span><span class="o">:</span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.03</span>
 <span class="w">  </span><span class="cp"># Qubits on a line:</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">num_qubits</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">num_qubits</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span>
+<span class="w">    </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.1</span>
 
 <span class="cp"># Print out the gate error map:</span>
-<span class="n">print</span><span class="p">(</span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">)</span><span class="w"></span>
+<span class="n">print</span><span class="p">(</span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_pauli_errors</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2594,18 +1676,18 @@ Parameters:</p>
 <p>Unit: microseconds</p>
 <p>Code example: 4 qubits: “u3” single-qubit gate, uniform duration of 5.2us; “cx” between neighboring qubits (on a line), uniform duration of 20us:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
-<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span><span class="w"></span>
-<span class="n">num_qubits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span><span class="w"></span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.2</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{}</span>
+<span class="n">num_qubits</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">4</span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="n">num_qubits</span><span class="p">)</span><span class="o">:</span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;u3&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">5.2</span>
 <span class="w">  </span><span class="cp"># Qubits on a line:</span>
-<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">num_qubits</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="w"></span>
-<span class="w">    </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20.0</span><span class="w"></span>
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">num_qubits</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span>
+<span class="w">    </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">[</span><span class="s">&quot;cx&quot;</span><span class="p">][[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">20.0</span>
 
 <span class="cp"># Print out the gate time map:</span>
-<span class="n">print</span><span class="p">(</span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">)</span><span class="w"></span>
+<span class="n">print</span><span class="p">(</span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">gate_time_us</span><span class="p">)</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2624,8 +1706,8 @@ Parameters:</p>
 <span class="cp">#     v           v</span>
 <span class="cp">#    q3 &lt;--cx--&gt; q2</span>
 <span class="cp"># Initialize an empty NoiseProperties</span>
-<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">qubit_topology</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]]</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">qubit_topology</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">],</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]]</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2639,19 +1721,19 @@ Parameters:</p>
 <p>Code example: 4-qubit device: 2 qubits (Q0 and Q1) with p(0|1) = p(1|0) = 0.05,
 2 qubits (Q2 and Q3) with p(0|1) = 0.1 and p(1|0) = 0.08:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
-<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
-<span class="n">t_qbnpro_balanced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReadoutError</span><span class="p">()</span><span class="w"></span>
-<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="w"></span>
-<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span><span class="w"></span>
-<span class="n">t_qbnpro_asym</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReadoutError</span><span class="p">()</span><span class="w"></span>
-<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.10</span><span class="w"></span>
-<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.08</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span>
+<span class="n">t_qbnpro_balanced</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReadoutError</span><span class="p">()</span>
+<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span>
+<span class="n">t_qbnpro_balanced</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.05</span>
+<span class="n">t_qbnpro_asym</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ReadoutError</span><span class="p">()</span>
+<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_01</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.10</span>
+<span class="n">t_qbnpro_asym</span><span class="p">.</span><span class="n">p_10</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.08</span>
 <span class="cp"># Q0 and Q1 readout errors</span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_balanced</span>
 <span class="cp"># Q2 and Q3 readout errors</span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="w"></span>
-<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_asym</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_asym</span>
+<span class="n">t_qbnp</span><span class="p">.</span><span class="n">readout_errors</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">t_qbnpro_asym</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2664,10 +1746,10 @@ Parameters:</p>
 <p>Unit: microseconds</p>
 <p>Code example: 4 qubits all with T1 = 1.5us:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
-<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span>
 <span class="cp"># Set T1 of qubits (all with 1.5 us)</span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">t1_us</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">1.5</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">:</span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">t1_us</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">1.5</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2680,10 +1762,10 @@ Parameters:</p>
 <p>Unit: microseconds</p>
 <p>Code example: 4 qubits all with T2 = 0.15us:</p>
 <div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># Initialize an empty NoiseProperties</span>
-<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span><span class="w"></span>
+<span class="n">t_qbnp</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NoiseProperties</span><span class="p">()</span>
 <span class="cp"># Set T2 of qubits (all with 0.15 us)</span>
-<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">:</span><span class="w"></span>
-<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">t2_us</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">0.15</span><span class="w"></span>
+<span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">range</span><span class="p">(</span><span class="mi">4</span><span class="p">)</span><span class="o">:</span>
+<span class="w">  </span><span class="n">t_qbnp</span><span class="p">.</span><span class="n">t2_us</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w">  </span><span class="mf">0.15</span>
 </pre></div>
 </div>
 </dd></dl>
@@ -2697,7 +1779,7 @@ Parameters:</p>
 <dd><p>Amplitude damping channel factory</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="core.AmplitudeDampingChannel.Create">
-<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.AmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.AmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2708,7 +1790,7 @@ Parameters:</p>
 <dd><p>Phase damping channel factory</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="core.PhaseDampingChannel.Create">
-<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.PhaseDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.PhaseDampingChannel.Create" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -2722,7 +1804,7 @@ Parameters:</p>
 <span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#core.DepolarizingChannel.Create" title="Permalink to this definition"></a></dt>
 <dd><p>Overloaded function.</p>
 <ol class="arabic">
-<li><p>Create(self: int, arg0: float) -&gt; List[core.KrausOperator]</p>
+<li><p>Create(self: int, arg0: float) -&gt; list[core.KrausOperator]</p>
 <blockquote>
 <div><p>Create single-qubit depolarizing channel (balanced/symmetric)</p>
 <p>Parameters:</p>
@@ -2732,7 +1814,7 @@ Parameters:</p>
 </ul>
 </div></blockquote>
 </li>
-<li><p>Create(self: int, arg0: int, arg1: float) -&gt; List[core.KrausOperator]</p>
+<li><p>Create(self: int, arg0: int, arg1: float) -&gt; list[core.KrausOperator]</p>
 <blockquote>
 <div><p>Create two-qubit depolarizing channel (balanced/symmetric)</p>
 <p>Parameters:</p>
@@ -2754,7 +1836,7 @@ Parameters:</p>
 <dd><p>Generalized Single-qubit combined phase and amplitude damping quantum error channel</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="core.GeneralizedPhaseAmplitudeDampingChannel.Create">
-<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.GeneralizedPhaseAmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg2</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.GeneralizedPhaseAmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
 <dd><p>Create a generalized amplitude and phase damping channel</p>
 <p>Parameters:</p>
 <ul class="simple">
@@ -2773,7 +1855,7 @@ Parameters:</p>
 <dd><p>Generalized amplitude damping quantum error channel</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="core.GeneralizedAmplitudeDampingChannel.Create">
-<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">List</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.GeneralizedAmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">Create</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg0</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">arg1</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">list</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="#core.KrausOperator" title="core.KrausOperator"><span class="pre">core.KrausOperator</span></a><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#core.GeneralizedAmplitudeDampingChannel.Create" title="Permalink to this definition"></a></dt>
 <dd><p>Create a generalized amplitude damping channel</p>
 <p>Parameters:</p>
 <ul class="simple">
@@ -2823,10 +1905,10 @@ Parameters:</p>
 
 </section>
 <section id="placement">
-<h2>Placement<a class="headerlink" href="#placement" title="Permalink to this headline"></a></h2>
+<h2>Placement<a class="headerlink" href="#placement" title="Permalink to this heading"></a></h2>
 <p>Qristal contains placement methods to perform mapping from program (logical) qubits to device (physical) qubits satisfying qubit connectivity constraints.</p>
 <section id="noise-aware-placement">
-<h3>Noise-aware placement<a class="headerlink" href="#noise-aware-placement" title="Permalink to this headline"></a></h3>
+<h3>Noise-aware placement<a class="headerlink" href="#noise-aware-placement" title="Permalink to this heading"></a></h3>
 <p>The <cite>noise_aware_placement_pass</cite> takes into account gate error rates and readout errors to find the best placement map.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="core.noise_aware_placement_pass">
@@ -2837,7 +1919,7 @@ Parameters:</p>
 <span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.noise_aware_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qristal::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.noise_aware_placement_pass.apply" title="Permalink to this definition"></a></dt>
 <dd><p>Apply noise-aware placement on the input circuit.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>circuit</strong> – Circuit to be placed (map qubit indices and inject SWAP gates as necessary)</p>
 </dd>
 </dl>
@@ -2854,7 +1936,7 @@ Parameters:</p>
 
 </section>
 <section id="swap-based-placement">
-<h3>Swap-based placement<a class="headerlink" href="#swap-based-placement" title="Permalink to this headline"></a></h3>
+<h3>Swap-based placement<a class="headerlink" href="#swap-based-placement" title="Permalink to this heading"></a></h3>
 <p>The <cite>swap_placement_pass</cite> performs circuit placement by swapping qubits (along the shortest possible path) when there are gates between uncoupled qubits.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="core.swap_placement_pass">
@@ -2865,7 +1947,7 @@ Parameters:</p>
 <span class="sig-name descname"><span class="pre">apply</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self:</span> <span class="pre">core.swap_placement_pass</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">circuit:</span> <span class="pre">qristal::CircuitBuilder</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#core.swap_placement_pass.apply" title="Permalink to this definition"></a></dt>
 <dd><p>Apply SWAP-based placement on the input circuit.</p>
 <dl class="field-list simple">
-<dt class="field-odd">Parameters</dt>
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>circuit</strong> – Circuit to be placed (map qubit indices and inject SWAP gates as necessary)</p>
 </dd>
 </dl>

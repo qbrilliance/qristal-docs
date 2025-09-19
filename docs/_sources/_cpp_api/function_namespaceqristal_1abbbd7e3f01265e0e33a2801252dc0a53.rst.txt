@@ -1,0 +1,14 @@
+.. _exhale_function_namespaceqristal_1abbbd7e3f01265e0e33a2801252dc0a53:
+
+Function qristal::create_commute_through_multis_pass
+====================================================
+
+- Defined in :ref:`file_core_include_qristal_core_passes_circuit_opt_passes.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::create_commute_through_multis_pass()
+   :project: My Project

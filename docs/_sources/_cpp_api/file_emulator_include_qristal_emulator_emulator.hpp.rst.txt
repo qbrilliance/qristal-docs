@@ -29,6 +29,8 @@ Includes
 
 - ``string``
 
+- ``vector``
+
 
 
 
@@ -45,7 +47,9 @@ Functions
 ---------
 
 
+- :ref:`exhale_function_emulator_8hpp_1aaa8323809b05568a3f75b76eca97c5b7`
+
 - :ref:`exhale_function_emulator_8hpp_1a832ddfffd686829905846c26ac967d11`
 
-- :ref:`exhale_function_emulator_8hpp_1adfaff34883361f2dd62b27550bac36fe`
+- :ref:`exhale_function_emulator_8hpp_1af683f73f51f7fad07c44b5583d2060b7`
 

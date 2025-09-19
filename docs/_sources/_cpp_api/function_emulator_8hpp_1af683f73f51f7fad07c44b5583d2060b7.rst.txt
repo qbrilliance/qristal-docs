@@ -1,0 +1,14 @@
+.. _exhale_function_emulator_8hpp_1af683f73f51f7fad07c44b5583d2060b7:
+
+Function get_emulator_noise_model
+=================================
+
+- Defined in :ref:`file_emulator_include_qristal_emulator_emulator.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: get_emulator_noise_model(const std::string)
+   :project: My Project

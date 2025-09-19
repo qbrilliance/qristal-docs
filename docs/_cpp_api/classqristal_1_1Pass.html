@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Template Class Pass &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -84,6 +88,7 @@
 <li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html">Class CirqQsimCPU</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
@@ -93,6 +98,7 @@
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
 <li class="toctree-l4 current"><a class="current reference internal" href="#">Template Class Pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1sequence__pass.html">Class sequence_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1session.html">Class session</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
 <li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
@@ -143,28 +149,29 @@
            <div itemprop="articleBody">
              
   <section id="template-class-pass">
-<span id="exhale-class-classqristal-1-1pass"></span><h1>Template Class Pass<a class="headerlink" href="#template-class-pass" title="Permalink to this headline"></a></h1>
+<span id="exhale-class-classqristal-1-1pass"></span><h1>Template Class Pass<a class="headerlink" href="#template-class-pass" title="Permalink to this heading"></a></h1>
 <ul class="simple">
 <li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#file-core-include-qristal-core-passes-base-pass-hpp"><span class="std std-ref">File base_pass.hpp</span></a></p></li>
 </ul>
 <section id="inheritance-relationships">
-<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this headline"></a></h2>
+<h2>Inheritance Relationships<a class="headerlink" href="#inheritance-relationships" title="Permalink to this heading"></a></h2>
 <section id="derived-types">
-<h3>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this headline"></a></h3>
+<h3>Derived Types<a class="headerlink" href="#derived-types" title="Permalink to this heading"></a></h3>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qristal::noise_aware_placement_pass</span></code> (<a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html#exhale-class-classqristal-1-1noise-aware-placement-pass"><span class="std std-ref">Class noise_aware_placement_pass</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qristal::optimization_pass</span></code> (<a class="reference internal" href="classqristal_1_1optimization__pass.html#exhale-class-classqristal-1-1optimization-pass"><span class="std std-ref">Class optimization_pass</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qristal::sequence_pass</span></code> (<a class="reference internal" href="classqristal_1_1sequence__pass.html#exhale-class-classqristal-1-1sequence-pass"><span class="std std-ref">Class sequence_pass</span></a>)</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">public</span> <span class="pre">qristal::swap_placement_pass</span></code> (<a class="reference internal" href="classqristal_1_1swap__placement__pass.html#exhale-class-classqristal-1-1swap-placement-pass"><span class="std std-ref">Class swap_placement_pass</span></a>)</p></li>
 </ul>
 </section>
 </section>
 <section id="class-documentation">
-<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline"></a></h2>
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading"></a></h2>
 <dl class="cpp class">
 <dt class="sig sig-object cpp" id="_CPPv4I0EN7qristal4PassE">
 <span id="_CPPv3I0EN7qristal4PassE"></span><span id="_CPPv2I0EN7qristal4PassE"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IrType</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqristal_1_1Pass"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">Pass</span></span></span><a class="headerlink" href="#_CPPv4I0EN7qristal4PassE" title="Permalink to this definition"></a><br /></dt>
 <dd><p>A base class for a <code class="docutils literal notranslate"><a class="reference internal" href="#classqristal_1_1Pass"><span class="std std-ref"><span class="pre">Pass</span></span></a></code> (implementing some form of transformation on the input IR tree) </p>
-<p>Subclassed by <a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html#classqristal_1_1noise__aware__placement__pass"><span class="std std-ref">qristal::noise_aware_placement_pass</span></a>, <a class="reference internal" href="classqristal_1_1optimization__pass.html#classqristal_1_1optimization__pass"><span class="std std-ref">qristal::optimization_pass</span></a>, <a class="reference internal" href="classqristal_1_1swap__placement__pass.html#classqristal_1_1swap__placement__pass"><span class="std std-ref">qristal::swap_placement_pass</span></a></p>
+<p>Subclassed by <a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html#classqristal_1_1noise__aware__placement__pass"><span class="std std-ref">qristal::noise_aware_placement_pass</span></a>, <a class="reference internal" href="classqristal_1_1optimization__pass.html#classqristal_1_1optimization__pass"><span class="std std-ref">qristal::optimization_pass</span></a>, <a class="reference internal" href="classqristal_1_1sequence__pass.html#classqristal_1_1sequence__pass"><span class="std std-ref">qristal::sequence_pass</span></a>, <a class="reference internal" href="classqristal_1_1swap__placement__pass.html#classqristal_1_1swap__placement__pass"><span class="std std-ref">qristal::swap_placement_pass</span></a></p>
 <div class="breathe-sectiondef docutils container">
 <p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
 <dl class="cpp function">

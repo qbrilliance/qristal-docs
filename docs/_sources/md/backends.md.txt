@@ -5,6 +5,10 @@ Qristal can execute circuits on a wide variety of hardware and simulator backend
 
 ## Hardware backends
 
+**Parallelism**
+
+Note that Qristal supports parallel execution on multiple quantum hardware devices, using MPI. To make use of this feature, each MPI process must be configured to use a different physical hardware accelerator. For maximum performance, we recommend using the same model of quantum hardware device for each accelerator.  See {cpp:member}`session::mpi_accelerators` for more info.
+
 ### Quantum Brilliance
 
 **Description**: Quantum Brilliance room-temperature QPUs based on diamond NV technology.  Includes all rack-mounted Quantum Development Kit (QDK) and desktop quantum computer (DQC) iterations, as well as virtualised instances.
@@ -73,21 +77,52 @@ These parameters are set under the `aws-braket` heading in the `remote_backends.
 
 ## State-vector simulators
 
-### Quantum Brilliance state vector: `qsim`
+### Quantum Brilliance CPU state vector: `qb-statevector-cpu`
 
-**Description**: A noise-aware, GPU-enabled state-vector simulator developed by Quantum Brilliance, built atop the Google Cirq qsim simulator.
+**Description**: A noise-aware, state-vector simulator developed by Quantum Brilliance, built atop the Google Cirq qsim simulator.
 
-**Provided by**: Open-source Qristal SDK (CPU version), Qristal Emulator (GPU version)
+**Provided by**: Qristal Emulator
 
-**Executes on**: CPU or GPU
+**Executes on**: CPU
 
 **Parameters**:
 
-* `noise`: *boolean*, optional. Include noise in the circuit simulation.
+* `noise`: *boolean*, must be set `true`. Include noise in the circuit simulation.
 
 These parameters are currently `qristal.core.session` attributes.
 
-**Example**: `qsim_noisy.py`
+**Example**: `qb_statevector_noisy.py`
+
+
+### Quantum Brilliance GPU state vector: `qb-statevector-gpu`
+
+**Description**: A noise-aware, GPU-enabled state-vector simulator developed by Quantum Brilliance, built atop the Google Cirq qsim simulator.
+
+**Provided by**: Qristal Emulator
+
+**Executes on**: GPU
+
+**Parameters**:
+
+* `noise`: *boolean*, must be set `true`. Include noise in the circuit simulation.
+* `gpu_device_ids`: *Vector of integers*, optional. Device IDs of GPUs to run on.
+
+These parameters are currently `qristal.core.session` attributes.
+
+**Example**: `qb_statevector_noisy.py`
+
+
+### Qsim state vector: `qsim`
+
+**Description**: The Google Cirq qsim simulator.
+
+**Provided by**: Open-source Qristal SDK
+
+**Executes on**: CPU
+
+**Parameters**: None
+
+**Example**: `multiplication.py`
 
 
 ### Microsoft sparse state vector: `sparse-sim`
@@ -124,17 +159,15 @@ These parameters are currently `qristal.core.session` attributes.
 **Example**: `demo1.py`
 
 
-### cuQuantum state-vector simulators: `custatevec:fp32` and `custatevec:fp64`
+### cuQuantum state-vector simulators: `cudaq:custatevec_fp32` and `cudaq:custatevec_fp64`
 
-**Description**: Single (`custatevec:fp32`) and double-precision (`custatevec:fp64`) versions of the CUDA Quantum state vector simulator, built on CuQuantum libraries.
+**Description**: Single (`cudaq:custatevec_fp32`) and double-precision (`cudaq:custatevec_fp64`) versions of the CUDA Quantum state vector simulator, built on CuQuantum libraries.
 
 **Provided by**: Open-source Qristal SDK
 
 **Executes on**: GPU
 
 **Requires**: CUDA Quantum
-
-**Parameters**: None
 
 **Example**: `cudaq_qft.py`
 
@@ -149,6 +182,7 @@ These parameters are currently `qristal.core.session` attributes.
 
 **Parameters**:
 
+* `aer_omp_threads` *integer*, optional. The number of OpenMP threads that the AER simulator should run with. If not set, the environment variable OMP_NUM_THREADS is read and explicitly passed to AER instead, overriding any other choices of thread number done internally in AER.  If neither is set, AER chooses the number of threads internally.
 * `aer_sim_type`: *string*, optional. The type of AER simulator. Can be set as `aer_sim_type = statevector` (default).
 * `noise`: *boolean*, optional. Include noise in the circuit simulation.
 * `get_state_vec`: *boolean*, optional. Retrieve final state-vector if set as true (default = false).
@@ -204,21 +238,11 @@ These parameters are set under the `aws-braket` heading in the `remote_backends.
 * `rel_svd_cutoff`: *floating-point*, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.
 * `noise`: *boolean*, optional. Include noise in the circuit simulation.
 * `measure_sample_method`: *string*, optional. Measurement sampling modes: `sequential` for sequential cutensor-based sampling, `cutensornet` for single-shot cutensornet-based sampling, `cutensornet_multishot` for multi-shot cutensornet-based sampling, `auto` (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.
+* `gpu_device_ids`: *Vector of integers*. GPU device IDs. Note that the `cudaq:qb_mps` version currently only supports execution on a single GPU.
 
 These parameters are currently `qristal.core.session` attributes.
 
 **Example**: `qb_mps_noisy.py`
-
-**Notes**:
-
-In a `qristal.core.session`, the `init()` method sets the following parameters:
-
-* `max_bond_dimension`: 256
-* `initial_bond_dimension`: 1
-* `svd_cutoff`: 1.0e-6
-* `rel_svd_cutoff`: 1.0e-3
-* `noise`: `false`
-* `measure_sample_method`: `auto`
 
 ### Quantum Brilliance Matrix-Product Density Operator: `qb-mpdo` and `cudaq:qb_mpdo`
 
@@ -238,21 +262,11 @@ In a `qristal.core.session`, the `init()` method sets the following parameters:
 * `rel_svd_cutoff`: *floating-point*, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.
 * `noise`: *boolean*, optional. Include noise in the circuit simulation.
 * `measure_sample_method`: *string*, optional. Measurement sampling modes: `sequential` for sequential cutensor-based sampling, `cutensornet` for single-shot cutensornet-based sampling, `auto` (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.
+* `gpu_device_ids`: *Vector of integers*. GPU device IDs. Note that the `cudaq:qb_mpdo` version currently only supports execution on a single GPU.
 
 These parameters are currently `qristal.core.session` attributes.
 
 **Example**: `qb_mpdo_noisy.py`
-
-**Notes**:
-
-In a `qristal.core.session`, the `init()` method sets the following parameters:
-
-* `max_bond_dimension`: 256
-* `initial_bond_dimension`: 1
-* `svd_cutoff`: 1.0e-6
-* `rel_svd_cutoff`: 1.0e-3
-* `noise`: `false`
-* `measure_sample_method`: `auto`
 
 ### Quantum Brilliance purification: `qb-purification` and `cudaq:qb_purification`
 
@@ -274,23 +288,11 @@ In a `qristal.core.session`, the `init()` method sets the following parameters:
 * `rel_svd_cutoff`: *floating-point*, optional, default: 1.0e-4. Smallest singular value, relative to the largest singular value, to keep.
 * `noise`: *boolean*, optional. Include noise in the circuit simulation.
 * `measure_sample_method`: *string*, optional. Measurement sampling modes: `sequential` for sequential cutensor-based sampling, `cutensornet` for single-shot cutensornet-based sampling, `cutensornet_multishot` for multi-shot cutensornet-based sampling, `auto` (default) for single-shot cutensornet-based sampling with cutensor-based sampling as fallback.
+* `gpu_device_ids`: *Vector of integers*. GPU device IDs. Note that the `cudaq:purification` version currently only supports execution on a single GPU.
 
 These parameters are currently `qristal.core.session` attributes.
 
 **Example**: `qb_purification_noisy.py`
-
-**Notes**:
-
-In a `qristal.core.session`, the `init()` method sets the following parameters:
-
-* `max_bond_dimension`: 256
-* `initial_bond_dimension`: 1
-* `max_kraus_dimension`: 256
-* `initial_kraus_dimension`: 1
-* `svd_cutoff`: 1.0e-6
-* `rel_svd_cutoff`: 1.0e-3
-* `noise`: `false`
-* `measure_sample_method`: `auto`
 
 
 ### TNQVM-ExaTN MPS: `tnqvm`
@@ -321,6 +323,7 @@ These parameters are currently `qristal.core.session` attributes.
 
 **Parameters**:
 
+* `aer_omp_threads` *integer*, optional. The number of OpenMP threads that the AER simulator should run with. If not set, the environment variable OMP_NUM_THREADS is read and explicitly passed to AER instead, overriding any other choices of thread number done internally in AER.  If neither is set, AER chooses the number of threads internally.
 * `aer_sim_type`: *string*, required. The type of AER simulator. Must be set as `aer_sim_type = matrix_product_state`.
 * `noise`: *boolean*, optional. Include noise in the circuit simulation.
 
@@ -363,11 +366,9 @@ These parameters are set under the `aws-braket` heading in the `remote_backends.
 
 **Provided by**: Open-source Qristal SDK
 
-**Executes on**: GPU
+**Executes on**: CPU
 
 **Requires**: CUDA Quantum
-
-**Parameters**: None
 
 **Example**: `qft.py`
 
@@ -408,6 +409,7 @@ These parameters are set under the `aws-braket` heading in the `remote_backends.
 
 **Parameters**:
 
+* `aer_omp_threads` *integer*, optional. The number of OpenMP threads that the AER simulator should run with. If not set, the environment variable OMP_NUM_THREADS is read and explicitly passed to AER instead, overriding any other choices of thread number done internally in AER.  If neither is set, AER chooses the number of threads internally.
 * `aer_sim_type`: *string*, required. The type of AER simulator. Must be set as `aer_sim_type = density_matrix`.
 * `noise`: *boolean*, required. Include noise in the circuit simulation.
 

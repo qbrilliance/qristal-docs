@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Namespace qristal &mdash; Qristal  documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/collapsible-lists/css/tree_view.css" type="text/css" />
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
@@ -15,8 +18,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
-        <script loading_method="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
         <script src="../_static/js/qb_ga.js"></script>
         <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
         <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
@@ -51,9 +55,9 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../rst/cli.html">Command-line interface</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
 <ul>
@@ -118,9 +122,9 @@
            <div itemprop="articleBody">
              
   <section id="namespace-qristal">
-<span id="id1"></span><h1>Namespace qristal<a class="headerlink" href="#namespace-qristal" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>Namespace qristal<a class="headerlink" href="#namespace-qristal" title="Permalink to this heading"></a></h1>
 <p>This file declares an Accelerator backend class based on the Cirq Qsim simulator.</p>
-<div class="contents local topic" id="contents">
+<nav class="contents local" id="contents">
 <p class="topic-title">Contents</p>
 <ul class="simple">
 <li><p><a class="reference internal" href="#namespaces" id="id2">Namespaces</a></p></li>
@@ -128,15 +132,15 @@
 <li><p><a class="reference internal" href="#functions" id="id4">Functions</a></p></li>
 <li><p><a class="reference internal" href="#typedefs" id="id5">Typedefs</a></p></li>
 </ul>
-</div>
+</nav>
 <section id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline"></a></h2>
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="namespace_qristal__vqee.html#namespace-qristal-vqee"><span class="std std-ref">Namespace qristal::vqee</span></a></p></li>
 </ul>
 </section>
 <section id="classes">
-<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this headline"></a></h2>
+<h2>Classes<a class="headerlink" href="#classes" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="structqristal_1_1noise__aware__placement__config.html#exhale-struct-structqristal-1-1noise-aware-placement-config"><span class="std std-ref">Struct noise_aware_placement_config</span></a></p></li>
 <li><p><a class="reference internal" href="structqristal_1_1noise__channel__components.html#exhale-struct-structqristal-1-1noise-channel-components"><span class="std std-ref">Struct noise_channel_components</span></a></p></li>
@@ -145,6 +149,7 @@
 <li><p><a class="reference internal" href="structqristal_1_1ReadoutError.html#exhale-struct-structqristal-1-1readouterror"><span class="std std-ref">Struct ReadoutError</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1CircuitBuilder.html#exhale-class-classqristal-1-1circuitbuilder"><span class="std std-ref">Class CircuitBuilder</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1CirqQsim.html#exhale-class-classqristal-1-1cirqqsim"><span class="std std-ref">Class CirqQsim</span></a></p></li>
+<li><p><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html#exhale-class-classqristal-1-1cirqqsimcpu"><span class="std std-ref">Class CirqQsimCPU</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html#exhale-class-classqristal-1-1cudaq-ir-converter"><span class="std std-ref">Class cudaq_ir_converter</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html#exhale-class-classqristal-1-1cudaq-sim-pool"><span class="std std-ref">Class cudaq_sim_pool</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html#exhale-class-classqristal-1-1emulatornoisemodel"><span class="std std-ref">Class EmulatorNoiseModel</span></a></p></li>
@@ -154,30 +159,37 @@
 <li><p><a class="reference internal" href="classqristal_1_1optimization__pass.html#exhale-class-classqristal-1-1optimization-pass"><span class="std std-ref">Class optimization_pass</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1Pass.html#exhale-class-classqristal-1-1pass"><span class="std std-ref">Template Class Pass</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1Profiler.html#exhale-class-classqristal-1-1profiler"><span class="std std-ref">Class Profiler</span></a></p></li>
+<li><p><a class="reference internal" href="classqristal_1_1sequence__pass.html#exhale-class-classqristal-1-1sequence-pass"><span class="std std-ref">Class sequence_pass</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1session.html#exhale-class-classqristal-1-1session"><span class="std std-ref">Class session</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1swap__placement__pass.html#exhale-class-classqristal-1-1swap-placement-pass"><span class="std std-ref">Class swap_placement_pass</span></a></p></li>
 <li><p><a class="reference internal" href="classqristal_1_1thread__pool.html#exhale-class-classqristal-1-1thread-pool"><span class="std std-ref">Class thread_pool</span></a></p></li>
 </ul>
 </section>
 <section id="functions">
-<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this headline"></a></h2>
+<h2>Functions<a class="headerlink" href="#functions" title="Permalink to this heading"></a></h2>
 <ul class="simple">
-<li><p><a class="reference internal" href="function_namespaceqristal_1a25c8bec252abb54a785117a93efcc789.html#exhale-function-namespaceqristal-1a25c8bec252abb54a785117a93efcc789"><span class="std std-ref">Function qristal::create_circuit_optimizer_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a90f03c5a631a262eed975e2e4acf90dd.html#exhale-function-namespaceqristal-1a90f03c5a631a262eed975e2e4acf90dd"><span class="std std-ref">Function qristal::create_initial_state_simplify_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac.html#exhale-function-namespaceqristal-1a717e4729da81e7d44b1180889a7c3fac"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59.html#exhale-function-namespaceqristal-1aa13e379a0c2cb8df6223c9a145b37c59"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a69841193d5b7e6bd134ff73fd9ae0b6d.html#exhale-function-namespaceqristal-1a69841193d5b7e6bd134ff73fd9ae0b6d"><span class="std std-ref">Function qristal::create_peephole_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a933afc036cea2f09756ee761909d7624.html#exhale-function-namespaceqristal-1a933afc036cea2f09756ee761909d7624"><span class="std std-ref">Function qristal::create_remove_redundancies_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a2d39d534b08204042c939ff913e8922c.html#exhale-function-namespaceqristal-1a2d39d534b08204042c939ff913e8922c"><span class="std std-ref">Function qristal::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a0c7414393b53cd595f315c59da514626.html#exhale-function-namespaceqristal-1a0c7414393b53cd595f315c59da514626"><span class="std std-ref">Function qristal::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a3cf3918fcbcb2c559fb2c5336f6b637e.html#exhale-function-namespaceqristal-1a3cf3918fcbcb2c559fb2c5336f6b637e"><span class="std std-ref">Function qristal::create_two_qubit_squash_pass</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a533e3df3cb74a558333ef0a19ac41681.html#exhale-function-namespaceqristal-1a533e3df3cb74a558333ef0a19ac41681"><span class="std std-ref">Function qristal::execute_on_qb_hardware</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a487d72f94356a43f8efee9c2b34943d8.html#exhale-function-namespaceqristal-1a487d72f94356a43f8efee9c2b34943d8"><span class="std std-ref">Function qristal::create_circuit_optimizer_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1abbbd7e3f01265e0e33a2801252dc0a53.html#exhale-function-namespaceqristal-1abbbd7e3f01265e0e33a2801252dc0a53"><span class="std std-ref">Function qristal::create_commute_through_multis_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a02c16ea9f8d031bd5bbf5c1d3c1970dc.html#exhale-function-namespaceqristal-1a02c16ea9f8d031bd5bbf5c1d3c1970dc"><span class="std std-ref">Function qristal::create_decompose_swap_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a2d2285d01e059fcd4a8c90d67b106743.html#exhale-function-namespaceqristal-1a2d2285d01e059fcd4a8c90d67b106743"><span class="std std-ref">Function qristal::create_decompose_ZX_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a7558c8a4b20f4998486bf1d809094875.html#exhale-function-namespaceqristal-1a7558c8a4b20f4998486bf1d809094875"><span class="std std-ref">Function qristal::create_initial_state_simplify_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ab84e7009dac394c6989cb9f130e42b08.html#exhale-function-namespaceqristal-1ab84e7009dac394c6989cb9f130e42b08"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(const noise_aware_placement_config&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1aacdb0d9acd9238a42d95dc7007316c40.html#exhale-function-namespaceqristal-1aacdb0d9acd9238a42d95dc7007316c40"><span class="std std-ref">Function qristal::create_noise_aware_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ac864c8d9dcb9a05b398212c020d7d478.html#exhale-function-namespaceqristal-1ac864c8d9dcb9a05b398212c020d7d478"><span class="std std-ref">Function qristal::create_optimise_cliffords_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ad08a9faa73b37279f1ead13be8093bab.html#exhale-function-namespaceqristal-1ad08a9faa73b37279f1ead13be8093bab"><span class="std std-ref">Function qristal::create_optimise_post_routing_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a81c3d19fd2682239bbd9249c69ec6dc0.html#exhale-function-namespaceqristal-1a81c3d19fd2682239bbd9249c69ec6dc0"><span class="std std-ref">Function qristal::create_peephole_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1ad1a81d44b9dc71792af64f54992bbdd0.html#exhale-function-namespaceqristal-1ad1a81d44b9dc71792af64f54992bbdd0"><span class="std std-ref">Function qristal::create_rebase_to_clifford_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a2a6ed3a4cfa3d0d8ec4b7f69367450c6.html#exhale-function-namespaceqristal-1a2a6ed3a4cfa3d0d8ec4b7f69367450c6"><span class="std std-ref">Function qristal::create_remove_redundancies_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a31fc03cfe90a3f44fcc5605b219258f9.html#exhale-function-namespaceqristal-1a31fc03cfe90a3f44fcc5605b219258f9"><span class="std std-ref">Function qristal::create_swap_placement_pass(std::shared_ptr&lt;xacc::Accelerator&gt;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a0baf91cdb7c9f783fd63527beff58027.html#exhale-function-namespaceqristal-1a0baf91cdb7c9f783fd63527beff58027"><span class="std std-ref">Function qristal::create_swap_placement_pass(const std::vector&lt;std::pair&lt;int, int&gt;&gt;&amp;)</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a6b0c9fffff783343143a33f0214f08d2.html#exhale-function-namespaceqristal-1a6b0c9fffff783343143a33f0214f08d2"><span class="std std-ref">Function qristal::create_two_qubit_squash_pass</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1a9a73e5108b4c5918f2b1c0f22be34d08.html#exhale-function-namespaceqristal-1a9a73e5108b4c5918f2b1c0f22be34d08"><span class="std std-ref">Function qristal::execute_on_qb_hardware</span></a></p></li>
 <li><p><a class="reference internal" href="function_namespaceqristal_1ac874ad8148f207717824721aba620e4c.html#exhale-function-namespaceqristal-1ac874ad8148f207717824721aba620e4c"><span class="std std-ref">Function qristal::load_cudaq_backend</span></a></p></li>
-<li><p><a class="reference internal" href="function_namespaceqristal_1a4b5d78bb0bdf8b9a6181a926070e2af6.html#exhale-function-namespaceqristal-1a4b5d78bb0bdf8b9a6181a926070e2af6"><span class="std std-ref">Function qristal::uniqueBitsQD</span></a></p></li>
+<li><p><a class="reference internal" href="function_namespaceqristal_1accdcb2d78f78b9b243e35aee35dd35da.html#exhale-function-namespaceqristal-1accdcb2d78f78b9b243e35aee35dd35da"><span class="std std-ref">Function qristal::uniqueBitsQD</span></a></p></li>
 </ul>
 </section>
 <section id="typedefs">
-<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this headline"></a></h2>
+<h2>Typedefs<a class="headerlink" href="#typedefs" title="Permalink to this heading"></a></h2>
 <ul class="simple">
 <li><p><a class="reference internal" href="typedef_namespaceqristal_1ac319fa09ba300bf9963b1e3168caf3b7.html#exhale-typedef-namespaceqristal-1ac319fa09ba300bf9963b1e3168caf3b7"><span class="std std-ref">Typedef qristal::CircuitPass</span></a></p></li>
 <li><p><a class="reference internal" href="typedef_namespaceqristal_1a7816f47af9016722f68dd6d11c1589e8.html#exhale-typedef-namespaceqristal-1a7816f47af9016722f68dd6d11c1589e8"><span class="std std-ref">Typedef qristal::OracleFuncCType</span></a></p></li>

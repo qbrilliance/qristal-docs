@@ -1,0 +1,14 @@
+.. _exhale_function_case__generator_8hpp_1ad57e6a55d85f5b8a454fdeb8c00f4cd8:
+
+Function qristal::vqee::ASWAP_Ansatz
+====================================
+
+- Defined in :ref:`file_core_include_qristal_core_optimization_vqee_case_generator.hpp`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: qristal::vqee::ASWAP_Ansatz(const int, const int, const bool)
+   :project: My Project

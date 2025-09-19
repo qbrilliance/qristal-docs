@@ -49,9 +49,9 @@ Included By
 
 - :ref:`file_core_include_qristal_core_session.hpp`
 
-- :ref:`file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp`
-
 - :ref:`file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp`
+
+- :ref:`file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp`
 
 
 
