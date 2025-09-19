@@ -1,0 +1,763 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1NoiseModel" kind="class" language="C++" prot="public">
+    <compoundname>qristal::NoiseModel</compoundname>
+    <derivedcompoundref refid="classqristal_1_1EmulatorNoiseModel" prot="public" virt="non-virtual">qristal::EmulatorNoiseModel</derivedcompoundref>
+    <includes refid="noise__model_8hpp" local="no">noise_model.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969a" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>QubitConnectivity</name>
+        <qualifiedname>qristal::NoiseModel::QubitConnectivity</qualifiedname>
+        <enumvalue id="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969aa36d1660203217b392162ea278755b789" prot="public">
+          <name>AllToAll</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969aa90589c47f06eb971d548591f23c285af" prot="public">
+          <name>Custom</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Type of qubit connectivity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="32" column="9" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classqristal_1_1NoiseModel_1ada4fc78df9f810ae7e5f604d09595363" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::NoiseModel::name</definition>
+        <argsstring></argsstring>
+        <name>name</name>
+        <qualifiedname>qristal::NoiseModel::name</qualifiedname>
+        <briefdescription>
+<para>The colloquial name of the noise model. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="147" column="21" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="147" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classqristal_1_1NoiseModel_1acf455f28687a596488bf44ca8fe6a4ca" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::map&lt; std::vector&lt; size_t &gt;, std::vector&lt; NoiseChannel &gt; &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::map&lt;std::vector&lt;size_t&gt;, std::vector&lt;NoiseChannel&gt; &gt; &gt; qristal::NoiseModel::m_noise_channels</definition>
+        <argsstring></argsstring>
+        <name>m_noise_channels</name>
+        <qualifiedname>qristal::NoiseModel::m_noise_channels</qualifiedname>
+        <briefdescription>
+<para>Gate noise channel registry Map from gate name -&gt; a map of qubit operands -&gt; noise channel If the noise is uniform (qubit independent), use empty vector for qubit operands. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="191" column="28" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1NoiseModel_1a931cc93b56792b0eb7bead733ce979cc" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; size_t, <ref refid="structqristal_1_1ReadoutError" kindref="compound">ReadoutError</ref> &gt;</type>
+        <definition>std::unordered_map&lt;size_t, ReadoutError&gt; qristal::NoiseModel::m_readout_errors</definition>
+        <argsstring></argsstring>
+        <name>m_readout_errors</name>
+        <qualifiedname>qristal::NoiseModel::m_readout_errors</qualifiedname>
+        <briefdescription>
+<para>Readout errors. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="197" column="28" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="197" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1NoiseModel_1a5da1a0acbc96103b930fd5613a8bfe32" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; int, int &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;int, int&gt; &gt; qristal::NoiseModel::m_qubit_topology</definition>
+        <argsstring></argsstring>
+        <name>m_qubit_topology</name>
+        <qualifiedname>qristal::NoiseModel::m_qubit_topology</qualifiedname>
+        <briefdescription>
+<para>Qubit connectivity. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="200" column="21" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="200" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1NoiseModel_1aa3d234f65a616e34476d776014c3c95a" prot="protected" static="no" mutable="no">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json qristal::NoiseModel::m_qobj_noise_model</definition>
+        <argsstring></argsstring>
+        <name>m_qobj_noise_model</name>
+        <qualifiedname>qristal::NoiseModel::m_qobj_noise_model</qualifiedname>
+        <briefdescription>
+<para>Noise model Json conforming to IBM Qiskit QObj schema if provided. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="203" column="24" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="203" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1NoiseModel_1aacdef41bca7bd9d3df4a5b4d424e51a3" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::NoiseModel::m_qobj_compiler</definition>
+        <argsstring></argsstring>
+        <name>m_qobj_compiler</name>
+        <qualifiedname>qristal::NoiseModel::m_qobj_compiler</qualifiedname>
+        <initializer>= &quot;xacc-qobj&quot;</initializer>
+        <briefdescription>
+<para>Name of the QObj compiler to use with the AER simulator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="207" column="21" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a282aa8650ee16c87c90ef796d7807f93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::NoiseModel::NoiseModel</definition>
+        <argsstring>()=default</argsstring>
+        <name>NoiseModel</name>
+        <qualifiedname>qristal::NoiseModel::NoiseModel</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="38" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1ac732d35076fac591a9118f4085995772" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::NoiseModel::NoiseModel</definition>
+        <argsstring>(const nlohmann::json &amp;js)</argsstring>
+        <name>NoiseModel</name>
+        <qualifiedname>qristal::NoiseModel::NoiseModel</qualifiedname>
+        <param>
+          <type>const nlohmann::json &amp;</type>
+          <declname>js</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Noise Model object from JSON. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>js</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>JSON object contains noise model parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="45" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1ad8447bba18c74d69966492eb11748fe6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::NoiseModel::NoiseModel</definition>
+        <argsstring>(const NoiseProperties &amp;noise_props)</argsstring>
+        <name>NoiseModel</name>
+        <qualifiedname>qristal::NoiseModel::NoiseModel</qualifiedname>
+        <param>
+          <type>const <ref refid="structqristal_1_1NoiseProperties" kindref="compound">NoiseProperties</ref> &amp;</type>
+          <declname>noise_props</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Noise Model object from noise properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noise_props</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Device noise properties </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="52" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a649dc24620e8591462037450be2f5081" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::NoiseModel::NoiseModel</definition>
+        <argsstring>(const std::string &amp;name, size_t nb_qubits, std::optional&lt; QubitConnectivity &gt; connectivity=std::nullopt, std::optional&lt; std::reference_wrapper&lt; const std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt; &gt; &gt; connected_pairs=std::nullopt)</argsstring>
+        <name>NoiseModel</name>
+        <qualifiedname>qristal::NoiseModel::NoiseModel</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nb_qubits</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; <ref refid="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969a" kindref="member">QubitConnectivity</ref> &gt;</type>
+          <declname>connectivity</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <param>
+          <type>std::optional&lt; std::reference_wrapper&lt; const std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt; &gt; &gt;</type>
+          <declname>connected_pairs</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <briefdescription>
+<para>Build and return a registered noise model. Optionally allows for customization, e.g., number of qubits, if supported. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The name of the registered noise model. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_qubits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of qubits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connectivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Optional] Connectivity pattern </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connected_pairs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Optional] Custom connectivity topology (if not AllToAll) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Noise model object</para>
+</simplesect>
+IMPORTANT NOTE: The ability to build and return some noise models requires the Qristal Emulator library libqristal_emulator.so to be found at runtime. To dynamically load libqristal_emulator.so requires: (1) For Python users: libqristal_emulator.so is installed in the lib/ directory of the Qristal core package (i.e., the same location as the core Python package itself) (2) For C++ users: if building an executable linking against libqristal_core, you need to set the rpath of your executable target to include the directory where libqristal_emulator.so located. In both cases, LD_LIBRARY_PATH can <bold>also</bold> be used to point the dynamic linker to the location of libqristal_emulator.so (if setting rpath fails). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="70" column="9"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1aaeda633b965b4296c55428ee47e2e2ae" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::NoiseModel::to_json</definition>
+        <argsstring>() const</argsstring>
+        <name>to_json</name>
+        <qualifiedname>qristal::NoiseModel::to_json</qualifiedname>
+        <briefdescription>
+<para>Convert noise model to json string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>JSON string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="80" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a4943a12d0ec232889e7a8e8e7996f8d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::pair&lt; int, int &gt; &gt;</type>
+        <definition>std::vector&lt; std::pair&lt; int, int &gt; &gt; qristal::NoiseModel::get_connectivity</definition>
+        <argsstring>() const</argsstring>
+        <name>get_connectivity</name>
+        <qualifiedname>qristal::NoiseModel::get_connectivity</qualifiedname>
+        <briefdescription>
+<para>Get the connectivity (pairs of connected qubits) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Connectivity as list of qubit index pairs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="87" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1ab44a0c023aaf1263bd5a88468942426b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::unordered_map&lt; size_t, <ref refid="structqristal_1_1ReadoutError" kindref="compound">ReadoutError</ref> &gt; &amp;</type>
+        <definition>const std::unordered_map&lt; size_t, ReadoutError &gt; &amp; qristal::NoiseModel::get_readout_errors</definition>
+        <argsstring>() const</argsstring>
+        <name>get_readout_errors</name>
+        <qualifiedname>qristal::NoiseModel::get_readout_errors</qualifiedname>
+        <briefdescription>
+<para>Get the readout errors. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Map from qubit index to readout errors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="94" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1ad21331449bce1b12c492e4afa6a7ae26" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::unordered_map&lt; std::string, std::map&lt; std::vector&lt; size_t &gt;, std::vector&lt; NoiseChannel &gt; &gt; &gt; &amp;</type>
+        <definition>const std::unordered_map&lt; std::string, std::map&lt; std::vector&lt; size_t &gt;, std::vector&lt; NoiseChannel &gt; &gt; &gt; &amp; qristal::NoiseModel::get_noise_channels</definition>
+        <argsstring>() const</argsstring>
+        <name>get_noise_channels</name>
+        <qualifiedname>qristal::NoiseModel::get_noise_channels</qualifiedname>
+        <briefdescription>
+<para>Get all the gate noise channels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Map from (gate name + qubit operands) to noise channels </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="101" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a5808a0205a33436ae47e3683c0a1f1d0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::NoiseModel::add_gate_error</definition>
+        <argsstring>(const NoiseChannel &amp;noise_channel, const std::string &amp;gate_name, const std::vector&lt; size_t &gt; &amp;qubits)</argsstring>
+        <name>add_gate_error</name>
+        <qualifiedname>qristal::NoiseModel::add_gate_error</qualifiedname>
+        <param>
+          <type>const NoiseChannel &amp;</type>
+          <declname>noise_channel</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>gate_name</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; size_t &gt; &amp;</type>
+          <declname>qubits</declname>
+        </param>
+        <briefdescription>
+<para>Add a gate error channel for a gate operation. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noise_channel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Noise channel to be associated with the gate </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gate_name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the gates </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qubits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Qubit indices of the gate. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="110" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a6697476fd330f9a13e16ed7e36ace021" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::NoiseModel::add_qubit_connectivity</definition>
+        <argsstring>(int q1, int q2)</argsstring>
+        <name>add_qubit_connectivity</name>
+        <qualifiedname>qristal::NoiseModel::add_qubit_connectivity</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>q1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>q2</declname>
+        </param>
+        <briefdescription>
+<para>Add a connected qubit pair to the topology model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>q1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>First qubit index </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Second qubit index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="118" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a6106e83eac9bd5882b0b7068000cd819" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::NoiseModel::set_qubit_readout_error</definition>
+        <argsstring>(size_t qubitIdx, const ReadoutError &amp;ro_error)</argsstring>
+        <name>set_qubit_readout_error</name>
+        <qualifiedname>qristal::NoiseModel::set_qubit_readout_error</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>qubitIdx</declname>
+        </param>
+        <param>
+          <type>const <ref refid="structqristal_1_1ReadoutError" kindref="compound">ReadoutError</ref> &amp;</type>
+          <declname>ro_error</declname>
+        </param>
+        <briefdescription>
+<para>Set the qubit readout error. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qubitIdx</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Qubit to set </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ro_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Readout error </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="126" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1acc73ff28358d7eeb179828877e61d061" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::NoiseModel::get_qobj_compiler</definition>
+        <argsstring>() const</argsstring>
+        <name>get_qobj_compiler</name>
+        <qualifiedname>qristal::NoiseModel::get_qobj_compiler</qualifiedname>
+        <briefdescription>
+<para>Retrieve the name of the QObj compiler to use with the AER simulator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Name of the QObj compiler </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="131" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a7b33ce4d0adbb0cff216aa3685f11a3f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::NoiseModel::set_qobj_compiler</definition>
+        <argsstring>(const std::string &amp;qobj_compiler)</argsstring>
+        <name>set_qobj_compiler</name>
+        <qualifiedname>qristal::NoiseModel::set_qobj_compiler</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>qobj_compiler</declname>
+        </param>
+        <briefdescription>
+<para>Set the name of the QObj compiler to use with the AER simulator Throw if the compiler name is invalid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="136" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a2870c41a96de9aa5b7b50aa5c8e78b3f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; qristal::NoiseModel::get_qobj_basis_gates</definition>
+        <argsstring>() const</argsstring>
+        <name>get_qobj_basis_gates</name>
+        <qualifiedname>qristal::NoiseModel::get_qobj_basis_gates</qualifiedname>
+        <briefdescription>
+<para>Return the list of basis gates that the AER QObj will be referring to. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>List of basis gates. Note: This corresponds to which QObj compiler being set. The AER simulator will only look for gate noise associated with these gates. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="144" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a758ed94740351849aff03a4e79717c76" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::NoiseModel::operator noise_aware_placement_config</definition>
+        <argsstring>() const noexcept</argsstring>
+        <name>operator noise_aware_placement_config</name>
+        <qualifiedname>qristal::NoiseModel::operator noise_aware_placement_config</qualifiedname>
+        <briefdescription>
+<para>Conversion into a <ref refid="structqristal_1_1noise__aware__placement__config" kindref="compound">noise_aware_placement_config</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="150" column="9" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="150" bodyend="152"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-static-func">
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1af0809e12f28813fed9a9a9814d8abf9f" prot="protected" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qristal::NoiseModel::make_default</definition>
+        <argsstring>(NoiseModel &amp;make_from_this, size_t nb_qubits, QubitConnectivity connectivity=QubitConnectivity::AllToAll, const std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt; &amp;connected_pairs={})</argsstring>
+        <name>make_default</name>
+        <qualifiedname>qristal::NoiseModel::make_default</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref> &amp;</type>
+          <declname>make_from_this</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>nb_qubits</declname>
+        </param>
+        <param>
+          <type><ref refid="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969a" kindref="member">QubitConnectivity</ref></type>
+          <declname>connectivity</declname>
+          <defval>QubitConnectivity::AllToAll</defval>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt; &amp;</type>
+          <declname>connected_pairs</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Build and return the default noise model. Optionally allows for customization, e.g., number of qubits, if supported. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>make_from_this</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref> instance to build into the default noise model. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nb_qubits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of qubits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connectivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Optional] Connectivity pattern </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>connected_pairs</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>[Optional] Custom connectivity topology (if not AllToAll) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Noise model object </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="166" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a0505821676be0f36b6719edbe58bd037" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double qristal::NoiseModel::decoherence_pauli_error</definition>
+        <argsstring>(double t1, double tphi, double gate_time)</argsstring>
+        <name>decoherence_pauli_error</name>
+        <qualifiedname>qristal::NoiseModel::decoherence_pauli_error</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t1</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>tphi</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>gate_time</declname>
+        </param>
+        <briefdescription>
+<para>Calculate component of Pauli error caused by decoherence on a single qubit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tphi</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Tphi time </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gate_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Duration of the gate affected by this error. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Calculated Pauli error resulting from decoherence. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="179" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1ab035e0a4c9c2ee9c5ea4ec1a78ad41b7" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structqristal_1_1noise__aware__placement__config" kindref="compound">noise_aware_placement_config</ref></type>
+        <definition>noise_aware_placement_config qristal::NoiseModel::to_noise_aware_placement_config</definition>
+        <argsstring>() const</argsstring>
+        <name>to_noise_aware_placement_config</name>
+        <qualifiedname>qristal::NoiseModel::to_noise_aware_placement_config</qualifiedname>
+        <briefdescription>
+<para>Helper method to convert this <ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref> into a noise aware placement configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structqristal_1_1noise__aware__placement__config" kindref="compound">noise_aware_placement_config</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="186" column="38"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1NoiseModel_1a34dd9594919c66ff0a1539d44e42cc50" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::NoiseModel::initialise_noise_properties_from_json</definition>
+        <argsstring>(const nlohmann::json &amp;js)</argsstring>
+        <name>initialise_noise_properties_from_json</name>
+        <qualifiedname>qristal::NoiseModel::initialise_noise_properties_from_json</qualifiedname>
+        <param>
+          <type>const nlohmann::json &amp;</type>
+          <declname>js</declname>
+        </param>
+        <briefdescription>
+<para>Create qristal noise properties and channels from type nlohmann::json. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="194" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Noise Model class This allows specification noise parameters for each quantum gate. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>qristal::EmulatorNoiseModel</label>
+        <link refid="classqristal_1_1EmulatorNoiseModel"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>qristal::NoiseModel</label>
+        <link refid="classqristal_1_1NoiseModel"/>
+      </node>
+    </inheritancegraph>
+    <location file="core/include/qristal/core/noise_model/noise_model.hpp" line="23" column="5" bodyfile="core/include/qristal/core/noise_model/noise_model.hpp" bodystart="24" bodyend="208"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1NoiseModel_1a5808a0205a33436ae47e3683c0a1f1d0" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>add_gate_error</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a6697476fd330f9a13e16ed7e36ace021" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>add_qubit_connectivity</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a0505821676be0f36b6719edbe58bd037" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>decoherence_pauli_error</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a4943a12d0ec232889e7a8e8e7996f8d5" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>get_connectivity</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ad21331449bce1b12c492e4afa6a7ae26" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>get_noise_channels</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a2870c41a96de9aa5b7b50aa5c8e78b3f" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>get_qobj_basis_gates</name></member>
+      <member refid="classqristal_1_1NoiseModel_1acc73ff28358d7eeb179828877e61d061" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>get_qobj_compiler</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ab44a0c023aaf1263bd5a88468942426b" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>get_readout_errors</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a34dd9594919c66ff0a1539d44e42cc50" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>initialise_noise_properties_from_json</name></member>
+      <member refid="classqristal_1_1NoiseModel_1acf455f28687a596488bf44ca8fe6a4ca" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>m_noise_channels</name></member>
+      <member refid="classqristal_1_1NoiseModel_1aacdef41bca7bd9d3df4a5b4d424e51a3" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>m_qobj_compiler</name></member>
+      <member refid="classqristal_1_1NoiseModel_1aa3d234f65a616e34476d776014c3c95a" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>m_qobj_noise_model</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a5da1a0acbc96103b930fd5613a8bfe32" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>m_qubit_topology</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a931cc93b56792b0eb7bead733ce979cc" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>m_readout_errors</name></member>
+      <member refid="classqristal_1_1NoiseModel_1af0809e12f28813fed9a9a9814d8abf9f" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>make_default</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ada4fc78df9f810ae7e5f604d09595363" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>name</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a282aa8650ee16c87c90ef796d7807f93" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ac732d35076fac591a9118f4085995772" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ad8447bba18c74d69966492eb11748fe6" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a649dc24620e8591462037450be2f5081" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a758ed94740351849aff03a4e79717c76" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>operator noise_aware_placement_config</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969a" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>QubitConnectivity</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a7b33ce4d0adbb0cff216aa3685f11a3f" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>set_qobj_compiler</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a6106e83eac9bd5882b0b7068000cd819" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>set_qubit_readout_error</name></member>
+      <member refid="classqristal_1_1NoiseModel_1aaeda633b965b4296c55428ee47e2e2ae" prot="public" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>to_json</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ab035e0a4c9c2ee9c5ea4ec1a78ad41b7" prot="protected" virt="non-virtual"><scope>qristal::NoiseModel</scope><name>to_noise_aware_placement_config</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

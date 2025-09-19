@@ -1,0 +1,283 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1vqee_1_1NLO" kind="class" language="C++" prot="public">
+    <compoundname>qristal::vqee::NLO</compoundname>
+    <basecompoundref refid="classqristal_1_1vqee_1_1VqeOpt" prot="public" virt="non-virtual">qristal::vqee::VqeOpt</basecompoundref>
+    <derivedcompoundref refid="classqristal_1_1vqee_1_1NelderMeadNLO" prot="public" virt="non-virtual">qristal::vqee::NelderMeadNLO</derivedcompoundref>
+    <includes refid="case__generator_8hpp" local="no">case_generator.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1NLO_1a49483cb30d0e9103d9e18df25182d027" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::NLO::integer_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>integer_valued_fields_</name>
+        <qualifiedname>qristal::vqee::NLO::integer_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Integer-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="364" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="364" bodyend="364"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1NLO_1a9f0df85b2b31362bfbc5d36598d90518" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::NLO::string_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>string_valued_fields_</name>
+        <qualifiedname>qristal::vqee::NLO::string_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>String-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="367" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="367" bodyend="367"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1NLO_1a1c3c6fc8db53f7cd9b7c6321a95c33ba" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::NLO::boolean_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>boolean_valued_fields_</name>
+        <qualifiedname>qristal::vqee::NLO::boolean_valued_fields_</qualifiedname>
+        <initializer>{&quot;maximise&quot;,
+                                                 &quot;maximize&quot;}</initializer>
+        <briefdescription>
+<para>Boolean-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="370" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="370" bodyend="371"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1NLO_1a0a4bf8290deb60b8c684412edbcc2adc" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::NLO::double_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>double_valued_fields_</name>
+        <qualifiedname>qristal::vqee::NLO::double_valued_fields_</qualifiedname>
+        <initializer>{&quot;stopval&quot;}</initializer>
+        <briefdescription>
+<para>Double-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="374" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="374" bodyend="374"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1NLO_1ad13a1dde6d775e26f009eb912f1f3ef0" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::NLO::vector_double_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>vector_double_valued_fields_</name>
+        <qualifiedname>qristal::vqee::NLO::vector_double_valued_fields_</qualifiedname>
+        <initializer>{&quot;upperbounds&quot;,
+                                                       &quot;lowerbounds&quot;}</initializer>
+        <briefdescription>
+<para>Vector of double fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="377" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="377" bodyend="378"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1NLO_1ac4cf45d10a969dd4345bc5d752306963" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; qristal::vqee::NLO::all_valid_fields_yaml_xacc_</definition>
+        <argsstring></argsstring>
+        <name>all_valid_fields_yaml_xacc_</name>
+        <qualifiedname>qristal::vqee::NLO::all_valid_fields_yaml_xacc_</qualifiedname>
+        <initializer>{
+                                                {&quot;maximise&quot;,&quot;maximize&quot;},
+                                                {&quot;maximize&quot;,&quot;maximize&quot;},
+                                                {&quot;stopval&quot;,&quot;nlopt-stopval&quot;},
+                                                {&quot;upperbounds&quot;,&quot;nlopt-upper-bounds&quot;},
+                                                {&quot;lowerbounds&quot;,&quot;nlopt-lower-bounds&quot;}}</initializer>
+        <briefdescription>
+<para>Union of all the above fields. Conversion of keys from YAML -&gt; XACC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="380" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="380" bodyend="385"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NLO_1a47bcf590c4a28e046e298e7c506f4844" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::NLO::NLO</definition>
+        <argsstring>()</argsstring>
+        <name>NLO</name>
+        <qualifiedname>qristal::vqee::NLO::NLO</qualifiedname>
+        <briefdescription>
+<para>Default constructor - calls the base class and sets the provider name and algorithm name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="389" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="389" bodyend="389"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NLO_1ad14e6fc6b29f73ecc06a383c9cdc7b25" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::NLO::NLO</definition>
+        <argsstring>(const std::string &amp;in_algorithm)</argsstring>
+        <name>NLO</name>
+        <qualifiedname>qristal::vqee::NLO::NLO</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_algorithm</declname>
+        </param>
+        <briefdescription>
+<para>Simple constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="392" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="392" bodyend="392"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NLO_1aea634090d3002fbfaf59b5f611f5da83" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::NLO::NLO</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;in_initial_parameters, const std::string &amp;in_algorithm=&quot;cobyla&quot;, const int in_maxeval=1000, const double in_ftol=1.0e-6, const YAML::Node &amp;in_node=YAML::Load(&quot;&quot;))</argsstring>
+        <name>NLO</name>
+        <qualifiedname>qristal::vqee::NLO::NLO</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>in_initial_parameters</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_algorithm</declname>
+          <defval>&quot;cobyla&quot;</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_maxeval</declname>
+          <defval>1000</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>in_ftol</declname>
+          <defval>1.0e-6</defval>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>in_node</declname>
+          <defval>YAML::Load(&quot;&quot;)</defval>
+        </param>
+        <briefdescription>
+<para>Constructor with defaults shown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="395" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="395" bodyend="405"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NLO_1a58bad4dc17707edbe74dea99f1ce1cc1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; xacc::Optimizer &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::Optimizer &gt; qristal::vqee::NLO::get</definition>
+        <argsstring>() override</argsstring>
+        <name>get</name>
+        <qualifiedname>qristal::vqee::NLO::get</qualifiedname>
+        <reimplements refid="classqristal_1_1vqee_1_1VqeOpt_1a3c48def51b9aef1fc689967acaabc64c">get</reimplements>
+        <briefdescription>
+<para>Getters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="408" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NLO_1adc8d3370ec9da7a211aee934ee36f3d0" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::vqee::NLO::show_info</definition>
+        <argsstring>()</argsstring>
+        <name>show_info</name>
+        <qualifiedname>qristal::vqee::NLO::show_info</qualifiedname>
+        <reimplementedby refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a1b5be29195c99f37b0e19552f4b41aa9">show_info</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="409" column="18" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="409" bodyend="409"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>NLOpt library with common options for these algorithms: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Nelder-Mead </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::vqee::NLO</label>
+        <link refid="classqristal_1_1vqee_1_1NLO"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::vqee::NelderMeadNLO</label>
+        <link refid="classqristal_1_1vqee_1_1NelderMeadNLO"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>qristal::vqee::NLO</label>
+        <link refid="classqristal_1_1vqee_1_1NLO"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="361" column="1" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="361" bodyend="410"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1vqee_1_1NLO_1ac4cf45d10a969dd4345bc5d752306963" prot="private" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>all_valid_fields_yaml_xacc_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a1c3c6fc8db53f7cd9b7c6321a95c33ba" prot="private" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>boolean_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a0a4bf8290deb60b8c684412edbcc2adc" prot="private" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a58bad4dc17707edbe74dea99f1ce1cc1" prot="public" virt="virtual"><scope>qristal::vqee::NLO</scope><name>get</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a49483cb30d0e9103d9e18df25182d027" prot="private" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>integer_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a1cd0d9b40fcb4cae263351fd83087fcb" prot="protected" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>m_algorithm_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0bbf69caef155ac7b23989888ffc30e1" prot="protected" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>m_ftol_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3b070c6f820d778bb10737c7270f09ac" prot="protected" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>m_initial_parameters_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a359613f99bb0a5a8726aea6db5ec9e50" prot="protected" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>m_maxeval_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a90be91f1aac205bfe1202133fd995925" prot="protected" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>m_node_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a4b9d5112c75bbb5bf8d04ee924ac6269" prot="protected" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>m_provider_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a47bcf590c4a28e046e298e7c506f4844" prot="public" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>NLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1ad14e6fc6b29f73ecc06a383c9cdc7b25" prot="public" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>NLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1aea634090d3002fbfaf59b5f611f5da83" prot="public" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>NLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a9f72a418b4fd0ed61a1889266641617f" prot="public" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>pass_yaml_to_xacc</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1adc8d3370ec9da7a211aee934ee36f3d0" prot="public" virt="virtual"><scope>qristal::vqee::NLO</scope><name>show_info</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a9f0df85b2b31362bfbc5d36598d90518" prot="private" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>string_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1ad13a1dde6d775e26f009eb912f1f3ef0" prot="private" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>vector_double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0739a3995bb9a8791f9601d46b4a0c04" prot="public" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1ab884657f56b5f7031515d9011d2020b1" prot="public" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1afcff78e87193ec5fae19d7e53f62e51b" prot="public" virt="non-virtual"><scope>qristal::vqee::NLO</scope><name>VqeOpt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="base__pass_8hpp" kind="file" language="C++">
+    <compoundname>base_pass.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includedby refid="circuit__opt__passes_8hpp" local="no">core/include/qristal/core/passes/circuit_opt_passes.hpp</includedby>
+    <includedby refid="noise__aware__placement__pass_8hpp" local="no">core/include/qristal/core/passes/noise_aware_placement_pass.hpp</includedby>
+    <includedby refid="swap__placement__pass_8hpp" local="no">core/include/qristal/core/passes/swap_placement_pass.hpp</includedby>
+    <includedby refid="session_8hpp" local="no">core/include/qristal/core/session.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>core/include/qristal/core/passes/base_pass.hpp</label>
+        <link refid="base__pass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>core/include/qristal/core/passes/base_pass.hpp</label>
+        <link refid="base__pass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/include/qristal/core/passes/circuit_opt_passes.hpp</label>
+        <link refid="circuit__opt__passes_8hpp_source"/>
+      </node>
+      <node id="3">
+        <label>core/include/qristal/core/passes/noise_aware_placement_pass.hpp</label>
+        <link refid="noise__aware__placement__pass_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>core/include/qristal/core/passes/swap_placement_pass.hpp</label>
+        <link refid="swap__placement__pass_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>core/include/qristal/core/session.hpp</label>
+        <link refid="session_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classqristal_1_1Pass" prot="public">qristal::Pass</innerclass>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/passes/base_pass.hpp"/>
+  </compounddef>
+</doxygen>

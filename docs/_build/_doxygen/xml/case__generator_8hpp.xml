@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="case__generator_8hpp" kind="file" language="C++">
+    <compoundname>case_generator.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes local="no">qristal/core/optimization/vqee/job_constants.hpp</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <includes local="no">Utils.hpp</includes>
+    <includes local="no">xacc.hpp</includes>
+    <includes local="no">xacc_service.hpp</includes>
+    <includes local="no">xacc_observable.hpp</includes>
+    <includes local="no">ObservableTransform.hpp</includes>
+    <includedby refid="vqee_8hpp" local="no">core/include/qristal/core/optimization/vqee/vqee.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>core/include/qristal/core/optimization/vqee/case_generator.hpp</label>
+        <link refid="case__generator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ObservableTransform.hpp</label>
+      </node>
+      <node id="6">
+        <label>Utils.hpp</label>
+      </node>
+      <node id="3">
+        <label>iostream</label>
+      </node>
+      <node id="4">
+        <label>qristal/core/optimization/vqee/job_constants.hpp</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="7">
+        <label>xacc.hpp</label>
+      </node>
+      <node id="9">
+        <label>xacc_observable.hpp</label>
+      </node>
+      <node id="8">
+        <label>xacc_service.hpp</label>
+      </node>
+      <node id="5">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="1">
+        <label>core/include/qristal/core/optimization/vqee/case_generator.hpp</label>
+        <link refid="case__generator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>core/include/qristal/core/optimization/vqee/vqee.hpp</label>
+        <link refid="vqee_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structqristal_1_1vqee_1_1vqe__iteration__data" prot="public">qristal::vqee::vqe_iteration_data</innerclass>
+    <innerclass refid="structqristal_1_1vqee_1_1Params" prot="public">qristal::vqee::Params</innerclass>
+    <innerclass refid="classqristal_1_1vqee_1_1VqeOpt" prot="public">qristal::vqee::VqeOpt</innerclass>
+    <innerclass refid="classqristal_1_1vqee_1_1AdamMLP" prot="public">qristal::vqee::AdamMLP</innerclass>
+    <innerclass refid="classqristal_1_1vqee_1_1CmaesMLP" prot="public">qristal::vqee::CmaesMLP</innerclass>
+    <innerclass refid="classqristal_1_1vqee_1_1LbfgsMLP" prot="public">qristal::vqee::LbfgsMLP</innerclass>
+    <innerclass refid="classqristal_1_1vqee_1_1NLO" prot="public">qristal::vqee::NLO</innerclass>
+    <innerclass refid="classqristal_1_1vqee_1_1NelderMeadNLO" prot="public">qristal::vqee::NelderMeadNLO</innerclass>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <innernamespace refid="namespaceqristal_1_1vqee">qristal::vqee</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp"/>
+  </compounddef>
+</doxygen>

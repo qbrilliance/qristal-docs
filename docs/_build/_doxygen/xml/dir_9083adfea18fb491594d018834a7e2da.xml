@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_9083adfea18fb491594d018834a7e2da" kind="dir">
+    <compoundname>core/include/qristal/core/backends</compoundname>
+    <innerdir refid="dir_8c4530c0b1b668bc97d4daed83ade1d4">core/include/qristal/core/backends/qb_hardware</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/backends/"/>
+  </compounddef>
+</doxygen>

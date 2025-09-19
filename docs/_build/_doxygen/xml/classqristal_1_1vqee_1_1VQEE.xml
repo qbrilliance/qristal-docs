@@ -1,0 +1,390 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1vqee_1_1VQEE" kind="class" language="C++" prot="public">
+    <compoundname>qristal::vqee::VQEE</compoundname>
+    <includes refid="vqee_8hpp" local="no">vqee.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VQEE_1a6ce43ad9fc4ecea996d8ee92e1ccd165" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool qristal::vqee::VQEE::isRoot_</definition>
+        <argsstring></argsstring>
+        <name>isRoot_</name>
+        <qualifiedname>qristal::vqee::VQEE::isRoot_</qualifiedname>
+        <initializer>{GetRank() == 0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="34" column="17" bodyfile="core/include/qristal/core/optimization/vqee/vqee.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VQEE_1a7b0d42133a8dab4c96d20794aa21d948" prot="private" static="no" mutable="no">
+        <type>const bool</type>
+        <definition>const bool qristal::vqee::VQEE::isParallel_</definition>
+        <argsstring></argsstring>
+        <name>isParallel_</name>
+        <qualifiedname>qristal::vqee::VQEE::isParallel_</qualifiedname>
+        <initializer>{GetSize() &gt;1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="35" column="17" bodyfile="core/include/qristal/core/optimization/vqee/vqee.hpp" bodystart="35" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VQEE_1afcaee4e68a2d199d108b4f485746da3f" prot="private" static="no" mutable="no">
+        <type><ref refid="structqristal_1_1vqee_1_1Params" kindref="compound">Params</ref> &amp;</type>
+        <definition>Params&amp; qristal::vqee::VQEE::params_</definition>
+        <argsstring></argsstring>
+        <name>params_</name>
+        <qualifiedname>qristal::vqee::VQEE::params_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="36" column="16" bodyfile="core/include/qristal/core/optimization/vqee/vqee.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1a7c6bb3a2b40c0b243cbe72d0543084e3" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::VQEE::VQEE</definition>
+        <argsstring>(Params &amp;params)</argsstring>
+        <name>VQEE</name>
+        <qualifiedname>qristal::vqee::VQEE::VQEE</qualifiedname>
+        <param>
+          <type><ref refid="structqristal_1_1vqee_1_1Params" kindref="compound">Params</ref> &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Constructor that accepts <ref refid="structqristal_1_1vqee_1_1Params" kindref="compound">qristal::vqee::Params</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="41" column="5" bodyfile="core/include/qristal/core/optimization/vqee/vqee.hpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1ad92334ec66a82760dff565916d65f418" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::vqee::VQEE::optimize</definition>
+        <argsstring>()</argsstring>
+        <name>optimize</name>
+        <qualifiedname>qristal::vqee::VQEE::optimize</qualifiedname>
+        <briefdescription>
+<para>Set up and optimize VQE problem. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="125" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1ae7c42a8df4ed892fb1a8833c1d9fc718" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::shared_ptr&lt; xacc::quantum::PauliOperator &gt; &gt;</type>
+        <definition>std::vector&lt; std::shared_ptr&lt; xacc::quantum::PauliOperator &gt; &gt; qristal::vqee::VQEE::splitPauli</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::quantum::PauliOperator &gt; &amp;in_pauli, int nTermsPerSplit) const</argsstring>
+        <name>splitPauli</name>
+        <qualifiedname>qristal::vqee::VQEE::splitPauli</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::quantum::PauliOperator &gt; &amp;</type>
+          <declname>in_pauli</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>nTermsPerSplit</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="46" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1a0cb0f72e7938316de904f4bfd5c6f235" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::Accelerator &gt; qristal::vqee::VQEE::getAccelerator</definition>
+        <argsstring>(const std::string &amp;accName) const</argsstring>
+        <name>getAccelerator</name>
+        <qualifiedname>qristal::vqee::VQEE::getAccelerator</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>accName</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="49" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1a4fa739a49f36aba04346e776bd871557" prot="private" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::CompositeInstruction &gt; qristal::vqee::VQEE::getAnsatz</definition>
+        <argsstring>() const</argsstring>
+        <name>getAnsatz</name>
+        <qualifiedname>qristal::vqee::VQEE::getAnsatz</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="50" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1ad0a6c9c56d4296cb0f6b3f912d5af31a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; xacc::Observable &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::Observable &gt; qristal::vqee::VQEE::getObservable</definition>
+        <argsstring>()</argsstring>
+        <name>getObservable</name>
+        <qualifiedname>qristal::vqee::VQEE::getObservable</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="51" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1af444870fca76a5368fa0f519baa7333e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t qristal::vqee::VQEE::getOptimumIterationE</definition>
+        <argsstring>()</argsstring>
+        <name>getOptimumIterationE</name>
+        <qualifiedname>qristal::vqee::VQEE::getOptimumIterationE</qualifiedname>
+        <briefdescription>
+<para>Subroutines for visualising VQE convergence. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Locate the iteration that produced the optimum theta</para>
+<para><simplesect kind="return"><para>Index that matches the optimum iteration found by XACC </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="60" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1aa384fadf4140846a6029a36a8b3fa89a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::vqee::VQEE::generateThetaEnergyVis</definition>
+        <argsstring>(const std::string in_title, const size_t in_start_elem=0, const int in_scale=20, const int in_width=2, const int in_precision=2)</argsstring>
+        <name>generateThetaEnergyVis</name>
+        <qualifiedname>qristal::vqee::VQEE::generateThetaEnergyVis</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>in_title</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>in_start_elem</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_scale</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_width</declname>
+          <defval>2</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_precision</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+<para>Create a text-art bar graph for energy and each element of theta. The resultant visualisation is stored in params_.vis. The iteration corresponding to the optimum is marked &apos;**&apos;. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Colour markings: Red - indicates the optimum iteration identified by XACC Green - indicates an iteration with the same energy of the optimum energy</para>
+<para>Example output:</para>
+<para>Iteration 96 Energy |################# -0.95 Theta Element 0 |####################### 0.33*pi Element 1 |##################### 0.19*pi Element 2 |################### -0.12*pi Element 3 |######################### 0.55*pi Iteration 97 Energy **|################ -0.98 Theta Element 0 **|####################### 0.3*pi Element 1 **|##################### 0.19*pi Element 2 **|#################### -0.059*pi Element 3 **|######################### 0.5*pi Iteration 98 Energy |################# -0.97 Theta Element 0 |###################### 0.29*pi Element 1 |##################### 0.14*pi Element 2 |#################### 0.061*pi Element 3 |######################### 0.55*pi</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in_title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string to be used as a title before the text-art output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_start_elem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Index for the starting element within theta for which the next in_elem_n elements will be visualised </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A scaling factor to adjust the size of the visual bar output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of a blank separator between bar labels and bars </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_precision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The precision for printing a value at the right extremity of a bar </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="101" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VQEE_1ab6761f1732b81e27ddf6b0e45b8d1706" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::VQEE::generateEnergyVis</definition>
+        <argsstring>(const std::vector&lt; double &gt; in_val, const std::string in_title, const int in_stride=1, const int in_scale=20, const int in_width=2, const int in_precision=2)</argsstring>
+        <name>generateEnergyVis</name>
+        <qualifiedname>qristal::vqee::VQEE::generateEnergyVis</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt;</type>
+          <declname>in_val</declname>
+        </param>
+        <param>
+          <type>const std::string</type>
+          <declname>in_title</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_stride</declname>
+          <defval>1</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_scale</declname>
+          <defval>20</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_width</declname>
+          <defval>2</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_precision</declname>
+          <defval>2</defval>
+        </param>
+        <briefdescription>
+<para>Create a text-art bar graph for energy. The resultant visualisation is stored in params_.vis. The iteration corresponding to the optimum is marked &apos;**&apos;. Values are displayed at the right extremity of each bar. The scaling of bars is based on the energy at the first iteration, and rescales as soon as the size of a bar in any iteration is zero. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in_val</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An array with consecutive iterations separated by in_stride elements </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_title</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A string to be used as a title before the text-art output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_stride</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The stride separating consecutive iterations </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_scale</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>A scaling factor to adjust the size of the visual bar output </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_width</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The size of a blank separator between bar labels and bars </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_precision</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The precision for printing a value at the right extremity of a bar</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>String representation of energy convergence trace </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="120" column="17"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Variational Quantum Eigensolver (VQE) hybrid quantum-classical algorithm. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>qristal::vqee::Params</label>
+        <link refid="structqristal_1_1vqee_1_1Params"/>
+      </node>
+      <node id="1">
+        <label>qristal::vqee::VQEE</label>
+        <link refid="classqristal_1_1vqee_1_1VQEE"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>params_</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/optimization/vqee/vqee.hpp" line="32" column="3" bodyfile="core/include/qristal/core/optimization/vqee/vqee.hpp" bodystart="32" bodyend="127"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1ab6761f1732b81e27ddf6b0e45b8d1706" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>generateEnergyVis</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1aa384fadf4140846a6029a36a8b3fa89a" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>generateThetaEnergyVis</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1a0cb0f72e7938316de904f4bfd5c6f235" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>getAccelerator</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1a4fa739a49f36aba04346e776bd871557" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>getAnsatz</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1ad0a6c9c56d4296cb0f6b3f912d5af31a" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>getObservable</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1af444870fca76a5368fa0f519baa7333e" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>getOptimumIterationE</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1a7b0d42133a8dab4c96d20794aa21d948" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>isParallel_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1a6ce43ad9fc4ecea996d8ee92e1ccd165" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>isRoot_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1ad92334ec66a82760dff565916d65f418" prot="public" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>optimize</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1afcaee4e68a2d199d108b4f485746da3f" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>params_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1ae7c42a8df4ed892fb1a8833c1d9fc718" prot="private" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>splitPauli</name></member>
+      <member refid="classqristal_1_1vqee_1_1VQEE_1a7c6bb3a2b40c0b243cbe72d0543084e3" prot="public" virt="non-virtual"><scope>qristal::vqee::VQEE</scope><name>VQEE</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structqristal_1_1vqee_1_1vqe__iteration__data" kind="struct" language="C++" prot="public">
+    <compoundname>qristal::vqee::vqe_iteration_data</compoundname>
+    <includes refid="case__generator_8hpp" local="no">case_generator.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1vqe__iteration__data_1a44f80b0d95567d69b2c8cf8b32a408e1" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::vqee::vqe_iteration_data::energy</definition>
+        <argsstring></argsstring>
+        <name>energy</name>
+        <qualifiedname>qristal::vqee::vqe_iteration_data::energy</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="22" column="10" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1vqe__iteration__data_1aaf79ecf2746d1c2701fca82200836571" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; qristal::vqee::vqe_iteration_data::params</definition>
+        <argsstring></argsstring>
+        <name>params</name>
+        <qualifiedname>qristal::vqee::vqe_iteration_data::params</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="23" column="15" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="23" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structqristal_1_1vqee_1_1vqe__iteration__data_1ab4bb3e086878ee47443dce3a3e5d32ac" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool qristal::vqee::vqe_iteration_data::operator==</definition>
+        <argsstring>(const vqe_iteration_data &amp;r) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>qristal::vqee::vqe_iteration_data::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="structqristal_1_1vqee_1_1vqe__iteration__data" kindref="compound">vqe_iteration_data</ref> &amp;</type>
+          <declname>r</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="24" column="8" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="24" bodyend="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A structure for organising and visualising VQE iterations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="20" column="1" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="21" bodyend="27"/>
+    <listofallmembers>
+      <member refid="structqristal_1_1vqee_1_1vqe__iteration__data_1a44f80b0d95567d69b2c8cf8b32a408e1" prot="public" virt="non-virtual"><scope>qristal::vqee::vqe_iteration_data</scope><name>energy</name></member>
+      <member refid="structqristal_1_1vqee_1_1vqe__iteration__data_1ab4bb3e086878ee47443dce3a3e5d32ac" prot="public" virt="non-virtual"><scope>qristal::vqee::vqe_iteration_data</scope><name>operator==</name></member>
+      <member refid="structqristal_1_1vqee_1_1vqe__iteration__data_1aaf79ecf2746d1c2701fca82200836571" prot="public" virt="non-virtual"><scope>qristal::vqee::vqe_iteration_data</scope><name>params</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

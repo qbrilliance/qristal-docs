@@ -1,0 +1,177 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="session_8hpp" kind="file" language="C++">
+    <compoundname>session.hpp</compoundname>
+    <includes local="no">qristal/core/circuit_language.hpp</includes>
+    <includes local="no">qristal/core/cmake_variables.hpp</includes>
+    <includes refid="noise__model_8hpp" local="no">qristal/core/noise_model/noise_model.hpp</includes>
+    <includes refid="base__pass_8hpp" local="no">qristal/core/passes/base_pass.hpp</includes>
+    <includes local="no">qristal/core/remote_async_accelerator.hpp</includes>
+    <includes local="no">qristal/core/utils.hpp</includes>
+    <includes local="no">cmath</includes>
+    <includes local="no">complex</includes>
+    <includes local="no">functional</includes>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includes local="no">type_traits</includes>
+    <includes local="no">unordered_map</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">string_view</includes>
+    <includes local="no">yaml-cpp/yaml.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>qristal/core/noise_model/noise_model.hpp</label>
+        <link refid="noise__model_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>qristal/core/noise_model/noise_properties.hpp</label>
+        <link refid="noise__properties_8hpp_source"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>qristal/core/noise_model/readout_error.hpp</label>
+        <link refid="readout__error_8hpp_source"/>
+      </node>
+      <node id="15">
+        <label>qristal/core/passes/base_pass.hpp</label>
+        <link refid="base__pass_8hpp_source"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>qristal/core/passes/noise_aware_placement_config.hpp</label>
+        <link refid="noise__aware__placement__config_8hpp_source"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>core/include/qristal/core/session.hpp</label>
+        <link refid="session_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+      </node>
+      <node id="20">
+        <label>cmath</label>
+      </node>
+      <node id="21">
+        <label>complex</label>
+      </node>
+      <node id="7">
+        <label>functional</label>
+      </node>
+      <node id="11">
+        <label>map</label>
+      </node>
+      <node id="16">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>optional</label>
+      </node>
+      <node id="2">
+        <label>qristal/core/circuit_language.hpp</label>
+      </node>
+      <node id="3">
+        <label>qristal/core/cmake_variables.hpp</label>
+      </node>
+      <node id="8">
+        <label>qristal/core/noise_model/json_complex_convert.hpp</label>
+      </node>
+      <node id="9">
+        <label>qristal/core/noise_model/noise_channel.hpp</label>
+      </node>
+      <node id="18">
+        <label>qristal/core/remote_async_accelerator.hpp</label>
+      </node>
+      <node id="19">
+        <label>qristal/core/utils.hpp</label>
+      </node>
+      <node id="17">
+        <label>string</label>
+      </node>
+      <node id="23">
+        <label>string_view</label>
+      </node>
+      <node id="22">
+        <label>type_traits</label>
+      </node>
+      <node id="5">
+        <label>unordered_map</label>
+      </node>
+      <node id="12">
+        <label>vector</label>
+      </node>
+      <node id="24">
+        <label>yaml-cpp/yaml.h</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classqristal_1_1session" prot="public">qristal::session</innerclass>
+    <innernamespace refid="namespacexacc">xacc</innernamespace>
+    <innernamespace refid="namespacexacc_1_1quantum">xacc::quantum</innernamespace>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/session.hpp"/>
+  </compounddef>
+</doxygen>

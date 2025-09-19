@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_ad28d274faa2bad261fd0e7d00d80290" kind="dir">
+    <compoundname>core/include/qristal/core/optimization</compoundname>
+    <innerdir refid="dir_7f54a3c4b428a3a4357168cfd469060d">core/include/qristal/core/optimization/vqee</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/optimization/"/>
+  </compounddef>
+</doxygen>

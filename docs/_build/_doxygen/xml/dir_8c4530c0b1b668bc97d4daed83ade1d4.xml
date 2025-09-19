@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_8c4530c0b1b668bc97d4daed83ade1d4" kind="dir">
+    <compoundname>core/include/qristal/core/backends/qb_hardware</compoundname>
+    <innerfile refid="qb__qpu_8hpp">qb_qpu.hpp</innerfile>
+    <innerfile refid="qb__visitor_8hpp">qb_visitor.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/backends/qb_hardware/"/>
+  </compounddef>
+</doxygen>

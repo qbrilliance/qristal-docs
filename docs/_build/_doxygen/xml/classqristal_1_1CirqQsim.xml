@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1CirqQsim" kind="class" language="C++" prot="public">
+    <compoundname>qristal::CirqQsim</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">xacc::Accelerator</basecompoundref>
+    <derivedcompoundref refid="classqristal_1_1CirqQsimCPU" prot="public" virt="non-virtual">qristal::CirqQsimCPU</derivedcompoundref>
+    <includes refid="qsim__emulator_8hpp" local="no">qsim_emulator.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classqristal_1_1CirqQsim_1ada65db6e5f2000baf2928eb8dbd84115" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::CirqQsim::m_shots</definition>
+        <argsstring></argsstring>
+        <name>m_shots</name>
+        <qualifiedname>qristal::CirqQsim::m_shots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="96" column="9" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="96" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1CirqQsim_1a45123fce315b4402e92b6147549d3d57" prot="protected" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t qristal::CirqQsim::m_seed</definition>
+        <argsstring></argsstring>
+        <name>m_seed</name>
+        <qualifiedname>qristal::CirqQsim::m_seed</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="97" column="14" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="97" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1CirqQsim_1a42644de8fd5721f4d707699aa5e93f3e" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::CirqQsim::m_ro_errors_enabled</definition>
+        <argsstring></argsstring>
+        <name>m_ro_errors_enabled</name>
+        <qualifiedname>qristal::CirqQsim::m_ro_errors_enabled</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="98" column="10" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1CirqQsim_1af616b499dcd7fc709478222ca55211a0" prot="protected" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref> *</type>
+        <definition>NoiseModel* qristal::CirqQsim::m_noise_model</definition>
+        <argsstring></argsstring>
+        <name>m_noise_model</name>
+        <qualifiedname>qristal::CirqQsim::m_noise_model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="99" column="16" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="99" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1CirqQsim_1a56bff5093aa78e924f611c97a26d9a12" prot="protected" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::map&lt; std::vector&lt; size_t &gt;, std::vector&lt; <ref refid="structqristal_1_1noise__channel__components" kindref="compound">noise_channel_components</ref> &gt; &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::map&lt;std::vector&lt;size_t&gt;, std::vector&lt;noise_channel_components&gt; &gt; &gt; qristal::CirqQsim::m_noise_channels</definition>
+        <argsstring></argsstring>
+        <name>m_noise_channels</name>
+        <qualifiedname>qristal::CirqQsim::m_noise_channels</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="101" column="2" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="101" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1CirqQsim_1a1da8bc44a3b7751a0543f1c2bc34339f" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::CirqQsim::initialize</definition>
+        <argsstring>(const xacc::HeterogeneousMap &amp;params={}) override</argsstring>
+        <name>initialize</name>
+        <qualifiedname>qristal::CirqQsim::initialize</qualifiedname>
+        <param>
+          <type>const xacc::HeterogeneousMap &amp;</type>
+          <declname>params</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the backend accelerator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Initialization parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="43" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1CirqQsim_1a64f32d5cfd01d1af417f783eaacf6bf8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::CirqQsim::updateConfiguration</definition>
+        <argsstring>(const xacc::HeterogeneousMap &amp;config) override</argsstring>
+        <name>updateConfiguration</name>
+        <qualifiedname>qristal::CirqQsim::updateConfiguration</qualifiedname>
+        <param>
+          <type>const xacc::HeterogeneousMap &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="51" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1CirqQsim_1a56acfcb85c5859a7a0abee04d5d2845e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>BitOrder</type>
+        <definition>virtual BitOrder qristal::CirqQsim::getBitOrder</definition>
+        <argsstring>() override</argsstring>
+        <name>getBitOrder</name>
+        <qualifiedname>qristal::CirqQsim::getBitOrder</qualifiedname>
+        <briefdescription>
+<para>Get the Bit Order configuration. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bit order </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="59" column="22" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1CirqQsim_1a68649984389299b6ee9e738186d1fb7c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>xacc::HeterogeneousMap</type>
+        <definition>virtual xacc::HeterogeneousMap qristal::CirqQsim::getProperties</definition>
+        <argsstring>() override</argsstring>
+        <name>getProperties</name>
+        <qualifiedname>qristal::CirqQsim::getProperties</qualifiedname>
+        <briefdescription>
+<para>Get any backend-specific properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Backend properties </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="66" column="36" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="66" bodyend="66"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1CirqQsim_1ae8bee1708a2fc7b1f8f55cd85771b59d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::CirqQsim::convert_noise_channel</definition>
+        <argsstring>(NoiseModel noise_model)</argsstring>
+        <name>convert_noise_channel</name>
+        <qualifiedname>qristal::CirqQsim::convert_noise_channel</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref></type>
+          <declname>noise_model</declname>
+        </param>
+        <briefdescription>
+<para>Function to convert a Kraus channel to qsim type. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>noise_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="73" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1CirqQsim_1a29d17935823827bd4dad8bd98757157a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::CirqQsim::execute</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::AcceleratorBuffer &gt; buffer, const std::vector&lt; std::shared_ptr&lt; xacc::CompositeInstruction &gt; &gt; compositeInstructions) override</argsstring>
+        <name>execute</name>
+        <qualifiedname>qristal::CirqQsim::execute</qualifiedname>
+        <reimplementedby refid="classqristal_1_1CirqQsimCPU_1a29d17935823827bd4dad8bd98757157a">execute</reimplementedby>
+        <param>
+          <type>std::shared_ptr&lt; xacc::AcceleratorBuffer &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; xacc::CompositeInstruction &gt; &gt;</type>
+          <declname>compositeInstructions</declname>
+        </param>
+        <briefdescription>
+<para>Execute/emulate an array of circuits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Buffer to store the execution results </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compositeInstructions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input circuits </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="81" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1CirqQsim_1a3f43d4e3ccc694b4a710183bf06f220f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::CirqQsim::run_sim</definition>
+        <argsstring>(size_t startIdx, size_t endIdx, std::shared_ptr&lt; xacc::AcceleratorBuffer &gt; buffer, const std::shared_ptr&lt; xacc::CompositeInstruction &gt; compositeInstruction, std::map&lt; std::string, int &gt; &amp;counts, std::mutex &amp;meas_mutex, std::unique_ptr&lt; QsimExecutor &gt; executor)</argsstring>
+        <name>run_sim</name>
+        <qualifiedname>qristal::CirqQsim::run_sim</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>startIdx</declname>
+        </param>
+        <param>
+          <type>size_t</type>
+          <declname>endIdx</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; xacc::AcceleratorBuffer &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+          <declname>compositeInstruction</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, int &gt; &amp;</type>
+          <declname>counts</declname>
+        </param>
+        <param>
+          <type>std::mutex &amp;</type>
+          <declname>meas_mutex</declname>
+        </param>
+        <param>
+          <type>std::unique_ptr&lt; QsimExecutor &gt;</type>
+          <declname>executor</declname>
+        </param>
+        <briefdescription>
+<para>Execute the actual circuit using the qsim executor created by the derived class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="87" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Noisy emulator based on Qsim library. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::CirqQsim</label>
+        <link refid="classqristal_1_1CirqQsim"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::CirqQsimCPU</label>
+        <link refid="classqristal_1_1CirqQsimCPU"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xacc::Accelerator</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>qristal::CirqQsim</label>
+        <link refid="classqristal_1_1CirqQsim"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_noise_model</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::NoiseModel</label>
+        <link refid="classqristal_1_1NoiseModel"/>
+      </node>
+      <node id="2">
+        <label>xacc::Accelerator</label>
+      </node>
+    </collaborationgraph>
+    <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="34" column="3" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="34" bodyend="103"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1CirqQsim_1ae8bee1708a2fc7b1f8f55cd85771b59d" prot="public" virt="non-virtual"><scope>qristal::CirqQsim</scope><name>convert_noise_channel</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a29d17935823827bd4dad8bd98757157a" prot="public" virt="virtual"><scope>qristal::CirqQsim</scope><name>execute</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a56acfcb85c5859a7a0abee04d5d2845e" prot="public" virt="virtual"><scope>qristal::CirqQsim</scope><name>getBitOrder</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a68649984389299b6ee9e738186d1fb7c" prot="public" virt="virtual"><scope>qristal::CirqQsim</scope><name>getProperties</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a1da8bc44a3b7751a0543f1c2bc34339f" prot="public" virt="virtual"><scope>qristal::CirqQsim</scope><name>initialize</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a56bff5093aa78e924f611c97a26d9a12" prot="protected" virt="non-virtual"><scope>qristal::CirqQsim</scope><name>m_noise_channels</name></member>
+      <member refid="classqristal_1_1CirqQsim_1af616b499dcd7fc709478222ca55211a0" prot="protected" virt="non-virtual"><scope>qristal::CirqQsim</scope><name>m_noise_model</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a42644de8fd5721f4d707699aa5e93f3e" prot="protected" virt="non-virtual"><scope>qristal::CirqQsim</scope><name>m_ro_errors_enabled</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a45123fce315b4402e92b6147549d3d57" prot="protected" virt="non-virtual"><scope>qristal::CirqQsim</scope><name>m_seed</name></member>
+      <member refid="classqristal_1_1CirqQsim_1ada65db6e5f2000baf2928eb8dbd84115" prot="protected" virt="non-virtual"><scope>qristal::CirqQsim</scope><name>m_shots</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a3f43d4e3ccc694b4a710183bf06f220f" prot="public" virt="non-virtual"><scope>qristal::CirqQsim</scope><name>run_sim</name></member>
+      <member refid="classqristal_1_1CirqQsim_1a64f32d5cfd01d1af417f783eaacf6bf8" prot="public" virt="virtual"><scope>qristal::CirqQsim</scope><name>updateConfiguration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

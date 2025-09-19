@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1vqee_1_1AdamMLP" kind="class" language="C++" prot="public">
+    <compoundname>qristal::vqee::AdamMLP</compoundname>
+    <basecompoundref refid="classqristal_1_1vqee_1_1VqeOpt" prot="public" virt="non-virtual">qristal::vqee::VqeOpt</basecompoundref>
+    <includes refid="case__generator_8hpp" local="no">case_generator.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1AdamMLP_1a4d5d30e954850abf6a9baa025c9625f2" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::AdamMLP::integer_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>integer_valued_fields_</name>
+        <qualifiedname>qristal::vqee::AdamMLP::integer_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Extra options accepted by ADAM that will be detected from the YAML string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Step size for each iteration YAML key: &quot;stepsize&quot; XACC key: &quot;mlpack-step-size&quot; Default: [double] 0.5</para>
+<para>Exponential decay rate for the first moment estimates YAML key: &quot;beta1&quot; XACC key: &quot;mlpack-beta1&quot; Default: [double] 0.7</para>
+<para>Exponential decay rate for the weighted infinity-norm estimates YAML key: &quot;beta2&quot; XACC key: &quot;mlpack-beta2&quot; Default: [double] 0.999</para>
+<para>Mean-squared gradient initial value YAML key: &quot;eps&quot; XACC key: &quot;mlpack-eps&quot; Default: [double] 1.0e-8</para>
+<para>Momentum YAML key: &quot;momentum&quot; XACC key: &quot;mlpack-momentum&quot; Default: [double] 0.05</para>
+<para>Exact objective YAML key: &quot;exactobjective&quot; XACC key: &quot;adam-exact-objective&quot; Default: [boolean] false Integer-valued fields </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="199" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="199" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1AdamMLP_1ab8eb3b933438a12aa75659e4ce7186dd" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::AdamMLP::string_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>string_valued_fields_</name>
+        <qualifiedname>qristal::vqee::AdamMLP::string_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>String-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="202" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="202" bodyend="202"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1AdamMLP_1af7871403d1c316bbe715b49f9425e84d" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::AdamMLP::boolean_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>boolean_valued_fields_</name>
+        <qualifiedname>qristal::vqee::AdamMLP::boolean_valued_fields_</qualifiedname>
+        <initializer>{&quot;exactobjective&quot;}</initializer>
+        <briefdescription>
+<para>Boolean-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="205" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="205" bodyend="205"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1AdamMLP_1a7de7f82bf44031709d4c9c82a9c54fab" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::AdamMLP::double_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>double_valued_fields_</name>
+        <qualifiedname>qristal::vqee::AdamMLP::double_valued_fields_</qualifiedname>
+        <initializer>{&quot;stepsize&quot;,
+                                                &quot;beta1&quot;,
+                                                &quot;beta2&quot;,
+                                                &quot;eps&quot;,
+                                                &quot;momentum&quot;}</initializer>
+        <briefdescription>
+<para>Double-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="208" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="208" bodyend="212"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1AdamMLP_1aa520f9b673025dd6b227ffdcf903fc61" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::AdamMLP::vector_double_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>vector_double_valued_fields_</name>
+        <qualifiedname>qristal::vqee::AdamMLP::vector_double_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Vector of double fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="215" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="215" bodyend="215"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1AdamMLP_1ac1dd9436af1c17e8ca7bbf772f57b6b3" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; qristal::vqee::AdamMLP::all_valid_fields_yaml_xacc_</definition>
+        <argsstring></argsstring>
+        <name>all_valid_fields_yaml_xacc_</name>
+        <qualifiedname>qristal::vqee::AdamMLP::all_valid_fields_yaml_xacc_</qualifiedname>
+        <initializer>{
+                                                {&quot;exactobjective&quot;,&quot;adam-exact-objective&quot;},
+                                                {&quot;stepsize&quot;,&quot;mlpack-step-size&quot;},
+                                                {&quot;beta1&quot;,&quot;mlpack-beta1&quot;},
+                                                {&quot;beta2&quot;,&quot;mlpack-beta2&quot;},
+                                                {&quot;eps&quot;,&quot;mlpack-eps&quot;},
+                                                {&quot;momentum&quot;,&quot;mlpack-momentum&quot;}}</initializer>
+        <briefdescription>
+<para>Union of all the above fields. Conversion of keys from YAML -&gt; XACC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="218" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="218" bodyend="224"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1AdamMLP_1a0320077fd620c6fc75c73ac3d16fa107" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::AdamMLP::AdamMLP</definition>
+        <argsstring>()</argsstring>
+        <name>AdamMLP</name>
+        <qualifiedname>qristal::vqee::AdamMLP::AdamMLP</qualifiedname>
+        <briefdescription>
+<para>Default constructor - calls the base class and sets the provider name and algorithm name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="228" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="228" bodyend="228"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1AdamMLP_1a8a7c1d576eb9ec866fb04e9b3e4d2353" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::AdamMLP::AdamMLP</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;in_initial_parameters, const int in_maxeval=500000, const double in_ftol=1.0e-4, const YAML::Node &amp;in_node=YAML::Load(&quot;&quot;))</argsstring>
+        <name>AdamMLP</name>
+        <qualifiedname>qristal::vqee::AdamMLP::AdamMLP</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>in_initial_parameters</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_maxeval</declname>
+          <defval>500000</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>in_ftol</declname>
+          <defval>1.0e-4</defval>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>in_node</declname>
+          <defval>YAML::Load(&quot;&quot;)</defval>
+        </param>
+        <briefdescription>
+<para>Constructor that shows all defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="231" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="231" bodyend="240"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1AdamMLP_1a3c06e2114790024cf0389c69909b0cfc" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; xacc::Optimizer &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::Optimizer &gt; qristal::vqee::AdamMLP::get</definition>
+        <argsstring>() override</argsstring>
+        <name>get</name>
+        <qualifiedname>qristal::vqee::AdamMLP::get</qualifiedname>
+        <reimplements refid="classqristal_1_1vqee_1_1VqeOpt_1a3c48def51b9aef1fc689967acaabc64c">get</reimplements>
+        <briefdescription>
+<para>Getters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="243" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>ADAptive Momentum (ADAM) estimator algorithm from the mlpack library ADAM is a stochastic gradient descent algorithm often used in machine learning applications. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::vqee::AdamMLP</label>
+        <link refid="classqristal_1_1vqee_1_1AdamMLP"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>qristal::vqee::AdamMLP</label>
+        <link refid="classqristal_1_1vqee_1_1AdamMLP"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="163" column="1" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="163" bodyend="244"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1a0320077fd620c6fc75c73ac3d16fa107" prot="public" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>AdamMLP</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1a8a7c1d576eb9ec866fb04e9b3e4d2353" prot="public" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>AdamMLP</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1ac1dd9436af1c17e8ca7bbf772f57b6b3" prot="private" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>all_valid_fields_yaml_xacc_</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1af7871403d1c316bbe715b49f9425e84d" prot="private" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>boolean_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1a7de7f82bf44031709d4c9c82a9c54fab" prot="private" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1a3c06e2114790024cf0389c69909b0cfc" prot="public" virt="virtual"><scope>qristal::vqee::AdamMLP</scope><name>get</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1a4d5d30e954850abf6a9baa025c9625f2" prot="private" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>integer_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a1cd0d9b40fcb4cae263351fd83087fcb" prot="protected" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>m_algorithm_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0bbf69caef155ac7b23989888ffc30e1" prot="protected" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>m_ftol_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3b070c6f820d778bb10737c7270f09ac" prot="protected" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>m_initial_parameters_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a359613f99bb0a5a8726aea6db5ec9e50" prot="protected" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>m_maxeval_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a90be91f1aac205bfe1202133fd995925" prot="protected" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>m_node_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a4b9d5112c75bbb5bf8d04ee924ac6269" prot="protected" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>m_provider_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a9f72a418b4fd0ed61a1889266641617f" prot="public" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>pass_yaml_to_xacc</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1ab8eb3b933438a12aa75659e4ce7186dd" prot="private" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>string_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1AdamMLP_1aa520f9b673025dd6b227ffdcf903fc61" prot="private" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>vector_double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0739a3995bb9a8791f9601d46b4a0c04" prot="public" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1ab884657f56b5f7031515d9011d2020b1" prot="public" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1afcff78e87193ec5fae19d7e53f62e51b" prot="public" virt="non-virtual"><scope>qristal::vqee::AdamMLP</scope><name>VqeOpt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

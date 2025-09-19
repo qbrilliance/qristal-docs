@@ -1,0 +1,464 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1MpsAccelerator" kind="class" language="C++" prot="public">
+    <compoundname>qristal::MpsAccelerator</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">xacc::Accelerator</basecompoundref>
+    <includes refid="mps__accelerator_8hpp" local="no">mps_accelerator.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1a152bdeb2b680ad55c471f55a541bd6a7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::MpsAccelerator::m_shots</definition>
+        <argsstring></argsstring>
+        <name>m_shots</name>
+        <qualifiedname>qristal::MpsAccelerator::m_shots</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="106" column="7" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1ac48393934730fe4ffd69d40523c1c157" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref> *</type>
+        <definition>NoiseModel* qristal::MpsAccelerator::m_noise_model</definition>
+        <argsstring></argsstring>
+        <name>m_noise_model</name>
+        <qualifiedname>qristal::MpsAccelerator::m_noise_model</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="107" column="14" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="107" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1a52c108fe71ceafda5d190a1a921e1e0f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; qristal::MpsAccelerator::m_gpu_device_ids</definition>
+        <argsstring></argsstring>
+        <name>m_gpu_device_ids</name>
+        <qualifiedname>qristal::MpsAccelerator::m_gpu_device_ids</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="108" column="15" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="108" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1af2cb816c9d432bf9459900c3c2f74916" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::MpsAccelerator::m_initial_bond_dim</definition>
+        <argsstring></argsstring>
+        <name>m_initial_bond_dim</name>
+        <qualifiedname>qristal::MpsAccelerator::m_initial_bond_dim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="110" column="7" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1ab6de68a89b5aa995002ec68767856c70" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::MpsAccelerator::m_max_bond_dim</definition>
+        <argsstring></argsstring>
+        <name>m_max_bond_dim</name>
+        <qualifiedname>qristal::MpsAccelerator::m_max_bond_dim</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="111" column="7" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1a0bf6f87c187b123fc099bcf7fddf2c87" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::MpsAccelerator::m_abs_truncation_threshold</definition>
+        <argsstring></argsstring>
+        <name>m_abs_truncation_threshold</name>
+        <qualifiedname>qristal::MpsAccelerator::m_abs_truncation_threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="112" column="10" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1ab59e41052e5542e9d05803a28398547a" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::MpsAccelerator::m_rel_truncation_threshold</definition>
+        <argsstring></argsstring>
+        <name>m_rel_truncation_threshold</name>
+        <qualifiedname>qristal::MpsAccelerator::m_rel_truncation_threshold</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="113" column="10" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1MpsAccelerator_1a73ccc5ca822f29f1d19e0eeb451801bc" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::MpsAccelerator::m_meas_sampling_method</definition>
+        <argsstring></argsstring>
+        <name>m_meas_sampling_method</name>
+        <qualifiedname>qristal::MpsAccelerator::m_meas_sampling_method</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="114" column="15" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="114" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1aded470ca52cdb3d3a110c36520ab2f33" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::string</type>
+        <definition>virtual const std::string qristal::MpsAccelerator::name</definition>
+        <argsstring>() const override</argsstring>
+        <name>name</name>
+        <qualifiedname>qristal::MpsAccelerator::name</qualifiedname>
+        <briefdescription>
+<para>Get the name of the backend accelerator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Backend name </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="21" column="29" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="21" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1a528562d22a147e2f72c4b0964316997a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>const std::string</type>
+        <definition>virtual const std::string qristal::MpsAccelerator::description</definition>
+        <argsstring>() const override</argsstring>
+        <name>description</name>
+        <qualifiedname>qristal::MpsAccelerator::description</qualifiedname>
+        <briefdescription>
+<para>Get the short description of the backend accelerator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Description string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="28" column="29" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1ac48c93763dcd6f7dd49895d732bf76a4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::MpsAccelerator::initialize</definition>
+        <argsstring>(const xacc::HeterogeneousMap &amp;params) override</argsstring>
+        <name>initialize</name>
+        <qualifiedname>qristal::MpsAccelerator::initialize</qualifiedname>
+        <param>
+          <type>const xacc::HeterogeneousMap &amp;</type>
+          <declname>params</declname>
+        </param>
+        <briefdescription>
+<para>Initialize the backend accelerator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Configuration parameters </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="39" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1a8b70a0b0f4b6b9e9242083708c7ab693" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::MpsAccelerator::updateConfiguration</definition>
+        <argsstring>(const xacc::HeterogeneousMap &amp;config) override</argsstring>
+        <name>updateConfiguration</name>
+        <qualifiedname>qristal::MpsAccelerator::updateConfiguration</qualifiedname>
+        <param>
+          <type>const xacc::HeterogeneousMap &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Update the backend accelerator&apos;s configurations. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameters to update </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="46" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1adf10a4e726e4ee2b92d493cac86f280a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>virtual const std::vector&lt; std::string &gt; qristal::MpsAccelerator::configurationKeys</definition>
+        <argsstring>() override</argsstring>
+        <name>configurationKeys</name>
+        <qualifiedname>qristal::MpsAccelerator::configurationKeys</qualifiedname>
+        <briefdescription>
+<para>Get the list of configuration options. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Names of configuration options </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="54" column="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1ac59e82d5d64c7e0580171fb327bfbf68" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>BitOrder</type>
+        <definition>virtual BitOrder qristal::MpsAccelerator::getBitOrder</definition>
+        <argsstring>() override</argsstring>
+        <name>getBitOrder</name>
+        <qualifiedname>qristal::MpsAccelerator::getBitOrder</qualifiedname>
+        <briefdescription>
+<para>Get the Bit Order convention that the backend follows. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Bit order scheme </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="61" column="20" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1a78911438ce8ab317cf83821d5eab7c10" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>xacc::HeterogeneousMap</type>
+        <definition>virtual xacc::HeterogeneousMap qristal::MpsAccelerator::getProperties</definition>
+        <argsstring>() override</argsstring>
+        <name>getProperties</name>
+        <qualifiedname>qristal::MpsAccelerator::getProperties</qualifiedname>
+        <briefdescription>
+<para>Get the backend&apos;s properties. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Properties as a list of (key, value) pairs </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="68" column="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1a07313478a9582122b42659679a4686db" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::MpsAccelerator::execute</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::AcceleratorBuffer &gt; buffer, const std::shared_ptr&lt; xacc::CompositeInstruction &gt; compositeInstruction) override</argsstring>
+        <name>execute</name>
+        <qualifiedname>qristal::MpsAccelerator::execute</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::AcceleratorBuffer &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+          <declname>compositeInstruction</declname>
+        </param>
+        <briefdescription>
+<para>Execute a single quantum circuit and store results in the result buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Accelerator backend to store execution results and info </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compositeInstruction</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input circuit to execute </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="77" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1a80ba9158953f1d4bc91afb1ec7769a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::MpsAccelerator::execute</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::AcceleratorBuffer &gt; buffer, const std::vector&lt; std::shared_ptr&lt; xacc::CompositeInstruction &gt; &gt; compositeInstructions) override</argsstring>
+        <name>execute</name>
+        <qualifiedname>qristal::MpsAccelerator::execute</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::AcceleratorBuffer &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; std::shared_ptr&lt; xacc::CompositeInstruction &gt; &gt;</type>
+          <declname>compositeInstructions</declname>
+        </param>
+        <briefdescription>
+<para>Execute list of quantum circuits and store results in the result buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Accelerator backend to store execution results and info </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>compositeInstructions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of input circuits to execute </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="88" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1MpsAccelerator_1a8cfcf87ddccaf3f9d92245af67671985" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::MpsAccelerator::apply_noise</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::Instruction &gt; inst, MPSStateSpace &amp;state, const qristal::internal::nv_noise_model &amp;noise_model)</argsstring>
+        <name>apply_noise</name>
+        <qualifiedname>qristal::MpsAccelerator::apply_noise</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::Instruction &gt;</type>
+          <declname>inst</declname>
+        </param>
+        <param>
+          <type>MPSStateSpace &amp;</type>
+          <declname>state</declname>
+        </param>
+        <param>
+          <type>const qristal::internal::nv_noise_model &amp;</type>
+          <declname>noise_model</declname>
+        </param>
+        <briefdescription>
+<para>Apply noise channels on a qubit&apos;s state. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>inst</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of instruction, i.e. quantum circuit, to execute </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>state</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Qubit state </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>noise_model</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>List of noise channels </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="101" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>MPS Accelerator backend. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::MpsAccelerator</label>
+        <link refid="classqristal_1_1MpsAccelerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xacc::Accelerator</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>qristal::MpsAccelerator</label>
+        <link refid="classqristal_1_1MpsAccelerator"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_noise_model</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::NoiseModel</label>
+        <link refid="classqristal_1_1NoiseModel"/>
+      </node>
+      <node id="2">
+        <label>xacc::Accelerator</label>
+      </node>
+    </collaborationgraph>
+    <location file="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" line="14" column="1" bodyfile="emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp" bodystart="14" bodyend="115"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1MpsAccelerator_1a8cfcf87ddccaf3f9d92245af67671985" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>apply_noise</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1adf10a4e726e4ee2b92d493cac86f280a" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>configurationKeys</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a528562d22a147e2f72c4b0964316997a" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>description</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a07313478a9582122b42659679a4686db" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>execute</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a80ba9158953f1d4bc91afb1ec7769a02" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>execute</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1ac59e82d5d64c7e0580171fb327bfbf68" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>getBitOrder</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a78911438ce8ab317cf83821d5eab7c10" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>getProperties</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1ac48c93763dcd6f7dd49895d732bf76a4" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>initialize</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a0bf6f87c187b123fc099bcf7fddf2c87" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_abs_truncation_threshold</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a52c108fe71ceafda5d190a1a921e1e0f" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_gpu_device_ids</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1af2cb816c9d432bf9459900c3c2f74916" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_initial_bond_dim</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1ab6de68a89b5aa995002ec68767856c70" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_max_bond_dim</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a73ccc5ca822f29f1d19e0eeb451801bc" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_meas_sampling_method</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1ac48393934730fe4ffd69d40523c1c157" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_noise_model</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1ab59e41052e5542e9d05803a28398547a" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_rel_truncation_threshold</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a152bdeb2b680ad55c471f55a541bd6a7" prot="private" virt="non-virtual"><scope>qristal::MpsAccelerator</scope><name>m_shots</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1aded470ca52cdb3d3a110c36520ab2f33" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>name</name></member>
+      <member refid="classqristal_1_1MpsAccelerator_1a8b70a0b0f4b6b9e9242083708c7ab693" prot="public" virt="virtual"><scope>qristal::MpsAccelerator</scope><name>updateConfiguration</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

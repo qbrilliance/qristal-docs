@@ -1,0 +1,342 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1vqee_1_1VqeOpt" kind="class" language="C++" prot="public">
+    <compoundname>qristal::vqee::VqeOpt</compoundname>
+    <derivedcompoundref refid="classqristal_1_1vqee_1_1AdamMLP" prot="public" virt="non-virtual">qristal::vqee::AdamMLP</derivedcompoundref>
+    <derivedcompoundref refid="classqristal_1_1vqee_1_1CmaesMLP" prot="public" virt="non-virtual">qristal::vqee::CmaesMLP</derivedcompoundref>
+    <derivedcompoundref refid="classqristal_1_1vqee_1_1LbfgsMLP" prot="public" virt="non-virtual">qristal::vqee::LbfgsMLP</derivedcompoundref>
+    <derivedcompoundref refid="classqristal_1_1vqee_1_1NLO" prot="public" virt="non-virtual">qristal::vqee::NLO</derivedcompoundref>
+    <includes refid="case__generator_8hpp" local="no">case_generator.hpp</includes>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VqeOpt_1a4b9d5112c75bbb5bf8d04ee924ac6269" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::VqeOpt::m_provider_</definition>
+        <argsstring></argsstring>
+        <name>m_provider_</name>
+        <qualifiedname>qristal::vqee::VqeOpt::m_provider_</qualifiedname>
+        <briefdescription>
+<para>Name for the C++ optimisation library. These libraries supply a collection of algorithms through a consistent interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="79" column="17" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="79" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VqeOpt_1a1cd0d9b40fcb4cae263351fd83087fcb" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::VqeOpt::m_algorithm_</definition>
+        <argsstring></argsstring>
+        <name>m_algorithm_</name>
+        <qualifiedname>qristal::vqee::VqeOpt::m_algorithm_</qualifiedname>
+        <briefdescription>
+<para>Name for an algorithm that performs optimisation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="82" column="17" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="82" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VqeOpt_1a3b070c6f820d778bb10737c7270f09ac" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; qristal::vqee::VqeOpt::m_initial_parameters_</definition>
+        <argsstring></argsstring>
+        <name>m_initial_parameters_</name>
+        <qualifiedname>qristal::vqee::VqeOpt::m_initial_parameters_</qualifiedname>
+        <briefdescription>
+<para>Initial values for theta (the parameters that will be varied to find the optimum) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="85" column="17" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="85" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VqeOpt_1a359613f99bb0a5a8726aea6db5ec9e50" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::vqee::VqeOpt::m_maxeval_</definition>
+        <argsstring></argsstring>
+        <name>m_maxeval_</name>
+        <qualifiedname>qristal::vqee::VqeOpt::m_maxeval_</qualifiedname>
+        <briefdescription>
+<para>Max number of iterations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="88" column="9" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="88" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VqeOpt_1a0bbf69caef155ac7b23989888ffc30e1" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::vqee::VqeOpt::m_ftol_</definition>
+        <argsstring></argsstring>
+        <name>m_ftol_</name>
+        <qualifiedname>qristal::vqee::VqeOpt::m_ftol_</qualifiedname>
+        <briefdescription>
+<para>Function tolerance. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="91" column="12" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="91" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1VqeOpt_1a90be91f1aac205bfe1202133fd995925" prot="protected" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node qristal::vqee::VqeOpt::m_node_</definition>
+        <argsstring></argsstring>
+        <name>m_node_</name>
+        <qualifiedname>qristal::vqee::VqeOpt::m_node_</qualifiedname>
+        <briefdescription>
+<para>Extra options to supply as configuration information to the optimiser. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="94" column="16" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="94" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VqeOpt_1a0739a3995bb9a8791f9601d46b4a0c04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::VqeOpt::VqeOpt</definition>
+        <argsstring>()</argsstring>
+        <name>VqeOpt</name>
+        <qualifiedname>qristal::vqee::VqeOpt::VqeOpt</qualifiedname>
+        <briefdescription>
+<para>Default constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="97" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="97" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VqeOpt_1ab884657f56b5f7031515d9011d2020b1" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::VqeOpt::VqeOpt</definition>
+        <argsstring>(const std::string &amp;in_provider, const std::string &amp;in_algorithm)</argsstring>
+        <name>VqeOpt</name>
+        <qualifiedname>qristal::vqee::VqeOpt::VqeOpt</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_provider</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_algorithm</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for the most common use case. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="107" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="107" bodyend="111"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VqeOpt_1afcff78e87193ec5fae19d7e53f62e51b" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::VqeOpt::VqeOpt</definition>
+        <argsstring>(const std::string &amp;in_provider, const std::string &amp;in_algorithm, const std::vector&lt; double &gt; &amp;in_initial_parameters, const int in_maxeval, const double in_ftol, const YAML::Node &amp;in_node)</argsstring>
+        <name>VqeOpt</name>
+        <qualifiedname>qristal::vqee::VqeOpt::VqeOpt</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_provider</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_algorithm</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>in_initial_parameters</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_maxeval</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>in_ftol</declname>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>in_node</declname>
+        </param>
+        <briefdescription>
+<para>Constructor for initialisation of all data members. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="114" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="114" bodyend="126"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VqeOpt_1a3c48def51b9aef1fc689967acaabc64c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>std::shared_ptr&lt; xacc::Optimizer &gt;</type>
+        <definition>virtual std::shared_ptr&lt; xacc::Optimizer &gt; qristal::vqee::VqeOpt::get</definition>
+        <argsstring>()</argsstring>
+        <name>get</name>
+        <qualifiedname>qristal::vqee::VqeOpt::get</qualifiedname>
+        <reimplementedby refid="classqristal_1_1vqee_1_1AdamMLP_1a3c06e2114790024cf0389c69909b0cfc">get</reimplementedby>
+        <reimplementedby refid="classqristal_1_1vqee_1_1CmaesMLP_1a029dafaa4b576ca0a7a31c214edb0e92">get</reimplementedby>
+        <reimplementedby refid="classqristal_1_1vqee_1_1LbfgsMLP_1a6794b0ad2fe5cf321d554b4c345aea98">get</reimplementedby>
+        <reimplementedby refid="classqristal_1_1vqee_1_1NLO_1a58bad4dc17707edbe74dea99f1ce1cc1">get</reimplementedby>
+        <briefdescription>
+<para>Getters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="129" column="29" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="129" bodyend="129"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1VqeOpt_1a9f72a418b4fd0ed61a1889266641617f" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename T</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>static void qristal::vqee::VqeOpt::pass_yaml_to_xacc</definition>
+        <argsstring>(const YAML::Node &amp;node, const std::set&lt; std::string &gt; &amp;keys, const std::map&lt; std::string, std::string &gt; &amp;yaml_to_xacc_keys, xacc::HeterogeneousMap &amp;in_xoptions, bool debug=false)</argsstring>
+        <name>pass_yaml_to_xacc</name>
+        <qualifiedname>qristal::vqee::VqeOpt::pass_yaml_to_xacc</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>node</declname>
+        </param>
+        <param>
+          <type>const std::set&lt; std::string &gt; &amp;</type>
+          <declname>keys</declname>
+        </param>
+        <param>
+          <type>const std::map&lt; std::string, std::string &gt; &amp;</type>
+          <declname>yaml_to_xacc_keys</declname>
+        </param>
+        <param>
+          <type>xacc::HeterogeneousMap &amp;</type>
+          <declname>in_xoptions</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>debug</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper template for converting YAML to XACC options</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>node</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>YAML formatted string of extra options </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>keys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>std::set of key names expected in the YAML that all have a corresponding value of type T </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>yaml_to_xacc_keys</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Lookup from keys in YAML to keys recognised by XACC </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>in_xoptions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Resulting XACC options </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>debug</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Debug flag </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="141" column="17" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="141" bodyend="157"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Selection of classical optimisation algorithms and associated hyperparameters. Override <ref refid="classqristal_1_1vqee_1_1VqeOpt_1a3c48def51b9aef1fc689967acaabc64c" kindref="member">get()</ref> in a derived class and provide a definition that validates the relevant hyperparameters there. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Additional hyperparameters ie &quot;extra options&quot; should be stored in the YAML::Node member [m_node_] </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>qristal::vqee::AdamMLP</label>
+        <link refid="classqristal_1_1vqee_1_1AdamMLP"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::vqee::CmaesMLP</label>
+        <link refid="classqristal_1_1vqee_1_1CmaesMLP"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>qristal::vqee::LbfgsMLP</label>
+        <link refid="classqristal_1_1vqee_1_1LbfgsMLP"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>qristal::vqee::NLO</label>
+        <link refid="classqristal_1_1vqee_1_1NLO"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>qristal::vqee::NelderMeadNLO</label>
+        <link refid="classqristal_1_1vqee_1_1NelderMeadNLO"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </inheritancegraph>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="76" column="1" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="76" bodyend="158"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3c48def51b9aef1fc689967acaabc64c" prot="public" virt="virtual"><scope>qristal::vqee::VqeOpt</scope><name>get</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a1cd0d9b40fcb4cae263351fd83087fcb" prot="protected" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>m_algorithm_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0bbf69caef155ac7b23989888ffc30e1" prot="protected" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>m_ftol_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3b070c6f820d778bb10737c7270f09ac" prot="protected" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>m_initial_parameters_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a359613f99bb0a5a8726aea6db5ec9e50" prot="protected" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>m_maxeval_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a90be91f1aac205bfe1202133fd995925" prot="protected" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>m_node_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a4b9d5112c75bbb5bf8d04ee924ac6269" prot="protected" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>m_provider_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a9f72a418b4fd0ed61a1889266641617f" prot="public" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>pass_yaml_to_xacc</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0739a3995bb9a8791f9601d46b4a0c04" prot="public" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1ab884657f56b5f7031515d9011d2020b1" prot="public" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1afcff78e87193ec5fae19d7e53f62e51b" prot="public" virt="non-virtual"><scope>qristal::vqee::VqeOpt</scope><name>VqeOpt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Class session &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Class swap_placement_pass" href="classqristal_1_1swap__placement__pass.html" />
+    <link rel="prev" title="Class sequence_pass" href="classqristal_1_1sequence__pass.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="library_root.html">C++ API</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#class-hierarchy">Class Hierarchy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="library_root.html#file-hierarchy">File Hierarchy</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="library_root.html#full-api">Full API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#namespaces">Namespaces</a></li>
+<li class="toctree-l3 current"><a class="reference internal" href="library_root.html#classes-and-structs">Classes and Structs</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__aware__placement__config.html">Struct noise_aware_placement_config</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1noise__channel__components.html">Struct noise_channel_components</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1NoiseProperties.html">Struct NoiseProperties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1pair__hash.html">Struct pair_hash</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1ReadoutError.html">Struct ReadoutError</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1Params.html">Struct Params</a></li>
+<li class="toctree-l4"><a class="reference internal" href="structqristal_1_1vqee_1_1vqe__iteration__data.html">Struct vqe_iteration_data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CircuitBuilder.html">Class CircuitBuilder</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsim.html">Class CirqQsim</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1CirqQsimCPU.html">Class CirqQsimCPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__ir__converter.html">Class cudaq_ir_converter</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1cudaq__sim__pool.html">Class cudaq_sim_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1EmulatorNoiseModel.html">Class EmulatorNoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1MpsAccelerator.html">Class MpsAccelerator</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1noise__aware__placement__pass.html">Class noise_aware_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1NoiseModel.html">Class NoiseModel</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1optimization__pass.html">Class optimization_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Pass.html">Template Class Pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1Profiler.html">Class Profiler</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1sequence__pass.html">Class sequence_pass</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">Class session</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1swap__placement__pass.html">Class swap_placement_pass</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1thread__pool.html">Class thread_pool</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1AdamMLP.html">Class AdamMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1CmaesMLP.html">Class CmaesMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1LbfgsMLP.html">Class LbfgsMLP</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NelderMeadNLO.html">Class NelderMeadNLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1NLO.html">Class NLO</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VQEE.html">Class VQEE</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classqristal_1_1vqee_1_1VqeOpt.html">Class VqeOpt</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__qpu.html">Class qb_qpu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="classxacc_1_1quantum_1_1qb__visitor.html">Class qb_visitor</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#enums">Enums</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#functions">Functions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="library_root.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="library_root.html">C++ API</a></li>
+      <li class="breadcrumb-item active">Class session</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/classqristal_1_1session.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="class-session">
+<span id="exhale-class-classqristal-1-1session"></span><h1>Class session<a class="headerlink" href="#class-session" title="Permalink to this heading"></a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_core_include_qristal_core_session.hpp.html#file-core-include-qristal-core-session-hpp"><span class="std std-ref">File session.hpp</span></a></p></li>
+</ul>
+<section id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this heading"></a></h2>
+<dl class="cpp class">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7sessionE">
+<span id="_CPPv3N7qristal7sessionE"></span><span id="_CPPv2N7qristal7sessionE"></span><span id="qristal::session"></span><span class="target" id="classqristal_1_1session"></span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">session</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7sessionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A session of the Qristal SDK. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-unnamed-group">Unnamed Group</p>
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session7iboundsE">
+<span id="_CPPv3N7qristal7session7iboundsE"></span><span id="_CPPv2N7qristal7session7iboundsE"></span><span class="target" id="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">ibounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session7iboundsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Bounds on session parameters </p>
+</dd></dl>
+
+<dl class="cpp type">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session7dboundsE">
+<span id="_CPPv3N7qristal7session7dboundsE"></span><span id="_CPPv2N7qristal7session7dboundsE"></span><span class="target" id="classqristal_1_1session_1a43c3d06d76f61506a7e77501345713ce"></span><span class="k"><span class="pre">using</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">dbounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">pair</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session7dboundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session27random_circuit_depth_boundsE">
+<span id="_CPPv3N7qristal7session27random_circuit_depth_boundsE"></span><span id="_CPPv2N7qristal7session27random_circuit_depth_boundsE"></span><span id="qristal::session::random_circuit_depth_bounds__ibounds"></span><span class="target" id="classqristal_1_1session_1a4e17815d07da20aa42d6df13dcb1675f"></span><a class="reference internal" href="#_CPPv4N7qristal7session7iboundsE" title="qristal::session::ibounds"><span class="n"><span class="pre">ibounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">random_circuit_depth_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1000</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session27random_circuit_depth_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session9sn_boundsE">
+<span id="_CPPv3N7qristal7session9sn_boundsE"></span><span id="_CPPv2N7qristal7session9sn_boundsE"></span><span id="qristal::session::sn_bounds__ibounds"></span><span class="target" id="classqristal_1_1session_1afbacdecc1a75c4cb007a425db2719f4b"></span><a class="reference internal" href="#_CPPv4N7qristal7session7iboundsE" title="qristal::session::ibounds"><span class="n"><span class="pre">ibounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sn_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1000000000</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session9sn_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session9qn_boundsE">
+<span id="_CPPv3N7qristal7session9qn_boundsE"></span><span id="_CPPv2N7qristal7session9qn_boundsE"></span><span id="qristal::session::qn_bounds__ibounds"></span><span class="target" id="classqristal_1_1session_1adf9449956e70c3325c5298a4eb412fb3"></span><a class="reference internal" href="#_CPPv4N7qristal7session7iboundsE" title="qristal::session::ibounds"><span class="n"><span class="pre">ibounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qn_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">10000</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session9qn_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15max_bond_boundsE">
+<span id="_CPPv3N7qristal7session15max_bond_boundsE"></span><span id="_CPPv2N7qristal7session15max_bond_boundsE"></span><span id="qristal::session::max_bond_bounds__ibounds"></span><span class="target" id="classqristal_1_1session_1a73ae078cffb680b905e991f599fd4d85"></span><a class="reference internal" href="#_CPPv4N7qristal7session7iboundsE" title="qristal::session::ibounds"><span class="n"><span class="pre">ibounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_bond_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">50000</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session15max_bond_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session19initial_bond_boundsE">
+<span id="_CPPv3N7qristal7session19initial_bond_boundsE"></span><span id="_CPPv2N7qristal7session19initial_bond_boundsE"></span><span id="qristal::session::initial_bond_bounds__ibounds"></span><span class="target" id="classqristal_1_1session_1a4207a7fd51ca17c3c52711a0762a00b7"></span><a class="reference internal" href="#_CPPv4N7qristal7session7iboundsE" title="qristal::session::ibounds"><span class="n"><span class="pre">ibounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initial_bond_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">50000</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session19initial_bond_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session16max_kraus_boundsE">
+<span id="_CPPv3N7qristal7session16max_kraus_boundsE"></span><span id="_CPPv2N7qristal7session16max_kraus_boundsE"></span><span id="qristal::session::max_kraus_bounds__ibounds"></span><span class="target" id="classqristal_1_1session_1a3c40fec1a5d931f749c49b14634fd7fb"></span><a class="reference internal" href="#_CPPv4N7qristal7session7iboundsE" title="qristal::session::ibounds"><span class="n"><span class="pre">ibounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_kraus_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">50000</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session16max_kraus_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session20initial_kraus_boundsE">
+<span id="_CPPv3N7qristal7session20initial_kraus_boundsE"></span><span id="_CPPv2N7qristal7session20initial_kraus_boundsE"></span><span id="qristal::session::initial_kraus_bounds__ibounds"></span><span class="target" id="classqristal_1_1session_1a5090bee7181701f4240567e677f54c87"></span><a class="reference internal" href="#_CPPv4N7qristal7session7iboundsE" title="qristal::session::ibounds"><span class="n"><span class="pre">ibounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initial_kraus_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">1</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">50000</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session20initial_kraus_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session17svd_cutoff_boundsE">
+<span id="_CPPv3N7qristal7session17svd_cutoff_boundsE"></span><span id="_CPPv2N7qristal7session17svd_cutoff_boundsE"></span><span id="qristal::session::svd_cutoff_bounds__dbounds"></span><span class="target" id="classqristal_1_1session_1a72e54a652e7b10aca937e8d69b248ff2"></span><a class="reference internal" href="#_CPPv4N7qristal7session7dboundsE" title="qristal::session::dbounds"><span class="n"><span class="pre">dbounds</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">svd_cutoff_bounds</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="p"><span class="pre">{</span></span><span class="m"><span class="pre">0</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="m"><span class="pre">1e9</span></span><span class="p"><span class="pre">}</span></span><a class="headerlink" href="#_CPPv4N7qristal7session17svd_cutoff_boundsE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-unnamed-group">Unnamed Group</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session17EMULATOR_BACKENDSE">
+<span id="_CPPv3N7qristal7session17EMULATOR_BACKENDSE"></span><span id="_CPPv2N7qristal7session17EMULATOR_BACKENDSE"></span><span id="qristal::session::EMULATOR_BACKENDS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1aa083dc32a597979604d8e9229b6d3711"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EMULATOR_BACKENDS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session17EMULATOR_BACKENDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Sets of recognised values for string-type session parameters.</p>
+<p>Emulator backends </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session21NON_EMULATOR_BACKENDSE">
+<span id="_CPPv3N7qristal7session21NON_EMULATOR_BACKENDSE"></span><span id="_CPPv2N7qristal7session21NON_EMULATOR_BACKENDSE"></span><span id="qristal::session::NON_EMULATOR_BACKENDS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1ae00e96a65ae4b671e4dbc0af9958b2ca"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NON_EMULATOR_BACKENDS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session21NON_EMULATOR_BACKENDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Non-emulator backends. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session12GPU_BACKENDSE">
+<span id="_CPPv3N7qristal7session12GPU_BACKENDSE"></span><span id="_CPPv2N7qristal7session12GPU_BACKENDSE"></span><span id="qristal::session::GPU_BACKENDS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1a2fc6cb613c78d83a769d419b599cd3d4"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">GPU_BACKENDS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session12GPU_BACKENDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Backends that support GPU execution. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14NOISY_BACKENDSE">
+<span id="_CPPv3N7qristal7session14NOISY_BACKENDSE"></span><span id="_CPPv2N7qristal7session14NOISY_BACKENDSE"></span><span id="qristal::session::NOISY_BACKENDS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1a57dc4d6435df31b44be99bd7d476d196"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">NOISY_BACKENDS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14NOISY_BACKENDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Backends that support noise. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session26EXCLUSIVELY_NOISY_BACKENDSE">
+<span id="_CPPv3N7qristal7session26EXCLUSIVELY_NOISY_BACKENDSE"></span><span id="_CPPv2N7qristal7session26EXCLUSIVELY_NOISY_BACKENDSE"></span><span id="qristal::session::EXCLUSIVELY_NOISY_BACKENDS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1aacc18477b0737cbe51d8d6af5b430aaf"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">EXCLUSIVELY_NOISY_BACKENDS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session26EXCLUSIVELY_NOISY_BACKENDSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Backends that <em>only</em> support noise, i.e. will not run with noise = false. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session19VALID_AER_SIM_TYPESE">
+<span id="_CPPv3N7qristal7session19VALID_AER_SIM_TYPESE"></span><span id="_CPPv2N7qristal7session19VALID_AER_SIM_TYPESE"></span><span id="qristal::session::VALID_AER_SIM_TYPES__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1a6e2e17942b6ada7912205451681994b5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_AER_SIM_TYPES</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session19VALID_AER_SIM_TYPESE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Valid AER simulator types. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15MAX_QUBITS_ACCSE">
+<span id="_CPPv3N7qristal7session15MAX_QUBITS_ACCSE"></span><span id="_CPPv2N7qristal7session15MAX_QUBITS_ACCSE"></span><span id="qristal::session::MAX_QUBITS_ACCS__std::unordered_map:std::string_view.s:C"></span><span class="target" id="classqristal_1_1session_1a6ac63fed2238c8d84561f024ee90725e"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">MAX_QUBITS_ACCS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session15MAX_QUBITS_ACCSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Recommended maximum qubit number for selected accelerator type. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session23VALID_NOISE_MITIGATIONSE">
+<span id="_CPPv3N7qristal7session23VALID_NOISE_MITIGATIONSE"></span><span id="_CPPv2N7qristal7session23VALID_NOISE_MITIGATIONSE"></span><span id="qristal::session::VALID_NOISE_MITIGATIONS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1aa429024e039283b2f29fcde2bc3c24e5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_NOISE_MITIGATIONS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session23VALID_NOISE_MITIGATIONSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Recognised noise mitigation strategies. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session25VALID_HARDWARE_PLACEMENTSE">
+<span id="_CPPv3N7qristal7session25VALID_HARDWARE_PLACEMENTSE"></span><span id="_CPPv2N7qristal7session25VALID_HARDWARE_PLACEMENTSE"></span><span id="qristal::session::VALID_HARDWARE_PLACEMENTS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1a78ad71acc764baf9543bc2fc0f3837d5"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_HARDWARE_PLACEMENTS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session25VALID_HARDWARE_PLACEMENTSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Valid placement strategies. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session30VALID_MEASURE_SAMPLING_OPTIONSE">
+<span id="_CPPv3N7qristal7session30VALID_MEASURE_SAMPLING_OPTIONSE"></span><span id="_CPPv2N7qristal7session30VALID_MEASURE_SAMPLING_OPTIONSE"></span><span id="qristal::session::VALID_MEASURE_SAMPLING_OPTIONS__std::unordered_set:std::string_view:C"></span><span class="target" id="classqristal_1_1session_1a2b725180b50ce57fdc7a7af87650df5c"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">unordered_set</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string_view</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">VALID_MEASURE_SAMPLING_OPTIONS</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session30VALID_MEASURE_SAMPLING_OPTIONSE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Valid measurement sampling options. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session7sessionEv">
+<span id="_CPPv3N7qristal7session7sessionEv"></span><span id="_CPPv2N7qristal7session7sessionEv"></span><span id="qristal::session::session"></span><span class="target" id="classqristal_1_1session_1af82a4621c78f0211fd917b9373e52c9c"></span><span class="sig-name descname"><span class="n"><span class="pre">session</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session7sessionEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new session object. </p>
+<p>Some parameters are uninitialized, e.g., number of qubits (<code class="docutils literal notranslate"><span class="pre">qn</span></code>). These parameters can be set manually. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session7sessionEKb">
+<span id="_CPPv3N7qristal7session7sessionEKb"></span><span id="_CPPv2N7qristal7session7sessionEKb"></span><span id="qristal::session::session__bC"></span><span class="target" id="classqristal_1_1session_1ac4b9c88c8bc64ec8a7a88359733421ab"></span><span class="sig-name descname"><span class="n"><span class="pre">session</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">msb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session7sessionEKb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Construct a new session object using a specific ordering for all_bitstring_counts_ and associated QML-relevant outputs. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>msb</strong> – MSB flag. If true, use MSB to determine ordering of all_bitstring_counts_ all_bitstring_probabilities and all_bitstring_probability_gradients table; else use LSB. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0DpEN7qristal7session25bind_args_to_cudaq_kernelENSt8functionIFvvEEERR11CudaQKernelDpRR4Args">
+<span id="_CPPv3I0DpEN7qristal7session25bind_args_to_cudaq_kernelERR11CudaQKernelDpRR4Args"></span><span id="_CPPv2I0DpEN7qristal7session25bind_args_to_cudaq_kernelERR11CudaQKernelDpRR4Args"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CudaQKernel</span></span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="p"><span class="pre">...</span></span><span class="sig-name descname"><span class="n"><span class="pre">Args</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqristal_1_1session_1a0ae52c2bec73d7651bcb12dad0d6017f"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bind_args_to_cudaq_kernel</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4I0DpEN7qristal7session25bind_args_to_cudaq_kernelENSt8functionIFvvEEERR11CudaQKernelDpRR4Args" title="qristal::session::bind_args_to_cudaq_kernel::CudaQKernel"><span class="n"><span class="pre">CudaQKernel</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_kernel</span></span>, <a class="reference internal" href="#_CPPv4I0DpEN7qristal7session25bind_args_to_cudaq_kernelENSt8functionIFvvEEERR11CudaQKernelDpRR4Args" title="qristal::session::bind_args_to_cudaq_kernel::Args"><span class="n"><span class="pre">Args</span></span></a><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">&amp;</span></span><span class="p"><span class="pre">...</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">args</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0DpEN7qristal7session25bind_args_to_cudaq_kernelENSt8functionIFvvEEERR11CudaQKernelDpRR4Args" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Create fully specified input CUDAQ kernel from a parameterised kernel and some argument values at which to evaluate it. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>in_kernel</strong> – Input CUDAQ kernel (templated callable returning void) </p></li>
+<li><p><strong>args</strong> – Concrete argument values with which to call the CUDAQ kernel </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session7resultsEv">
+<span id="_CPPv3NK7qristal7session7resultsEv"></span><span id="_CPPv2NK7qristal7session7resultsEv"></span><span id="qristal::session::resultsC"></span><span class="target" id="classqristal_1_1session_1a8ee6d535eb1a476b62d80e5683a27c65"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">results</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session7resultsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output measurement counts as a map. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Measurement counts map </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session14results_nativeEv">
+<span id="_CPPv3NK7qristal7session14results_nativeEv"></span><span id="_CPPv2NK7qristal7session14results_nativeEv"></span><span id="qristal::session::results_nativeC"></span><span class="target" id="classqristal_1_1session_1a9ff17b96ad67d1adaddb4ec7e7dc1b69"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">results_native</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session14results_nativeEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the native output measurement counts as a map. </p>
+<p>
+Beware: The native results are only stored separately, if a confusion or correction matrix was supplied to session, enabling automatic SPAM correction! </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Native measurement counts map</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session9state_vecEv">
+<span id="_CPPv3NK7qristal7session9state_vecEv"></span><span id="_CPPv2NK7qristal7session9state_vecEv"></span><span id="qristal::session::state_vecC"></span><span class="target" id="classqristal_1_1session_1af4d57609d0276448ad1a392fff4ad040"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">state_vec</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session9state_vecEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the full state vector (works with qpp and aer backends only!) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Full complex state vector as std::vector&lt;std::complex&lt;double&gt;&gt; </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session20all_bitstring_countsEv">
+<span id="_CPPv3NK7qristal7session20all_bitstring_countsEv"></span><span id="_CPPv2NK7qristal7session20all_bitstring_countsEv"></span><span id="qristal::session::all_bitstring_countsC"></span><span class="target" id="classqristal_1_1session_1a8cdde9a6c29def321c740da12e49abb7"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">all_bitstring_counts</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session20all_bitstring_countsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output measurement counts as a vector. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Measurement counts vector </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session27all_bitstring_probabilitiesEv">
+<span id="_CPPv3NK7qristal7session27all_bitstring_probabilitiesEv"></span><span id="_CPPv2NK7qristal7session27all_bitstring_probabilitiesEv"></span><span id="qristal::session::all_bitstring_probabilitiesC"></span><span class="target" id="classqristal_1_1session_1a8329f327bcc795412911b286b2951231"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">all_bitstring_probabilities</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session27all_bitstring_probabilitiesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output probabilities. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Measurement probabilities vector </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session35all_bitstring_probability_gradientsEv">
+<span id="_CPPv3NK7qristal7session35all_bitstring_probability_gradientsEv"></span><span id="_CPPv2NK7qristal7session35all_bitstring_probability_gradientsEv"></span><span id="qristal::session::all_bitstring_probability_gradientsC"></span><span class="target" id="classqristal_1_1session_1af5613e6d83a190a61bab79f56efe5137"></span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="sig-name descname"><span class="n"><span class="pre">all_bitstring_probability_gradients</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session35all_bitstring_probability_gradientsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output probability gradients. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Table of probability jacobians w.r.t. runtime parameters </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session18transpiled_circuitEv">
+<span id="_CPPv3NK7qristal7session18transpiled_circuitEv"></span><span id="_CPPv2NK7qristal7session18transpiled_circuitEv"></span><span id="qristal::session::transpiled_circuitC"></span><span class="target" id="classqristal_1_1session_1a82a08dc64ab70627901ae59f81cd05d8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transpiled_circuit</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session18transpiled_circuitEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output transpiled circuit. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Output transpiled circuit as an OpenQASM string. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session4qobjEv">
+<span id="_CPPv3NK7qristal7session4qobjEv"></span><span id="_CPPv2NK7qristal7session4qobjEv"></span><span id="qristal::session::qobjC"></span><span class="target" id="classqristal_1_1session_1a4a3ebdeeb9564526049d0e4ac04a26e8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qobj</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session4qobjEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output Aer QObj JSON string. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QObj Json string </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session6qbjsonEv">
+<span id="_CPPv3NK7qristal7session6qbjsonEv"></span><span id="_CPPv2NK7qristal7session6qbjsonEv"></span><span id="qristal::session::qbjsonC"></span><span class="target" id="classqristal_1_1session_1a75b4c770ce1d1469bbf53fbc9a3b952c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qbjson</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session6qbjsonEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output QB JSON string (QB hardware JSON POST payload) </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>QB Json string. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session21one_qubit_gate_depthsEv">
+<span id="_CPPv3NK7qristal7session21one_qubit_gate_depthsEv"></span><span id="_CPPv2NK7qristal7session21one_qubit_gate_depthsEv"></span><span id="qristal::session::one_qubit_gate_depthsC"></span><span class="target" id="classqristal_1_1session_1af098f70498292136d9e834c751a7137c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">one_qubit_gate_depths</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session21one_qubit_gate_depthsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the number of one-qubit gates applied to each individual qubit. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Keys: qubit indices; values: number of one-qubit gates. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session21two_qubit_gate_depthsEv">
+<span id="_CPPv3NK7qristal7session21two_qubit_gate_depthsEv"></span><span id="_CPPv2NK7qristal7session21two_qubit_gate_depthsEv"></span><span id="qristal::session::two_qubit_gate_depthsC"></span><span class="target" id="classqristal_1_1session_1aaa5036cf19116a31372ebefd896d39c9"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">two_qubit_gate_depths</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session21two_qubit_gate_depthsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the number of two-qubit gates applied to each individual qubit. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Keys: qubit indices; values: number of two-qubit gates. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session16timing_estimatesEv">
+<span id="_CPPv3NK7qristal7session16timing_estimatesEv"></span><span id="_CPPv2NK7qristal7session16timing_estimatesEv"></span><span id="qristal::session::timing_estimatesC"></span><span class="target" id="classqristal_1_1session_1a62e38a43d2c32d8939b7a125f1195589"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timing_estimates</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session16timing_estimatesEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get estimated circuit execution times on hardware. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Estimated hardware runtimes, in ms. Keys: 0: Total time 1: Initialisation component 2: Gate (max. depth) component 3: Readout component 4: Total time (from classical simulation) 5: PC transfer to controller time </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session16z_op_expectationEv">
+<span id="_CPPv3NK7qristal7session16z_op_expectationEv"></span><span id="_CPPv2NK7qristal7session16z_op_expectationEv"></span><span id="qristal::session::z_op_expectationC"></span><span class="target" id="classqristal_1_1session_1a794cf0536db3fbffd7ca8497526892b1"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_op_expectation</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session16z_op_expectationEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the output expected value in the Z basis, from the shot counts observed. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>Expected value in the Z basis </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session25set_SPAM_confusion_matrixEN5Eigen8MatrixXdE">
+<span id="_CPPv3N7qristal7session25set_SPAM_confusion_matrixEN5Eigen8MatrixXdE"></span><span id="_CPPv2N7qristal7session25set_SPAM_confusion_matrixEN5Eigen8MatrixXdE"></span><span id="qristal::session::set_SPAM_confusion_matrix__Eigen::MatrixXd"></span><span class="target" id="classqristal_1_1session_1ad86a42eabf6ae45194765dddc5f1e661"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">set_SPAM_confusion_matrix</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MatrixXd</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">mat</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session25set_SPAM_confusion_matrixEN5Eigen8MatrixXdE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the SPAM correction matrix by providing an equivalent SPAM confusion matrix. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4NK7qristal7session25get_SPAM_confusion_matrixEv">
+<span id="_CPPv3NK7qristal7session25get_SPAM_confusion_matrixEv"></span><span id="_CPPv2NK7qristal7session25get_SPAM_confusion_matrixEv"></span><span id="qristal::session::get_SPAM_confusion_matrixC"></span><span class="target" id="classqristal_1_1session_1a80a093b59b56935424db76429404b3ee"></span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MatrixXd</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_SPAM_confusion_matrix</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><span class="w"> </span><span class="k"><span class="pre">const</span></span><a class="headerlink" href="#_CPPv4NK7qristal7session25get_SPAM_confusion_matrixEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve an equivalent confusion matrix from the SPAM correction matrix. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session8validateEv">
+<span id="_CPPv3N7qristal7session8validateEv"></span><span id="_CPPv2N7qristal7session8validateEv"></span><span id="qristal::session::validate"></span><span class="target" id="classqristal_1_1session_1a23d3e6d4b672caebf1177e5a545b3354"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">validate</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session8validateEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Validate the run i.e. ensure all configurations are set in a valid manner. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session13run_with_SPAME6size_t">
+<span id="_CPPv3N7qristal7session13run_with_SPAME6size_t"></span><span id="_CPPv2N7qristal7session13run_with_SPAME6size_t"></span><span id="qristal::session::run_with_SPAM__s"></span><span class="target" id="classqristal_1_1session_1a683e336235170efd6b1619ce634b9a75"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run_with_SPAM</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n_shots</span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session13run_with_SPAME6size_t" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Execute a standard SPAM benchmark, and use the measured confusion matrix to automatically correct SPAM errors in a consecutive <code class="docutils literal notranslate"><a class="reference internal" href="#classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a"><span class="std std-ref"><span class="pre">run()</span></span></a></code></p>
+<p>Arguments: </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>n_shots</strong> – : The number of shots to be used for the SPAM benchmark. Defaults to 0, taking the same number of shots as set in sns_. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session3runEv">
+<span id="_CPPv3N7qristal7session3runEv"></span><span id="_CPPv2N7qristal7session3runEv"></span><span id="qristal::session::run"></span><span class="target" id="classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">async_job_handle</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session3runEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Execute all quantum tasks Returns a job handle if the job is posted to a remote accelerator (e.g. AWS Braket). Otherwise, returns null if this function completes the run locally. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session10cancel_runEv">
+<span id="_CPPv3N7qristal7session10cancel_runEv"></span><span id="_CPPv2N7qristal7session10cancel_runEv"></span><span id="qristal::session::cancel_run"></span><span class="target" id="classqristal_1_1session_1ac150efbb5fe87dfed4d649225d786c97"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cancel_run</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session10cancel_runEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Cancel any in-flight asynchronous execution of <a class="reference internal" href="#classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a"><span class="std std-ref">run()</span></a></p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15bitstring_indexERKNSt6vectorIbEE">
+<span id="_CPPv3N7qristal7session15bitstring_indexERKNSt6vectorIbEE"></span><span id="_CPPv2N7qristal7session15bitstring_indexERKNSt6vectorIbEE"></span><span id="qristal::session::bitstring_index__std::vector:b:CR"></span><span class="target" id="classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">bitstring_index</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">bitvec</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session15bitstring_indexERKNSt6vectorIbEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Returns the (base-10) integer vector index for the probabilities/ counts vector, corresponding to a bitstring. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>bitvec</strong> – The bit-vector to be converted to the vector index </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session9draw_shotEv">
+<span id="_CPPv3N7qristal7session9draw_shotEv"></span><span id="_CPPv2N7qristal7session9draw_shotEv"></span><span id="qristal::session::draw_shot"></span><span class="target" id="classqristal_1_1session_1ab6cf68777d40b84b7b582d728a58503d"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">draw_shot</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session9draw_shotEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Randomly draw (and remove) a single shot from the results map. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-members">Public Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session6infileE">
+<span id="_CPPv3N7qristal7session6infileE"></span><span id="_CPPv2N7qristal7session6infileE"></span><span id="qristal::session::infile__ss"></span><span class="target" id="classqristal_1_1session_1a2946757dbfa5065b4b7a33e9891fd6c0"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">infile</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session6infileE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Full path to an input QASM source file. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session8instringE">
+<span id="_CPPv3N7qristal7session8instringE"></span><span id="_CPPv2N7qristal7session8instringE"></span><span id="qristal::session::instring__ss"></span><span class="target" id="classqristal_1_1session_1a3d3588bde9991cc02446574394d5ce88"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">instring</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session8instringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>An input QASM source string. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session8irtargetE">
+<span id="_CPPv3N7qristal7session8irtargetE"></span><span id="_CPPv2N7qristal7session8irtargetE"></span><span id="qristal::session::irtarget__std::shared_ptr:xacc::CompositeInstruction:"></span><span class="target" id="classqristal_1_1session_1a5ef3eacdbca2926eedac7c61d6cb29e1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">irtarget</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session8irtargetE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Provides a <code class="docutils literal notranslate"><span class="pre">xacc::CompositeInstruction</span></code> IR target. </p>
+<p>If the IR target is provided instead of QASM strings or files, the QASM compilation step will be skipped. The IR target can be manually constructed by building the IR tree using XACC. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14gpu_device_idsE">
+<span id="_CPPv3N7qristal7session14gpu_device_idsE"></span><span id="_CPPv2N7qristal7session14gpu_device_idsE"></span><span id="qristal::session::gpu_device_ids__std::vector:s:"></span><span class="target" id="classqristal_1_1session_1af4dd2fcf85e0fc20df0b6970864b6bdd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">size_t</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">gpu_device_ids</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14gpu_device_idsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>List of GPU device numbers. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session12cudaq_kernelE">
+<span id="_CPPv3N7qristal7session12cudaq_kernelE"></span><span id="_CPPv2N7qristal7session12cudaq_kernelE"></span><span class="target" id="classqristal_1_1session_1a09f91d389656e990b4e1faaca5798800"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">function</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">void</span></span><span class="p"><span class="pre">(</span></span><span class="p"><span class="pre">)</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">cudaq_kernel</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session12cudaq_kernelE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A CUDAQ kernel to execute, with any free parameters already fully specified. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session10include_qbE">
+<span id="_CPPv3N7qristal7session10include_qbE"></span><span id="_CPPv2N7qristal7session10include_qbE"></span><span id="qristal::session::include_qb__ss"></span><span class="target" id="classqristal_1_1session_1a580a1c090b84a7f4ea721f432ac5549e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">include_qb</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QRISTAL_DIR</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;/include/qristal/core/qristal.inc&quot;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session10include_qbE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Path to an OpenQASM file to include at the beginning of every circuit Contains custom Quantum Brilliance gate definitions. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session18circuit_parametersE">
+<span id="_CPPv3N7qristal7session18circuit_parametersE"></span><span id="_CPPv2N7qristal7session18circuit_parametersE"></span><span id="qristal::session::circuit_parameters__std::vector:double:"></span><span class="target" id="classqristal_1_1session_1afeec62eeb3a236e117fcb3fe52af98e8"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">circuit_parameters</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session18circuit_parametersE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Vector of circuit parameters to use for runtime substitution. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14calc_gradientsE">
+<span id="_CPPv3N7qristal7session14calc_gradientsE"></span><span id="_CPPv2N7qristal7session14calc_gradientsE"></span><span id="qristal::session::calc_gradients__b"></span><span class="target" id="classqristal_1_1session_1a2e583f7324198c056cb1369940743737"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_gradients</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session14calc_gradientsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether or not gradients will be calculated for parametrized circuits. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session25calc_all_bitstring_countsE">
+<span id="_CPPv3N7qristal7session25calc_all_bitstring_countsE"></span><span id="_CPPv2N7qristal7session25calc_all_bitstring_countsE"></span><span id="qristal::session::calc_all_bitstring_counts__b"></span><span class="target" id="classqristal_1_1session_1a6fba9282aa95d1ef51b88227892406b8"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_all_bitstring_counts</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session25calc_all_bitstring_countsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether or not a non-compact output counts vector will be calculated. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session28remote_backend_database_pathE">
+<span id="_CPPv3N7qristal7session28remote_backend_database_pathE"></span><span id="_CPPv2N7qristal7session28remote_backend_database_pathE"></span><span id="qristal::session::remote_backend_database_path__ss"></span><span class="target" id="classqristal_1_1session_1a65794a4e1909ede6220cbbc9d90f24fd"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remote_backend_database_path</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">QRISTAL_DIR</span></span><span class="w"> </span><span class="o"><span class="pre">+</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;/remote_backends.yaml&quot;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session28remote_backend_database_pathE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The path to the remote backend database yaml file. The path to a YAML file with configuration data for remote backends (including hardware). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session3accE">
+<span id="_CPPv3N7qristal7session3accE"></span><span id="_CPPv2N7qristal7session3accE"></span><span id="qristal::session::acc__ss"></span><span class="target" id="classqristal_1_1session_1a549b05b5d9c29ae0d23272d9e1f6c258"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">acc</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;qpp&quot;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session3accE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Chosen backend accelerator. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session12aer_sim_typeE">
+<span id="_CPPv3N7qristal7session12aer_sim_typeE"></span><span id="_CPPv2N7qristal7session12aer_sim_typeE"></span><span id="qristal::session::aer_sim_type__ss"></span><span class="target" id="classqristal_1_1session_1ab362981f46921941d4d31309b495108c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aer_sim_type</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;statevector&quot;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session12aer_sim_typeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The simulator type for the AER backend accelerator. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15aer_omp_threadsE">
+<span id="_CPPv3N7qristal7session15aer_omp_threadsE"></span><span id="_CPPv2N7qristal7session15aer_omp_threadsE"></span><span id="qristal::session::aer_omp_threads__s"></span><span class="target" id="classqristal_1_1session_1a98a24fe47ab5c0a9d26aa00fb8cfb122"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">aer_omp_threads</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7qristal7session15aer_omp_threadsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The maximum number of OpenMP threads that AER can use. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session20random_circuit_depthE">
+<span id="_CPPv3N7qristal7session20random_circuit_depthE"></span><span id="_CPPv2N7qristal7session20random_circuit_depthE"></span><span id="qristal::session::random_circuit_depth__s"></span><span class="target" id="classqristal_1_1session_1a0bf7060fe60e497ec883b0384e5f8b40"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">random_circuit_depth</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7qristal7session20random_circuit_depthE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The depth of random circuit to be generated. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14input_languageE">
+<span id="_CPPv3N7qristal7session14input_languageE"></span><span id="_CPPv2N7qristal7session14input_languageE"></span><span id="qristal::session::input_language__circuit_language"></span><span class="target" id="classqristal_1_1session_1afc672280dc08489100604d67e0d791be"></span><span class="n"><span class="pre">circuit_language</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">input_language</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="n"><span class="pre">circuit_language</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">OpenQASM</span></span><a class="headerlink" href="#_CPPv4N7qristal7session14input_languageE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The frontend language in which the input circuit is written. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session5noiseE">
+<span id="_CPPv3N7qristal7session5noiseE"></span><span id="_CPPv2N7qristal7session5noiseE"></span><span id="qristal::session::noise__b"></span><span class="target" id="classqristal_1_1session_1ac521fd796defc332fa46098721629cb4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">noise</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session5noiseE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enable noisy simulation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session16noise_mitigationE">
+<span id="_CPPv3N7qristal7session16noise_mitigationE"></span><span id="_CPPv2N7qristal7session16noise_mitigationE"></span><span id="qristal::session::noise_mitigation__ss"></span><span class="target" id="classqristal_1_1session_1a7d4fe14cf0adfbcc531a5801e2233a12"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">noise_mitigation</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session16noise_mitigationE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A noise mitigation method to apply. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session22SPAM_correction_matrixE">
+<span id="_CPPv3N7qristal7session22SPAM_correction_matrixE"></span><span id="_CPPv2N7qristal7session22SPAM_correction_matrixE"></span><span id="qristal::session::SPAM_correction_matrix__Eigen::MatrixXd"></span><span class="target" id="classqristal_1_1session_1a8468354b57d209664a493c8faf65ffff"></span><span class="n"><span class="pre">Eigen</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">MatrixXd</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">SPAM_correction_matrix</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session22SPAM_correction_matrixE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Correction matrix to use for SPAM error correction. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session11noplacementE">
+<span id="_CPPv3N7qristal7session11noplacementE"></span><span id="_CPPv2N7qristal7session11noplacementE"></span><span id="qristal::session::noplacement__b"></span><span class="target" id="classqristal_1_1session_1a07d04a30a50a586d9c57079a80fb716f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">noplacement</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N7qristal7session11noplacementE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Disable circuit placement IR transformations (both pure topological and noise-based placement). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session9placementE">
+<span id="_CPPv3N7qristal7session9placementE"></span><span id="_CPPv2N7qristal7session9placementE"></span><span id="qristal::session::placement__ss"></span><span class="target" id="classqristal_1_1session_1aa660f2d0956dad412d5c9618baf18402"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">placement</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;swap-shortest-path&quot;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session9placementE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The name of the module to use for circuit placement IR transformation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session10nooptimiseE">
+<span id="_CPPv3N7qristal7session10nooptimiseE"></span><span id="_CPPv2N7qristal7session10nooptimiseE"></span><span id="qristal::session::nooptimise__b"></span><span class="target" id="classqristal_1_1session_1acd31511728463daef7200060c295013f"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">nooptimise</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session10nooptimiseE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Disable circuit optimization IR transformations. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session12circuit_optsE">
+<span id="_CPPv3N7qristal7session12circuit_optsE"></span><span id="_CPPv2N7qristal7session12circuit_optsE"></span><span id="qristal::session::circuit_opts__Passes"></span><span class="target" id="classqristal_1_1session_1a6d5784437a6f9a2100cdf37f46765bee"></span><a class="reference internal" href="typedef_namespaceqristal_1a4bf3468c0ee9b4cb3625dbbf20a22150.html#_CPPv4N7qristal6PassesE" title="qristal::Passes"><span class="n"><span class="pre">Passes</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">circuit_opts</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session12circuit_optsE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Circuit optimization passes to apply. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15execute_circuitE">
+<span id="_CPPv3N7qristal7session15execute_circuitE"></span><span id="_CPPv2N7qristal7session15execute_circuitE"></span><span id="qristal::session::execute_circuit__b"></span><span class="target" id="classqristal_1_1session_1a6352302bfd3f97fd37135055b45e33b7"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_circuit</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N7qristal7session15execute_circuitE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether or not to actually execute the circuit upon calling run. </p>
+<p>Set false to disable circuit simulation, for e.g., inspecting transpilation or resource estimation only. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14calc_state_vecE">
+<span id="_CPPv3N7qristal7session14calc_state_vecE"></span><span id="_CPPv2N7qristal7session14calc_state_vecE"></span><span id="qristal::session::calc_state_vec__b"></span><span class="target" id="classqristal_1_1session_1a7d720659d35d807fe0f11513df8c4d32"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">calc_state_vec</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session14calc_state_vecE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Compute the state vector with qpp or aer. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session18output_oqm_enabledE">
+<span id="_CPPv3N7qristal7session18output_oqm_enabledE"></span><span id="_CPPv2N7qristal7session18output_oqm_enabledE"></span><span id="qristal::session::output_oqm_enabled__b"></span><span class="target" id="classqristal_1_1session_1a4352a55f2f4ca6eae8a248f7807a48cd"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">output_oqm_enabled</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">true</span></span><a class="headerlink" href="#_CPPv4N7qristal7session18output_oqm_enabledE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Enable output transpilation and resource estimation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session8notimingE">
+<span id="_CPPv3N7qristal7session8notimingE"></span><span id="_CPPv2N7qristal7session8notimingE"></span><span id="qristal::session::notiming__b"></span><span class="target" id="classqristal_1_1session_1a793943af3dc8061ae5278f5703ac30f4"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">notiming</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session8notimingE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Disable timing estimation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session2qnE">
+<span id="_CPPv3N7qristal7session2qnE"></span><span id="_CPPv2N7qristal7session2qnE"></span><span id="qristal::session::qn__s"></span><span class="target" id="classqristal_1_1session_1a8b090b54f10a4e59752277aefc479b4c"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qn</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7qristal7session2qnE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The number of qubits to simulate. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session2snE">
+<span id="_CPPv3N7qristal7session2snE"></span><span id="_CPPv2N7qristal7session2snE"></span><span id="qristal::session::sn__s"></span><span class="target" id="classqristal_1_1session_1a4663d2c09d5f26d4f0a652536fa16059"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sn</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7qristal7session2snE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The number of measurement shots to be performed. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session4seedE">
+<span id="_CPPv3N7qristal7session4seedE"></span><span id="_CPPv2N7qristal7session4seedE"></span><span id="qristal::session::seed__s"></span><span class="target" id="classqristal_1_1session_1a55e35d4e8f40de7df4195a93c77c556d"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">seed</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">0</span></span><a class="headerlink" href="#_CPPv4N7qristal7session4seedE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Seed value for the session’s random number generator. Zero indicates that the seed should be generated by std::random_device. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session22initial_bond_dimensionE">
+<span id="_CPPv3N7qristal7session22initial_bond_dimensionE"></span><span id="_CPPv2N7qristal7session22initial_bond_dimensionE"></span><span id="qristal::session::initial_bond_dimension__s"></span><span class="target" id="classqristal_1_1session_1a09462e973f570a501d81de975789e615"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initial_bond_dimension</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N7qristal7session22initial_bond_dimensionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initial bond dimension for tensor network simulators. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed when using tensor network backend accelerators. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session18max_bond_dimensionE">
+<span id="_CPPv3N7qristal7session18max_bond_dimensionE"></span><span id="_CPPv2N7qristal7session18max_bond_dimensionE"></span><span id="qristal::session::max_bond_dimension__s"></span><span class="target" id="classqristal_1_1session_1add5532ea13fa197f638e6e0c3b08b1f0"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_bond_dimension</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">256</span></span><a class="headerlink" href="#_CPPv4N7qristal7session18max_bond_dimensionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Maximum bond dimension for tensor network simulators. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed when using tensor network backend accelerators. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session23initial_kraus_dimensionE">
+<span id="_CPPv3N7qristal7session23initial_kraus_dimensionE"></span><span id="_CPPv2N7qristal7session23initial_kraus_dimensionE"></span><span id="qristal::session::initial_kraus_dimension__s"></span><span class="target" id="classqristal_1_1session_1a68758273625e59795992fc44e306aa43"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">initial_kraus_dimension</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1</span></span><a class="headerlink" href="#_CPPv4N7qristal7session23initial_kraus_dimensionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Initial Kraus dimension for the purification simulator. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed when using the emulator’s purification backend accelerator. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session19max_kraus_dimensionE">
+<span id="_CPPv3N7qristal7session19max_kraus_dimensionE"></span><span id="_CPPv2N7qristal7session19max_kraus_dimensionE"></span><span id="qristal::session::max_kraus_dimension__s"></span><span class="target" id="classqristal_1_1session_1a7a807ba5c6d9d0214f711c94a934e610"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">max_kraus_dimension</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">256</span></span><a class="headerlink" href="#_CPPv4N7qristal7session19max_kraus_dimensionE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Maximum Kraus dimension for the purification simulator. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed when using the emulator’s purification backend accelerator. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session10svd_cutoffE">
+<span id="_CPPv3N7qristal7session10svd_cutoffE"></span><span id="_CPPv2N7qristal7session10svd_cutoffE"></span><span id="qristal::session::svd_cutoff__double"></span><span class="target" id="classqristal_1_1session_1a51f9628af0d8975413606b462917329a"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">svd_cutoff</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0e-8</span></span><a class="headerlink" href="#_CPPv4N7qristal7session10svd_cutoffE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Absolute SVD cutoff for tensor network simulators. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed when using tensor network backend accelerators. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14rel_svd_cutoffE">
+<span id="_CPPv3N7qristal7session14rel_svd_cutoffE"></span><span id="_CPPv2N7qristal7session14rel_svd_cutoffE"></span><span id="qristal::session::rel_svd_cutoff__double"></span><span class="target" id="classqristal_1_1session_1a424439ab395be09c86a2735e7a1971de"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">rel_svd_cutoff</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="m"><span class="pre">1.0e-4</span></span><a class="headerlink" href="#_CPPv4N7qristal7session14rel_svd_cutoffE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Relative SVD cutoff for tensor network simulators. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed when using tensor network backend accelerators. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session21measure_sample_methodE">
+<span id="_CPPv3N7qristal7session21measure_sample_methodE"></span><span id="_CPPv2N7qristal7session21measure_sample_methodE"></span><span id="qristal::session::measure_sample_method__ss"></span><span class="target" id="classqristal_1_1session_1a668f50dd9741d4e006c4ff1c3d372c45"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">measure_sample_method</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="s"><span class="pre">&quot;auto&quot;</span></span><a class="headerlink" href="#_CPPv4N7qristal7session21measure_sample_methodE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Set the measurement sampling method. Options: “cutensornet” uses the single-shot cutensorNet contraction method of the entire tensor network state. Program terminates with error meassage if cutensorNet fails. “cutensornet_multishot” uses the multi-shot cutensorNet contraction method. “sequential” uses the cutensor sequential contraction method. “auto” (default) uses the cutensorNet contraction method and automatically swithes to the cutensor sequential contraction method if the cutensorNet method fails. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This is only needed if using a tensor network accelerator </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session11noise_modelE">
+<span id="_CPPv3N7qristal7session11noise_modelE"></span><span id="_CPPv2N7qristal7session11noise_modelE"></span><span id="qristal::session::noise_model__std::shared_ptr:NoiseModel:"></span><span class="target" id="classqristal_1_1session_1abbca7d5c2efdfafdeb625c3567c42e40"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><a class="reference internal" href="classqristal_1_1NoiseModel.html#_CPPv4N7qristal10NoiseModelE" title="qristal::NoiseModel"><span class="n"><span class="pre">NoiseModel</span></span></a><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">noise_model</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session11noise_modelE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Noise model to use when noise = true. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session5debugE">
+<span id="_CPPv3N7qristal7session5debugE"></span><span id="_CPPv2N7qristal7session5debugE"></span><span id="qristal::session::debug__b"></span><span class="target" id="classqristal_1_1session_1a3115c39b8194eeaaf48a0d7bdba89a34"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">debug</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session5debugE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Debug mode (verbose logging) </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-types">Private Types</p>
+<dl class="cpp enum-class">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14circuit_originE">
+<span id="_CPPv3N7qristal7session14circuit_originE"></span><span id="_CPPv2N7qristal7session14circuit_originE"></span><span class="target" id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83"></span><span class="k"><span class="pre">enum</span></span><span class="w"> </span><span class="k"><span class="pre">class</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">circuit_origin</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14circuit_originE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Supported circuit input sources. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14circuit_origin8instringE">
+<span id="_CPPv3N7qristal7session14circuit_origin8instringE"></span><span id="_CPPv2N7qristal7session14circuit_origin8instringE"></span><span class="target" id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a230d6acb6f4b8e1438dda15467ceaf11"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">instring</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14circuit_origin8instringE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14circuit_origin6infileE">
+<span id="_CPPv3N7qristal7session14circuit_origin6infileE"></span><span id="_CPPv2N7qristal7session14circuit_origin6infileE"></span><span class="target" id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a751cc7d88350f6dea73a8a0ff6e948e8"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">infile</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14circuit_origin6infileE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14circuit_origin14random_circuitE">
+<span id="_CPPv3N7qristal7session14circuit_origin14random_circuitE"></span><span id="_CPPv2N7qristal7session14circuit_origin14random_circuitE"></span><span class="target" id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a05b9ae9d7dda68bd9b223f8325dbb9e0"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">random_circuit</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14circuit_origin14random_circuitE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14circuit_origin2IRE">
+<span id="_CPPv3N7qristal7session14circuit_origin2IRE"></span><span id="_CPPv2N7qristal7session14circuit_origin2IRE"></span><span class="target" id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a4f74d343f26bbd58a8cbbad2cab6a704"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">IR</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14circuit_origin2IRE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp enumerator">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14circuit_origin5CUDAQE">
+<span id="_CPPv3N7qristal7session14circuit_origin5CUDAQE"></span><span id="_CPPv2N7qristal7session14circuit_origin5CUDAQE"></span><span class="target" id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83ab2a03aad08b4dbca55bebb0d53246c5e"></span><span class="k"><span class="pre">enumerator</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CUDAQ</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session14circuit_origin5CUDAQE" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-functions">Private Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session14random_circuitEK6size_tK6size_t">
+<span id="_CPPv3N7qristal7session14random_circuitEK6size_tK6size_t"></span><span id="_CPPv2N7qristal7session14random_circuitEK6size_tK6size_t"></span><span id="qristal::session::random_circuit__sC.sC"></span><span class="target" id="classqristal_1_1session_1a9edbf5aebc5708e6617c2d9fb3ccf325"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">random_circuit</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">n_q</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">depth</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session14random_circuitEK6size_tK6size_t" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session21deduce_circuit_originEv">
+<span id="_CPPv3N7qristal7session21deduce_circuit_originEv"></span><span id="_CPPv2N7qristal7session21deduce_circuit_originEv"></span><span id="qristal::session::deduce_circuit_origin"></span><span class="target" id="classqristal_1_1session_1af1e59e8c32264941874d018602e3775f"></span><a class="reference internal" href="#_CPPv4N7qristal7session14circuit_originE" title="qristal::session::circuit_origin"><span class="n"><span class="pre">circuit_origin</span></span></a><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">deduce_circuit_origin</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session21deduce_circuit_originEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Try to work out the form of the circuit input. </p>
+<p>Forms checked first get precedence; fields associated with other forms get ignored as soon as a valid form is found. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session18process_run_resultENSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN7qristal7backendEEE">
+<span id="_CPPv3N7qristal7session18process_run_resultENSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN7qristal7backendEEE"></span><span id="_CPPv2N7qristal7session18process_run_resultENSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN7qristal7backendEEE"></span><span id="qristal::session::process_run_result__std::shared_ptr:xacc::CompositeInstruction:.std::shared_ptr:xacc::Accelerator:.xacc::HeterogeneousMapCR.std::shared_ptr:xacc::AcceleratorBuffer:.double.std::shared_ptr:qristal::backend:"></span><span class="target" id="classqristal_1_1session_1a7b2bf684b3ef0404fac2641c1cab1d5f"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">process_run_result</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">kernel_ir</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">sim_qpu</span></span>, <span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">sim_qpu_configs</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer_b</span></span>, <span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">runtime_ms</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">qristal</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">backend</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">qb_transpiler</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session18process_run_resultENSt10shared_ptrIN4xacc20CompositeInstructionEEENSt10shared_ptrIN4xacc11AcceleratorEEERKN4xacc16HeterogeneousMapENSt10shared_ptrIN4xacc17AcceleratorBufferEEEdNSt10shared_ptrIN7qristal7backendEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Helper to populate result tables (e.g. counts, expectation values, resource estimations) post-execution. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session13compile_inputERKNSt6stringEi16circuit_language">
+<span id="_CPPv3N7qristal7session13compile_inputERKNSt6stringEi16circuit_language"></span><span id="_CPPv2N7qristal7session13compile_inputERKNSt6stringEi16circuit_language"></span><span id="qristal::session::compile_input__ssCR.i.circuit_language"></span><span class="target" id="classqristal_1_1session_1a1abbec2b62faef7f3085646bf248d778"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">compile_input</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_source_string</span></span>, <span class="kt"><span class="pre">int</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_num_qubits</span></span>, <span class="n"><span class="pre">circuit_language</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">in_source_type</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session13compile_inputERKNSt6stringEi16circuit_language" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Util method to compile input source string into IR. </p>
+<p>This method is thread-safe, thus can be used to compile multiple source strings in parallel. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session30get_target_circuit_qasm_stringE14circuit_origin">
+<span id="_CPPv3N7qristal7session30get_target_circuit_qasm_stringE14circuit_origin"></span><span id="_CPPv2N7qristal7session30get_target_circuit_qasm_stringE14circuit_origin"></span><span id="qristal::session::get_target_circuit_qasm_string__circuit_origin"></span><span class="target" id="classqristal_1_1session_1a5d75e924ae66792d62c559e5c43c4248"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_target_circuit_qasm_string</span></span></span><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N7qristal7session14circuit_originE" title="qristal::session::circuit_origin"><span class="n"><span class="pre">circuit_origin</span></span></a><span class="w"> </span><span class="n sig-param"><span class="pre">input_origin</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session30get_target_circuit_qasm_stringE14circuit_origin" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Retrieve the target circuit string. This will involve loading a file, generating a random circuit string, etc, depending on the value of <code class="docutils literal notranslate"><span class="pre">input_origin</span></code>. </p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>input_origin</strong> – The origin of the input circuit. </p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The target circuit as a std::string. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session17configure_backendERKN4YAML4NodeE">
+<span id="_CPPv3N7qristal7session17configure_backendERKN4YAML4NodeE"></span><span id="_CPPv2N7qristal7session17configure_backendERKN4YAML4NodeE"></span><span id="qristal::session::configure_backend__YAML::NodeCR"></span><span class="target" id="classqristal_1_1session_1a7109201d5418a2427c980158cdf84b6e"></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">HeterogeneousMap</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">configure_backend</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">YAML</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">rbdb</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session17configure_backendERKN4YAML4NodeE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Combine all backend options into a dict (xacc::HeterogeneousMap). </p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns<span class="colon">:</span></dt>
+<dd class="field-odd"><p>A xacc::HeterogeneousMap containing the settings for the backend in use. </p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session11get_sim_qpuEb">
+<span id="_CPPv3N7qristal7session11get_sim_qpuEb"></span><span id="_CPPv2N7qristal7session11get_sim_qpuEb"></span><span id="qristal::session::get_sim_qpu__b"></span><span class="target" id="classqristal_1_1session_1ab3fc930df1bbbe6ea3295f56f9fc295c"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">get_sim_qpu</span></span></span><span class="sig-paren">(</span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">execute_on_hardware</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session11get_sim_qpuEb" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Get the simulator. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session13run_gradientsEv">
+<span id="_CPPv3N7qristal7session13run_gradientsEv"></span><span id="_CPPv2N7qristal7session13run_gradientsEv"></span><span id="qristal::session::run_gradients"></span><span class="target" id="classqristal_1_1session_1aafd7a29563269548ea4a1dcd67a5554d"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">run_gradients</span></span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session13run_gradientsEv" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Calculate the gradients for the parametrized quantum task. This will calculate the gradients of the probabilities of all possible output bitstrings of the circuit, with respect to each circuit parameter. The session does this by creating two new session objects and using them to compute the gradients using the “parameter-shift” rule, where the circuit is run again using slightly shifted parameters. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt10shared_ptrIN4xacc20CompositeInstructionEEE">
+<span id="_CPPv3N7qristal7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt10shared_ptrIN4xacc20CompositeInstructionEEE"></span><span id="_CPPv2N7qristal7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt10shared_ptrIN4xacc20CompositeInstructionEEE"></span><span id="qristal::session::execute_on_simulator__std::shared_ptr:xacc::Accelerator:.std::shared_ptr:xacc::AcceleratorBuffer:.std::shared_ptr:xacc::CompositeInstruction:R"></span><span class="target" id="classqristal_1_1session_1a44477544a0e7c89e245df6dfe1b9e115"></span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">execute_on_simulator</span></span></span><span class="sig-paren">(</span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">acc</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">AcceleratorBuffer</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="n sig-param"><span class="pre">buffer_b</span></span>, <span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">CompositeInstruction</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">circuit</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session20execute_on_simulatorENSt10shared_ptrIN4xacc11AcceleratorEEENSt10shared_ptrIN4xacc17AcceleratorBufferEEERNSt10shared_ptrIN4xacc20CompositeInstructionEEE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Execute the circuit on a simulator. </p>
+</dd></dl>
+
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4I0EN7qristal7session28populate_measure_counts_dataEvRK9CountMapT">
+<span id="_CPPv3I0EN7qristal7session28populate_measure_counts_dataERK9CountMapT"></span><span id="_CPPv2I0EN7qristal7session28populate_measure_counts_dataERK9CountMapT"></span><span class="k"><span class="pre">template</span></span><span class="p"><span class="pre">&lt;</span></span><span class="k"><span class="pre">typename</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">CountMapT</span></span></span><span class="p"><span class="pre">&gt;</span></span><br /><span class="target" id="classqristal_1_1session_1aa846662dafe779bde077c3d3627271cb"></span><span class="k"><span class="pre">inline</span></span><span class="w"> </span><span class="kt"><span class="pre">void</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">populate_measure_counts_data</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><a class="reference internal" href="#_CPPv4I0EN7qristal7session28populate_measure_counts_dataEvRK9CountMapT" title="qristal::session::populate_measure_counts_data::CountMapT"><span class="n"><span class="pre">CountMapT</span></span></a><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">measure_counts_map</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4I0EN7qristal7session28populate_measure_counts_dataEvRK9CountMapT" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Populate a given counts map with results from QPU execution. Templated measure_counts_map to support different type of map-like data. </p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-members">Private Members</p>
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session36all_bitstring_counts_ordered_by_MSB_E">
+<span id="_CPPv3N7qristal7session36all_bitstring_counts_ordered_by_MSB_E"></span><span id="_CPPv2N7qristal7session36all_bitstring_counts_ordered_by_MSB_E"></span><span id="qristal::session::all_bitstring_counts_ordered_by_MSB___b"></span><span class="target" id="classqristal_1_1session_1a109a768236056ed39b8d77c2acf092f3"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">all_bitstring_counts_ordered_by_MSB_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session36all_bitstring_counts_ordered_by_MSB_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session24remote_backend_database_E">
+<span id="_CPPv3N7qristal7session24remote_backend_database_E"></span><span id="_CPPv2N7qristal7session24remote_backend_database_E"></span><span id="qristal::session::remote_backend_database___YAML::Node"></span><span class="target" id="classqristal_1_1session_1a923019e71a8ec12a64e6dbd67cefdc58"></span><span class="n"><span class="pre">YAML</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Node</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">remote_backend_database_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session24remote_backend_database_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session16shots_remaining_E">
+<span id="_CPPv3N7qristal7session16shots_remaining_E"></span><span id="_CPPv2N7qristal7session16shots_remaining_E"></span><span id="qristal::session::shots_remaining___s"></span><span class="target" id="classqristal_1_1session_1a9abc4cabf5145c2bf41598a1395c657e"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">shots_remaining_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session16shots_remaining_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The number of shots remaining to be drawn from <a class="reference internal" href="#classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1"><span class="std std-ref">results_</span></a> using <a class="reference internal" href="#classqristal_1_1session_1ab6cf68777d40b84b7b582d728a58503d"><span class="std std-ref">draw_shot</span></a>. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15sn_this_processE">
+<span id="_CPPv3N7qristal7session15sn_this_processE"></span><span id="_CPPv2N7qristal7session15sn_this_processE"></span><span id="qristal::session::sn_this_process__s"></span><span class="target" id="classqristal_1_1session_1a788ad6796fd1270550988bbba7ae1998"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">sn_this_process</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session15sn_this_processE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The number of shots to be run on the current process (differs from <a class="reference internal" href="#classqristal_1_1session_1a4663d2c09d5f26d4f0a652536fa16059"><span class="std std-ref">sn</span></a> if running with multiple MPI processes). </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15acc_uses_n_bit_E">
+<span id="_CPPv3N7qristal7session15acc_uses_n_bit_E"></span><span id="_CPPv2N7qristal7session15acc_uses_n_bit_E"></span><span id="qristal::session::acc_uses_n_bit___s"></span><span class="target" id="classqristal_1_1session_1aa38002606ca596f04a7d4a87b2d73633"></span><span class="n"><span class="pre">size_t</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">acc_uses_n_bit_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session15acc_uses_n_bit_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session8results_E">
+<span id="_CPPv3N7qristal7session8results_E"></span><span id="_CPPv2N7qristal7session8results_E"></span><span id="qristal::session::results___std::map:std::vector:b:.i:"></span><span class="target" id="classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">results_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session8results_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The results of a Quantum calculation. The map value (count) is the number of times the map key (Qubit states with the same bit indexation as the quantum processor registers) was measured after all shots were run. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Qubit states are represented as a vector of booleans for the reasons outlined below:<ul class="simple">
+<li><p>High qubit counts can quickly exhaust all possible values able to be encoded by even a 64-bit integer, causing integer overflow.</p></li>
+<li><p>Values are agnostic with respect to both endianness and ordering because a vector with indices correspond unambiguously to the register number of each qubit. Specifically:<ul>
+<li><p>Ordering: if qubits were saved as e.g. a string “0010110”, a convention about whether the value of qubit 0 goes on the left of the string or the right of it must be chosen.</p></li>
+<li><p>Endianness: if instead a maximally compact representation is opted for where an integer that corresponds to the whole bitstring is used (e.g. <a class="reference internal" href="#classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835"><span class="std std-ref">all_bitstring_counts_</span></a>), a convention about whether bit 0 is the most or the least significant bit in encoding that integer must be chosen. </p></li>
+</ul>
+</p></li>
+</ul>
+</p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session21all_bitstring_counts_E">
+<span id="_CPPv3N7qristal7session21all_bitstring_counts_E"></span><span id="_CPPv2N7qristal7session21all_bitstring_counts_E"></span><span id="qristal::session::all_bitstring_counts___std::vector:i:"></span><span class="target" id="classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">all_bitstring_counts_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session21all_bitstring_counts_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Provides counts for every possible combination of qubit measurements, ordered according to the selected encoding (MSB, LSB). Requires <a class="reference internal" href="#classqristal_1_1session_1a6fba9282aa95d1ef51b88227892406b8"><span class="std std-ref">calc_all_bitstring_counts</span></a> to be set to true. </p>
+<p>E.g. If 2 qubits are used in the calculation, the out counts vector will contain the count of each result in the below order.</p>
+<p><table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Encoding   </p></th>
+<th class="head"><p>Order of Results    </p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>MSB   </p></td>
+<td><p>00, 01, 10, 11    </p></td>
+</tr>
+<tr class="row-odd"><td><p>LSB   </p></td>
+<td><p>00, 10, 01, 11   </p></td>
+</tr>
+</tbody>
+</table>
+</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The mapping from bitstring to vector index can be obtained from the function <a class="reference internal" href="#classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141"><span class="std std-ref">bitstring_index</span></a>. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session28all_bitstring_probabilities_E">
+<span id="_CPPv3N7qristal7session28all_bitstring_probabilities_E"></span><span id="_CPPv2N7qristal7session28all_bitstring_probabilities_E"></span><span id="qristal::session::all_bitstring_probabilities___std::vector:double:"></span><span class="target" id="classqristal_1_1session_1a84cdfa196f3fc7c1e9bcc34fd49bd2f4"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">all_bitstring_probabilities_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session28all_bitstring_probabilities_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Probability distribution of output results. Order of probabilities is identical to the order of the <a class="reference internal" href="#classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835"><span class="std std-ref">all_bitstring_counts_</span></a>. </p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The mapping from bitstring to vector index can be obtained from the function <a class="reference internal" href="#classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141"><span class="std std-ref">bitstring_index</span></a>. </p>
+</div>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session36all_bitstring_probability_gradients_E">
+<span id="_CPPv3N7qristal7session36all_bitstring_probability_gradients_E"></span><span id="_CPPv2N7qristal7session36all_bitstring_probability_gradients_E"></span><span id="qristal::session::all_bitstring_probability_gradients___std::vector:std::vector:double::"></span><span class="target" id="classqristal_1_1session_1a5970e6fb263e15a95da55bea41ad048e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">all_bitstring_probability_gradients_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session36all_bitstring_probability_gradients_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>A 2D array of probability gradients with dimensions of the number of parameters by the number of qubits. Requires <a class="reference internal" href="#classqristal_1_1session_1a2e583f7324198c056cb1369940743737"><span class="std std-ref">calc_gradients</span></a> to be set to true. </p>
+<p>This array stores gradients of the bitstring probabilities with respect to the circuit parameters, in the following format (where <code class="docutils literal notranslate"><span class="pre">y</span></code> is the probability list and <code class="docutils literal notranslate"><span class="pre">x</span></code> is the parameter list):</p>
+<p><div class="math notranslate nohighlight">
+\[\begin{split}
+\begin{bmatrix}
+\frac{dy_0}{dx_0} &amp; \frac{dy_0}{dx_1} &amp; ... &amp; \frac{dy_0}{dx_n} \\
+\frac{dy_1}{dx_0} &amp; \frac{dy_1}{dx_1} &amp; ... &amp; \frac{dy_1}{dx_n} \\
+... \\
+\frac{dy_m}{dx_0} &amp; \frac{dy_m}{dx_1} &amp; ... &amp; \frac{dy_m}{dx_n}
+\end{bmatrix}
+\end{split}\]</div>
+</p>
+<p>As the gradients are returned as a list-of-lists, they can be accessed in row major format, and indexing the above matrix can be done accordingly, i.e. <code class="docutils literal notranslate"><a class="reference internal" href="#classqristal_1_1session_1af5613e6d83a190a61bab79f56efe5137"><span class="std std-ref"><span class="pre">all_bitstring_probability_gradients()</span></span></a></code>[0][1] corresponds to the <code class="docutils literal notranslate"><span class="pre">dy_0/dx_1</span></code> value. <code class="docutils literal notranslate"><span class="pre">x_i</span></code> correspond to the parameters set using <a class="reference internal" href="#classqristal_1_1session_1afeec62eeb3a236e117fcb3fe52af98e8"><span class="std std-ref">circuit_parameters()</span></a> (i.e. the parameters ordered by their first appearance in the circuit). <code class="docutils literal notranslate"><span class="pre">y_i</span></code> are the output probabilities of different bitstrings, indexed in the same manner as <a class="reference internal" href="#classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835"><span class="std std-ref">all_bitstring_counts_</span></a>. Explicitly, the index <code class="docutils literal notranslate"><span class="pre">i</span></code> corresponding to a specific bitstring can be obtained by calling <code class="docutils literal notranslate"><span class="pre">bitstring_index(bitstring)</span></code>, with bitstring given as a list of bit values. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session19transpiled_circuit_E">
+<span id="_CPPv3N7qristal7session19transpiled_circuit_E"></span><span id="_CPPv2N7qristal7session19transpiled_circuit_E"></span><span id="qristal::session::transpiled_circuit___ss"></span><span class="target" id="classqristal_1_1session_1ad621bfe386caa23d5573f55d46a0b21f"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">transpiled_circuit_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session19transpiled_circuit_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session5qobj_E">
+<span id="_CPPv3N7qristal7session5qobj_E"></span><span id="_CPPv2N7qristal7session5qobj_E"></span><span id="qristal::session::qobj___ss"></span><span class="target" id="classqristal_1_1session_1afe1203aa060d777bbe6a65ef897b9094"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qobj_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session5qobj_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session7qbjson_E">
+<span id="_CPPv3N7qristal7session7qbjson_E"></span><span id="_CPPv2N7qristal7session7qbjson_E"></span><span id="qristal::session::qbjson___ss"></span><span class="target" id="classqristal_1_1session_1aac19758f8da2b7b6afa42d6be1159d3a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qbjson_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session7qbjson_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session23acc_outputs_qbit0_left_E">
+<span id="_CPPv3N7qristal7session23acc_outputs_qbit0_left_E"></span><span id="_CPPv2N7qristal7session23acc_outputs_qbit0_left_E"></span><span id="qristal::session::acc_outputs_qbit0_left___b"></span><span class="target" id="classqristal_1_1session_1ab8e1266ef4d8039c0dd0f6a15fb5e8a6"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">acc_outputs_qbit0_left_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session23acc_outputs_qbit0_left_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session22one_qubit_gate_depths_E">
+<span id="_CPPv3N7qristal7session22one_qubit_gate_depths_E"></span><span id="_CPPv2N7qristal7session22one_qubit_gate_depths_E"></span><span id="qristal::session::one_qubit_gate_depths___std::map:i.i:"></span><span class="target" id="classqristal_1_1session_1a0511f441258d4d34ab0b229c61bb5da6"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">one_qubit_gate_depths_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session22one_qubit_gate_depths_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session22two_qubit_gate_depths_E">
+<span id="_CPPv3N7qristal7session22two_qubit_gate_depths_E"></span><span id="_CPPv2N7qristal7session22two_qubit_gate_depths_E"></span><span id="qristal::session::two_qubit_gate_depths___std::map:i.i:"></span><span class="target" id="classqristal_1_1session_1ab4a9972865f81df1e0eabba041aba2fe"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">two_qubit_gate_depths_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session22two_qubit_gate_depths_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session17timing_estimates_E">
+<span id="_CPPv3N7qristal7session17timing_estimates_E"></span><span id="_CPPv2N7qristal7session17timing_estimates_E"></span><span id="qristal::session::timing_estimates___std::map:i.double:"></span><span class="target" id="classqristal_1_1session_1a455a47904ba054508e75be3a7cb7c620"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">timing_estimates_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session17timing_estimates_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session17z_op_expectation_E">
+<span id="_CPPv3N7qristal7session17z_op_expectation_E"></span><span id="_CPPv2N7qristal7session17z_op_expectation_E"></span><span id="qristal::session::z_op_expectation___double"></span><span class="target" id="classqristal_1_1session_1a9c489990b915cc905f7eb491f3c181e6"></span><span class="kt"><span class="pre">double</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">z_op_expectation_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session17z_op_expectation_E" title="Permalink to this definition"></a><br /></dt>
+<dd></dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session4qpu_E">
+<span id="_CPPv3N7qristal7session4qpu_E"></span><span id="_CPPv2N7qristal7session4qpu_E"></span><span id="qristal::session::qpu___std::shared_ptr:xacc::Accelerator:"></span><span class="target" id="classqristal_1_1session_1a6dd0e4bce3f134edda6d527b6ae0a58e"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">xacc</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">Accelerator</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">qpu_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">nullptr</span></span><a class="headerlink" href="#_CPPv4N7qristal7session4qpu_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>The XACC accelerator in use. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session10state_vec_E">
+<span id="_CPPv3N7qristal7session10state_vec_E"></span><span id="_CPPv2N7qristal7session10state_vec_E"></span><span id="qristal::session::state_vec___std::shared_ptr:std::vector:std::complex:double:::"></span><span class="target" id="classqristal_1_1session_1a63105571297039d9ef540631820dea64"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">shared_ptr</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">complex</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">double</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">state_vec_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session10state_vec_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>State vector from qpp or aer. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session24perform_SPAM_correction_E">
+<span id="_CPPv3N7qristal7session24perform_SPAM_correction_E"></span><span id="_CPPv2N7qristal7session24perform_SPAM_correction_E"></span><span id="qristal::session::perform_SPAM_correction___b"></span><span class="target" id="classqristal_1_1session_1aa05ea033dfd813ea67680bc8fad0ce88"></span><span class="kt"><span class="pre">bool</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">perform_SPAM_correction_</span></span></span><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="k"><span class="pre">false</span></span><a class="headerlink" href="#_CPPv4N7qristal7session24perform_SPAM_correction_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Whether or not to apply SPAM error mitigation. </p>
+</dd></dl>
+
+<dl class="cpp var">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session15results_native_E">
+<span id="_CPPv3N7qristal7session15results_native_E"></span><span id="_CPPv2N7qristal7session15results_native_E"></span><span id="qristal::session::results_native___std::map:std::vector:b:.i:"></span><span class="target" id="classqristal_1_1session_1acadb4e96d90004818e7e29e0683ef29a"></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">map</span></span><span class="p"><span class="pre">&lt;</span></span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">vector</span></span><span class="p"><span class="pre">&lt;</span></span><span class="kt"><span class="pre">bool</span></span><span class="p"><span class="pre">&gt;</span></span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="kt"><span class="pre">int</span></span><span class="p"><span class="pre">&gt;</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">results_native_</span></span></span><a class="headerlink" href="#_CPPv4N7qristal7session15results_native_E" title="Permalink to this definition"></a><br /></dt>
+<dd><p>When error mitigation is performed for the session, the raw results are stored in here. </p>
+<p><div class="admonition seealso">
+<p class="admonition-title">See also</p>
+<p><a class="reference internal" href="#classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1"><span class="std std-ref">results_</span></a></p>
+</div>
+</p>
+</dd></dl>
+
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-private-static-functions">Private Static Functions</p>
+<dl class="cpp function">
+<dt class="sig sig-object cpp" id="_CPPv4N7qristal7session28convertRawOpenQasmToQBKernelERKNSt6stringE">
+<span id="_CPPv3N7qristal7session28convertRawOpenQasmToQBKernelERKNSt6stringE"></span><span id="_CPPv2N7qristal7session28convertRawOpenQasmToQBKernelERKNSt6stringE"></span><span id="qristal::session::convertRawOpenQasmToQBKernel__ssCR"></span><span class="target" id="classqristal_1_1session_1a63c2df41ea88d630722bdc06332d27cf"></span><span class="k"><span class="pre">static</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="sig-name descname"><span class="n"><span class="pre">convertRawOpenQasmToQBKernel</span></span></span><span class="sig-paren">(</span><span class="k"><span class="pre">const</span></span><span class="w"> </span><span class="n"><span class="pre">std</span></span><span class="p"><span class="pre">::</span></span><span class="n"><span class="pre">string</span></span><span class="w"> </span><span class="p"><span class="pre">&amp;</span></span><span class="n sig-param"><span class="pre">in_rawQasm</span></span><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N7qristal7session28convertRawOpenQasmToQBKernelERKNSt6stringE" title="Permalink to this definition"></a><br /></dt>
+<dd><p>Wrap raw OpenQASM string in a QB Kernel:<ul class="simple">
+<li><p>Move qreg to a kernel argument</p></li>
+<li><p>Denote the kernel name as ‘qristal_circuit’ </p></li>
+</ul>
+</p>
+</dd></dl>
+
+</div>
+</dd></dl>
+
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="classqristal_1_1sequence__pass.html" class="btn btn-neutral float-left" title="Class sequence_pass" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="classqristal_1_1swap__placement__pass.html" class="btn btn-neutral float-right" title="Class swap_placement_pass" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

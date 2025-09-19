@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Examples &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="In depth: vqeeCalculator" href="vqeeCalculator.html" />
+    <link rel="prev" title="Getting started" href="getting_started.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Examples</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#python">Python</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c">C++</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="vqeeCalculator.html">In depth: <code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#c-with-cuda-quantum">C++ with CUDA Quantum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#c-with-dwith-profiling-on">C++ with -DWITH_PROFILING=ON</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqpu.html">Qristal Virtual QPU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../_cpp_api/library_root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Examples</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/examples.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="examples">
+<h1>Examples<a class="headerlink" href="#examples" title="Permalink to this heading"></a></h1>
+<p>The <code class="docutils literal notranslate"><span class="pre">examples</span></code> folder contains a series of example C++ and Python main programs.</p>
+<p>After installing the core (<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> in the main project build folder of either the core or SDK), the Python programs can be run by simply invoking</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span><span class="w"> </span><span class="o">&lt;</span><span class="n">name_of_example</span><span class="o">&gt;</span><span class="p">.</span><span class="n">py</span>
+</pre></div>
+</div>
+<p>The C++ examples are installed as source files with working CMakeLists.txt build scripts, to demonstrate how to use the core library to build your own C++ main program. To build and run an example in the installation directory, do</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span><span class="w"> </span><span class="o">&lt;</span><span class="n">Qristal_installation_directory</span><span class="o">&gt;</span>
+<span class="n">mkdir</span><span class="w"> </span><span class="n">build</span>
+<span class="n">cd</span><span class="w"> </span><span class="n">build</span>
+<span class="n">cmake</span><span class="w"> </span><span class="p">..</span><span class="o">/</span><span class="n">examples</span><span class="o">/</span><span class="n">cpp</span><span class="o">/&lt;</span><span class="n">name_of_example</span><span class="o">&gt;</span>
+<span class="n">make</span>
+<span class="p">.</span><span class="o">/&lt;</span><span class="n">name_of_example</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>The C++ example programs are <em>also</em> built and properly linked automatically when running <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">install</span></code> in the build folder of the core and SDK projects, but the resulting binaries are <em>not</em> installed.  They simply appear in the main project build folder, and can be executed directly from there.</p>
+<p>A description of the available gates and the syntax used to implement them in Python is given in the <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html">Quantum Computing</a> section.</p>
+<section id="python">
+<h2>Python<a class="headerlink" href="#python" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">demo1.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: false</p>
+<p>A simple example showing a 2 qubit circuit consisting of just a Hadamard and a regular 1-qubit NOT gate.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bell_with_SPAM.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: true</p>
+<p>A simple example demonstrating a 2 qubit Bell circuit with automatic SPAM measurement and correction.</p>
+<p><code class="docutils literal notranslate"><span class="pre">quickstart.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: false</p>
+<p>The 2-qubit Bell state quickstart example given in the README of the main project.</p>
+<p><code class="docutils literal notranslate"><span class="pre">dj_large.py</span></code></p>
+<p><em>qubits</em>: 41
+<em>gate depth</em>: 204
+<em>noise</em>: true</p>
+<p>A relatively large Deutsch-Jozsa circuit example. This example may take some time to run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amcu.py</span></code></p>
+<p><em>qubits</em>: 5
+<em>gate depth</em>: 3392
+<em>noise</em>: false</p>
+<p>Stands for “ancilla multi-controlled unitary” and is a Python binding of <code class="docutils literal notranslate"><span class="pre">MultiControlledUWithAncilla</span></code>. Performs a multi-controlled unitary operator U on the target qubit conditioned on the controlled qubits. In this example, the unitary U is defined to be the x gate. The control qubits are first encoded with the bitstring[j] = 1. Ancilla qubits act as scratch qubits used to check whether the desired condition is met, i.e. the jth control qubit is equal to 1. Once the condition is met, the target qubit is flipped by U.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_amplification/amp_amplification.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 111
+<em>noise</em>: false</p>
+<p>A simple amplitude amplification example using Grover’s algorithm, targeting the state <span class="math notranslate nohighlight">\(\ket{111}\)</span>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_amplification/amplitude_amplification.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 371
+<em>noise</em>: false</p>
+<p>A slightly more complex example of amplitude amplification using Grover’s algorithm, targeting the <span class="math notranslate nohighlight">\(\ket{101} - \ket{011}\)</span> state. This example may take some time to run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_amplification/amp_amplification_iteration.py</span></code></p>
+<p><em>qubits</em>: 1
+<em>gate depth</em>: 6318
+<em>noise</em>: false</p>
+<p>A demonstration of iterative amplitude amplification of the <span class="math notranslate nohighlight">\(\ket{1}\)</span> state.  Requires <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and outputs a plot of the results named <code class="docutils literal notranslate"><span class="pre">qaa.png</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_estimation/canonical_amplitude_estimation.py</span></code></p>
+<p><em>qubits</em>: 1 + number of precision qubits (user defined)
+<em>noise</em>: false</p>
+<p>An implementation of the canonical amplitude estimation example described <a class="reference external" href="https://qiskit.org/documentation/finance/tutorials/00_amplitude_estimation.html">here</a>, implemented by constructing the required Grover operator.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_estimation/canonical_amplitude_estimation_oracle.py</span></code></p>
+<p><em>qubits</em>: 9
+<em>noise</em>: false</p>
+<p>An implementation of the canonical amplitude estimation example described <a class="reference external" href="https://qiskit.org/documentation/finance/tutorials/00_amplitude_estimation.html">here</a>, implemented by passing the desired oracle. This example may take some time to run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_estimation/methods_comparison.py</span></code></p>
+<p><em>qubits</em>: 11
+<em>noise</em>: false</p>
+<p>Compares the results and runtimes of canonical and maximum likelihood amplitude estimation.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_estimation/ML_amplitude_estimation.py</span></code></p>
+<p><em>qubits</em>: 1
+<em>noise</em>: false</p>
+<p>Example demonstrating maximum likelihood amplitude estimation (MLQAE) as described <a class="reference external" href="https://qiskit.org/documentation/finance/tutorials/00_amplitude_estimation.html">here</a>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_estimation/ML_amplitude_estimation_parameter_testing.py</span></code></p>
+<p><em>qubits</em>: 1
+<em>noise</em>: false</p>
+<p>As per <code class="docutils literal notranslate"><span class="pre">ML_amplitude_estimation.py</span></code>, but repeated for different numbers of runs and shots.  Requires <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> and outputs a plot of the results named <code class="docutils literal notranslate"><span class="pre">MLQAE_parameter_test.png</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">amplitude_estimation/MLQAE_parameter_scaling.py</span></code></p>
+<p><em>qubits</em>: 15
+<em>noise</em>: false</p>
+<p>As per <code class="docutils literal notranslate"><span class="pre">ML_amplitude_estimation_parameter_testing.py</span></code>, but repeated for different numbers of qubits.  Also offers an internal option to perform the same parameter scan for canonical amplitude estimation. This example requires matplotlib and produces a series of plots named <code class="docutils literal notranslate"><span class="pre">MLQAE_parameter_test_*_qubits.png</span></code>.  It may take some time to run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">async_example_1.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: false</p>
+<p>An example of asynchronous execution of a single circuit.</p>
+<p><code class="docutils literal notranslate"><span class="pre">async_example_2.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: false</p>
+<p>An example of asynchronous execution of 100 circuits, using Qristal’s thread pool. Note that this uses Python’s co-operative multitasking to manage the threads, so it doesn’t actually parallelise the execution of the circuits across the threads, as each thread needs to uniquely acquire the global interpreter lock (GIL) in order to execute the circuit. To see how to parallelise circuit execution, please refer to qft.py.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark/pyGSTi.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: variable (depends on the set maximum length)
+<em>noise</em>: true/false (depends on the options set in session)</p>
+<p>A simple example demonstrating the creation of a gate set tomography experiment design for 2-qubit gates Rx(pi/2), Ry(pi/2), and CZ using pyGSTi. The corresponding circuit list is evaluated through qristal.core.benchmark and the gathered results are loaded back into pyGSTi and used to create a human-readable html report.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark/qst.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>Python implementation of the C++ example <code class="docutils literal notranslate"><span class="pre">qst</span></code> demonstrating a quantum state tomography.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark/qst_fidelity.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Python implementation of the C++ example <code class="docutils literal notranslate"><span class="pre">qst_fidelity</span></code> demonstrating a quantum state tomography experiment, evaluating the quantum state fidelity.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark/qpt.py</span></code></p>
+<p><em>qubits</em>: 1
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Python implementation of the C++ example <code class="docutils literal notranslate"><span class="pre">qpt</span></code> demonstrating a quantum process tomography.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark/qpt_fidelity_rotation_sweep.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: false</p>
+<p>Python implementation of the C++ example <code class="docutils literal notranslate"><span class="pre">qpt_fidelity_rotation_sweep</span></code> demonstrating a quantum process tomography experiment of a rotation sweep, evaluating the quantum process fidelity.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark/qpt_fidelity_CZ.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: false</p>
+<p>Python implementation of the C++ example <code class="docutils literal notranslate"><span class="pre">qpt_fidelity_CZ</span></code> demonstrating a quantum process tomography experiment of a single CZ gate application, evaluating the quantum process fidelity.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/gate_deferral.py</span></code></p>
+<p>An example demonstrating the application of the gate deferral technique.</p>
+<p><code class="docutils literal notranslate"><span class="pre">comparator.py</span></code></p>
+<p><em>qubits</em>: 9 (comparator), 2 (comparator_as_oracle)
+<em>gate depth</em>: 226 (comparator), 113 (comparator_as_oracle)
+<em>noise</em>: false</p>
+<p>Example comparing whether two bitstrings/registers are equivalent.</p>
+<p><code class="docutils literal notranslate"><span class="pre">compare_beam_oracle.py</span></code></p>
+<p><em>qubits</em>: 11
+<em>gate depth</em>: 238
+<em>noise</em>: false</p>
+<p>This calls a quantum decoder-specific module. Example to check whether a string (<span class="math notranslate nohighlight">\(S_A\)</span>) is equal to a string of ones <span class="math notranslate nohighlight">\(\ket{11 \ldots 1}\)</span>. This module is used in the quantum decoder kernel algorithm. The registers of flags, <span class="math notranslate nohighlight">\(F_A\)</span> and <span class="math notranslate nohighlight">\(F_B\)</span> are initialised as <span class="math notranslate nohighlight">\(\ket{1}\)</span>. Then they are turned off if the symbol is neither null or repetition flagged. Therefore the symbols in <span class="math notranslate nohighlight">\(S_{A}\)</span> will be flagged in <span class="math notranslate nohighlight">\(F_{A/B}\)</span> if and only if they are null or repeated or both. Once this flagging is done, the oracle flag <span class="math notranslate nohighlight">\(q_0\)</span> returns 1 true if and only if 1. corresponding symbols are either both flagged or both unflagged, and 2. if both unflagged then the symbols must match.</p>
+<p><code class="docutils literal notranslate"><span class="pre">compare_gt.py</span></code></p>
+<p><em>qubits</em>: 12
+<em>gate depth</em>: 244
+<em>noise</em>: false</p>
+<p>Example comparing whether the value of bitstring/register <span class="math notranslate nohighlight">\(A\)</span> is greater than the value of bitstring/register <span class="math notranslate nohighlight">\(B\)</span>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">controlled_addition.py</span></code></p>
+<p><em>qubits</em>: 7
+<em>gate depth</em>: 343
+<em>noise</em>: false</p>
+<p>Example demonstrating adding two numbers condition on the the flag qubit being on or off. If the flag qubit is on (off), the the addition is (is not) performed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">controlled_subtraction.py</span></code></p>
+<p><em>qubits</em>: 10
+<em>noise</em>: false</p>
+<p>Example demonstrating subtracting two numbers condition on the the flag qubit being on or off. If the flag qubit is on (off), the the subtraction is (is not) performed. This example takes a very long time to complete.</p>
+<p><code class="docutils literal notranslate"><span class="pre">controlled_swap.py</span></code></p>
+<p><em>qubits</em>: 10
+<em>gate depth</em>: 685
+<em>noise</em>: false</p>
+<p>Example performing a swap operation conditioned on the alphabet is “b”. If the given alphabet is “b”, then a swap operation is performed to move the given alphabet to the end of the string. This example starts with a string “babba” and returns “aabbb”.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cpfd.py</span></code></p>
+<p><em>qubits</em>: 13
+<em>noise</em>: false</p>
+<p>Stands for “controlled proper fraction division”. Given two registers A and B, this module performs the division between the value of A and the value of B. The example performs every 3-qubit proper fraction division with 3 precision bits. This example takes a very long time to complete.</p>
+<p><code class="docutils literal notranslate"><span class="pre">efficient_encoding.py</span></code></p>
+<p><em>qubits</em>: 14
+<em>gate depth</em>: 3392 (with ancilla), 10245 (without ancilla)
+<em>noise</em>: false</p>
+<p>This calls the EfficientEncoding module to perform a simple encoding using Gray code flips. This example takes the input <span class="math notranslate nohighlight">\(\ket{i}\ket{i}\)</span> with three qubits in each register and returns all possible configurations of the two three-qubit registers <span class="math notranslate nohighlight">\(\ket{000}\ket{000} + \ldots + \ket{111}\ket{111}\)</span>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">equality_checker.py</span></code></p>
+<p><em>qubits</em>: 9 (with ancilla), 7 (without ancilla)
+<em>gate depth</em>: 106 (with ancilla), 92 (without ancilla)
+<em>noise</em>: false</p>
+<p>Example checking for equality between the values of two registers. The flag qubit returns 1 (0) if the values are equal (unequal).</p>
+<p><code class="docutils literal notranslate"><span class="pre">exponential_search.py</span></code></p>
+<p>Example demonstrating the use of the exponential search algorithm to find the largest number, or “best score”, in a dataset. If sufficient search iterations are done, the algorithm should return the best score of 3.</p>
+<p><code class="docutils literal notranslate"><span class="pre">generalised_mcx.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 46
+<em>noise</em>: false</p>
+<p>Example performing a generalized MCX gate on all possible 3-qubit bit strings (<span class="math notranslate nohighlight">\(\ket{000}, \ldots, \ket{111}\)</span>) with all combinations of control qubit conditions ((on,on), <span class="math notranslate nohighlight">\(\ldots\)</span> , (off,off)).</p>
+<p><code class="docutils literal notranslate"><span class="pre">mcx.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 46
+<em>noise</em>: false</p>
+<p>Example of performing an MCX operation on all possible 3-qubit strings (<span class="math notranslate nohighlight">\(\ket{000}, \ldots, \ket{111}\)</span>). The target qubit is flipped if the <span class="math notranslate nohighlight">\(i\)</span>th bitstring/control qubit is equal to 1.</p>
+<p><code class="docutils literal notranslate"><span class="pre">multiplication.py</span></code></p>
+<p><em>qubits</em>: 9
+<em>gate depth</em>: 686
+<em>noise</em>: false</p>
+<p>Example of a multiplication of values encoded in registers <span class="math notranslate nohighlight">\(\ket{a}\)</span> and <span class="math notranslate nohighlight">\(\ket{b}\)</span>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_mitigation.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>This example shows the effects of various noise mitigation strategies available in Qristal, using a noisy 2-qubit Bell state.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">quickstart.py</span></code> with noise. There are two options of noise models: <code class="docutils literal notranslate"><span class="pre">default</span></code> or <code class="docutils literal notranslate"><span class="pre">qdk1</span></code> (the latter requires the Qristal Emulator. Details about the noise model are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/noise_models.html">here</a>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_kraus.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of Kraus matrices to generate custom noise channels. Custom noise channels are then used to generate a custom noise model.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_parameterized.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of custom noise model parameters (<span class="math notranslate nohighlight">\(t_1\)</span>, <span class="math notranslate nohighlight">\(t_2\)</span>, gate errors, etc) to generate a custom noise model. This noise model consists of common noise channels: amplitude damping, phase damping and depolarization.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code> demonstrating the use of noise channels to generate a user-defined noise model. The noise model consists of common noise channels: amplitude damping, phase damping and depolarization.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel_qb_gateset.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A version of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel.py</span></code> demonstrating the use of a user-defined noise model in a different basis gate set.</p>
+<p><code class="docutils literal notranslate"><span class="pre">parametrization_demo.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 4
+<em>noise</em>: false</p>
+<p>An extremely simple demonstration of how to construct and execute parametrized circuits using Qristal.</p>
+<p><code class="docutils literal notranslate"><span class="pre">pfd.py</span></code></p>
+<p><em>qubits</em>: 12
+<em>gate depth</em>: 4690
+<em>noise</em>: false</p>
+<p>Example of proper fraction division. This example performs every 3-qubit proper fraction division with 3 precision bits.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qft.py</span></code></p>
+<p><em>qubits</em>: 5
+<em>noise</em>: false</p>
+<p>Example of a quantum Fourier transform. This example runs 4 different accelerator backends (aer <code class="docutils literal notranslate"><span class="pre">density_matrix</span></code>, aer <code class="docutils literal notranslate"><span class="pre">matrix_product_state</span></code>, <code class="docutils literal notranslate"><span class="pre">cudaq:dm</span></code> and <code class="docutils literal notranslate"><span class="pre">tnqvm</span></code>) in parallel using Python’s multithreading library.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qpe.py</span></code></p>
+<p><em>qubits</em>: 5
+<em>gate depth</em>: 16
+<em>noise</em>: false</p>
+<p>Example of a quantum phase estimation, <span class="math notranslate nohighlight">\(\hat{O}\ket{\psi} = e^{i\phi}\ket{\psi}\)</span>, where the goal is to estimate the phase <span class="math notranslate nohighlight">\(\phi\)</span>. The oracle operator <span class="math notranslate nohighlight">\(\hat{O}\)</span> in this case is a general <span class="math notranslate nohighlight">\(U1\)</span> rotation, i.e. <span class="math notranslate nohighlight">\(U1(\theta) \ket{1} = e^{i\theta}\ket{1}\)</span>. Test value: <span class="math notranslate nohighlight">\(-5\pi/8\)</span>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qb_mpdo_noisy.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>Example of how to use the Qristal Emulator’s matrix product density operator backend to execute a 3-qubit circuit consisting of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(CX\)</span> gates. Details of this backend are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo">here</a> .</p>
+<p><code class="docutils literal notranslate"><span class="pre">qb_mps_noisy.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>Example of how to use the Qristal Emulator’s matrix product state backend to execute a 3-qubit circuit consisting of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(CX\)</span> gates. Details of this backend are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps">here</a> .</p>
+<p><code class="docutils literal notranslate"><span class="pre">qb_purification_noisy.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>Example of how to use the Qristal Emulator’s purification backend to execute a 3-qubit circuit consisting of <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(CX\)</span> gates. Details of this backend are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification">here</a> .</p>
+<p><code class="docutils literal notranslate"><span class="pre">qb_statevector_noisy.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 46
+<em>noise</em>: true</p>
+<p>An example of how to use the QB statevector backend from the Qristal emulator, with noise. A generalized mcx gate operates on a target qubit in the state <span class="math notranslate nohighlight">\(\ket{1}\)</span> conditioned on 2 control qubits in the state <span class="math notranslate nohighlight">\(\ket{11}\)</span>. This flips the target qubit to <span class="math notranslate nohighlight">\(\ket{0}\)</span>. Details about the noise model used are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/noise_models.html">here</a> .</p>
+<p><code class="docutils literal notranslate"><span class="pre">set_circuit.py</span></code></p>
+<p><em>qubits</em>: 3
+<em>gate depth</em>: 46
+<em>noise</em>: false</p>
+<p>Example of performing an MCX operation on a target qubit initially in the <span class="math notranslate nohighlight">\(\ket{0}\)</span> state conditional on 2 control qubits in the <span class="math notranslate nohighlight">\(\ket{11}\)</span> state. The expected result is that the target qubit is flipped to the <span class="math notranslate nohighlight">\(\ket{1}\)</span> state.</p>
+<p><code class="docutils literal notranslate"><span class="pre">subtraction.py</span></code></p>
+<p><em>qubits</em>: 10
+<em>gate depth</em>: 13834
+<em>noise</em>: false</p>
+<p>Example demonstrating subtraction between two registers, each containing 5 qubits each. Subtraction of all possible values of the 5-qubit configuration is performed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">superposition_adder.py</span></code></p>
+<p><em>qubits</em>: 33
+<em>noise</em>: false</p>
+<p>Example using amplitude estimation to find the mean amplitude of a superposition state. Takes a really long time to complete execution.</p>
+<p><code class="docutils literal notranslate"><span class="pre">topology.py</span></code></p>
+<p>A simple example that prints out circuit topology and connectedness.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_1.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 1 for H2_explicit and 7 for H1_HEA
+<em>noise</em>: false</p>
+<p>Demonstrates the access and run of predefined examples in Qristal’s built-in VQE routines.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_2.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 8
+<em>noise</em>: false</p>
+<p>Demonstrates manual problem setup and use and performance of different backends for Qristal’s built-in VQE routines. This example may take some time to run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_3.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 83
+<em>noise</em>: false</p>
+<p>Demonstrates how to inject python code into our c++ libs. Shows inclusion of external python chemistry package pyscf into Qristal’s built-in VQE routines.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_4.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Demonstrates selection of a different classical optimization algorithm (Nelder-Mead), along with extra options to constrain the parameters and terminate the optimization.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_5.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">vqee_example_4</span></code> except the classical algorithm used here is ADAM and L-BFGS.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee_example_6.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Similar to <code class="docutils literal notranslate"><span class="pre">vqee_example_4</span></code> except the classical algorithm used here is CMA-ES.</p>
+<p><code class="docutils literal notranslate"><span class="pre">xing_the_xasm.py</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: N/A</p>
+<p>An example of how to convert a circuit from OpenQASM2 to XASM.</p>
+<p><code class="docutils literal notranslate"><span class="pre">simple_placement.py</span></code></p>
+<p>A simple example demonstrating circuit placement based on backend topology.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement.py</span></code></p>
+<p>A simple example demonstrating noise-aware circuit placement by setting up a toy hardware configuration.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_noise_model.py</span></code></p>
+<p>A simple example demonstrating noise-aware circuit placement by setting up a toy noise model.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_aws_rigetti.py</span></code></p>
+<p>An example demonstrating integrated noise-aware placement during circuit execution on a hardware backend (e.g., Rigetti devices on AWS).
+Valid AWS credentials are required to run the example.</p>
+<p><code class="docutils literal notranslate"><span class="pre">aws_braket_qft.py</span></code></p>
+<p><em>qubits</em>: 4
+<em>noise</em>: true</p>
+<p>A simple example demonstrating both synchronous and asynchronous circuit execution on AWS Braket. To run on AWS Braket:</p>
+<ul class="simple">
+<li><p>Set up AWS account (e.g., using CLI) and enable AWS Braket;</p></li>
+<li><p>Use an AWS Region that supports AWS Braket (e.g., us-east-1);</p></li>
+<li><p>Create an S3 Bucket with prefix <code class="docutils literal notranslate"><span class="pre">amazon-braket-*</span></code> and create a folder inside the S3 bucket to store results.</p></li>
+</ul>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_append.py</span></code>
+A simple example demonstrating the use of append() to combine two circuits. Useful for verifying that circuit appending executes without error and produces correct OpenQASM output.</p>
+</section>
+<section id="c">
+<h2>C++<a class="headerlink" href="#c" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">demo1</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: false</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">demo1.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mpi_demo</span></code></p>
+<p><em>qubits</em>: 20
+<em>shot count</em>: 100000
+<em>noise</em>: true</p>
+<p>An example of how to use MPI parallelisation in Qristal to achieve a significant speed up on a single system. Requires Qristal be built with <code class="docutils literal notranslate"><span class="pre">-DWITH_MPI=ON</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">mpi_multi_qpu_demo</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: false</p>
+<p>Extends <code class="docutils literal notranslate"><span class="pre">mpi_demo</span></code> by showing how to configure Qristal to use a different vQPU for each MPI process. The configuration can be used as a template for assigning each MPI process different instances of the same type of hardware backend (e.g. QB’s QPU or AWS Rigetti). Requires Qristal be built with <code class="docutils literal notranslate"><span class="pre">-DWITH_MPI=ON</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">bell_with_SPAM</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">bell_with_SPAM.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">h1</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>This example allows you to quickly switch circuit execution between a hardware QPU and a simulator.  See cpp/h1/README.md for more information.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qft</span></code></p>
+<p><em>qubits</em>: 5
+<em>noise</em>: false</p>
+<p>Example of a quantum Fourier transform using 4 different accelerator backends (aer <code class="docutils literal notranslate"><span class="pre">density_matrix</span></code>, aer <code class="docutils literal notranslate"><span class="pre">matrix_product_state</span></code>, <code class="docutils literal notranslate"><span class="pre">cudaq:dm</span></code> and <code class="docutils literal notranslate"><span class="pre">tnqvm</span></code>) running in parallel via a thread pool.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qb_mpdo_noisy</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>Example of how to use the Qristal Emulator’s matrix product density operator backend to create a Bell state. Details of this backend are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-density-operator-qb-mpdo-and-cudaq-qb-mpdo">here</a> .</p>
+<p><code class="docutils literal notranslate"><span class="pre">qb_mps_noisy</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>Example of how to use the Qristal Emulator’s matrix product state backend to create a Bell state. Details of this backend are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-matrix-product-state-mps-qb-mps-and-cudaq-qb-mps">here</a> .</p>
+<p><code class="docutils literal notranslate"><span class="pre">qb_purification_noisy</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>Example of how to use the Qristal Emulator’s purification backend to create a Bell state. Details of this backend are available <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/backends.html#quantum-brilliance-purification-qb-purification-and-cudaq-qb-purification">here</a> .</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_kraus</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_kraus.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_parameterized</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_parameterized.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel_qb_gateset</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 6
+<em>noise</em>: true</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_model_custom_channel_qb_gateset.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">parametrization</span></code></p>
+<p><em>qubits</em>: 1-2
+<em>circuits</em>: 2
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>Demonstrates the use of parametrized gates/circuits in Qristal, as well as how to execute parametrized circuits after providing runtime parameters, and calculating jacobians for these parameters.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqee</span></code></p>
+<p><em>qubits</em>: 4
+<em>gate depth</em>: 83
+<em>noise</em>: false</p>
+<p>Demonstrates the use of Qristal’s built-in VQE routines. Can be built with MPI support and parallelization over Pauli terms. Requires a functional installation of pyscf to run.</p>
+<p><code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code></p>
+<p><code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code> is a C++ compiled executable that enables command-line access to the functionality in <code class="docutils literal notranslate"><span class="pre">vqee</span></code>. Requires a functional installation of pyscf in order to run.</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="vqeeCalculator.html">In depth: <code class="docutils literal notranslate"><span class="pre">vqeeCalculator</span></code></a><ul>
+<li class="toctree-l2"><a class="reference internal" href="vqeeCalculator.html#compiling">Compiling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vqeeCalculator.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="vqeeCalculator.html#json-input-and-output">JSON input and output</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_simple</span></code></p>
+<p>A simple example demonstrates noise-aware circuit placement by setting up a toy hardware configuration.</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_aware_placement.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">noise_aware_placement_aws</span></code></p>
+<p>An example demonstrates integrated noise-aware placement during circuit execution on hardware backend (e.g., Rigetti devices on AWS).
+Valid AWS credentials are required to run the example.</p>
+<p>A C++ implementation of <code class="docutils literal notranslate"><span class="pre">noise_aware_placement_aws_rigetti.py</span></code>.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/circuit_optimizer.py</span></code></p>
+<p>An example demonstrating the pattern-based circuit optimization pass.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/remove_redundant_gates.py</span></code></p>
+<p>An example demonstrating the redundant gate removal circuit optimization pass. This example requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/two_qubit_squash.py</span></code></p>
+<p>An example demonstrating the two-qubit gate synthesis (squash) circuit optimization pass. This example requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/simplify_initial_conditions.py</span></code></p>
+<p>An example demonstrating the contextual circuit optimization pass, which optimizes the circuit based on the knowledge of its initial state. This example requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/session_integration.py</span></code></p>
+<p>An example demonstrating setting up a pipeline of circuit optimization passes when using Qristal.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/sequence_pass.py</span></code></p>
+<p>An example demonstrating the use of a sequence of circuit optimisation passes. The different orderings of circuit passes in a sequence result in different optimised circuits</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/peephole_optimization.py</span></code>
+An example demonstrating the full peephole optimization circuit pass that removes redundancies and merges rotations. This example requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/decompose_swap.py</span></code>
+An example demonstrating the decomposition of each SWAP gate into three CNOT gates. This example is using <a class="reference external" href="https://docs.quantinuum.com/tket/api-docs/transform.html#pytket.transform.Transform.DecomposeSWAPtoCX">DecomposeSWAPtoCX</a> and requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/commute_through_multis.py</span></code>
+An example demonstrating the application of commutation rules to move single-qubit gates past multi-qubit gates with which they commute. The transformation pushes single-qubit operations towards the front of the circuit. This example is using <a class="reference external" href="https://docs.quantinuum.com/tket/api-docs/transform.html#pytket.transform.Transform.CommuteThroughMultis">CommuteThroughMultis</a> and requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/optimise_clifford.py</span></code>
+An example demonstrating an optimisation pass that applies a number of rewrite rules for simplifying Clifford gate sequences. This example is using <a class="reference external" href="https://docs.quantinuum.com/tket/api-docs/transform.html#pytket.transform.Transform.OptimiseCliffords">OptimiseCliffords</a> and requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/optimise_post_routing.py</span></code>
+An example demonstrating the post-routing optimization pass that removes redundant gates and simplifies circuits after qubit routing. This example is using <a class="reference external" href="https://docs.quantinuum.com/tket/api-docs/transform.html#pytket.transform.Transform.OptimisePostRouting">OptimisePostRouting</a> and requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/rebase_to_clifford.py</span></code>
+An example demonstrating how the rebasing of a quantum circuit to Clifford gates, decomposing gates into sequences of Clifford operations. This example is using <a class="reference external" href="https://docs.quantinuum.com/tket/api-docs/transform.html#pytket.transform.Transform.RebaseToCliffordSingles">RebaseToCliffordSingles</a> and requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">circuit_optimization/rebase_to_rzrx.py</span></code>
+An example demonstrating the rebase of a circuit to use only Rz and Rx rotations. This example is using <a class="reference external" href="https://docs.quantinuum.com/tket/api-docs/transform.html#pytket.transform.Transform.RebaseToRzRx">RebaseToRzRx</a> and requires TKET support to be enabled by setting -DWITH_TKET=ON at build time.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_qft.py</span></code></p>
+<p>Running QFT circuit constructed by the Qristal circuit builder on a CUDA Quantum simulator backend. Requires CUDA Quantum support.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qst</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 2
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum state tomography workflow for a two qubit Bell state, evaluating and printing the quantum state density.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qst_fidelity</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum state tomography workflow wrapped around a SPAM benchmark. For each circuit, the quantum state fidelity metric is evaluated and printed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qpt</span></code></p>
+<p><em>qubits</em>: 1
+<em>gate depth</em>: 1
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum process tomography workflow for a single Rx(pi/2) gate, evaluating and printing the quantum process matrix.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qpt_fidelity_rotation_sweep</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum process tomography workflow wrapped around a rotation sweep benchmark rotating qubit 0 from -pi to +pi applying Rx gates in 5 steps. For each circuit, the quantum process fidelity metric is evaluated and printed.</p>
+<p><code class="docutils literal notranslate"><span class="pre">qpt_fidelity_CZ</span></code></p>
+<p><em>qubits</em>: 2
+<em>gate depth</em>: 3
+<em>noise</em>: false</p>
+<p>This example shows the execution of a standard quantum process tomography workflow wrapped around a simple circuit execution applying a CZ gate. The quantum process fidelity as well as the average gate fidelity are evaluated and printed.</p>
+</section>
+<section id="c-with-cuda-quantum">
+<h2>C++ with CUDA Quantum<a class="headerlink" href="#c-with-cuda-quantum" title="Permalink to this heading"></a></h2>
+<p>A number of additional examples are only installed when Qristal is built with CUDA Quantum support.  None of these examples has noise enabled.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_qft</span></code></p>
+<p>Running QFT circuit constructed by the Qristal circuit builder on a CUDA Quantum simulator backend.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark1_cudaq</span></code></p>
+<p>A 20 qubit GHZ state designed for benchmarking performance of CUDA Quantum and QASM. This is the CUDAQ version.</p>
+<p><code class="docutils literal notranslate"><span class="pre">benchmark1_qasm</span></code></p>
+<p>A 20 qubit GHZ state designed for benchmarking performance of CUDA Quantum and QASM. This is the QASM version.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_vqe_cobyla</span></code></p>
+<p>Determination of the deuteron’s ground state energy using VQE with the Cobyla optimiser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_vqe_hydrogens</span></code></p>
+<p>Determination of the ground state of a chain of four hydrogen atoms, using VQE with the L-BFGS optimiser.</p>
+<p><code class="docutils literal notranslate"><span class="pre">cudaq_vqe_lbfgs</span></code></p>
+<p>Determination of the deuteron’s ground state energy using VQE with the L-BFGS optimiser.</p>
+</section>
+<section id="c-with-dwith-profiling-on">
+<h2>C++ with -DWITH_PROFILING=ON<a class="headerlink" href="#c-with-dwith-profiling-on" title="Permalink to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">runtime_profiling</span></code></p>
+<p><em>qubits</em>: 5
+<em>gate depth</em>: 1
+<em>noise</em>: false/true</p>
+<p>Example <code class="docutils literal notranslate"><span class="pre">RotationSweep</span></code> workflow wrapped into <code class="docutils literal notranslate"><span class="pre">RuntimeAnalyzer</span></code> to profile CPU, RAM, and GPU resources in intervals of 20 ms.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Getting started" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="vqeeCalculator.html" class="btn btn-neutral float-right" title="In depth: vqeeCalculator" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,155 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structqristal_1_1NoiseProperties" kind="struct" language="C++" prot="public">
+    <compoundname>qristal::NoiseProperties</compoundname>
+    <includes refid="noise__properties_8hpp" local="no">noise_properties.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqristal_1_1NoiseProperties_1a788efa5d70ac3a0680db55bb7f7c7cb4" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; size_t, double &gt;</type>
+        <definition>std::unordered_map&lt;size_t, double&gt; qristal::NoiseProperties::t1_us</definition>
+        <argsstring></argsstring>
+        <name>t1_us</name>
+        <qualifiedname>qristal::NoiseProperties::t1_us</qualifiedname>
+        <briefdescription>
+<para><bold>T1</bold> is the <bold>qubit relaxation time</bold>. For a qubit register, with individual qubits zero-indexed by i; <computeroutput>t1_us</computeroutput> is a map from qubit[i] -&gt; T1[i]. Unit: microseconds </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>// C++ code example: 4 qubits all with T1 = 1.5us
+qristal::NoiseProperties t_qbnp;
+t_qbnp.t1_us{{0, 1.5}, {1, 1.5}, {2, 1.5}, {3, 1.5}};
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_properties.hpp" line="28" column="28" bodyfile="core/include/qristal/core/noise_model/noise_properties.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1NoiseProperties_1a188ba8a8dffcdc9ffd72f649bb4333f0" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; size_t, double &gt;</type>
+        <definition>std::unordered_map&lt;size_t, double&gt; qristal::NoiseProperties::t2_us</definition>
+        <argsstring></argsstring>
+        <name>t2_us</name>
+        <qualifiedname>qristal::NoiseProperties::t2_us</qualifiedname>
+        <briefdescription>
+<para><bold>T2</bold> is the <bold>qubit dephasing time</bold>. For a qubit register, with individual qubits zero-indexed by i, <computeroutput>t2_us</computeroutput> is a map from qubit[i] -&gt; T2[i]. Unit: microseconds </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>// C++ code example: 4 qubits all with T2 = 0.15us
+qristal::NoiseProperties t_qbnp;
+t_qbnp.t2_us{{0, 0.15}, {1, 0.15}, {2, 0.15}, {3, 0.15}};
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_properties.hpp" line="38" column="28" bodyfile="core/include/qristal/core/noise_model/noise_properties.hpp" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1NoiseProperties_1a5f92e8c47c81a02c007fdc4c3e62cd05" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; size_t, <ref refid="structqristal_1_1ReadoutError" kindref="compound">ReadoutError</ref> &gt;</type>
+        <definition>std::unordered_map&lt;size_t, ReadoutError&gt; qristal::NoiseProperties::readout_errors</definition>
+        <argsstring></argsstring>
+        <name>readout_errors</name>
+        <qualifiedname>qristal::NoiseProperties::readout_errors</qualifiedname>
+        <briefdescription>
+<para><bold>readout_errors</bold> is the <bold>classical readout error (off-diagonal elements of the confusion matrix)</bold>. For a qubit register, with individual qubits zero-indexed by i, <computeroutput>readout_errors</computeroutput> is a map from qubit[i] -&gt; <ref refid="structqristal_1_1ReadoutError" kindref="compound">qristal::ReadoutError</ref>[i]. Unit: none (quantities are probabilities). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>// C++ code example: 2 qubits with p(0|1) = p(1|0) = 0.05, 2 qubits with p(0|1) = 0.1 and p(1|0) = 0.08
+qristal::NoiseProperties t_qbnp;
+qristal::ReadoutError t_qbnpro_balanced, t_qbnpro_asym;
+t_qbnpro_balanced.p_01 = 0.05;
+t_qbnpro_balanced.p_10 = 0.05;
+t_qbnpro_asym.p_01 = 0.10;
+t_qbnpro_asym.p_10 = 0.08;
+t_qbnp.readout_errors{{0, t_qbnpro_balanced}, {1, t_qbnpro_balanced}, {2, t_qbnpro_asym}, {3, t_qbnpro_asym}};
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_properties.hpp" line="53" column="28" bodyfile="core/include/qristal/core/noise_model/noise_properties.hpp" bodystart="53" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1NoiseProperties_1a1bf88945b271279e2d1f2ff1c21c0ab3" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::map&lt; std::vector&lt; size_t &gt;, double &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::map&lt;std::vector&lt;size_t&gt;, double&gt; &gt; qristal::NoiseProperties::gate_time_us</definition>
+        <argsstring></argsstring>
+        <name>gate_time_us</name>
+        <qualifiedname>qristal::NoiseProperties::gate_time_us</qualifiedname>
+        <briefdescription>
+<para><bold>gate_time_us</bold> is the duration for a quantum gate operation when applied at a target set of qubits. Unit: microseconds </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>// C++ code example: &quot;u3&quot; single-qubit gate, uniform duration 5.2us, 4 qubits
+qristal::NoiseProperties t_qbnp;
+t_qbnp.gate_time_us{{&quot;u3&quot;,{{0},5.2}}, {&quot;u3&quot;,{{1},5.2}}, {&quot;u3&quot;,{{2},5.2}}, {&quot;u3&quot;,{{3},5.2}}};
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_properties.hpp" line="63" column="28" bodyfile="core/include/qristal/core/noise_model/noise_properties.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1NoiseProperties_1a19573dbd9446520f4856224bc71d99c0" prot="public" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::map&lt; std::vector&lt; size_t &gt;, double &gt; &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::map&lt;std::vector&lt;size_t&gt;, double&gt; &gt; qristal::NoiseProperties::gate_pauli_errors</definition>
+        <argsstring></argsstring>
+        <name>gate_pauli_errors</name>
+        <qualifiedname>qristal::NoiseProperties::gate_pauli_errors</qualifiedname>
+        <briefdescription>
+<para><bold>gate_pauli_errors</bold> is the parameter for gate error derived from randomized benchmarking of a quantum gate operation that is applied at a target set of qubits. Unit: none </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>// C++ code example: &quot;u3&quot; single-qubit gate, gate error parameter = 0.03, uniform for 4 qubits
+qristal::NoiseProperties t_qbnp;
+t_qbnp.gate_pauli_errors{{&quot;u3&quot;,{{0},0.03}}, {&quot;u3&quot;,{{1},0.03}}, {&quot;u3&quot;,{{2},0.03}}, {&quot;u3&quot;,{{3},0.03}}};
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_properties.hpp" line="73" column="28" bodyfile="core/include/qristal/core/noise_model/noise_properties.hpp" bodystart="73" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1NoiseProperties_1a187aae6a767dcb8ee31adc9bfe113e74" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; int, int &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;int, int&gt; &gt; qristal::NoiseProperties::qubit_topology</definition>
+        <argsstring></argsstring>
+        <name>qubit_topology</name>
+        <qualifiedname>qristal::NoiseProperties::qubit_topology</qualifiedname>
+        <briefdescription>
+<para><bold>qubit_topology</bold> is a graph comprised of directed edges {control qubit, target qubit} with control qubit as the source of the edge -&gt; target qubit as the destination of the edge. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><verbatim>// C++ code example: &quot;cx&quot; symmetrical two-qubit gate with 4 qubits in the topology below:
+//    q0 &lt;--cx--&gt; q1
+//     ^           ^
+//     |           |
+//     cx          cx
+//     |           |
+//     v           v
+//    q3 &lt;--cx--&gt; q2
+qristal::NoiseProperties t_qbnp;
+t_qbnp.qubit_topology{{0,1},{1,2},{2,3},{3,0}};
+</verbatim> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/noise_properties.hpp" line="89" column="21" bodyfile="core/include/qristal/core/noise_model/noise_properties.hpp" bodystart="89" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Use <ref refid="structqristal_1_1NoiseProperties" kindref="compound">NoiseProperties</ref> to accept user input parameters for custom noise models. There are 3 types of inputs used for constructing a custom noise model: </para>
+    </briefdescription>
+    <detaileddescription>
+<para><itemizedlist>
+<listitem><para>Qubit topology</para>
+</listitem><listitem><para>Time duration of quantum gate operations</para>
+</listitem><listitem><para>Parameters for quantum noise channels and classical errors </para>
+</listitem></itemizedlist>
+</para>
+    </detaileddescription>
+    <location file="core/include/qristal/core/noise_model/noise_properties.hpp" line="17" column="5" bodyfile="core/include/qristal/core/noise_model/noise_properties.hpp" bodystart="18" bodyend="90"/>
+    <listofallmembers>
+      <member refid="structqristal_1_1NoiseProperties_1a19573dbd9446520f4856224bc71d99c0" prot="public" virt="non-virtual"><scope>qristal::NoiseProperties</scope><name>gate_pauli_errors</name></member>
+      <member refid="structqristal_1_1NoiseProperties_1a1bf88945b271279e2d1f2ff1c21c0ab3" prot="public" virt="non-virtual"><scope>qristal::NoiseProperties</scope><name>gate_time_us</name></member>
+      <member refid="structqristal_1_1NoiseProperties_1a187aae6a767dcb8ee31adc9bfe113e74" prot="public" virt="non-virtual"><scope>qristal::NoiseProperties</scope><name>qubit_topology</name></member>
+      <member refid="structqristal_1_1NoiseProperties_1a5f92e8c47c81a02c007fdc4c3e62cd05" prot="public" virt="non-virtual"><scope>qristal::NoiseProperties</scope><name>readout_errors</name></member>
+      <member refid="structqristal_1_1NoiseProperties_1a788efa5d70ac3a0680db55bb7f7c7cb4" prot="public" virt="non-virtual"><scope>qristal::NoiseProperties</scope><name>t1_us</name></member>
+      <member refid="structqristal_1_1NoiseProperties_1a188ba8a8dffcdc9ffd72f649bb4333f0" prot="public" virt="non-virtual"><scope>qristal::NoiseProperties</scope><name>t2_us</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

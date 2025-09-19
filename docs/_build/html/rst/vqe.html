@@ -1,0 +1,786 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Variational Quantum Eigensolver (VQE) &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Nextflow" href="nextflow.html" />
+    <link rel="prev" title="Parametrized Quantum Circuits" href="parametrization.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqpu.html">Qristal Virtual QPU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Variational Quantum Eigensolver (VQE)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#example">Example</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#python-api">Python API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#importing-the-module">Importing the module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-parameters-for-vqe">Setting up the parameters for VQE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#setting-up-the-optimization-algorithm">Setting up the optimization algorithm</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#stochastic-gradient-algorithms">Stochastic gradient algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#adam-adaptive-momentum-estimator"><strong>ADAM [Adaptive Momentum estimator]</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#heuristic-algorithms">Heuristic algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#cma-es-covariance-matrix-adapter-evolution-strategy"><strong>CMA-ES [Covariance Matrix Adapter Evolution Strategy]</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-based-algorithms">Gradient-based algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#l-bfgs"><strong>L-BFGS</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#gradient-free-algorithms">Gradient-free algorithms</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#nelder-mead"><strong>Nelder-Mead</strong></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#triggering-the-vqe-execution">Triggering the VQE execution</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-results">Accessing the results</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#viewing-the-convergence-trace">Viewing the convergence trace</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#attributes-related-to-the-convergence-trace">Attributes related to the convergence trace</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#c-api">C++ API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#general-vqe-information">General VQE information</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#quantum-kernels-in-qristal">Quantum kernels in Qristal</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#hamiltonian">Hamiltonian</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#ansatze">Ansätze</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#theta">theta</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#user-defined-ansatz">User defined ansatz</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#built-in-ansatze">Built in ansätze</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#convention-of-mapping-spin-orbitals-onto-qubits">Convention of mapping spin orbitals onto qubits</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#molecular-geometries-in-qristal">Molecular geometries in Qristal</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-make-function-calls-for-a-python-level-optimizer">How to make function calls for a Python-level optimizer?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../_cpp_api/library_root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Variational Quantum Eigensolver (VQE)</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/vqe.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section class="tex2jax_ignore mathjax_ignore" id="variational-quantum-eigensolver-vqe">
+<h1>Variational Quantum Eigensolver (VQE)<a class="headerlink" href="#variational-quantum-eigensolver-vqe" title="Permalink to this heading"></a></h1>
+<section id="example">
+<h2>Example<a class="headerlink" href="#example" title="Permalink to this heading"></a></h2>
+<p>The code below shows how the Qristal interface for VQE (<code class="docutils literal notranslate"><span class="pre">vqee</span></code>) is called.</p>
+<p>In general, you will need to provide these inputs:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="#ansätze">ansatz</a></p></li>
+<li><p><a class="reference external" href="#hamiltonian">Hamiltonian</a> which must be <a class="reference external" href="#convention-of-mapping-spin-orbitals-onto-qubits">consistent with the ansatz</a></p></li>
+<li><p><strong>Number of qubits</strong>, which must be consistent with the ansatz and the Hamiltonian</p></li>
+<li><p><strong>Initial values</strong> for ansatz parameters, referred from here on as <code class="docutils literal notranslate"><span class="pre">theta</span></code></p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">qristal.core.optimization.vqee</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qbOpt</span>
+
+<span class="n">params</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">Params</span><span class="p">()</span>
+
+<span class="c1"># Hamiltonian</span>
+<span class="n">params</span><span class="o">.</span><span class="n">pauliString</span> <span class="o">=</span> <span class="s2">&quot;-0.8124419696351861 + 0.17128249292506947 X0X1X2X3&quot;</span>
+
+<span class="c1"># ansatz</span>
+<span class="n">params</span><span class="o">.</span><span class="n">circuitString</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
+<span class="s2">.compiler xasm</span>
+<span class="s2">.circuit ansatz</span>
+<span class="s2">.parameters theta</span>
+<span class="s2">.qbit q</span>
+<span class="s2">  X(q[0]);</span>
+<span class="s2">  X(q[2]);</span>
+<span class="s2">  U(q[0], theta[0], theta[1], theta[2]);</span>
+<span class="s2">  U(q[1], theta[3], theta[4], theta[5]);</span>
+<span class="s2">  U(q[2], theta[6], theta[7], theta[8]);</span>
+<span class="s2">  U(q[3], theta[9], theta[10], theta[11]);</span>
+<span class="s2">  CNOT(q[0], q[1]);</span>
+<span class="s2">  CNOT(q[1], q[2]);</span>
+<span class="s2">  CNOT(q[2], q[3]);</span>
+<span class="s2">  U(q[0], theta[12], theta[13], theta[14]);</span>
+<span class="s2">  U(q[1], theta[15], theta[16], theta[17]);</span>
+<span class="s2">  U(q[2], theta[18], theta[19], theta[20]);</span>
+<span class="s2">  U(q[3], theta[21], theta[22], theta[23]);</span>
+<span class="s2">  CNOT(q[0], q[1]);</span>
+<span class="s2">  CNOT(q[1], q[2]);</span>
+<span class="s2">  CNOT(q[2], q[3]);</span>
+<span class="s2">&quot;&quot;&quot;</span>
+
+<span class="c1"># Number of qubits</span>
+<span class="n">params</span><span class="o">.</span><span class="n">nQubits</span> <span class="o">=</span> <span class="mi">4</span>
+
+<span class="c1"># Number of shots</span>
+<span class="n">params</span><span class="o">.</span><span class="n">nShots</span> <span class="o">=</span> <span class="mi">400000</span>
+
+<span class="c1"># Max iterations for the optimizer</span>
+<span class="n">params</span><span class="o">.</span><span class="n">maxIters</span> <span class="o">=</span> <span class="mi">100</span>
+
+<span class="c1"># When isDeterministic is set to False,</span>
+<span class="c1"># then expectations are calculated</span>
+<span class="c1"># from params.nShots samples.</span>
+<span class="n">params</span><span class="o">.</span><span class="n">isDeterministic</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="c1"># Termination condition for the optimizer</span>
+<span class="n">params</span><span class="o">.</span><span class="n">tolerance</span> <span class="o">=</span> <span class="mf">1e-6</span>
+
+<span class="c1"># theta initial values. These will</span>
+<span class="c1"># be overwritten with the</span>
+<span class="c1"># optimized solution by vqee.run()</span>
+<span class="n">params</span><span class="o">.</span><span class="n">optimalParameters</span> <span class="o">=</span> <span class="mi">24</span><span class="o">*</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Pauli string: &quot;</span><span class="p">,</span> <span class="n">params</span><span class="o">.</span><span class="n">pauliString</span><span class="p">)</span>
+
+<span class="n">acceleratorNamesList</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;sparse-sim&quot;</span><span class="p">,</span> <span class="s2">&quot;qpp&quot;</span><span class="p">,</span> <span class="s2">&quot;aer&quot;</span><span class="p">]</span>
+<span class="k">for</span> <span class="n">acceleratorName</span> <span class="ow">in</span> <span class="n">acceleratorNamesList</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n\n\n</span><span class="s2">*** &quot;</span><span class="p">,</span><span class="n">acceleratorName</span><span class="p">,</span> <span class="s2">&quot;***&quot;</span><span class="p">)</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">acceleratorName</span> <span class="o">=</span> <span class="n">acceleratorName</span>
+    <span class="n">vqee</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">VQEE</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">vqee</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+    <span class="n">optVec</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">optimalParameters</span>
+    <span class="n">optVal</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">optimalValue</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">optVal, optVec: &quot;</span><span class="p">,</span> <span class="n">optVal</span><span class="p">,</span> <span class="n">optVec</span><span class="p">)</span>
+
+</pre></div>
+</div>
+<p>Example output:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="o">***</span><span class="w">  </span><span class="n">sparse</span><span class="o">-</span><span class="n">sim</span><span class="w"> </span><span class="o">***</span>
+<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">sparse</span><span class="o">-</span><span class="n">sim</span>
+<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span>
+<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span>
+<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
+
+
+
+<span class="o">***</span><span class="w">  </span><span class="n">qpp</span><span class="w"> </span><span class="o">***</span>
+<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">qpp</span>
+<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span>
+<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span>
+<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
+
+
+
+<span class="o">***</span><span class="w">  </span><span class="n">aer</span><span class="w"> </span><span class="o">***</span>
+<span class="nl">Accelerator</span><span class="p">:</span><span class="w"> </span><span class="n">aer</span>
+<span class="nl">Parameters</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="n">theta22</span><span class="p">,</span><span class="w"> </span><span class="n">theta21</span><span class="p">,</span><span class="w"> </span><span class="n">theta18</span><span class="p">,</span><span class="w"> </span><span class="n">theta17</span><span class="p">,</span><span class="w"> </span><span class="n">theta20</span><span class="p">,</span><span class="w"> </span><span class="n">theta19</span><span class="p">,</span><span class="w"> </span><span class="n">theta16</span><span class="p">,</span><span class="w"> </span><span class="n">theta15</span><span class="p">,</span><span class="w"> </span><span class="n">theta14</span><span class="p">,</span><span class="w"> </span><span class="n">theta13</span><span class="p">,</span><span class="w"> </span><span class="n">theta11</span><span class="p">,</span><span class="w"> </span><span class="n">theta12</span><span class="p">,</span><span class="w"> </span><span class="n">theta10</span><span class="p">,</span><span class="w"> </span><span class="n">theta9</span><span class="p">,</span><span class="w"> </span><span class="n">theta7</span><span class="p">,</span><span class="w"> </span><span class="n">theta6</span><span class="p">,</span><span class="w"> </span><span class="n">theta4</span><span class="p">,</span><span class="w"> </span><span class="n">theta8</span><span class="p">,</span><span class="w"> </span><span class="n">theta3</span><span class="p">,</span><span class="w"> </span><span class="n">theta5</span><span class="p">,</span><span class="w"> </span><span class="n">theta2</span><span class="p">,</span><span class="w"> </span><span class="n">theta1</span><span class="p">,</span><span class="w"> </span><span class="n">theta23</span><span class="p">,</span><span class="w"> </span><span class="n">theta0</span><span class="p">]</span>
+<span class="n">Ansatz</span><span class="w"> </span><span class="n">depth</span><span class="o">:</span><span class="w"> </span><span class="mi">8</span>
+
+<span class="n">Min</span><span class="w"> </span><span class="n">energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">-0.983724</span>
+<span class="n">Optimal</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5708</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">optVal</span><span class="p">,</span><span class="w"> </span><span class="n">optVec</span><span class="o">:</span><span class="w">  </span><span class="mf">-0.9837244625602556</span><span class="w"> </span><span class="p">[</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5707963</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">]</span>
+</pre></div>
+</div>
+</section>
+<section id="python-api">
+<h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this heading"></a></h2>
+<section id="importing-the-module">
+<h3>Importing the module<a class="headerlink" href="#importing-the-module" title="Permalink to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">qristal.core.optimization.vqee</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qbOpt</span>
+
+</pre></div>
+</div>
+</section>
+<section id="setting-up-the-parameters-for-vqe">
+<h3>Setting up the parameters for VQE<a class="headerlink" href="#setting-up-the-parameters-for-vqe" title="Permalink to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">tvqep</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">Params</span><span class="p">()</span>
+
+</pre></div>
+</div>
+<p>The following VQE attributes are accepted:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">circuitString</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.circuitString</span> <span class="pre">=</span> <span class="pre">'''</span></code><br /><code class="docutils literal notranslate"><span class="pre">.compiler</span> <span class="pre">xasm</span></code><br /><code class="docutils literal notranslate"><span class="pre">.circuit</span> <span class="pre">ansatz</span></code><br /><code class="docutils literal notranslate"><span class="pre">.parameters</span> <span class="pre">theta</span></code><br /><code class="docutils literal notranslate"><span class="pre">.qbit</span> <span class="pre">q</span></code><br /><code class="docutils literal notranslate"><span class="pre">Ry(q[0],</span> <span class="pre">theta);'''</span></code></p></td>
+<td><p>Defines the <a class="reference external" href="#ansätze"><strong>ansatz</strong></a> circuit that<br /> has an associated parameter<br /> <a class="reference external" href="#theta"><strong>theta</strong></a>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">pauliString</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.pauliString</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">'-1.04235464570829</span> </code><br /><code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">0.18125791479311</span> <span class="pre">X0</span> </code><br /><code class="docutils literal notranslate"><span class="pre">+</span> <span class="pre">-0.78864539363997</span> <span class="pre">Z0'</span></code></p></td>
+<td><p>Sets the <a class="reference external" href="#hamiltonian">Hamiltonian</a>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nQubits</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.nQubits</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
+<td><p>Sets the number of qubits.  <br />This must be consistent <br />with both the <code class="docutils literal notranslate"><span class="pre">circuitString</span></code> and <br />the <code class="docutils literal notranslate"><span class="pre">pauliString</span></code> attributes.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">optimalParameters</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.optimalParameters</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">24*[0.11]</span></code></p></td>
+<td><p>A vector of initial values for <br />ansatz parameters. <br />The length must match the <br />number of ansatz parameters.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">nShots</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.nShots</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">128</span></code></p></td>
+<td><p>Set the number of shots <br />in a single VQE iteration.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">maxIters</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.maxIters</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">256</span></code></p></td>
+<td><p>Sets the upper limit <br />on the number of VQE <br />iterations to run.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">isDeterministic</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.isDeterministic</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">True</span></code></p></td>
+<td><p>When <br /><code class="docutils literal notranslate"><span class="pre">acceleratorName</span> <span class="pre">=</span> <span class="pre">'qpp'</span></code> <br />and <br /><code class="docutils literal notranslate"><span class="pre">isDeterministic</span> <span class="pre">=</span> <span class="pre">True</span></code>,<br /> the expectation values are <br />calculated using linear <br />algebra operations.  <br /><br />When <br /><code class="docutils literal notranslate"><span class="pre">isDeterministic</span> <span class="pre">=</span> <span class="pre">False</span></code> <br />the expectation values are <br />calculated from stochastic <br />samples of size <code class="docutils literal notranslate"><span class="pre">nShots</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">enableVis</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.enableVis</span> <span class="pre">=</span> <span class="pre">True</span></code></p></td>
+<td><p>Enable the convergence trace output. <br /><br />  These will be available in <br /> <code class="docutils literal notranslate"><span class="pre">tvqep.energyVis</span></code> (for energy) <br />and <br /> <code class="docutils literal notranslate"><span class="pre">tvqep.thetaVis</span></code> (for ansatz parameters).</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tolerance</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.tolerance</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">1e-6</span></code></p></td>
+<td><p>Sets the function tolerance <br />that is used by the optimizer.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">acceleratorName</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.acceleratorName</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">'qpp'</span></code></p></td>
+<td><p>Selects the back-end that <br />will  perform quantum circuit <br />execution.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="setting-up-the-optimization-algorithm">
+<h3>Setting up the optimization algorithm<a class="headerlink" href="#setting-up-the-optimization-algorithm" title="Permalink to this heading"></a></h3>
+<p>By default, the <code class="docutils literal notranslate"><span class="pre">cobyla</span></code> (gradient-free) algorithm will be used.  Alternative algorithms for driving the optimization can be used, along with extra options that are specific to individual algorithms.  The setup for each algorithm is discussed in the next sections.</p>
+<p><strong>Note</strong>: These previously described attributes also apply to all algorithms below:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">maxIters</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">tolerance</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">optimalParameters</span></code></p></li>
+</ul>
+</section>
+<section id="stochastic-gradient-algorithms">
+<h3>Stochastic gradient algorithms<a class="headerlink" href="#stochastic-gradient-algorithms" title="Permalink to this heading"></a></h3>
+<section id="adam-adaptive-momentum-estimator">
+<h4><strong>ADAM [Adaptive Momentum estimator]</strong><a class="headerlink" href="#adam-adaptive-momentum-estimator" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.algorithm</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"> <span class="pre">&quot;adam&quot;</span></code></p></td>
+<td><p>Selects the <br /> ADAM algorithm from <br /> the mlpack C++ library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;stepsize:</span> <span class="pre">0.5&quot;</span></code></p></td>
+<td><p>Step size for each <br />iteration.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;beta1:</span> <span class="pre">0.7&quot;</span></code></p></td>
+<td><p>Exponential decay rate for<br /> the first moment estimates.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;beta2:</span> <span class="pre">0.999&quot;</span></code></p></td>
+<td><p>Exponential decay rate for <br /> the weighted infinity-norm estimates.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;eps:</span> <span class="pre">1.0e-8&quot;</span></code></p></td>
+<td><p>Mean-squared gradient initial value.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;momentum:</span> <span class="pre">0.05&quot;</span></code></p></td>
+<td><p>Momentum</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;exactobjective:</span> <span class="pre">false&quot;</span></code></p></td>
+<td><p>ADAM exact objective</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">extraOptions</span></code> is a YAML string field, so you can for example have all options specified with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;{stepsize:</span> <span class="pre">0.1,</span> <span class="pre">beta1:</span> <span class="pre">0.67,</span> <span class="pre">beta2:</span> <span class="pre">0.9,</span> <span class="pre">momentum:</span> <span class="pre">0.11,</span> <span class="pre">exactobjective:</span> <span class="pre">true}&quot;</span></code></p>
+</section>
+</section>
+<section id="heuristic-algorithms">
+<h3>Heuristic algorithms<a class="headerlink" href="#heuristic-algorithms" title="Permalink to this heading"></a></h3>
+<section id="cma-es-covariance-matrix-adapter-evolution-strategy">
+<h4><strong>CMA-ES [Covariance Matrix Adapter Evolution Strategy]</strong><a class="headerlink" href="#cma-es-covariance-matrix-adapter-evolution-strategy" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.algorithm</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"> <span class="pre">&quot;cmaes&quot;</span></code></p></td>
+<td><p>Selects the <br /> CMA-ES algorithm from <br /> the mlpack C++ library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;lambda:</span> <span class="pre">0&quot;</span></code></p></td>
+<td><p>Population size</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;lower:</span> <span class="pre">-10.0&quot;</span></code></p></td>
+<td><p>Lower-bound of decision<br /> variables.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;upper:</span> <span class="pre">10.0&quot;</span></code></p></td>
+<td><p>Upper-bound of decision<br /> variables.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">extraOptions</span></code> is a YAML string field, so you can for example have all options specified with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;{lambda:</span> <span class="pre">0,</span> <span class="pre">upper:</span> <span class="pre">10.0,</span> <span class="pre">lower:</span> <span class="pre">-10.0}&quot;</span></code></p>
+</section>
+</section>
+<section id="gradient-based-algorithms">
+<h3>Gradient-based algorithms<a class="headerlink" href="#gradient-based-algorithms" title="Permalink to this heading"></a></h3>
+<section id="l-bfgs">
+<h4><strong>L-BFGS</strong><a class="headerlink" href="#l-bfgs" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.algorithm</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"> <span class="pre">&quot;l-bfgs&quot;</span></code></p></td>
+<td><p>Selects the <br /> L-BFGS algorithm from <br /> the mlpack C++ library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p></p></td>
+<td><p>None</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="gradient-free-algorithms">
+<h3>Gradient-free algorithms<a class="headerlink" href="#gradient-free-algorithms" title="Permalink to this heading"></a></h3>
+<section id="nelder-mead">
+<h4><strong>Nelder-Mead</strong><a class="headerlink" href="#nelder-mead" title="Permalink to this heading"></a></h4>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">algorithm</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.algorithm</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"> <span class="pre">&quot;nelder-mead&quot;</span></code></p></td>
+<td><p>Selects the <br /> Nelder-Mead algorithm from <br /> the nlopt C++ library.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;stopval:</span> <span class="pre">-1.05&quot;</span></code></p></td>
+<td><p>Exits the optimization <br />as soon as the <strong>energy <br />is below this threshold value</strong>.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;lowerbounds:</span> <span class="pre">[-0.01,</span> <span class="pre">-0.01,</span> <span class="pre">-0.01]&quot;</span></code></p></td>
+<td><p>Imposes  <strong>lower-bounds</strong> <br />on the value of <code class="docutils literal notranslate"><span class="pre">theta</span></code>. <br /><br />The number of elements <br />in the list must <br /> equal the number of <br />elements in <code class="docutils literal notranslate"><span class="pre">theta</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">extraOptions</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;upperbounds:</span> <span class="pre">[0.1,</span> <span class="pre">0.1,</span> <span class="pre">0.1]&quot;</span></code></p></td>
+<td><p>Imposes  <strong>upper-bounds</strong> <br />on the value of <code class="docutils literal notranslate"><span class="pre">theta</span></code>. <br /><br />The number of elements <br />in the list must <br /> equal the number of <br />elements in <code class="docutils literal notranslate"><span class="pre">theta</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Note</strong>: <code class="docutils literal notranslate"><span class="pre">extraOptions</span></code> is a YAML string field, so you can for example have all options specified with:</p>
+<p><code class="docutils literal notranslate"><span class="pre">tvqep.extraOptions</span> <span class="pre">=</span> </code><br /><code class="docutils literal notranslate"><span class="pre">&quot;{lowerbounds:</span> <span class="pre">[-0.01,</span> <span class="pre">-0.01,</span> <span class="pre">-0.01],</span> <span class="pre">upperbounds:</span> <span class="pre">[0.1,</span> <span class="pre">0.1,</span> <span class="pre">0.1],</span> <span class="pre">stopval:</span> <span class="pre">-1.05}&quot;</span></code></p>
+</section>
+</section>
+<section id="triggering-the-vqe-execution">
+<h3>Triggering the VQE execution<a class="headerlink" href="#triggering-the-vqe-execution" title="Permalink to this heading"></a></h3>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">qv</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">VQEE</span><span class="p">(</span><span class="n">tvqep</span><span class="p">)</span>
+<span class="n">qv</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="accessing-the-results">
+<h3>Accessing the results<a class="headerlink" href="#accessing-the-results" title="Permalink to this heading"></a></h3>
+<p>The results from a completed VQE execution are available by reading the following attributes:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Example</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">optimalValue</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.optimalValue</span></code></p></td>
+<td><p>The <strong>minimum energy</strong> corresponding to <br />parameters set at the <code class="docutils literal notranslate"><span class="pre">optimalParameters</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">optimalParameters</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.optimalParameters</span></code></p></td>
+<td><p>The values for <a class="reference external" href="#theta">theta</a> corresponding to <br />the minimum energy that VQE <br />has found within <code class="docutils literal notranslate"><span class="pre">maxIters</span></code> iterations.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">iterationData[&lt;index&gt;].energy</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.iterationData[8].energy</span></code></p></td>
+<td><p>The energy at iteration <code class="docutils literal notranslate"><span class="pre">&lt;index&gt;</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">iterationData[&lt;index&gt;].params</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.iterationData[8].params</span></code></p></td>
+<td><p>The list of ansatz parameter <br />values at iteration <code class="docutils literal notranslate"><span class="pre">&lt;index&gt;</span></code>.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="viewing-the-convergence-trace">
+<h3>Viewing the convergence trace<a class="headerlink" href="#viewing-the-convergence-trace" title="Permalink to this heading"></a></h3>
+<p><strong>Note</strong>: set <code class="docutils literal notranslate"><span class="pre">enableVis</span> <span class="pre">=</span> <span class="pre">True</span></code> prior to calling <code class="docutils literal notranslate"><span class="pre">run()</span></code> in order to generate the trace.</p>
+<p>This is available via the <code class="docutils literal notranslate"><span class="pre">vis</span></code> attribute.  The iteration that gave the reported optimum is marked with: <code class="docutils literal notranslate"><span class="pre">**|</span></code>.</p>
+<p>Color codes:</p>
+<ul class="simple">
+<li><p>Red - indicates the optimum iteration</p></li>
+<li><p>Green - indicates an iteration with the same energy as the optimum iteration</p></li>
+</ul>
+<p><strong>Example output</strong></p>
+<div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Iteration 96
+Energy         |################# -0.95
+Theta
+       Element 0      |####################### 0.33*pi
+       Element 1      |##################### 0.19*pi
+       Element 2      |################### -0.12*pi
+       Element 3      |######################### 0.55*pi
+Iteration 97
+Energy       **|################ -0.98
+Theta
+       Element 0    **|####################### 0.3*pi
+       Element 1    **|##################### 0.19*pi
+       Element 2    **|#################### -0.059*pi
+       Element 3    **|######################### 0.5*pi
+Iteration 98
+Energy         |################# -0.97
+Theta
+       Element 0      |###################### 0.29*pi
+       Element 1      |##################### 0.14*pi
+       Element 2      |#################### 0.061*pi
+       Element 3      |######################### 0.55*pi
+Iteration 99
+Energy         |################ -0.98
+Theta
+       Element 0      |###################### 0.3*pi
+       Element 1      |##################### 0.19*pi
+       Element 2      |#################### -0.071*pi
+       Element 3      |######################## 0.49*pi
+Iteration 100
+Energy         |################# -0.97
+Theta
+       Element 0      |####################### 0.34*pi
+       Element 1      |##################### 0.15*pi
+       Element 2      |#################### -0.048*pi
+       Element 3      |########################## 0.62*pi
+</pre></div>
+</div>
+</section>
+<section id="attributes-related-to-the-convergence-trace">
+<h3>Attributes related to the convergence trace<a class="headerlink" href="#attributes-related-to-the-convergence-trace" title="Permalink to this heading"></a></h3>
+<p>Use these attributes to set the amount of information that appears in the convergence trace:</p>
+<table class="docutils align-default">
+<thead>
+<tr class="row-odd"><th class="head"><p>Attribute</p></th>
+<th class="head"><p>Defaults</p></th>
+<th class="head"><p>Details</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">showTheta</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.showTheta</span> <span class="pre">=</span> <span class="pre">False</span></code></p></td>
+<td><p>When set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, <br />the elements of <code class="docutils literal notranslate"><span class="pre">theta</span></code> will <br />be displayed in the <br />convergence trace.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">limitThetaN</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.limitThetaN</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td><p>Limits the number of <br />elements of <code class="docutils literal notranslate"><span class="pre">theta</span></code> appearing <br />in the trace to this value. <br />If set to 0, this <br />option is ignored.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tail</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.tail</span> <span class="pre">=</span> <span class="pre">0</span></code></p></td>
+<td><p>Output only the last <br />n=tail iterations. <br />If set to 0, this <br />option is ignored.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">plain</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.plain</span> <span class="pre">=</span> <span class="pre">False</span></code></p></td>
+<td><p>Setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code> removes <br />color coding from the output.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">blocked</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">tvqep.blocked</span> <span class="pre">=</span> <span class="pre">False</span></code></p></td>
+<td><p>Setting this to <code class="docutils literal notranslate"><span class="pre">True</span></code> outputs <br />the trace with all elements <br />of <code class="docutils literal notranslate"><span class="pre">theta</span></code> for any given iteration <br />contained in a single block.</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+<section id="c-api">
+<h2>C++ API<a class="headerlink" href="#c-api" title="Permalink to this heading"></a></h2>
+<p><a href="../_cpp_api/classqb_1_1vqee_1_1VQEE.html">See the class documentation.</a></p>
+</section>
+<section id="general-vqe-information">
+<h2>General VQE information<a class="headerlink" href="#general-vqe-information" title="Permalink to this heading"></a></h2>
+<p>VQE is classified as a <strong>quantum-classical (hybrid) algorithm</strong>. It uses a <strong>classical optimizer</strong> to minimize a <strong>quantum kernel</strong> based objective function. The objective function is usually determined by multiple measurements at each iteration.</p>
+<p>VQE finds the <strong>ground state energy</strong> of a physical system characterized by its <strong>Hamiltonian</strong> <span class="math notranslate nohighlight">\(H\)</span> which is Hermitian. See [<a class="reference external" href="https://arxiv.org/abs/1304.3061">Peruzzo et al. 2013</a>, <a class="reference external" href="https://arxiv.org/abs/1512.06860">O’Malley et al. 2015</a>] for details.</p>
+<section id="quantum-kernels-in-qristal">
+<h3>Quantum kernels in Qristal<a class="headerlink" href="#quantum-kernels-in-qristal" title="Permalink to this heading"></a></h3>
+<p>In this section, the components that make up a quantum kernel are described in more detail.</p>
+</section>
+<section id="hamiltonian">
+<h3>Hamiltonian<a class="headerlink" href="#hamiltonian" title="Permalink to this heading"></a></h3>
+<p>While the user provides a Hamiltonian that has been transformed from their problem/system of interest, special attention is needed on the resulting format of the Hamiltonian so that it is valid as an input to Qristal.  In particular:</p>
+<ul class="simple">
+<li><p>the Hamiltonian must be formatted as a <strong>string</strong>. This string is an expression of a weighted sum of <strong>Pauli terms</strong>.</p></li>
+<li><p><strong>Spaces</strong> must be used to separate <strong>all</strong> of the following: the Pauli terms, their respective weights, and the arithmetic +/- symbols.</p></li>
+<li><p>In all Pauli terms, any <strong>Identity (I) operators are implicit - do not show I operator explicitly.</strong></p></li>
+</ul>
+<p>Examples of valid Hamiltonians (but with no physical meaning):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;-1.2 + 1.1 Z0Z1 + 4.1 Z1 - 11.8 Z0&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;12.3 + 0.002 Z0X1X2 - 1.2 X0Z2 - 3.3 Z1 - 5.0 Y2&quot;</span>
+</pre></div>
+</div>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;5.907 - 2.1433 X0X1 - 2.1433 Y0Y1 + (0.3,0.21829) Z0 + 0.34 Z0Z1Z2Z3&quot;</span>
+
+<span class="nl">Note</span><span class="p">:</span><span class="w"> </span><span class="p">(</span><span class="mf">0.3</span><span class="p">,</span><span class="mf">0.21829</span><span class="p">)</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0.3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">0.21829</span><span class="n">j</span>
+</pre></div>
+</div>
+<p>Example of a physically valid Hamiltonian (for deuteron):</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="s">&quot;5.907 - 2.1433 X0X1 - 2.1433 Y0Y1 + .21829 Z0 - 6.125 Z1&quot;</span>
+</pre></div>
+</div>
+</section>
+<section id="ansatze">
+<h3>Ansätze<a class="headerlink" href="#ansatze" title="Permalink to this heading"></a></h3>
+<p>As in all parameterized models, choice of model architecture, or <em>ansatz</em>, is an important parameter in the success of the optimization.</p>
+<p>Here it is a quantum circuit that prepares a quantum state and is conditioned by the values of <a class="reference external" href="#theta">theta</a> (i.e. the input parameters mentioned above).  To <a class="reference external" href="#user-defined-ansatz">specify your ansatz</a>, see the instructions below.</p>
+<section id="theta">
+<h4>theta<a class="headerlink" href="#theta" title="Permalink to this heading"></a></h4>
+<p>Input parameters of an ansatz, usually rotation angles (in radians).</p>
+</section>
+<section id="user-defined-ansatz">
+<h4>User defined ansatz<a class="headerlink" href="#user-defined-ansatz" title="Permalink to this heading"></a></h4>
+<p>This functionality requires using the XASM format.  An example of this is shown below:</p>
+<p>❗ <strong>Important:</strong>
+Do <strong>not</strong> change the first two lines:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="w"> </span><span class="p">.</span><span class="n">compiler</span><span class="w"> </span><span class="n">xasm</span>
+<span class="w"> </span><span class="p">.</span><span class="n">circuit</span><span class="w"> </span><span class="n">ansatz</span>
+</pre></div>
+</div>
+<p>You can use the parameter (declared here as <code class="docutils literal notranslate"><span class="pre">theta</span></code>) as a 0-indexed array, ie <code class="docutils literal notranslate"><span class="pre">theta[0],</span> <span class="pre">theta[1],</span> <span class="pre">theta[2]</span></code>, …, etc.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>.compiler<span class="w"> </span>xasm
+.circuit<span class="w"> </span>ansatz
+.parameters<span class="w"> </span>theta
+.qbit<span class="w"> </span>q
+<span class="w">  </span>X<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>X<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">3</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">4</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">5</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">6</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">7</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">8</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">3</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">9</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">10</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">11</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">3</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">12</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">13</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">14</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">15</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">16</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">17</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">18</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">19</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">20</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>U<span class="o">(</span>q<span class="o">[</span><span class="m">3</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">21</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">22</span><span class="o">]</span>,<span class="w"> </span>theta<span class="o">[</span><span class="m">23</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">0</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">1</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">1</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">2</span><span class="o">])</span><span class="p">;</span>
+<span class="w">  </span>CNOT<span class="o">(</span>q<span class="o">[</span><span class="m">2</span><span class="o">]</span>,<span class="w"> </span>q<span class="o">[</span><span class="m">3</span><span class="o">])</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>Use gates that are in <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html">XASM gate format</a> to build the ansatz circuit.</p>
+</section>
+<section id="built-in-ansatze">
+<h4>Built in ansätze<a class="headerlink" href="#built-in-ansatze" title="Permalink to this heading"></a></h4>
+<p>See the examples folder: <code class="docutils literal notranslate"><span class="pre">examples/python/vqee_example1.py</span></code> for the syntax to call the ansätze described below.</p>
+<ul>
+<li><p>Default ansatz:  the <a class="reference external" href="https://www.nature.com/articles/nature23879">Hardware Efficient Ansatz</a> (HEA)</p>
+<p>⚙ For the default ansatz in Qristal, it is required that:
+<code class="docutils literal notranslate"><span class="pre">len(theta)</span> <span class="pre">==</span> <span class="pre">3*nQubits*ansatz_depth</span></code></p>
+<p>HEA provides a framework for general Hamiltonians where the problem substructure is less well defined.   HEA is often parameterized by <strong>depth</strong>: the number of base circuit repetitions.</p>
+<p>A larger depth allows for modelling more complexity at the cost of increasing training difficulty.</p>
+<p>One instance of HEA ansatz is demonstrated in <a class="reference external" href="https://pennylane.ai/qml/demos/tutorial_vqe.html">Pennylane’s VQE tutorial</a>.</p>
+</li>
+<li><p><a class="reference external" href="https://arxiv.org/abs/1904.10910">ASWAP</a> ansatz that is useful for quantum chemistry</p>
+<p>ASWAP is well-suited to the types of Hamiltonians generated by quantum chemistry problems and is parameterized by the <strong>number of particles</strong> to use.</p>
+</li>
+<li><p><a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/qua.21198">UCCSD</a> ansatz that is useful for quantum chemistry</p>
+<p><em>Unitary coupled-cluster singles and doubles</em> (UCCSD) ansatz is based on the unitary coupled cluster (UCC) theory.</p>
+<p>UCCSD ansatz is parameterized by the number of particles (e.g., electrons) and the number of spin orbitals.</p>
+<p>(the number of spin orbitals is equal to the number of qubits required)</p>
+</li>
+</ul>
+</section>
+</section>
+<section id="convention-of-mapping-spin-orbitals-onto-qubits">
+<h3>Convention of mapping spin orbitals onto qubits<a class="headerlink" href="#convention-of-mapping-spin-orbitals-onto-qubits" title="Permalink to this heading"></a></h3>
+<p>❗ <strong>Important:</strong></p>
+<p>The built-in ASWAP and UCCSD ansätze in Qristal map all alpha (up) spins <strong>then</strong> all beta (down) spins. Thus, care must be taken to make sure that the input Pauli Hamiltonian follows the same mapping convention.  Note that e.g. Pennylane, on the other hand, alternates alpha and beta (up and down) spins.</p>
+<p>If the Hamiltonian input is provided following the description in <a class="reference external" href="#molecular-geometries-in-qristal">Molecular geometries in Qristal</a>, then the mapping is guaranteed to be compatible with the above convention.</p>
+</section>
+<section id="molecular-geometries-in-qristal">
+<h3>Molecular geometries in Qristal<a class="headerlink" href="#molecular-geometries-in-qristal" title="Permalink to this heading"></a></h3>
+<p>See the examples folder: <code class="docutils literal notranslate"><span class="pre">examples/python/vqee_example3.py</span></code> for the syntax to use molecular geometries.</p>
+<p>Instead of directly specifying a Hamiltonian, users can instead input a molecular geometry in terms of the elements and coordinates of all atoms in the system. Qristal will then generate the corresponding Hamiltonian automatically.</p>
+<p>For this functionality, Qristal requires PySCF-style XYZ syntax, i.e.,
+ <code class="docutils literal notranslate"><span class="pre">{element</span> <span class="pre">symbol}</span> <span class="pre">{x_coord}</span> <span class="pre">{y_coord}</span> <span class="pre">{z_coord};...</span></code></p>
+<p>For example, an <span class="math notranslate nohighlight">\(H_2\)</span> molecule with an atomic distance of 0.735 angstroms (Å) can be described by the following geometry string:</p>
+<p><code class="docutils literal notranslate"><span class="pre">H</span> <span class="pre">0.0</span> <span class="pre">0.0</span> <span class="pre">0.0;</span> <span class="pre">H</span> <span class="pre">0.0</span> <span class="pre">0.0</span> <span class="pre">0.735</span></code></p>
+<p>❗ <strong>Important:</strong> the default unit for coordinates is <strong>angstroms</strong>.</p>
+<p>By default, Qristal uses the <a class="reference external" href="https://en.wikipedia.org/wiki/STO-nG_basis_sets">sto-3g</a> basis set and the Jordan-Wigner fermion-to-qubit mapping.</p>
+</section>
+</section>
+<section id="how-to-make-function-calls-for-a-python-level-optimizer">
+<h2>How to make function calls for a Python-level optimizer?<a class="headerlink" href="#how-to-make-function-calls-for-a-python-level-optimizer" title="Permalink to this heading"></a></h2>
+<p>In order to use the optimization algorithms in <code class="docutils literal notranslate"><span class="pre">scipy.optimize</span></code> or <code class="docutils literal notranslate"><span class="pre">skquant.opt</span></code>  for VQE, it is necessary to provide a function that accepts the parameter values at the current iteration and returns the energy.  The function below provides this.  Note: it accepts an input (<code class="docutils literal notranslate"><span class="pre">theta</span></code>) that is a NumPy array:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">qristal.core.optimization.vqee</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">qbOpt</span>
+
+<span class="c1">#</span>
+<span class="c1"># Wrapper that accepts a parameter,</span>
+<span class="c1"># theta (type is NumPy ndarray)</span>
+<span class="c1"># and calls vqee for 1 iteration.  The energy is returned.</span>
+<span class="c1">#</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">qbvqe</span><span class="p">(</span><span class="n">theta</span><span class="p">):</span>
+    <span class="n">params</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">Params</span><span class="p">()</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">nShots</span> <span class="o">=</span> <span class="mi">64</span>   <span class="c1"># Number of shots</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">maxIters</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># initial energy only - no internal optimisation steps</span>
+    <span class="c1"># Deuteron Hamiltonian with ASWAP ansatz</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">nQubits</span> <span class="o">=</span> <span class="mi">4</span>  <span class="c1"># Number of qubits</span>
+    <span class="n">params</span><span class="o">.</span><span class="n">pauliString</span> <span class="o">=</span> <span class="s2">&quot;5.907 - 2.1433 X0X1 - 2.1433 Y0Y1 + .21829 Z0 - 6.125 Z1&quot;</span>
+    <span class="n">ansatzID</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">AnsatzID</span><span class="o">.</span><span class="n">ASWAP</span>
+    <span class="n">nQubits</span> <span class="o">=</span> <span class="mi">4</span>
+    <span class="n">nElectrons</span> <span class="o">=</span> <span class="mi">2</span> <span class="c1"># number of electrons/particles/vqeDepth for (UCCSD/ASWAP/HEA)</span>
+    <span class="n">trs</span> <span class="o">=</span> <span class="kc">True</span> <span class="c1"># time reversal symmetry only when ASWAP, else just a required dummy to conform to the signature</span>
+    <span class="n">nOptParams</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">setAnsatz</span><span class="p">(</span><span class="n">params</span><span class="p">,</span> <span class="n">ansatzID</span><span class="p">,</span> <span class="n">nQubits</span><span class="p">,</span> <span class="n">nElectrons</span><span class="p">,</span> <span class="n">trs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span> <span class="o">==</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">params</span><span class="o">.</span><span class="n">optimalParameters</span> <span class="o">=</span> <span class="n">theta</span>
+    <span class="k">else</span> <span class="p">:</span>
+        <span class="n">params</span><span class="o">.</span><span class="n">optimalParameters</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">theta</span><span class="p">)</span>
+
+    <span class="n">qv</span> <span class="o">=</span> <span class="n">qbOpt</span><span class="o">.</span><span class="n">VQEE</span><span class="p">(</span><span class="n">params</span><span class="p">)</span>
+    <span class="n">qv</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">params</span><span class="o">.</span><span class="n">optimalValue</span>
+
+</pre></div>
+</div>
+<p>With small modifications, the function shown above can be adapted to return other quantities (eg. Jacobian) needed by the optimization algorithm.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="parametrization.html" class="btn btn-neutral float-left" title="Parametrized Quantum Circuits" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="nextflow.html" class="btn btn-neutral float-right" title="Nextflow" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_8dc8f10c00666e86a0d995caa54e2bf8" kind="dir">
+    <compoundname>emulator/include/qristal/emulator/nv_sim</compoundname>
+    <innerfile refid="mps__accelerator_8hpp">mps_accelerator.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="emulator/include/qristal/emulator/nv_sim/"/>
+  </compounddef>
+</doxygen>

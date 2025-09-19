@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_7f54a3c4b428a3a4357168cfd469060d" kind="dir">
+    <compoundname>core/include/qristal/core/optimization/vqee</compoundname>
+    <innerfile refid="case__generator_8hpp">case_generator.hpp</innerfile>
+    <innerfile refid="vqee_8hpp">vqee.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/optimization/vqee/"/>
+  </compounddef>
+</doxygen>

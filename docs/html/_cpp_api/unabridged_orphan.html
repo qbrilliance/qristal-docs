@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full API &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/getting_started.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqpu.html">Qristal Virtual QPU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../rst/quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="library_root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst/python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Full API</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/_cpp_api/unabridged_orphan.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="full-api">
+<h1>Full API<a class="headerlink" href="#full-api" title="Permalink to this heading"></a></h1>
+<section id="directories">
+<h2>Directories<a class="headerlink" href="#directories" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core.html">Directory core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include.html">Directory include</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal.html">Directory qristal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core.html">Directory core</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core.html#subdirectories">Subdirectories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core_backends.html">Directory backends</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core_backends.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core_backends_qb_hardware.html">Directory qb_hardware</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core_backends_qb_hardware.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core_cudaq.html">Directory cudaq</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core_cudaq.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core_noise_model.html">Directory noise_model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core_noise_model.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core_optimization.html">Directory optimization</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core_optimization.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core_optimization_vqee.html">Directory vqee</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core_optimization_vqee.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_core_include_qristal_core_passes.html">Directory passes</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_core_include_qristal_core_passes.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_emulator.html">Directory emulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_emulator_include.html">Directory include</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator_include.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_emulator_include_qristal.html">Directory qristal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator_include_qristal.html#subdirectories">Subdirectories</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_emulator_include_qristal_emulator.html">Directory emulator</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator_include_qristal_emulator.html#subdirectories">Subdirectories</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator_include_qristal_emulator.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_emulator_include_qristal_emulator_noise_model.html">Directory noise_model</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator_include_qristal_emulator_noise_model.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_emulator_include_qristal_emulator_nv_sim.html">Directory nv_sim</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator_include_qristal_emulator_nv_sim.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="dir_emulator_include_qristal_emulator_qsim.html">Directory qsim</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="dir_emulator_include_qristal_emulator_qsim.html#files">Files</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="files">
+<h2>Files<a class="headerlink" href="#files" title="Permalink to this heading"></a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html">File base_pass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#definition-core-include-qristal-core-passes-base-pass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/base_pass.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_base_pass.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html">File case_generator.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#definition-core-include-qristal-core-optimization-vqee-case-generator-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/optimization/vqee/case_generator.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#enums">Enums</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_case_generator.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_circuit_builder.hpp.html">File circuit_builder.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_circuit_builder.hpp.html#definition-core-include-qristal-core-circuit-builder-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/circuit_builder.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_circuit_builder.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_circuit_builder.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_circuit_builder.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_circuit_builder.hpp.html#functions">Functions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_circuit_builder.hpp.html#typedefs">Typedefs</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_passes_circuit_opt_passes.hpp.html">File circuit_opt_passes.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_circuit_opt_passes.hpp.html#definition-core-include-qristal-core-passes-circuit-opt-passes-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/circuit_opt_passes.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_circuit_opt_passes.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_circuit_opt_passes.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_circuit_opt_passes.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_circuit_opt_passes.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_emulator_include_qristal_emulator_emulator.hpp.html">File emulator.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_emulator.hpp.html#definition-emulator-include-qristal-emulator-emulator-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator/emulator.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_emulator.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_emulator.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_emulator.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp.html">File EmulatorNoiseModel.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp.html#definition-emulator-include-qristal-emulator-noise-model-emulatornoisemodel-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_noise_model_EmulatorNoiseModel.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_cudaq_ir_converter.hpp.html">File ir_converter.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_ir_converter.hpp.html#definition-core-include-qristal-core-cudaq-ir-converter-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/cudaq/ir_converter.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_ir_converter.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_ir_converter.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_ir_converter.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_emulator_include_qristal_emulator_nv_sim_mps_accelerator.hpp.html">File mps_accelerator.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_nv_sim_mps_accelerator.hpp.html#definition-emulator-include-qristal-emulator-nv-sim-mps-accelerator-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator/nv_sim/mps_accelerator.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_nv_sim_mps_accelerator.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_nv_sim_mps_accelerator.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_nv_sim_mps_accelerator.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html">File noise_aware_placement_config.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html#definition-core-include-qristal-core-passes-noise-aware-placement-config-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/noise_aware_placement_config.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_config.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp.html">File noise_aware_placement_pass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp.html#definition-core-include-qristal-core-passes-noise-aware-placement-pass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/noise_aware_placement_pass.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_noise_aware_placement_pass.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_model.hpp.html">File noise_model.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_model.hpp.html#definition-core-include-qristal-core-noise-model-noise-model-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/noise_model/noise_model.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_model.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_model.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_model.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_model.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_properties.hpp.html">File noise_properties.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_properties.hpp.html#definition-core-include-qristal-core-noise-model-noise-properties-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/noise_model/noise_properties.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_properties.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_properties.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_properties.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_noise_properties.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_profiler.hpp.html">File profiler.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_profiler.hpp.html#definition-core-include-qristal-core-profiler-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/profiler.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_profiler.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_profiler.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_profiler.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp.html">File qb_qpu.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp.html#definition-core-include-qristal-core-backends-qb-hardware-qb-qpu-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_qpu.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp.html">File qb_visitor.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp.html#definition-core-include-qristal-core-backends-qb-hardware-qb-visitor-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_backends_qb_hardware_qb_visitor.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp.html">File qsim_emulator.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp.html#definition-emulator-include-qristal-emulator-qsim-qsim-emulator-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">emulator/include/qristal/emulator/qsim/qsim_emulator.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_noise_model_readout_error.hpp.html">File readout_error.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_readout_error.hpp.html#definition-core-include-qristal-core-noise-model-readout-error-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/noise_model/readout_error.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_readout_error.hpp.html#included-by">Included By</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_readout_error.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_noise_model_readout_error.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_session.hpp.html">File session.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_session.hpp.html#definition-core-include-qristal-core-session-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/session.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_session.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_session.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_session.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_cudaq_sim_pool.hpp.html">File sim_pool.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_sim_pool.hpp.html#definition-core-include-qristal-core-cudaq-sim-pool-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/cudaq/sim_pool.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_sim_pool.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_sim_pool.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_sim_pool.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_cudaq_sim_pool.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_passes_swap_placement_pass.hpp.html">File swap_placement_pass.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_swap_placement_pass.hpp.html#definition-core-include-qristal-core-passes-swap-placement-pass-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/passes/swap_placement_pass.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_swap_placement_pass.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_swap_placement_pass.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_swap_placement_pass.hpp.html#classes">Classes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_passes_swap_placement_pass.hpp.html#functions">Functions</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_thread_pool.hpp.html">File thread_pool.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_thread_pool.hpp.html#definition-core-include-qristal-core-thread-pool-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/thread_pool.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_thread_pool.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_thread_pool.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_thread_pool.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_vqee.hpp.html">File vqee.hpp</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_vqee.hpp.html#definition-core-include-qristal-core-optimization-vqee-vqee-hpp">Definition (<code class="docutils literal notranslate"><span class="pre">core/include/qristal/core/optimization/vqee/vqee.hpp</span></code>)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_vqee.hpp.html#includes">Includes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_vqee.hpp.html#namespaces">Namespaces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file_core_include_qristal_core_optimization_vqee_vqee.hpp.html#classes">Classes</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

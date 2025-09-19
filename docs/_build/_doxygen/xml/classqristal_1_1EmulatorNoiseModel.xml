@@ -1,0 +1,857 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1EmulatorNoiseModel" kind="class" language="C++" prot="public">
+    <compoundname>qristal::EmulatorNoiseModel</compoundname>
+    <basecompoundref refid="classqristal_1_1NoiseModel" prot="public" virt="non-virtual">qristal::NoiseModel</basecompoundref>
+    <includes refid="EmulatorNoiseModel_8hpp" local="no">EmulatorNoiseModel.hpp</includes>
+    <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe" prot="public" static="no" strong="yes">
+        <type></type>
+        <name>Generation</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::Generation</qualifiedname>
+        <enumvalue id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea2ac1226cbcfae043f000544b71048bc4" prot="public">
+          <name>nm1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea8968cee7fdca9ccf005b014287d50326" prot="public">
+          <name>nm2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abead2187898ebe460ee6623013a74f692ed" prot="public">
+          <name>nm3</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abead4410f4c5f1f7f7a205af4c156bdba25" prot="public">
+          <name>qdk1</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea4c94f2d4bec5a7bc90e49bdfca8b8f1e" prot="public">
+          <name>qdk2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea3e8a7f080b55747dfb5dd20e6b514413" prot="public">
+          <name>dqc2</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Enum to denote noise model generation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="27" column="5" bodyfile="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" bodystart="27" bodyend="27"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classqristal_1_1EmulatorNoiseModel_1ace32a9c27e6d171b2e3bc946325e3469" prot="protected" static="no" mutable="no">
+        <type><ref refid="structqristal_1_1NoiseProperties" kindref="compound">NoiseProperties</ref></type>
+        <definition>NoiseProperties qristal::EmulatorNoiseModel::m_noise_prop</definition>
+        <argsstring></argsstring>
+        <name>m_noise_prop</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::m_noise_prop</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="163" column="22" bodyfile="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" bodystart="163" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1aefda1184d3ab0c47322738c836a47873" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::EmulatorNoiseModel::EmulatorNoiseModel</definition>
+        <argsstring>(Generation gen=Generation::nm2)</argsstring>
+        <name>EmulatorNoiseModel</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::EmulatorNoiseModel</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe" kindref="member">Generation</ref></type>
+          <declname>gen</declname>
+          <defval>Generation::nm2</defval>
+        </param>
+        <briefdescription>
+<para>Construct a new Qb Noise Model object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the noise model generation </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="34" column="5" bodyfile="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1ad64276559bf93e3841f96e8237ca075d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::EmulatorNoiseModel::EmulatorNoiseModel</definition>
+        <argsstring>(Generation gen, double t1_ns, double t2_ns)</argsstring>
+        <name>EmulatorNoiseModel</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::EmulatorNoiseModel</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe" kindref="member">Generation</ref></type>
+          <declname>gen</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2_ns</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Qb Noise Model object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="attention"><para>This is for testability only whereby we allow for variation to T1 and T2 value to verify the noise model.</para>
+</simplesect>
+<parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the noise model generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 value to set (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T2 value to set (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="45" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a56b9f360b99b440e4192e98f4691476e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::EmulatorNoiseModel::EmulatorNoiseModel</definition>
+        <argsstring>(Generation gen, double t1_ns, double t2_ns, double single_qubit_gate_error, double two_qubit_gate_error)</argsstring>
+        <name>EmulatorNoiseModel</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::EmulatorNoiseModel</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe" kindref="member">Generation</ref></type>
+          <declname>gen</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>single_qubit_gate_error</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>two_qubit_gate_error</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Qb Noise Model object IMPORTANT: This is for testability only whereby we allow for variation to T1, T2, and gate error value to verify the noise model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the noise model generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 value to set (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T2 value to set (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>single_qubit_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>single qubit gate error (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>two_qubit_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>two qubit gate error (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="58" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1ad7056a6cd31669f041a328e0b9007160" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::EmulatorNoiseModel::EmulatorNoiseModel</definition>
+        <argsstring>(Generation gen, double t1_ns, double t2_ns, double single_qubit_gate_error, double two_qubit_gate_error, double p_01, double p_10)</argsstring>
+        <name>EmulatorNoiseModel</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::EmulatorNoiseModel</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe" kindref="member">Generation</ref></type>
+          <declname>gen</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>single_qubit_gate_error</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>two_qubit_gate_error</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_01</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>p_10</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new Qb Noise Model object IMPORTANT: This is for testability only whereby we allow for variation to T1, T2, SPAM and gate error value to verify the noise model. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>gen</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Specifies the noise model generation </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 value to set (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T2 value to set (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>single_qubit_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>single qubit gate error (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>two_qubit_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>two qubit gate error (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_01</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>probability of reading out the 0 state when the 1 state is prepared (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_10</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>probability of reading out the 1 state when the 0 state is prepared (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="73" column="6"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a0c8333b7c43e510f91c267829e956548" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="structqristal_1_1ReadoutError" kindref="compound">ReadoutError</ref></type>
+        <definition>ReadoutError qristal::EmulatorNoiseModel::get_ro_errors</definition>
+        <argsstring>(size_t qubit) const</argsstring>
+        <name>get_ro_errors</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::get_ro_errors</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>qubit</declname>
+        </param>
+        <briefdescription>
+<para>Get the ro errors of a qubit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>qubit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Qubit index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>Readout errors </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="81" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a9c83e488baf0d924ab1a5b7c5e2e9838" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="structqristal_1_1NoiseProperties" kindref="compound">NoiseProperties</ref> &amp;</type>
+        <definition>NoiseProperties &amp; qristal::EmulatorNoiseModel::get_noise_props</definition>
+        <argsstring>()</argsstring>
+        <name>get_noise_props</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::get_noise_props</qualifiedname>
+        <briefdescription>
+<para>Get the noise props object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para><ref refid="structqristal_1_1NoiseProperties" kindref="compound">NoiseProperties</ref> associated with the noise model. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="88" column="22" bodyfile="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" bodystart="88" bodyend="88"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a510d31af99269dfc2e91e81f165bb7b4" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::EmulatorNoiseModel::setup_48_qubits</definition>
+        <argsstring>(double t1_ns, double t2_ns, bool linear=false)</argsstring>
+        <name>setup_48_qubits</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::setup_48_qubits</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t1_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2_ns</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>linear</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Set up noise model for 48 qubits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T2 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>linear</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>False/Default: 4x4 grid, each NV cluster contains 3 qubits (Note: this is an obsolete noise model configuration whereby C13 spins are considered as qubits) True: Use linear connectivity model - 48 NV centers on a linear chain, where each NV contains 1 qubit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="101" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a14db5899efc4a8b1d526398547c538da" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::EmulatorNoiseModel::setup_64_qubits</definition>
+        <argsstring>(double t1_ns, double t2_ns)</argsstring>
+        <name>setup_64_qubits</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::setup_64_qubits</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t1_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2_ns</declname>
+        </param>
+        <briefdescription>
+<para>Set up an 8x8 grid of NV centres, 1 qubit per NV. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T2 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="109" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a429e92654c977e27a930a2c296ea4e7e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::EmulatorNoiseModel::setup_2_qubits</definition>
+        <argsstring>(double t1_ns, double t2_ns, std::optional&lt; double &gt; single_qubit_gate_error=std::nullopt, std::optional&lt; double &gt; two_qubit_gate_error=std::nullopt, std::optional&lt; double &gt; p_01=std::nullopt, std::optional&lt; double &gt; p_10=std::nullopt)</argsstring>
+        <name>setup_2_qubits</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::setup_2_qubits</qualifiedname>
+        <param>
+          <type>double</type>
+          <declname>t1_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2_ns</declname>
+        </param>
+        <param>
+          <type>std::optional&lt; double &gt;</type>
+          <declname>single_qubit_gate_error</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <param>
+          <type>std::optional&lt; double &gt;</type>
+          <declname>two_qubit_gate_error</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <param>
+          <type>std::optional&lt; double &gt;</type>
+          <declname>p_01</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <param>
+          <type>std::optional&lt; double &gt;</type>
+          <declname>p_10</declname>
+          <defval>std::nullopt</defval>
+        </param>
+        <briefdescription>
+<para>QDK V1 setup: two qubits q0 (NV centre), q1 (coupled C13 nucleus) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>t1_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T2 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>single_qubit_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>single qubit gate error (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>two_qubit_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>two qubit gate error (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_01</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>probability of reading out the 0 state when the 1 state is prepared (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>p_10</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>probability of reading out the 1 state when the 0 state is prepared (prob between 0 and 1) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="122" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a6bfa3a30735c8977b7e009f736d96d43" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::EmulatorNoiseModel::init_noise_props</definition>
+        <argsstring>()</argsstring>
+        <name>init_noise_props</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::init_noise_props</qualifiedname>
+        <briefdescription>
+<para>Initialize the noise properties. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="132" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a7c7be37c321481f864c00fd87f5ca4f5" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::EmulatorNoiseModel::setup_gate_noise</definition>
+        <argsstring>(size_t nb_qubits, double t1_ns, double t2_ns, double rx_gate_error, double ry_gate_error, double cz_gate_error, double rx_gate_duration_ns, double ry_gate_duration_ns, double cz_gate_duration_ns, std::vector&lt; std::pair&lt; double, double &gt; &gt; qb_roErrors, std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt; qb_connectivity)</argsstring>
+        <name>setup_gate_noise</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::setup_gate_noise</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>nb_qubits</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t1_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>t2_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rx_gate_error</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ry_gate_error</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cz_gate_error</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>rx_gate_duration_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>ry_gate_duration_ns</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>cz_gate_duration_ns</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::pair&lt; double, double &gt; &gt;</type>
+          <declname>qb_roErrors</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::pair&lt; size_t, size_t &gt; &gt;</type>
+          <declname>qb_connectivity</declname>
+        </param>
+        <briefdescription>
+<para>Set up 1- and 2-qubit gate noise, and connectivity info. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>nb_qubits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Number of qubits </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t1_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T1 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>t2_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>T2 value (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rx_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rx gate error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ry_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ry gate error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cz_gate_error</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cz gate error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>rx_gate_duration_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Rx gate duration (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ry_gate_duration_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ry gate duration (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>cz_gate_duration_ns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cz gate duration (in nanoseconds) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qb_roErrors</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Qubit read-out error </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>qb_connectivity</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Qubit connectivity vector </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="149" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1EmulatorNoiseModel_1a76e4f4a8666495a187ea399f47f63327" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::EmulatorNoiseModel::setup_NoiseModel_from_json</definition>
+        <argsstring>(const std::string &amp;file_path)</argsstring>
+        <name>setup_NoiseModel_from_json</name>
+        <qualifiedname>qristal::EmulatorNoiseModel::setup_NoiseModel_from_json</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>file_path</declname>
+        </param>
+        <briefdescription>
+<para>Construct <ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref> (base class) object from a given json file. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>file_path</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>An std::string of the path to the json file. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="160" column="10"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>QB Noise Model: Noise model of QB&apos;s NV quantum devices. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::EmulatorNoiseModel</label>
+        <link refid="classqristal_1_1EmulatorNoiseModel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::NoiseModel</label>
+        <link refid="classqristal_1_1NoiseModel"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>qristal::EmulatorNoiseModel</label>
+        <link refid="classqristal_1_1EmulatorNoiseModel"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_noise_prop</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::NoiseModel</label>
+        <link refid="classqristal_1_1NoiseModel"/>
+      </node>
+      <node id="3">
+        <label>qristal::NoiseProperties</label>
+        <link refid="structqristal_1_1NoiseProperties"/>
+      </node>
+    </collaborationgraph>
+    <location file="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" line="15" column="3" bodyfile="emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp" bodystart="15" bodyend="164"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1NoiseModel_1a5808a0205a33436ae47e3683c0a1f1d0" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>add_gate_error</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a6697476fd330f9a13e16ed7e36ace021" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>add_qubit_connectivity</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a0505821676be0f36b6719edbe58bd037" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>decoherence_pauli_error</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1aefda1184d3ab0c47322738c836a47873" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>EmulatorNoiseModel</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1ad64276559bf93e3841f96e8237ca075d" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>EmulatorNoiseModel</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a56b9f360b99b440e4192e98f4691476e" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>EmulatorNoiseModel</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1ad7056a6cd31669f041a328e0b9007160" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>EmulatorNoiseModel</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>Generation</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a4943a12d0ec232889e7a8e8e7996f8d5" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>get_connectivity</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ad21331449bce1b12c492e4afa6a7ae26" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>get_noise_channels</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a9c83e488baf0d924ab1a5b7c5e2e9838" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>get_noise_props</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a2870c41a96de9aa5b7b50aa5c8e78b3f" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>get_qobj_basis_gates</name></member>
+      <member refid="classqristal_1_1NoiseModel_1acc73ff28358d7eeb179828877e61d061" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>get_qobj_compiler</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ab44a0c023aaf1263bd5a88468942426b" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>get_readout_errors</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a0c8333b7c43e510f91c267829e956548" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>get_ro_errors</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a6bfa3a30735c8977b7e009f736d96d43" prot="private" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>init_noise_props</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a34dd9594919c66ff0a1539d44e42cc50" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>initialise_noise_properties_from_json</name></member>
+      <member refid="classqristal_1_1NoiseModel_1acf455f28687a596488bf44ca8fe6a4ca" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>m_noise_channels</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1ace32a9c27e6d171b2e3bc946325e3469" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>m_noise_prop</name></member>
+      <member refid="classqristal_1_1NoiseModel_1aacdef41bca7bd9d3df4a5b4d424e51a3" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>m_qobj_compiler</name></member>
+      <member refid="classqristal_1_1NoiseModel_1aa3d234f65a616e34476d776014c3c95a" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>m_qobj_noise_model</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a5da1a0acbc96103b930fd5613a8bfe32" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>m_qubit_topology</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a931cc93b56792b0eb7bead733ce979cc" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>m_readout_errors</name></member>
+      <member refid="classqristal_1_1NoiseModel_1af0809e12f28813fed9a9a9814d8abf9f" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>make_default</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ada4fc78df9f810ae7e5f604d09595363" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>name</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a282aa8650ee16c87c90ef796d7807f93" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ac732d35076fac591a9118f4085995772" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ad8447bba18c74d69966492eb11748fe6" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a649dc24620e8591462037450be2f5081" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>NoiseModel</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a758ed94740351849aff03a4e79717c76" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>operator noise_aware_placement_config</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969a" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>QubitConnectivity</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a7b33ce4d0adbb0cff216aa3685f11a3f" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>set_qobj_compiler</name></member>
+      <member refid="classqristal_1_1NoiseModel_1a6106e83eac9bd5882b0b7068000cd819" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>set_qubit_readout_error</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a429e92654c977e27a930a2c296ea4e7e" prot="private" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>setup_2_qubits</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a510d31af99269dfc2e91e81f165bb7b4" prot="private" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>setup_48_qubits</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a14db5899efc4a8b1d526398547c538da" prot="private" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>setup_64_qubits</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a7c7be37c321481f864c00fd87f5ca4f5" prot="private" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>setup_gate_noise</name></member>
+      <member refid="classqristal_1_1EmulatorNoiseModel_1a76e4f4a8666495a187ea399f47f63327" prot="private" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>setup_NoiseModel_from_json</name></member>
+      <member refid="classqristal_1_1NoiseModel_1aaeda633b965b4296c55428ee47e2e2ae" prot="public" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>to_json</name></member>
+      <member refid="classqristal_1_1NoiseModel_1ab035e0a4c9c2ee9c5ea4ec1a78ad41b7" prot="protected" virt="non-virtual"><scope>qristal::EmulatorNoiseModel</scope><name>to_noise_aware_placement_config</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

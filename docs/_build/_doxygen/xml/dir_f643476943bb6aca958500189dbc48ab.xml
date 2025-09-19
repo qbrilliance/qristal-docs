@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_f643476943bb6aca958500189dbc48ab" kind="dir">
+    <compoundname>core/include/qristal/core/passes</compoundname>
+    <innerfile refid="base__pass_8hpp">base_pass.hpp</innerfile>
+    <innerfile refid="circuit__opt__passes_8hpp">circuit_opt_passes.hpp</innerfile>
+    <innerfile refid="noise__aware__placement__config_8hpp">noise_aware_placement_config.hpp</innerfile>
+    <innerfile refid="noise__aware__placement__pass_8hpp">noise_aware_placement_pass.hpp</innerfile>
+    <innerfile refid="swap__placement__pass_8hpp">swap_placement_pass.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/passes/"/>
+  </compounddef>
+</doxygen>

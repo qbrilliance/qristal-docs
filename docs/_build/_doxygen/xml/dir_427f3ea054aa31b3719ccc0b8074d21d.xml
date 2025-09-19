@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_427f3ea054aa31b3719ccc0b8074d21d" kind="dir">
+    <compoundname>core/include/qristal/core</compoundname>
+    <innerdir refid="dir_9083adfea18fb491594d018834a7e2da">core/include/qristal/core/backends</innerdir>
+    <innerdir refid="dir_2ed9f0e9b89c38eaf222de0cb4fb3e03">core/include/qristal/core/cudaq</innerdir>
+    <innerdir refid="dir_880bc7db582e5dc414d1cddec812c8f2">core/include/qristal/core/noise_model</innerdir>
+    <innerdir refid="dir_ad28d274faa2bad261fd0e7d00d80290">core/include/qristal/core/optimization</innerdir>
+    <innerdir refid="dir_f643476943bb6aca958500189dbc48ab">core/include/qristal/core/passes</innerdir>
+    <innerfile refid="circuit__builder_8hpp">circuit_builder.hpp</innerfile>
+    <innerfile refid="profiler_8hpp">profiler.hpp</innerfile>
+    <innerfile refid="session_8hpp">session.hpp</innerfile>
+    <innerfile refid="thread__pool_8hpp">thread_pool.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/"/>
+  </compounddef>
+</doxygen>

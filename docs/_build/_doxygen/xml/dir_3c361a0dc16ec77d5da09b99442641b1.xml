@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_3c361a0dc16ec77d5da09b99442641b1" kind="dir">
+    <compoundname>emulator/include/qristal</compoundname>
+    <innerdir refid="dir_123bdf06ac9842a77993cf52abc2b731">emulator/include/qristal/emulator</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="emulator/include/qristal/"/>
+  </compounddef>
+</doxygen>

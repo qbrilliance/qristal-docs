@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespaceqristal" kind="namespace" language="C++">
+    <compoundname>qristal</compoundname>
+    <innerclass refid="classqristal_1_1CircuitBuilder" prot="public">qristal::CircuitBuilder</innerclass>
+    <innerclass refid="classqristal_1_1CirqQsim" prot="public">qristal::CirqQsim</innerclass>
+    <innerclass refid="classqristal_1_1CirqQsimCPU" prot="public">qristal::CirqQsimCPU</innerclass>
+    <innerclass refid="classqristal_1_1cudaq__ir__converter" prot="public">qristal::cudaq_ir_converter</innerclass>
+    <innerclass refid="classqristal_1_1cudaq__sim__pool" prot="public">qristal::cudaq_sim_pool</innerclass>
+    <innerclass refid="classqristal_1_1EmulatorNoiseModel" prot="public">qristal::EmulatorNoiseModel</innerclass>
+    <innerclass refid="classqristal_1_1MpsAccelerator" prot="public">qristal::MpsAccelerator</innerclass>
+    <innerclass refid="structqristal_1_1noise__aware__placement__config" prot="public">qristal::noise_aware_placement_config</innerclass>
+    <innerclass refid="classqristal_1_1noise__aware__placement__pass" prot="public">qristal::noise_aware_placement_pass</innerclass>
+    <innerclass refid="structqristal_1_1noise__channel__components" prot="public">qristal::noise_channel_components</innerclass>
+    <innerclass refid="classqristal_1_1NoiseModel" prot="public">qristal::NoiseModel</innerclass>
+    <innerclass refid="structqristal_1_1NoiseProperties" prot="public">qristal::NoiseProperties</innerclass>
+    <innerclass refid="classqristal_1_1optimization__pass" prot="public">qristal::optimization_pass</innerclass>
+    <innerclass refid="structqristal_1_1pair__hash" prot="public">qristal::pair_hash</innerclass>
+    <innerclass refid="classqristal_1_1Pass" prot="public">qristal::Pass</innerclass>
+    <innerclass refid="classqristal_1_1Profiler" prot="public">qristal::Profiler</innerclass>
+    <innerclass refid="structqristal_1_1ReadoutError" prot="public">qristal::ReadoutError</innerclass>
+    <innerclass refid="classqristal_1_1sequence__pass" prot="public">qristal::sequence_pass</innerclass>
+    <innerclass refid="classqristal_1_1session" prot="public">qristal::session</innerclass>
+    <innerclass refid="classqristal_1_1swap__placement__pass" prot="public">qristal::swap_placement_pass</innerclass>
+    <innerclass refid="classqristal_1_1thread__pool" prot="public">qristal::thread_pool</innerclass>
+    <innernamespace refid="namespaceqristal_1_1vqee">qristal::vqee</innernamespace>
+    <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespaceqristal_1a63f4ac514a4b58c1f3a8a4f110c25dba" prot="public" static="no">
+        <type>std::function&lt; std::shared_ptr&lt; xacc::CompositeInstruction &gt;( std::vector&lt; int &gt;, std::vector&lt; int &gt;, std::vector&lt; int &gt;, std::vector&lt; int &gt;, std::vector&lt; int &gt;)&gt;</type>
+        <definition>using qristal::StatePrepFuncCType = 
+      std::function&lt;std::shared_ptr&lt;xacc::CompositeInstruction&gt;(
+          std::vector&lt;int&gt;, std::vector&lt;int&gt;,
+          std::vector&lt;int&gt;, std::vector&lt;int&gt;, std::vector&lt;int&gt;)&gt;</definition>
+        <argsstring></argsstring>
+        <name>StatePrepFuncCType</name>
+        <qualifiedname>qristal::StatePrepFuncCType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/circuit_builder.hpp" line="17" column="3" bodyfile="core/include/qristal/core/circuit_builder.hpp" bodystart="17" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceqristal_1ac6f21a968c4bf3ab893b6c112c397601" prot="public" static="no">
+        <type>std::function&lt; std::shared_ptr&lt; xacc::CompositeInstruction &gt;(int)&gt;</type>
+        <definition>using qristal::OracleFuncCType = 
+      std::function&lt;std::shared_ptr&lt;xacc::CompositeInstruction&gt;(int)&gt;</definition>
+        <argsstring></argsstring>
+        <name>OracleFuncCType</name>
+        <qualifiedname>qristal::OracleFuncCType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/circuit_builder.hpp" line="21" column="3" bodyfile="core/include/qristal/core/circuit_builder.hpp" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" prot="public" static="no">
+        <type><ref refid="classqristal_1_1Pass" kindref="compound">Pass</ref>&lt; <ref refid="classqristal_1_1CircuitBuilder" kindref="compound">CircuitBuilder</ref> &gt;</type>
+        <definition>using qristal::CircuitPass =  Pass&lt;CircuitBuilder&gt;</definition>
+        <argsstring></argsstring>
+        <name>CircuitPass</name>
+        <qualifiedname>qristal::CircuitPass</qualifiedname>
+        <briefdescription>
+<para>Alias the pass that work on <ref refid="classqristal_1_1CircuitBuilder" kindref="compound">CircuitBuilder</ref> (i.e., XACC IR) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/base_pass.hpp" line="29" column="1" bodyfile="core/include/qristal/core/passes/base_pass.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespaceqristal_1a4bf3468c0ee9b4cb3625dbbf20a22150" prot="public" static="no">
+        <type>std::vector&lt; std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt; &gt;</type>
+        <definition>using qristal::Passes =  std::vector&lt;std::shared_ptr&lt;CircuitPass&gt;&gt;</definition>
+        <argsstring></argsstring>
+        <name>Passes</name>
+        <qualifiedname>qristal::Passes</qualifiedname>
+        <briefdescription>
+<para>Alias for a pipeline of passes. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/base_pass.hpp" line="31" column="1" bodyfile="core/include/qristal/core/passes/base_pass.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="namespaceqristal_1a4b5d78bb0bdf8b9a6181a926070e2af6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::set&lt; std::size_t &gt;</type>
+        <definition>std::set&lt; std::size_t &gt; qristal::uniqueBitsQD</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;circ)</argsstring>
+        <name>uniqueBitsQD</name>
+        <qualifiedname>qristal::uniqueBitsQD</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;</type>
+          <declname>circ</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/circuit_builder.hpp" line="24" column="19" bodyfile="core/include/qristal/core/circuit_builder.hpp" bodystart="24" bodyend="52"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a9a73e5108b4c5918f2b1c0f22be34d08" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::execute_on_qb_hardware</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::quantum::qb_qpu &gt; qdk, std::shared_ptr&lt; xacc::AcceleratorBuffer &gt; buffer_b, std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;circuit, bool execute_circuit, bool debug)</argsstring>
+        <name>execute_on_qb_hardware</name>
+        <qualifiedname>qristal::execute_on_qb_hardware</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; <ref refid="classxacc_1_1quantum_1_1qb__qpu" kindref="compound">xacc::quantum::qb_qpu</ref> &gt;</type>
+          <declname>qdk</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; xacc::AcceleratorBuffer &gt;</type>
+          <declname>buffer_b</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;</type>
+          <declname>circuit</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>execute_circuit</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>debug</declname>
+        </param>
+        <briefdescription>
+<para>Execute the circuit on QB hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="195" column="8" declfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" declline="195" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1ac874ad8148f207717824721aba620e4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::load_cudaq_backend</definition>
+        <argsstring>(std::string name)</argsstring>
+        <name>load_cudaq_backend</name>
+        <qualifiedname>qristal::load_cudaq_backend</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Easy loader for cudaq backends. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="14" column="6" declfile="core/include/qristal/core/cudaq/sim_pool.hpp" declline="14" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_noise_aware_placement_pass</definition>
+        <argsstring>(const noise_aware_placement_config &amp;device_info)</argsstring>
+        <name>create_noise_aware_placement_pass</name>
+        <qualifiedname>qristal::create_noise_aware_placement_pass</qualifiedname>
+        <param>
+          <type>const <ref refid="structqristal_1_1noise__aware__placement__config" kindref="compound">noise_aware_placement_config</ref> &amp;</type>
+          <declname>device_info</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory function to create a <computeroutput><ref refid="classqristal_1_1noise__aware__placement__pass" kindref="compound">noise_aware_placement_pass</ref></computeroutput> as a generic <computeroutput>CircuitPass</computeroutput> from a user-provided config </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/noise_aware_placement_pass.hpp" line="51" column="26" bodyfile="core/include/qristal/core/passes/noise_aware_placement_pass.hpp" bodystart="51" bodyend="54"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_noise_aware_placement_pass</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::Accelerator &gt; qpu)</argsstring>
+        <name>create_noise_aware_placement_pass</name>
+        <qualifiedname>qristal::create_noise_aware_placement_pass</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+          <declname>qpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory function to create a <computeroutput><ref refid="classqristal_1_1noise__aware__placement__pass" kindref="compound">noise_aware_placement_pass</ref></computeroutput> as a generic <computeroutput>CircuitPass</computeroutput> from an Accelerator instance, which provides its characterization information </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/noise_aware_placement_pass.hpp" line="60" column="3" bodyfile="core/include/qristal/core/passes/noise_aware_placement_pass.hpp" bodystart="60" bodyend="62"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a2d39d534b08204042c939ff913e8922c" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_swap_placement_pass</definition>
+        <argsstring>(const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;connectivity)</argsstring>
+        <name>create_swap_placement_pass</name>
+        <qualifiedname>qristal::create_swap_placement_pass</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;</type>
+          <declname>connectivity</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory function to create a <computeroutput><ref refid="classqristal_1_1swap__placement__pass" kindref="compound">swap_placement_pass</ref></computeroutput> as a generic <computeroutput>CircuitPass</computeroutput> from a user-provided qubit connectivity topology </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="41" column="26" bodyfile="core/include/qristal/core/passes/swap_placement_pass.hpp" bodystart="41" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a0c7414393b53cd595f315c59da514626" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_swap_placement_pass</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::Accelerator &gt; qpu)</argsstring>
+        <name>create_swap_placement_pass</name>
+        <qualifiedname>qristal::create_swap_placement_pass</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+          <declname>qpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Factory function to create a <computeroutput><ref refid="classqristal_1_1swap__placement__pass" kindref="compound">swap_placement_pass</ref></computeroutput> as a generic <computeroutput>CircuitPass</computeroutput> from an Accelerator instance, which provides its connectivity information </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="49" column="3" bodyfile="core/include/qristal/core/passes/swap_placement_pass.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a25c8bec252abb54a785117a93efcc789" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_circuit_optimizer_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_circuit_optimizer_pass</name>
+        <qualifiedname>qristal::create_circuit_optimizer_pass</qualifiedname>
+        <briefdescription>
+<para>Pattern-based circuit optimization pass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="49" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a933afc036cea2f09756ee761909d7624" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_remove_redundancies_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_remove_redundancies_pass</name>
+        <qualifiedname>qristal::create_remove_redundancies_pass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Remove gate-inverse pairs, merges rotations, removes identity rotations, and removes redundant gates before measure. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="55" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="55" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a3cf3918fcbcb2c559fb2c5336f6b637e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_two_qubit_squash_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_two_qubit_squash_pass</name>
+        <qualifiedname>qristal::create_two_qubit_squash_pass</qualifiedname>
+        <briefdescription>
+<para>Squash together sequences of single- and two-qubit gates into minimal form;. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="61" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a69841193d5b7e6bd134ff73fd9ae0b6d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_peephole_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_peephole_pass</name>
+        <qualifiedname>qristal::create_peephole_pass</qualifiedname>
+        <briefdescription>
+<para>Peephole optimisation including resynthesis of three-qubit gate sequences. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="66" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="66" bodyend="68"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a90f03c5a631a262eed975e2e4acf90dd" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_initial_state_simplify_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_initial_state_simplify_pass</name>
+        <qualifiedname>qristal::create_initial_state_simplify_pass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Whenever a gate transforms a known basis state to another known basis state, remove it, inserting X gates where necessary to achieve the same state.</para>
+<para>Note: this is contextual pass (i.e., the circuit may not represent the same unitary but have the same effect given the initial state) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="76" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="76" bodyend="78"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1aead9720b2d95a57b2dc39424ddc9c64d" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_decompose_swap_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_decompose_swap_pass</name>
+        <qualifiedname>qristal::create_decompose_swap_pass</qualifiedname>
+        <briefdescription>
+<para>Decomposes each SWAP gates into three CNOT gates. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="81" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="81" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a5ec100f2b4fe812def85438236872f02" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_commute_through_multis_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_commute_through_multis_pass</name>
+        <qualifiedname>qristal::create_commute_through_multis_pass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a collection of commutation rules to move single qubit operations past multiqubit operations they commute with, towards the front of the circuit </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="87" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="87" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a35775679e393575b18d35db8cc9582a5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_optimise_post_routing_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_optimise_post_routing_pass</name>
+        <qualifiedname>qristal::create_optimise_post_routing_pass</qualifiedname>
+        <briefdescription>
+<para>Removes redundant gates and simplifies circuits after qubit routing. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="92" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="92" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1afbe251bff9868ec73b65b5c9624c7f48" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_decompose_ZX_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_decompose_ZX_pass</name>
+        <qualifiedname>qristal::create_decompose_ZX_pass</qualifiedname>
+        <briefdescription>
+<para>Rebase of a circuit to use only Rz and Rx rotations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="97" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a33219fda6da905d8cbf8106ae42d0c1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_rebase_to_clifford_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_rebase_to_clifford_pass</name>
+        <qualifiedname>qristal::create_rebase_to_clifford_pass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Rebase of a quantum circuit to Clifford gates, decomposing gates into sequences of Clifford operations </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="103" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="103" bodyend="105"/>
+      </memberdef>
+      <memberdef kind="function" id="namespaceqristal_1a2ae73c58378780bd78e317bab3c07a32" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kindref="member">CircuitPass</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; CircuitPass &gt; qristal::create_optimise_cliffords_pass</definition>
+        <argsstring>()</argsstring>
+        <name>create_optimise_cliffords_pass</name>
+        <qualifiedname>qristal::create_optimise_cliffords_pass</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Applies a number of rewrite rules for simplifying Clifford gate sequences, similar to Duncan &amp; Fagan (<ulink url="https://arxiv.org/abs/1901.10114">https://arxiv.org/abs/1901.10114</ulink>) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="109" column="26" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="109" bodyend="111"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>This file declares an Accelerator backend class based on the Cirq Qsim simulator. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/circuit_builder.hpp" line="15" column="1"/>
+  </compounddef>
+</doxygen>

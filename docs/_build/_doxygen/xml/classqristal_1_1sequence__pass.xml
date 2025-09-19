@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1sequence__pass" kind="class" language="C++" prot="public">
+    <compoundname>qristal::sequence_pass</compoundname>
+    <basecompoundref refid="classqristal_1_1Pass" prot="public" virt="non-virtual">qristal::Pass&lt; CircuitBuilder &gt;</basecompoundref>
+    <includes refid="circuit__opt__passes_8hpp" local="no">circuit_opt_passes.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1sequence__pass_1a8cf959355d271ce9caeb0366b512073d" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; qristal::sequence_pass::m_pass_list</definition>
+        <argsstring></argsstring>
+        <name>m_pass_list</name>
+        <qualifiedname>qristal::sequence_pass::m_pass_list</qualifiedname>
+        <briefdescription>
+<para>List of IR Transformation plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="33" column="19" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1sequence__pass_1abe40ab1c62d2226af0a8139724f21057" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::sequence_pass::sequence_pass</definition>
+        <argsstring>(const std::vector&lt; std::string &gt; &amp;pass_list)</argsstring>
+        <name>sequence_pass</name>
+        <qualifiedname>qristal::sequence_pass::sequence_pass</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::string &gt; &amp;</type>
+          <declname>pass_list</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="36" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1sequence__pass_1a9100b3c635cf16f90f38ed8799dc9563" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::sequence_pass::get_name</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_name</name>
+        <qualifiedname>qristal::sequence_pass::get_name</qualifiedname>
+        <reimplements refid="classqristal_1_1Pass_1ae953fc38b3026afa44c812c35032b955">get_name</reimplements>
+        <briefdescription>
+<para>Returns name of the pass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="39" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1sequence__pass_1a085eaf6236cdc6975c194b18d21b74ad" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::sequence_pass::get_description</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_description</name>
+        <qualifiedname>qristal::sequence_pass::get_description</qualifiedname>
+        <reimplements refid="classqristal_1_1Pass_1a0e357ed3bd93cd40ab26a61d1c5e6e29">get_description</reimplements>
+        <briefdescription>
+<para>Returns the pass description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="42" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1sequence__pass_1ab828b6b171980ca8202fc07411cd81ee" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::sequence_pass::apply</definition>
+        <argsstring>(CircuitBuilder &amp;circuit) override</argsstring>
+        <name>apply</name>
+        <qualifiedname>qristal::sequence_pass::apply</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1CircuitBuilder" kindref="compound">CircuitBuilder</ref> &amp;</type>
+          <declname>circuit</declname>
+        </param>
+        <briefdescription>
+<para>Runs the pass over the circuit IR node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="45" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Sequence pass. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CircuitPass</label>
+        <link refid="classqristal_1_1Pass"/>
+      </node>
+      <node id="1">
+        <label>qristal::sequence_pass</label>
+        <link refid="classqristal_1_1sequence__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CircuitPass</label>
+        <link refid="classqristal_1_1Pass"/>
+      </node>
+      <node id="1">
+        <label>qristal::sequence_pass</label>
+        <link refid="classqristal_1_1sequence__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="30" column="3" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="30" bodyend="46"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1sequence__pass_1ab828b6b171980ca8202fc07411cd81ee" prot="public" virt="virtual"><scope>qristal::sequence_pass</scope><name>apply</name></member>
+      <member refid="classqristal_1_1Pass_1a3f705cea7fae5c37f61b542695a39b2d" prot="public" virt="pure-virtual" ambiguityscope="qristal::Pass::"><scope>qristal::sequence_pass</scope><name>apply</name></member>
+      <member refid="classqristal_1_1sequence__pass_1a085eaf6236cdc6975c194b18d21b74ad" prot="public" virt="virtual"><scope>qristal::sequence_pass</scope><name>get_description</name></member>
+      <member refid="classqristal_1_1sequence__pass_1a9100b3c635cf16f90f38ed8799dc9563" prot="public" virt="virtual"><scope>qristal::sequence_pass</scope><name>get_name</name></member>
+      <member refid="classqristal_1_1sequence__pass_1a8cf959355d271ce9caeb0366b512073d" prot="private" virt="non-virtual"><scope>qristal::sequence_pass</scope><name>m_pass_list</name></member>
+      <member refid="classqristal_1_1sequence__pass_1abe40ab1c62d2226af0a8139724f21057" prot="public" virt="non-virtual"><scope>qristal::sequence_pass</scope><name>sequence_pass</name></member>
+      <member refid="classqristal_1_1Pass_1ad7b2e2f5a7fe881eae2f702dc7c490d5" prot="public" virt="virtual"><scope>qristal::sequence_pass</scope><name>~Pass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

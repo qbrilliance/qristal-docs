@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="swap__placement__pass_8hpp" kind="file" language="C++">
+    <compoundname>swap_placement_pass.hpp</compoundname>
+    <includes refid="base__pass_8hpp" local="no">qristal/core/passes/base_pass.hpp</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="2">
+        <label>qristal/core/passes/base_pass.hpp</label>
+        <link refid="base__pass_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>core/include/qristal/core/passes/swap_placement_pass.hpp</label>
+        <link refid="swap__placement__pass_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="4">
+        <label>string</label>
+      </node>
+      <node id="5">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classqristal_1_1swap__placement__pass" prot="public">qristal::swap_placement_pass</innerclass>
+    <innernamespace refid="namespacexacc">xacc</innernamespace>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/passes/swap_placement_pass.hpp"/>
+  </compounddef>
+</doxygen>

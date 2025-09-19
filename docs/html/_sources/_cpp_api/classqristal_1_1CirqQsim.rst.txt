@@ -1,0 +1,32 @@
+.. _exhale_class_classqristal_1_1CirqQsim:
+
+Class CirqQsim
+==============
+
+- Defined in :ref:`file_emulator_include_qristal_emulator_qsim_qsim_emulator.hpp`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public xacc::Accelerator``
+
+
+Derived Type
+************
+
+- ``public qristal::CirqQsimCPU`` (:ref:`exhale_class_classqristal_1_1CirqQsimCPU`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: qristal::CirqQsim
+   :project: My Project
+   :members:
+   :protected-members:
+   :undoc-members:

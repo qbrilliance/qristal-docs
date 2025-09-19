@@ -1,0 +1,224 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1vqee_1_1LbfgsMLP" kind="class" language="C++" prot="public">
+    <compoundname>qristal::vqee::LbfgsMLP</compoundname>
+    <basecompoundref refid="classqristal_1_1vqee_1_1VqeOpt" prot="public" virt="non-virtual">qristal::vqee::VqeOpt</basecompoundref>
+    <includes refid="case__generator_8hpp" local="no">case_generator.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1LbfgsMLP_1ae3f405d3de633d0feb34e1aa9577195f" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::LbfgsMLP::integer_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>integer_valued_fields_</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::integer_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Integer-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="319" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="319" bodyend="319"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1LbfgsMLP_1a3c5e78efe4fc8b5b1d357f5551dfde4f" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::LbfgsMLP::string_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>string_valued_fields_</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::string_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>String-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="322" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="322" bodyend="322"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1LbfgsMLP_1a3512be5dc9bbefa126ed389cfef0729f" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::LbfgsMLP::boolean_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>boolean_valued_fields_</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::boolean_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Boolean-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="325" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="325" bodyend="325"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1LbfgsMLP_1a8cb9a74cdce79d390c202f6f357d592c" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::LbfgsMLP::double_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>double_valued_fields_</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::double_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Double-valued fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="328" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="328" bodyend="328"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1LbfgsMLP_1ab42faf44f35a9a2bd066bf44de923cb3" prot="private" static="no" mutable="no">
+        <type>std::set&lt; std::string &gt;</type>
+        <definition>std::set&lt;std::string&gt; qristal::vqee::LbfgsMLP::vector_double_valued_fields_</definition>
+        <argsstring></argsstring>
+        <name>vector_double_valued_fields_</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::vector_double_valued_fields_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Vector of double fields. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="331" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="331" bodyend="331"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1LbfgsMLP_1a792dedbfc6df9092098e4528daf27f6b" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; qristal::vqee::LbfgsMLP::all_valid_fields_yaml_xacc_</definition>
+        <argsstring></argsstring>
+        <name>all_valid_fields_yaml_xacc_</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::all_valid_fields_yaml_xacc_</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>Union of all the above fields. Conversion of keys from YAML -&gt; XACC. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="334" column="14" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="334" bodyend="334"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1LbfgsMLP_1a21a278398d0b7c246783392e0745f765" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::LbfgsMLP::LbfgsMLP</definition>
+        <argsstring>()</argsstring>
+        <name>LbfgsMLP</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::LbfgsMLP</qualifiedname>
+        <briefdescription>
+<para>Default constructor - calls the base class and sets the provider name and algorithm name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="338" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="338" bodyend="338"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1LbfgsMLP_1aae863897b49e15c888cedf8db68b6c30" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::LbfgsMLP::LbfgsMLP</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;in_initial_parameters, const int in_maxeval=500000, const double in_ftol=1.0e-4, const YAML::Node &amp;in_node=YAML::Load(&quot;&quot;))</argsstring>
+        <name>LbfgsMLP</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::LbfgsMLP</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>in_initial_parameters</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_maxeval</declname>
+          <defval>500000</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>in_ftol</declname>
+          <defval>1.0e-4</defval>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>in_node</declname>
+          <defval>YAML::Load(&quot;&quot;)</defval>
+        </param>
+        <briefdescription>
+<para>Constructor that shows all defaults. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="341" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="341" bodyend="350"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1LbfgsMLP_1a6794b0ad2fe5cf321d554b4c345aea98" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>std::shared_ptr&lt; xacc::Optimizer &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::Optimizer &gt; qristal::vqee::LbfgsMLP::get</definition>
+        <argsstring>() override</argsstring>
+        <name>get</name>
+        <qualifiedname>qristal::vqee::LbfgsMLP::get</qualifiedname>
+        <reimplements refid="classqristal_1_1vqee_1_1VqeOpt_1a3c48def51b9aef1fc689967acaabc64c">get</reimplements>
+        <briefdescription>
+<para>Getters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="353" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>L-BFGS algorithm from the mlpack library L-BFGS is a gradient-based algorithm (quasi-Newton) </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::vqee::LbfgsMLP</label>
+        <link refid="classqristal_1_1vqee_1_1LbfgsMLP"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>qristal::vqee::LbfgsMLP</label>
+        <link refid="classqristal_1_1vqee_1_1LbfgsMLP"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="316" column="1" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="316" bodyend="354"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a792dedbfc6df9092098e4528daf27f6b" prot="private" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>all_valid_fields_yaml_xacc_</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a3512be5dc9bbefa126ed389cfef0729f" prot="private" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>boolean_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a8cb9a74cdce79d390c202f6f357d592c" prot="private" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a6794b0ad2fe5cf321d554b4c345aea98" prot="public" virt="virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>get</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1ae3f405d3de633d0feb34e1aa9577195f" prot="private" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>integer_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a21a278398d0b7c246783392e0745f765" prot="public" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>LbfgsMLP</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1aae863897b49e15c888cedf8db68b6c30" prot="public" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>LbfgsMLP</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a1cd0d9b40fcb4cae263351fd83087fcb" prot="protected" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>m_algorithm_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0bbf69caef155ac7b23989888ffc30e1" prot="protected" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>m_ftol_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3b070c6f820d778bb10737c7270f09ac" prot="protected" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>m_initial_parameters_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a359613f99bb0a5a8726aea6db5ec9e50" prot="protected" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>m_maxeval_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a90be91f1aac205bfe1202133fd995925" prot="protected" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>m_node_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a4b9d5112c75bbb5bf8d04ee924ac6269" prot="protected" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>m_provider_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a9f72a418b4fd0ed61a1889266641617f" prot="public" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>pass_yaml_to_xacc</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a3c5e78efe4fc8b5b1d357f5551dfde4f" prot="private" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>string_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1ab42faf44f35a9a2bd066bf44de923cb3" prot="private" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>vector_double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0739a3995bb9a8791f9601d46b4a0c04" prot="public" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1ab884657f56b5f7031515d9011d2020b1" prot="public" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1afcff78e87193ec5fae19d7e53f62e51b" prot="public" virt="non-virtual"><scope>qristal::vqee::LbfgsMLP</scope><name>VqeOpt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

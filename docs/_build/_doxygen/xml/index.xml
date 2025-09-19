@@ -1,0 +1,794 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.10.0" xml:lang="en-US">
+  <compound refid="classqristal_1_1vqee_1_1AdamMLP" kind="class"><name>qristal::vqee::AdamMLP</name>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1a4d5d30e954850abf6a9baa025c9625f2" kind="variable"><name>integer_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1ab8eb3b933438a12aa75659e4ce7186dd" kind="variable"><name>string_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1af7871403d1c316bbe715b49f9425e84d" kind="variable"><name>boolean_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1a7de7f82bf44031709d4c9c82a9c54fab" kind="variable"><name>double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1aa520f9b673025dd6b227ffdcf903fc61" kind="variable"><name>vector_double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1ac1dd9436af1c17e8ca7bbf772f57b6b3" kind="variable"><name>all_valid_fields_yaml_xacc_</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1a0320077fd620c6fc75c73ac3d16fa107" kind="function"><name>AdamMLP</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1a8a7c1d576eb9ec866fb04e9b3e4d2353" kind="function"><name>AdamMLP</name></member>
+    <member refid="classqristal_1_1vqee_1_1AdamMLP_1a3c06e2114790024cf0389c69909b0cfc" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="classqristal_1_1CircuitBuilder" kind="class"><name>qristal::CircuitBuilder</name>
+    <member refid="classqristal_1_1CircuitBuilder_1a784880cec7297273125a0b6f1ef63e5f" kind="variable"><name>gate_provider_</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a8e13b2670d9d862a7eae9c111574a797" kind="variable"><name>circuit_</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1af50a0f2915b74570d456154eb7494b55" kind="variable"><name>num_qubits_</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aac8d011b49af73b4dcfbf7faa2e67023" kind="variable"><name>free_params_</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aaa57179d1943d27f189964d8a6933816" kind="variable"><name>is_parametrized_</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1abf6dd2973a1a1b8579afe362e6977483" kind="variable"><name>help_execute_</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a748b1025b648797f9d970d3d71c0f614" kind="function"><name>add_gate_with_free_parameters</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aa4d90e85df4a3ef9c8cf27b1a58182b9" kind="function"><name>add_instruction_params_to_list</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a53d4a4da2349f5fabcc9bb7fbcca1c39" kind="function"><name>CircuitBuilder</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a5e364066aeb765b349561a50cb11bb86" kind="function"><name>CircuitBuilder</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a0fcb89d30b3be4b0ab4f827ef929de9c" kind="function"><name>num_qubits</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ad0609687099a75d1431a1e18ed2d251c" kind="function"><name>CircuitBuilder</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a0137acd47da34a863139a3991dbcff23" kind="function"><name>copy</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a3c3543673b453cf6c8f00173ebf721ee" kind="function"><name>get_free_params</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a0094b2618827a16793bad437799496ef" kind="function"><name>num_free_params</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a049a1d56c1a3e1989b0ec5d1740bc199" kind="function"><name>param_map_to_vec</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aa7ad71d2a928ecf359c9e45c4eec9469" kind="function"><name>is_parametrized</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a4ad890d6ecec54ed0360699cc26becff" kind="function"><name>get</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aae75eaff724fda0dc37c4f8179f7a234" kind="function"><name>print</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a66dda17cfa6d11037a1afb8b792cc731" kind="function"><name>append</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a6824796940c3f523f630b05ec60637ab" kind="function"><name>H</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a81d65032b3398d6e4e6abc719bd7bc50" kind="function"><name>X</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1acbefcb654593fb0663c779175a725ffb" kind="function"><name>Y</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a20bb41fb212eaf7d046385260dcc0819" kind="function"><name>Z</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1abb076e2b68935da65abfdcd6a292c651" kind="function"><name>T</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1afea03bde4c9b8e65f389e57c1f7a4c2c" kind="function"><name>S</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a9f531370eb1f894cbdd08e6532760a6e" kind="function"><name>Tdg</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a3afdcaa2c7e0e31a2df1d32d6ef096bb" kind="function"><name>Sdg</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aca5ddd888cd9f5f52064da9de18deaf1" kind="function"><name>RX</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ac0ff31ee3644c423b61b4ab9df7c0f6c" kind="function"><name>RX</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1abd29205aa76992656c900a5967f825ae" kind="function"><name>RY</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a5af2c796eeeae3ab5b2b48093f9008b8" kind="function"><name>RY</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1afef20d8c47b526ce78c960bf184b7150" kind="function"><name>RZ</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a5c9540f1c8c665571e2902920d606989" kind="function"><name>RZ</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ae8b52eac50e14f622dcf1193ddd355e6" kind="function"><name>U1</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a113ad85dd7bcf525c9510f2b043d5fea" kind="function"><name>U1</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a74ea91afbf5abbcc8d8ef12debdaffa2" kind="function"><name>U3</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a8a2814152e7ed04e077f5282784dd948" kind="function"><name>U3</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a05eb449b4adb20ae83d026f0a9a93275" kind="function"><name>CNOT</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a9e7e8097ec75401bbf3c02ccc2d1547f" kind="function"><name>MCX</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1acab403a4a8681c2dd128e842502b6e77" kind="function"><name>CU</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a2c3a6e97376e6064bfbb209fa5f71e7d" kind="function"><name>CZ</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a614ab02388ac1a050a525785a839f314" kind="function"><name>CH</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a2baa169213a89634a61d9e7c7d8b5ef4" kind="function"><name>CPhase</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ae1596fc37c347f7a4c32b73409f98a75" kind="function"><name>CPhase</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aebb5dc0277762326825cd3744cbe8f13" kind="function"><name>CRZ</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a1ff622d187ba7af5ccaf11db86000e7b" kind="function"><name>CRZ</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a644c41249a543a0cd8548d70d640cb27" kind="function"><name>CRX</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a903d4fc54c675edefec1624cdfc375bc" kind="function"><name>CRX</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a10ae5730134977e95069f8b2259c6212" kind="function"><name>CRY</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a73e957c79f03ac5b8a70f2a41b15a353" kind="function"><name>CRY</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a6f319616279d8be4a71d7a46acd26b3b" kind="function"><name>SWAP</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1abe9e9c0ee2e0110ac67143b422e663d6" kind="function"><name>Measure</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aad5dbbc15618ea2fd68eb9c4d49cfa1b" kind="function"><name>MeasureAll</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aad4fff9d5fb6d857ca2725cc8bdc70df" kind="function"><name>QFT</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aaccf1e73ba3666ff9030c495a7fb2e9e" kind="function"><name>IQFT</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a90395ce56fa426b280977d9684401440" kind="function"><name>QPE</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ab411d67a73368eb1d79a17f2df791c31" kind="function"><name>CanonicalAmplitudeEstimation</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1abb5bb7daa98d6c243c99c975a3408237" kind="function"><name>MultiControlledUWithAncilla</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1adaadb90b475c976cbf31eb71d9dcf887" kind="function"><name>RunCanonicalAmplitudeEstimation</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a63872f0e112401cb84464f16ccaa459c" kind="function"><name>RunCanonicalAmplitudeEstimationWithOracle</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a561c4bf9f985dab642951b269d3a1399" kind="function"><name>RunMLAmplitudeEstimation</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1abd80e7bf538e7b7c63a430ad4ae5140e" kind="function"><name>AmplitudeAmplification</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a3af909648e7f9bc1ce32ad0986b96b1e" kind="function"><name>QPrime</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a3c8391723f4b8c758526633fda8d09ce" kind="function"><name>UPrime</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aeb2afc8271f853f9514565f27fb06a32" kind="function"><name>WPrime</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a2842ea34f3f3eb51f2e52e29d9da6a25" kind="function"><name>UQPrime</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a28d0b3da3937880984719de604fde1d9" kind="function"><name>RippleAdd</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a5f4e2589c9907cf3ad31f3641b3cbbca" kind="function"><name>Comparator_as_Oracle</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ad42db9c0690522effb96674261067c68" kind="function"><name>Comparator</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a2201659818ece951e30e20b4b59d5bcb" kind="function"><name>EfficientEncoding</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a2a7bb02f1590e8da4ee8ff24893c246f" kind="function"><name>EqualityChecker</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a3153d50ad06b50c1ba406c03a9f4bcb8" kind="function"><name>ControlledSwap</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1adcc9894728ead8cbe43fdfe6cf60fad8" kind="function"><name>ControlledAddition</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ac3d5a3fe66175f5c22bcb30557608957" kind="function"><name>GeneralisedMCX</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a1d55e98b83925872c0b15274f0107c20" kind="function"><name>CompareBeamOracle</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a4efdf27b6236366062c4f11a6bed258d" kind="function"><name>SuperpositionAdder</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a57decdd02b16c71d41fe18b98bc5d76f" kind="function"><name>InverseCircuit</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aa632cc5c107c31ef067d92d4e93ad46b" kind="function"><name>Subtraction</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ab7193f2c243d9dc99383cad12d058e80" kind="function"><name>ControlledSubtraction</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a3dbd7f54b2d8dd5628ba16d0fb653c8b" kind="function"><name>ProperFractionDivision</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aa901104ad027eb672ced5265cf609a3f" kind="function"><name>ControlledProperFractionDivision</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a5b4cade7385527515a609b975ddef346" kind="function"><name>CompareGT</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1ae4950f86a33f3a13d3638f5c62e2c8ce" kind="function"><name>Multiplication</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1a01fa56860ad7938d78be90c71c06912f" kind="function"><name>ControlledMultiplication</name></member>
+    <member refid="classqristal_1_1CircuitBuilder_1aeb8cd0e2cd18b7dc35a3765a78959755" kind="function"><name>ExponentialSearch</name></member>
+  </compound>
+  <compound refid="classqristal_1_1CirqQsim" kind="class"><name>qristal::CirqQsim</name>
+    <member refid="classqristal_1_1CirqQsim_1ada65db6e5f2000baf2928eb8dbd84115" kind="variable"><name>m_shots</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a45123fce315b4402e92b6147549d3d57" kind="variable"><name>m_seed</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a42644de8fd5721f4d707699aa5e93f3e" kind="variable"><name>m_ro_errors_enabled</name></member>
+    <member refid="classqristal_1_1CirqQsim_1af616b499dcd7fc709478222ca55211a0" kind="variable"><name>m_noise_model</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a56bff5093aa78e924f611c97a26d9a12" kind="variable"><name>m_noise_channels</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a1da8bc44a3b7751a0543f1c2bc34339f" kind="function"><name>initialize</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a64f32d5cfd01d1af417f783eaacf6bf8" kind="function"><name>updateConfiguration</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a56acfcb85c5859a7a0abee04d5d2845e" kind="function"><name>getBitOrder</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a68649984389299b6ee9e738186d1fb7c" kind="function"><name>getProperties</name></member>
+    <member refid="classqristal_1_1CirqQsim_1ae8bee1708a2fc7b1f8f55cd85771b59d" kind="function"><name>convert_noise_channel</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a29d17935823827bd4dad8bd98757157a" kind="function"><name>execute</name></member>
+    <member refid="classqristal_1_1CirqQsim_1a3f43d4e3ccc694b4a710183bf06f220f" kind="function"><name>run_sim</name></member>
+  </compound>
+  <compound refid="classqristal_1_1CirqQsimCPU" kind="class"><name>qristal::CirqQsimCPU</name>
+    <member refid="classqristal_1_1CirqQsimCPU_1a12c138fbcde086760bb3144ae021d73d" kind="function"><name>name</name></member>
+    <member refid="classqristal_1_1CirqQsimCPU_1ae7234f72281f1afffb6c8cfeeba8d475" kind="function"><name>description</name></member>
+    <member refid="classqristal_1_1CirqQsimCPU_1ac73c2f8841323a89f94a570fc881902d" kind="function"><name>configurationKeys</name></member>
+    <member refid="classqristal_1_1CirqQsimCPU_1ad01b948f2f83c8156501247ddc043c7d" kind="function"><name>execute</name></member>
+    <member refid="classqristal_1_1CirqQsimCPU_1a29d17935823827bd4dad8bd98757157a" kind="function"><name>execute</name></member>
+  </compound>
+  <compound refid="classqristal_1_1vqee_1_1CmaesMLP" kind="class"><name>qristal::vqee::CmaesMLP</name>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1a8bae6899876281d681722c122b730e9b" kind="variable"><name>integer_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1abd69013a08c95716948739303907847e" kind="variable"><name>string_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1a46f76216840e015a211150f721a3c34b" kind="variable"><name>boolean_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1a433acf4786b7acd899bb08781a709d06" kind="variable"><name>double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1a035e3c0435b45956f3ab599b53064c50" kind="variable"><name>vector_double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1af6c3606a49e45ad30291d80273349cd1" kind="variable"><name>all_valid_fields_yaml_xacc_</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1aca34b3b51feb5faab405659ce2ba53ce" kind="function"><name>CmaesMLP</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1a20c997f321cdee39bd6b8a45ad5b0456" kind="function"><name>CmaesMLP</name></member>
+    <member refid="classqristal_1_1vqee_1_1CmaesMLP_1a029dafaa4b576ca0a7a31c214edb0e92" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="classqristal_1_1cudaq__ir__converter" kind="class"><name>qristal::cudaq_ir_converter</name>
+    <member refid="classqristal_1_1cudaq__ir__converter_1ad872b2df2c5e59bb36156f704ff3a882" kind="variable"><name>m_cudaq_builder</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a5d6daa90b4af2014c3182ef9e4e2e315" kind="variable"><name>m_cudaq_qreg</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a569877aee973afa2e2b06d802d11547f" kind="variable"><name>m_var_names</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1ac7dc090dedc06bd5a15fe38071453bb5" kind="variable"><name>m_parsing_util</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a859b8b69464a48d0231a6af28add35aa" kind="function"><name>cudaq_ir_converter</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1ac221e8aa55eed8ac071a9ca8e09bfeca" kind="function"><name>get_cudaq_builder</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1add213a8fd73c54ac1b9e108bec7d5784" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a56b7d1ce715d000a52941f3fbb39b8d3" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a0f5f50937a6469f75a787d4ecb72a5fd" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a6b46c1c45efc4e1956dba6ab7621ce0f" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a58e15339f78dd1d3eccf80330733479e" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a9b32ad42e748046393235f918fe42c8b" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a3b36e926ac08d5e079f07db79429ba56" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1ad16a2c52764d89c1d4585871f44174c1" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a068ce1f002439e968b622443f51b0095" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a9b7ef45dae9f6f9091e21cd1773457bc" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1ab9e00352d5aee333c7c8d5ce49ce3a02" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1adc1ecef5538b45501d54fc9d6ec62b21" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a5c3c11aff0447c4eb3793d00f4bb5f3b" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a37fd2d8c7348a34924f9087257aa0e75" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a0908ec0102a194c0dcc59da9f8b2ab48" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a77c3c944bd0c8b7b8a3e049068355fc4" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a4b3c84e6e16a18d5a030b3ce31310bf9" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a5652b222920afd04aec5d19044cc8f46" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a2c22e109ae5fd322d2b92f94e6e85706" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1aceee1aca30d7d2ae852ac8214fed10f1" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1ab16862c42a1860079c5f9f87b90da150" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a3fda1d822656fbbe207362de20a88a9e" kind="function"><name>visit</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1ab7a8fd802cb70b01126ca1b355387cd9" kind="function"><name>get_mul_factor_expression</name></member>
+    <member refid="classqristal_1_1cudaq__ir__converter_1a06d0b9ffc265b82a5aab16a5d55b5997" kind="function"><name>instruction_variable_to_quake</name></member>
+  </compound>
+  <compound refid="classqristal_1_1cudaq__sim__pool" kind="class"><name>qristal::cudaq_sim_pool</name>
+    <member refid="classqristal_1_1cudaq__sim__pool_1a40e63669a56ebb3eb96517a0eb0c2194" kind="variable"><name>sim_name_to_lib</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1a18814fa23f9a084793d7f2b65215f8ce" kind="variable"><name>sim_name_to_sim_ptr</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1ab0b9852c0e9b76a19b5acc29d5b850be" kind="variable"><name>active_sim</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1abfe6d876fc702856297f32042f7a3baf" kind="variable"><name>nvqir_lib_path</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1aaad36cae49045c3e53f8ddd54a61b547" kind="variable"><name>platform_lib_path</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1a57b107a75f66b8c4c1bdf1884d7fe13d" kind="variable"><name>cudaq_rt_lib_path</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1a1e99df2fddf3f58d84923353f391485b" kind="function"><name>available_simulators</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1ac06a69428ccac52c564ddf2c0e9d6130" kind="function"><name>set_simulator</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1ac180962833d972b0abdac02b46ce3e5a" kind="function"><name>init_cudaq_runtime</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1a5d25ba4f5ce2daad35d5093a828064aa" kind="function"><name>get_instance</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1a715e46756d577c794f369b53556a0c6a" kind="function"><name>cudaq_sim_pool</name></member>
+    <member refid="classqristal_1_1cudaq__sim__pool_1a7e141cb2717445d76ea93dfe5e742f56" kind="function"><name>~cudaq_sim_pool</name></member>
+  </compound>
+  <compound refid="classqristal_1_1EmulatorNoiseModel" kind="class"><name>qristal::EmulatorNoiseModel</name>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abe" kind="enum"><name>Generation</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea2ac1226cbcfae043f000544b71048bc4" kind="enumvalue"><name>nm1</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea8968cee7fdca9ccf005b014287d50326" kind="enumvalue"><name>nm2</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abead2187898ebe460ee6623013a74f692ed" kind="enumvalue"><name>nm3</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abead4410f4c5f1f7f7a205af4c156bdba25" kind="enumvalue"><name>qdk1</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea4c94f2d4bec5a7bc90e49bdfca8b8f1e" kind="enumvalue"><name>qdk2</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a4b6b9c714bad309e29fe0448cedf6abea3e8a7f080b55747dfb5dd20e6b514413" kind="enumvalue"><name>dqc2</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1ace32a9c27e6d171b2e3bc946325e3469" kind="variable"><name>m_noise_prop</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1aefda1184d3ab0c47322738c836a47873" kind="function"><name>EmulatorNoiseModel</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1ad64276559bf93e3841f96e8237ca075d" kind="function"><name>EmulatorNoiseModel</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a56b9f360b99b440e4192e98f4691476e" kind="function"><name>EmulatorNoiseModel</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1ad7056a6cd31669f041a328e0b9007160" kind="function"><name>EmulatorNoiseModel</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a0c8333b7c43e510f91c267829e956548" kind="function"><name>get_ro_errors</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a9c83e488baf0d924ab1a5b7c5e2e9838" kind="function"><name>get_noise_props</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a510d31af99269dfc2e91e81f165bb7b4" kind="function"><name>setup_48_qubits</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a14db5899efc4a8b1d526398547c538da" kind="function"><name>setup_64_qubits</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a429e92654c977e27a930a2c296ea4e7e" kind="function"><name>setup_2_qubits</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a6bfa3a30735c8977b7e009f736d96d43" kind="function"><name>init_noise_props</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a7c7be37c321481f864c00fd87f5ca4f5" kind="function"><name>setup_gate_noise</name></member>
+    <member refid="classqristal_1_1EmulatorNoiseModel_1a76e4f4a8666495a187ea399f47f63327" kind="function"><name>setup_NoiseModel_from_json</name></member>
+  </compound>
+  <compound refid="classqristal_1_1vqee_1_1LbfgsMLP" kind="class"><name>qristal::vqee::LbfgsMLP</name>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1ae3f405d3de633d0feb34e1aa9577195f" kind="variable"><name>integer_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a3c5e78efe4fc8b5b1d357f5551dfde4f" kind="variable"><name>string_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a3512be5dc9bbefa126ed389cfef0729f" kind="variable"><name>boolean_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a8cb9a74cdce79d390c202f6f357d592c" kind="variable"><name>double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1ab42faf44f35a9a2bd066bf44de923cb3" kind="variable"><name>vector_double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a792dedbfc6df9092098e4528daf27f6b" kind="variable"><name>all_valid_fields_yaml_xacc_</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a21a278398d0b7c246783392e0745f765" kind="function"><name>LbfgsMLP</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1aae863897b49e15c888cedf8db68b6c30" kind="function"><name>LbfgsMLP</name></member>
+    <member refid="classqristal_1_1vqee_1_1LbfgsMLP_1a6794b0ad2fe5cf321d554b4c345aea98" kind="function"><name>get</name></member>
+  </compound>
+  <compound refid="classqristal_1_1MpsAccelerator" kind="class"><name>qristal::MpsAccelerator</name>
+    <member refid="classqristal_1_1MpsAccelerator_1a152bdeb2b680ad55c471f55a541bd6a7" kind="variable"><name>m_shots</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1ac48393934730fe4ffd69d40523c1c157" kind="variable"><name>m_noise_model</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a52c108fe71ceafda5d190a1a921e1e0f" kind="variable"><name>m_gpu_device_ids</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1af2cb816c9d432bf9459900c3c2f74916" kind="variable"><name>m_initial_bond_dim</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1ab6de68a89b5aa995002ec68767856c70" kind="variable"><name>m_max_bond_dim</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a0bf6f87c187b123fc099bcf7fddf2c87" kind="variable"><name>m_abs_truncation_threshold</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1ab59e41052e5542e9d05803a28398547a" kind="variable"><name>m_rel_truncation_threshold</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a73ccc5ca822f29f1d19e0eeb451801bc" kind="variable"><name>m_meas_sampling_method</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1aded470ca52cdb3d3a110c36520ab2f33" kind="function"><name>name</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a528562d22a147e2f72c4b0964316997a" kind="function"><name>description</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1ac48c93763dcd6f7dd49895d732bf76a4" kind="function"><name>initialize</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a8b70a0b0f4b6b9e9242083708c7ab693" kind="function"><name>updateConfiguration</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1adf10a4e726e4ee2b92d493cac86f280a" kind="function"><name>configurationKeys</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1ac59e82d5d64c7e0580171fb327bfbf68" kind="function"><name>getBitOrder</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a78911438ce8ab317cf83821d5eab7c10" kind="function"><name>getProperties</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a07313478a9582122b42659679a4686db" kind="function"><name>execute</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a80ba9158953f1d4bc91afb1ec7769a02" kind="function"><name>execute</name></member>
+    <member refid="classqristal_1_1MpsAccelerator_1a8cfcf87ddccaf3f9d92245af67671985" kind="function"><name>apply_noise</name></member>
+  </compound>
+  <compound refid="classqristal_1_1vqee_1_1NelderMeadNLO" kind="class"><name>qristal::vqee::NelderMeadNLO</name>
+    <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a1e46b78847ae445f1f09b96d08075e6a" kind="variable"><name>information_</name></member>
+    <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a6ea3dbf517bf63618a46d9948c09c118" kind="function"><name>NelderMeadNLO</name></member>
+    <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a08de817b1c5197d05f435a14019bb1b5" kind="function"><name>NelderMeadNLO</name></member>
+    <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a1b5be29195c99f37b0e19552f4b41aa9" kind="function"><name>show_info</name></member>
+  </compound>
+  <compound refid="classqristal_1_1vqee_1_1NLO" kind="class"><name>qristal::vqee::NLO</name>
+    <member refid="classqristal_1_1vqee_1_1NLO_1a49483cb30d0e9103d9e18df25182d027" kind="variable"><name>integer_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1a9f0df85b2b31362bfbc5d36598d90518" kind="variable"><name>string_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1a1c3c6fc8db53f7cd9b7c6321a95c33ba" kind="variable"><name>boolean_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1a0a4bf8290deb60b8c684412edbcc2adc" kind="variable"><name>double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1ad13a1dde6d775e26f009eb912f1f3ef0" kind="variable"><name>vector_double_valued_fields_</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1ac4cf45d10a969dd4345bc5d752306963" kind="variable"><name>all_valid_fields_yaml_xacc_</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1a47bcf590c4a28e046e298e7c506f4844" kind="function"><name>NLO</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1ad14e6fc6b29f73ecc06a383c9cdc7b25" kind="function"><name>NLO</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1aea634090d3002fbfaf59b5f611f5da83" kind="function"><name>NLO</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1a58bad4dc17707edbe74dea99f1ce1cc1" kind="function"><name>get</name></member>
+    <member refid="classqristal_1_1vqee_1_1NLO_1adc8d3370ec9da7a211aee934ee36f3d0" kind="function"><name>show_info</name></member>
+  </compound>
+  <compound refid="structqristal_1_1noise__aware__placement__config" kind="struct"><name>qristal::noise_aware_placement_config</name>
+    <member refid="structqristal_1_1noise__aware__placement__config_1afa47a757086937cba0415242486af090" kind="typedef"><name>single_qubit_gate_errors_t</name></member>
+    <member refid="structqristal_1_1noise__aware__placement__config_1a47917e013d716defe15b3b081c11daca" kind="typedef"><name>readout_errors_t</name></member>
+    <member refid="structqristal_1_1noise__aware__placement__config_1ace719b2b53f861de6c9fa5f3e4b4551b" kind="typedef"><name>two_qubit_gate_errors_t</name></member>
+    <member refid="structqristal_1_1noise__aware__placement__config_1a9ba849d8c64e9821969b02addffee628" kind="typedef"><name>device_topology_t</name></member>
+    <member refid="structqristal_1_1noise__aware__placement__config_1a79cea9416f2a223b96201b68303a7ba1" kind="variable"><name>qubit_connectivity</name></member>
+    <member refid="structqristal_1_1noise__aware__placement__config_1a728fdc3f0be666a86cc0b0ade403f22c" kind="variable"><name>avg_single_qubit_gate_errors</name></member>
+    <member refid="structqristal_1_1noise__aware__placement__config_1a6789414dd1c0bbb094928fa9479411e0" kind="variable"><name>avg_two_qubit_gate_errors</name></member>
+    <member refid="structqristal_1_1noise__aware__placement__config_1a97ccc35d7f62514660b0e1a3a292c574" kind="variable"><name>avg_qubit_readout_errors</name></member>
+  </compound>
+  <compound refid="classqristal_1_1noise__aware__placement__pass" kind="class"><name>qristal::noise_aware_placement_pass</name>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1a2224e7e12d33c92c1bea4bdc0745a7a0" kind="variable"><name>m_tket_impl</name></member>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1a4845a813cb9caf9625307e20d1b9b05d" kind="variable"><name>m_device_info</name></member>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1ae9b50996da16bad333ce08bc2fc9ab32" kind="variable"><name>m_qpu</name></member>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1aab96bc96f7143509c84d8dd7797b02b4" kind="function"><name>noise_aware_placement_pass</name></member>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1ae5f0ea55bbbb3cab23ee6cd08dd8929c" kind="function"><name>noise_aware_placement_pass</name></member>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1a4621e09764cbc44a5839f92aea5f7bed" kind="function"><name>get_name</name></member>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1ae601589a6cb63ac5491e843eb07ea89b" kind="function"><name>get_description</name></member>
+    <member refid="classqristal_1_1noise__aware__placement__pass_1a0e91815bb79fb08d77b6853a63c2f6ff" kind="function"><name>apply</name></member>
+  </compound>
+  <compound refid="structqristal_1_1noise__channel__components" kind="struct"><name>qristal::noise_channel_components</name>
+    <member refid="structqristal_1_1noise__channel__components_1aa197a7b8282256b33781067b6a659c6e" kind="variable"><name>qubits</name></member>
+    <member refid="structqristal_1_1noise__channel__components_1a09a964cbbb8d9adf153155d8911d1753" kind="variable"><name>kraus_mats</name></member>
+    <member refid="structqristal_1_1noise__channel__components_1a2f67185654dd45e7cd8dda6873ea74e1" kind="variable"><name>kd_k_mats</name></member>
+    <member refid="structqristal_1_1noise__channel__components_1a2c5c954e75f97b01fa732ecfa7258f5b" kind="variable"><name>kraus_probs</name></member>
+  </compound>
+  <compound refid="classqristal_1_1NoiseModel" kind="class"><name>qristal::NoiseModel</name>
+    <member refid="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969a" kind="enum"><name>QubitConnectivity</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969aa36d1660203217b392162ea278755b789" kind="enumvalue"><name>AllToAll</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ae3ea9275037a2463886083facd27969aa90589c47f06eb971d548591f23c285af" kind="enumvalue"><name>Custom</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ada4fc78df9f810ae7e5f604d09595363" kind="variable"><name>name</name></member>
+    <member refid="classqristal_1_1NoiseModel_1acf455f28687a596488bf44ca8fe6a4ca" kind="variable"><name>m_noise_channels</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a931cc93b56792b0eb7bead733ce979cc" kind="variable"><name>m_readout_errors</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a5da1a0acbc96103b930fd5613a8bfe32" kind="variable"><name>m_qubit_topology</name></member>
+    <member refid="classqristal_1_1NoiseModel_1aa3d234f65a616e34476d776014c3c95a" kind="variable"><name>m_qobj_noise_model</name></member>
+    <member refid="classqristal_1_1NoiseModel_1aacdef41bca7bd9d3df4a5b4d424e51a3" kind="variable"><name>m_qobj_compiler</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a282aa8650ee16c87c90ef796d7807f93" kind="function"><name>NoiseModel</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ac732d35076fac591a9118f4085995772" kind="function"><name>NoiseModel</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ad8447bba18c74d69966492eb11748fe6" kind="function"><name>NoiseModel</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a649dc24620e8591462037450be2f5081" kind="function"><name>NoiseModel</name></member>
+    <member refid="classqristal_1_1NoiseModel_1aaeda633b965b4296c55428ee47e2e2ae" kind="function"><name>to_json</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a4943a12d0ec232889e7a8e8e7996f8d5" kind="function"><name>get_connectivity</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ab44a0c023aaf1263bd5a88468942426b" kind="function"><name>get_readout_errors</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ad21331449bce1b12c492e4afa6a7ae26" kind="function"><name>get_noise_channels</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a5808a0205a33436ae47e3683c0a1f1d0" kind="function"><name>add_gate_error</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a6697476fd330f9a13e16ed7e36ace021" kind="function"><name>add_qubit_connectivity</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a6106e83eac9bd5882b0b7068000cd819" kind="function"><name>set_qubit_readout_error</name></member>
+    <member refid="classqristal_1_1NoiseModel_1acc73ff28358d7eeb179828877e61d061" kind="function"><name>get_qobj_compiler</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a7b33ce4d0adbb0cff216aa3685f11a3f" kind="function"><name>set_qobj_compiler</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a2870c41a96de9aa5b7b50aa5c8e78b3f" kind="function"><name>get_qobj_basis_gates</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a758ed94740351849aff03a4e79717c76" kind="function"><name>operator noise_aware_placement_config</name></member>
+    <member refid="classqristal_1_1NoiseModel_1af0809e12f28813fed9a9a9814d8abf9f" kind="function"><name>make_default</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a0505821676be0f36b6719edbe58bd037" kind="function"><name>decoherence_pauli_error</name></member>
+    <member refid="classqristal_1_1NoiseModel_1ab035e0a4c9c2ee9c5ea4ec1a78ad41b7" kind="function"><name>to_noise_aware_placement_config</name></member>
+    <member refid="classqristal_1_1NoiseModel_1a34dd9594919c66ff0a1539d44e42cc50" kind="function"><name>initialise_noise_properties_from_json</name></member>
+  </compound>
+  <compound refid="structqristal_1_1NoiseProperties" kind="struct"><name>qristal::NoiseProperties</name>
+    <member refid="structqristal_1_1NoiseProperties_1a788efa5d70ac3a0680db55bb7f7c7cb4" kind="variable"><name>t1_us</name></member>
+    <member refid="structqristal_1_1NoiseProperties_1a188ba8a8dffcdc9ffd72f649bb4333f0" kind="variable"><name>t2_us</name></member>
+    <member refid="structqristal_1_1NoiseProperties_1a5f92e8c47c81a02c007fdc4c3e62cd05" kind="variable"><name>readout_errors</name></member>
+    <member refid="structqristal_1_1NoiseProperties_1a1bf88945b271279e2d1f2ff1c21c0ab3" kind="variable"><name>gate_time_us</name></member>
+    <member refid="structqristal_1_1NoiseProperties_1a19573dbd9446520f4856224bc71d99c0" kind="variable"><name>gate_pauli_errors</name></member>
+    <member refid="structqristal_1_1NoiseProperties_1a187aae6a767dcb8ee31adc9bfe113e74" kind="variable"><name>qubit_topology</name></member>
+  </compound>
+  <compound refid="classqristal_1_1optimization__pass" kind="class"><name>qristal::optimization_pass</name>
+    <member refid="classqristal_1_1optimization__pass_1a37884d81c8ca89256beed09acac82aac" kind="variable"><name>m_plugin_name</name></member>
+    <member refid="classqristal_1_1optimization__pass_1a7b0057f7adf4f46d75d004e1cbeac3ca" kind="function"><name>optimization_pass</name></member>
+    <member refid="classqristal_1_1optimization__pass_1a456209a413a5f8cb986dfd1a97f112d7" kind="function"><name>get_name</name></member>
+    <member refid="classqristal_1_1optimization__pass_1a418e967baa6848bf71bc1928bc3aaa7a" kind="function"><name>get_description</name></member>
+    <member refid="classqristal_1_1optimization__pass_1afef2100b54a2cd6cc7b417452556e492" kind="function"><name>apply</name></member>
+  </compound>
+  <compound refid="structqristal_1_1pair__hash" kind="struct"><name>qristal::pair_hash</name>
+    <member refid="structqristal_1_1pair__hash_1a9f9e8da5028c2c50d7ab11060c21a396" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="structqristal_1_1vqee_1_1Params" kind="struct"><name>qristal::vqee::Params</name>
+    <member refid="structqristal_1_1vqee_1_1Params_1a17f0eb57b5c1b374fcd88ac1b46ccd60" kind="variable"><name>ansatz</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1ae245edc80d5c43e8135a38185edb44e4" kind="variable"><name>circuitString</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a3b57349c8193f28fb638786eb798372c" kind="variable"><name>pauliString</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a8c4dd726e60c07a9bb4ff1efca239c51" kind="variable"><name>acceleratorName</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1aececd270328da05685317ac1d764f637" kind="variable"><name>algorithm</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a51bf3e2678f9d4308fec5c6a658e6290" kind="variable"><name>extraOptions</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1aa6df2cbae3d7e5ab8e8777542d2f5434" kind="variable"><name>tolerance</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a487bc4ba2af64841e98ecbef5843113b" kind="variable"><name>optimalValue</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1aa7227180a460374ec33438bb5c37b346" kind="variable"><name>energies</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1aae881bc119c1b94862e87051b253a552" kind="variable"><name>theta</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1aa10daeac4de203f4cde2aaa07cc27421" kind="variable"><name>iterationData</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a82281e98f430d3223a475e3aceff5ee5" kind="variable"><name>nQubits</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a5c811dc5c82c76d8730e6ae5b75e51b6" kind="variable"><name>nShots</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a58491a99aff2b162904ddfdb1b99c45f" kind="variable"><name>maxIters</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1af9b8769b67777299133a0e187aafcf81" kind="variable"><name>nWorker</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a49b8013b93b1537c403bad4272ff634d" kind="variable"><name>nThreadsPerWorker</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a2ca66b5bd2629cd439da4e35e0e8cf96" kind="variable"><name>isDeterministic</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a34a908d351bb19e309d4569c14e5133a" kind="variable"><name>partitioned</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a6bdce9e1b34dcf894af325a286fc56a5" kind="variable"><name>enableVis</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1ac768bec152fc3f69beb26b259f2259d0" kind="variable"><name>showTheta</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a51b75e98660195ba83b7eee85e729d19" kind="variable"><name>limitThetaN</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a4eb8815e2f3f5c8b7af6aee204dfe359" kind="variable"><name>tail</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a12a61921af6eec20b270e8f63011c175" kind="variable"><name>plain</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a1f9a44425fed0199a9f83049e73ba9e1" kind="variable"><name>blocked</name></member>
+    <member refid="structqristal_1_1vqee_1_1Params_1a285355b2b694aca54f4f42a69ce1fad9" kind="variable"><name>vis</name></member>
+  </compound>
+  <compound refid="classqristal_1_1Pass" kind="class"><name>qristal::Pass</name>
+    <member refid="classqristal_1_1Pass_1ad7b2e2f5a7fe881eae2f702dc7c490d5" kind="function"><name>~Pass</name></member>
+    <member refid="classqristal_1_1Pass_1ae953fc38b3026afa44c812c35032b955" kind="function"><name>get_name</name></member>
+    <member refid="classqristal_1_1Pass_1a0e357ed3bd93cd40ab26a61d1c5e6e29" kind="function"><name>get_description</name></member>
+    <member refid="classqristal_1_1Pass_1a3f705cea7fae5c37f61b542695a39b2d" kind="function"><name>apply</name></member>
+  </compound>
+  <compound refid="classqristal_1_1Profiler" kind="class"><name>qristal::Profiler</name>
+    <member refid="classqristal_1_1Profiler_1a0b4f0396f633f04923a777bfd2d79fac" kind="variable"><name>placed_circuit_</name></member>
+    <member refid="classqristal_1_1Profiler_1ac1a8889eb36b68d8a1dec8f2fca7d430" kind="variable"><name>count_1q_gates_on_q_</name></member>
+    <member refid="classqristal_1_1Profiler_1a778da4c46767fb93533ddfc7d0a507d6" kind="variable"><name>count_2q_gates_on_q_</name></member>
+    <member refid="classqristal_1_1Profiler_1a97b7ce781fb4f382e6f97e9ba80d666d" kind="variable"><name>largestdepth_q_</name></member>
+    <member refid="classqristal_1_1Profiler_1a6c58a3d24cc9fb966fb658d2c727577c" kind="variable"><name>n_qubits_</name></member>
+    <member refid="classqristal_1_1Profiler_1a8cef9d17d996857a6111e4034f6492c9" kind="variable"><name>gate_1q_time_ms_</name></member>
+    <member refid="classqristal_1_1Profiler_1adfed550ea37f19358352881bd042a400" kind="variable"><name>gate_2q_time_ms_</name></member>
+    <member refid="classqristal_1_1Profiler_1a46f10e6faf91830726cace53e680f495" kind="variable"><name>q_initialisation_time_ms_</name></member>
+    <member refid="classqristal_1_1Profiler_1a093bc1ba05656d4f6e675894b9dd8aa4" kind="variable"><name>q_readout_time_ms_</name></member>
+    <member refid="classqristal_1_1Profiler_1a8ec4821ca7eacd3304d1e95554ecb0b0" kind="variable"><name>pc_send_to_control_time_ms_</name></member>
+    <member refid="classqristal_1_1Profiler_1a6ad1e516bb90d026c06341e8d6bef142" kind="variable"><name>debug_</name></member>
+    <member refid="classqristal_1_1Profiler_1a098fa58537f644870e4533a5089434ba" kind="variable"><name>KEY_TOTAL_TIME</name></member>
+    <member refid="classqristal_1_1Profiler_1ade438d4c3c2c7cc41e2c481a6f8ee8eb" kind="variable"><name>KEY_INITIALISATION_TIME</name></member>
+    <member refid="classqristal_1_1Profiler_1a72c297cab4d8584ff5e545fa264f12db" kind="variable"><name>KEY_MAX_DEPTH_GATE_TIME</name></member>
+    <member refid="classqristal_1_1Profiler_1aa5951cc0cb75bf583c61958544af360b" kind="variable"><name>KEY_READOUT_TIME</name></member>
+    <member refid="classqristal_1_1Profiler_1a3df5e33965bb907edc9eccdb200b328e" kind="variable"><name>KEY_SIMULATION_TOTAL_TIME</name></member>
+    <member refid="classqristal_1_1Profiler_1ad5c11522b5057402682bd4a23580a756" kind="variable"><name>KEY_PC_SEND_TO_CONTROL_TIME</name></member>
+    <member refid="classqristal_1_1Profiler_1a12c940c0e71a047cebd1b0e316a62688" kind="function"><name>Profiler</name></member>
+    <member refid="classqristal_1_1Profiler_1a89888a04e57854774ed9e3a8ae9036db" kind="function"><name>Profiler</name></member>
+    <member refid="classqristal_1_1Profiler_1a8270725e401733d69748961c3fea2fe9" kind="function"><name>get_total_initialisation_maxgate_readout_time_ms</name></member>
+    <member refid="classqristal_1_1Profiler_1a6160806c8e5227c33eeadddf72454695" kind="function"><name>get_count_1q_gates_on_q</name></member>
+    <member refid="classqristal_1_1Profiler_1a9c4fe8a088dcaa463fc5927c72dddf7a" kind="function"><name>get_count_2q_gates_on_q</name></member>
+    <member refid="classqristal_1_1Profiler_1ae637def1ca2140ae3ba87fac415fe226" kind="function"><name>get_count_1q_gates_on_q</name></member>
+    <member refid="classqristal_1_1Profiler_1aa37d944cb6670ca9ba79aefb2ce1bf46" kind="function"><name>get_count_2q_gates_on_q</name></member>
+    <member refid="classqristal_1_1Profiler_1aefa17e06e835180221855d7b1e5754a2" kind="function"><name>get_largestdepth_q</name></member>
+    <member refid="classqristal_1_1Profiler_1a0f25202b4fe1fb27e37e68b34bbe6aaf" kind="function"><name>run</name></member>
+  </compound>
+  <compound refid="classxacc_1_1quantum_1_1qb__qpu" kind="class"><name>xacc::quantum::qb_qpu</name>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a98e9dc3c6dd26a600a6d777dd13404ac" kind="function"><name>getSignature</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1aa5404057e458cee6ec291d39f71ab4dc" kind="function"><name>name</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a7cb91a6c97046467b0455da30b0c364c" kind="function"><name>description</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a1eb1c1d6c9e9966b066312bf678b4b52" kind="function"><name>get_qbjson</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ad1d64ad460639a23f78d1c1ea91e2d2c" kind="variable"><name>debug</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a34d257cb92bd2762f95e1a838dc1833f" kind="variable"><name>qpu_name</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ad39090c5d678360f00e68abedb618d3e" kind="variable"><name>command</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a4c89ce5afec47afc5bf6ce3b3fe0b6f9" kind="variable"><name>shots</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a9344921ee676d2a3589294142e6680de" kind="variable"><name>poll_secs</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1af8195b742e01c8b62e4aeeaebe351744" kind="variable"><name>n_qubits</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1aa28ae80a10833b903b64e79dcd1d3ee1" kind="variable"><name>init</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a79388610b74c45ca8a019bb29ee1a53f" kind="variable"><name>use_default_contrast_settings</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1af8b5cef7d8a9dbe5ceeec0f919c57cd4" kind="variable"><name>init_contrast_threshold</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1abcdc055581a52389b11ad35c51844d80" kind="variable"><name>qubit_contrast_thresholds</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac606de23524a1c71cce346565ec678a4" kind="variable"><name>circuit_id</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a0d6b1ee79cf5edf0514ee356f527ebb4" kind="variable"><name>results</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a54906f162648cae81e2ea3d37e9f6956" kind="variable"><name>poll_retries</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a6198f8021b7a3d88194719484ef52771" kind="variable"><name>order_of_m</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1af47c770e11f13fe20e678148a36e06de" kind="variable"><name>exclusive_access</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a81709f50962c3d6e8eb7525eff140b95" kind="variable"><name>exclusive_access_token</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a2bcfdb21dae74f4e17b5e85e274371a9" kind="variable"><name>http_header</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac3607548be8d46ae2f074e750a349fe9" kind="variable"><name>qbjson</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ab000e919ee0b6a8295d4e2685b7152a2" kind="function"><name>qb_qpu</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a713f45b859cda189e4f5273da188efe9" kind="function"><name>~qb_qpu</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a77e7cb25cf7d7f66b9205136748c9fee" kind="function"><name>isRemote</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a0023a49a97595269525527ce287acab5" kind="function"><name>getProperties</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a3653d47c6a0cd5474a237bfb98aa563e" kind="function"><name>configurationKeys</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ab8709ab33f1df7fbafe82e9a8b28651e" kind="function"><name>updateConfiguration</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a87ae098810453a9566fd22f6e6aab5e1" kind="function"><name>initialize</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a9221f9b59b3af3ffb1d16f71175eaa95" kind="function"><name>setup_hardware</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a53cbdd450ccd3657e3e4dd65171eebb7" kind="function"><name>execute</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a849758f236611447af9e4c9665df14b1" kind="function"><name>processInput</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ad9c76ceb7ca0d2ec5a9d70468fc822b8" kind="function"><name>processResponse</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a7ae8f401d7a757ecae26f5a0f23326b6" kind="function"><name>poll_for_results</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac00e62ec0c83860c74717d085e4ccc7e" kind="function"><name>Post</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1aeeda3ff05ebfe2e0e7af85090678e09c" kind="function"><name>Get</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac1feb6cb5a19f678c45e04b5510b0435" kind="function"><name>Put</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__qpu_1a9a53b5e9b4d2fa6a5fb5be7cf3b4d291" kind="function"><name>resultsReady</name></member>
+  </compound>
+  <compound refid="classxacc_1_1quantum_1_1qb__visitor" kind="class"><name>xacc::quantum::qb_visitor</name>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a98438c988e2cceea3d2dd80639ca4eeb" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1af5bf7f65d092625595e5e94aa9e8dc0d" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a63bef240f455506db985595c145c586d" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a19730a81846a3725865fb0d8c4d8a955" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a42faab1996df7b28e0ab1747bd87136c" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a64ac684f3fd6880edce5ad6737de8897" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a42bb8159c3643afb76b75ee0a55e1093" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1abd3b5fe40af1e6268ba1c92f348c4f29" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a6948354faed4bac5edcf58aa414cb396" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a75d18dd2f9711e40df5993e5717b55c4" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a4ae4019569f8b7d1f0c649d31eb1cf93" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a8cc7aa42079d28efa4b2d2fdef87f612" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a26a9f5c1ca8e62fe80676bdb66a118f4" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a21602738af1255944bea425b8dc80223" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a7e17b0ee9eda324c900a535b6d01047b" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1ae393a10fee1f27bf4ba590ee5d2ff678" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1ae1c97859287a3ba9d3cabd96736449bd" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a06cfccad87374bfca501d13d6e5ea7e0" kind="function"><name>visit</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a1f8d195d5734433614ce9c861b7295a2" kind="variable"><name>nQubits_</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a969f508d6e4d8d34240b6f259767a3e3" kind="variable"><name>classicalBitCounter_</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a96362484210e9951b52528d2b7d13a85" kind="variable"><name>qubitToClassicalBitIndex_</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a06359cf2599fc2567684a46b4f72acaf" kind="variable"><name>sequence_</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a87e3fc28d02e43b63759ffc8bbc3900b" kind="variable"><name>pi</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a54fa961ff579b94ad00c52f5712af272" kind="variable"><name>restrict_angles_to_pmpi_</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1abaa7d63f06cf6e630afb4e435162b19a" kind="function"><name>qb_visitor</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a25321d5ae3fec713bc070670d89317ad" kind="function"><name>~qb_visitor</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1ab7d605055429363d01026ec29ef6aedc" kind="function"><name>name</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a33bf307823e9c3f50d4f939597d40eec" kind="function"><name>description</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1ac071512d09eb80a35cfaba0f138e4bc3" kind="function"><name>norm</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a74fd046eec90f68987553b9c11f56acf" kind="function"><name>getXasmString</name></member>
+    <member refid="classxacc_1_1quantum_1_1qb__visitor_1a95094c1bd8459bd1d97fea09fbc54553" kind="function"><name>getTranspiledIR</name></member>
+  </compound>
+  <compound refid="structqristal_1_1ReadoutError" kind="struct"><name>qristal::ReadoutError</name>
+    <member refid="structqristal_1_1ReadoutError_1a224ec4e503774555d5a12732afd73401" kind="variable"><name>p_01</name></member>
+    <member refid="structqristal_1_1ReadoutError_1a6356ccc4b236fca17ec70b6748821a53" kind="variable"><name>p_10</name></member>
+  </compound>
+  <compound refid="classqristal_1_1sequence__pass" kind="class"><name>qristal::sequence_pass</name>
+    <member refid="classqristal_1_1sequence__pass_1a8cf959355d271ce9caeb0366b512073d" kind="variable"><name>m_pass_list</name></member>
+    <member refid="classqristal_1_1sequence__pass_1abe40ab1c62d2226af0a8139724f21057" kind="function"><name>sequence_pass</name></member>
+    <member refid="classqristal_1_1sequence__pass_1a9100b3c635cf16f90f38ed8799dc9563" kind="function"><name>get_name</name></member>
+    <member refid="classqristal_1_1sequence__pass_1a085eaf6236cdc6975c194b18d21b74ad" kind="function"><name>get_description</name></member>
+    <member refid="classqristal_1_1sequence__pass_1ab828b6b171980ca8202fc07411cd81ee" kind="function"><name>apply</name></member>
+  </compound>
+  <compound refid="classqristal_1_1session" kind="class"><name>qristal::session</name>
+    <member refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kind="typedef"><name>ibounds</name></member>
+    <member refid="classqristal_1_1session_1a43c3d06d76f61506a7e77501345713ce" kind="typedef"><name>dbounds</name></member>
+    <member refid="classqristal_1_1session_1a4e17815d07da20aa42d6df13dcb1675f" kind="variable"><name>random_circuit_depth_bounds</name></member>
+    <member refid="classqristal_1_1session_1afbacdecc1a75c4cb007a425db2719f4b" kind="variable"><name>sn_bounds</name></member>
+    <member refid="classqristal_1_1session_1adf9449956e70c3325c5298a4eb412fb3" kind="variable"><name>qn_bounds</name></member>
+    <member refid="classqristal_1_1session_1a73ae078cffb680b905e991f599fd4d85" kind="variable"><name>max_bond_bounds</name></member>
+    <member refid="classqristal_1_1session_1a4207a7fd51ca17c3c52711a0762a00b7" kind="variable"><name>initial_bond_bounds</name></member>
+    <member refid="classqristal_1_1session_1a3c40fec1a5d931f749c49b14634fd7fb" kind="variable"><name>max_kraus_bounds</name></member>
+    <member refid="classqristal_1_1session_1a5090bee7181701f4240567e677f54c87" kind="variable"><name>initial_kraus_bounds</name></member>
+    <member refid="classqristal_1_1session_1a72e54a652e7b10aca937e8d69b248ff2" kind="variable"><name>svd_cutoff_bounds</name></member>
+    <member refid="classqristal_1_1session_1aa083dc32a597979604d8e9229b6d3711" kind="variable"><name>EMULATOR_BACKENDS</name></member>
+    <member refid="classqristal_1_1session_1ae00e96a65ae4b671e4dbc0af9958b2ca" kind="variable"><name>NON_EMULATOR_BACKENDS</name></member>
+    <member refid="classqristal_1_1session_1a2fc6cb613c78d83a769d419b599cd3d4" kind="variable"><name>GPU_BACKENDS</name></member>
+    <member refid="classqristal_1_1session_1a57dc4d6435df31b44be99bd7d476d196" kind="variable"><name>NOISY_BACKENDS</name></member>
+    <member refid="classqristal_1_1session_1aacc18477b0737cbe51d8d6af5b430aaf" kind="variable"><name>EXCLUSIVELY_NOISY_BACKENDS</name></member>
+    <member refid="classqristal_1_1session_1a6e2e17942b6ada7912205451681994b5" kind="variable"><name>VALID_AER_SIM_TYPES</name></member>
+    <member refid="classqristal_1_1session_1a6ac63fed2238c8d84561f024ee90725e" kind="variable"><name>MAX_QUBITS_ACCS</name></member>
+    <member refid="classqristal_1_1session_1aa429024e039283b2f29fcde2bc3c24e5" kind="variable"><name>VALID_NOISE_MITIGATIONS</name></member>
+    <member refid="classqristal_1_1session_1a78ad71acc764baf9543bc2fc0f3837d5" kind="variable"><name>VALID_HARDWARE_PLACEMENTS</name></member>
+    <member refid="classqristal_1_1session_1a2b725180b50ce57fdc7a7af87650df5c" kind="variable"><name>VALID_MEASURE_SAMPLING_OPTIONS</name></member>
+    <member refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83" kind="enum"><name>circuit_origin</name></member>
+    <member refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a230d6acb6f4b8e1438dda15467ceaf11" kind="enumvalue"><name>instring</name></member>
+    <member refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a751cc7d88350f6dea73a8a0ff6e948e8" kind="enumvalue"><name>infile</name></member>
+    <member refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a05b9ae9d7dda68bd9b223f8325dbb9e0" kind="enumvalue"><name>random_circuit</name></member>
+    <member refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a4f74d343f26bbd58a8cbbad2cab6a704" kind="enumvalue"><name>IR</name></member>
+    <member refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83ab2a03aad08b4dbca55bebb0d53246c5e" kind="enumvalue"><name>CUDAQ</name></member>
+    <member refid="classqristal_1_1session_1a109a768236056ed39b8d77c2acf092f3" kind="variable"><name>all_bitstring_counts_ordered_by_MSB_</name></member>
+    <member refid="classqristal_1_1session_1a923019e71a8ec12a64e6dbd67cefdc58" kind="variable"><name>remote_backend_database_</name></member>
+    <member refid="classqristal_1_1session_1a9abc4cabf5145c2bf41598a1395c657e" kind="variable"><name>shots_remaining_</name></member>
+    <member refid="classqristal_1_1session_1a788ad6796fd1270550988bbba7ae1998" kind="variable"><name>sn_this_process</name></member>
+    <member refid="classqristal_1_1session_1aa38002606ca596f04a7d4a87b2d73633" kind="variable"><name>acc_uses_n_bit_</name></member>
+    <member refid="classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1" kind="variable"><name>results_</name></member>
+    <member refid="classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835" kind="variable"><name>all_bitstring_counts_</name></member>
+    <member refid="classqristal_1_1session_1a84cdfa196f3fc7c1e9bcc34fd49bd2f4" kind="variable"><name>all_bitstring_probabilities_</name></member>
+    <member refid="classqristal_1_1session_1a5970e6fb263e15a95da55bea41ad048e" kind="variable"><name>all_bitstring_probability_gradients_</name></member>
+    <member refid="classqristal_1_1session_1ad621bfe386caa23d5573f55d46a0b21f" kind="variable"><name>transpiled_circuit_</name></member>
+    <member refid="classqristal_1_1session_1afe1203aa060d777bbe6a65ef897b9094" kind="variable"><name>qobj_</name></member>
+    <member refid="classqristal_1_1session_1aac19758f8da2b7b6afa42d6be1159d3a" kind="variable"><name>qbjson_</name></member>
+    <member refid="classqristal_1_1session_1ab8e1266ef4d8039c0dd0f6a15fb5e8a6" kind="variable"><name>acc_outputs_qbit0_left_</name></member>
+    <member refid="classqristal_1_1session_1a0511f441258d4d34ab0b229c61bb5da6" kind="variable"><name>one_qubit_gate_depths_</name></member>
+    <member refid="classqristal_1_1session_1ab4a9972865f81df1e0eabba041aba2fe" kind="variable"><name>two_qubit_gate_depths_</name></member>
+    <member refid="classqristal_1_1session_1a455a47904ba054508e75be3a7cb7c620" kind="variable"><name>timing_estimates_</name></member>
+    <member refid="classqristal_1_1session_1a9c489990b915cc905f7eb491f3c181e6" kind="variable"><name>z_op_expectation_</name></member>
+    <member refid="classqristal_1_1session_1a6dd0e4bce3f134edda6d527b6ae0a58e" kind="variable"><name>qpu_</name></member>
+    <member refid="classqristal_1_1session_1a63105571297039d9ef540631820dea64" kind="variable"><name>state_vec_</name></member>
+    <member refid="classqristal_1_1session_1aa05ea033dfd813ea67680bc8fad0ce88" kind="variable"><name>perform_SPAM_correction_</name></member>
+    <member refid="classqristal_1_1session_1acadb4e96d90004818e7e29e0683ef29a" kind="variable"><name>results_native_</name></member>
+    <member refid="classqristal_1_1session_1a2946757dbfa5065b4b7a33e9891fd6c0" kind="variable"><name>infile</name></member>
+    <member refid="classqristal_1_1session_1a3d3588bde9991cc02446574394d5ce88" kind="variable"><name>instring</name></member>
+    <member refid="classqristal_1_1session_1a5ef3eacdbca2926eedac7c61d6cb29e1" kind="variable"><name>irtarget</name></member>
+    <member refid="classqristal_1_1session_1af4dd2fcf85e0fc20df0b6970864b6bdd" kind="variable"><name>gpu_device_ids</name></member>
+    <member refid="classqristal_1_1session_1a09f91d389656e990b4e1faaca5798800" kind="variable"><name>cudaq_kernel</name></member>
+    <member refid="classqristal_1_1session_1a580a1c090b84a7f4ea721f432ac5549e" kind="variable"><name>include_qb</name></member>
+    <member refid="classqristal_1_1session_1afeec62eeb3a236e117fcb3fe52af98e8" kind="variable"><name>circuit_parameters</name></member>
+    <member refid="classqristal_1_1session_1a2e583f7324198c056cb1369940743737" kind="variable"><name>calc_gradients</name></member>
+    <member refid="classqristal_1_1session_1a6fba9282aa95d1ef51b88227892406b8" kind="variable"><name>calc_all_bitstring_counts</name></member>
+    <member refid="classqristal_1_1session_1a65794a4e1909ede6220cbbc9d90f24fd" kind="variable"><name>remote_backend_database_path</name></member>
+    <member refid="classqristal_1_1session_1a549b05b5d9c29ae0d23272d9e1f6c258" kind="variable"><name>acc</name></member>
+    <member refid="classqristal_1_1session_1ab362981f46921941d4d31309b495108c" kind="variable"><name>aer_sim_type</name></member>
+    <member refid="classqristal_1_1session_1a98a24fe47ab5c0a9d26aa00fb8cfb122" kind="variable"><name>aer_omp_threads</name></member>
+    <member refid="classqristal_1_1session_1a0bf7060fe60e497ec883b0384e5f8b40" kind="variable"><name>random_circuit_depth</name></member>
+    <member refid="classqristal_1_1session_1afc672280dc08489100604d67e0d791be" kind="variable"><name>input_language</name></member>
+    <member refid="classqristal_1_1session_1ac521fd796defc332fa46098721629cb4" kind="variable"><name>noise</name></member>
+    <member refid="classqristal_1_1session_1a7d4fe14cf0adfbcc531a5801e2233a12" kind="variable"><name>noise_mitigation</name></member>
+    <member refid="classqristal_1_1session_1a8468354b57d209664a493c8faf65ffff" kind="variable"><name>SPAM_correction_matrix</name></member>
+    <member refid="classqristal_1_1session_1a07d04a30a50a586d9c57079a80fb716f" kind="variable"><name>noplacement</name></member>
+    <member refid="classqristal_1_1session_1aa660f2d0956dad412d5c9618baf18402" kind="variable"><name>placement</name></member>
+    <member refid="classqristal_1_1session_1acd31511728463daef7200060c295013f" kind="variable"><name>nooptimise</name></member>
+    <member refid="classqristal_1_1session_1a6d5784437a6f9a2100cdf37f46765bee" kind="variable"><name>circuit_opts</name></member>
+    <member refid="classqristal_1_1session_1a6352302bfd3f97fd37135055b45e33b7" kind="variable"><name>execute_circuit</name></member>
+    <member refid="classqristal_1_1session_1a7d720659d35d807fe0f11513df8c4d32" kind="variable"><name>calc_state_vec</name></member>
+    <member refid="classqristal_1_1session_1a4352a55f2f4ca6eae8a248f7807a48cd" kind="variable"><name>output_oqm_enabled</name></member>
+    <member refid="classqristal_1_1session_1a793943af3dc8061ae5278f5703ac30f4" kind="variable"><name>notiming</name></member>
+    <member refid="classqristal_1_1session_1a8b090b54f10a4e59752277aefc479b4c" kind="variable"><name>qn</name></member>
+    <member refid="classqristal_1_1session_1a4663d2c09d5f26d4f0a652536fa16059" kind="variable"><name>sn</name></member>
+    <member refid="classqristal_1_1session_1a55e35d4e8f40de7df4195a93c77c556d" kind="variable"><name>seed</name></member>
+    <member refid="classqristal_1_1session_1a09462e973f570a501d81de975789e615" kind="variable"><name>initial_bond_dimension</name></member>
+    <member refid="classqristal_1_1session_1add5532ea13fa197f638e6e0c3b08b1f0" kind="variable"><name>max_bond_dimension</name></member>
+    <member refid="classqristal_1_1session_1a68758273625e59795992fc44e306aa43" kind="variable"><name>initial_kraus_dimension</name></member>
+    <member refid="classqristal_1_1session_1a7a807ba5c6d9d0214f711c94a934e610" kind="variable"><name>max_kraus_dimension</name></member>
+    <member refid="classqristal_1_1session_1a51f9628af0d8975413606b462917329a" kind="variable"><name>svd_cutoff</name></member>
+    <member refid="classqristal_1_1session_1a424439ab395be09c86a2735e7a1971de" kind="variable"><name>rel_svd_cutoff</name></member>
+    <member refid="classqristal_1_1session_1a668f50dd9741d4e006c4ff1c3d372c45" kind="variable"><name>measure_sample_method</name></member>
+    <member refid="classqristal_1_1session_1abbca7d5c2efdfafdeb625c3567c42e40" kind="variable"><name>noise_model</name></member>
+    <member refid="classqristal_1_1session_1a3115c39b8194eeaaf48a0d7bdba89a34" kind="variable"><name>debug</name></member>
+    <member refid="classqristal_1_1session_1af82a4621c78f0211fd917b9373e52c9c" kind="function"><name>session</name></member>
+    <member refid="classqristal_1_1session_1ac4b9c88c8bc64ec8a7a88359733421ab" kind="function"><name>session</name></member>
+    <member refid="classqristal_1_1session_1a0ae52c2bec73d7651bcb12dad0d6017f" kind="function"><name>bind_args_to_cudaq_kernel</name></member>
+    <member refid="classqristal_1_1session_1a8ee6d535eb1a476b62d80e5683a27c65" kind="function"><name>results</name></member>
+    <member refid="classqristal_1_1session_1a9ff17b96ad67d1adaddb4ec7e7dc1b69" kind="function"><name>results_native</name></member>
+    <member refid="classqristal_1_1session_1af4d57609d0276448ad1a392fff4ad040" kind="function"><name>state_vec</name></member>
+    <member refid="classqristal_1_1session_1a8cdde9a6c29def321c740da12e49abb7" kind="function"><name>all_bitstring_counts</name></member>
+    <member refid="classqristal_1_1session_1a8329f327bcc795412911b286b2951231" kind="function"><name>all_bitstring_probabilities</name></member>
+    <member refid="classqristal_1_1session_1af5613e6d83a190a61bab79f56efe5137" kind="function"><name>all_bitstring_probability_gradients</name></member>
+    <member refid="classqristal_1_1session_1a82a08dc64ab70627901ae59f81cd05d8" kind="function"><name>transpiled_circuit</name></member>
+    <member refid="classqristal_1_1session_1a4a3ebdeeb9564526049d0e4ac04a26e8" kind="function"><name>qobj</name></member>
+    <member refid="classqristal_1_1session_1a75b4c770ce1d1469bbf53fbc9a3b952c" kind="function"><name>qbjson</name></member>
+    <member refid="classqristal_1_1session_1af098f70498292136d9e834c751a7137c" kind="function"><name>one_qubit_gate_depths</name></member>
+    <member refid="classqristal_1_1session_1aaa5036cf19116a31372ebefd896d39c9" kind="function"><name>two_qubit_gate_depths</name></member>
+    <member refid="classqristal_1_1session_1a62e38a43d2c32d8939b7a125f1195589" kind="function"><name>timing_estimates</name></member>
+    <member refid="classqristal_1_1session_1a794cf0536db3fbffd7ca8497526892b1" kind="function"><name>z_op_expectation</name></member>
+    <member refid="classqristal_1_1session_1ad86a42eabf6ae45194765dddc5f1e661" kind="function"><name>set_SPAM_confusion_matrix</name></member>
+    <member refid="classqristal_1_1session_1a80a093b59b56935424db76429404b3ee" kind="function"><name>get_SPAM_confusion_matrix</name></member>
+    <member refid="classqristal_1_1session_1a23d3e6d4b672caebf1177e5a545b3354" kind="function"><name>validate</name></member>
+    <member refid="classqristal_1_1session_1a683e336235170efd6b1619ce634b9a75" kind="function"><name>run_with_SPAM</name></member>
+    <member refid="classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a" kind="function"><name>run</name></member>
+    <member refid="classqristal_1_1session_1ac150efbb5fe87dfed4d649225d786c97" kind="function"><name>cancel_run</name></member>
+    <member refid="classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141" kind="function"><name>bitstring_index</name></member>
+    <member refid="classqristal_1_1session_1ab6cf68777d40b84b7b582d728a58503d" kind="function"><name>draw_shot</name></member>
+    <member refid="classqristal_1_1session_1a9edbf5aebc5708e6617c2d9fb3ccf325" kind="function"><name>random_circuit</name></member>
+    <member refid="classqristal_1_1session_1af1e59e8c32264941874d018602e3775f" kind="function"><name>deduce_circuit_origin</name></member>
+    <member refid="classqristal_1_1session_1a7b2bf684b3ef0404fac2641c1cab1d5f" kind="function"><name>process_run_result</name></member>
+    <member refid="classqristal_1_1session_1a1abbec2b62faef7f3085646bf248d778" kind="function"><name>compile_input</name></member>
+    <member refid="classqristal_1_1session_1a5d75e924ae66792d62c559e5c43c4248" kind="function"><name>get_target_circuit_qasm_string</name></member>
+    <member refid="classqristal_1_1session_1a7109201d5418a2427c980158cdf84b6e" kind="function"><name>configure_backend</name></member>
+    <member refid="classqristal_1_1session_1ab3fc930df1bbbe6ea3295f56f9fc295c" kind="function"><name>get_sim_qpu</name></member>
+    <member refid="classqristal_1_1session_1aafd7a29563269548ea4a1dcd67a5554d" kind="function"><name>run_gradients</name></member>
+    <member refid="classqristal_1_1session_1a44477544a0e7c89e245df6dfe1b9e115" kind="function"><name>execute_on_simulator</name></member>
+    <member refid="classqristal_1_1session_1aa846662dafe779bde077c3d3627271cb" kind="function"><name>populate_measure_counts_data</name></member>
+    <member refid="classqristal_1_1session_1a63c2df41ea88d630722bdc06332d27cf" kind="function"><name>convertRawOpenQasmToQBKernel</name></member>
+  </compound>
+  <compound refid="classqristal_1_1swap__placement__pass" kind="class"><name>qristal::swap_placement_pass</name>
+    <member refid="classqristal_1_1swap__placement__pass_1a78f6073f61d5e63ef5e9c879be6aea24" kind="variable"><name>m_connectivity</name></member>
+    <member refid="classqristal_1_1swap__placement__pass_1a98f1df5e4c0df716ff27a3cf051afeca" kind="function"><name>swap_placement_pass</name></member>
+    <member refid="classqristal_1_1swap__placement__pass_1ae969f6b04a1d5969311764837f4dc29e" kind="function"><name>swap_placement_pass</name></member>
+    <member refid="classqristal_1_1swap__placement__pass_1aa87f68ea5632d08c71d34e443baeef0c" kind="function"><name>get_name</name></member>
+    <member refid="classqristal_1_1swap__placement__pass_1a1fb7ecb90b498786f35be98e3e0e50d1" kind="function"><name>get_description</name></member>
+    <member refid="classqristal_1_1swap__placement__pass_1a864ac8204f0531a176fe1ccdd72c975e" kind="function"><name>apply</name></member>
+  </compound>
+  <compound refid="classqristal_1_1thread__pool" kind="class"><name>qristal::thread_pool</name>
+    <member refid="classqristal_1_1thread__pool_1a1070527c9859c32e29270660b755cd32" kind="variable"><name>num_threads</name></member>
+    <member refid="classqristal_1_1thread__pool_1ab6c12539cb74b0097779573883082c54" kind="variable"><name>num_active_threads</name></member>
+    <member refid="classqristal_1_1thread__pool_1a471bfec4681bffb3cefe19d2af93771b" kind="variable"><name>threads</name></member>
+    <member refid="classqristal_1_1thread__pool_1a5e0205e63cb6c0f0a0934890fbe844cf" kind="variable"><name>queue</name></member>
+    <member refid="classqristal_1_1thread__pool_1a7d2b75ee4dd63735da151ba39e420b6d" kind="variable"><name>queue_m</name></member>
+    <member refid="classqristal_1_1thread__pool_1a31a94548d6934c93082f410e887365fa" kind="variable"><name>threads_m</name></member>
+    <member refid="classqristal_1_1thread__pool_1aae29778190c430a8470d1ae5d3a8f546" kind="variable"><name>shutting_down</name></member>
+    <member refid="classqristal_1_1thread__pool_1a1e6bf40b72a0fa84e45518460f6c4b5f" kind="function"><name>set_num_threads</name></member>
+    <member refid="classqristal_1_1thread__pool_1acadf9563b1763197ae960a6bdd5b5381" kind="function"><name>get_num_threads</name></member>
+    <member refid="classqristal_1_1thread__pool_1af879e6c4c2dddf41708ae9ed6b1e86bc" kind="function"><name>submit</name></member>
+    <member refid="classqristal_1_1thread__pool_1a6ebfa207de043add0d8c5764107d4f77" kind="function"><name>submit</name></member>
+    <member refid="classqristal_1_1thread__pool_1a829367ea9d19e47556301d516fc236ea" kind="function"><name>set_num_threads_internal</name></member>
+    <member refid="classqristal_1_1thread__pool_1aa55ee52e7c1d2dff1da243a9dae3dc22" kind="function"><name>get_num_threads_internal</name></member>
+    <member refid="classqristal_1_1thread__pool_1a68c3a4017fed0101d6bdfd0def3fdf95" kind="function"><name>internal_submit</name></member>
+    <member refid="classqristal_1_1thread__pool_1a2e0b65ff6d6100901a66c557570d04dc" kind="function"><name>internal_submit</name></member>
+    <member refid="classqristal_1_1thread__pool_1a1c1fa82fb479bf4eea43ae41954f4a79" kind="function"><name>thread_pool</name></member>
+    <member refid="classqristal_1_1thread__pool_1afa8b3330d11520121294a75d260a8e70" kind="function"><name>operator=</name></member>
+    <member refid="classqristal_1_1thread__pool_1a394b48a4754885ef77956210f7a3185a" kind="function"><name>get_instance</name></member>
+    <member refid="classqristal_1_1thread__pool_1a07a869539fb9f8d5d1e22f55936b23fa" kind="function"><name>thread_pool</name></member>
+    <member refid="classqristal_1_1thread__pool_1a60f3ce58b18aa73698b6169fc651a128" kind="function"><name>~thread_pool</name></member>
+    <member refid="classqristal_1_1thread__pool_1aceb872659c32f2fbd973ec0385ebfe8e" kind="function"><name>initialise_thread</name></member>
+    <member refid="classqristal_1_1thread__pool_1af83245a43e1d628056c42a6dee40dbbf" kind="function"><name>loop</name></member>
+  </compound>
+  <compound refid="structqristal_1_1vqee_1_1vqe__iteration__data" kind="struct"><name>qristal::vqee::vqe_iteration_data</name>
+    <member refid="structqristal_1_1vqee_1_1vqe__iteration__data_1a44f80b0d95567d69b2c8cf8b32a408e1" kind="variable"><name>energy</name></member>
+    <member refid="structqristal_1_1vqee_1_1vqe__iteration__data_1aaf79ecf2746d1c2701fca82200836571" kind="variable"><name>params</name></member>
+    <member refid="structqristal_1_1vqee_1_1vqe__iteration__data_1ab4bb3e086878ee47443dce3a3e5d32ac" kind="function"><name>operator==</name></member>
+  </compound>
+  <compound refid="classqristal_1_1vqee_1_1VQEE" kind="class"><name>qristal::vqee::VQEE</name>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1a6ce43ad9fc4ecea996d8ee92e1ccd165" kind="variable"><name>isRoot_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1a7b0d42133a8dab4c96d20794aa21d948" kind="variable"><name>isParallel_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1afcaee4e68a2d199d108b4f485746da3f" kind="variable"><name>params_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1a7c6bb3a2b40c0b243cbe72d0543084e3" kind="function"><name>VQEE</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1ad92334ec66a82760dff565916d65f418" kind="function"><name>optimize</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1ae7c42a8df4ed892fb1a8833c1d9fc718" kind="function"><name>splitPauli</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1a0cb0f72e7938316de904f4bfd5c6f235" kind="function"><name>getAccelerator</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1a4fa739a49f36aba04346e776bd871557" kind="function"><name>getAnsatz</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1ad0a6c9c56d4296cb0f6b3f912d5af31a" kind="function"><name>getObservable</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1af444870fca76a5368fa0f519baa7333e" kind="function"><name>getOptimumIterationE</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1aa384fadf4140846a6029a36a8b3fa89a" kind="function"><name>generateThetaEnergyVis</name></member>
+    <member refid="classqristal_1_1vqee_1_1VQEE_1ab6761f1732b81e27ddf6b0e45b8d1706" kind="function"><name>generateEnergyVis</name></member>
+  </compound>
+  <compound refid="classqristal_1_1vqee_1_1VqeOpt" kind="class"><name>qristal::vqee::VqeOpt</name>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a4b9d5112c75bbb5bf8d04ee924ac6269" kind="variable"><name>m_provider_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a1cd0d9b40fcb4cae263351fd83087fcb" kind="variable"><name>m_algorithm_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3b070c6f820d778bb10737c7270f09ac" kind="variable"><name>m_initial_parameters_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a359613f99bb0a5a8726aea6db5ec9e50" kind="variable"><name>m_maxeval_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0bbf69caef155ac7b23989888ffc30e1" kind="variable"><name>m_ftol_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a90be91f1aac205bfe1202133fd995925" kind="variable"><name>m_node_</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0739a3995bb9a8791f9601d46b4a0c04" kind="function"><name>VqeOpt</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1ab884657f56b5f7031515d9011d2020b1" kind="function"><name>VqeOpt</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1afcff78e87193ec5fae19d7e53f62e51b" kind="function"><name>VqeOpt</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3c48def51b9aef1fc689967acaabc64c" kind="function"><name>get</name></member>
+    <member refid="classqristal_1_1vqee_1_1VqeOpt_1a9f72a418b4fd0ed61a1889266641617f" kind="function"><name>pass_yaml_to_xacc</name></member>
+  </compound>
+  <compound refid="namespacenvqir" kind="namespace"><name>nvqir</name>
+  </compound>
+  <compound refid="namespaceqristal" kind="namespace"><name>qristal</name>
+    <member refid="namespaceqristal_1a63f4ac514a4b58c1f3a8a4f110c25dba" kind="typedef"><name>StatePrepFuncCType</name></member>
+    <member refid="namespaceqristal_1ac6f21a968c4bf3ab893b6c112c397601" kind="typedef"><name>OracleFuncCType</name></member>
+    <member refid="namespaceqristal_1a5486a0f985ae1fa478ad25472d099903" kind="typedef"><name>CircuitPass</name></member>
+    <member refid="namespaceqristal_1a4bf3468c0ee9b4cb3625dbbf20a22150" kind="typedef"><name>Passes</name></member>
+    <member refid="namespaceqristal_1a4b5d78bb0bdf8b9a6181a926070e2af6" kind="function"><name>uniqueBitsQD</name></member>
+    <member refid="namespaceqristal_1a9a73e5108b4c5918f2b1c0f22be34d08" kind="function"><name>execute_on_qb_hardware</name></member>
+    <member refid="namespaceqristal_1ac874ad8148f207717824721aba620e4c" kind="function"><name>load_cudaq_backend</name></member>
+    <member refid="namespaceqristal_1a717e4729da81e7d44b1180889a7c3fac" kind="function"><name>create_noise_aware_placement_pass</name></member>
+    <member refid="namespaceqristal_1aa13e379a0c2cb8df6223c9a145b37c59" kind="function"><name>create_noise_aware_placement_pass</name></member>
+    <member refid="namespaceqristal_1a2d39d534b08204042c939ff913e8922c" kind="function"><name>create_swap_placement_pass</name></member>
+    <member refid="namespaceqristal_1a0c7414393b53cd595f315c59da514626" kind="function"><name>create_swap_placement_pass</name></member>
+    <member refid="namespaceqristal_1a25c8bec252abb54a785117a93efcc789" kind="function"><name>create_circuit_optimizer_pass</name></member>
+    <member refid="namespaceqristal_1a933afc036cea2f09756ee761909d7624" kind="function"><name>create_remove_redundancies_pass</name></member>
+    <member refid="namespaceqristal_1a3cf3918fcbcb2c559fb2c5336f6b637e" kind="function"><name>create_two_qubit_squash_pass</name></member>
+    <member refid="namespaceqristal_1a69841193d5b7e6bd134ff73fd9ae0b6d" kind="function"><name>create_peephole_pass</name></member>
+    <member refid="namespaceqristal_1a90f03c5a631a262eed975e2e4acf90dd" kind="function"><name>create_initial_state_simplify_pass</name></member>
+    <member refid="namespaceqristal_1aead9720b2d95a57b2dc39424ddc9c64d" kind="function"><name>create_decompose_swap_pass</name></member>
+    <member refid="namespaceqristal_1a5ec100f2b4fe812def85438236872f02" kind="function"><name>create_commute_through_multis_pass</name></member>
+    <member refid="namespaceqristal_1a35775679e393575b18d35db8cc9582a5" kind="function"><name>create_optimise_post_routing_pass</name></member>
+    <member refid="namespaceqristal_1afbe251bff9868ec73b65b5c9624c7f48" kind="function"><name>create_decompose_ZX_pass</name></member>
+    <member refid="namespaceqristal_1a33219fda6da905d8cbf8106ae42d0c1a" kind="function"><name>create_rebase_to_clifford_pass</name></member>
+    <member refid="namespaceqristal_1a2ae73c58378780bd78e317bab3c07a32" kind="function"><name>create_optimise_cliffords_pass</name></member>
+  </compound>
+  <compound refid="namespaceqristal_1_1vqee" kind="namespace"><name>qristal::vqee</name>
+    <member refid="case__generator_8hpp_1a78dd4cb59afb128640ea563bcf401baa" kind="enum"><name>AnsatzID</name></member>
+    <member refid="case__generator_8hpp_1a78dd4cb59afb128640ea563bcf401baaa14fc5b114241f42a7af1bca6b8c8e12b" kind="enumvalue"><name>HEA</name></member>
+    <member refid="case__generator_8hpp_1a78dd4cb59afb128640ea563bcf401baaa654b1458e514786762ebe0a0c6540ce1" kind="enumvalue"><name>UCCSD</name></member>
+    <member refid="case__generator_8hpp_1a78dd4cb59afb128640ea563bcf401baaafe2e0969d62f5c643cc2f2f899c855bc" kind="enumvalue"><name>ASWAP</name></member>
+    <member refid="case__generator_8hpp_1aa10333edc26c1e7d68bbcdfc4b90575c" kind="enum"><name>JobID</name></member>
+    <member refid="case__generator_8hpp_1aa10333edc26c1e7d68bbcdfc4b90575cae06464e7d3cdf9a6950942e9b3d8b174" kind="enumvalue"><name>H2_explicit</name></member>
+    <member refid="case__generator_8hpp_1aa10333edc26c1e7d68bbcdfc4b90575ca1e83b855abff60db7b9150eab89e89cd" kind="enumvalue"><name>H1_HEA</name></member>
+    <member refid="case__generator_8hpp_1aa10333edc26c1e7d68bbcdfc4b90575cab939f4580970e8bc527342b373404fd7" kind="enumvalue"><name>H2_UCCSD</name></member>
+    <member refid="case__generator_8hpp_1aa10333edc26c1e7d68bbcdfc4b90575caa57a5f20a74b1ff8010480dc9f54988a" kind="enumvalue"><name>H2_ASWAP</name></member>
+    <member refid="case__generator_8hpp_1aa10333edc26c1e7d68bbcdfc4b90575cada12a39c747c355af378fdcf92b4a38a" kind="enumvalue"><name>H5_UCCSD</name></member>
+    <member refid="case__generator_8hpp_1a475f7114f7c5c98ba342d80ad493f0ef" kind="function"><name>ansatzToString</name></member>
+    <member refid="case__generator_8hpp_1aa41e4bc1c0abb8609cf1cd7f462bccc2" kind="function"><name>stringToAnsatz</name></member>
+    <member refid="case__generator_8hpp_1ab843871a089a9a2361d8e9c4d7b947cb" kind="function"><name>HEA_String</name></member>
+    <member refid="case__generator_8hpp_1a92f11964f5042cfc4f77d35c3082793e" kind="function"><name>HEA_Ansatz</name></member>
+    <member refid="case__generator_8hpp_1ab19835bd104c8690ff23116e72aed461" kind="function"><name>UCCSD_Ansatz</name></member>
+    <member refid="case__generator_8hpp_1a00e9c2eba208fcb4fd182ccf7559589b" kind="function"><name>ASWAP_Ansatz</name></member>
+    <member refid="case__generator_8hpp_1a1a957616b0909e087a2ed62237f7fe76" kind="function"><name>getEnumName</name></member>
+    <member refid="case__generator_8hpp_1a479faad80a0991c55869b018674d2947" kind="function"><name>getEnumFromName</name></member>
+    <member refid="case__generator_8hpp_1a8ecaa71ad6546cd528dd13934c25ca28" kind="function"><name>setAnsatz</name></member>
+    <member refid="case__generator_8hpp_1a5e802f970d241a2341983052458b3f90" kind="function"><name>pauliStringFromGeometry</name></member>
+    <member refid="case__generator_8hpp_1a3ca0638d0a6ba01ccc9c96ab653a6dfc" kind="function"><name>hydrogenChainGeometry</name></member>
+    <member refid="case__generator_8hpp_1a7abc548c902c4cac1f894e173cfdac21" kind="function"><name>makeJob</name></member>
+  </compound>
+  <compound refid="namespacexacc" kind="namespace"><name>xacc</name>
+  </compound>
+  <compound refid="namespacexacc_1_1quantum" kind="namespace"><name>xacc::quantum</name>
+  </compound>
+  <compound refid="qb__qpu_8hpp" kind="file"><name>qb_qpu.hpp</name>
+  </compound>
+  <compound refid="qb__visitor_8hpp" kind="file"><name>qb_visitor.hpp</name>
+  </compound>
+  <compound refid="circuit__builder_8hpp" kind="file"><name>circuit_builder.hpp</name>
+  </compound>
+  <compound refid="ir__converter_8hpp" kind="file"><name>ir_converter.hpp</name>
+  </compound>
+  <compound refid="sim__pool_8hpp" kind="file"><name>sim_pool.hpp</name>
+  </compound>
+  <compound refid="noise__model_8hpp" kind="file"><name>noise_model.hpp</name>
+  </compound>
+  <compound refid="noise__properties_8hpp" kind="file"><name>noise_properties.hpp</name>
+  </compound>
+  <compound refid="readout__error_8hpp" kind="file"><name>readout_error.hpp</name>
+  </compound>
+  <compound refid="case__generator_8hpp" kind="file"><name>case_generator.hpp</name>
+  </compound>
+  <compound refid="vqee_8hpp" kind="file"><name>vqee.hpp</name>
+  </compound>
+  <compound refid="base__pass_8hpp" kind="file"><name>base_pass.hpp</name>
+  </compound>
+  <compound refid="circuit__opt__passes_8hpp" kind="file"><name>circuit_opt_passes.hpp</name>
+  </compound>
+  <compound refid="noise__aware__placement__config_8hpp" kind="file"><name>noise_aware_placement_config.hpp</name>
+  </compound>
+  <compound refid="noise__aware__placement__pass_8hpp" kind="file"><name>noise_aware_placement_pass.hpp</name>
+  </compound>
+  <compound refid="swap__placement__pass_8hpp" kind="file"><name>swap_placement_pass.hpp</name>
+  </compound>
+  <compound refid="profiler_8hpp" kind="file"><name>profiler.hpp</name>
+  </compound>
+  <compound refid="session_8hpp" kind="file"><name>session.hpp</name>
+  </compound>
+  <compound refid="thread__pool_8hpp" kind="file"><name>thread_pool.hpp</name>
+  </compound>
+  <compound refid="emulator_8hpp" kind="file"><name>emulator.hpp</name>
+    <member refid="emulator_8hpp_1adfaff34883361f2dd62b27550bac36fe" kind="function"><name>get_emulator_noise_model</name></member>
+    <member refid="emulator_8hpp_1a832ddfffd686829905846c26ac967d11" kind="function"><name>emulator_initialize</name></member>
+    <member refid="emulator_8hpp_1aaa8323809b05568a3f75b76eca97c5b7" kind="function"><name>emulator_built_with_cuda</name></member>
+  </compound>
+  <compound refid="EmulatorNoiseModel_8hpp" kind="file"><name>EmulatorNoiseModel.hpp</name>
+  </compound>
+  <compound refid="mps__accelerator_8hpp" kind="file"><name>mps_accelerator.hpp</name>
+  </compound>
+  <compound refid="qsim__emulator_8hpp" kind="file"><name>qsim_emulator.hpp</name>
+  </compound>
+  <compound refid="dir_9083adfea18fb491594d018834a7e2da" kind="dir"><name>core/include/qristal/core/backends</name>
+  </compound>
+  <compound refid="dir_4270bfced15e0e73154b13468c7c9ad9" kind="dir"><name>core</name>
+  </compound>
+  <compound refid="dir_427f3ea054aa31b3719ccc0b8074d21d" kind="dir"><name>core/include/qristal/core</name>
+  </compound>
+  <compound refid="dir_2ed9f0e9b89c38eaf222de0cb4fb3e03" kind="dir"><name>core/include/qristal/core/cudaq</name>
+  </compound>
+  <compound refid="dir_199f00bcd9b0045362f41b6724eab9bb" kind="dir"><name>emulator</name>
+  </compound>
+  <compound refid="dir_123bdf06ac9842a77993cf52abc2b731" kind="dir"><name>emulator/include/qristal/emulator</name>
+  </compound>
+  <compound refid="dir_24d671cfcbc5d5238a6bd565a49d198f" kind="dir"><name>core/include</name>
+  </compound>
+  <compound refid="dir_dbcfdeca6fd0eb296eb8426891bc86a1" kind="dir"><name>emulator/include</name>
+  </compound>
+  <compound refid="dir_880bc7db582e5dc414d1cddec812c8f2" kind="dir"><name>core/include/qristal/core/noise_model</name>
+  </compound>
+  <compound refid="dir_b56149bf1e0641b61a92b55e51025227" kind="dir"><name>emulator/include/qristal/emulator/noise_model</name>
+  </compound>
+  <compound refid="dir_8dc8f10c00666e86a0d995caa54e2bf8" kind="dir"><name>emulator/include/qristal/emulator/nv_sim</name>
+  </compound>
+  <compound refid="dir_ad28d274faa2bad261fd0e7d00d80290" kind="dir"><name>core/include/qristal/core/optimization</name>
+  </compound>
+  <compound refid="dir_f643476943bb6aca958500189dbc48ab" kind="dir"><name>core/include/qristal/core/passes</name>
+  </compound>
+  <compound refid="dir_8c4530c0b1b668bc97d4daed83ade1d4" kind="dir"><name>core/include/qristal/core/backends/qb_hardware</name>
+  </compound>
+  <compound refid="dir_dc8a2899f5918d735119aadc588ad9d3" kind="dir"><name>core/include/qristal</name>
+  </compound>
+  <compound refid="dir_3c361a0dc16ec77d5da09b99442641b1" kind="dir"><name>emulator/include/qristal</name>
+  </compound>
+  <compound refid="dir_e80e602ef7982afa85a746f8eb274e4c" kind="dir"><name>emulator/include/qristal/emulator/qsim</name>
+  </compound>
+  <compound refid="dir_7f54a3c4b428a3a4357168cfd469060d" kind="dir"><name>core/include/qristal/core/optimization/vqee</name>
+  </compound>
+</doxygenindex>

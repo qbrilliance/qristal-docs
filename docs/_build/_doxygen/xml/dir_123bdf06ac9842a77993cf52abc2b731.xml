@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_123bdf06ac9842a77993cf52abc2b731" kind="dir">
+    <compoundname>emulator/include/qristal/emulator</compoundname>
+    <innerdir refid="dir_b56149bf1e0641b61a92b55e51025227">emulator/include/qristal/emulator/noise_model</innerdir>
+    <innerdir refid="dir_8dc8f10c00666e86a0d995caa54e2bf8">emulator/include/qristal/emulator/nv_sim</innerdir>
+    <innerdir refid="dir_e80e602ef7982afa85a746f8eb274e4c">emulator/include/qristal/emulator/qsim</innerdir>
+    <innerfile refid="emulator_8hpp">emulator.hpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="emulator/include/qristal/emulator/"/>
+  </compounddef>
+</doxygen>

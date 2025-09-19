@@ -1,0 +1,164 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1vqee_1_1NelderMeadNLO" kind="class" language="C++" prot="public">
+    <compoundname>qristal::vqee::NelderMeadNLO</compoundname>
+    <basecompoundref refid="classqristal_1_1vqee_1_1NLO" prot="public" virt="non-virtual">qristal::vqee::NLO</basecompoundref>
+    <includes refid="case__generator_8hpp" local="no">case_generator.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1vqee_1_1NelderMeadNLO_1a1e46b78847ae445f1f09b96d08075e6a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::NelderMeadNLO::information_</definition>
+        <argsstring></argsstring>
+        <name>information_</name>
+        <qualifiedname>qristal::vqee::NelderMeadNLO::information_</qualifiedname>
+        <initializer>{&quot;Nelder-Mead algorithm provided by nlopt&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="418" column="17" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="418" bodyend="418"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NelderMeadNLO_1a6ea3dbf517bf63618a46d9948c09c118" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::NelderMeadNLO::NelderMeadNLO</definition>
+        <argsstring>()</argsstring>
+        <name>NelderMeadNLO</name>
+        <qualifiedname>qristal::vqee::NelderMeadNLO::NelderMeadNLO</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="420" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="420" bodyend="420"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NelderMeadNLO_1a08de817b1c5197d05f435a14019bb1b5" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>qristal::vqee::NelderMeadNLO::NelderMeadNLO</definition>
+        <argsstring>(const std::vector&lt; double &gt; &amp;in_initial_parameters, const int in_maxeval=1000, const double in_ftol=1.0e-6, const YAML::Node &amp;in_node=YAML::Load(&quot;&quot;), const std::string &amp;in_algorithm=&quot;nelder-mead&quot;)</argsstring>
+        <name>NelderMeadNLO</name>
+        <qualifiedname>qristal::vqee::NelderMeadNLO::NelderMeadNLO</qualifiedname>
+        <param>
+          <type>const std::vector&lt; double &gt; &amp;</type>
+          <declname>in_initial_parameters</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>in_maxeval</declname>
+          <defval>1000</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>in_ftol</declname>
+          <defval>1.0e-6</defval>
+        </param>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>in_node</declname>
+          <defval>YAML::Load(&quot;&quot;)</defval>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_algorithm</declname>
+          <defval>&quot;nelder-mead&quot;</defval>
+        </param>
+        <briefdescription>
+<para>Constructor with defaults shown. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="423" column="5" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="423" bodyend="433"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1vqee_1_1NelderMeadNLO_1a1b5be29195c99f37b0e19552f4b41aa9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type>void</type>
+        <definition>void qristal::vqee::NelderMeadNLO::show_info</definition>
+        <argsstring>() override</argsstring>
+        <name>show_info</name>
+        <qualifiedname>qristal::vqee::NelderMeadNLO::show_info</qualifiedname>
+        <reimplements refid="classqristal_1_1vqee_1_1NLO_1adc8d3370ec9da7a211aee934ee36f3d0">show_info</reimplements>
+        <briefdescription>
+<para>Print information. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="436" column="10" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="436" bodyend="436"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Nelder-Mead algorithm from the nlopt library Nelder-Mead is a gradient-free algorithm and works best when some noise is present. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>qristal::vqee::NLO</label>
+        <link refid="classqristal_1_1vqee_1_1NLO"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>qristal::vqee::NelderMeadNLO</label>
+        <link refid="classqristal_1_1vqee_1_1NelderMeadNLO"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>qristal::vqee::NLO</label>
+        <link refid="classqristal_1_1vqee_1_1NLO"/>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>qristal::vqee::NelderMeadNLO</label>
+        <link refid="classqristal_1_1vqee_1_1NelderMeadNLO"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::vqee::VqeOpt</label>
+        <link refid="classqristal_1_1vqee_1_1VqeOpt"/>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="416" column="1" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="416" bodyend="437"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1vqee_1_1NLO_1ac4cf45d10a969dd4345bc5d752306963" prot="private" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>all_valid_fields_yaml_xacc_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a1c3c6fc8db53f7cd9b7c6321a95c33ba" prot="private" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>boolean_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a0a4bf8290deb60b8c684412edbcc2adc" prot="private" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a58bad4dc17707edbe74dea99f1ce1cc1" prot="public" virt="virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>get</name></member>
+      <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a1e46b78847ae445f1f09b96d08075e6a" prot="private" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>information_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a49483cb30d0e9103d9e18df25182d027" prot="private" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>integer_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a1cd0d9b40fcb4cae263351fd83087fcb" prot="protected" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>m_algorithm_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0bbf69caef155ac7b23989888ffc30e1" prot="protected" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>m_ftol_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a3b070c6f820d778bb10737c7270f09ac" prot="protected" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>m_initial_parameters_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a359613f99bb0a5a8726aea6db5ec9e50" prot="protected" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>m_maxeval_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a90be91f1aac205bfe1202133fd995925" prot="protected" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>m_node_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a4b9d5112c75bbb5bf8d04ee924ac6269" prot="protected" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>m_provider_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a6ea3dbf517bf63618a46d9948c09c118" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>NelderMeadNLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a08de817b1c5197d05f435a14019bb1b5" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>NelderMeadNLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a47bcf590c4a28e046e298e7c506f4844" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>NLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1ad14e6fc6b29f73ecc06a383c9cdc7b25" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>NLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1aea634090d3002fbfaf59b5f611f5da83" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>NLO</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a9f72a418b4fd0ed61a1889266641617f" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>pass_yaml_to_xacc</name></member>
+      <member refid="classqristal_1_1vqee_1_1NelderMeadNLO_1a1b5be29195c99f37b0e19552f4b41aa9" prot="public" virt="virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>show_info</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1a9f0df85b2b31362bfbc5d36598d90518" prot="private" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>string_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1NLO_1ad13a1dde6d775e26f009eb912f1f3ef0" prot="private" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>vector_double_valued_fields_</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1a0739a3995bb9a8791f9601d46b4a0c04" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1ab884657f56b5f7031515d9011d2020b1" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>VqeOpt</name></member>
+      <member refid="classqristal_1_1vqee_1_1VqeOpt_1afcff78e87193ec5fae19d7e53f62e51b" prot="public" virt="non-virtual"><scope>qristal::vqee::NelderMeadNLO</scope><name>VqeOpt</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

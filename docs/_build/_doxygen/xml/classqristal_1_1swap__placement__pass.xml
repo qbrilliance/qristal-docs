@@ -1,0 +1,156 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1swap__placement__pass" kind="class" language="C++" prot="public">
+    <compoundname>qristal::swap_placement_pass</compoundname>
+    <basecompoundref refid="classqristal_1_1Pass" prot="public" virt="non-virtual">qristal::Pass&lt; CircuitBuilder &gt;</basecompoundref>
+    <includes refid="swap__placement__pass_8hpp" local="no">swap_placement_pass.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1swap__placement__pass_1a78f6073f61d5e63ef5e9c879be6aea24" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; int, int &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;int, int&gt; &gt; qristal::swap_placement_pass::m_connectivity</definition>
+        <argsstring></argsstring>
+        <name>m_connectivity</name>
+        <qualifiedname>qristal::swap_placement_pass::m_connectivity</qualifiedname>
+        <briefdescription>
+<para>Connectivity information for placement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="36" column="19" bodyfile="core/include/qristal/core/passes/swap_placement_pass.hpp" bodystart="36" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1swap__placement__pass_1a98f1df5e4c0df716ff27a3cf051afeca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::swap_placement_pass::swap_placement_pass</definition>
+        <argsstring>(const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;connectivity)</argsstring>
+        <name>swap_placement_pass</name>
+        <qualifiedname>qristal::swap_placement_pass::swap_placement_pass</qualifiedname>
+        <param>
+          <type>const std::vector&lt; std::pair&lt; int, int &gt; &gt; &amp;</type>
+          <declname>connectivity</declname>
+        </param>
+        <briefdescription>
+<para>Constructor from a user-provided qubit connectivity topology. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="21" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1swap__placement__pass_1ae969f6b04a1d5969311764837f4dc29e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::swap_placement_pass::swap_placement_pass</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::Accelerator &gt; qpu)</argsstring>
+        <name>swap_placement_pass</name>
+        <qualifiedname>qristal::swap_placement_pass::swap_placement_pass</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+          <declname>qpu</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Constructor from an Accelerator instance, which provides its connectivity information </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="24" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1swap__placement__pass_1aa87f68ea5632d08c71d34e443baeef0c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::swap_placement_pass::get_name</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_name</name>
+        <qualifiedname>qristal::swap_placement_pass::get_name</qualifiedname>
+        <reimplements refid="classqristal_1_1Pass_1ae953fc38b3026afa44c812c35032b955">get_name</reimplements>
+        <briefdescription>
+<para>Returns the pass name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="26" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1swap__placement__pass_1a1fb7ecb90b498786f35be98e3e0e50d1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::swap_placement_pass::get_description</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_description</name>
+        <qualifiedname>qristal::swap_placement_pass::get_description</qualifiedname>
+        <reimplements refid="classqristal_1_1Pass_1a0e357ed3bd93cd40ab26a61d1c5e6e29">get_description</reimplements>
+        <briefdescription>
+<para>Returns the pass description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="29" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1swap__placement__pass_1a864ac8204f0531a176fe1ccdd72c975e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::swap_placement_pass::apply</definition>
+        <argsstring>(CircuitBuilder &amp;circuit) override</argsstring>
+        <name>apply</name>
+        <qualifiedname>qristal::swap_placement_pass::apply</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1CircuitBuilder" kindref="compound">CircuitBuilder</ref> &amp;</type>
+          <declname>circuit</declname>
+        </param>
+        <briefdescription>
+<para>Runs the pass over the circuit IR node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="32" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Circuit placement pass based on SWAP gate injection to satisfy device topology constraints. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CircuitPass</label>
+        <link refid="classqristal_1_1Pass"/>
+      </node>
+      <node id="1">
+        <label>qristal::swap_placement_pass</label>
+        <link refid="classqristal_1_1swap__placement__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CircuitPass</label>
+        <link refid="classqristal_1_1Pass"/>
+      </node>
+      <node id="1">
+        <label>qristal::swap_placement_pass</label>
+        <link refid="classqristal_1_1swap__placement__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/passes/swap_placement_pass.hpp" line="18" column="3" bodyfile="core/include/qristal/core/passes/swap_placement_pass.hpp" bodystart="18" bodyend="37"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1swap__placement__pass_1a864ac8204f0531a176fe1ccdd72c975e" prot="public" virt="virtual"><scope>qristal::swap_placement_pass</scope><name>apply</name></member>
+      <member refid="classqristal_1_1Pass_1a3f705cea7fae5c37f61b542695a39b2d" prot="public" virt="pure-virtual" ambiguityscope="qristal::Pass::"><scope>qristal::swap_placement_pass</scope><name>apply</name></member>
+      <member refid="classqristal_1_1swap__placement__pass_1a1fb7ecb90b498786f35be98e3e0e50d1" prot="public" virt="virtual"><scope>qristal::swap_placement_pass</scope><name>get_description</name></member>
+      <member refid="classqristal_1_1swap__placement__pass_1aa87f68ea5632d08c71d34e443baeef0c" prot="public" virt="virtual"><scope>qristal::swap_placement_pass</scope><name>get_name</name></member>
+      <member refid="classqristal_1_1swap__placement__pass_1a78f6073f61d5e63ef5e9c879be6aea24" prot="private" virt="non-virtual"><scope>qristal::swap_placement_pass</scope><name>m_connectivity</name></member>
+      <member refid="classqristal_1_1swap__placement__pass_1a98f1df5e4c0df716ff27a3cf051afeca" prot="public" virt="non-virtual"><scope>qristal::swap_placement_pass</scope><name>swap_placement_pass</name></member>
+      <member refid="classqristal_1_1swap__placement__pass_1ae969f6b04a1d5969311764837f4dc29e" prot="public" virt="non-virtual"><scope>qristal::swap_placement_pass</scope><name>swap_placement_pass</name></member>
+      <member refid="classqristal_1_1Pass_1ad7b2e2f5a7fe881eae2f702dc7c490d5" prot="public" virt="virtual"><scope>qristal::swap_placement_pass</scope><name>~Pass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

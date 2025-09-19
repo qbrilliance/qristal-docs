@@ -1,0 +1,99 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="emulator_8hpp" kind="file" language="C++">
+    <compoundname>emulator.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">vector</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>emulator/include/qristal/emulator/emulator.hpp</label>
+        <link refid="emulator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <sectiondef kind="func">
+      <memberdef kind="function" id="emulator_8hpp_1adfaff34883361f2dd62b27550bac36fe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; <ref refid="classqristal_1_1NoiseModel" kindref="compound">qristal::NoiseModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt; qristal::NoiseModel &gt; get_emulator_noise_model</definition>
+        <argsstring>(const std::string name)</argsstring>
+        <name>get_emulator_noise_model</name>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the emulator noise model object corresponding to name. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>name</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Name of the noise model, e.g., &apos;qb-nm1&apos; or &apos;qb-nm2&apos;, etc. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The corresponding noise model object. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/emulator.hpp" line="25" column="19" declfile="emulator/include/qristal/emulator/emulator.hpp" declline="25" declcolumn="19"/>
+      </memberdef>
+      <memberdef kind="function" id="emulator_8hpp_1a832ddfffd686829905846c26ac967d11" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void emulator_initialize</definition>
+        <argsstring>(void)</argsstring>
+        <name>emulator_initialize</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Register handlers for loading and unloading libqristal_emulator.so. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/emulator.hpp" line="28" column="8" declfile="emulator/include/qristal/emulator/emulator.hpp" declline="28" declcolumn="8"/>
+      </memberdef>
+      <memberdef kind="function" id="emulator_8hpp_1aaa8323809b05568a3f75b76eca97c5b7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool emulator_built_with_cuda</definition>
+        <argsstring>()</argsstring>
+        <name>emulator_built_with_cuda</name>
+        <briefdescription>
+<para>Check whether the library has been built with GPU support or not. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/emulator.hpp" line="31" column="8" declfile="emulator/include/qristal/emulator/emulator.hpp" declline="31" declcolumn="8"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="emulator/include/qristal/emulator/emulator.hpp"/>
+  </compounddef>
+</doxygen>

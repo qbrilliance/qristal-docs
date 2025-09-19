@@ -1,0 +1,107 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="qsim__emulator_8hpp" kind="file" language="C++">
+    <compoundname>qsim_emulator.hpp</compoundname>
+    <includes local="no">memory</includes>
+    <includes refid="noise__model_8hpp" local="yes">qristal/core/noise_model/noise_model.hpp</includes>
+    <includes local="yes">Accelerator.hpp</includes>
+    <includes local="yes">gates_qsim.h</includes>
+    <incdepgraph>
+      <node id="3">
+        <label>qristal/core/noise_model/noise_model.hpp</label>
+        <link refid="noise__model_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>qristal/core/noise_model/noise_properties.hpp</label>
+        <link refid="noise__properties_8hpp_source"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>qristal/core/noise_model/readout_error.hpp</label>
+        <link refid="readout__error_8hpp_source"/>
+      </node>
+      <node id="13">
+        <label>qristal/core/passes/noise_aware_placement_config.hpp</label>
+        <link refid="noise__aware__placement__config_8hpp_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>emulator/include/qristal/emulator/qsim/qsim_emulator.hpp</label>
+        <link refid="qsim__emulator_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="14">
+        <label>Accelerator.hpp</label>
+      </node>
+      <node id="6">
+        <label>functional</label>
+      </node>
+      <node id="15">
+        <label>gates_qsim.h</label>
+      </node>
+      <node id="10">
+        <label>map</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>optional</label>
+      </node>
+      <node id="7">
+        <label>qristal/core/noise_model/json_complex_convert.hpp</label>
+      </node>
+      <node id="8">
+        <label>qristal/core/noise_model/noise_channel.hpp</label>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="11">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="structqristal_1_1noise__channel__components" prot="public">qristal::noise_channel_components</innerclass>
+    <innerclass refid="classqristal_1_1CirqQsim" prot="public">qristal::CirqQsim</innerclass>
+    <innerclass refid="classqristal_1_1CirqQsimCPU" prot="public">qristal::CirqQsimCPU</innerclass>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp"/>
+  </compounddef>
+</doxygen>

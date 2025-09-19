@@ -1,0 +1,872 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classxacc_1_1quantum_1_1qb__qpu" kind="class" language="C++" prot="public">
+    <compoundname>xacc::quantum::qb_qpu</compoundname>
+    <basecompoundref prot="public" virt="virtual">RemoteAccelerator</basecompoundref>
+    <includes refid="qb__qpu_8hpp" local="no">qb_qpu.hpp</includes>
+    <sectiondef kind="user-defined">
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a98e9dc3c6dd26a600a6d777dd13404ac" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string xacc::quantum::qb_qpu::getSignature</definition>
+        <argsstring>() override</argsstring>
+        <name>getSignature</name>
+        <qualifiedname>xacc::quantum::qb_qpu::getSignature</qualifiedname>
+        <briefdescription>
+<para>Getters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="42" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1aa5404057e458cee6ec291d39f71ab4dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string xacc::quantum::qb_qpu::name</definition>
+        <argsstring>() const override</argsstring>
+        <name>name</name>
+        <qualifiedname>xacc::quantum::qb_qpu::name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="43" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a7cb91a6c97046467b0455da30b0c364c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string xacc::quantum::qb_qpu::description</definition>
+        <argsstring>() const override</argsstring>
+        <name>description</name>
+        <qualifiedname>xacc::quantum::qb_qpu::description</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="44" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a1eb1c1d6c9e9966b066312bf678b4b52" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string xacc::quantum::qb_qpu::get_qbjson</definition>
+        <argsstring>() const</argsstring>
+        <name>get_qbjson</name>
+        <qualifiedname>xacc::quantum::qb_qpu::get_qbjson</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="45" column="27"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1ad1d64ad460639a23f78d1c1ea91e2d2c" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xacc::quantum::qb_qpu::debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <qualifiedname>xacc::quantum::qb_qpu::debug</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="112" column="14" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a34d257cb92bd2762f95e1a838dc1833f" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::qpu_name</definition>
+        <argsstring></argsstring>
+        <name>qpu_name</name>
+        <qualifiedname>xacc::quantum::qb_qpu::qpu_name</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="113" column="21" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1ad39090c5d678360f00e68abedb618d3e" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::command</definition>
+        <argsstring></argsstring>
+        <name>command</name>
+        <qualifiedname>xacc::quantum::qb_qpu::command</qualifiedname>
+        <initializer>= &quot;circuit&quot;</initializer>
+        <briefdescription>
+<para>Command. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="116" column="21" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a4c89ce5afec47afc5bf6ce3b3fe0b6f9" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t xacc::quantum::qb_qpu::shots</definition>
+        <argsstring></argsstring>
+        <name>shots</name>
+        <qualifiedname>xacc::quantum::qb_qpu::shots</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of shots in a cycle. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="119" column="16" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a9344921ee676d2a3589294142e6680de" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xacc::quantum::qb_qpu::poll_secs</definition>
+        <argsstring></argsstring>
+        <name>poll_secs</name>
+        <qualifiedname>xacc::quantum::qb_qpu::poll_secs</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Poll seconds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="122" column="16" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1af8195b742e01c8b62e4aeeaebe351744" prot="protected" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t xacc::quantum::qb_qpu::n_qubits</definition>
+        <argsstring></argsstring>
+        <name>n_qubits</name>
+        <qualifiedname>xacc::quantum::qb_qpu::n_qubits</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of qubits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="125" column="16" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1aa28ae80a10833b903b64e79dcd1d3ee1" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; uint &gt;</type>
+        <definition>std::vector&lt;uint&gt; xacc::quantum::qb_qpu::init</definition>
+        <argsstring></argsstring>
+        <name>init</name>
+        <qualifiedname>xacc::quantum::qb_qpu::init</qualifiedname>
+        <initializer>= {0, 0}</initializer>
+        <briefdescription>
+<para>Init (vector of qubits, value is the initial state) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="128" column="21" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="128" bodyend="128"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a79388610b74c45ca8a019bb29ee1a53f" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xacc::quantum::qb_qpu::use_default_contrast_settings</definition>
+        <argsstring></argsstring>
+        <name>use_default_contrast_settings</name>
+        <qualifiedname>xacc::quantum::qb_qpu::use_default_contrast_settings</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Contrast thresholds. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="131" column="14" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="131" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1af8b5cef7d8a9dbe5ceeec0f919c57cd4" prot="protected" static="no" mutable="no">
+        <type>double</type>
+        <definition>double xacc::quantum::qb_qpu::init_contrast_threshold</definition>
+        <argsstring></argsstring>
+        <name>init_contrast_threshold</name>
+        <qualifiedname>xacc::quantum::qb_qpu::init_contrast_threshold</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="132" column="16" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1abcdc055581a52389b11ad35c51844d80" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt;int,double&gt; xacc::quantum::qb_qpu::qubit_contrast_thresholds</definition>
+        <argsstring></argsstring>
+        <name>qubit_contrast_thresholds</name>
+        <qualifiedname>xacc::quantum::qb_qpu::qubit_contrast_thresholds</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="133" column="18" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="133" bodyend="133"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1ac606de23524a1c71cce346565ec678a4" prot="protected" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint xacc::quantum::qb_qpu::circuit_id</definition>
+        <argsstring></argsstring>
+        <name>circuit_id</name>
+        <qualifiedname>xacc::quantum::qb_qpu::circuit_id</qualifiedname>
+        <briefdescription>
+<para>Id number of last submitted circuit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="136" column="14" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="136" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a0d6b1ee79cf5edf0514ee356f527ebb4" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::results</definition>
+        <argsstring></argsstring>
+        <name>results</name>
+        <qualifiedname>xacc::quantum::qb_qpu::results</qualifiedname>
+        <initializer>= &quot;normal&quot;</initializer>
+        <briefdescription>
+<para>Format for results. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="139" column="21" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="139" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a54906f162648cae81e2ea3d37e9f6956" prot="protected" static="no" mutable="no">
+        <type>uint</type>
+        <definition>uint xacc::quantum::qb_qpu::poll_retries</definition>
+        <argsstring></argsstring>
+        <name>poll_retries</name>
+        <qualifiedname>xacc::quantum::qb_qpu::poll_retries</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>HTTP poll retries allowed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="142" column="14" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="142" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a6198f8021b7a3d88194719484ef52771" prot="protected" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; xacc::quantum::qb_qpu::order_of_m</definition>
+        <argsstring></argsstring>
+        <name>order_of_m</name>
+        <qualifiedname>xacc::quantum::qb_qpu::order_of_m</qualifiedname>
+        <initializer>= {}</initializer>
+        <briefdescription>
+<para>Order of measurements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="145" column="21" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="145" bodyend="145"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1af47c770e11f13fe20e678148a36e06de" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xacc::quantum::qb_qpu::exclusive_access</definition>
+        <argsstring></argsstring>
+        <name>exclusive_access</name>
+        <qualifiedname>xacc::quantum::qb_qpu::exclusive_access</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Assume exclusive use of the hardware device. If this flag is set true, the hardware will be assumed to only accept circuits accompanied by an appropriate token. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="149" column="14" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="149" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a81709f50962c3d6e8eb7525eff140b95" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::exclusive_access_token</definition>
+        <argsstring></argsstring>
+        <name>exclusive_access_token</name>
+        <qualifiedname>xacc::quantum::qb_qpu::exclusive_access_token</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>The encrypted JSON web token used to authenticate with a hardware device operating in exclusive access mode. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="153" column="21" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1a2bcfdb21dae74f4e17b5e85e274371a9" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; std::string, std::string &gt;</type>
+        <definition>std::map&lt;std::string, std::string&gt; xacc::quantum::qb_qpu::http_header</definition>
+        <argsstring></argsstring>
+        <name>http_header</name>
+        <qualifiedname>xacc::quantum::qb_qpu::http_header</qualifiedname>
+        <briefdescription>
+<para>The http header sent to the hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="156" column="18" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__qpu_1ac3607548be8d46ae2f074e750a349fe9" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::qbjson</definition>
+        <argsstring></argsstring>
+        <name>qbjson</name>
+        <qualifiedname>xacc::quantum::qb_qpu::qbjson</qualifiedname>
+        <briefdescription>
+<para>The JSON string sent to the hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="159" column="21" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1ab000e919ee0b6a8295d4e2685b7152a2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xacc::quantum::qb_qpu::qb_qpu</definition>
+        <argsstring>(const std::string name, const bool debug_flag=false)</argsstring>
+        <name>qb_qpu</name>
+        <qualifiedname>xacc::quantum::qb_qpu::qb_qpu</qualifiedname>
+        <param>
+          <type>const std::string</type>
+          <declname>name</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>debug_flag</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Default constructor that just inits the parent class. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="36" column="9" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a713f45b859cda189e4f5273da188efe9" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual xacc::quantum::qb_qpu::~qb_qpu</definition>
+        <argsstring>()</argsstring>
+        <name>~qb_qpu</name>
+        <qualifiedname>xacc::quantum::qb_qpu::~qb_qpu</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="39" column="17" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a77e7cb25cf7d7f66b9205136748c9fee" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xacc::quantum::qb_qpu::isRemote</definition>
+        <argsstring>() override</argsstring>
+        <name>isRemote</name>
+        <qualifiedname>xacc::quantum::qb_qpu::isRemote</qualifiedname>
+        <briefdescription>
+<para>Indicate that this is indeed a remote XACC accelerator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="49" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a0023a49a97595269525527ce287acab5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>HeterogeneousMap</type>
+        <definition>HeterogeneousMap xacc::quantum::qb_qpu::getProperties</definition>
+        <argsstring>() override</argsstring>
+        <name>getProperties</name>
+        <qualifiedname>xacc::quantum::qb_qpu::getProperties</qualifiedname>
+        <briefdescription>
+<para>Retrieve the properties of the backend. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="52" column="26"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a3653d47c6a0cd5474a237bfb98aa563e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>const std::vector&lt; std::string &gt; xacc::quantum::qb_qpu::configurationKeys</definition>
+        <argsstring>() override</argsstring>
+        <name>configurationKeys</name>
+        <qualifiedname>xacc::quantum::qb_qpu::configurationKeys</qualifiedname>
+        <briefdescription>
+<para>Get the available configuration settings. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="55" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1ab8709ab33f1df7fbafe82e9a8b28651e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_qpu::updateConfiguration</definition>
+        <argsstring>(const HeterogeneousMap &amp;config) override</argsstring>
+        <name>updateConfiguration</name>
+        <qualifiedname>xacc::quantum::qb_qpu::updateConfiguration</qualifiedname>
+        <param>
+          <type>const HeterogeneousMap &amp;</type>
+          <declname>config</declname>
+        </param>
+        <briefdescription>
+<para>Change the configuration of QB hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>config</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input the new configuration settings to be applied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="61" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a87ae098810453a9566fd22f6e6aab5e1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_qpu::initialize</definition>
+        <argsstring>(const HeterogeneousMap &amp;params={}) override</argsstring>
+        <name>initialize</name>
+        <qualifiedname>xacc::quantum::qb_qpu::initialize</qualifiedname>
+        <param>
+          <type>const HeterogeneousMap &amp;</type>
+          <declname>params</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>Initialize the configuration of QB hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>params</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input the new configuration settings to be applied </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="67" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a9221f9b59b3af3ffb1d16f71175eaa95" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_qpu::setup_hardware</definition>
+        <argsstring>(bool check_hardware_lifesigns)</argsstring>
+        <name>setup_hardware</name>
+        <qualifiedname>xacc::quantum::qb_qpu::setup_hardware</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>check_hardware_lifesigns</declname>
+        </param>
+        <briefdescription>
+<para>Initialise the QB hardware (reserve, get native gateset, etc.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>check_hardware_lifesigns</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Check for a response from the hardware </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="73" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a53cbdd450ccd3657e3e4dd65171eebb7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_qpu::execute</definition>
+        <argsstring>(std::shared_ptr&lt; AcceleratorBuffer &gt; buffer, const std::shared_ptr&lt; CompositeInstruction &gt; function, bool execute_circuit)</argsstring>
+        <name>execute</name>
+        <qualifiedname>xacc::quantum::qb_qpu::execute</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; AcceleratorBuffer &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::shared_ptr&lt; CompositeInstruction &gt;</type>
+          <declname>function</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>execute_circuit</declname>
+        </param>
+        <briefdescription>
+<para>Submit the circuit with HTTP POST to QB hardware and poll for results with HTTP GET. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output location and storage of intermediate results </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>function</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input circuit in XACC IR format </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>execute_circuit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Actually send the circuit to the hardware for execution </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="81" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a849758f236611447af9e4c9665df14b1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::string</type>
+        <definition>const std::string xacc::quantum::qb_qpu::processInput</definition>
+        <argsstring>(std::shared_ptr&lt; AcceleratorBuffer &gt; buffer, std::vector&lt; std::shared_ptr&lt; CompositeInstruction &gt; &gt; functions) override</argsstring>
+        <name>processInput</name>
+        <qualifiedname>xacc::quantum::qb_qpu::processInput</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; AcceleratorBuffer &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::shared_ptr&lt; CompositeInstruction &gt; &gt;</type>
+          <declname>functions</declname>
+        </param>
+        <briefdescription>
+<para>Converts the circuit to a representation that QB hardware accepts. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets up QB specific metadata, visits XACC IR to construct JSON strings for the circuit and required measurements, then combines both into the HTTP POST request body.</para>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output location and storage of intermediate results </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>functions</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input circuit in XACC IR format </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="94" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1ad9c76ceb7ca0d2ec5a9d70468fc822b8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_qpu::processResponse</definition>
+        <argsstring>(std::shared_ptr&lt; AcceleratorBuffer &gt; buffer, const std::string &amp;response) override</argsstring>
+        <name>processResponse</name>
+        <qualifiedname>xacc::quantum::qb_qpu::processResponse</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; AcceleratorBuffer &gt;</type>
+          <declname>buffer</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>response</declname>
+        </param>
+        <briefdescription>
+<para>Handle the response to the initial POST (circuit submission) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>buffer</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output location and storage of intermediate results </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>response</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input the response body returned by the prior POST request </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="103" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a7ae8f401d7a757ecae26f5a0f23326b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; std::string, int &gt;</type>
+        <definition>std::map&lt; std::string, int &gt; xacc::quantum::qb_qpu::poll_for_results</definition>
+        <argsstring>()</argsstring>
+        <name>poll_for_results</name>
+        <qualifiedname>xacc::quantum::qb_qpu::poll_for_results</qualifiedname>
+        <briefdescription>
+<para>Poll QB hardware for circuit results. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="107" column="18"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1ac00e62ec0c83860c74717d085e4ccc7e" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::Post</definition>
+        <argsstring>(const std::string &amp;url, const std::string &amp;path, const std::string &amp;postStr, std::map&lt; std::string, std::string &gt; headers={})</argsstring>
+        <name>Post</name>
+        <qualifiedname>xacc::quantum::qb_qpu::Post</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>postStr</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>headers</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>HTTP POST, returning the HTTP status code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="162" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1aeeda3ff05ebfe2e0e7af85090678e09c" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::Get</definition>
+        <argsstring>(const std::string &amp;url, const std::string &amp;path, std::map&lt; std::string, std::string &gt; headers={}, std::map&lt; std::string, std::string &gt; extraParams={})</argsstring>
+        <name>Get</name>
+        <qualifiedname>xacc::quantum::qb_qpu::Get</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>headers</declname>
+          <defval>{}</defval>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>extraParams</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>HTTP GET, returning the HTTP status code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="169" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1ac1feb6cb5a19f678c45e04b5510b0435" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_qpu::Put</definition>
+        <argsstring>(const std::string &amp;url, const std::string &amp;path, const std::string &amp;putStr, std::map&lt; std::string, std::string &gt; headers={})</argsstring>
+        <name>Put</name>
+        <qualifiedname>xacc::quantum::qb_qpu::Put</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>url</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>path</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>putStr</declname>
+        </param>
+        <param>
+          <type>std::map&lt; std::string, std::string &gt;</type>
+          <declname>headers</declname>
+          <defval>{}</defval>
+        </param>
+        <briefdescription>
+<para>HTTP PUT, returning the HTTP status code. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="176" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__qpu_1a9a53b5e9b4d2fa6a5fb5be7cf3b4d291" prot="protected" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool xacc::quantum::qb_qpu::resultsReady</definition>
+        <argsstring>(std::map&lt; std::string, int &gt; &amp;counts)</argsstring>
+        <name>resultsReady</name>
+        <qualifiedname>xacc::quantum::qb_qpu::resultsReady</qualifiedname>
+        <param>
+          <type>std::map&lt; std::string, int &gt; &amp;</type>
+          <declname>counts</declname>
+        </param>
+        <briefdescription>
+<para>Polling for circuit execution results via HTTP GET. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>counts</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Output location for shot outcomes </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="185" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Provides an <computeroutput>execute</computeroutput> implementation that maps XACC IR to a suitable JSON message for execution on QB hardware. </para>
+    </briefdescription>
+    <detaileddescription>
+<para>Execution is in two phases:<orderedlist>
+<listitem><para>Circuit submission via HTTP POST to QB hardware device</para>
+</listitem><listitem><para>Using the returned ID, form a HTTP GET request and poll repeatedly until results are returned </para>
+</listitem></orderedlist>
+</para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>RemoteAccelerator</label>
+      </node>
+      <node id="1">
+        <label>xacc::quantum::qb_qpu</label>
+        <link refid="classxacc_1_1quantum_1_1qb__qpu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>RemoteAccelerator</label>
+      </node>
+      <node id="1">
+        <label>xacc::quantum::qb_qpu</label>
+        <link refid="classxacc_1_1quantum_1_1qb__qpu"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" line="30" column="5" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp" bodystart="31" bodyend="187"/>
+    <listofallmembers>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac606de23524a1c71cce346565ec678a4" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>circuit_id</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ad39090c5d678360f00e68abedb618d3e" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>command</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a3653d47c6a0cd5474a237bfb98aa563e" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>configurationKeys</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ad1d64ad460639a23f78d1c1ea91e2d2c" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>debug</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a7cb91a6c97046467b0455da30b0c364c" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>description</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1af47c770e11f13fe20e678148a36e06de" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>exclusive_access</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a81709f50962c3d6e8eb7525eff140b95" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>exclusive_access_token</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a53cbdd450ccd3657e3e4dd65171eebb7" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>execute</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1aeeda3ff05ebfe2e0e7af85090678e09c" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>Get</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a1eb1c1d6c9e9966b066312bf678b4b52" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>get_qbjson</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a0023a49a97595269525527ce287acab5" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>getProperties</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a98e9dc3c6dd26a600a6d777dd13404ac" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>getSignature</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a2bcfdb21dae74f4e17b5e85e274371a9" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>http_header</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1aa28ae80a10833b903b64e79dcd1d3ee1" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>init</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1af8b5cef7d8a9dbe5ceeec0f919c57cd4" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>init_contrast_threshold</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a87ae098810453a9566fd22f6e6aab5e1" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>initialize</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a77e7cb25cf7d7f66b9205136748c9fee" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>isRemote</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1af8195b742e01c8b62e4aeeaebe351744" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>n_qubits</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1aa5404057e458cee6ec291d39f71ab4dc" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>name</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a6198f8021b7a3d88194719484ef52771" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>order_of_m</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a7ae8f401d7a757ecae26f5a0f23326b6" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>poll_for_results</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a54906f162648cae81e2ea3d37e9f6956" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>poll_retries</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a9344921ee676d2a3589294142e6680de" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>poll_secs</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac00e62ec0c83860c74717d085e4ccc7e" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>Post</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a849758f236611447af9e4c9665df14b1" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>processInput</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ad9c76ceb7ca0d2ec5a9d70468fc822b8" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>processResponse</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac1feb6cb5a19f678c45e04b5510b0435" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>Put</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ab000e919ee0b6a8295d4e2685b7152a2" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>qb_qpu</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ac3607548be8d46ae2f074e750a349fe9" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>qbjson</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a34d257cb92bd2762f95e1a838dc1833f" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>qpu_name</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1abcdc055581a52389b11ad35c51844d80" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>qubit_contrast_thresholds</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a0d6b1ee79cf5edf0514ee356f527ebb4" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>results</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a9a53b5e9b4d2fa6a5fb5be7cf3b4d291" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>resultsReady</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a9221f9b59b3af3ffb1d16f71175eaa95" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>setup_hardware</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a4c89ce5afec47afc5bf6ce3b3fe0b6f9" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>shots</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1ab8709ab33f1df7fbafe82e9a8b28651e" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>updateConfiguration</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a79388610b74c45ca8a019bb29ee1a53f" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_qpu</scope><name>use_default_contrast_settings</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__qpu_1a713f45b859cda189e4f5273da188efe9" prot="public" virt="virtual"><scope>xacc::quantum::qb_qpu</scope><name>~qb_qpu</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

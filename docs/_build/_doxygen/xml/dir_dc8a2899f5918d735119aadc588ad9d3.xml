@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="dir_dc8a2899f5918d735119aadc588ad9d3" kind="dir">
+    <compoundname>core/include/qristal</compoundname>
+    <innerdir refid="dir_427f3ea054aa31b3719ccc0b8074d21d">core/include/qristal/core</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/"/>
+  </compounddef>
+</doxygen>

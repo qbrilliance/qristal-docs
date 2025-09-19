@@ -1,0 +1,608 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classxacc_1_1quantum_1_1qb__visitor" kind="class" language="C++" prot="public">
+    <compoundname>xacc::quantum::qb_visitor</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">xacc::quantum::AllGateVisitor</basecompoundref>
+    <sectiondef kind="user-defined">
+      <header>Visitor functions for gates and measurement.</header>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a98438c988e2cceea3d2dd80639ca4eeb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Identity &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Identity &amp;</type>
+        </param>
+        <briefdescription>
+<para>Identity (no-op) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="65" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1af5bf7f65d092625595e5e94aa9e8dc0d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Rx &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Rx &amp;</type>
+        </param>
+        <briefdescription>
+<para>Rotation about x axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="67" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a63bef240f455506db985595c145c586d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Ry &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Ry &amp;</type>
+        </param>
+        <briefdescription>
+<para>Rotation about y axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="69" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a19730a81846a3725865fb0d8c4d8a955" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(CZ &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>CZ &amp;</type>
+        </param>
+        <briefdescription>
+<para>Controlled Z gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="71" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a42faab1996df7b28e0ab1747bd87136c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Rz &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Rz &amp;</type>
+        </param>
+        <briefdescription>
+<para>Rotation about z axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="73" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a64ac684f3fd6880edce5ad6737de8897" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Hadamard &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Hadamard &amp;</type>
+        </param>
+        <briefdescription>
+<para>Hadamard gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="75" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a42bb8159c3643afb76b75ee0a55e1093" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(CNOT &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>CNOT &amp;</type>
+        </param>
+        <briefdescription>
+<para>Controlled NOT gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="77" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1abd3b5fe40af1e6268ba1c92f348c4f29" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(S &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>S &amp;</type>
+        </param>
+        <briefdescription>
+<para>S gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="79" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a6948354faed4bac5edcf58aa414cb396" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Sdg &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Sdg &amp;</type>
+        </param>
+        <briefdescription>
+<para>Inverse S gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="81" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a75d18dd2f9711e40df5993e5717b55c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(T &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>T &amp;</type>
+        </param>
+        <briefdescription>
+<para>T gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="83" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a4ae4019569f8b7d1f0c649d31eb1cf93" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Tdg &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Tdg &amp;</type>
+        </param>
+        <briefdescription>
+<para>Inverse T gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="85" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a8cc7aa42079d28efa4b2d2fdef87f612" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(X &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>X &amp;</type>
+        </param>
+        <briefdescription>
+<para>Pauli X gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="87" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a26a9f5c1ca8e62fe80676bdb66a118f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Y &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Y &amp;</type>
+        </param>
+        <briefdescription>
+<para>Pauli Y gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="89" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a21602738af1255944bea425b8dc80223" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Z &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Z &amp;</type>
+        </param>
+        <briefdescription>
+<para>Pauli Z date. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="91" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a7e17b0ee9eda324c900a535b6d01047b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(CPhase &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>CPhase &amp;</type>
+        </param>
+        <briefdescription>
+<para>Controlled phase gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="93" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1ae393a10fee1f27bf4ba590ee5d2ff678" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Swap &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Swap &amp;</type>
+        </param>
+        <briefdescription>
+<para>Swap the values of two qubits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="95" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1ae1c97859287a3ba9d3cabd96736449bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(U &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>U &amp;</type>
+        </param>
+        <briefdescription>
+<para>General 1-qubit unitary. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="97" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a06cfccad87374bfca501d13d6e5ea7e0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void xacc::quantum::qb_visitor::visit</definition>
+        <argsstring>(Measure &amp;) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>xacc::quantum::qb_visitor::visit</qualifiedname>
+        <param>
+          <type>Measure &amp;</type>
+        </param>
+        <briefdescription>
+<para>Measure a single qubit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="99" column="14"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__visitor_1a1f8d195d5734433614ce9c861b7295a2" prot="protected" static="no" mutable="no">
+        <type>int</type>
+        <definition>int xacc::quantum::qb_visitor::nQubits_</definition>
+        <argsstring></argsstring>
+        <name>nQubits_</name>
+        <qualifiedname>xacc::quantum::qb_visitor::nQubits_</qualifiedname>
+        <briefdescription>
+<para>Number of qubits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="25" column="13" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="25" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__visitor_1a969f508d6e4d8d34240b6f259767a3e3" prot="protected" static="no" mutable="no">
+        <type>unsigned int</type>
+        <definition>unsigned int xacc::quantum::qb_visitor::classicalBitCounter_</definition>
+        <argsstring></argsstring>
+        <name>classicalBitCounter_</name>
+        <qualifiedname>xacc::quantum::qb_visitor::classicalBitCounter_</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Number of classical bit registers to which measurements have been assigned. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="28" column="22" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__visitor_1a96362484210e9951b52528d2b7d13a85" prot="protected" static="no" mutable="no">
+        <type>std::map&lt; unsigned int, unsigned int &gt;</type>
+        <definition>std::map&lt;unsigned int, unsigned int&gt; xacc::quantum::qb_visitor::qubitToClassicalBitIndex_</definition>
+        <argsstring></argsstring>
+        <name>qubitToClassicalBitIndex_</name>
+        <qualifiedname>xacc::quantum::qb_visitor::qubitToClassicalBitIndex_</qualifiedname>
+        <briefdescription>
+<para>Map from qubit indices to assigned classical readout bit indices. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="31" column="18" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__visitor_1a06359cf2599fc2567684a46b4f72acaf" prot="protected" static="no" mutable="no">
+        <type>nlohmann::json</type>
+        <definition>nlohmann::json xacc::quantum::qb_visitor::sequence_</definition>
+        <argsstring></argsstring>
+        <name>sequence_</name>
+        <qualifiedname>xacc::quantum::qb_visitor::sequence_</qualifiedname>
+        <briefdescription>
+<para>JSON for sequence of gates (XASM format) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="34" column="24" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__visitor_1a87e3fc28d02e43b63759ffc8bbc3900b" prot="protected" static="no" mutable="no">
+        <type>const double</type>
+        <definition>const double xacc::quantum::qb_visitor::pi</definition>
+        <argsstring></argsstring>
+        <name>pi</name>
+        <qualifiedname>xacc::quantum::qb_visitor::pi</qualifiedname>
+        <initializer>= xacc::constants::pi</initializer>
+        <briefdescription>
+<para>No point reinventing the circle is there? <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="37" column="22" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classxacc_1_1quantum_1_1qb__visitor_1a54fa961ff579b94ad00c52f5712af272" prot="protected" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool xacc::quantum::qb_visitor::restrict_angles_to_pmpi_</definition>
+        <argsstring></argsstring>
+        <name>restrict_angles_to_pmpi_</name>
+        <qualifiedname>xacc::quantum::qb_visitor::restrict_angles_to_pmpi_</qualifiedname>
+        <briefdescription>
+<para>Restrict native gate rotation angles to (-pi,pi]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="40" column="14" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="40" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1abaa7d63f06cf6e630afb4e435162b19a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>xacc::quantum::qb_visitor::qb_visitor</definition>
+        <argsstring>(const int nQubits, const bool cut_angles=true)</argsstring>
+        <name>qb_visitor</name>
+        <qualifiedname>xacc::quantum::qb_visitor::qb_visitor</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>nQubits</declname>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>cut_angles</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="45" column="9" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="45" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a25321d5ae3fec713bc070670d89317ad" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>virtual xacc::quantum::qb_visitor::~qb_visitor</definition>
+        <argsstring>()</argsstring>
+        <name>~qb_visitor</name>
+        <qualifiedname>xacc::quantum::qb_visitor::~qb_visitor</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="50" column="17" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1ab7d605055429363d01026ec29ef6aedc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>virtual const std::string xacc::quantum::qb_visitor::name</definition>
+        <argsstring>() const</argsstring>
+        <name>name</name>
+        <qualifiedname>xacc::quantum::qb_visitor::name</qualifiedname>
+        <briefdescription>
+<para>Return name of the visitor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="53" column="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a33bf307823e9c3f50d4f939597d40eec" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>const std::string</type>
+        <definition>virtual const std::string xacc::quantum::qb_visitor::description</definition>
+        <argsstring>() const</argsstring>
+        <name>description</name>
+        <qualifiedname>xacc::quantum::qb_visitor::description</qualifiedname>
+        <briefdescription>
+<para>Return description of the visitor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="56" column="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1ac071512d09eb80a35cfaba0f138e4bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double xacc::quantum::qb_visitor::norm</definition>
+        <argsstring>(const double &amp;)</argsstring>
+        <name>norm</name>
+        <qualifiedname>xacc::quantum::qb_visitor::norm</qualifiedname>
+        <param>
+          <type>const double &amp;</type>
+        </param>
+        <briefdescription>
+<para>Normalise angles to the interval (-pi,pi]. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="59" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a74fd046eec90f68987553b9c11f56acf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string xacc::quantum::qb_visitor::getXasmString</definition>
+        <argsstring>()</argsstring>
+        <name>getXasmString</name>
+        <qualifiedname>xacc::quantum::qb_visitor::getXasmString</qualifiedname>
+        <briefdescription>
+<para>Return the finished qpu OpenQasm kernel. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="104" column="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classxacc_1_1quantum_1_1qb__visitor_1a95094c1bd8459bd1d97fea09fbc54553" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::CompositeInstruction &gt; xacc::quantum::qb_visitor::getTranspiledIR</definition>
+        <argsstring>() const</argsstring>
+        <name>getTranspiledIR</name>
+        <qualifiedname>xacc::quantum::qb_visitor::getTranspiledIR</qualifiedname>
+        <briefdescription>
+<para>Retrieved the IR tree in the basis gate set. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="107" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>xacc::quantum::AllGateVisitor</label>
+      </node>
+      <node id="1">
+        <label>xacc::quantum::qb_visitor</label>
+        <link refid="classxacc_1_1quantum_1_1qb__visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>xacc::quantum::AllGateVisitor</label>
+      </node>
+      <node id="1">
+        <label>xacc::quantum::qb_visitor</label>
+        <link refid="classxacc_1_1quantum_1_1qb__visitor"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" line="20" column="5" bodyfile="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp" bodystart="20" bodyend="108"/>
+    <listofallmembers>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a969f508d6e4d8d34240b6f259767a3e3" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>classicalBitCounter_</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a33bf307823e9c3f50d4f939597d40eec" prot="public" virt="virtual"><scope>xacc::quantum::qb_visitor</scope><name>description</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a95094c1bd8459bd1d97fea09fbc54553" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>getTranspiledIR</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a74fd046eec90f68987553b9c11f56acf" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>getXasmString</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1ab7d605055429363d01026ec29ef6aedc" prot="public" virt="virtual"><scope>xacc::quantum::qb_visitor</scope><name>name</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1ac071512d09eb80a35cfaba0f138e4bc3" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>norm</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a1f8d195d5734433614ce9c861b7295a2" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>nQubits_</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a87e3fc28d02e43b63759ffc8bbc3900b" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>pi</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1abaa7d63f06cf6e630afb4e435162b19a" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>qb_visitor</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a96362484210e9951b52528d2b7d13a85" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>qubitToClassicalBitIndex_</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a54fa961ff579b94ad00c52f5712af272" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>restrict_angles_to_pmpi_</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a06359cf2599fc2567684a46b4f72acaf" prot="protected" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>sequence_</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a98438c988e2cceea3d2dd80639ca4eeb" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1af5bf7f65d092625595e5e94aa9e8dc0d" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a63bef240f455506db985595c145c586d" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a19730a81846a3725865fb0d8c4d8a955" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a42faab1996df7b28e0ab1747bd87136c" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a64ac684f3fd6880edce5ad6737de8897" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a42bb8159c3643afb76b75ee0a55e1093" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1abd3b5fe40af1e6268ba1c92f348c4f29" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a6948354faed4bac5edcf58aa414cb396" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a75d18dd2f9711e40df5993e5717b55c4" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a4ae4019569f8b7d1f0c649d31eb1cf93" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a8cc7aa42079d28efa4b2d2fdef87f612" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a26a9f5c1ca8e62fe80676bdb66a118f4" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a21602738af1255944bea425b8dc80223" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a7e17b0ee9eda324c900a535b6d01047b" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1ae393a10fee1f27bf4ba590ee5d2ff678" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1ae1c97859287a3ba9d3cabd96736449bd" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a06cfccad87374bfca501d13d6e5ea7e0" prot="public" virt="non-virtual"><scope>xacc::quantum::qb_visitor</scope><name>visit</name></member>
+      <member refid="classxacc_1_1quantum_1_1qb__visitor_1a25321d5ae3fec713bc070670d89317ad" prot="public" virt="virtual"><scope>xacc::quantum::qb_visitor</scope><name>~qb_visitor</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

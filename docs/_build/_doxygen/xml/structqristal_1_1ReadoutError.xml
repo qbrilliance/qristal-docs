@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structqristal_1_1ReadoutError" kind="struct" language="C++" prot="public">
+    <compoundname>qristal::ReadoutError</compoundname>
+    <includes refid="readout__error_8hpp" local="no">readout_error.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqristal_1_1ReadoutError_1a224ec4e503774555d5a12732afd73401" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::ReadoutError::p_01</definition>
+        <argsstring></argsstring>
+        <name>p_01</name>
+        <qualifiedname>qristal::ReadoutError::p_01</qualifiedname>
+        <briefdescription>
+<para>Classical probability of detecting 0 whereas the true state was |1&gt; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/readout_error.hpp" line="14" column="14" bodyfile="core/include/qristal/core/noise_model/readout_error.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1ReadoutError_1a6356ccc4b236fca17ec70b6748821a53" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::ReadoutError::p_10</definition>
+        <argsstring></argsstring>
+        <name>p_10</name>
+        <qualifiedname>qristal::ReadoutError::p_10</qualifiedname>
+        <briefdescription>
+<para>Classical probability of detecting 1 whereas the true state was |0&gt; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/noise_model/readout_error.hpp" line="18" column="14" bodyfile="core/include/qristal/core/noise_model/readout_error.hpp" bodystart="18" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Probabilities of reading out a value for a qubit that does not reflect its true state. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/noise_model/readout_error.hpp" line="9" column="3" bodyfile="core/include/qristal/core/noise_model/readout_error.hpp" bodystart="10" bodyend="19"/>
+    <listofallmembers>
+      <member refid="structqristal_1_1ReadoutError_1a224ec4e503774555d5a12732afd73401" prot="public" virt="non-virtual"><scope>qristal::ReadoutError</scope><name>p_01</name></member>
+      <member refid="structqristal_1_1ReadoutError_1a6356ccc4b236fca17ec70b6748821a53" prot="public" virt="non-virtual"><scope>qristal::ReadoutError</scope><name>p_10</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

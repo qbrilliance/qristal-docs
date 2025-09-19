@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="sim__pool_8hpp" kind="file" language="C++">
+    <compoundname>sim_pool.hpp</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">unordered_map</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>core/include/qristal/core/cudaq/sim_pool.hpp</label>
+        <link refid="sim__pool_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>unordered_map</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classqristal_1_1cudaq__sim__pool" prot="public">qristal::cudaq_sim_pool</innerclass>
+    <innernamespace refid="namespacenvqir">nvqir</innernamespace>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/cudaq/sim_pool.hpp"/>
+  </compounddef>
+</doxygen>

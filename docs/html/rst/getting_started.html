@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en">
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Getting started &mdash; Qristal  documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+      <link rel="stylesheet" type="text/css" href="../_static/styles/custom.css" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-EML76VL6ZZ"></script>
+        <script src="../_static/js/qb_ga.js"></script>
+        <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+        <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+        <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Examples" href="examples.html" />
+    <link rel="prev" title="Welcome to Qristal – The Quantum Brilliance SDK" href="../index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../index.html" class="icon icon-home">
+            Qristal
+              <img src="../_static/qb_logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Basic Usage</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Getting started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#dependencies">Dependencies</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#installing-from-source">Installing from source</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#automatic-dependency-installation">Automatic Dependency Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#manual-dependency-installation">Manual Dependency Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mpi-support">MPI support</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#contributing">Contributing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#asking-questions">Asking Questions</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reporting-and-discussing-issues">Reporting and Discussing Issues</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#contributing-code">Contributing Code</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="examples.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="backends.html">Backends</a></li>
+<li class="toctree-l1"><a class="reference internal" href="emulator.html">Qristal Emulator Getting Started Guide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqpu.html">Qristal Virtual QPU</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Advanced Topics</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="noise_models.html">Noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="noise_models.html#user-defined-noise-models">User defined noise models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="parametrization.html">Parametrized Quantum Circuits</a></li>
+<li class="toctree-l1"><a class="reference internal" href="vqe.html">Variational Quantum Eigensolver (VQE)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="nextflow.html">Nextflow</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quantum_gates.html">Quantum Gates</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Source Code Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../_cpp_api/library_root.html">C++ API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="python_autodoc.html">Python API</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Qristal</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Getting started</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/rst/getting_started.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this heading"></a></h1>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
+<p>The fastest way to get a working Qristal installation is to <a class="reference external" href="https://github.com/qbrilliance/qristal#docker">run it directly from the provided Docker image</a>.</p>
+<p>To learn how to use Qristal, let’s run a simple Python example to create a Bell state.</p>
+<p>The Bell state is the simplest example of a maximally entangled state, and comprises just 2 qubits. These 2 qubits contribute a Hilbert space of dimension 4. In the qubit basis <span class="math notranslate nohighlight">\(\ket{0}\)</span> and <span class="math notranslate nohighlight">\(\ket{1}\)</span>, these four components are written as
+<div class="math notranslate nohighlight">
+\[ \ket{\Phi^+} = \frac{\ket{00} + \ket{11}}{\sqrt{2}} , \]</div>
+
+<div class="math notranslate nohighlight">
+\[ \ket{\Phi^-} = \frac{\ket{00} - \ket{11}}{\sqrt{2}} , \]</div>
+
+<div class="math notranslate nohighlight">
+\[ \ket{\Psi^+} = \frac{\ket{01} + \ket{10}}{\sqrt{2}} , \]</div>
+
+<div class="math notranslate nohighlight">
+\[ \ket{\Psi^-} = \frac{\ket{01} - \ket{10}}{\sqrt{2}} . \]</div>
+</p>
+<p>A Bell state can be constructed through the application of <a class="reference external" href="https://qristal.readthedocs.io/en/latest/rst/quantum_computing.html">simple gates</a> such as the Hadamard, X, Z and CNOT gates. Each of the above components are created through their respective circuit:</p>
+<center>
+<p><em>Circuit to create <span class="math notranslate nohighlight">\(\ket{\Phi^+}\)</span></em>:
+<img alt="" src="../_images/phi_plus.png" /></p>
+</center>
+<center>
+<p><em>Circuit to create <span class="math notranslate nohighlight">\(\ket{\Phi^-}\)</span></em>:
+<img alt="" src="../_images/phi_minus.png" /></p>
+</center>
+<center>
+<p><em>Circuit to create <span class="math notranslate nohighlight">\(\ket{\Psi^+}\)</span></em>:
+<img alt="" src="../_images/psi_plus.png" /></p>
+</center>
+<center>
+<p><em>Circuit to create <span class="math notranslate nohighlight">\(\ket{\Psi^-}\)</span></em>:
+<img alt="" src="../_images/psi_minus.png" /></p>
+</center>
+<p>Now let’s code up the circuit to generate <span class="math notranslate nohighlight">\(\ket{\Phi^+}\)</span>.</p>
+<p>Import the Qristal core:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">qristal.core</span>
+</pre></div>
+</div>
+<p>Create a quantum computing session using Qristal:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span> <span class="o">=</span> <span class="n">qristal</span><span class="o">.</span><span class="n">core</span><span class="o">.</span><span class="n">session</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Set the number of shots to run through the circuit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span><span class="o">.</span><span class="n">sn</span> <span class="o">=</span> <span class="mi">1024</span>
+</pre></div>
+</div>
+<p>Set the number of qubits:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span><span class="o">.</span><span class="n">qn</span> <span class="o">=</span> <span class="mi">2</span>
+</pre></div>
+</div>
+<p>Choose the simulator backend:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span><span class="o">.</span><span class="n">acc</span> <span class="o">=</span> <span class="s2">&quot;qpp&quot;</span>
+</pre></div>
+</div>
+<p>Create the <span class="math notranslate nohighlight">\(\ket{\Phi^+}\)</span> component of the Bell state using Hadamard and CNOT gates:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span><span class="o">.</span><span class="n">instring</span> <span class="o">=</span> <span class="s1">&#39;&#39;&#39;</span>
+<span class="s1">__qpu__ void MY_QUANTUM_CIRCUIT(qreg q)</span>
+<span class="s1">{</span>
+<span class="s1">  OPENQASM 2.0;</span>
+<span class="s1">  include &quot;qelib1.inc&quot;;</span>
+<span class="s1">  creg c[2];</span>
+<span class="s1">  h q[0];</span>
+<span class="s1">  cx q[0], q[1];</span>
+<span class="s1">  measure q[0] -&gt; c[0];</span>
+<span class="s1">  measure q[1] -&gt; c[1];</span>
+<span class="s1">}</span>
+<span class="s1">&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Run the circuit:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">my_sim</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</pre></div>
+</div>
+<p>Print the cumulative results in each of the classical registers:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">my_sim</span><span class="o">.</span><span class="n">results</span><span class="p">)</span>
+</pre></div>
+</div>
+</section>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>Qristal can either be run <a class="reference external" href="https://github.com/qbrilliance/qristal#docker">directly from the provided Docker image</a>, or <a class="reference external" href="https://github.com/qbrilliance/qristal">installed from source</a>.  This section provides instructions for working with the source. If using Windows Subsystem for Linux 2, ensure you have Docker Desktop installed <strong>on Windows</strong> and not under your Linux distribution, as it allows Docker to use <a class="reference external" href="https://docs.docker.com/desktop/windows/wsl/">WSL2 as a backend</a>.</p>
+<section id="dependencies">
+<h3>Dependencies<a class="headerlink" href="#dependencies" title="Permalink to this heading"></a></h3>
+<p id="required-deps">Installing Qristal from source <strong>requires</strong> the following libraries/packages to be installed:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://gcc.gnu.org/">GNU C++ Compiler</a> &gt;= 11.4.0.  Usage of clang 16.0.6 or later is supported, but gcc/g++ is still required for building exatn and tnqvm.</p></li>
+<li><p><a class="reference external" href="https://gcc.gnu.org/">GNU Fortran Compiler</a> &gt;= 11.4.0</p></li>
+<li><p><a class="reference external" href="https://cmake.org/">CMake</a> &gt;= 3.20</p></li>
+<li><p><a class="reference external" href="http://python.org/">Python</a> &gt;= 3.8</p></li>
+<li><p><a class="reference external" href="https://www.openblas.net/">OpenBLAS (Basic Linear Algebra Subprograms)</a></p></li>
+<li><p><a class="reference external" href="https://www.openssl.org">OpenSSL</a></p></li>
+<li><p><a class="reference external" href="https://www.boost.org/">Boost</a> &gt;= 1.71</p></li>
+<li><p><a class="reference external" href="https://curl.se/">libcurl</a></p></li>
+</ul>
+<p>Also, note that Qristal will be built with support for CUDA Quantum if and only if cmake detects that your system has a compatible CUDA Quantum installation. A shortcut is to run Qristal directly from <a class="reference external" href="https://github.com/qbrilliance/qristal#docker">the Docker image that we provide with a compatible version of CUDA Quantum already installed</a>.</p>
+<p id="auto-install-deps">Additional dependencies that can be installed automatically at build time:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/eclipse/xacc">XACC</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ORNL-QCI/exatn">ExaTN</a></p></li>
+<li><p><a class="reference external" href="https://github.com/ORNL-QCI/tnqvm">TNQVM</a></p></li>
+<li><p><a class="reference external" href="https://github.com/pybind/pybind11">pybind11</a> &gt;= 2.10</p></li>
+<li><p><a class="reference external" href="https://eigen.tuxfamily.org/">Eigen</a> &gt;= 3.3.7</p></li>
+<li><p><a class="reference external" href="https://docs.libcpr.org/">cpr</a> &gt;= 1.3.0</p></li>
+<li><p><a class="reference external" href="https://github.com/Taywee/args">args</a> &gt;= 6.4.1</p></li>
+<li><p><a class="reference external" href="https://github.com/ryanhaining/cppitertools">cppitertools</a> &gt;= 2.1</p></li>
+<li><p><a class="reference external" href="https://github.com/google/googletest">GoogleTest</a> &gt;= 1.12.1</p></li>
+<li><p><a class="reference external" href="https://github.com/nlohmann/json">Nlohmann JSON</a> &gt;= 3.1.1</p></li>
+<li><p>Various Python modules.</p></li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>Automatic dependency installation</strong></p>
+<p>It is highly recommended that users let the Qristal build system install the <a class="reference internal" href="#auto-install-deps"><span class="std std-ref">additional dependencies mentioned above</span></a>, by setting the <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> CMake option.</p>
+</div>
+</section>
+<section id="installing-from-source">
+<h3>Installing from source<a class="headerlink" href="#installing-from-source" title="Permalink to this heading"></a></h3>
+<section id="automatic-dependency-installation">
+<h4>Automatic Dependency Installation<a class="headerlink" href="#automatic-dependency-installation" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>For development purposes, it is <strong>recommended</strong> to install Qristal using <em>automatic dependency installation</em> mode.</p></li>
+</ol>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/qbrilliance/qristal.git<span class="w"> </span>qristal
+cmake<span class="w"> </span>-B<span class="w"> </span>qristal/build<span class="w"> </span>-S<span class="w"> </span>qristal<span class="w"> </span>-DINSTALL_MISSING<span class="o">=</span>ON
+cmake<span class="w"> </span>--build<span class="w"> </span>qristal/build<span class="w"> </span>--parallel<span class="w"> </span><span class="k">$(</span>nproc<span class="k">)</span>
+cmake<span class="w"> </span>--install<span class="w"> </span>qristal/build<span class="w"> </span><span class="c1"># Default installs to the build directory which in this case is &quot;qristal/build&quot;</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> flag ensures that all missing dependencies (if any) will be downloaded and installed automatically.  To automatically download and install only C++ dependencies, instead set <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=CXX</span></code>.  To download and install only Python module dependencies, use <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=PYTHON</span></code>.</p>
+<p>The <a class="reference internal" href="#required-deps"><span class="std std-ref">required dependencies</span></a> <strong>must</strong> be installed on your system. <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> will not handle those mandatory dependencies.</p>
+<ol class="arabic simple" start="2">
+<li><p>Other useful <code class="docutils literal notranslate"><span class="pre">cmake</span></code> options</p></li>
+</ol>
+<p>The directory into which Qristal is to be installed can be specified by setting <code class="docutils literal notranslate"><span class="pre">-DCMAKE_INSTALL_PREFIX=&lt;YOUR</span> <span class="pre">QRISTAL</span> <span class="pre">INSTALLATION</span> <span class="pre">DIR&gt;</span></code>.</p>
+<p>If you wish to build Qristal’s C++ noise-aware circuit placement routines, you must also enable the use of the additional dependency <a class="reference external" href="https://github.com/CQCL/tket">TKET</a>. This is done by passing <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span></code> to <code class="docutils literal notranslate"><span class="pre">cmake</span></code>. TKET will be installed automatically by <code class="docutils literal notranslate"><span class="pre">cmake</span></code> if both <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span></code> and <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=ON</span></code> (or <code class="docutils literal notranslate"><span class="pre">-DINSTALL_MISSING=CXX</span></code>) are passed to <code class="docutils literal notranslate"><span class="pre">cmake</span></code>.</p>
+<p>If you also wish to build this html documentation, pass <code class="docutils literal notranslate"><span class="pre">-DBUILD_DOCS=ON</span></code>.</p>
+</section>
+<section id="manual-dependency-installation">
+<h4>Manual Dependency Installation<a class="headerlink" href="#manual-dependency-installation" title="Permalink to this heading"></a></h4>
+<ol class="arabic simple">
+<li><p>Manual Installation of <a class="reference internal" href="#auto-install-deps"><span class="std std-ref">additional dependencies</span></a> (<strong>Advanced alternative to step 1</strong>)</p></li>
+</ol>
+<ul class="simple">
+<li><p>Follow the installation instructions of <a class="reference external" href="https://github.com/eclipse/xacc">XACC</a>, <a class="reference external" href="https://github.com/ORNL-QCI/exatn">ExaTN</a> and <a class="reference external" href="https://github.com/ORNL-QCI/tnqvm">TNQVM</a>.</p></li>
+<li><p>Perform system-level installation of the <a class="reference internal" href="#auto-install-deps"><span class="std std-ref">remaining libraries</span></a>.</p></li>
+<li><p>Configure CMake build with</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cmake<span class="w"> </span>..<span class="w"> </span>-DXACC_DIR<span class="o">=</span>&lt;YOUR<span class="w"> </span>XACC<span class="w"> </span>INSTALLATION<span class="w"> </span>DIR&gt;<span class="w"> </span>-DEXATN_DIR<span class="o">=</span>&lt;YOUR<span class="w"> </span>EXATN<span class="w"> </span>INSTALLATION<span class="w"> </span>DIR&gt;<span class="w"> </span>-DTNQVM_DIR<span class="o">=</span>&lt;YOUR<span class="w"> </span>TNQVM<span class="w"> </span>INSTALLATION<span class="w"> </span>DIR&gt;
+</pre></div>
+</div>
+<p>In this manual mode, the build system will check for a <strong>specific</strong> version of XACC, EXATN and TNQVM as provided.
+If not satisfied, it will terminate the build and ask for a reinstallation of the dependency.
+Please follow the error message to install the correct version (specified as a git commit hash key).</p>
+<p>Similarly, if building with noise-aware placement routines enabled using <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span></code>, you can pass <code class="docutils literal notranslate"><span class="pre">-DWITH_TKET=ON</span> <span class="pre">-DTKET_DIR=&lt;YOUR</span> <span class="pre">TKET</span> <span class="pre">INSTALLATION</span> <span class="pre">DIR&gt;</span></code> to <code class="docutils literal notranslate"><span class="pre">cmake</span></code> to tell it to use your own installation of TKET rather than building TKET from source.</p>
+</section>
+<section id="mpi-support">
+<h4>MPI support<a class="headerlink" href="#mpi-support" title="Permalink to this heading"></a></h4>
+<p>When using Qristal, enabling MPI allows the user to take advantage of multiple computing nodes to accelerate calculations. Workloads are partitioned across multiple processes, which are typically configured to run across different nodes via something like Slurm, and executed in parallel. The resultant data from each process is then synchronised. The implementation of MPI in the application or dependency determines how the work is partitioned, run and synchronised.</p>
+<section id="qristal-native">
+<h5>Qristal Native<a class="headerlink" href="#qristal-native" title="Permalink to this heading"></a></h5>
+<p>To enable native MPI acceleration in Qristal, either add <code class="docutils literal notranslate"><span class="pre">-DWITH_MPI=ON</span></code> or <code class="docutils literal notranslate"><span class="pre">-DMPI_HOME=&lt;MPI</span> <span class="pre">install</span> <span class="pre">location&gt;</span></code> to the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> configuration step. The default behaviour is to use whatever MPI installation has been installed to the system’s root directory. A custom MPI installation can be specified via <code class="docutils literal notranslate"><span class="pre">-DMPI_HOME=&lt;MPI</span> <span class="pre">install</span> <span class="pre">location&gt;</span></code>. For more fine-grained and customised control of MPI compiler, header and library locations to configure the build with, see the relevant section in the <a class="reference external" href="https://cmake.org/cmake/help/v3.20/module/FindMPI.html#variables-for-locating-mpi">cmake documentation</a>.</p>
+<p>Qristal implements MPI acceleration by partitioning shots across processes. Once all MPI processes finish running their allocated number of shots, the supervisor MPI process synchronises and, where necessary, rescales the results of all processes before combining them with its own.</p>
+</section>
+<section id="qristal-dependencies">
+<h5>Qristal Dependencies<a class="headerlink" href="#qristal-dependencies" title="Permalink to this heading"></a></h5>
+<p>To enable MPI acceleration in Qristal dependencies, add <code class="docutils literal notranslate"><span class="pre">-DENABLE_MPI_IN_DEPS=ON</span></code> to the <code class="docutils literal notranslate"><span class="pre">cmake</span></code> configuration step. Enabling MPI acceleration for Qristal will <em>not</em> implicitly enable MPI acceleration within dependencies. When <code class="docutils literal notranslate"><span class="pre">-DENABLE_MPI_IN_DEPS=ON</span></code> is used, finding MPI is left up to the individual dependencies that support MPI.</p>
+<p><strong>Dependency support for MPI:</strong></p>
+<ol class="arabic simple">
+<li><p>Parallelisation when using specific <code class="docutils literal notranslate"><span class="pre">xacc</span></code> backends</p>
+<ol class="loweralpha simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">tnqvm</span></code> backend when built with <code class="docutils literal notranslate"><span class="pre">exatn</span></code> backend (which Qristal does)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;hpc-virtualization&quot;</span></code> backend</p>
+<ul class="simple">
+<li><p>See the <code class="docutils literal notranslate"><span class="pre">HPCVirtDecorator</span></code> (“xacc/quantum/plugins/decorators/hpc-virtualization/hpc_virt_decorator.*”) class declaration (hpp) and definition (cpp) for more information</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Circuit-level parallelisation for expectation value computation using the <code class="docutils literal notranslate"><span class="pre">VQEE</span></code> optimisation algorithm (uses the  <cite>“hpc-virtualization”`</cite> backend)</p></li>
+</ol>
+</section>
+<section id="example-usage">
+<h5>Example Usage<a class="headerlink" href="#example-usage" title="Permalink to this heading"></a></h5>
+<div class="no-lexing highlight-none notranslate"><div class="highlight"><pre><span></span>cmake -B build -S . -DWITH_MPI=ON -DMPI_HOME=/opt/mpich -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DINSTALL_MISSING=ON
+...
+-- Found MPI_CXX: /opt/mpich/lib/libmpicxx.so (found version &quot;4.1&quot;)
+-- Found MPI: TRUE (found version &quot;4.1&quot;) found components: CXX
+-- MPI configuration:
+    MPI_HOME: /opt/mpich
+    MPI_VERSION:
+    MPI_CXX_VERSION: 4.1
+    MPI_CXX_INCLUDE_DIRS: /opt/mpich/include
+    MPI_CXX_LIBRARIES: /opt/mpich/lib/libmpicxx.so;/opt/mpich/lib/libmpi.so
+    MPI_CXX_COMPILER: /opt/mpich/bin/mpicxx
+    MPI_CXX_COMPILE_DEFINITIONS:
+    MPI_CXX_COMPILE_OPTIONS:
+    MPI_CXX_LINK_FLAGS: -Wl,-rpath -Wl,/opt/mpich/lib -Wl,--enable-new-dtags
+    MPIEXEC_EXECUTABLE: /opt/mpich/bin/mpiexec
+-- MPI C++ compiler wraps the same compiler that&#39;s configured for this cmake project (/usr/bin/c++)
+...
+</pre></div>
+</div>
+<p>Note that MPI integration with Qristal assumes all “found” MPI directories and binaries are under the <code class="docutils literal notranslate"><span class="pre">MPI_HOME</span></code> directory and uses this to ensure <code class="docutils literal notranslate"><span class="pre">cmake</span></code> has not found an MPI install that is different to where the user has specified it to be. If this is not the case, the below error will occur:</p>
+<div class="no-lexing highlight-none notranslate"><div class="highlight"><pre><span></span>-- MPI configuration:
+    MPI_HOME: /opt/mpich
+    MPI_VERSION:
+    MPI_CXX_VERSION: 3.1
+    MPI_CXX_INCLUDE_DIRS: /usr/lib/aarch64-linux-gnu/openmpi/include;/usr/lib/aarch64-linux-gnu/openmpi/include/openmpi
+    MPI_CXX_LIBRARIES: /usr/lib/aarch64-linux-gnu/openmpi/lib/libmpi_cxx.so;/usr/lib/aarch64-linux-gnu/openmpi/lib/libmpi.so
+    MPI_CXX_COMPILER: /usr/bin/mpicxx
+    MPI_CXX_COMPILE_DEFINITIONS:
+    MPI_CXX_COMPILE_OPTIONS:
+    MPI_CXX_LINK_FLAGS:
+    MPIEXEC_EXECUTABLE: /usr/bin/mpiexec
+-- MPI C++ compiler wraps the same compiler that&#39;s configured for this cmake project (/usr/bin/c++)
+CMake Warning at cmake/mpi_utilities.cmake:69 (message):
+    /usr/lib/aarch64-linux-gnu/openmpi/include is not a child of /opt/mpich.
+Call Stack (most recent call first):
+    cmake/mpi_utilities.cmake:20 (check_mpi_configuration)
+    cmake/dependencies.cmake:198 (add_mpi)
+    CMakeLists.txt:31 (include)
+
+
+CMake Warning at cmake/mpi_utilities.cmake:69 (message):
+    /usr/lib/aarch64-linux-gnu/openmpi/include/openmpi is not a child of
+    /opt/mpich.
+Call Stack (most recent call first):
+    cmake/mpi_utilities.cmake:20 (check_mpi_configuration)
+    cmake/dependencies.cmake:198 (add_mpi)
+    CMakeLists.txt:31 (include)
+
+
+CMake Warning at cmake/mpi_utilities.cmake:69 (message):
+    /usr/lib/aarch64-linux-gnu/openmpi/lib/libmpi_cxx.so is not a child of
+    /opt/mpich.
+Call Stack (most recent call first):
+    cmake/mpi_utilities.cmake:20 (check_mpi_configuration)
+    cmake/dependencies.cmake:198 (add_mpi)
+    CMakeLists.txt:31 (include)
+
+
+CMake Warning at cmake/mpi_utilities.cmake:69 (message):
+    /usr/lib/aarch64-linux-gnu/openmpi/lib/libmpi.so is not a child of
+    /opt/mpich.
+Call Stack (most recent call first):
+    cmake/mpi_utilities.cmake:20 (check_mpi_configuration)
+    cmake/dependencies.cmake:198 (add_mpi)
+    CMakeLists.txt:31 (include)
+
+
+CMake Warning at cmake/mpi_utilities.cmake:69 (message):
+    /usr/bin/mpiexec is not a child of /opt/mpich.
+Call Stack (most recent call first):
+    cmake/mpi_utilities.cmake:20 (check_mpi_configuration)
+    cmake/dependencies.cmake:198 (add_mpi)
+    CMakeLists.txt:31 (include)
+
+
+CMake Warning at cmake/mpi_utilities.cmake:69 (message):
+    /usr/bin/mpicxx is not a child of /opt/mpich.
+Call Stack (most recent call first):
+    cmake/mpi_utilities.cmake:20 (check_mpi_configuration)
+    cmake/dependencies.cmake:198 (add_mpi)
+    CMakeLists.txt:31 (include)
+
+
+CMake Error at cmake/mpi_utilities.cmake:75 (message):
+    Configuration will not continue as the found MPI implementation is not
+    under the configured MPI_HOME (/opt/mpich).
+Call Stack (most recent call first):
+    cmake/mpi_utilities.cmake:20 (check_mpi_configuration)
+    cmake/dependencies.cmake:198 (add_mpi)
+    CMakeLists.txt:31 (include)
+
+-- Configuring incomplete, errors occurred!
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+</section>
+<section id="contributing">
+<h2>Contributing<a class="headerlink" href="#contributing" title="Permalink to this heading"></a></h2>
+<p>There are many ways in which you can contribute to Qristal, whether by contributing some code or by engaging in discussions;
+we value contributions in all shapes and sizes!</p>
+<p>Here are some ideas for how you can get involved.</p>
+<section id="asking-questions">
+<h3>Asking Questions<a class="headerlink" href="#asking-questions" title="Permalink to this heading"></a></h3>
+<p>Have a question? Some concepts are hard-to-understand?</p>
+<p>Please feel free to file an issue to ask your questions <a class="reference external" href="https://github.com/qbrilliance/qristal/issues/new/choose">here</a>.</p>
+<p>Your question will serve as resource to others searching for help.</p>
+</section>
+<section id="reporting-and-discussing-issues">
+<h3>Reporting and Discussing Issues<a class="headerlink" href="#reporting-and-discussing-issues" title="Permalink to this heading"></a></h3>
+<p>If you have feedback about Qristal, please let us know by filing a <a class="reference external" href="https://github.com/qbrilliance/qristal/issues/new/choose">new issue</a>!</p>
+<p>When filing a bug report, please follow the below template:</p>
+<div class="highlight-cpp notranslate"><div class="highlight"><pre><span></span><span class="cp"># [Title]</span>
+<span class="n">A</span><span class="w"> </span><span class="n">concise</span><span class="w"> </span><span class="n">but</span><span class="w"> </span><span class="n">specific</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">bug</span><span class="p">.</span>
+
+<span class="cp">### Steps to reproduce</span>
+<span class="n">Describe</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">needs</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">done</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">reproduce</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">faulty</span><span class="w"> </span><span class="n">behavior</span><span class="p">.</span>
+
+<span class="cp">### Resulting and expected behavior</span>
+<span class="n">A</span><span class="w"> </span><span class="n">brief</span><span class="w"> </span><span class="n">description</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">expected</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">what</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">actually</span><span class="w"> </span><span class="n">got</span><span class="p">.</span>
+
+<span class="cp">### Self help</span>
+<span class="n">If</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">workaround</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">tried</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">fix</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">bug</span><span class="w"> </span><span class="n">yourself</span><span class="p">,</span><span class="w"> </span><span class="n">please</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">your</span><span class="w"> </span><span class="n">attempt</span><span class="w"> </span><span class="n">here</span><span class="p">.</span>
+
+<span class="cp">### Technical output</span>
+<span class="n">If</span><span class="w"> </span><span class="n">available</span><span class="p">,</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">traceback</span><span class="p">,</span><span class="w"> </span><span class="n">logs</span><span class="w"> </span><span class="k">or</span><span class="w"> </span><span class="n">similar</span><span class="p">.</span><span class="w"> </span><span class="n">Console</span><span class="w"> </span><span class="n">output</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">helpful</span><span class="w"> </span><span class="n">here</span><span class="p">.</span>
+
+<span class="cp">### Screenshot</span>
+<span class="n">If</span><span class="w"> </span><span class="n">applicable</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">helpful</span><span class="p">,</span><span class="w"> </span><span class="n">provide</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">screenshot</span><span class="p">.</span>
+
+<span class="cp">### System information and environment</span>
+<span class="o">-</span><span class="w"> </span><span class="n">Software</span><span class="w"> </span><span class="n">version</span><span class="o">:</span>
+<span class="o">-</span><span class="w"> </span><span class="n">Operating</span><span class="w"> </span><span class="n">system</span><span class="o">:</span>
+</pre></div>
+</div>
+<p>We also encourage you to look at the list of currently <a class="reference external" href="https://github.com/qbrilliance/qristal/issues">open issues</a> to share your ideas and expertise.</p>
+</section>
+<section id="contributing-code">
+<h3>Contributing Code<a class="headerlink" href="#contributing-code" title="Permalink to this heading"></a></h3>
+<p>Before submitting a <a class="reference external" href="https://github.com/qbrilliance/qristal/pulls">new pull request</a>, please make sure to do the following:</p>
+<ul class="simple">
+<li><p><strong>Include a unit test for any new routines or features.</strong> If you’ve fixed a bug or added
+code that should be tested, add a test to the <code class="docutils literal notranslate"><span class="pre">tests</span></code> directory.</p></li>
+<li><p><strong>Ensure that the test suite passes</strong>, e.g., by running the <code class="docutils literal notranslate"><span class="pre">CITests</span></code> executable. This will also be checked by our CI when the MR is submitted.</p></li>
+<li><p><strong>Fix (not suppress) any warnings generated by your changes.</strong> You can turn warnings on in the code by passing <code class="docutils literal notranslate"><span class="pre">-DWARNINGS=ON</span></code> to <code class="docutils literal notranslate"><span class="pre">cmake</span></code>.</p></li>
+</ul>
+<p>When ready, submit your fork as a <a class="reference external" href="https://docs.github.com/articles/using-pull-requests">pull request</a>
+to the QB GitHub repository, filling out the pull request form.</p>
+<ul class="simple">
+<li><p>When describing the pull request, please include as much detail as possible
+regarding the changes made/new features added/performance improvements. If including any
+bug fixes, mention the issue numbers associated with the bugs.</p></li>
+<li><p>Once you have submitted the pull request, the <strong>CI pipeline</strong> will automatically run to ensure that all tests continue to pass.</p></li>
+</ul>
+<p>We may ask for changes to a pull request if it requires more documentation or unit tests to better make use of it.</p>
+<p>Last but not least, <strong>thank you</strong> for taking the time to contribute.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../index.html" class="btn btn-neutral float-left" title="Welcome to Qristal – The Quantum Brilliance SDK" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="examples.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright Quantum Brilliance Pty Ltd.</p>
+  </div>
+
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

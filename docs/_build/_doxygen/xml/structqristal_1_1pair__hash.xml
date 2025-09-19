@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structqristal_1_1pair__hash" kind="struct" language="C++" prot="public">
+    <compoundname>qristal::pair_hash</compoundname>
+    <includes refid="noise__aware__placement__config_8hpp" local="no">noise_aware_placement_config.hpp</includes>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="structqristal_1_1pair__hash_1a9f9e8da5028c2c50d7ab11060c21a396" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class T1</type>
+          </param>
+          <param>
+            <type>class T2</type>
+          </param>
+        </templateparamlist>
+        <type>std::size_t</type>
+        <definition>std::size_t qristal::pair_hash::operator()</definition>
+        <argsstring>(const std::pair&lt; T1, T2 &gt; &amp;pair) const</argsstring>
+        <name>operator()</name>
+        <qualifiedname>qristal::pair_hash::operator()</qualifiedname>
+        <param>
+          <type>const std::pair&lt; T1, T2 &gt; &amp;</type>
+          <declname>pair</declname>
+        </param>
+        <briefdescription>
+<para>Compute the hash value. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/noise_aware_placement_config.hpp" line="13" column="17" bodyfile="core/include/qristal/core/passes/noise_aware_placement_config.hpp" bodystart="13" bodyend="15"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Hash function for std::pair. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/passes/noise_aware_placement_config.hpp" line="10" column="3" bodyfile="core/include/qristal/core/passes/noise_aware_placement_config.hpp" bodystart="10" bodyend="16"/>
+    <listofallmembers>
+      <member refid="structqristal_1_1pair__hash_1a9f9e8da5028c2c50d7ab11060c21a396" prot="public" virt="non-virtual"><scope>qristal::pair_hash</scope><name>operator()</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

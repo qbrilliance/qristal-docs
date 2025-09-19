@@ -1,0 +1,2216 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1session" kind="class" language="C++" prot="public">
+    <compoundname>qristal::session</compoundname>
+    <includes refid="session_8hpp" local="no">session.hpp</includes>
+    <sectiondef kind="user-defined">
+      <memberdef kind="typedef" id="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" prot="private" static="no">
+        <type>const std::pair&lt; size_t, size_t &gt;</type>
+        <definition>using qristal::session::ibounds =  const std::pair&lt;size_t, size_t&gt;</definition>
+        <argsstring></argsstring>
+        <name>ibounds</name>
+        <qualifiedname>qristal::session::ibounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Bounds on session parameters </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="191" column="7" bodyfile="core/include/qristal/core/session.hpp" bodystart="191" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="classqristal_1_1session_1a43c3d06d76f61506a7e77501345713ce" prot="private" static="no">
+        <type>const std::pair&lt; double, double &gt;</type>
+        <definition>using qristal::session::dbounds =  const std::pair&lt;double, double&gt;</definition>
+        <argsstring></argsstring>
+        <name>dbounds</name>
+        <qualifiedname>qristal::session::dbounds</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="192" column="7" bodyfile="core/include/qristal/core/session.hpp" bodystart="192" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a4e17815d07da20aa42d6df13dcb1675f" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kindref="member">ibounds</ref></type>
+        <definition>ibounds qristal::session::random_circuit_depth_bounds</definition>
+        <argsstring></argsstring>
+        <name>random_circuit_depth_bounds</name>
+        <qualifiedname>qristal::session::random_circuit_depth_bounds</qualifiedname>
+        <initializer>{0,1000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="193" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="193" bodyend="193"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1afbacdecc1a75c4cb007a425db2719f4b" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kindref="member">ibounds</ref></type>
+        <definition>ibounds qristal::session::sn_bounds</definition>
+        <argsstring></argsstring>
+        <name>sn_bounds</name>
+        <qualifiedname>qristal::session::sn_bounds</qualifiedname>
+        <initializer>{1,1000000000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="194" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="194" bodyend="194"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1adf9449956e70c3325c5298a4eb412fb3" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kindref="member">ibounds</ref></type>
+        <definition>ibounds qristal::session::qn_bounds</definition>
+        <argsstring></argsstring>
+        <name>qn_bounds</name>
+        <qualifiedname>qristal::session::qn_bounds</qualifiedname>
+        <initializer>{1,10000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="195" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="195" bodyend="195"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a73ae078cffb680b905e991f599fd4d85" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kindref="member">ibounds</ref></type>
+        <definition>ibounds qristal::session::max_bond_bounds</definition>
+        <argsstring></argsstring>
+        <name>max_bond_bounds</name>
+        <qualifiedname>qristal::session::max_bond_bounds</qualifiedname>
+        <initializer>{1,50000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="196" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="196" bodyend="196"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a4207a7fd51ca17c3c52711a0762a00b7" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kindref="member">ibounds</ref></type>
+        <definition>ibounds qristal::session::initial_bond_bounds</definition>
+        <argsstring></argsstring>
+        <name>initial_bond_bounds</name>
+        <qualifiedname>qristal::session::initial_bond_bounds</qualifiedname>
+        <initializer>{1,50000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="197" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="197" bodyend="197"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a3c40fec1a5d931f749c49b14634fd7fb" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kindref="member">ibounds</ref></type>
+        <definition>ibounds qristal::session::max_kraus_bounds</definition>
+        <argsstring></argsstring>
+        <name>max_kraus_bounds</name>
+        <qualifiedname>qristal::session::max_kraus_bounds</qualifiedname>
+        <initializer>{1,50000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="198" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="198" bodyend="198"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a5090bee7181701f4240567e677f54c87" prot="private" static="no" mutable="no">
+        <type><ref refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" kindref="member">ibounds</ref></type>
+        <definition>ibounds qristal::session::initial_kraus_bounds</definition>
+        <argsstring></argsstring>
+        <name>initial_kraus_bounds</name>
+        <qualifiedname>qristal::session::initial_kraus_bounds</qualifiedname>
+        <initializer>{1,50000}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="199" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="199" bodyend="199"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a72e54a652e7b10aca937e8d69b248ff2" prot="private" static="no" mutable="no">
+        <type>dbounds</type>
+        <definition>dbounds qristal::session::svd_cutoff_bounds</definition>
+        <argsstring></argsstring>
+        <name>svd_cutoff_bounds</name>
+        <qualifiedname>qristal::session::svd_cutoff_bounds</qualifiedname>
+        <initializer>{0, 1e9}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="200" column="15" bodyfile="core/include/qristal/core/session.hpp" bodystart="200" bodyend="200"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="user-defined">
+      <memberdef kind="variable" id="classqristal_1_1session_1aa083dc32a597979604d8e9229b6d3711" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::EMULATOR_BACKENDS</definition>
+        <argsstring></argsstring>
+        <name>EMULATOR_BACKENDS</name>
+        <qualifiedname>qristal::session::EMULATOR_BACKENDS</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Sets of recognised values for string-type session parameters.</para>
+<para>Emulator backends </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="207" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="207" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1ae00e96a65ae4b671e4dbc0af9958b2ca" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::NON_EMULATOR_BACKENDS</definition>
+        <argsstring></argsstring>
+        <name>NON_EMULATOR_BACKENDS</name>
+        <qualifiedname>qristal::session::NON_EMULATOR_BACKENDS</qualifiedname>
+        <briefdescription>
+<para>Non-emulator backends. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="209" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="209" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a2fc6cb613c78d83a769d419b599cd3d4" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::GPU_BACKENDS</definition>
+        <argsstring></argsstring>
+        <name>GPU_BACKENDS</name>
+        <qualifiedname>qristal::session::GPU_BACKENDS</qualifiedname>
+        <briefdescription>
+<para>Backends that support GPU execution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="211" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="211" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a57dc4d6435df31b44be99bd7d476d196" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::NOISY_BACKENDS</definition>
+        <argsstring></argsstring>
+        <name>NOISY_BACKENDS</name>
+        <qualifiedname>qristal::session::NOISY_BACKENDS</qualifiedname>
+        <briefdescription>
+<para>Backends that support noise. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="213" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="213" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1aacc18477b0737cbe51d8d6af5b430aaf" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::EXCLUSIVELY_NOISY_BACKENDS</definition>
+        <argsstring></argsstring>
+        <name>EXCLUSIVELY_NOISY_BACKENDS</name>
+        <qualifiedname>qristal::session::EXCLUSIVELY_NOISY_BACKENDS</qualifiedname>
+        <briefdescription>
+<para>Backends that <emphasis>only</emphasis> support noise, i.e. will not run with noise = false. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="215" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="215" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a6e2e17942b6ada7912205451681994b5" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::VALID_AER_SIM_TYPES</definition>
+        <argsstring></argsstring>
+        <name>VALID_AER_SIM_TYPES</name>
+        <qualifiedname>qristal::session::VALID_AER_SIM_TYPES</qualifiedname>
+        <briefdescription>
+<para>Valid AER simulator types. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="217" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="217" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a6ac63fed2238c8d84561f024ee90725e" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_map&lt; std::string_view, size_t &gt;</type>
+        <definition>const std::unordered_map&lt;std::string_view, size_t&gt; qristal::session::MAX_QUBITS_ACCS</definition>
+        <argsstring></argsstring>
+        <name>MAX_QUBITS_ACCS</name>
+        <qualifiedname>qristal::session::MAX_QUBITS_ACCS</qualifiedname>
+        <briefdescription>
+<para>Recommended maximum qubit number for selected accelerator type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="219" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="219" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1aa429024e039283b2f29fcde2bc3c24e5" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::VALID_NOISE_MITIGATIONS</definition>
+        <argsstring></argsstring>
+        <name>VALID_NOISE_MITIGATIONS</name>
+        <qualifiedname>qristal::session::VALID_NOISE_MITIGATIONS</qualifiedname>
+        <briefdescription>
+<para>Recognised noise mitigation strategies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="221" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="221" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a78ad71acc764baf9543bc2fc0f3837d5" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::VALID_HARDWARE_PLACEMENTS</definition>
+        <argsstring></argsstring>
+        <name>VALID_HARDWARE_PLACEMENTS</name>
+        <qualifiedname>qristal::session::VALID_HARDWARE_PLACEMENTS</qualifiedname>
+        <briefdescription>
+<para>Valid placement strategies. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="223" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="223" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a2b725180b50ce57fdc7a7af87650df5c" prot="private" static="yes" mutable="no">
+        <type>const std::unordered_set&lt; std::string_view &gt;</type>
+        <definition>const std::unordered_set&lt;std::string_view&gt; qristal::session::VALID_MEASURE_SAMPLING_OPTIONS</definition>
+        <argsstring></argsstring>
+        <name>VALID_MEASURE_SAMPLING_OPTIONS</name>
+        <qualifiedname>qristal::session::VALID_MEASURE_SAMPLING_OPTIONS</qualifiedname>
+        <briefdescription>
+<para>Valid measurement sampling options. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="225" column="39" bodyfile="core/include/qristal/core/session.hpp" bodystart="225" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-type">
+      <memberdef kind="enum" id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83" prot="private" static="no" strong="yes">
+        <type></type>
+        <name>circuit_origin</name>
+        <qualifiedname>qristal::session::circuit_origin</qualifiedname>
+        <enumvalue id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a230d6acb6f4b8e1438dda15467ceaf11" prot="private">
+          <name>instring</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a751cc7d88350f6dea73a8a0ff6e948e8" prot="private">
+          <name>infile</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a05b9ae9d7dda68bd9b223f8325dbb9e0" prot="private">
+          <name>random_circuit</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83a4f74d343f26bbd58a8cbbad2cab6a704" prot="private">
+          <name>IR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83ab2a03aad08b4dbca55bebb0d53246c5e" prot="private">
+          <name>CUDAQ</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>Supported circuit input sources. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="181" column="7" bodyfile="core/include/qristal/core/session.hpp" bodystart="181" bodyend="187"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1session_1a109a768236056ed39b8d77c2acf092f3" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::all_bitstring_counts_ordered_by_MSB_</definition>
+        <argsstring></argsstring>
+        <name>all_bitstring_counts_ordered_by_MSB_</name>
+        <qualifiedname>qristal::session::all_bitstring_counts_ordered_by_MSB_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="61" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="61" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a923019e71a8ec12a64e6dbd67cefdc58" prot="private" static="no" mutable="no">
+        <type>YAML::Node</type>
+        <definition>YAML::Node qristal::session::remote_backend_database_</definition>
+        <argsstring></argsstring>
+        <name>remote_backend_database_</name>
+        <qualifiedname>qristal::session::remote_backend_database_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="62" column="18" bodyfile="core/include/qristal/core/session.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a9abc4cabf5145c2bf41598a1395c657e" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::shots_remaining_</definition>
+        <argsstring></argsstring>
+        <name>shots_remaining_</name>
+        <qualifiedname>qristal::session::shots_remaining_</qualifiedname>
+        <briefdescription>
+<para>The number of shots remaining to be drawn from <ref refid="classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1" kindref="member">results_</ref> using <ref refid="classqristal_1_1session_1ab6cf68777d40b84b7b582d728a58503d" kindref="member">draw_shot</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="65" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a788ad6796fd1270550988bbba7ae1998" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::sn_this_process</definition>
+        <argsstring></argsstring>
+        <name>sn_this_process</name>
+        <qualifiedname>qristal::session::sn_this_process</qualifiedname>
+        <briefdescription>
+<para>The number of shots to be run on the current process (differs from <ref refid="classqristal_1_1session_1a4663d2c09d5f26d4f0a652536fa16059" kindref="member">sn</ref> if running with multiple MPI processes). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="68" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1aa38002606ca596f04a7d4a87b2d73633" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::acc_uses_n_bit_</definition>
+        <argsstring></argsstring>
+        <name>acc_uses_n_bit_</name>
+        <qualifiedname>qristal::session::acc_uses_n_bit_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="70" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::vector&lt; bool &gt;, int &gt;</type>
+        <definition>std::map&lt;std::vector&lt;bool&gt;, int&gt; qristal::session::results_</definition>
+        <argsstring></argsstring>
+        <name>results_</name>
+        <qualifiedname>qristal::session::results_</qualifiedname>
+        <briefdescription>
+<para>The results of a Quantum calculation. The map value (count) is the number of times the map key (Qubit states with the same bit indexation as the quantum processor registers) was measured after all shots were run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The Qubit states are represented as a vector of booleans for the reasons outlined below:<itemizedlist>
+<listitem><para>High qubit counts can quickly exhaust all possible values able to be encoded by even a 64-bit integer, causing integer overflow.</para>
+</listitem><listitem><para>Values are agnostic with respect to both endianness and ordering because a vector with indices correspond unambiguously to the register number of each qubit. Specifically:<itemizedlist>
+<listitem><para>Ordering: if qubits were saved as e.g. a string &quot;0010110&quot;, a convention about whether the value of qubit 0 goes on the left of the string or the right of it must be chosen.</para>
+</listitem><listitem><para>Endianness: if instead a maximally compact representation is opted for where an integer that corresponds to the whole bitstring is used (e.g. <ref refid="classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835" kindref="member">all_bitstring_counts_</ref>), a convention about whether bit 0 is the most or the least significant bit in encoding that integer must be chosen. </para>
+</listitem></itemizedlist>
+</para>
+</listitem></itemizedlist>
+</para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="95" column="16" bodyfile="core/include/qristal/core/session.hpp" bodystart="95" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; int &gt;</type>
+        <definition>std::vector&lt;int&gt; qristal::session::all_bitstring_counts_</definition>
+        <argsstring></argsstring>
+        <name>all_bitstring_counts_</name>
+        <qualifiedname>qristal::session::all_bitstring_counts_</qualifiedname>
+        <briefdescription>
+<para>Provides counts for every possible combination of qubit measurements, ordered according to the selected encoding (MSB, LSB). Requires <ref refid="classqristal_1_1session_1a6fba9282aa95d1ef51b88227892406b8" kindref="member">calc_all_bitstring_counts</ref> to be set to true. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>E.g. If 2 qubits are used in the calculation, the out counts vector will contain the count of each result in the below order.</para>
+<para><table rows="3" cols="2"><row>
+<entry thead="yes"><para>Encoding   </para>
+</entry><entry thead="yes"><para>Order of Results    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>MSB   </para>
+</entry><entry thead="no"><para>00, 01, 10, 11    </para>
+</entry></row>
+<row>
+<entry thead="no"><para>LSB   </para>
+</entry><entry thead="no"><para>00, 10, 01, 11   </para>
+</entry></row>
+</table>
+</para>
+<para><simplesect kind="note"><para>The mapping from bitstring to vector index can be obtained from the function <ref refid="classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141" kindref="member">bitstring_index</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="113" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="113" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a84cdfa196f3fc7c1e9bcc34fd49bd2f4" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; qristal::session::all_bitstring_probabilities_</definition>
+        <argsstring></argsstring>
+        <name>all_bitstring_probabilities_</name>
+        <qualifiedname>qristal::session::all_bitstring_probabilities_</qualifiedname>
+        <briefdescription>
+<para>Probability distribution of output results. Order of probabilities is identical to the order of the <ref refid="classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835" kindref="member">all_bitstring_counts_</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>The mapping from bitstring to vector index can be obtained from the function <ref refid="classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141" kindref="member">bitstring_index</ref>. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="122" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a5970e6fb263e15a95da55bea41ad048e" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>std::vector&lt;std::vector&lt;double&gt; &gt; qristal::session::all_bitstring_probability_gradients_</definition>
+        <argsstring></argsstring>
+        <name>all_bitstring_probability_gradients_</name>
+        <qualifiedname>qristal::session::all_bitstring_probability_gradients_</qualifiedname>
+        <briefdescription>
+<para>A 2D array of probability gradients with dimensions of the number of parameters by the number of qubits. Requires <ref refid="classqristal_1_1session_1a2e583f7324198c056cb1369940743737" kindref="member">calc_gradients</ref> to be set to true. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This array stores gradients of the bitstring probabilities with respect to the circuit parameters, in the following format (where <computeroutput>y</computeroutput> is the probability list and <computeroutput>x</computeroutput> is the parameter list):</para>
+<para><formula id="51">\[
+\begin{bmatrix}
+\frac{dy_0}{dx_0} &amp; \frac{dy_0}{dx_1} &amp; ... &amp; \frac{dy_0}{dx_n} \\
+\frac{dy_1}{dx_0} &amp; \frac{dy_1}{dx_1} &amp; ... &amp; \frac{dy_1}{dx_n} \\
+... \\
+\frac{dy_m}{dx_0} &amp; \frac{dy_m}{dx_1} &amp; ... &amp; \frac{dy_m}{dx_n}
+\end{bmatrix}
+\]</formula></para>
+<para>As the gradients are returned as a list-of-lists, they can be accessed in row major format, and indexing the above matrix can be done accordingly, i.e. <computeroutput><ref refid="classqristal_1_1session_1af5613e6d83a190a61bab79f56efe5137" kindref="member">all_bitstring_probability_gradients()</ref></computeroutput>[0][1] corresponds to the <computeroutput>dy_0/dx_1</computeroutput> value. <computeroutput>x_i</computeroutput> correspond to the parameters set using <ref refid="classqristal_1_1session_1afeec62eeb3a236e117fcb3fe52af98e8" kindref="member">circuit_parameters()</ref> (i.e. the parameters ordered by their first appearance in the circuit). <computeroutput>y_i</computeroutput> are the output probabilities of different bitstrings, indexed in the same manner as <ref refid="classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835" kindref="member">all_bitstring_counts_</ref>. Explicitly, the index <computeroutput>i</computeroutput> corresponding to a specific bitstring can be obtained by calling <computeroutput>bitstring_index(bitstring)</computeroutput>, with bitstring given as a list of bit values. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="153" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1ad621bfe386caa23d5573f55d46a0b21f" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::transpiled_circuit_</definition>
+        <argsstring></argsstring>
+        <name>transpiled_circuit_</name>
+        <qualifiedname>qristal::session::transpiled_circuit_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="155" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="155" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1afe1203aa060d777bbe6a65ef897b9094" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::qobj_</definition>
+        <argsstring></argsstring>
+        <name>qobj_</name>
+        <qualifiedname>qristal::session::qobj_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="156" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="156" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1aac19758f8da2b7b6afa42d6be1159d3a" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::qbjson_</definition>
+        <argsstring></argsstring>
+        <name>qbjson_</name>
+        <qualifiedname>qristal::session::qbjson_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="157" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1ab8e1266ef4d8039c0dd0f6a15fb5e8a6" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::acc_outputs_qbit0_left_</definition>
+        <argsstring></argsstring>
+        <name>acc_outputs_qbit0_left_</name>
+        <qualifiedname>qristal::session::acc_outputs_qbit0_left_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="158" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a0511f441258d4d34ab0b229c61bb5da6" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt;int,int&gt; qristal::session::one_qubit_gate_depths_</definition>
+        <argsstring></argsstring>
+        <name>one_qubit_gate_depths_</name>
+        <qualifiedname>qristal::session::one_qubit_gate_depths_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="159" column="16" bodyfile="core/include/qristal/core/session.hpp" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1ab4a9972865f81df1e0eabba041aba2fe" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt;int,int&gt; qristal::session::two_qubit_gate_depths_</definition>
+        <argsstring></argsstring>
+        <name>two_qubit_gate_depths_</name>
+        <qualifiedname>qristal::session::two_qubit_gate_depths_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="160" column="16" bodyfile="core/include/qristal/core/session.hpp" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a455a47904ba054508e75be3a7cb7c620" prot="private" static="no" mutable="no">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt;int,double&gt; qristal::session::timing_estimates_</definition>
+        <argsstring></argsstring>
+        <name>timing_estimates_</name>
+        <qualifiedname>qristal::session::timing_estimates_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="161" column="16" bodyfile="core/include/qristal/core/session.hpp" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a9c489990b915cc905f7eb491f3c181e6" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::session::z_op_expectation_</definition>
+        <argsstring></argsstring>
+        <name>z_op_expectation_</name>
+        <qualifiedname>qristal::session::z_op_expectation_</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="162" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a6dd0e4bce3f134edda6d527b6ae0a58e" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+        <definition>std::shared_ptr&lt;xacc::Accelerator&gt; qristal::session::qpu_</definition>
+        <argsstring></argsstring>
+        <name>qpu_</name>
+        <qualifiedname>qristal::session::qpu_</qualifiedname>
+        <initializer>= nullptr</initializer>
+        <briefdescription>
+<para>The XACC accelerator in use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="165" column="23" bodyfile="core/include/qristal/core/session.hpp" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a63105571297039d9ef540631820dea64" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; std::vector&lt; std::complex&lt; double &gt; &gt; &gt;</type>
+        <definition>std::shared_ptr&lt;std::vector&lt;std::complex&lt;double&gt; &gt; &gt; qristal::session::state_vec_</definition>
+        <argsstring></argsstring>
+        <name>state_vec_</name>
+        <qualifiedname>qristal::session::state_vec_</qualifiedname>
+        <briefdescription>
+<para>State vector from qpp or aer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="168" column="23" bodyfile="core/include/qristal/core/session.hpp" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1aa05ea033dfd813ea67680bc8fad0ce88" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::perform_SPAM_correction_</definition>
+        <argsstring></argsstring>
+        <name>perform_SPAM_correction_</name>
+        <qualifiedname>qristal::session::perform_SPAM_correction_</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether or not to apply SPAM error mitigation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="171" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1acadb4e96d90004818e7e29e0683ef29a" prot="private" static="no" mutable="no">
+        <type>std::map&lt; std::vector&lt; bool &gt;, int &gt;</type>
+        <definition>std::map&lt;std::vector&lt;bool&gt;, int&gt; qristal::session::results_native_</definition>
+        <argsstring></argsstring>
+        <name>results_native_</name>
+        <qualifiedname>qristal::session::results_native_</qualifiedname>
+        <briefdescription>
+<para>When error mitigation is performed for the session, the raw results are stored in here. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="see"><para><ref refid="classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1" kindref="member">results_</ref> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="178" column="16" bodyfile="core/include/qristal/core/session.hpp" bodystart="178" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classqristal_1_1session_1a2946757dbfa5065b4b7a33e9891fd6c0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::infile</definition>
+        <argsstring></argsstring>
+        <name>infile</name>
+        <qualifiedname>qristal::session::infile</qualifiedname>
+        <briefdescription>
+<para>Full path to an input QASM source file. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="325" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="325" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a3d3588bde9991cc02446574394d5ce88" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::instring</definition>
+        <argsstring></argsstring>
+        <name>instring</name>
+        <qualifiedname>qristal::session::instring</qualifiedname>
+        <briefdescription>
+<para>An input QASM source string. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="328" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="328" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a5ef3eacdbca2926eedac7c61d6cb29e1" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+        <definition>std::shared_ptr&lt;xacc::CompositeInstruction&gt; qristal::session::irtarget</definition>
+        <argsstring></argsstring>
+        <name>irtarget</name>
+        <qualifiedname>qristal::session::irtarget</qualifiedname>
+        <briefdescription>
+<para>Provides a <computeroutput>xacc::CompositeInstruction</computeroutput> IR target. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>If the IR target is provided instead of QASM strings or files, the QASM compilation step will be skipped. The IR target can be manually constructed by building the IR tree using XACC. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="336" column="23" bodyfile="core/include/qristal/core/session.hpp" bodystart="336" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1af4dd2fcf85e0fc20df0b6970864b6bdd" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; size_t &gt;</type>
+        <definition>std::vector&lt;size_t&gt; qristal::session::gpu_device_ids</definition>
+        <argsstring></argsstring>
+        <name>gpu_device_ids</name>
+        <qualifiedname>qristal::session::gpu_device_ids</qualifiedname>
+        <briefdescription>
+<para>List of GPU device numbers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="339" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="339" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a09f91d389656e990b4e1faaca5798800" prot="public" static="no" mutable="no">
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt;void()&gt; qristal::session::cudaq_kernel</definition>
+        <argsstring></argsstring>
+        <name>cudaq_kernel</name>
+        <qualifiedname>qristal::session::cudaq_kernel</qualifiedname>
+        <briefdescription>
+<para>A CUDAQ kernel to execute, with any free parameters already fully specified. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="342" column="21" bodyfile="core/include/qristal/core/session.hpp" bodystart="342" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a580a1c090b84a7f4ea721f432ac5549e" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::include_qb</definition>
+        <argsstring></argsstring>
+        <name>include_qb</name>
+        <qualifiedname>qristal::session::include_qb</qualifiedname>
+        <initializer>= QRISTAL_DIR + &quot;/include/qristal/core/qristal.inc&quot;</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Path to an OpenQASM file to include at the beginning of every circuit Contains custom Quantum Brilliance gate definitions. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="357" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="357" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1afeec62eeb3a236e117fcb3fe52af98e8" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; qristal::session::circuit_parameters</definition>
+        <argsstring></argsstring>
+        <name>circuit_parameters</name>
+        <qualifiedname>qristal::session::circuit_parameters</qualifiedname>
+        <briefdescription>
+<para>Vector of circuit parameters to use for runtime substitution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="360" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="360" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a2e583f7324198c056cb1369940743737" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::calc_gradients</definition>
+        <argsstring></argsstring>
+        <name>calc_gradients</name>
+        <qualifiedname>qristal::session::calc_gradients</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether or not gradients will be calculated for parametrized circuits. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="363" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="363" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a6fba9282aa95d1ef51b88227892406b8" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::calc_all_bitstring_counts</definition>
+        <argsstring></argsstring>
+        <name>calc_all_bitstring_counts</name>
+        <qualifiedname>qristal::session::calc_all_bitstring_counts</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Whether or not a non-compact output counts vector will be calculated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="366" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="366" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a65794a4e1909ede6220cbbc9d90f24fd" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::remote_backend_database_path</definition>
+        <argsstring></argsstring>
+        <name>remote_backend_database_path</name>
+        <qualifiedname>qristal::session::remote_backend_database_path</qualifiedname>
+        <initializer>= QRISTAL_DIR + &quot;/remote_backends.yaml&quot;</initializer>
+        <briefdescription>
+<para>The path to the remote backend database yaml file. The path to a YAML file with configuration data for remote backends (including hardware). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="370" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="370" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a549b05b5d9c29ae0d23272d9e1f6c258" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::acc</definition>
+        <argsstring></argsstring>
+        <name>acc</name>
+        <qualifiedname>qristal::session::acc</qualifiedname>
+        <initializer>= &quot;qpp&quot;</initializer>
+        <briefdescription>
+<para>Chosen backend accelerator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="373" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="373" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1ab362981f46921941d4d31309b495108c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::aer_sim_type</definition>
+        <argsstring></argsstring>
+        <name>aer_sim_type</name>
+        <qualifiedname>qristal::session::aer_sim_type</qualifiedname>
+        <initializer>= &quot;statevector&quot;</initializer>
+        <briefdescription>
+<para>The simulator type for the AER backend accelerator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="376" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="376" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a98a24fe47ab5c0a9d26aa00fb8cfb122" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::aer_omp_threads</definition>
+        <argsstring></argsstring>
+        <name>aer_omp_threads</name>
+        <qualifiedname>qristal::session::aer_omp_threads</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The maximum number of OpenMP threads that AER can use. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="379" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="379" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a0bf7060fe60e497ec883b0384e5f8b40" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::random_circuit_depth</definition>
+        <argsstring></argsstring>
+        <name>random_circuit_depth</name>
+        <qualifiedname>qristal::session::random_circuit_depth</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The depth of random circuit to be generated. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="382" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="382" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1afc672280dc08489100604d67e0d791be" prot="public" static="no" mutable="no">
+        <type>circuit_language</type>
+        <definition>circuit_language qristal::session::input_language</definition>
+        <argsstring></argsstring>
+        <name>input_language</name>
+        <qualifiedname>qristal::session::input_language</qualifiedname>
+        <initializer>= circuit_language::OpenQASM</initializer>
+        <briefdescription>
+<para>The frontend language in which the input circuit is written. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="385" column="24" bodyfile="core/include/qristal/core/session.hpp" bodystart="385" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1ac521fd796defc332fa46098721629cb4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::noise</definition>
+        <argsstring></argsstring>
+        <name>noise</name>
+        <qualifiedname>qristal::session::noise</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Enable noisy simulation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="388" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="388" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a7d4fe14cf0adfbcc531a5801e2233a12" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::noise_mitigation</definition>
+        <argsstring></argsstring>
+        <name>noise_mitigation</name>
+        <qualifiedname>qristal::session::noise_mitigation</qualifiedname>
+        <briefdescription>
+<para>A noise mitigation method to apply. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="391" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="391" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a8468354b57d209664a493c8faf65ffff" prot="public" static="no" mutable="no">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd qristal::session::SPAM_correction_matrix</definition>
+        <argsstring></argsstring>
+        <name>SPAM_correction_matrix</name>
+        <qualifiedname>qristal::session::SPAM_correction_matrix</qualifiedname>
+        <briefdescription>
+<para>Correction matrix to use for SPAM error correction. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="394" column="23" bodyfile="core/include/qristal/core/session.hpp" bodystart="394" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a07d04a30a50a586d9c57079a80fb716f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::noplacement</definition>
+        <argsstring></argsstring>
+        <name>noplacement</name>
+        <qualifiedname>qristal::session::noplacement</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Disable circuit placement IR transformations (both pure topological and noise-based placement). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="397" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="397" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1aa660f2d0956dad412d5c9618baf18402" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::placement</definition>
+        <argsstring></argsstring>
+        <name>placement</name>
+        <qualifiedname>qristal::session::placement</qualifiedname>
+        <initializer>= &quot;swap-shortest-path&quot;</initializer>
+        <briefdescription>
+<para>The name of the module to use for circuit placement IR transformation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="400" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="400" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1acd31511728463daef7200060c295013f" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::nooptimise</definition>
+        <argsstring></argsstring>
+        <name>nooptimise</name>
+        <qualifiedname>qristal::session::nooptimise</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Disable circuit optimization IR transformations. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="403" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="403" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a6d5784437a6f9a2100cdf37f46765bee" prot="public" static="no" mutable="no">
+        <type><ref refid="namespaceqristal_1a4bf3468c0ee9b4cb3625dbbf20a22150" kindref="member">Passes</ref></type>
+        <definition>Passes qristal::session::circuit_opts</definition>
+        <argsstring></argsstring>
+        <name>circuit_opts</name>
+        <qualifiedname>qristal::session::circuit_opts</qualifiedname>
+        <briefdescription>
+<para>Circuit optimization passes to apply. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="406" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="406" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a6352302bfd3f97fd37135055b45e33b7" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::execute_circuit</definition>
+        <argsstring></argsstring>
+        <name>execute_circuit</name>
+        <qualifiedname>qristal::session::execute_circuit</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Whether or not to actually execute the circuit upon calling run. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Set false to disable circuit simulation, for e.g., inspecting transpilation or resource estimation only. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="413" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="413" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a7d720659d35d807fe0f11513df8c4d32" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::calc_state_vec</definition>
+        <argsstring></argsstring>
+        <name>calc_state_vec</name>
+        <qualifiedname>qristal::session::calc_state_vec</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Compute the state vector with qpp or aer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="416" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="416" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a4352a55f2f4ca6eae8a248f7807a48cd" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::output_oqm_enabled</definition>
+        <argsstring></argsstring>
+        <name>output_oqm_enabled</name>
+        <qualifiedname>qristal::session::output_oqm_enabled</qualifiedname>
+        <initializer>= true</initializer>
+        <briefdescription>
+<para>Enable output transpilation and resource estimation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="419" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="419" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a793943af3dc8061ae5278f5703ac30f4" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::notiming</definition>
+        <argsstring></argsstring>
+        <name>notiming</name>
+        <qualifiedname>qristal::session::notiming</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Disable timing estimation. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="422" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="422" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a8b090b54f10a4e59752277aefc479b4c" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::qn</definition>
+        <argsstring></argsstring>
+        <name>qn</name>
+        <qualifiedname>qristal::session::qn</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The number of qubits to simulate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="425" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="425" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a4663d2c09d5f26d4f0a652536fa16059" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::sn</definition>
+        <argsstring></argsstring>
+        <name>sn</name>
+        <qualifiedname>qristal::session::sn</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>The number of measurement shots to be performed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="428" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="428" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a55e35d4e8f40de7df4195a93c77c556d" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::seed</definition>
+        <argsstring></argsstring>
+        <name>seed</name>
+        <qualifiedname>qristal::session::seed</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Seed value for the session&apos;s random number generator. Zero indicates that the seed should be generated by std::random_device. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="432" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="432" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a09462e973f570a501d81de975789e615" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::initial_bond_dimension</definition>
+        <argsstring></argsstring>
+        <name>initial_bond_dimension</name>
+        <qualifiedname>qristal::session::initial_bond_dimension</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Initial bond dimension for tensor network simulators. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is only needed when using tensor network backend accelerators. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="438" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="438" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1add5532ea13fa197f638e6e0c3b08b1f0" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::max_bond_dimension</definition>
+        <argsstring></argsstring>
+        <name>max_bond_dimension</name>
+        <qualifiedname>qristal::session::max_bond_dimension</qualifiedname>
+        <initializer>= 256</initializer>
+        <briefdescription>
+<para>Maximum bond dimension for tensor network simulators. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is only needed when using tensor network backend accelerators. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="444" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="444" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a68758273625e59795992fc44e306aa43" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::initial_kraus_dimension</definition>
+        <argsstring></argsstring>
+        <name>initial_kraus_dimension</name>
+        <qualifiedname>qristal::session::initial_kraus_dimension</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Initial Kraus dimension for the purification simulator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is only needed when using the emulator&apos;s purification backend accelerator. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="450" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="450" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a7a807ba5c6d9d0214f711c94a934e610" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::session::max_kraus_dimension</definition>
+        <argsstring></argsstring>
+        <name>max_kraus_dimension</name>
+        <qualifiedname>qristal::session::max_kraus_dimension</qualifiedname>
+        <initializer>= 256</initializer>
+        <briefdescription>
+<para>Maximum Kraus dimension for the purification simulator. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is only needed when using the emulator&apos;s purification backend accelerator. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="456" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="456" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a51f9628af0d8975413606b462917329a" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::session::svd_cutoff</definition>
+        <argsstring></argsstring>
+        <name>svd_cutoff</name>
+        <qualifiedname>qristal::session::svd_cutoff</qualifiedname>
+        <initializer>= 1.0e-8</initializer>
+        <briefdescription>
+<para>Absolute SVD cutoff for tensor network simulators. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is only needed when using tensor network backend accelerators. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="462" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="462" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a424439ab395be09c86a2735e7a1971de" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::session::rel_svd_cutoff</definition>
+        <argsstring></argsstring>
+        <name>rel_svd_cutoff</name>
+        <qualifiedname>qristal::session::rel_svd_cutoff</qualifiedname>
+        <initializer>= 1.0e-4</initializer>
+        <briefdescription>
+<para>Relative SVD cutoff for tensor network simulators. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is only needed when using tensor network backend accelerators. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="468" column="14" bodyfile="core/include/qristal/core/session.hpp" bodystart="468" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a668f50dd9741d4e006c4ff1c3d372c45" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::session::measure_sample_method</definition>
+        <argsstring></argsstring>
+        <name>measure_sample_method</name>
+        <qualifiedname>qristal::session::measure_sample_method</qualifiedname>
+        <initializer>= &quot;auto&quot;</initializer>
+        <briefdescription>
+<para>Set the measurement sampling method. Options: &quot;cutensornet&quot; uses the single-shot cutensorNet contraction method of the entire tensor network state. Program terminates with error meassage if cutensorNet fails. &quot;cutensornet_multishot&quot; uses the multi-shot cutensorNet contraction method. &quot;sequential&quot; uses the cutensor sequential contraction method. &quot;auto&quot; (default) uses the cutensorNet contraction method and automatically swithes to the cutensor sequential contraction method if the cutensorNet method fails. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="note"><para>This is only needed if using a tensor network accelerator </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="481" column="19" bodyfile="core/include/qristal/core/session.hpp" bodystart="481" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1abbca7d5c2efdfafdeb625c3567c42e40" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; <ref refid="classqristal_1_1NoiseModel" kindref="compound">NoiseModel</ref> &gt;</type>
+        <definition>std::shared_ptr&lt;NoiseModel&gt; qristal::session::noise_model</definition>
+        <argsstring></argsstring>
+        <name>noise_model</name>
+        <qualifiedname>qristal::session::noise_model</qualifiedname>
+        <briefdescription>
+<para>Noise model to use when noise = true. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="484" column="23" bodyfile="core/include/qristal/core/session.hpp" bodystart="484" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1session_1a3115c39b8194eeaaf48a0d7bdba89a34" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::session::debug</definition>
+        <argsstring></argsstring>
+        <name>debug</name>
+        <qualifiedname>qristal::session::debug</qualifiedname>
+        <initializer>= false</initializer>
+        <briefdescription>
+<para>Debug mode (verbose logging) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="487" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="487" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1session_1af82a4621c78f0211fd917b9373e52c9c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::session::session</definition>
+        <argsstring>()</argsstring>
+        <name>session</name>
+        <qualifiedname>qristal::session::session</qualifiedname>
+        <briefdescription>
+<para>Construct a new session object. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Some parameters are uninitialized, e.g., number of qubits (<computeroutput>qn</computeroutput>). These parameters can be set manually. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="314" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1ac4b9c88c8bc64ec8a7a88359733421ab" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::session::session</definition>
+        <argsstring>(const bool msb)</argsstring>
+        <name>session</name>
+        <qualifiedname>qristal::session::session</qualifiedname>
+        <param>
+          <type>const bool</type>
+          <declname>msb</declname>
+        </param>
+        <briefdescription>
+<para>Construct a new session object using a specific ordering for all_bitstring_counts_ and associated QML-relevant outputs. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>msb</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>MSB flag. If true, use MSB to determine ordering of all_bitstring_counts_ all_bitstring_probabilities and all_bitstring_probability_gradients table; else use LSB. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="322" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a0ae52c2bec73d7651bcb12dad0d6017f" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename CudaQKernel</type>
+          </param>
+          <param>
+            <type>typename...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+        </templateparamlist>
+        <type>std::function&lt; void()&gt;</type>
+        <definition>std::function&lt; void()&gt; qristal::session::bind_args_to_cudaq_kernel</definition>
+        <argsstring>(CudaQKernel &amp;&amp;in_kernel, Args &amp;&amp;...args)</argsstring>
+        <name>bind_args_to_cudaq_kernel</name>
+        <qualifiedname>qristal::session::bind_args_to_cudaq_kernel</qualifiedname>
+        <param>
+          <type>CudaQKernel &amp;&amp;</type>
+          <declname>in_kernel</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Create fully specified input CUDAQ kernel from a parameterised kernel and some argument values at which to evaluate it. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>in_kernel</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input CUDAQ kernel (templated callable returning void) </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>args</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Concrete argument values with which to call the CUDAQ kernel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="351" column="21" bodyfile="core/include/qristal/core/session.hpp" bodystart="351" bodyend="353"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a8ee6d535eb1a476b62d80e5683a27c65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::map&lt; std::vector&lt; bool &gt;, int &gt; &amp;</type>
+        <definition>const std::map&lt; std::vector&lt; bool &gt;, int &gt; &amp; qristal::session::results</definition>
+        <argsstring>() const</argsstring>
+        <name>results</name>
+        <qualifiedname>qristal::session::results</qualifiedname>
+        <briefdescription>
+<para>Get the output measurement counts as a map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Measurement counts map </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="494" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a9ff17b96ad67d1adaddb4ec7e7dc1b69" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::map&lt; std::vector&lt; bool &gt;, int &gt; &amp;</type>
+        <definition>const std::map&lt; std::vector&lt; bool &gt;, int &gt; &amp; qristal::session::results_native</definition>
+        <argsstring>() const</argsstring>
+        <name>results_native</name>
+        <qualifiedname>qristal::session::results_native</qualifiedname>
+        <briefdescription>
+<para>Get the native output measurement counts as a map. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Native measurement counts map</para>
+</simplesect>
+Beware: The native results are only stored separately, if a confusion or correction matrix was supplied to session, enabling automatic SPAM correction! </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="504" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1af4d57609d0276448ad1a392fff4ad040" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; std::complex&lt; double &gt; &gt; &amp;</type>
+        <definition>const std::vector&lt; std::complex&lt; double &gt; &gt; &amp; qristal::session::state_vec</definition>
+        <argsstring>() const</argsstring>
+        <name>state_vec</name>
+        <qualifiedname>qristal::session::state_vec</qualifiedname>
+        <briefdescription>
+<para>Get the full state vector (works with qpp and aer backends only!) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Full complex state vector as std::vector&lt;std::complex&lt;double&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="511" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a8cdde9a6c29def321c740da12e49abb7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; int &gt; &amp;</type>
+        <definition>const std::vector&lt; int &gt; &amp; qristal::session::all_bitstring_counts</definition>
+        <argsstring>() const</argsstring>
+        <name>all_bitstring_counts</name>
+        <qualifiedname>qristal::session::all_bitstring_counts</qualifiedname>
+        <briefdescription>
+<para>Get the output measurement counts as a vector. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Measurement counts vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="518" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a8329f327bcc795412911b286b2951231" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; double &gt; &amp;</type>
+        <definition>const std::vector&lt; double &gt; &amp; qristal::session::all_bitstring_probabilities</definition>
+        <argsstring>() const</argsstring>
+        <name>all_bitstring_probabilities</name>
+        <qualifiedname>qristal::session::all_bitstring_probabilities</qualifiedname>
+        <briefdescription>
+<para>Get the output probabilities. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Measurement probabilities vector </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="525" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1af5613e6d83a190a61bab79f56efe5137" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+        <definition>const std::vector&lt; std::vector&lt; double &gt; &gt; &amp; qristal::session::all_bitstring_probability_gradients</definition>
+        <argsstring>() const</argsstring>
+        <name>all_bitstring_probability_gradients</name>
+        <qualifiedname>qristal::session::all_bitstring_probability_gradients</qualifiedname>
+        <briefdescription>
+<para>Get the output probability gradients. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Table of probability jacobians w.r.t. runtime parameters </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="532" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a82a08dc64ab70627901ae59f81cd05d8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::session::transpiled_circuit</definition>
+        <argsstring>() const</argsstring>
+        <name>transpiled_circuit</name>
+        <qualifiedname>qristal::session::transpiled_circuit</qualifiedname>
+        <briefdescription>
+<para>Get the output transpiled circuit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Output transpiled circuit as an OpenQASM string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="539" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a4a3ebdeeb9564526049d0e4ac04a26e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::session::qobj</definition>
+        <argsstring>() const</argsstring>
+        <name>qobj</name>
+        <qualifiedname>qristal::session::qobj</qualifiedname>
+        <briefdescription>
+<para>Get the output Aer QObj JSON string. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QObj Json string </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="546" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a75b4c770ce1d1469bbf53fbc9a3b952c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::session::qbjson</definition>
+        <argsstring>() const</argsstring>
+        <name>qbjson</name>
+        <qualifiedname>qristal::session::qbjson</qualifiedname>
+        <briefdescription>
+<para>Get the output QB JSON string (QB hardware JSON POST payload) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>QB Json string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="553" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1af098f70498292136d9e834c751a7137c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt; int, int &gt; qristal::session::one_qubit_gate_depths</definition>
+        <argsstring>() const</argsstring>
+        <name>one_qubit_gate_depths</name>
+        <qualifiedname>qristal::session::one_qubit_gate_depths</qualifiedname>
+        <briefdescription>
+<para>Get the number of one-qubit gates applied to each individual qubit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Keys: qubit indices; values: number of one-qubit gates. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="560" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1aaa5036cf19116a31372ebefd896d39c9" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt; int, int &gt; qristal::session::two_qubit_gate_depths</definition>
+        <argsstring>() const</argsstring>
+        <name>two_qubit_gate_depths</name>
+        <qualifiedname>qristal::session::two_qubit_gate_depths</qualifiedname>
+        <briefdescription>
+<para>Get the number of two-qubit gates applied to each individual qubit. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Keys: qubit indices; values: number of two-qubit gates. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="567" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a62e38a43d2c32d8939b7a125f1195589" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt; int, double &gt; qristal::session::timing_estimates</definition>
+        <argsstring>() const</argsstring>
+        <name>timing_estimates</name>
+        <qualifiedname>qristal::session::timing_estimates</qualifiedname>
+        <briefdescription>
+<para>Get estimated circuit execution times on hardware. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Estimated hardware runtimes, in ms. Keys: 0: Total time 1: Initialisation component 2: Gate (max. depth) component 3: Readout component 4: Total time (from classical simulation) 5: PC transfer to controller time </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="580" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a794cf0536db3fbffd7ca8497526892b1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double qristal::session::z_op_expectation</definition>
+        <argsstring>() const</argsstring>
+        <name>z_op_expectation</name>
+        <qualifiedname>qristal::session::z_op_expectation</qualifiedname>
+        <briefdescription>
+<para>Get the output expected value in the Z basis, from the shot counts observed. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Expected value in the Z basis </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="587" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1ad86a42eabf6ae45194765dddc5f1e661" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::session::set_SPAM_confusion_matrix</definition>
+        <argsstring>(Eigen::MatrixXd mat)</argsstring>
+        <name>set_SPAM_confusion_matrix</name>
+        <qualifiedname>qristal::session::set_SPAM_confusion_matrix</qualifiedname>
+        <param>
+          <type>Eigen::MatrixXd</type>
+          <declname>mat</declname>
+        </param>
+        <briefdescription>
+<para>Set the SPAM correction matrix by providing an equivalent SPAM confusion matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="590" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a80a093b59b56935424db76429404b3ee" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>Eigen::MatrixXd</type>
+        <definition>Eigen::MatrixXd qristal::session::get_SPAM_confusion_matrix</definition>
+        <argsstring>() const</argsstring>
+        <name>get_SPAM_confusion_matrix</name>
+        <qualifiedname>qristal::session::get_SPAM_confusion_matrix</qualifiedname>
+        <briefdescription>
+<para>Retrieve an equivalent confusion matrix from the SPAM correction matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="593" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a23d3e6d4b672caebf1177e5a545b3354" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::session::validate</definition>
+        <argsstring>()</argsstring>
+        <name>validate</name>
+        <qualifiedname>qristal::session::validate</qualifiedname>
+        <briefdescription>
+<para>Validate the run i.e. ensure all configurations are set in a valid manner. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="596" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a683e336235170efd6b1619ce634b9a75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::session::run_with_SPAM</definition>
+        <argsstring>(size_t n_shots=0)</argsstring>
+        <name>run_with_SPAM</name>
+        <qualifiedname>qristal::session::run_with_SPAM</qualifiedname>
+        <param>
+          <type>size_t</type>
+          <declname>n_shots</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Execute a standard SPAM benchmark, and use the measured confusion matrix to automatically correct SPAM errors in a consecutive <computeroutput><ref refid="classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a" kindref="member">run()</ref></computeroutput> </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Arguments: <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n_shots</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: The number of shots to be used for the SPAM benchmark. Defaults to 0, taking the same number of shots as set in sns_. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="611" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; async_job_handle &gt;</type>
+        <definition>std::shared_ptr&lt; async_job_handle &gt; qristal::session::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>qristal::session::run</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Execute all quantum tasks Returns a job handle if the job is posted to a remote accelerator (e.g. AWS Braket). Otherwise, returns null if this function completes the run locally. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="616" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1ac150efbb5fe87dfed4d649225d786c97" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::session::cancel_run</definition>
+        <argsstring>()</argsstring>
+        <name>cancel_run</name>
+        <qualifiedname>qristal::session::cancel_run</qualifiedname>
+        <briefdescription>
+<para>Cancel any in-flight asynchronous execution of <ref refid="classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a" kindref="member">run()</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="619" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>size_t</type>
+        <definition>size_t qristal::session::bitstring_index</definition>
+        <argsstring>(const std::vector&lt; bool &gt; &amp;bitvec)</argsstring>
+        <name>bitstring_index</name>
+        <qualifiedname>qristal::session::bitstring_index</qualifiedname>
+        <param>
+          <type>const std::vector&lt; bool &gt; &amp;</type>
+          <declname>bitvec</declname>
+        </param>
+        <briefdescription>
+<para>Returns the (base-10) integer vector index for the probabilities/ counts vector, corresponding to a bitstring. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>bitvec</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bit-vector to be converted to the vector index </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="627" column="14"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1ab6cf68777d40b84b7b582d728a58503d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; bool &gt;</type>
+        <definition>std::vector&lt; bool &gt; qristal::session::draw_shot</definition>
+        <argsstring>()</argsstring>
+        <name>draw_shot</name>
+        <qualifiedname>qristal::session::draw_shot</qualifiedname>
+        <briefdescription>
+<para>Randomly draw (and remove) a single shot from the results map. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="630" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1session_1a9edbf5aebc5708e6617c2d9fb3ccf325" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::session::random_circuit</definition>
+        <argsstring>(const size_t n_q, const size_t depth)</argsstring>
+        <name>random_circuit</name>
+        <qualifiedname>qristal::session::random_circuit</qualifiedname>
+        <param>
+          <type>const size_t</type>
+          <declname>n_q</declname>
+        </param>
+        <param>
+          <type>const size_t</type>
+          <declname>depth</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="634" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1af1e59e8c32264941874d018602e3775f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83" kindref="member">circuit_origin</ref></type>
+        <definition>circuit_origin qristal::session::deduce_circuit_origin</definition>
+        <argsstring>()</argsstring>
+        <name>deduce_circuit_origin</name>
+        <qualifiedname>qristal::session::deduce_circuit_origin</qualifiedname>
+        <briefdescription>
+<para>Try to work out the form of the circuit input. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Forms checked first get precedence; fields associated with other forms get ignored as soon as a valid form is found. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="640" column="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a7b2bf684b3ef0404fac2641c1cab1d5f" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::session::process_run_result</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::CompositeInstruction &gt; kernel_ir, std::shared_ptr&lt; xacc::Accelerator &gt; sim_qpu, const xacc::HeterogeneousMap &amp;sim_qpu_configs, std::shared_ptr&lt; xacc::AcceleratorBuffer &gt; buffer_b, double runtime_ms, std::shared_ptr&lt; qristal::backend &gt; qb_transpiler)</argsstring>
+        <name>process_run_result</name>
+        <qualifiedname>qristal::session::process_run_result</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+          <declname>kernel_ir</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+          <declname>sim_qpu</declname>
+        </param>
+        <param>
+          <type>const xacc::HeterogeneousMap &amp;</type>
+          <declname>sim_qpu_configs</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; xacc::AcceleratorBuffer &gt;</type>
+          <declname>buffer_b</declname>
+        </param>
+        <param>
+          <type>double</type>
+          <declname>runtime_ms</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; qristal::backend &gt;</type>
+          <declname>qb_transpiler</declname>
+        </param>
+        <briefdescription>
+<para>Helper to populate result tables (e.g. counts, expectation values, resource estimations) post-execution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="643" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a1abbec2b62faef7f3085646bf248d778" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::CompositeInstruction &gt; qristal::session::compile_input</definition>
+        <argsstring>(const std::string &amp;in_source_string, int in_num_qubits, circuit_language in_source_type)</argsstring>
+        <name>compile_input</name>
+        <qualifiedname>qristal::session::compile_input</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_source_string</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>in_num_qubits</declname>
+        </param>
+        <param>
+          <type>circuit_language</type>
+          <declname>in_source_type</declname>
+        </param>
+        <briefdescription>
+<para>Util method to compile input source string into IR. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>This method is thread-safe, thus can be used to compile multiple source strings in parallel. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="652" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a5d75e924ae66792d62c559e5c43c4248" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>std::string qristal::session::get_target_circuit_qasm_string</definition>
+        <argsstring>(circuit_origin input_origin)</argsstring>
+        <name>get_target_circuit_qasm_string</name>
+        <qualifiedname>qristal::session::get_target_circuit_qasm_string</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83" kindref="member">circuit_origin</ref></type>
+          <declname>input_origin</declname>
+        </param>
+        <briefdescription>
+<para>Retrieve the target circuit string. This will involve loading a file, generating a random circuit string, etc, depending on the value of <computeroutput>input_origin</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>input_origin</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The origin of the input circuit. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The target circuit as a std::string. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="658" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a7109201d5418a2427c980158cdf84b6e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>xacc::HeterogeneousMap</type>
+        <definition>xacc::HeterogeneousMap qristal::session::configure_backend</definition>
+        <argsstring>(const YAML::Node &amp;rbdb)</argsstring>
+        <name>configure_backend</name>
+        <qualifiedname>qristal::session::configure_backend</qualifiedname>
+        <param>
+          <type>const YAML::Node &amp;</type>
+          <declname>rbdb</declname>
+        </param>
+        <briefdescription>
+<para>Combine all backend options into a dict (xacc::HeterogeneousMap). </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>A xacc::HeterogeneousMap containing the settings for the backend in use. </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="667" column="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1ab3fc930df1bbbe6ea3295f56f9fc295c" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+        <definition>std::shared_ptr&lt; xacc::Accelerator &gt; qristal::session::get_sim_qpu</definition>
+        <argsstring>(bool execute_on_hardware)</argsstring>
+        <name>get_sim_qpu</name>
+        <qualifiedname>qristal::session::get_sim_qpu</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>execute_on_hardware</declname>
+        </param>
+        <briefdescription>
+<para>Get the simulator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="670" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1aafd7a29563269548ea4a1dcd67a5554d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::session::run_gradients</definition>
+        <argsstring>()</argsstring>
+        <name>run_gradients</name>
+        <qualifiedname>qristal::session::run_gradients</qualifiedname>
+        <briefdescription>
+<para>Calculate the gradients for the parametrized quantum task. This will calculate the gradients of the probabilities of all possible output bitstrings of the circuit, with respect to each circuit parameter. The session does this by creating two new session objects and using them to compute the gradients using the &quot;parameter-shift&quot; rule, where the circuit is run again using slightly shifted parameters. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="677" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1a44477544a0e7c89e245df6dfe1b9e115" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::session::execute_on_simulator</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::Accelerator &gt; acc, std::shared_ptr&lt; xacc::AcceleratorBuffer &gt; buffer_b, std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;circuit)</argsstring>
+        <name>execute_on_simulator</name>
+        <qualifiedname>qristal::session::execute_on_simulator</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::Accelerator &gt;</type>
+          <declname>acc</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; xacc::AcceleratorBuffer &gt;</type>
+          <declname>buffer_b</declname>
+        </param>
+        <param>
+          <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;</type>
+          <declname>circuit</declname>
+        </param>
+        <briefdescription>
+<para>Execute the circuit on a simulator. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="680" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1session_1aa846662dafe779bde077c3d3627271cb" prot="private" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>typename CountMapT</type>
+          </param>
+        </templateparamlist>
+        <type>void</type>
+        <definition>void qristal::session::populate_measure_counts_data</definition>
+        <argsstring>(const CountMapT &amp;measure_counts_map)</argsstring>
+        <name>populate_measure_counts_data</name>
+        <qualifiedname>qristal::session::populate_measure_counts_data</qualifiedname>
+        <param>
+          <type>const CountMapT &amp;</type>
+          <declname>measure_counts_map</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Populate a given counts map with results from QPU execution. Templated measure_counts_map to support different type of map-like data. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="688" column="12" bodyfile="core/include/qristal/core/session.hpp" bodystart="688" bodyend="716"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classqristal_1_1session_1a63c2df41ea88d630722bdc06332d27cf" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::string</type>
+        <definition>static std::string qristal::session::convertRawOpenQasmToQBKernel</definition>
+        <argsstring>(const std::string &amp;in_rawQasm)</argsstring>
+        <name>convertRawOpenQasmToQBKernel</name>
+        <qualifiedname>qristal::session::convertRawOpenQasmToQBKernel</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>in_rawQasm</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Wrap raw OpenQASM string in a QB Kernel:<itemizedlist>
+<listitem><para>Move qreg to a kernel argument</para>
+</listitem><listitem><para>Denote the kernel name as &apos;qristal_circuit&apos; </para>
+</listitem></itemizedlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/session.hpp" line="663" column="26"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A session of the Qristal SDK. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/session.hpp" line="56" column="3" bodyfile="core/include/qristal/core/session.hpp" bodystart="57" bodyend="718"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1session_1a549b05b5d9c29ae0d23272d9e1f6c258" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>acc</name></member>
+      <member refid="classqristal_1_1session_1ab8e1266ef4d8039c0dd0f6a15fb5e8a6" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>acc_outputs_qbit0_left_</name></member>
+      <member refid="classqristal_1_1session_1aa38002606ca596f04a7d4a87b2d73633" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>acc_uses_n_bit_</name></member>
+      <member refid="classqristal_1_1session_1a98a24fe47ab5c0a9d26aa00fb8cfb122" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>aer_omp_threads</name></member>
+      <member refid="classqristal_1_1session_1ab362981f46921941d4d31309b495108c" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>aer_sim_type</name></member>
+      <member refid="classqristal_1_1session_1a8cdde9a6c29def321c740da12e49abb7" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>all_bitstring_counts</name></member>
+      <member refid="classqristal_1_1session_1a97ae1b0c0de315f83c2535b4febae835" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>all_bitstring_counts_</name></member>
+      <member refid="classqristal_1_1session_1a109a768236056ed39b8d77c2acf092f3" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>all_bitstring_counts_ordered_by_MSB_</name></member>
+      <member refid="classqristal_1_1session_1a8329f327bcc795412911b286b2951231" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>all_bitstring_probabilities</name></member>
+      <member refid="classqristal_1_1session_1a84cdfa196f3fc7c1e9bcc34fd49bd2f4" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>all_bitstring_probabilities_</name></member>
+      <member refid="classqristal_1_1session_1af5613e6d83a190a61bab79f56efe5137" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>all_bitstring_probability_gradients</name></member>
+      <member refid="classqristal_1_1session_1a5970e6fb263e15a95da55bea41ad048e" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>all_bitstring_probability_gradients_</name></member>
+      <member refid="classqristal_1_1session_1a0ae52c2bec73d7651bcb12dad0d6017f" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>bind_args_to_cudaq_kernel</name></member>
+      <member refid="classqristal_1_1session_1a73ff59f7859b6c1559f20f8d19ea7141" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>bitstring_index</name></member>
+      <member refid="classqristal_1_1session_1a6fba9282aa95d1ef51b88227892406b8" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>calc_all_bitstring_counts</name></member>
+      <member refid="classqristal_1_1session_1a2e583f7324198c056cb1369940743737" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>calc_gradients</name></member>
+      <member refid="classqristal_1_1session_1a7d720659d35d807fe0f11513df8c4d32" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>calc_state_vec</name></member>
+      <member refid="classqristal_1_1session_1ac150efbb5fe87dfed4d649225d786c97" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>cancel_run</name></member>
+      <member refid="classqristal_1_1session_1a6d5784437a6f9a2100cdf37f46765bee" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>circuit_opts</name></member>
+      <member refid="classqristal_1_1session_1a2c59800e5a6397837cbb9b4f12af2c83" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>circuit_origin</name></member>
+      <member refid="classqristal_1_1session_1afeec62eeb3a236e117fcb3fe52af98e8" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>circuit_parameters</name></member>
+      <member refid="classqristal_1_1session_1a1abbec2b62faef7f3085646bf248d778" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>compile_input</name></member>
+      <member refid="classqristal_1_1session_1a7109201d5418a2427c980158cdf84b6e" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>configure_backend</name></member>
+      <member refid="classqristal_1_1session_1a63c2df41ea88d630722bdc06332d27cf" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>convertRawOpenQasmToQBKernel</name></member>
+      <member refid="classqristal_1_1session_1a09f91d389656e990b4e1faaca5798800" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>cudaq_kernel</name></member>
+      <member refid="classqristal_1_1session_1a43c3d06d76f61506a7e77501345713ce" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>dbounds</name></member>
+      <member refid="classqristal_1_1session_1a3115c39b8194eeaaf48a0d7bdba89a34" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>debug</name></member>
+      <member refid="classqristal_1_1session_1af1e59e8c32264941874d018602e3775f" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>deduce_circuit_origin</name></member>
+      <member refid="classqristal_1_1session_1ab6cf68777d40b84b7b582d728a58503d" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>draw_shot</name></member>
+      <member refid="classqristal_1_1session_1aa083dc32a597979604d8e9229b6d3711" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>EMULATOR_BACKENDS</name></member>
+      <member refid="classqristal_1_1session_1aacc18477b0737cbe51d8d6af5b430aaf" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>EXCLUSIVELY_NOISY_BACKENDS</name></member>
+      <member refid="classqristal_1_1session_1a6352302bfd3f97fd37135055b45e33b7" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>execute_circuit</name></member>
+      <member refid="classqristal_1_1session_1a44477544a0e7c89e245df6dfe1b9e115" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>execute_on_simulator</name></member>
+      <member refid="classqristal_1_1session_1ab3fc930df1bbbe6ea3295f56f9fc295c" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>get_sim_qpu</name></member>
+      <member refid="classqristal_1_1session_1a80a093b59b56935424db76429404b3ee" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>get_SPAM_confusion_matrix</name></member>
+      <member refid="classqristal_1_1session_1a5d75e924ae66792d62c559e5c43c4248" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>get_target_circuit_qasm_string</name></member>
+      <member refid="classqristal_1_1session_1a2fc6cb613c78d83a769d419b599cd3d4" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>GPU_BACKENDS</name></member>
+      <member refid="classqristal_1_1session_1af4dd2fcf85e0fc20df0b6970864b6bdd" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>gpu_device_ids</name></member>
+      <member refid="classqristal_1_1session_1afc3b423c5626444675a99fcd33102248" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>ibounds</name></member>
+      <member refid="classqristal_1_1session_1a580a1c090b84a7f4ea721f432ac5549e" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>include_qb</name></member>
+      <member refid="classqristal_1_1session_1a2946757dbfa5065b4b7a33e9891fd6c0" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>infile</name></member>
+      <member refid="classqristal_1_1session_1a4207a7fd51ca17c3c52711a0762a00b7" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>initial_bond_bounds</name></member>
+      <member refid="classqristal_1_1session_1a09462e973f570a501d81de975789e615" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>initial_bond_dimension</name></member>
+      <member refid="classqristal_1_1session_1a5090bee7181701f4240567e677f54c87" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>initial_kraus_bounds</name></member>
+      <member refid="classqristal_1_1session_1a68758273625e59795992fc44e306aa43" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>initial_kraus_dimension</name></member>
+      <member refid="classqristal_1_1session_1afc672280dc08489100604d67e0d791be" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>input_language</name></member>
+      <member refid="classqristal_1_1session_1a3d3588bde9991cc02446574394d5ce88" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>instring</name></member>
+      <member refid="classqristal_1_1session_1a5ef3eacdbca2926eedac7c61d6cb29e1" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>irtarget</name></member>
+      <member refid="classqristal_1_1session_1a73ae078cffb680b905e991f599fd4d85" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>max_bond_bounds</name></member>
+      <member refid="classqristal_1_1session_1add5532ea13fa197f638e6e0c3b08b1f0" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>max_bond_dimension</name></member>
+      <member refid="classqristal_1_1session_1a3c40fec1a5d931f749c49b14634fd7fb" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>max_kraus_bounds</name></member>
+      <member refid="classqristal_1_1session_1a7a807ba5c6d9d0214f711c94a934e610" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>max_kraus_dimension</name></member>
+      <member refid="classqristal_1_1session_1a6ac63fed2238c8d84561f024ee90725e" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>MAX_QUBITS_ACCS</name></member>
+      <member refid="classqristal_1_1session_1a668f50dd9741d4e006c4ff1c3d372c45" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>measure_sample_method</name></member>
+      <member refid="classqristal_1_1session_1ac521fd796defc332fa46098721629cb4" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>noise</name></member>
+      <member refid="classqristal_1_1session_1a7d4fe14cf0adfbcc531a5801e2233a12" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>noise_mitigation</name></member>
+      <member refid="classqristal_1_1session_1abbca7d5c2efdfafdeb625c3567c42e40" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>noise_model</name></member>
+      <member refid="classqristal_1_1session_1a57dc4d6435df31b44be99bd7d476d196" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>NOISY_BACKENDS</name></member>
+      <member refid="classqristal_1_1session_1ae00e96a65ae4b671e4dbc0af9958b2ca" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>NON_EMULATOR_BACKENDS</name></member>
+      <member refid="classqristal_1_1session_1acd31511728463daef7200060c295013f" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>nooptimise</name></member>
+      <member refid="classqristal_1_1session_1a07d04a30a50a586d9c57079a80fb716f" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>noplacement</name></member>
+      <member refid="classqristal_1_1session_1a793943af3dc8061ae5278f5703ac30f4" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>notiming</name></member>
+      <member refid="classqristal_1_1session_1af098f70498292136d9e834c751a7137c" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>one_qubit_gate_depths</name></member>
+      <member refid="classqristal_1_1session_1a0511f441258d4d34ab0b229c61bb5da6" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>one_qubit_gate_depths_</name></member>
+      <member refid="classqristal_1_1session_1a4352a55f2f4ca6eae8a248f7807a48cd" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>output_oqm_enabled</name></member>
+      <member refid="classqristal_1_1session_1aa05ea033dfd813ea67680bc8fad0ce88" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>perform_SPAM_correction_</name></member>
+      <member refid="classqristal_1_1session_1aa660f2d0956dad412d5c9618baf18402" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>placement</name></member>
+      <member refid="classqristal_1_1session_1aa846662dafe779bde077c3d3627271cb" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>populate_measure_counts_data</name></member>
+      <member refid="classqristal_1_1session_1a7b2bf684b3ef0404fac2641c1cab1d5f" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>process_run_result</name></member>
+      <member refid="classqristal_1_1session_1a75b4c770ce1d1469bbf53fbc9a3b952c" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>qbjson</name></member>
+      <member refid="classqristal_1_1session_1aac19758f8da2b7b6afa42d6be1159d3a" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>qbjson_</name></member>
+      <member refid="classqristal_1_1session_1a8b090b54f10a4e59752277aefc479b4c" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>qn</name></member>
+      <member refid="classqristal_1_1session_1adf9449956e70c3325c5298a4eb412fb3" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>qn_bounds</name></member>
+      <member refid="classqristal_1_1session_1a4a3ebdeeb9564526049d0e4ac04a26e8" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>qobj</name></member>
+      <member refid="classqristal_1_1session_1afe1203aa060d777bbe6a65ef897b9094" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>qobj_</name></member>
+      <member refid="classqristal_1_1session_1a6dd0e4bce3f134edda6d527b6ae0a58e" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>qpu_</name></member>
+      <member refid="classqristal_1_1session_1a9edbf5aebc5708e6617c2d9fb3ccf325" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>random_circuit</name></member>
+      <member refid="classqristal_1_1session_1a0bf7060fe60e497ec883b0384e5f8b40" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>random_circuit_depth</name></member>
+      <member refid="classqristal_1_1session_1a4e17815d07da20aa42d6df13dcb1675f" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>random_circuit_depth_bounds</name></member>
+      <member refid="classqristal_1_1session_1a424439ab395be09c86a2735e7a1971de" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>rel_svd_cutoff</name></member>
+      <member refid="classqristal_1_1session_1a923019e71a8ec12a64e6dbd67cefdc58" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>remote_backend_database_</name></member>
+      <member refid="classqristal_1_1session_1a65794a4e1909ede6220cbbc9d90f24fd" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>remote_backend_database_path</name></member>
+      <member refid="classqristal_1_1session_1a8ee6d535eb1a476b62d80e5683a27c65" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>results</name></member>
+      <member refid="classqristal_1_1session_1ae1b2cc10453a6f4288741d9a562ef2a1" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>results_</name></member>
+      <member refid="classqristal_1_1session_1a9ff17b96ad67d1adaddb4ec7e7dc1b69" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>results_native</name></member>
+      <member refid="classqristal_1_1session_1acadb4e96d90004818e7e29e0683ef29a" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>results_native_</name></member>
+      <member refid="classqristal_1_1session_1acb081c26534cc5dcace8772bcb01828a" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>run</name></member>
+      <member refid="classqristal_1_1session_1aafd7a29563269548ea4a1dcd67a5554d" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>run_gradients</name></member>
+      <member refid="classqristal_1_1session_1a683e336235170efd6b1619ce634b9a75" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>run_with_SPAM</name></member>
+      <member refid="classqristal_1_1session_1a55e35d4e8f40de7df4195a93c77c556d" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>seed</name></member>
+      <member refid="classqristal_1_1session_1af82a4621c78f0211fd917b9373e52c9c" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>session</name></member>
+      <member refid="classqristal_1_1session_1ac4b9c88c8bc64ec8a7a88359733421ab" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>session</name></member>
+      <member refid="classqristal_1_1session_1ad86a42eabf6ae45194765dddc5f1e661" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>set_SPAM_confusion_matrix</name></member>
+      <member refid="classqristal_1_1session_1a9abc4cabf5145c2bf41598a1395c657e" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>shots_remaining_</name></member>
+      <member refid="classqristal_1_1session_1a4663d2c09d5f26d4f0a652536fa16059" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>sn</name></member>
+      <member refid="classqristal_1_1session_1afbacdecc1a75c4cb007a425db2719f4b" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>sn_bounds</name></member>
+      <member refid="classqristal_1_1session_1a788ad6796fd1270550988bbba7ae1998" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>sn_this_process</name></member>
+      <member refid="classqristal_1_1session_1a8468354b57d209664a493c8faf65ffff" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>SPAM_correction_matrix</name></member>
+      <member refid="classqristal_1_1session_1af4d57609d0276448ad1a392fff4ad040" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>state_vec</name></member>
+      <member refid="classqristal_1_1session_1a63105571297039d9ef540631820dea64" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>state_vec_</name></member>
+      <member refid="classqristal_1_1session_1a51f9628af0d8975413606b462917329a" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>svd_cutoff</name></member>
+      <member refid="classqristal_1_1session_1a72e54a652e7b10aca937e8d69b248ff2" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>svd_cutoff_bounds</name></member>
+      <member refid="classqristal_1_1session_1a62e38a43d2c32d8939b7a125f1195589" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>timing_estimates</name></member>
+      <member refid="classqristal_1_1session_1a455a47904ba054508e75be3a7cb7c620" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>timing_estimates_</name></member>
+      <member refid="classqristal_1_1session_1a82a08dc64ab70627901ae59f81cd05d8" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>transpiled_circuit</name></member>
+      <member refid="classqristal_1_1session_1ad621bfe386caa23d5573f55d46a0b21f" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>transpiled_circuit_</name></member>
+      <member refid="classqristal_1_1session_1aaa5036cf19116a31372ebefd896d39c9" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>two_qubit_gate_depths</name></member>
+      <member refid="classqristal_1_1session_1ab4a9972865f81df1e0eabba041aba2fe" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>two_qubit_gate_depths_</name></member>
+      <member refid="classqristal_1_1session_1a6e2e17942b6ada7912205451681994b5" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>VALID_AER_SIM_TYPES</name></member>
+      <member refid="classqristal_1_1session_1a78ad71acc764baf9543bc2fc0f3837d5" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>VALID_HARDWARE_PLACEMENTS</name></member>
+      <member refid="classqristal_1_1session_1a2b725180b50ce57fdc7a7af87650df5c" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>VALID_MEASURE_SAMPLING_OPTIONS</name></member>
+      <member refid="classqristal_1_1session_1aa429024e039283b2f29fcde2bc3c24e5" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>VALID_NOISE_MITIGATIONS</name></member>
+      <member refid="classqristal_1_1session_1a23d3e6d4b672caebf1177e5a545b3354" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>validate</name></member>
+      <member refid="classqristal_1_1session_1a794cf0536db3fbffd7ca8497526892b1" prot="public" virt="non-virtual"><scope>qristal::session</scope><name>z_op_expectation</name></member>
+      <member refid="classqristal_1_1session_1a9c489990b915cc905f7eb491f3c181e6" prot="private" virt="non-virtual"><scope>qristal::session</scope><name>z_op_expectation_</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

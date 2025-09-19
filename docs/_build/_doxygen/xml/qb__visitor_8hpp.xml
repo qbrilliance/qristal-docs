@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="qb__visitor_8hpp" kind="file" language="C++">
+    <compoundname>qb_visitor.hpp</compoundname>
+    <includes local="no">AllGateVisitor.hpp</includes>
+    <includes local="no">CommonGates.hpp</includes>
+    <includes local="no">xacc.hpp</includes>
+    <includes local="no">nlohmann/json.hpp</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">sstream</includes>
+    <includedby refid="qb__qpu_8hpp" local="no">core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp</label>
+        <link refid="qb__visitor_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AllGateVisitor.hpp</label>
+      </node>
+      <node id="3">
+        <label>CommonGates.hpp</label>
+      </node>
+      <node id="6">
+        <label>memory</label>
+      </node>
+      <node id="5">
+        <label>nlohmann/json.hpp</label>
+      </node>
+      <node id="7">
+        <label>sstream</label>
+      </node>
+      <node id="4">
+        <label>xacc.hpp</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>core/include/qristal/core/backends/qb_hardware/qb_qpu.hpp</label>
+        <link refid="qb__qpu_8hpp_source"/>
+      </node>
+      <node id="1">
+        <label>core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp</label>
+        <link refid="qb__visitor_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classxacc_1_1quantum_1_1qb__visitor" prot="public">xacc::quantum::qb_visitor</innerclass>
+    <innernamespace refid="namespacexacc">xacc</innernamespace>
+    <innernamespace refid="namespacexacc_1_1quantum">xacc::quantum</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/backends/qb_hardware/qb_visitor.hpp"/>
+  </compounddef>
+</doxygen>

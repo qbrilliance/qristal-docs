@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="namespacexacc_1_1quantum" kind="namespace" language="C++">
+    <compoundname>xacc::quantum</compoundname>
+    <innerclass refid="classxacc_1_1quantum_1_1qb__qpu" prot="public">xacc::quantum::qb_qpu</innerclass>
+    <innerclass refid="classxacc_1_1quantum_1_1qb__visitor" prot="public">xacc::quantum::qb_visitor</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/session.hpp" line="38" column="1"/>
+  </compounddef>
+</doxygen>

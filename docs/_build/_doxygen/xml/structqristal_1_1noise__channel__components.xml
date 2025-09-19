@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structqristal_1_1noise__channel__components" kind="struct" language="C++" prot="public">
+    <compoundname>qristal::noise_channel_components</compoundname>
+    <includes refid="qsim__emulator_8hpp" local="no">qsim_emulator.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqristal_1_1noise__channel__components_1aa197a7b8282256b33781067b6a659c6e" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; unsigned &gt;</type>
+        <definition>std::vector&lt;unsigned&gt; qristal::noise_channel_components::qubits</definition>
+        <argsstring></argsstring>
+        <name>qubits</name>
+        <qualifiedname>qristal::noise_channel_components::qubits</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="27" column="17" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1noise__channel__components_1a09a964cbbb8d9adf153155d8911d1753" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; qsim::Matrix&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt;qsim::Matrix&lt;float&gt; &gt; qristal::noise_channel_components::kraus_mats</definition>
+        <argsstring></argsstring>
+        <name>kraus_mats</name>
+        <qualifiedname>qristal::noise_channel_components::kraus_mats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="28" column="17" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1noise__channel__components_1a2f67185654dd45e7cd8dda6873ea74e1" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; qsim::Matrix&lt; float &gt; &gt;</type>
+        <definition>std::vector&lt;qsim::Matrix&lt;float&gt; &gt; qristal::noise_channel_components::kd_k_mats</definition>
+        <argsstring></argsstring>
+        <name>kd_k_mats</name>
+        <qualifiedname>qristal::noise_channel_components::kd_k_mats</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="29" column="17" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1noise__channel__components_1a2c5c954e75f97b01fa732ecfa7258f5b" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; qristal::noise_channel_components::kraus_probs</definition>
+        <argsstring></argsstring>
+        <name>kraus_probs</name>
+        <qualifiedname>qristal::noise_channel_components::kraus_probs</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="30" column="17" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="30" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Stores Kraus matrices K, and product K <formula id="52">$^\dagger$</formula> * K matrices in qsim type and format. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" line="26" column="3" bodyfile="emulator/include/qristal/emulator/qsim/qsim_emulator.hpp" bodystart="26" bodyend="31"/>
+    <listofallmembers>
+      <member refid="structqristal_1_1noise__channel__components_1a2f67185654dd45e7cd8dda6873ea74e1" prot="public" virt="non-virtual"><scope>qristal::noise_channel_components</scope><name>kd_k_mats</name></member>
+      <member refid="structqristal_1_1noise__channel__components_1a09a964cbbb8d9adf153155d8911d1753" prot="public" virt="non-virtual"><scope>qristal::noise_channel_components</scope><name>kraus_mats</name></member>
+      <member refid="structqristal_1_1noise__channel__components_1a2c5c954e75f97b01fa732ecfa7258f5b" prot="public" virt="non-virtual"><scope>qristal::noise_channel_components</scope><name>kraus_probs</name></member>
+      <member refid="structqristal_1_1noise__channel__components_1aa197a7b8282256b33781067b6a659c6e" prot="public" virt="non-virtual"><scope>qristal::noise_channel_components</scope><name>qubits</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="ir__converter_8hpp" kind="file" language="C++">
+    <compoundname>ir_converter.hpp</compoundname>
+    <includes local="no">AllGateVisitor.hpp</includes>
+    <includes local="no">CommonGates.hpp</includes>
+    <includes local="no">cudaq/builder/kernel_builder.h</includes>
+    <includes local="no">memory</includes>
+    <incdepgraph>
+      <node id="1">
+        <label>core/include/qristal/core/cudaq/ir_converter.hpp</label>
+        <link refid="ir__converter_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>AllGateVisitor.hpp</label>
+      </node>
+      <node id="3">
+        <label>CommonGates.hpp</label>
+      </node>
+      <node id="4">
+        <label>cudaq/builder/kernel_builder.h</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <innerclass refid="classqristal_1_1cudaq__ir__converter" prot="public">qristal::cudaq_ir_converter</innerclass>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/cudaq/ir_converter.hpp"/>
+  </compounddef>
+</doxygen>

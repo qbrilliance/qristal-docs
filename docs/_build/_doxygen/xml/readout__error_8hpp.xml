@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="readout__error_8hpp" kind="file" language="C++">
+    <compoundname>readout_error.hpp</compoundname>
+    <includedby refid="noise__model_8hpp" local="no">core/include/qristal/core/noise_model/noise_model.hpp</includedby>
+    <includedby refid="noise__properties_8hpp" local="no">core/include/qristal/core/noise_model/noise_properties.hpp</includedby>
+    <invincdepgraph>
+      <node id="2">
+        <label>core/include/qristal/core/noise_model/noise_model.hpp</label>
+        <link refid="noise__model_8hpp_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>core/include/qristal/core/noise_model/noise_properties.hpp</label>
+        <link refid="noise__properties_8hpp_source"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>core/include/qristal/core/noise_model/readout_error.hpp</label>
+        <link refid="readout__error_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>core/include/qristal/core/session.hpp</label>
+        <link refid="session_8hpp_source"/>
+      </node>
+      <node id="4">
+        <label>emulator/include/qristal/emulator/noise_model/EmulatorNoiseModel.hpp</label>
+        <link refid="EmulatorNoiseModel_8hpp_source"/>
+      </node>
+      <node id="5">
+        <label>emulator/include/qristal/emulator/qsim/qsim_emulator.hpp</label>
+        <link refid="qsim__emulator_8hpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="structqristal_1_1ReadoutError" prot="public">qristal::ReadoutError</innerclass>
+    <innernamespace refid="namespaceqristal">qristal</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/noise_model/readout_error.hpp"/>
+  </compounddef>
+</doxygen>

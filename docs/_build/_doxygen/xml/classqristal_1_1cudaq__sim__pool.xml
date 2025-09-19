@@ -1,0 +1,219 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1cudaq__sim__pool" kind="class" language="C++" prot="public">
+    <compoundname>qristal::cudaq_sim_pool</compoundname>
+    <includes refid="sim__pool_8hpp" local="no">sim_pool.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1cudaq__sim__pool_1a40e63669a56ebb3eb96517a0eb0c2194" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, std::string &gt;</type>
+        <definition>std::unordered_map&lt;std::string, std::string&gt; qristal::cudaq_sim_pool::sim_name_to_lib</definition>
+        <argsstring></argsstring>
+        <name>sim_name_to_lib</name>
+        <qualifiedname>qristal::cudaq_sim_pool::sim_name_to_lib</qualifiedname>
+        <briefdescription>
+<para>Simulator name to lib path. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="62" column="22" bodyfile="core/include/qristal/core/cudaq/sim_pool.hpp" bodystart="62" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__sim__pool_1a18814fa23f9a084793d7f2b65215f8ce" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; std::string, nvqir::CircuitSimulator * &gt;</type>
+        <definition>std::unordered_map&lt;std::string, nvqir::CircuitSimulator *&gt; qristal::cudaq_sim_pool::sim_name_to_sim_ptr</definition>
+        <argsstring></argsstring>
+        <name>sim_name_to_sim_ptr</name>
+        <qualifiedname>qristal::cudaq_sim_pool::sim_name_to_sim_ptr</qualifiedname>
+        <briefdescription>
+<para>Simulator instance pool (lazily populated) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="64" column="22" bodyfile="core/include/qristal/core/cudaq/sim_pool.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__sim__pool_1ab0b9852c0e9b76a19b5acc29d5b850be" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::cudaq_sim_pool::active_sim</definition>
+        <argsstring></argsstring>
+        <name>active_sim</name>
+        <qualifiedname>qristal::cudaq_sim_pool::active_sim</qualifiedname>
+        <briefdescription>
+<para>Name of the active simulator in the CUDAQ runtime. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="66" column="15" bodyfile="core/include/qristal/core/cudaq/sim_pool.hpp" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__sim__pool_1abfe6d876fc702856297f32042f7a3baf" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::cudaq_sim_pool::nvqir_lib_path</definition>
+        <argsstring></argsstring>
+        <name>nvqir_lib_path</name>
+        <qualifiedname>qristal::cudaq_sim_pool::nvqir_lib_path</qualifiedname>
+        <briefdescription>
+<para>Path to the nvqir (i.e., libnvqir.so) lib (core CUDAQ QIR runtime implementation) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="68" column="15" bodyfile="core/include/qristal/core/cudaq/sim_pool.hpp" bodystart="68" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__sim__pool_1aaad36cae49045c3e53f8ddd54a61b547" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::cudaq_sim_pool::platform_lib_path</definition>
+        <argsstring></argsstring>
+        <name>platform_lib_path</name>
+        <qualifiedname>qristal::cudaq_sim_pool::platform_lib_path</qualifiedname>
+        <briefdescription>
+<para>Path to the CUDAQ platform lib (i.e., libcudaq-platform-default.so) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="70" column="15" bodyfile="core/include/qristal/core/cudaq/sim_pool.hpp" bodystart="70" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__sim__pool_1a57b107a75f66b8c4c1bdf1884d7fe13d" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::cudaq_sim_pool::cudaq_rt_lib_path</definition>
+        <argsstring></argsstring>
+        <name>cudaq_rt_lib_path</name>
+        <qualifiedname>qristal::cudaq_sim_pool::cudaq_rt_lib_path</qualifiedname>
+        <briefdescription>
+<para>Path to the CUDAQ lib (libcudaq.so) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="72" column="15" bodyfile="core/include/qristal/core/cudaq/sim_pool.hpp" bodystart="72" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1cudaq__sim__pool_1a1e99df2fddf3f58d84923353f391485b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt; std::string &gt; qristal::cudaq_sim_pool::available_simulators</definition>
+        <argsstring>() const</argsstring>
+        <name>available_simulators</name>
+        <qualifiedname>qristal::cudaq_sim_pool::available_simulators</qualifiedname>
+        <briefdescription>
+<para>Returns the names of the available CUDAQ simulators. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="32" column="15"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__sim__pool_1ac06a69428ccac52c564ddf2c0e9d6130" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_sim_pool::set_simulator</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>set_simulator</name>
+        <qualifiedname>qristal::cudaq_sim_pool::set_simulator</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Sets the &apos;active&apos; CUDAQ simulator backend. This will throw if this is not a valid name (i.e., one of <computeroutput>available_simulators</computeroutput>) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="37" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__sim__pool_1ac180962833d972b0abdac02b46ce3e5a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_sim_pool::init_cudaq_runtime</definition>
+        <argsstring>()</argsstring>
+        <name>init_cudaq_runtime</name>
+        <qualifiedname>qristal::cudaq_sim_pool::init_cudaq_runtime</qualifiedname>
+        <briefdescription>
+<para>Manual init the CUDAQ runtime by loading its core libs with RTLD_GLOBAL. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="51" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classqristal_1_1cudaq__sim__pool_1a5d25ba4f5ce2daad35d5093a828064aa" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classqristal_1_1cudaq__sim__pool" kindref="compound">cudaq_sim_pool</ref> &amp;</type>
+        <definition>static cudaq_sim_pool &amp; qristal::cudaq_sim_pool::get_instance</definition>
+        <argsstring>()</argsstring>
+        <name>get_instance</name>
+        <qualifiedname>qristal::cudaq_sim_pool::get_instance</qualifiedname>
+        <briefdescription>
+<para>Getter for the instance; makes this class a threadsafe singleton. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="39" column="25"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1cudaq__sim__pool_1a715e46756d577c794f369b53556a0c6a" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::cudaq_sim_pool::cudaq_sim_pool</definition>
+        <argsstring>()</argsstring>
+        <name>cudaq_sim_pool</name>
+        <qualifiedname>qristal::cudaq_sim_pool::cudaq_sim_pool</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="55" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__sim__pool_1a7e141cb2717445d76ea93dfe5e742f56" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::cudaq_sim_pool::~cudaq_sim_pool</definition>
+        <argsstring>()</argsstring>
+        <name>~cudaq_sim_pool</name>
+        <qualifiedname>qristal::cudaq_sim_pool::~cudaq_sim_pool</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="58" column="3"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Singleton util class holding/caching references to CUDAQ backend simulator instances. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/cudaq/sim_pool.hpp" line="29" column="1" bodyfile="core/include/qristal/core/cudaq/sim_pool.hpp" bodystart="29" bodyend="73"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1cudaq__sim__pool_1ab0b9852c0e9b76a19b5acc29d5b850be" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>active_sim</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1a1e99df2fddf3f58d84923353f391485b" prot="public" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>available_simulators</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1a57b107a75f66b8c4c1bdf1884d7fe13d" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>cudaq_rt_lib_path</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1a715e46756d577c794f369b53556a0c6a" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>cudaq_sim_pool</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1a5d25ba4f5ce2daad35d5093a828064aa" prot="public" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>get_instance</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1ac180962833d972b0abdac02b46ce3e5a" prot="public" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>init_cudaq_runtime</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1abfe6d876fc702856297f32042f7a3baf" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>nvqir_lib_path</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1aaad36cae49045c3e53f8ddd54a61b547" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>platform_lib_path</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1ac06a69428ccac52c564ddf2c0e9d6130" prot="public" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>set_simulator</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1a40e63669a56ebb3eb96517a0eb0c2194" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>sim_name_to_lib</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1a18814fa23f9a084793d7f2b65215f8ce" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>sim_name_to_sim_ptr</name></member>
+      <member refid="classqristal_1_1cudaq__sim__pool_1a7e141cb2717445d76ea93dfe5e742f56" prot="private" virt="non-virtual"><scope>qristal::cudaq_sim_pool</scope><name>~cudaq_sim_pool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1Pass" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>qristal::Pass</compoundname>
+    <derivedcompoundref refid="classqristal_1_1noise__aware__placement__pass" prot="public" virt="non-virtual">qristal::noise_aware_placement_pass</derivedcompoundref>
+    <derivedcompoundref refid="classqristal_1_1optimization__pass" prot="public" virt="non-virtual">qristal::optimization_pass</derivedcompoundref>
+    <derivedcompoundref refid="classqristal_1_1sequence__pass" prot="public" virt="non-virtual">qristal::sequence_pass</derivedcompoundref>
+    <derivedcompoundref refid="classqristal_1_1swap__placement__pass" prot="public" virt="non-virtual">qristal::swap_placement_pass</derivedcompoundref>
+    <includes refid="base__pass_8hpp" local="no">base_pass.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename IrType</type>
+      </param>
+    </templateparamlist>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1Pass_1ad7b2e2f5a7fe881eae2f702dc7c490d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual qristal::Pass&lt; IrType &gt;::~Pass</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Pass</name>
+        <qualifiedname>qristal::Pass::~Pass</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/base_pass.hpp" line="15" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Pass_1ae953fc38b3026afa44c812c35032b955" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::Pass&lt; IrType &gt;::get_name</definition>
+        <argsstring>() const =0</argsstring>
+        <name>get_name</name>
+        <qualifiedname>qristal::Pass::get_name</qualifiedname>
+        <reimplementedby refid="classqristal_1_1optimization__pass_1a456209a413a5f8cb986dfd1a97f112d7">get_name</reimplementedby>
+        <reimplementedby refid="classqristal_1_1sequence__pass_1a9100b3c635cf16f90f38ed8799dc9563">get_name</reimplementedby>
+        <reimplementedby refid="classqristal_1_1noise__aware__placement__pass_1a4621e09764cbc44a5839f92aea5f7bed">get_name</reimplementedby>
+        <reimplementedby refid="classqristal_1_1swap__placement__pass_1aa87f68ea5632d08c71d34e443baeef0c">get_name</reimplementedby>
+        <briefdescription>
+<para>Returns the derived pass name. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/base_pass.hpp" line="18" column="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Pass_1a0e357ed3bd93cd40ab26a61d1c5e6e29" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::Pass&lt; IrType &gt;::get_description</definition>
+        <argsstring>() const</argsstring>
+        <name>get_description</name>
+        <qualifiedname>qristal::Pass::get_description</qualifiedname>
+        <reimplementedby refid="classqristal_1_1optimization__pass_1a418e967baa6848bf71bc1928bc3aaa7a">get_description</reimplementedby>
+        <reimplementedby refid="classqristal_1_1sequence__pass_1a085eaf6236cdc6975c194b18d21b74ad">get_description</reimplementedby>
+        <reimplementedby refid="classqristal_1_1noise__aware__placement__pass_1ae601589a6cb63ac5491e843eb07ea89b">get_description</reimplementedby>
+        <reimplementedby refid="classqristal_1_1swap__placement__pass_1a1fb7ecb90b498786f35be98e3e0e50d1">get_description</reimplementedby>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Returns the pass description for this pass. (derived class to add if wanted to) </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/base_pass.hpp" line="22" column="23" bodyfile="core/include/qristal/core/passes/base_pass.hpp" bodystart="22" bodyend="22"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Pass_1a3f705cea7fae5c37f61b542695a39b2d" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>virtual void qristal::Pass&lt; IrType &gt;::apply</definition>
+        <argsstring>(IrType &amp;circuit)=0</argsstring>
+        <name>apply</name>
+        <qualifiedname>qristal::Pass::apply</qualifiedname>
+        <param>
+          <type>IrType &amp;</type>
+          <declname>circuit</declname>
+        </param>
+        <briefdescription>
+<para>Polymorphic API that runs the pass over the circuit IR node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/base_pass.hpp" line="25" column="16"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para>A base class for a <computeroutput><ref refid="classqristal_1_1Pass" kindref="compound">Pass</ref></computeroutput> (implementing some form of transformation on the input IR tree) </para>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::Pass&lt; IrType &gt;</label>
+        <link refid="classqristal_1_1Pass"/>
+      </node>
+      <node id="2">
+        <label>qristal::noise_aware_placement_pass&lt; CircuitBuilder &gt;</label>
+        <link refid="classqristal_1_1noise__aware__placement__pass"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>qristal::optimization_pass&lt; CircuitBuilder &gt;</label>
+        <link refid="classqristal_1_1optimization__pass"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>qristal::sequence_pass&lt; CircuitBuilder &gt;</label>
+        <link refid="classqristal_1_1sequence__pass"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>qristal::swap_placement_pass&lt; CircuitBuilder &gt;</label>
+        <link refid="classqristal_1_1swap__placement__pass"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="core/include/qristal/core/passes/base_pass.hpp" line="12" column="12" bodyfile="core/include/qristal/core/passes/base_pass.hpp" bodystart="12" bodyend="26"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1Pass_1a3f705cea7fae5c37f61b542695a39b2d" prot="public" virt="pure-virtual"><scope>qristal::Pass</scope><name>apply</name></member>
+      <member refid="classqristal_1_1Pass_1a0e357ed3bd93cd40ab26a61d1c5e6e29" prot="public" virt="virtual"><scope>qristal::Pass</scope><name>get_description</name></member>
+      <member refid="classqristal_1_1Pass_1ae953fc38b3026afa44c812c35032b955" prot="public" virt="pure-virtual"><scope>qristal::Pass</scope><name>get_name</name></member>
+      <member refid="classqristal_1_1Pass_1ad7b2e2f5a7fe881eae2f702dc7c490d5" prot="public" virt="virtual"><scope>qristal::Pass</scope><name>~Pass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

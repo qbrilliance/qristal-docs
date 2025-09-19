@@ -1,0 +1,650 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1cudaq__ir__converter" kind="class" language="C++" prot="public">
+    <compoundname>qristal::cudaq_ir_converter</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">xacc::quantum::AllGateVisitor</basecompoundref>
+    <includes refid="ir__converter_8hpp" local="no">ir_converter.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1cudaq__ir__converter_1ad872b2df2c5e59bb36156f704ff3a882" prot="private" static="no" mutable="no">
+        <type>cudaq::kernel_builder&lt; std::vector&lt; double &gt; &gt;</type>
+        <definition>cudaq::kernel_builder&lt;std::vector&lt;double&gt; &gt; qristal::cudaq_ir_converter::m_cudaq_builder</definition>
+        <argsstring></argsstring>
+        <name>m_cudaq_builder</name>
+        <qualifiedname>qristal::cudaq_ir_converter::m_cudaq_builder</qualifiedname>
+        <briefdescription>
+<para>Underlying CUDAQ <computeroutput>kernel_builder</computeroutput>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="28" column="25" bodyfile="core/include/qristal/core/cudaq/ir_converter.hpp" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__ir__converter_1a5d6daa90b4af2014c3182ef9e4e2e315" prot="private" static="no" mutable="no">
+        <type>cudaq::QuakeValue</type>
+        <definition>cudaq::QuakeValue qristal::cudaq_ir_converter::m_cudaq_qreg</definition>
+        <argsstring></argsstring>
+        <name>m_cudaq_qreg</name>
+        <qualifiedname>qristal::cudaq_ir_converter::m_cudaq_qreg</qualifiedname>
+        <briefdescription>
+<para>Qubit register in Quake IR. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="31" column="21" bodyfile="core/include/qristal/core/cudaq/ir_converter.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__ir__converter_1a569877aee973afa2e2b06d802d11547f" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::string &gt;</type>
+        <definition>std::vector&lt;std::string&gt; qristal::cudaq_ir_converter::m_var_names</definition>
+        <argsstring></argsstring>
+        <name>m_var_names</name>
+        <qualifiedname>qristal::cudaq_ir_converter::m_var_names</qualifiedname>
+        <briefdescription>
+<para>List of argument names in the XACC IR. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="34" column="15" bodyfile="core/include/qristal/core/cudaq/ir_converter.hpp" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1cudaq__ir__converter_1ac7dc090dedc06bd5a15fe38071453bb5" prot="private" static="no" mutable="no">
+        <type>std::shared_ptr&lt; xacc::ExpressionParsingUtil &gt;</type>
+        <definition>std::shared_ptr&lt;xacc::ExpressionParsingUtil&gt; qristal::cudaq_ir_converter::m_parsing_util</definition>
+        <argsstring></argsstring>
+        <name>m_parsing_util</name>
+        <qualifiedname>qristal::cudaq_ir_converter::m_parsing_util</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>XACC expression parsing utility to handle string-based rotation angles (parameterized). </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="37" column="19" bodyfile="core/include/qristal/core/cudaq/ir_converter.hpp" bodystart="37" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a859b8b69464a48d0231a6af28add35aa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::cudaq_ir_converter::cudaq_ir_converter</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::CompositeInstruction &gt; xacc_ir)</argsstring>
+        <name>cudaq_ir_converter</name>
+        <qualifiedname>qristal::cudaq_ir_converter::cudaq_ir_converter</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+          <declname>xacc_ir</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+<para>Taking the root XACC IR node of a kernel and construct the corresponding CUDAQ <ulink url="https://nvidia.github.io/cuda-quantum/latest/api/languages/cpp_api.html#kernel-builder">kernel_builder</ulink> by visiting all the child nodes. <parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>xacc_ir</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input XACC IR </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="46" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1ac221e8aa55eed8ac071a9ca8e09bfeca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cudaq::kernel_builder&lt; std::vector&lt; double &gt; &gt; &amp;</type>
+        <definition>cudaq::kernel_builder&lt; std::vector&lt; double &gt; &gt; &amp; qristal::cudaq_ir_converter::get_cudaq_builder</definition>
+        <argsstring>()</argsstring>
+        <name>get_cudaq_builder</name>
+        <qualifiedname>qristal::cudaq_ir_converter::get_cudaq_builder</qualifiedname>
+        <briefdescription>
+<para>Get a reference to the constructed CUDAQ <computeroutput>kernel_builder</computeroutput>, e.g., to feed it to CUDAQ runtime (execution/vqe, etc.) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>CUDAQ <computeroutput>kernel_builder</computeroutput> </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="51" column="25"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1add213a8fd73c54ac1b9e108bec7d5784" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Hadamard &amp;h) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Hadamard &amp;</type>
+          <declname>h</declname>
+        </param>
+        <briefdescription>
+<para>Hadamard gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="57" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a56b7d1ce715d000a52941f3fbb39b8d3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::X &amp;x) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::X &amp;</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Pauli X gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="59" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a0f5f50937a6469f75a787d4ecb72a5fd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Y &amp;y) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Y &amp;</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Pauli Y gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="61" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a6b46c1c45efc4e1956dba6ab7621ce0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Z &amp;z) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Z &amp;</type>
+          <declname>z</declname>
+        </param>
+        <briefdescription>
+<para>Pauli Z gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="63" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a58e15339f78dd1d3eccf80330733479e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::S &amp;s) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::S &amp;</type>
+          <declname>s</declname>
+        </param>
+        <briefdescription>
+<para>S gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="65" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a9b32ad42e748046393235f918fe42c8b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Sdg &amp;sdg) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Sdg &amp;</type>
+          <declname>sdg</declname>
+        </param>
+        <briefdescription>
+<para>Inverse S gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="67" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a3b36e926ac08d5e079f07db79429ba56" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::T &amp;t) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::T &amp;</type>
+          <declname>t</declname>
+        </param>
+        <briefdescription>
+<para>T gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="69" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1ad16a2c52764d89c1d4585871f44174c1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Tdg &amp;tdg) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Tdg &amp;</type>
+          <declname>tdg</declname>
+        </param>
+        <briefdescription>
+<para>Inverse T gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="71" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a068ce1f002439e968b622443f51b0095" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::CNOT &amp;cnot) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::CNOT &amp;</type>
+          <declname>cnot</declname>
+        </param>
+        <briefdescription>
+<para>Controlled NOT gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="73" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a9b7ef45dae9f6f9091e21cd1773457bc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::CZ &amp;cz) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::CZ &amp;</type>
+          <declname>cz</declname>
+        </param>
+        <briefdescription>
+<para>Controlled Z gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="75" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1ab9e00352d5aee333c7c8d5ce49ce3a02" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::CH &amp;ch) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::CH &amp;</type>
+          <declname>ch</declname>
+        </param>
+        <briefdescription>
+<para>Controlled Hadamard gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="77" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1adc1ecef5538b45501d54fc9d6ec62b21" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Rx &amp;rx) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Rx &amp;</type>
+          <declname>rx</declname>
+        </param>
+        <briefdescription>
+<para>Rotation about x axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="79" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a5c3c11aff0447c4eb3793d00f4bb5f3b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Ry &amp;ry) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Ry &amp;</type>
+          <declname>ry</declname>
+        </param>
+        <briefdescription>
+<para>Rotation about y axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="81" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a37fd2d8c7348a34924f9087257aa0e75" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Rz &amp;rz) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Rz &amp;</type>
+          <declname>rz</declname>
+        </param>
+        <briefdescription>
+<para>Rotation about z axis. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="83" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a0908ec0102a194c0dcc59da9f8b2ab48" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::CPhase &amp;cphase) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::CPhase &amp;</type>
+          <declname>cphase</declname>
+        </param>
+        <briefdescription>
+<para>Controlled phase (aka u1) gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="85" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a77c3c944bd0c8b7b8a3e049068355fc4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Swap &amp;swap) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Swap &amp;</type>
+          <declname>swap</declname>
+        </param>
+        <briefdescription>
+<para>Swap gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="87" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a4b3c84e6e16a18d5a030b3ce31310bf9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::iSwap &amp;iswap) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::iSwap &amp;</type>
+          <declname>iswap</declname>
+        </param>
+        <briefdescription>
+<para>iSwap gate <linebreak/>
+ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="89" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a5652b222920afd04aec5d19044cc8f46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::CY &amp;cy) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::CY &amp;</type>
+          <declname>cy</declname>
+        </param>
+        <briefdescription>
+<para>Controlled Y gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="91" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a2c22e109ae5fd322d2b92f94e6e85706" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::CRZ &amp;crz) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::CRZ &amp;</type>
+          <declname>crz</declname>
+        </param>
+        <briefdescription>
+<para>Controlled Rz gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="93" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1aceee1aca30d7d2ae852ac8214fed10f1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::U1 &amp;u1) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::U1 &amp;</type>
+          <declname>u1</declname>
+        </param>
+        <briefdescription>
+<para>U1 gate (equivalent to Rz up to a global phase) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="95" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1ab16862c42a1860079c5f9f87b90da150" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::U &amp;u3) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::U &amp;</type>
+          <declname>u3</declname>
+        </param>
+        <briefdescription>
+<para>U3 gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="97" column="8"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a3fda1d822656fbbe207362de20a88a9e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::cudaq_ir_converter::visit</definition>
+        <argsstring>(xacc::quantum::Reset &amp;reset) override</argsstring>
+        <name>visit</name>
+        <qualifiedname>qristal::cudaq_ir_converter::visit</qualifiedname>
+        <param>
+          <type>xacc::quantum::Reset &amp;</type>
+          <declname>reset</declname>
+        </param>
+        <briefdescription>
+<para>Reset gate. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="99" column="8"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1ab7a8fd802cb70b01126ca1b355387cd9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; double, std::string &gt;</type>
+        <definition>std::pair&lt; double, std::string &gt; qristal::cudaq_ir_converter::get_mul_factor_expression</definition>
+        <argsstring>(const std::string &amp;expr_str)</argsstring>
+        <name>get_mul_factor_expression</name>
+        <qualifiedname>qristal::cudaq_ir_converter::get_mul_factor_expression</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>expr_str</declname>
+        </param>
+        <briefdescription>
+<para>Helper to parse expression of type &lt;constant&gt; * &lt;var_name&gt; This can handle the no explicit constant multiplication in the expression (constant = 1.0) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>expr_str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Input expression string </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;constant&gt; and &lt;var_name&gt; pair </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="107" column="3"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1cudaq__ir__converter_1a06d0b9ffc265b82a5aab16a5d55b5997" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>cudaq::QuakeValue</type>
+        <definition>cudaq::QuakeValue qristal::cudaq_ir_converter::instruction_variable_to_quake</definition>
+        <argsstring>(const xacc::InstructionParameter &amp;xacc_var)</argsstring>
+        <name>instruction_variable_to_quake</name>
+        <qualifiedname>qristal::cudaq_ir_converter::instruction_variable_to_quake</qualifiedname>
+        <param>
+          <type>const xacc::InstructionParameter &amp;</type>
+          <declname>xacc_var</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Helper to convert an instruction variable to a QuakeValue, aka, a CUDAQ kernel variable. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="110" column="21"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Utility class to perform XACC IR -&gt; CUDAQ Quake IR (MLIR-based) conversion. This is performed by implementing an <computeroutput>AllGateVisitor</computeroutput> and constructing the corresponding Quake IR node using CUDAQ&apos;s kernel_builder utility. This can also handle (classical) argument conversion (parameterized quantum circuit). Notes: (1) XACC IR (CompositeInstruction) only accepts a single kernel argument of type: double or std::vector&lt;double&gt;. Quake IR (MLIR) can accepts a much wider range of types and not limit the number of arguments. (2) The argument evaluation is XACC IR is very rudimentary. (based on the C++ Mathematical Expression Parsing And Evaluation Library, <ulink url="https://github.com/ArashPartow/exprtk">https://github.com/ArashPartow/exprtk</ulink>) Hence, we need to do a &apos;hacky&apos; conversion into QUAKE IR only supporting scaling (by multiplication) an argument in a rotation angle. e.g., Ry(0.1234*theta, q[0]), where theta is a parameterized angle bound to argument &apos;theta&apos;. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>qristal::cudaq_ir_converter</label>
+        <link refid="classqristal_1_1cudaq__ir__converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xacc::quantum::AllGateVisitor</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>qristal::cudaq_ir_converter</label>
+        <link refid="classqristal_1_1cudaq__ir__converter"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>xacc::quantum::AllGateVisitor</label>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/cudaq/ir_converter.hpp" line="22" column="1" bodyfile="core/include/qristal/core/cudaq/ir_converter.hpp" bodystart="22" bodyend="112"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a859b8b69464a48d0231a6af28add35aa" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>cudaq_ir_converter</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1ac221e8aa55eed8ac071a9ca8e09bfeca" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>get_cudaq_builder</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1ab7a8fd802cb70b01126ca1b355387cd9" prot="private" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>get_mul_factor_expression</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a06d0b9ffc265b82a5aab16a5d55b5997" prot="private" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>instruction_variable_to_quake</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1ad872b2df2c5e59bb36156f704ff3a882" prot="private" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>m_cudaq_builder</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a5d6daa90b4af2014c3182ef9e4e2e315" prot="private" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>m_cudaq_qreg</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1ac7dc090dedc06bd5a15fe38071453bb5" prot="private" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>m_parsing_util</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a569877aee973afa2e2b06d802d11547f" prot="private" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>m_var_names</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1add213a8fd73c54ac1b9e108bec7d5784" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a56b7d1ce715d000a52941f3fbb39b8d3" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a0f5f50937a6469f75a787d4ecb72a5fd" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a6b46c1c45efc4e1956dba6ab7621ce0f" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a58e15339f78dd1d3eccf80330733479e" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a9b32ad42e748046393235f918fe42c8b" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a3b36e926ac08d5e079f07db79429ba56" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1ad16a2c52764d89c1d4585871f44174c1" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a068ce1f002439e968b622443f51b0095" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a9b7ef45dae9f6f9091e21cd1773457bc" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1ab9e00352d5aee333c7c8d5ce49ce3a02" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1adc1ecef5538b45501d54fc9d6ec62b21" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a5c3c11aff0447c4eb3793d00f4bb5f3b" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a37fd2d8c7348a34924f9087257aa0e75" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a0908ec0102a194c0dcc59da9f8b2ab48" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a77c3c944bd0c8b7b8a3e049068355fc4" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a4b3c84e6e16a18d5a030b3ce31310bf9" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a5652b222920afd04aec5d19044cc8f46" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a2c22e109ae5fd322d2b92f94e6e85706" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1aceee1aca30d7d2ae852ac8214fed10f1" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1ab16862c42a1860079c5f9f87b90da150" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+      <member refid="classqristal_1_1cudaq__ir__converter_1a3fda1d822656fbbe207362de20a88a9e" prot="public" virt="non-virtual"><scope>qristal::cudaq_ir_converter</scope><name>visit</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

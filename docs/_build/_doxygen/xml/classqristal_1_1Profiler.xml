@@ -1,0 +1,724 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1Profiler" kind="class" language="C++" prot="public">
+    <compoundname>qristal::Profiler</compoundname>
+    <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a0b4f0396f633f04923a777bfd2d79fac" prot="protected" static="no" mutable="no">
+        <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+        <definition>std::shared_ptr&lt;xacc::CompositeInstruction&gt; qristal::Profiler::placed_circuit_</definition>
+        <argsstring></argsstring>
+        <name>placed_circuit_</name>
+        <qualifiedname>qristal::Profiler::placed_circuit_</qualifiedname>
+        <briefdescription>
+<para>IR representation of the circuit for profiling. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="22" column="23" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="22" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1ac1a8889eb36b68d8a1dec8f2fca7d430" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, int &gt;</type>
+        <definition>std::unordered_map&lt;int, int&gt; qristal::Profiler::count_1q_gates_on_q_</definition>
+        <argsstring></argsstring>
+        <name>count_1q_gates_on_q_</name>
+        <qualifiedname>qristal::Profiler::count_1q_gates_on_q_</qualifiedname>
+        <briefdescription>
+<para>Map from qubit index to single-qubit gates on that qubit wire. Note that the qubit index can be non-contiguous due to placement, e.g., a 2-qubit circuit may happen to use qubit indices 20 and 100 due to placement. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="29" column="26" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="29" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a778da4c46767fb93533ddfc7d0a507d6" prot="private" static="no" mutable="no">
+        <type>std::unordered_map&lt; int, int &gt;</type>
+        <definition>std::unordered_map&lt;int, int&gt; qristal::Profiler::count_2q_gates_on_q_</definition>
+        <argsstring></argsstring>
+        <name>count_2q_gates_on_q_</name>
+        <qualifiedname>qristal::Profiler::count_2q_gates_on_q_</qualifiedname>
+        <briefdescription>
+<para>Map from qubit index to two-qubit gates on that qubit wire. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="31" column="26" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="31" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a97b7ce781fb4f382e6f97e9ba80d666d" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::Profiler::largestdepth_q_</definition>
+        <argsstring></argsstring>
+        <name>largestdepth_q_</name>
+        <qualifiedname>qristal::Profiler::largestdepth_q_</qualifiedname>
+        <briefdescription>
+<para>Qubit that has the largest gate depth (total of 1 qubit- and 2 qubit-gates). </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="33" column="11" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a6c58a3d24cc9fb966fb658d2c727577c" prot="private" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::Profiler::n_qubits_</definition>
+        <argsstring></argsstring>
+        <name>n_qubits_</name>
+        <qualifiedname>qristal::Profiler::n_qubits_</qualifiedname>
+        <briefdescription>
+<para>Number of qubits in the circuit. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="35" column="14" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a8cef9d17d996857a6111e4034f6492c9" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::Profiler::gate_1q_time_ms_</definition>
+        <argsstring></argsstring>
+        <name>gate_1q_time_ms_</name>
+        <qualifiedname>qristal::Profiler::gate_1q_time_ms_</qualifiedname>
+        <briefdescription>
+<para>Single-qubit gate time (in milliseconds) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="39" column="14" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="39" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1adfed550ea37f19358352881bd042a400" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::Profiler::gate_2q_time_ms_</definition>
+        <argsstring></argsstring>
+        <name>gate_2q_time_ms_</name>
+        <qualifiedname>qristal::Profiler::gate_2q_time_ms_</qualifiedname>
+        <briefdescription>
+<para>Two-qubit gate time (in milliseconds) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="41" column="14" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a46f10e6faf91830726cace53e680f495" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::Profiler::q_initialisation_time_ms_</definition>
+        <argsstring></argsstring>
+        <name>q_initialisation_time_ms_</name>
+        <qualifiedname>qristal::Profiler::q_initialisation_time_ms_</qualifiedname>
+        <briefdescription>
+<para>Circuit initialization time before gate execution (in milliseconds) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="43" column="14" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a093bc1ba05656d4f6e675894b9dd8aa4" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::Profiler::q_readout_time_ms_</definition>
+        <argsstring></argsstring>
+        <name>q_readout_time_ms_</name>
+        <qualifiedname>qristal::Profiler::q_readout_time_ms_</qualifiedname>
+        <briefdescription>
+<para>Qubit readout/measurement time (in milliseconds) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="45" column="14" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a8ec4821ca7eacd3304d1e95554ecb0b0" prot="private" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::Profiler::pc_send_to_control_time_ms_</definition>
+        <argsstring></argsstring>
+        <name>pc_send_to_control_time_ms_</name>
+        <qualifiedname>qristal::Profiler::pc_send_to_control_time_ms_</qualifiedname>
+        <briefdescription>
+<para>Classical communication overhead w.r.t. remote QPU execution (in milliseconds) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="47" column="14" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="47" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a6ad1e516bb90d026c06341e8d6bef142" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::Profiler::debug_</definition>
+        <argsstring></argsstring>
+        <name>debug_</name>
+        <qualifiedname>qristal::Profiler::debug_</qualifiedname>
+        <briefdescription>
+<para>Debugging flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="50" column="12" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="50" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a098fa58537f644870e4533a5089434ba" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int qristal::Profiler::KEY_TOTAL_TIME</definition>
+        <argsstring></argsstring>
+        <name>KEY_TOTAL_TIME</name>
+        <qualifiedname>qristal::Profiler::KEY_TOTAL_TIME</qualifiedname>
+        <initializer>= 0</initializer>
+        <briefdescription>
+<para>Index key for total time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="119" column="17" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="119" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1ade438d4c3c2c7cc41e2c481a6f8ee8eb" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int qristal::Profiler::KEY_INITIALISATION_TIME</definition>
+        <argsstring></argsstring>
+        <name>KEY_INITIALISATION_TIME</name>
+        <qualifiedname>qristal::Profiler::KEY_INITIALISATION_TIME</qualifiedname>
+        <initializer>= 1</initializer>
+        <briefdescription>
+<para>Index key for initialisation time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="121" column="17" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="121" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a72c297cab4d8584ff5e545fa264f12db" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int qristal::Profiler::KEY_MAX_DEPTH_GATE_TIME</definition>
+        <argsstring></argsstring>
+        <name>KEY_MAX_DEPTH_GATE_TIME</name>
+        <qualifiedname>qristal::Profiler::KEY_MAX_DEPTH_GATE_TIME</qualifiedname>
+        <initializer>= 2</initializer>
+        <briefdescription>
+<para>Index key for total gate time on the qubit having the max gate depth. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="123" column="17" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1aa5951cc0cb75bf583c61958544af360b" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int qristal::Profiler::KEY_READOUT_TIME</definition>
+        <argsstring></argsstring>
+        <name>KEY_READOUT_TIME</name>
+        <qualifiedname>qristal::Profiler::KEY_READOUT_TIME</qualifiedname>
+        <initializer>= 3</initializer>
+        <briefdescription>
+<para>Index key for readout time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="125" column="17" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="125" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1a3df5e33965bb907edc9eccdb200b328e" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int qristal::Profiler::KEY_SIMULATION_TOTAL_TIME</definition>
+        <argsstring></argsstring>
+        <name>KEY_SIMULATION_TOTAL_TIME</name>
+        <qualifiedname>qristal::Profiler::KEY_SIMULATION_TOTAL_TIME</qualifiedname>
+        <initializer>= 4</initializer>
+        <briefdescription>
+<para>Index key for circuit simulation time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="127" column="17" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="127" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1Profiler_1ad5c11522b5057402682bd4a23580a756" prot="public" static="no" mutable="no">
+        <type>const int</type>
+        <definition>const int qristal::Profiler::KEY_PC_SEND_TO_CONTROL_TIME</definition>
+        <argsstring></argsstring>
+        <name>KEY_PC_SEND_TO_CONTROL_TIME</name>
+        <qualifiedname>qristal::Profiler::KEY_PC_SEND_TO_CONTROL_TIME</qualifiedname>
+        <initializer>= 5</initializer>
+        <briefdescription>
+<para>Index key for communication overhead time. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="129" column="17" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1Profiler_1a12c940c0e71a047cebd1b0e316a62688" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::Profiler::Profiler</definition>
+        <argsstring>(std::string target_circuit, const int n_qubits, const double gate_1q_time_ms=0.001, const double gate_2q_time_ms=0.001, const double q_initialisation_time_ms=30, const double q_readout_time_ms=10, const double pc_send_to_control_time_ms=10000, const bool debug=false)</argsstring>
+        <name>Profiler</name>
+        <qualifiedname>qristal::Profiler::Profiler</qualifiedname>
+        <param>
+          <type>std::string</type>
+          <declname>target_circuit</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>n_qubits</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>gate_1q_time_ms</declname>
+          <defval>0.001</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>gate_2q_time_ms</declname>
+          <defval>0.001</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>q_initialisation_time_ms</declname>
+          <defval>30</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>q_readout_time_ms</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>pc_send_to_control_time_ms</declname>
+          <defval>10000</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>debug</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor (from an OpenQASM string) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>target_circuit</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_qubits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gate_1q_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gate_2q_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q_initialisation_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q_readout_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pc_send_to_control_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>debug</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="62" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Profiler_1a89888a04e57854774ed9e3a8ae9036db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::Profiler::Profiler</definition>
+        <argsstring>(std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;f, const int n_qubits, const double gate_1q_time_ms=0.001, const double gate_2q_time_ms=0.001, const double q_initialisation_time_ms=30, const double q_readout_time_ms=10, const double pc_send_to_control_time_ms=10000, const bool debug=false)</argsstring>
+        <name>Profiler</name>
+        <qualifiedname>qristal::Profiler::Profiler</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt; &amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>n_qubits</declname>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>gate_1q_time_ms</declname>
+          <defval>0.001</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>gate_2q_time_ms</declname>
+          <defval>0.001</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>q_initialisation_time_ms</declname>
+          <defval>30</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>q_readout_time_ms</declname>
+          <defval>10</defval>
+        </param>
+        <param>
+          <type>const double</type>
+          <declname>pc_send_to_control_time_ms</declname>
+          <defval>10000</defval>
+        </param>
+        <param>
+          <type>const bool</type>
+          <declname>debug</declname>
+          <defval>false</defval>
+        </param>
+        <briefdescription>
+<para>Constructor (from a XACC IR) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>f</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>n_qubits</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gate_1q_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>gate_2q_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q_initialisation_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>q_readout_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>pc_send_to_control_time_ms</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>debug</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="79" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Profiler_1a8270725e401733d69748961c3fea2fe9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; int, double &gt;</type>
+        <definition>std::map&lt; int, double &gt; qristal::Profiler::get_total_initialisation_maxgate_readout_time_ms</definition>
+        <argsstring>(const double simulation_total_time=0.0, const int shots=1)</argsstring>
+        <name>get_total_initialisation_maxgate_readout_time_ms</name>
+        <qualifiedname>qristal::Profiler::get_total_initialisation_maxgate_readout_time_ms</qualifiedname>
+        <param>
+          <type>const double</type>
+          <declname>simulation_total_time</declname>
+          <defval>0.0</defval>
+        </param>
+        <param>
+          <type>const int</type>
+          <declname>shots</declname>
+          <defval>1</defval>
+        </param>
+        <briefdescription>
+<para>Get the total time (i.e., init + gate + readout) for all qubits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>simulation_total_time</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>shots</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="91" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Profiler_1a6160806c8e5227c33eeadddf72454695" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt; int, int &gt; qristal::Profiler::get_count_1q_gates_on_q</definition>
+        <argsstring>()</argsstring>
+        <name>get_count_1q_gates_on_q</name>
+        <qualifiedname>qristal::Profiler::get_count_1q_gates_on_q</qualifiedname>
+        <briefdescription>
+<para>Get the count of one-qubit gates for all qubits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="96" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Profiler_1a9c4fe8a088dcaa463fc5927c72dddf7a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::map&lt; int, int &gt;</type>
+        <definition>std::map&lt; int, int &gt; qristal::Profiler::get_count_2q_gates_on_q</definition>
+        <argsstring>()</argsstring>
+        <name>get_count_2q_gates_on_q</name>
+        <qualifiedname>qristal::Profiler::get_count_2q_gates_on_q</qualifiedname>
+        <briefdescription>
+<para>Get the count of two-qubit gates for all qubits. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="100" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Profiler_1ae637def1ca2140ae3ba87fac415fe226" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int qristal::Profiler::get_count_1q_gates_on_q</definition>
+        <argsstring>(const int iq)</argsstring>
+        <name>get_count_1q_gates_on_q</name>
+        <qualifiedname>qristal::Profiler::get_count_1q_gates_on_q</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>iq</declname>
+        </param>
+        <briefdescription>
+<para>Get the count of one-qubit gates on a qubit line. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="105" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Profiler_1aa37d944cb6670ca9ba79aefb2ce1bf46" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int qristal::Profiler::get_count_2q_gates_on_q</definition>
+        <argsstring>(const int iq)</argsstring>
+        <name>get_count_2q_gates_on_q</name>
+        <qualifiedname>qristal::Profiler::get_count_2q_gates_on_q</qualifiedname>
+        <param>
+          <type>const int</type>
+          <declname>iq</declname>
+        </param>
+        <briefdescription>
+<para>Get the count of two-qubit gates on a qubit line Note: a two-qubit gate will be accounted for on both of its qubit operands. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>iq</parametername>
+</parameternamelist>
+<parameterdescription>
+<para></para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="111" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1Profiler_1aefa17e06e835180221855d7b1e5754a2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int qristal::Profiler::get_largestdepth_q</definition>
+        <argsstring>()</argsstring>
+        <name>get_largestdepth_q</name>
+        <qualifiedname>qristal::Profiler::get_largestdepth_q</qualifiedname>
+        <briefdescription>
+<para>Get Id of the qubit having the most number of gates (largest depth) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para></para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="115" column="11"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1Profiler_1a0f25202b4fe1fb27e37e68b34bbe6aaf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::Profiler::run</definition>
+        <argsstring>()</argsstring>
+        <name>run</name>
+        <qualifiedname>qristal::Profiler::run</qualifiedname>
+        <briefdescription>
+<para>Run the profiler (automatically called during <ref refid="classqristal_1_1Profiler" kindref="compound">Profiler</ref> construction) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/profiler.hpp" line="134" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/profiler.hpp" line="18" column="3" bodyfile="core/include/qristal/core/profiler.hpp" bodystart="18" bodyend="135"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1Profiler_1ac1a8889eb36b68d8a1dec8f2fca7d430" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>count_1q_gates_on_q_</name></member>
+      <member refid="classqristal_1_1Profiler_1a778da4c46767fb93533ddfc7d0a507d6" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>count_2q_gates_on_q_</name></member>
+      <member refid="classqristal_1_1Profiler_1a6ad1e516bb90d026c06341e8d6bef142" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>debug_</name></member>
+      <member refid="classqristal_1_1Profiler_1a8cef9d17d996857a6111e4034f6492c9" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>gate_1q_time_ms_</name></member>
+      <member refid="classqristal_1_1Profiler_1adfed550ea37f19358352881bd042a400" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>gate_2q_time_ms_</name></member>
+      <member refid="classqristal_1_1Profiler_1a6160806c8e5227c33eeadddf72454695" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>get_count_1q_gates_on_q</name></member>
+      <member refid="classqristal_1_1Profiler_1ae637def1ca2140ae3ba87fac415fe226" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>get_count_1q_gates_on_q</name></member>
+      <member refid="classqristal_1_1Profiler_1a9c4fe8a088dcaa463fc5927c72dddf7a" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>get_count_2q_gates_on_q</name></member>
+      <member refid="classqristal_1_1Profiler_1aa37d944cb6670ca9ba79aefb2ce1bf46" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>get_count_2q_gates_on_q</name></member>
+      <member refid="classqristal_1_1Profiler_1aefa17e06e835180221855d7b1e5754a2" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>get_largestdepth_q</name></member>
+      <member refid="classqristal_1_1Profiler_1a8270725e401733d69748961c3fea2fe9" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>get_total_initialisation_maxgate_readout_time_ms</name></member>
+      <member refid="classqristal_1_1Profiler_1ade438d4c3c2c7cc41e2c481a6f8ee8eb" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>KEY_INITIALISATION_TIME</name></member>
+      <member refid="classqristal_1_1Profiler_1a72c297cab4d8584ff5e545fa264f12db" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>KEY_MAX_DEPTH_GATE_TIME</name></member>
+      <member refid="classqristal_1_1Profiler_1ad5c11522b5057402682bd4a23580a756" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>KEY_PC_SEND_TO_CONTROL_TIME</name></member>
+      <member refid="classqristal_1_1Profiler_1aa5951cc0cb75bf583c61958544af360b" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>KEY_READOUT_TIME</name></member>
+      <member refid="classqristal_1_1Profiler_1a3df5e33965bb907edc9eccdb200b328e" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>KEY_SIMULATION_TOTAL_TIME</name></member>
+      <member refid="classqristal_1_1Profiler_1a098fa58537f644870e4533a5089434ba" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>KEY_TOTAL_TIME</name></member>
+      <member refid="classqristal_1_1Profiler_1a97b7ce781fb4f382e6f97e9ba80d666d" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>largestdepth_q_</name></member>
+      <member refid="classqristal_1_1Profiler_1a6c58a3d24cc9fb966fb658d2c727577c" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>n_qubits_</name></member>
+      <member refid="classqristal_1_1Profiler_1a8ec4821ca7eacd3304d1e95554ecb0b0" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>pc_send_to_control_time_ms_</name></member>
+      <member refid="classqristal_1_1Profiler_1a0b4f0396f633f04923a777bfd2d79fac" prot="protected" virt="non-virtual"><scope>qristal::Profiler</scope><name>placed_circuit_</name></member>
+      <member refid="classqristal_1_1Profiler_1a12c940c0e71a047cebd1b0e316a62688" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>Profiler</name></member>
+      <member refid="classqristal_1_1Profiler_1a89888a04e57854774ed9e3a8ae9036db" prot="public" virt="non-virtual"><scope>qristal::Profiler</scope><name>Profiler</name></member>
+      <member refid="classqristal_1_1Profiler_1a46f10e6faf91830726cace53e680f495" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>q_initialisation_time_ms_</name></member>
+      <member refid="classqristal_1_1Profiler_1a093bc1ba05656d4f6e675894b9dd8aa4" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>q_readout_time_ms_</name></member>
+      <member refid="classqristal_1_1Profiler_1a0f25202b4fe1fb27e37e68b34bbe6aaf" prot="private" virt="non-virtual"><scope>qristal::Profiler</scope><name>run</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1optimization__pass" kind="class" language="C++" prot="public">
+    <compoundname>qristal::optimization_pass</compoundname>
+    <basecompoundref refid="classqristal_1_1Pass" prot="public" virt="non-virtual">qristal::Pass&lt; CircuitBuilder &gt;</basecompoundref>
+    <includes refid="circuit__opt__passes_8hpp" local="no">circuit_opt_passes.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1optimization__pass_1a37884d81c8ca89256beed09acac82aac" prot="private" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::optimization_pass::m_plugin_name</definition>
+        <argsstring></argsstring>
+        <name>m_plugin_name</name>
+        <qualifiedname>qristal::optimization_pass::m_plugin_name</qualifiedname>
+        <briefdescription>
+<para>Name of the underlying IR Transformation plugin. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="14" column="19" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="14" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1optimization__pass_1a7b0057f7adf4f46d75d004e1cbeac3ca" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::optimization_pass::optimization_pass</definition>
+        <argsstring>(const std::string &amp;name)</argsstring>
+        <name>optimization_pass</name>
+        <qualifiedname>qristal::optimization_pass::optimization_pass</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>name</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="17" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1optimization__pass_1a456209a413a5f8cb986dfd1a97f112d7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::optimization_pass::get_name</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_name</name>
+        <qualifiedname>qristal::optimization_pass::get_name</qualifiedname>
+        <reimplements refid="classqristal_1_1Pass_1ae953fc38b3026afa44c812c35032b955">get_name</reimplements>
+        <briefdescription>
+<para>Returns name of the pass. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="20" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1optimization__pass_1a418e967baa6848bf71bc1928bc3aaa7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::string</type>
+        <definition>virtual std::string qristal::optimization_pass::get_description</definition>
+        <argsstring>() const override</argsstring>
+        <name>get_description</name>
+        <qualifiedname>qristal::optimization_pass::get_description</qualifiedname>
+        <reimplements refid="classqristal_1_1Pass_1a0e357ed3bd93cd40ab26a61d1c5e6e29">get_description</reimplements>
+        <briefdescription>
+<para>Returns the pass description. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="23" column="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1optimization__pass_1afef2100b54a2cd6cc7b417452556e492" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void qristal::optimization_pass::apply</definition>
+        <argsstring>(CircuitBuilder &amp;circuit) override</argsstring>
+        <name>apply</name>
+        <qualifiedname>qristal::optimization_pass::apply</qualifiedname>
+        <param>
+          <type><ref refid="classqristal_1_1CircuitBuilder" kindref="compound">CircuitBuilder</ref> &amp;</type>
+          <declname>circuit</declname>
+        </param>
+        <briefdescription>
+<para>Runs the pass over the circuit IR node. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="26" column="20"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Circuit optimization pass. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>CircuitPass</label>
+        <link refid="classqristal_1_1Pass"/>
+      </node>
+      <node id="1">
+        <label>qristal::optimization_pass</label>
+        <link refid="classqristal_1_1optimization__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>CircuitPass</label>
+        <link refid="classqristal_1_1Pass"/>
+      </node>
+      <node id="1">
+        <label>qristal::optimization_pass</label>
+        <link refid="classqristal_1_1optimization__pass"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="core/include/qristal/core/passes/circuit_opt_passes.hpp" line="11" column="3" bodyfile="core/include/qristal/core/passes/circuit_opt_passes.hpp" bodystart="11" bodyend="27"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1optimization__pass_1afef2100b54a2cd6cc7b417452556e492" prot="public" virt="virtual"><scope>qristal::optimization_pass</scope><name>apply</name></member>
+      <member refid="classqristal_1_1Pass_1a3f705cea7fae5c37f61b542695a39b2d" prot="public" virt="pure-virtual" ambiguityscope="qristal::Pass::"><scope>qristal::optimization_pass</scope><name>apply</name></member>
+      <member refid="classqristal_1_1optimization__pass_1a418e967baa6848bf71bc1928bc3aaa7a" prot="public" virt="virtual"><scope>qristal::optimization_pass</scope><name>get_description</name></member>
+      <member refid="classqristal_1_1optimization__pass_1a456209a413a5f8cb986dfd1a97f112d7" prot="public" virt="virtual"><scope>qristal::optimization_pass</scope><name>get_name</name></member>
+      <member refid="classqristal_1_1optimization__pass_1a37884d81c8ca89256beed09acac82aac" prot="private" virt="non-virtual"><scope>qristal::optimization_pass</scope><name>m_plugin_name</name></member>
+      <member refid="classqristal_1_1optimization__pass_1a7b0057f7adf4f46d75d004e1cbeac3ca" prot="public" virt="non-virtual"><scope>qristal::optimization_pass</scope><name>optimization_pass</name></member>
+      <member refid="classqristal_1_1Pass_1ad7b2e2f5a7fe881eae2f702dc7c490d5" prot="public" virt="virtual"><scope>qristal::optimization_pass</scope><name>~Pass</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

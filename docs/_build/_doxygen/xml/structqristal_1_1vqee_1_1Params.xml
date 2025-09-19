@@ -1,0 +1,427 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="structqristal_1_1vqee_1_1Params" kind="struct" language="C++" prot="public">
+    <compoundname>qristal::vqee::Params</compoundname>
+    <includes refid="case__generator_8hpp" local="no">case_generator.hpp</includes>
+    <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a17f0eb57b5c1b374fcd88ac1b46ccd60" prot="public" static="no" mutable="no">
+        <type>std::shared_ptr&lt; xacc::CompositeInstruction &gt;</type>
+        <definition>std::shared_ptr&lt;xacc::CompositeInstruction&gt; qristal::vqee::Params::ansatz</definition>
+        <argsstring></argsstring>
+        <name>ansatz</name>
+        <qualifiedname>qristal::vqee::Params::ansatz</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="31" column="19" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="31" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1ae245edc80d5c43e8135a38185edb44e4" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::Params::circuitString</definition>
+        <argsstring></argsstring>
+        <name>circuitString</name>
+        <qualifiedname>qristal::vqee::Params::circuitString</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="32" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="32" bodyend="32"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a3b57349c8193f28fb638786eb798372c" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::Params::pauliString</definition>
+        <argsstring></argsstring>
+        <name>pauliString</name>
+        <qualifiedname>qristal::vqee::Params::pauliString</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="33" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="33" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a8c4dd726e60c07a9bb4ff1efca239c51" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::Params::acceleratorName</definition>
+        <argsstring></argsstring>
+        <name>acceleratorName</name>
+        <qualifiedname>qristal::vqee::Params::acceleratorName</qualifiedname>
+        <initializer>{&quot;qpp&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="34" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="34" bodyend="34"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1aececd270328da05685317ac1d764f637" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::Params::algorithm</definition>
+        <argsstring></argsstring>
+        <name>algorithm</name>
+        <qualifiedname>qristal::vqee::Params::algorithm</qualifiedname>
+        <initializer>{&quot;cobyla&quot;}</initializer>
+        <briefdescription>
+<para>algorithm : sets the classical optimisation algorithm, e.g &quot;nelder-mead&quot;, &quot;cobyla&quot;, &quot;l-bfgs&quot; </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="36" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="36" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a51bf3e2678f9d4308fec5c6a658e6290" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::Params::extraOptions</definition>
+        <argsstring></argsstring>
+        <name>extraOptions</name>
+        <qualifiedname>qristal::vqee::Params::extraOptions</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>extraOptions : YAML format for options to use with the classical optimiser </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="38" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="38" bodyend="38"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1aa6df2cbae3d7e5ab8e8777542d2f5434" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::vqee::Params::tolerance</definition>
+        <argsstring></argsstring>
+        <name>tolerance</name>
+        <qualifiedname>qristal::vqee::Params::tolerance</qualifiedname>
+        <initializer>{1E-6}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="39" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="39" bodyend="39"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a487bc4ba2af64841e98ecbef5843113b" prot="public" static="no" mutable="no">
+        <type>double</type>
+        <definition>double qristal::vqee::Params::optimalValue</definition>
+        <argsstring></argsstring>
+        <name>optimalValue</name>
+        <qualifiedname>qristal::vqee::Params::optimalValue</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="40" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="40" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1aa7227180a460374ec33438bb5c37b346" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; qristal::vqee::Params::energies</definition>
+        <argsstring></argsstring>
+        <name>energies</name>
+        <qualifiedname>qristal::vqee::Params::energies</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="41" column="15" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="41" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1aae881bc119c1b94862e87051b253a552" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; double &gt;</type>
+        <definition>std::vector&lt;double&gt; qristal::vqee::Params::theta</definition>
+        <argsstring></argsstring>
+        <name>theta</name>
+        <qualifiedname>qristal::vqee::Params::theta</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="42" column="15" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="42" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1aa10daeac4de203f4cde2aaa07cc27421" prot="public" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="structqristal_1_1vqee_1_1vqe__iteration__data" kindref="compound">vqe_iteration_data</ref> &gt;</type>
+        <definition>std::vector&lt;vqe_iteration_data&gt; qristal::vqee::Params::iterationData</definition>
+        <argsstring></argsstring>
+        <name>iterationData</name>
+        <qualifiedname>qristal::vqee::Params::iterationData</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>iterationData : a structure for per-iteration energy and theta </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="44" column="15" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="44" bodyend="44"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a82281e98f430d3223a475e3aceff5ee5" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::vqee::Params::nQubits</definition>
+        <argsstring></argsstring>
+        <name>nQubits</name>
+        <qualifiedname>qristal::vqee::Params::nQubits</qualifiedname>
+        <initializer>{1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="45" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="45" bodyend="45"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a5c811dc5c82c76d8730e6ae5b75e51b6" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::vqee::Params::nShots</definition>
+        <argsstring></argsstring>
+        <name>nShots</name>
+        <qualifiedname>qristal::vqee::Params::nShots</qualifiedname>
+        <initializer>{1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="46" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="46" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a58491a99aff2b162904ddfdb1b99c45f" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::vqee::Params::maxIters</definition>
+        <argsstring></argsstring>
+        <name>maxIters</name>
+        <qualifiedname>qristal::vqee::Params::maxIters</qualifiedname>
+        <initializer>{50}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="47" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="47" bodyend="47"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1af9b8769b67777299133a0e187aafcf81" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::vqee::Params::nWorker</definition>
+        <argsstring></argsstring>
+        <name>nWorker</name>
+        <qualifiedname>qristal::vqee::Params::nWorker</qualifiedname>
+        <initializer>{1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="48" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="48" bodyend="48"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a49b8013b93b1537c403bad4272ff634d" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::vqee::Params::nThreadsPerWorker</definition>
+        <argsstring></argsstring>
+        <name>nThreadsPerWorker</name>
+        <qualifiedname>qristal::vqee::Params::nThreadsPerWorker</qualifiedname>
+        <initializer>{1}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="49" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a2ca66b5bd2629cd439da4e35e0e8cf96" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::vqee::Params::isDeterministic</definition>
+        <argsstring></argsstring>
+        <name>isDeterministic</name>
+        <qualifiedname>qristal::vqee::Params::isDeterministic</qualifiedname>
+        <initializer>{true}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="50" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="50" bodyend="50"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a34a908d351bb19e309d4569c14e5133a" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::vqee::Params::partitioned</definition>
+        <argsstring></argsstring>
+        <name>partitioned</name>
+        <qualifiedname>qristal::vqee::Params::partitioned</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="51" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="51" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a6bdce9e1b34dcf894af325a286fc56a5" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::vqee::Params::enableVis</definition>
+        <argsstring></argsstring>
+        <name>enableVis</name>
+        <qualifiedname>qristal::vqee::Params::enableVis</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>enableVis : when set to true, the vis member will be filled with ASCII bar graphs. These provide a visual cue of the VQE convergence from a text-only interface. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="55" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="55" bodyend="55"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1ac768bec152fc3f69beb26b259f2259d0" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::vqee::Params::showTheta</definition>
+        <argsstring></argsstring>
+        <name>showTheta</name>
+        <qualifiedname>qristal::vqee::Params::showTheta</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>showTheta : when set to true, selected elements of theta are added to the visualisation </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="57" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="57" bodyend="57"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a51b75e98660195ba83b7eee85e729d19" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::vqee::Params::limitThetaN</definition>
+        <argsstring></argsstring>
+        <name>limitThetaN</name>
+        <qualifiedname>qristal::vqee::Params::limitThetaN</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>limitThetaN : limit to this number of elements of theta to visualise. 0 =&gt; no limit </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="59" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="59" bodyend="59"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a4eb8815e2f3f5c8b7af6aee204dfe359" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t qristal::vqee::Params::tail</definition>
+        <argsstring></argsstring>
+        <name>tail</name>
+        <qualifiedname>qristal::vqee::Params::tail</qualifiedname>
+        <initializer>{0}</initializer>
+        <briefdescription>
+<para>tail : visualise the last n=tail iterations only </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="61" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="61" bodyend="61"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a12a61921af6eec20b270e8f63011c175" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::vqee::Params::plain</definition>
+        <argsstring></argsstring>
+        <name>plain</name>
+        <qualifiedname>qristal::vqee::Params::plain</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>plain : when set to true, no colour codes are output in vis </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="63" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="63" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a1f9a44425fed0199a9f83049e73ba9e1" prot="public" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool qristal::vqee::Params::blocked</definition>
+        <argsstring></argsstring>
+        <name>blocked</name>
+        <qualifiedname>qristal::vqee::Params::blocked</qualifiedname>
+        <initializer>{false}</initializer>
+        <briefdescription>
+<para>blocked : when set to true, all elements in any given iteration are visualised in a single block. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="65" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="65" bodyend="65"/>
+      </memberdef>
+      <memberdef kind="variable" id="structqristal_1_1vqee_1_1Params_1a285355b2b694aca54f4f42a69ce1fad9" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string qristal::vqee::Params::vis</definition>
+        <argsstring></argsstring>
+        <name>vis</name>
+        <qualifiedname>qristal::vqee::Params::vis</qualifiedname>
+        <initializer>{}</initializer>
+        <briefdescription>
+<para>vis : a visualisation of energy and each element of theta, at selected iterations of VQE. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="67" column="23" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="67" bodyend="67"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>Data container for VQE optimizer problems. Everything is constant, except theta and value which should be updated during iterations. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/optimization/vqee/case_generator.hpp" line="30" column="1" bodyfile="core/include/qristal/core/optimization/vqee/case_generator.hpp" bodystart="30" bodyend="68"/>
+    <listofallmembers>
+      <member refid="structqristal_1_1vqee_1_1Params_1a8c4dd726e60c07a9bb4ff1efca239c51" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>acceleratorName</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1aececd270328da05685317ac1d764f637" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>algorithm</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a17f0eb57b5c1b374fcd88ac1b46ccd60" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>ansatz</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a1f9a44425fed0199a9f83049e73ba9e1" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>blocked</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1ae245edc80d5c43e8135a38185edb44e4" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>circuitString</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a6bdce9e1b34dcf894af325a286fc56a5" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>enableVis</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1aa7227180a460374ec33438bb5c37b346" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>energies</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a51bf3e2678f9d4308fec5c6a658e6290" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>extraOptions</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a2ca66b5bd2629cd439da4e35e0e8cf96" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>isDeterministic</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1aa10daeac4de203f4cde2aaa07cc27421" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>iterationData</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a51b75e98660195ba83b7eee85e729d19" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>limitThetaN</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a58491a99aff2b162904ddfdb1b99c45f" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>maxIters</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a82281e98f430d3223a475e3aceff5ee5" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>nQubits</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a5c811dc5c82c76d8730e6ae5b75e51b6" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>nShots</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a49b8013b93b1537c403bad4272ff634d" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>nThreadsPerWorker</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1af9b8769b67777299133a0e187aafcf81" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>nWorker</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a487bc4ba2af64841e98ecbef5843113b" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>optimalValue</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a34a908d351bb19e309d4569c14e5133a" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>partitioned</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a3b57349c8193f28fb638786eb798372c" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>pauliString</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a12a61921af6eec20b270e8f63011c175" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>plain</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1ac768bec152fc3f69beb26b259f2259d0" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>showTheta</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a4eb8815e2f3f5c8b7af6aee204dfe359" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>tail</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1aae881bc119c1b94862e87051b253a552" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>theta</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1aa6df2cbae3d7e5ab8e8777542d2f5434" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>tolerance</name></member>
+      <member refid="structqristal_1_1vqee_1_1Params_1a285355b2b694aca54f4f42a69ce1fad9" prot="public" virt="non-virtual"><scope>qristal::vqee::Params</scope><name>vis</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,479 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.10.0" xml:lang="en-US">
+  <compounddef id="classqristal_1_1thread__pool" kind="class" language="C++" prot="public">
+    <compoundname>qristal::thread_pool</compoundname>
+    <includes refid="thread__pool_8hpp" local="no">thread_pool.hpp</includes>
+    <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classqristal_1_1thread__pool_1a1070527c9859c32e29270660b755cd32" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::thread_pool::num_threads</definition>
+        <argsstring></argsstring>
+        <name>num_threads</name>
+        <qualifiedname>qristal::thread_pool::num_threads</qualifiedname>
+        <briefdescription>
+<para>Number of threads to be maintained in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="117" column="11" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1thread__pool_1ab6c12539cb74b0097779573883082c54" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int qristal::thread_pool::num_active_threads</definition>
+        <argsstring></argsstring>
+        <name>num_active_threads</name>
+        <qualifiedname>qristal::thread_pool::num_active_threads</qualifiedname>
+        <briefdescription>
+<para>Number of active threads in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="120" column="11" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="120" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1thread__pool_1a471bfec4681bffb3cefe19d2af93771b" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; std::pair&lt; std::thread, std::shared_ptr&lt; bool &gt; &gt; &gt;</type>
+        <definition>std::vector&lt;std::pair&lt;std::thread, std::shared_ptr&lt;bool&gt; &gt; &gt; qristal::thread_pool::threads</definition>
+        <argsstring></argsstring>
+        <name>threads</name>
+        <qualifiedname>qristal::thread_pool::threads</qualifiedname>
+        <briefdescription>
+<para>A vector of threads for running tasks, paired with flags indicating if they have exited their loop. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="123" column="19" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="123" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1thread__pool_1a5e0205e63cb6c0f0a0934890fbe844cf" prot="private" static="no" mutable="no">
+        <type>std::queue&lt; std::function&lt; void()&gt; &gt;</type>
+        <definition>std::queue&lt;std::function&lt;void()&gt; &gt; qristal::thread_pool::queue</definition>
+        <argsstring></argsstring>
+        <name>queue</name>
+        <qualifiedname>qristal::thread_pool::queue</qualifiedname>
+        <briefdescription>
+<para>A queue of tasks waiting to be run by threads. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="126" column="18" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1thread__pool_1a7d2b75ee4dd63735da151ba39e420b6d" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex qristal::thread_pool::queue_m</definition>
+        <argsstring></argsstring>
+        <name>queue_m</name>
+        <qualifiedname>qristal::thread_pool::queue_m</qualifiedname>
+        <briefdescription>
+<para>Thread lockers for the queue and the shutdown flag. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="129" column="18" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1thread__pool_1a31a94548d6934c93082f410e887365fa" prot="private" static="no" mutable="no">
+        <type>std::mutex</type>
+        <definition>std::mutex qristal::thread_pool::threads_m</definition>
+        <argsstring></argsstring>
+        <name>threads_m</name>
+        <qualifiedname>qristal::thread_pool::threads_m</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="129" column="26" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="129" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classqristal_1_1thread__pool_1aae29778190c430a8470d1ae5d3a8f546" prot="private" static="no" mutable="no">
+        <type>std::atomic&lt; bool &gt;</type>
+        <definition>std::atomic&lt;bool&gt; qristal::thread_pool::shutting_down</definition>
+        <argsstring></argsstring>
+        <name>shutting_down</name>
+        <qualifiedname>qristal::thread_pool::shutting_down</qualifiedname>
+        <briefdescription>
+<para>Flag indicating that the pool is being destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="132" column="19" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="132" bodyend="-1"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a1e6bf40b72a0fa84e45518460f6c4b5f" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>static void qristal::thread_pool::set_num_threads</definition>
+        <argsstring>(const int)</argsstring>
+        <name>set_num_threads</name>
+        <qualifiedname>qristal::thread_pool::set_num_threads</qualifiedname>
+        <param>
+          <type>const int</type>
+        </param>
+        <briefdescription>
+<para>Public interface for setting the number of threads to be maintained in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="23" column="19"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1acadf9563b1763197ae960a6bdd5b5381" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>static int qristal::thread_pool::get_num_threads</definition>
+        <argsstring>()</argsstring>
+        <name>get_num_threads</name>
+        <qualifiedname>qristal::thread_pool::get_num_threads</qualifiedname>
+        <briefdescription>
+<para>Public interface for retrieving the number of threads to be maintained in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="26" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1af879e6c4c2dddf41708ae9ed6b1e86bc" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Function</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename result_type</type>
+            <defval>std::invoke_result_t&lt;std::decay_t&lt;Function&gt;, std::decay_t&lt;Args&gt;...&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; notstd::is_void&lt; result_type &gt;::value, std::future&lt; result_type &gt; &gt;::type</type>
+        <definition>static std::enable_if&lt; notstd::is_void&lt; result_type &gt;::value, std::future&lt; result_type &gt; &gt;::type qristal::thread_pool::submit</definition>
+        <argsstring>(Function &amp;&amp;f, Args &amp;&amp;... args)</argsstring>
+        <name>submit</name>
+        <qualifiedname>qristal::thread_pool::submit</qualifiedname>
+        <param>
+          <type>Function &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Public interface for sending a function with a return type to the thread pool for execution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="37" column="46" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a6ebfa207de043add0d8c5764107d4f77" prot="public" static="yes" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Function</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename result_type</type>
+            <defval>std::invoke_result_t&lt;std::decay_t&lt;Function&gt;, std::decay_t&lt;Args&gt;...&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_void&lt; result_type &gt;::value, void &gt;::type</type>
+        <definition>static std::enable_if&lt; std::is_void&lt; result_type &gt;::value, void &gt;::type qristal::thread_pool::submit</definition>
+        <argsstring>(Function &amp;&amp;f, Args &amp;&amp;... args)</argsstring>
+        <name>submit</name>
+        <qualifiedname>qristal::thread_pool::submit</qualifiedname>
+        <param>
+          <type>Function &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Public interface for sending a function with no return type to the thread pool for execution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="45" column="46" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="45" bodyend="48"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="public-func">
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a829367ea9d19e47556301d516fc236ea" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::thread_pool::set_num_threads_internal</definition>
+        <argsstring>(const int)</argsstring>
+        <name>set_num_threads_internal</name>
+        <qualifiedname>qristal::thread_pool::set_num_threads_internal</qualifiedname>
+        <param>
+          <type>const int</type>
+        </param>
+        <briefdescription>
+<para>Set the number of threads to be maintained in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="29" column="12"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1aa55ee52e7c1d2dff1da243a9dae3dc22" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int qristal::thread_pool::get_num_threads_internal</definition>
+        <argsstring>()</argsstring>
+        <name>get_num_threads_internal</name>
+        <qualifiedname>qristal::thread_pool::get_num_threads_internal</qualifiedname>
+        <briefdescription>
+<para>Retrieve the number of threads to be maintained in the pool. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="32" column="11"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a68c3a4017fed0101d6bdfd0def3fdf95" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Function</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename result_type</type>
+            <defval>std::invoke_result_t&lt;std::decay_t&lt;Function&gt;, std::decay_t&lt;Args&gt;...&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; notstd::is_void&lt; result_type &gt;::value, std::future&lt; result_type &gt; &gt;::type</type>
+        <definition>std::enable_if&lt; notstd::is_void&lt; result_type &gt;::value, std::future&lt; result_type &gt; &gt;::type qristal::thread_pool::internal_submit</definition>
+        <argsstring>(Function &amp;&amp;f, Args &amp;&amp;... args)</argsstring>
+        <name>internal_submit</name>
+        <qualifiedname>qristal::thread_pool::internal_submit</qualifiedname>
+        <param>
+          <type>Function &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Send a function with a return type to the thread pool for execution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="53" column="39" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="53" bodyend="74"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a2e0b65ff6d6100901a66c557570d04dc" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <templateparamlist>
+          <param>
+            <type>class Function</type>
+          </param>
+          <param>
+            <type>class...</type>
+            <declname>Args</declname>
+            <defname>Args</defname>
+          </param>
+          <param>
+            <type>typename result_type</type>
+            <defval>std::invoke_result_t&lt;std::decay_t&lt;Function&gt;, std::decay_t&lt;Args&gt;...&gt;</defval>
+          </param>
+        </templateparamlist>
+        <type>std::enable_if&lt; std::is_void&lt; result_type &gt;::value, void &gt;::type</type>
+        <definition>std::enable_if&lt; std::is_void&lt; result_type &gt;::value, void &gt;::type qristal::thread_pool::internal_submit</definition>
+        <argsstring>(Function &amp;&amp;f, Args &amp;&amp;... args)</argsstring>
+        <name>internal_submit</name>
+        <qualifiedname>qristal::thread_pool::internal_submit</qualifiedname>
+        <param>
+          <type>Function &amp;&amp;</type>
+          <declname>f</declname>
+        </param>
+        <param>
+          <type>Args &amp;&amp;...</type>
+          <declname>args</declname>
+        </param>
+        <briefdescription>
+<para>Send a function with no return value to the thread pool for execution. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="79" column="39" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="79" bodyend="89"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a1c1fa82fb479bf4eea43ae41954f4a79" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::thread_pool::thread_pool</definition>
+        <argsstring>(const thread_pool &amp;)=delete</argsstring>
+        <name>thread_pool</name>
+        <qualifiedname>qristal::thread_pool::thread_pool</qualifiedname>
+        <param>
+          <type>const <ref refid="classqristal_1_1thread__pool" kindref="compound">thread_pool</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Uncopyable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="92" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1afa8b3330d11520121294a75d260a8e70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classqristal_1_1thread__pool" kindref="compound">thread_pool</ref> &amp;</type>
+        <definition>thread_pool &amp; qristal::thread_pool::operator=</definition>
+        <argsstring>(const thread_pool &amp;)=delete</argsstring>
+        <name>operator=</name>
+        <qualifiedname>qristal::thread_pool::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classqristal_1_1thread__pool" kindref="compound">thread_pool</ref> &amp;</type>
+        </param>
+        <briefdescription>
+<para>Unassignable. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="95" column="19"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-static-func">
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a394b48a4754885ef77956210f7a3185a" prot="private" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classqristal_1_1thread__pool" kindref="compound">thread_pool</ref> &amp;</type>
+        <definition>static thread_pool &amp; qristal::thread_pool::get_instance</definition>
+        <argsstring>()</argsstring>
+        <name>get_instance</name>
+        <qualifiedname>qristal::thread_pool::get_instance</qualifiedname>
+        <briefdescription>
+<para>Getter for the instance; makes this class a threadsafe singleton. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="102" column="26"/>
+      </memberdef>
+    </sectiondef>
+    <sectiondef kind="private-func">
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a07a869539fb9f8d5d1e22f55936b23fa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::thread_pool::thread_pool</definition>
+        <argsstring>()</argsstring>
+        <name>thread_pool</name>
+        <qualifiedname>qristal::thread_pool::thread_pool</qualifiedname>
+        <briefdescription>
+<para>Constructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="105" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1a60f3ce58b18aa73698b6169fc651a128" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>qristal::thread_pool::~thread_pool</definition>
+        <argsstring>()</argsstring>
+        <name>~thread_pool</name>
+        <qualifiedname>qristal::thread_pool::~thread_pool</qualifiedname>
+        <briefdescription>
+<para>Destructor. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="108" column="7"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1aceb872659c32f2fbd973ec0385ebfe8e" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; std::thread, std::shared_ptr&lt; bool &gt; &gt;</type>
+        <definition>std::pair&lt; std::thread, std::shared_ptr&lt; bool &gt; &gt; qristal::thread_pool::initialise_thread</definition>
+        <argsstring>()</argsstring>
+        <name>initialise_thread</name>
+        <qualifiedname>qristal::thread_pool::initialise_thread</qualifiedname>
+        <briefdescription>
+<para>Initialise a thread-future pair. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="111" column="17"/>
+      </memberdef>
+      <memberdef kind="function" id="classqristal_1_1thread__pool_1af83245a43e1d628056c42a6dee40dbbf" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void qristal::thread_pool::loop</definition>
+        <argsstring>(std::shared_ptr&lt; bool &gt;)</argsstring>
+        <name>loop</name>
+        <qualifiedname>qristal::thread_pool::loop</qualifiedname>
+        <param>
+          <type>std::shared_ptr&lt; bool &gt;</type>
+        </param>
+        <briefdescription>
+<para>Work collector. Each thread runs this indefinitely until the pool is destroyed. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="core/include/qristal/core/thread_pool.hpp" line="114" column="12"/>
+      </memberdef>
+    </sectiondef>
+    <briefdescription>
+<para>A threadsafe singleton thread pool class based on std::thread. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="core/include/qristal/core/thread_pool.hpp" line="17" column="3" bodyfile="core/include/qristal/core/thread_pool.hpp" bodystart="18" bodyend="134"/>
+    <listofallmembers>
+      <member refid="classqristal_1_1thread__pool_1a394b48a4754885ef77956210f7a3185a" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>get_instance</name></member>
+      <member refid="classqristal_1_1thread__pool_1acadf9563b1763197ae960a6bdd5b5381" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>get_num_threads</name></member>
+      <member refid="classqristal_1_1thread__pool_1aa55ee52e7c1d2dff1da243a9dae3dc22" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>get_num_threads_internal</name></member>
+      <member refid="classqristal_1_1thread__pool_1aceb872659c32f2fbd973ec0385ebfe8e" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>initialise_thread</name></member>
+      <member refid="classqristal_1_1thread__pool_1a68c3a4017fed0101d6bdfd0def3fdf95" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>internal_submit</name></member>
+      <member refid="classqristal_1_1thread__pool_1a2e0b65ff6d6100901a66c557570d04dc" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>internal_submit</name></member>
+      <member refid="classqristal_1_1thread__pool_1af83245a43e1d628056c42a6dee40dbbf" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>loop</name></member>
+      <member refid="classqristal_1_1thread__pool_1ab6c12539cb74b0097779573883082c54" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>num_active_threads</name></member>
+      <member refid="classqristal_1_1thread__pool_1a1070527c9859c32e29270660b755cd32" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>num_threads</name></member>
+      <member refid="classqristal_1_1thread__pool_1afa8b3330d11520121294a75d260a8e70" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>operator=</name></member>
+      <member refid="classqristal_1_1thread__pool_1a5e0205e63cb6c0f0a0934890fbe844cf" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>queue</name></member>
+      <member refid="classqristal_1_1thread__pool_1a7d2b75ee4dd63735da151ba39e420b6d" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>queue_m</name></member>
+      <member refid="classqristal_1_1thread__pool_1a1e6bf40b72a0fa84e45518460f6c4b5f" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>set_num_threads</name></member>
+      <member refid="classqristal_1_1thread__pool_1a829367ea9d19e47556301d516fc236ea" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>set_num_threads_internal</name></member>
+      <member refid="classqristal_1_1thread__pool_1aae29778190c430a8470d1ae5d3a8f546" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>shutting_down</name></member>
+      <member refid="classqristal_1_1thread__pool_1af879e6c4c2dddf41708ae9ed6b1e86bc" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>submit</name></member>
+      <member refid="classqristal_1_1thread__pool_1a6ebfa207de043add0d8c5764107d4f77" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>submit</name></member>
+      <member refid="classqristal_1_1thread__pool_1a1c1fa82fb479bf4eea43ae41954f4a79" prot="public" virt="non-virtual"><scope>qristal::thread_pool</scope><name>thread_pool</name></member>
+      <member refid="classqristal_1_1thread__pool_1a07a869539fb9f8d5d1e22f55936b23fa" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>thread_pool</name></member>
+      <member refid="classqristal_1_1thread__pool_1a471bfec4681bffb3cefe19d2af93771b" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>threads</name></member>
+      <member refid="classqristal_1_1thread__pool_1a31a94548d6934c93082f410e887365fa" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>threads_m</name></member>
+      <member refid="classqristal_1_1thread__pool_1a60f3ce58b18aa73698b6169fc651a128" prot="private" virt="non-virtual"><scope>qristal::thread_pool</scope><name>~thread_pool</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
